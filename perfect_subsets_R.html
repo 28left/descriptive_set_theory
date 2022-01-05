@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfect Subsets of the Real Line &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Polish Spaces" href="polish.html" />
+    <link rel="prev" title="Contents" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Borel sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/perfect_subsets_R.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fperfect_subsets_R.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Perfect Subsets of the Real Line</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="perfect-subsets-of-the-real-line">
+<span id="ch-perfect"></span><h1>Perfect Subsets of the Real Line<a class="headerlink" href="#perfect-subsets-of-the-real-line" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Rest}[1]{\mid_{#1}}\\\DeclareMathOperator{\diam}{diam}\end{aligned}\end{align} \]</div>
+<p>Descriptive set theory nowadays is understood as the study of definable subsets of Polish Spaces. Many of its problems and techniques arose out of efforts to answer basic questions about the real numbers. A prominent example is the <em>Continuum Hypothesis</em> (<span class="math notranslate nohighlight">\(\CH\)</span>):</p>
+<div class="hint admonition">
+<p class="admonition-title">Continuum Hypothesis (Cantor, 1890s)</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is uncountable, then there exists a bijection between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\Real\)</span>. That is, is every uncountable subset of <span class="math notranslate nohighlight">\(\Real\)</span> is of the same cardinality as <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+</div>
+<p>Early approaches to this problem tried to show that <span class="math notranslate nohighlight">\(\CH\)</span> holds for a number of sets with an easy topological structure.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that every open set in <span class="math notranslate nohighlight">\(\R\)</span> satisfies <span class="math notranslate nohighlight">\(\CH\)</span> (in the sense that it either countable or can be mapped bijectively to <span class="math notranslate nohighlight">\(\R\)</span>).</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>There are some divergences in terminology. Some authors call an accumulation point a <em>limit point</em>. We reserve the latter term for <em>any point that is the limit of a sequence of points</em>
+from a given set. Hence every member of a set is a limit point of that set. In particular, isolated members of a set are limit points.</p>
+</div>
+<p>For closed sets, the situation is less clear. Given a set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span>, we call <span class="math notranslate nohighlight">\(x \in \Real\)</span> an <strong>accumulation point</strong> of <span class="math notranslate nohighlight">\(A\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \epsilon &gt; 0 \: \exists z \in A \: [z \neq x \: \&amp; \: z \in U_\eps(x)],
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(U_\eps(x)\)</span> denotes the standard <span class="math notranslate nohighlight">\(\eps\)</span>-neighborhood of <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span></p>
+<div class="proof definition admonition" id="def-perfect">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A non-empty set <span class="math notranslate nohighlight">\(P \subseteq \Real\)</span> is <strong>perfect</strong> if it is closed and every point of <span class="math notranslate nohighlight">\(P\)</span> is an accumulation point.</p>
+</div>
+</div><p>In other words, a perfect set is a closed set that has no isolated points. It is not hard to see that for a perfect set <span class="math notranslate nohighlight">\(P\)</span>, every neighborhood of a point <span class="math notranslate nohighlight">\(p \in P\)</span> contains infinitely many points.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="figure align-default" id="id2">
+<img alt="_images/Cantor_set.png" src="_images/Cantor_set.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Cantor set</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Obviously, <span class="math notranslate nohighlight">\(\Real\)</span> itself is perfect, as is any closed interval in <span class="math notranslate nohighlight">\(\Real\)</span>. There are totally disconnected perfect sets, such as the <strong>middle-third Cantor set</strong> in <span class="math notranslate nohighlight">\([0,1]\)</span></p>
+<div class="proof theorem admonition" id="thm-card-perfect-sets">
+<p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Cantor, 1884)</p>
+<div class="theorem-content section" id="proof-content">
+<p>A perfect subset of <span class="math notranslate nohighlight">\(\Real\)</span> has the same cardinality as <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(P \subseteq \Real\)</span> be perfect. We construct an injection from the set <span class="math notranslate nohighlight">\(\Cant\)</span> of all infinite binary sequences into <span class="math notranslate nohighlight">\(P\)</span>. An infinite binary sequence <span class="math notranslate nohighlight">\(\xi = \xi_0 \xi_1 \xi_2 \dots\)</span> can be identified with a real number <span class="math notranslate nohighlight">\(\in [0,1]\)</span> via the mapping</p>
+<div class="math notranslate nohighlight">
+\[
+\xi \mapsto \sum_{i \geq 0} \xi_i 2^{-i-1}.
+\]</div>
+<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id3">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
+<p>To construct the desired injection, choose <span class="math notranslate nohighlight">\(x \in P\)</span> and let <span class="math notranslate nohighlight">\(\eps_0 = 1 = 2^0\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is perfect,  <span class="math notranslate nohighlight">\(P \cap B_{\eps_0}(x)\)</span>. Let <span class="math notranslate nohighlight">\(x_0 \neq x_1\)</span> be two points in <span class="math notranslate nohighlight">\(P \cap B_{\eps_0}(x)\)</span>, distinct from <span class="math notranslate nohighlight">\(x\)</span>. Let <span class="math notranslate nohighlight">\(\eps_1\)</span> be such that <span class="math notranslate nohighlight">\(\eps_1 \leq 1/2\)</span>, <span class="math notranslate nohighlight">\(B_{\eps_1}(x_0), B_{\eps_1}(x_1) \subseteq B_{\eps_0}(x)\)</span>, and <span class="math notranslate nohighlight">\(\overline{B_{\eps_1}(x_0)} \cap \overline{B_{\eps_1}(x_1)} = \emptyset\)</span>, where <span class="math notranslate nohighlight">\(\overline{U}\)</span> denotes the closure of <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>We can iterate this procedure recursively with smaller and smaller diameters, using the fact that <span class="math notranslate nohighlight">\(P\)</span> is perfect. This gives rise to a so-called <strong>Cantor scheme</strong>, a family of open balls <span class="math notranslate nohighlight">\((B_\sigma)\)</span> satisfying certain <em>nesting conditions</em>. Here the index <span class="math notranslate nohighlight">\(\sigma\)</span> is a finite binary sequence, also called a <em>string</em>. A Cantor scheme is defined by the following properties.</p>
+<ol>
+<li><p><span class="math notranslate nohighlight">\(\diam(U_\sigma) \leq 2^{-|\sigma|}\)</span>, where <span class="math notranslate nohighlight">\(|\sigma|\)</span> denotes the length of <span class="math notranslate nohighlight">\(\sigma\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau\)</span> is a proper extension of <span class="math notranslate nohighlight">\(\sigma\)</span>, then <span class="math notranslate nohighlight">\(U_\tau \subset U_\sigma\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are \emph{incompatible} (i.e.\ neither extends the other), then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+        U_\tau \cap U_\sigma = \emptyset.
+    \end{equation*}\]</div>
+</li>
+<li><p>The center of each <span class="math notranslate nohighlight">\(U_\sigma\)</span>, call it <span class="math notranslate nohighlight">\(x_\sigma\)</span>, is in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+</ol>
+<div class="figure align-default" id="cantor-scheme">
+<a class="reference internal image-reference" href="_images/Cantor_Scheme.pdf"><img alt="_images/Cantor_Scheme.pdf" src="_images/Cantor_Scheme.pdf" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Nested structure of a Cantor scheme</span><a class="headerlink" href="#cantor-scheme" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let <span class="math notranslate nohighlight">\(\xi\)</span> be an infinite binary sequence. Given <span class="math notranslate nohighlight">\(n \geq 0\)</span>, we denote by <span class="math notranslate nohighlight">\(\xi\Rest{n}\)</span> the string formed by the first <span class="math notranslate nohighlight">\(n\)</span> bits of <span class="math notranslate nohighlight">\(\xi\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\xi\Rest{n} = \xi_0 \xi_1 \dots \xi_{n-1}.
+\]</div>
+<p>The finite initial segments give rise to a sequence <span class="math notranslate nohighlight">\(x_{\xi\Rest{n}}\)</span> of centers. By properties (1.) and (2.), this is a Cauchy sequence. By (4.), the sequence lies in <span class="math notranslate nohighlight">\(P\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is closed, the limit <span class="math notranslate nohighlight">\(x_\xi\)</span> is in <span class="math notranslate nohighlight">\(P\)</span>. By (3.), the mapping <span class="math notranslate nohighlight">\(\xi \mapsto x_\xi\)</span> is well-defined and injective.</p>
+</div>
+<div class="proof theorem admonition" id="cantor-bendixson">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Cantor-Bendixson)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Every uncountable closed subset of <span class="math notranslate nohighlight">\(\Real\)</span> contains a perfect subset.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(C \subseteq \Real\)</span> be uncountable and closed. We say <span class="math notranslate nohighlight">\(z \in \Real\)</span> is a <em>condensation point</em> of <span class="math notranslate nohighlight">\(C\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall \eps &gt; 0 \:[ B_\eps(z) \cap C \text{ uncountable}].
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(D\)</span> be the set of all condensation points of <span class="math notranslate nohighlight">\(C\)</span>. Note that <span class="math notranslate nohighlight">\(D \subseteq C\)</span>, since every condensation point is clearly an accumulation point and <span class="math notranslate nohighlight">\(C\)</span> is closed.</p>
+<p>Furthermore, we claim that <span class="math notranslate nohighlight">\(D\)</span> is perfect. Clearly <span class="math notranslate nohighlight">\(D\)</span> is closed. Suppose <span class="math notranslate nohighlight">\(z \in D\)</span> and <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>. Then <span class="math notranslate nohighlight">\(B_\eps(z) \cap C\)</span> is uncountable. We would like to conclude that <span class="math notranslate nohighlight">\(B_\eps(z) \cap D\)</span> is uncountable, too, since this would mean in particular that <span class="math notranslate nohighlight">\(B_\eps(z) \cap D\)</span> is infinite. The conclusion holds if <span class="math notranslate nohighlight">\(C \setminus D\)</span> is countable.</p>
+<p>To show that <span class="math notranslate nohighlight">\(C\setminus D\)</span> is countable, assume that <span class="math notranslate nohighlight">\(y \in C \setminus D\)</span>. Then, for some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>,  <span class="math notranslate nohighlight">\(B_\delta(y) \cap C\)</span> is countable. We can find and interval <span class="math notranslate nohighlight">\(I(y) \subseteq B_\delta(y)\)</span> that contains <span class="math notranslate nohighlight">\(y\)</span> and has rational endpoints. There are at most countably many intervals with rational endpoints and hence for each <span class="math notranslate nohighlight">\(y \in C \setminus D\)</span> there are at most countably many choices for <span class="math notranslate nohighlight">\(I(y)\)</span>. Thus, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    C\setminus D \subseteq \bigcup_{y \in C \setminus D} I_y \cap C.
+\]</div>
+<p>The right hand side is a countable union of countable sets, hence countable.</p>
+</div>
+<p>We will later encounter an alternative (more constructive) proof that gives additional information about the complexity of the closed set <span class="math notranslate nohighlight">\(C\)</span>. For now we conclude with the fact we were aiming to prove in this lecture.</p>
+<div class="proof corollary admonition" id="corollary-3">
+<p class="admonition-title"><span class="caption-number">Corollary 1 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>Every closed subset of <span class="math notranslate nohighlight">\(\Real\)</span> is either countable or of the cardinality of the continuum.</p>
+</div>
+</div><p>The results of this lecture give us a blueprint on how to verify the Continuum Hypothesis for a given family <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> of sets (of reals):</p>
+<blockquote>
+<div><p>Show that every set in <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is either countable or has a perfect subset.</p>
+</div></blockquote>
+<p>Over the next few lectures we will see for which families we can verify this <strong>perfect set property</strong>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="perfect-subsets-of-the-real-line">
+<span id="ch-perfect"></span><h1>Perfect Subsets of the Real Line<a class="headerlink" href="#perfect-subsets-of-the-real-line" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Rest}[1]{\mid_{#1}}\\\DeclareMathOperator{\diam}{diam}\end{aligned}\end{align} \]</div>
+<p>Descriptive set theory nowadays is understood as the study of definable subsets of Polish Spaces. Many of its problems and techniques arose out of efforts to answer basic questions about the real numbers. A prominent example is the <em>Continuum Hypothesis</em> (<span class="math notranslate nohighlight">\(\CH\)</span>):</p>
+<div class="hint admonition">
+<p class="admonition-title">Continuum Hypothesis (Cantor, 1890s)</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is uncountable, then there exists a bijection between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\Real\)</span>. That is, is every uncountable subset of <span class="math notranslate nohighlight">\(\Real\)</span> is of the same cardinality as <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+</div>
+<p>Early approaches to this problem tried to show that <span class="math notranslate nohighlight">\(\CH\)</span> holds for a number of sets with an easy topological structure.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that every open set in <span class="math notranslate nohighlight">\(\R\)</span> satisfies <span class="math notranslate nohighlight">\(\CH\)</span> (in the sense that it either countable or can be mapped bijectively to <span class="math notranslate nohighlight">\(\R\)</span>).</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>There are some divergences in terminology. Some authors call an accumulation point a <em>limit point</em>. We reserve the latter term for <em>any point that is the limit of a sequence of points</em>
+from a given set. Hence every member of a set is a limit point of that set. In particular, isolated members of a set are limit points.</p>
+</div>
+<p>For closed sets, the situation is less clear. Given a set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span>, we call <span class="math notranslate nohighlight">\(x \in \Real\)</span> an <strong>accumulation point</strong> of <span class="math notranslate nohighlight">\(A\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \epsilon &gt; 0 \: \exists z \in A \: [z \neq x \: \&amp; \: z \in U_\eps(x)],
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(U_\eps(x)\)</span> denotes the standard <span class="math notranslate nohighlight">\(\eps\)</span>-neighborhood of <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span></p>
+<div class="proof definition admonition" id="def-perfect">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A non-empty set <span class="math notranslate nohighlight">\(P \subseteq \Real\)</span> is <strong>perfect</strong> if it is closed and every point of <span class="math notranslate nohighlight">\(P\)</span> is an accumulation point.</p>
+</div>
+</div><p>In other words, a perfect set is a closed set that has no isolated points. It is not hard to see that for a perfect set <span class="math notranslate nohighlight">\(P\)</span>, every neighborhood of a point <span class="math notranslate nohighlight">\(p \in P\)</span> contains infinitely many points.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="figure align-default" id="id2">
+<img alt="_images/Cantor_set.png" src="_images/Cantor_set.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Cantor set</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Obviously, <span class="math notranslate nohighlight">\(\Real\)</span> itself is perfect, as is any closed interval in <span class="math notranslate nohighlight">\(\Real\)</span>. There are totally disconnected perfect sets, such as the <strong>middle-third Cantor set</strong> in <span class="math notranslate nohighlight">\([0,1]\)</span></p>
+<div class="proof theorem admonition" id="thm-card-perfect-sets">
+<p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Cantor, 1884)</p>
+<div class="theorem-content section" id="proof-content">
+<p>A perfect subset of <span class="math notranslate nohighlight">\(\Real\)</span> has the same cardinality as <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(P \subseteq \Real\)</span> be perfect. We construct an injection from the set <span class="math notranslate nohighlight">\(\Cant\)</span> of all infinite binary sequences into <span class="math notranslate nohighlight">\(P\)</span>. An infinite binary sequence <span class="math notranslate nohighlight">\(\xi = \xi_0 \xi_1 \xi_2 \dots\)</span> can be identified with a real number <span class="math notranslate nohighlight">\(\in [0,1]\)</span> via the mapping</p>
+<div class="math notranslate nohighlight">
+\[
+\xi \mapsto \sum_{i \geq 0} \xi_i 2^{-i-1}.
+\]</div>
+<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id3">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
+<p>To construct the desired injection, choose <span class="math notranslate nohighlight">\(x \in P\)</span> and let <span class="math notranslate nohighlight">\(\eps_0 = 1 = 2^0\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is perfect,  <span class="math notranslate nohighlight">\(P \cap B_{\eps_0}(x)\)</span>. Let <span class="math notranslate nohighlight">\(x_0 \neq x_1\)</span> be two points in <span class="math notranslate nohighlight">\(P \cap B_{\eps_0}(x)\)</span>, distinct from <span class="math notranslate nohighlight">\(x\)</span>. Let <span class="math notranslate nohighlight">\(\eps_1\)</span> be such that <span class="math notranslate nohighlight">\(\eps_1 \leq 1/2\)</span>, <span class="math notranslate nohighlight">\(B_{\eps_1}(x_0), B_{\eps_1}(x_1) \subseteq B_{\eps_0}(x)\)</span>, and <span class="math notranslate nohighlight">\(\overline{B_{\eps_1}(x_0)} \cap \overline{B_{\eps_1}(x_1)} = \emptyset\)</span>, where <span class="math notranslate nohighlight">\(\overline{U}\)</span> denotes the closure of <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>We can iterate this procedure recursively with smaller and smaller diameters, using the fact that <span class="math notranslate nohighlight">\(P\)</span> is perfect. This gives rise to a so-called <strong>Cantor scheme</strong>, a family of open balls <span class="math notranslate nohighlight">\((B_\sigma)\)</span> satisfying certain <em>nesting conditions</em>. Here the index <span class="math notranslate nohighlight">\(\sigma\)</span> is a finite binary sequence, also called a <em>string</em>. A Cantor scheme is defined by the following properties.</p>
+<ol>
+<li><p><span class="math notranslate nohighlight">\(\diam(U_\sigma) \leq 2^{-|\sigma|}\)</span>, where <span class="math notranslate nohighlight">\(|\sigma|\)</span> denotes the length of <span class="math notranslate nohighlight">\(\sigma\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau\)</span> is a proper extension of <span class="math notranslate nohighlight">\(\sigma\)</span>, then <span class="math notranslate nohighlight">\(U_\tau \subset U_\sigma\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are \emph{incompatible} (i.e.\ neither extends the other), then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+        U_\tau \cap U_\sigma = \emptyset.
+    \end{equation*}\]</div>
+</li>
+<li><p>The center of each <span class="math notranslate nohighlight">\(U_\sigma\)</span>, call it <span class="math notranslate nohighlight">\(x_\sigma\)</span>, is in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+</ol>
+<div class="figure align-default" id="cantor-scheme">
+<a class="reference internal image-reference" href="_images/Cantor_Scheme.pdf"><img alt="_images/Cantor_Scheme.pdf" src="_images/Cantor_Scheme.pdf" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Nested structure of a Cantor scheme</span><a class="headerlink" href="#cantor-scheme" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let <span class="math notranslate nohighlight">\(\xi\)</span> be an infinite binary sequence. Given <span class="math notranslate nohighlight">\(n \geq 0\)</span>, we denote by <span class="math notranslate nohighlight">\(\xi\Rest{n}\)</span> the string formed by the first <span class="math notranslate nohighlight">\(n\)</span> bits of <span class="math notranslate nohighlight">\(\xi\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\xi\Rest{n} = \xi_0 \xi_1 \dots \xi_{n-1}.
+\]</div>
+<p>The finite initial segments give rise to a sequence <span class="math notranslate nohighlight">\(x_{\xi\Rest{n}}\)</span> of centers. By properties (1.) and (2.), this is a Cauchy sequence. By (4.), the sequence lies in <span class="math notranslate nohighlight">\(P\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is closed, the limit <span class="math notranslate nohighlight">\(x_\xi\)</span> is in <span class="math notranslate nohighlight">\(P\)</span>. By (3.), the mapping <span class="math notranslate nohighlight">\(\xi \mapsto x_\xi\)</span> is well-defined and injective.</p>
+</div>
+<div class="proof theorem admonition" id="cantor-bendixson">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Cantor-Bendixson)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Every uncountable closed subset of <span class="math notranslate nohighlight">\(\Real\)</span> contains a perfect subset.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(C \subseteq \Real\)</span> be uncountable and closed. We say <span class="math notranslate nohighlight">\(z \in \Real\)</span> is a <em>condensation point</em> of <span class="math notranslate nohighlight">\(C\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall \eps &gt; 0 \:[ B_\eps(z) \cap C \text{ uncountable}].
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(D\)</span> be the set of all condensation points of <span class="math notranslate nohighlight">\(C\)</span>. Note that <span class="math notranslate nohighlight">\(D \subseteq C\)</span>, since every condensation point is clearly an accumulation point and <span class="math notranslate nohighlight">\(C\)</span> is closed.</p>
+<p>Furthermore, we claim that <span class="math notranslate nohighlight">\(D\)</span> is perfect. Clearly <span class="math notranslate nohighlight">\(D\)</span> is closed. Suppose <span class="math notranslate nohighlight">\(z \in D\)</span> and <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>. Then <span class="math notranslate nohighlight">\(B_\eps(z) \cap C\)</span> is uncountable. We would like to conclude that <span class="math notranslate nohighlight">\(B_\eps(z) \cap D\)</span> is uncountable, too, since this would mean in particular that <span class="math notranslate nohighlight">\(B_\eps(z) \cap D\)</span> is infinite. The conclusion holds if <span class="math notranslate nohighlight">\(C \setminus D\)</span> is countable.</p>
+<p>To show that <span class="math notranslate nohighlight">\(C\setminus D\)</span> is countable, assume that <span class="math notranslate nohighlight">\(y \in C \setminus D\)</span>. Then, for some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>,  <span class="math notranslate nohighlight">\(B_\delta(y) \cap C\)</span> is countable. We can find and interval <span class="math notranslate nohighlight">\(I(y) \subseteq B_\delta(y)\)</span> that contains <span class="math notranslate nohighlight">\(y\)</span> and has rational endpoints. There are at most countably many intervals with rational endpoints and hence for each <span class="math notranslate nohighlight">\(y \in C \setminus D\)</span> there are at most countably many choices for <span class="math notranslate nohighlight">\(I(y)\)</span>. Thus, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    C\setminus D \subseteq \bigcup_{y \in C \setminus D} I_y \cap C.
+\]</div>
+<p>The right hand side is a countable union of countable sets, hence countable.</p>
+</div>
+<p>We will later encounter an alternative (more constructive) proof that gives additional information about the complexity of the closed set <span class="math notranslate nohighlight">\(C\)</span>. For now we conclude with the fact we were aiming to prove in this lecture.</p>
+<div class="proof corollary admonition" id="corollary-3">
+<p class="admonition-title"><span class="caption-number">Corollary 1 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>Every closed subset of <span class="math notranslate nohighlight">\(\Real\)</span> is either countable or of the cardinality of the continuum.</p>
+</div>
+</div><p>The results of this lecture give us a blueprint on how to verify the Continuum Hypothesis for a given family <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> of sets (of reals):</p>
+<blockquote>
+<div><p>Show that every set in <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is either countable or has a perfect subset.</p>
+</div></blockquote>
+<p>Over the next few lectures we will see for which families we can verify this <strong>perfect set property</strong>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contents</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="polish.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Polish Spaces</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
