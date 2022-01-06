@@ -43,7 +43,7 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -309,6 +309,7 @@
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
 \newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -427,7 +428,7 @@ d(\alpha,\beta) = \begin{cases}
                 \beta_2 + \cfrac{1}{
                         \beta_3 + \ldots}}}
 \]</div>
-<p>provides a homeomorphism between <span class="math notranslate nohighlight">\(\Baire\)</span> and the irrational real numbers.</p>
+<p>provides a homeomorphism between <span class="math notranslate nohighlight">\(\Z \times (\N\setminus\{0\})^\N\)</span> and the irrational real numbers.</p>
 <p>The universal role played by the discrete product spaces is manifested in the following results.</p>
 <div class="proof theorem admonition" id="thm-Cantor-embedding">
 <p class="admonition-title"><span class="caption-number">Theorem 3 </span></p>
@@ -451,7 +452,7 @@ d(\alpha,\beta) = \begin{cases}
 <p>Proof. Let <span class="math notranslate nohighlight">\(d\)</span> be a compatible metric on <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(D = \{x_i \colon i \in \Nat\}\)</span> be a countable dense subset of <span class="math notranslate nohighlight">\(X\)</span>. Every point in <span class="math notranslate nohighlight">\(X\)</span> is the limit of a sequence in <span class="math notranslate nohighlight">\(D\)</span>. Define a mapping <span class="math notranslate nohighlight">\(g:\Baire \to X\)</span> by putting</p>
 <div class="math notranslate nohighlight">
 \[
-    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.  
+    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.
 \]</div>
 <p>The problem is, of course, that the limit on the right hand side not necessarily exists. We have to proceed more carefully.
 Given <span class="math notranslate nohighlight">\(\alpha \in \Nat\)</span>, we put <span class="math notranslate nohighlight">\(y^\alpha_0 = x_{\alpha(0)}\)</span> and
@@ -509,6 +510,7 @@ y^\alpha_{n+1} = \begin{cases}
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
 \newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -627,7 +629,7 @@ d(\alpha,\beta) = \begin{cases}
                 \beta_2 + \cfrac{1}{
                         \beta_3 + \ldots}}}
 \]</div>
-<p>provides a homeomorphism between <span class="math notranslate nohighlight">\(\Baire\)</span> and the irrational real numbers.</p>
+<p>provides a homeomorphism between <span class="math notranslate nohighlight">\(\Z \times (\N\setminus\{0\})^\N\)</span> and the irrational real numbers.</p>
 <p>The universal role played by the discrete product spaces is manifested in the following results.</p>
 <div class="proof theorem admonition" id="thm-Cantor-embedding">
 <p class="admonition-title"><span class="caption-number">Theorem 3 </span></p>
@@ -651,7 +653,7 @@ d(\alpha,\beta) = \begin{cases}
 <p>Proof. Let <span class="math notranslate nohighlight">\(d\)</span> be a compatible metric on <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(D = \{x_i \colon i \in \Nat\}\)</span> be a countable dense subset of <span class="math notranslate nohighlight">\(X\)</span>. Every point in <span class="math notranslate nohighlight">\(X\)</span> is the limit of a sequence in <span class="math notranslate nohighlight">\(D\)</span>. Define a mapping <span class="math notranslate nohighlight">\(g:\Baire \to X\)</span> by putting</p>
 <div class="math notranslate nohighlight">
 \[
-    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.  
+    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.
 \]</div>
 <p>The problem is, of course, that the limit on the right hand side not necessarily exists. We have to proceed more carefully.
 Given <span class="math notranslate nohighlight">\(\alpha \in \Nat\)</span>, we put <span class="math notranslate nohighlight">\(y^\alpha_0 = x_{\alpha(0)}\)</span> and
