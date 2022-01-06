@@ -3,6 +3,7 @@
 ```{math}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -51,9 +52,9 @@ $$
 Note that a compatible metric is not necessarily unique.
 ```
 
-The $\eps$-neighborhoods form the basis of a topology, called the *topology of the metric space* $(X,d)$. If this topology agrees with a given topology $\mathcal{O}$ on $X$, we say the metric $d$ is **compatible** with the topology $\mathcal{O}$. If for a topological space $(X, \mathcal{O})$ there exists a compatible metric, $(X, \mathcal{O})$ is called **metrizable**.
+The $\eps$-neighborhoods form the basis of a topology, called the _topology of the metric space_ $(X,d)$. If this topology agrees with a given topology $\mathcal{O}$ on $X$, we say the metric $d$ is **compatible** with the topology $\mathcal{O}$. If for a topological space $(X, \mathcal{O})$ there exists a compatible metric, $(X, \mathcal{O})$ is called **metrizable**.
 
-If a topological space $(X,\mathcal{O})$ is separable and metrizable, then the balls with center in a countable dense subset $D$ and rational radius form a *countable base of the topology*.
+If a topological space $(X,\mathcal{O})$ is separable and metrizable, then the balls with center in a countable dense subset $D$ and rational radius form a _countable base of the topology_.
 
 ## Polish spaces
 
@@ -63,7 +64,7 @@ If a topological space $(X,\mathcal{O})$ is separable and metrizable, then the b
 A **Polish space** is a separable topological space $X$ for which exists a compatible metric $d$ such that $(X,d)$ is a complete metric space.
 ```
 
-There may be many different compatible metrics that make $X$ complete. If $X$ is already given as a complete metric space with countable dense subset, then we call $X$ a *Polish metric space*.
+There may be many different compatible metrics that make $X$ complete. If $X$ is already given as a complete metric space with countable dense subset, then we call $X$ a _Polish metric space_.
 
 The standard example is, of course, $\Real$, the set of real numbers. One can obtain other Polish spaces using the following basic observations.
 
@@ -74,7 +75,7 @@ The standard example is, of course, $\Real$, the set of real numbers. One can ob
 2. The product of a countable (in particular, finite) sequence of Polish spaces is Polish.
 ```
 
-Hence we can conclude that $\Real^n$, $\C$, $\C^n$, the unit interval $[0,1]$, the unit circle $\Ci = \{z \in \C \colon |z| = 1\}$, and the infinite dimensional spaces $\Real^\Nat$ and $[0,1]^\Nat$ (the *Hilbert cube*) are Polish spaces.
+Hence we can conclude that $\Real^n$, $\C$, $\C^n$, the unit interval $[0,1]$, the unit circle $\Ci = \{z \in \C \colon |z| = 1\}$, and the infinite dimensional spaces $\Real^\Nat$ and $[0,1]^\Nat$ (the _Hilbert cube_) are Polish spaces.
 
 Any countable set with the **discrete topology** is Polish, by means of the **discrete metric** $d(x,y) = 1 \: \Leftrightarrow \: x \neq y$.
 
@@ -95,6 +96,7 @@ In a certain sense, the most important Polish spaces are of the form $A^\Nat$, w
 $$
 \Cant \text{, the Cantor space} \qquad \text{and} \qquad \Baire \text{, the Baire space}.
 $$
+
 We will, for now, denote elements from $A^\Nat$ by lower case greek letters from the beginning of the alphabet. The $n$-th term of $\alpha$ we denote by either $\alpha(n)$ or $\alpha_n$, whichever is more convenient.
 
 We endow $A$ with the discrete topology.
@@ -125,7 +127,7 @@ Let $A$ be a countable set, equipped with the discrete topology. Suppose $A^\Nat
 
 1. $A^\Nat$ is Polish.
 2. $A^\Nat$ is *zero-dimensional*, i.e. it has a basis of *clopen* sets.
-3. $A^\Nat$ is compact if and only if $A$ is finite. 
+3. $A^\Nat$ is compact if and only if $A$ is finite.
 ```
 
 Via the mapping
@@ -142,7 +144,8 @@ $$
                 \beta_2 + \cfrac{1}{
                         \beta_3 + \ldots}}}
 $$
-provides a homeomorphism between $\Baire$ and the irrational real numbers.
+
+provides a homeomorphism between $\Z \times (\N\setminus\{0\})^\N$ and the irrational real numbers.
 
 The universal role played by the discrete product spaces is manifested in the following results.
 
@@ -154,7 +157,7 @@ Every uncountable Polish space contains a homeomorphic embedding of Cantor space
 
 The proof is similar to the proof of {prf:ref}`thm-card-perfect-sets`. Note that the proof actually constructs an embedding of $\Cant$. The continuity of the mapping is straightforward.
 
-In a similar way we can adapt the proof of {prf:ref}`cantor-bendixson` to show that the *prefect subset property* holds for closed subsets of Polish spaces.
+In a similar way we can adapt the proof of {prf:ref}`cantor-bendixson` to show that the _prefect subset property_ holds for closed subsets of Polish spaces.
 
 ```{prf:theorem} Cantor-Bendixson Theorem for Polish spaces
 :label: thm-cantor_bendixson-polish
@@ -167,14 +170,14 @@ Finally, we can characterize Polish spaces as continuous images of Baire space.
 ```{prf:theorem}
 :label: thm-polish_cont_image_Baire
 
-Every Polish space $X$ is the continuous image of $\Baire$. 
+Every Polish space $X$ is the continuous image of $\Baire$.
 ```
 
 ```{prf:proof}
 Let $d$ be a compatible metric on $X$, and let $D = \{x_i \colon i \in \Nat\}$ be a countable dense subset of $X$. Every point in $X$ is the limit of a sequence in $D$. Define a mapping $g:\Baire \to X$ by putting
 
 $$
-    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.  
+    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.
 $$
 
 The problem is, of course, that the limit on the right hand side not necessarily exists. We have to proceed more carefully.
