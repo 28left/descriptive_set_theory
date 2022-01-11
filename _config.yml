@@ -58,3 +58,6 @@ sphinx:
           'Real': "\\mathbb{R}"
   extra_extensions:
     - sphinx_proof
+
+# Only build TOC files
+only_build_toc_files: true

@@ -100,8 +100,8 @@ $$
 We will, for now, denote elements from $A^\Nat$ by lower case greek letters from the beginning of the alphabet. The $n$-th term of $\alpha$ we denote by either $\alpha(n)$ or $\alpha_n$, whichever is more convenient.
 
 We endow $A$ with the discrete topology.
-The product topology on these spaces has a convenient characterization. Given a set $A$, let $\Str[A]$ be the sets of all finite binary sequences over $A$.
-Given $\sigma, \tau \in A^\Nat$, we write $\sigma \Sle \tau$ to indicate that $\sigma$ is an initial segment of $\tau$. $\subset$ means the initial segment is proper. This notation extends naturally to hold between elements of $\Str{A}$ and $A^\Nat$, $\sigma \Sle \alpha$ meaning that $\sigma$ is a finite initial segment of $\alpha$.
+The product topology on these spaces has a convenient characterization. Given a set $A$, let $\Str[A]$ be the sets of all finite sequences over $A$.
+Given $\sigma, \tau \in A^{<\Nat}$, we write $\sigma \Sleq \tau$ to indicate that $\sigma$ is an initial segment of $\tau$. $\Sle$ means the initial segment is proper. This notation extends naturally to hold between elements of $\Str{A}$ and $A^\Nat$, $\sigma \Sle \alpha$ meaning that $\sigma$ is a finite initial segment of $\alpha$.
 
 A basis for the product topology on $A^\Nat$ is given by the **cylinder sets**
 
