@@ -48,7 +48,7 @@ where $U_\eps(x)$ denotes the standard $\eps$-neighborhood of $x$ in $\Real$
 A non-empty set $P \subseteq \Real$ is **perfect** if it is closed and every point of $P$ is an accumulation point.
 ```
 
-In other words, a perfect set is a closed set that has no isolated points. It is not hard to see that for a perfect set $P$, every neighborhood of a point $p \in P$ contains infinitely many points.
+In other words, a perfect set is a closed set that has no isolated points. We can also deduce that for a perfect set $P$, every neighborhood of a point $p \in P$ contains infinitely many points from $P$.
 
 ````{margin}
 ```{figure} ./images/Cantor_set.png
@@ -73,13 +73,13 @@ $$
 
 Note that this mapping is onto. It follows that the cardinality of $P$ is at least as large as the cardinality of $[0,1]$. The [Cantor-Schröder-Bernstein Theorem](https://en.wikipedia.org/wiki/Schröder–Bernstein_theorem) (for a proof see e.g. {cite}`jech2003a`)   implies that $|P| = |\R|$.
 
-To construct the desired injection, choose $x \in P$ and let $\eps_0 = 1 = 2^0$. Since $P$ is perfect,  $P \cap B_{\eps_0}(x)$. Let $x_0 \neq x_1$ be two points in $P \cap B_{\eps_0}(x)$, distinct from $x$. Let $\eps_1$ be such that $\eps_1 \leq 1/2$, $B_{\eps_1}(x_0), B_{\eps_1}(x_1) \subseteq B_{\eps_0}(x)$, and $\overline{B_{\eps_1}(x_0)} \cap \overline{B_{\eps_1}(x_1)} = \emptyset$, where $\overline{U}$ denotes the closure of $U$.
+To construct the desired injection, choose $x \in P$ and let $\eps_0 = 1 = 2^0$. Since $P$ is perfect,  $P \cap U_{\eps_0}(x)$ is infinite. Let $x_0 \neq x_1$ be two points in $P \cap U_{\eps_0}(x)$, distinct from $x$. Let $\eps_1$ be such that $\eps_1 \leq 1/2$, $U_{\eps_1}(x_0), U_{\eps_1}(x_1) \subseteq U_{\eps_0}(x)$, and $\overline{U_{\eps_1}(x_0)} \cap \overline{U_{\eps_1}(x_1)} = \emptyset$, where $\overline{U}$ denotes the closure of $U$.
 
-We can iterate this procedure recursively with smaller and smaller diameters, using the fact that $P$ is perfect. This gives rise to a so-called **Cantor scheme**, a family of open balls $(B_\sigma)$ satisfying certain *nesting conditions*. Here the index $\sigma$ is a finite binary sequence, also called a *string*. A Cantor scheme is defined by the following properties.
+We can iterate this procedure recursively with smaller and smaller diameters, using the fact that $P$ is perfect. This gives rise to a so-called **Cantor scheme**, a family of open balls $(U_\sigma)$ satisfying certain *nesting conditions*. Here the index $\sigma$ is a finite binary sequence, also called a *string*. A Cantor scheme is defined by the following properties.
 
 1. $\diam(U_\sigma) \leq 2^{-|\sigma|}$, where $|\sigma|$ denotes the length of $\sigma$.
 2. If $\tau$ is a proper extension of $\sigma$, then $U_\tau \subset U_\sigma$.
-3. If $\tau$ and $\sigma$ are \emph{incompatible} (i.e.\ neither extends the other), then
+3. If $\tau$ and $\sigma$ are *incompatible* (i.e. neither extends the other), then
     \begin{equation*}
         U_\tau \cap U_\sigma = \emptyset.
     \end{equation*}
@@ -110,14 +110,14 @@ Every uncountable closed subset of $\Real$ contains a perfect subset.
 Let $C \subseteq \Real$ be uncountable and closed. We say $z \in \Real$ is a *condensation point* of $C$ if
 
 $$
-    \forall \eps > 0 \:[ B_\eps(z) \cap C \text{ uncountable}].
+    \forall \eps > 0 \:[ U_\eps(z) \cap C \text{ uncountable}].
 $$
 
 Let $D$ be the set of all condensation points of $C$. Note that $D \subseteq C$, since every condensation point is clearly an accumulation point and $C$ is closed.
 
-Furthermore, we claim that $D$ is perfect. Clearly $D$ is closed. Suppose $z \in D$ and $\eps > 0$. Then $B_\eps(z) \cap C$ is uncountable. We would like to conclude that $B_\eps(z) \cap D$ is uncountable, too, since this would mean in particular that $B_\eps(z) \cap D$ is infinite. The conclusion holds if $C \setminus D$ is countable.
+Furthermore, we claim that $D$ is perfect. Clearly $D$ is closed. Suppose $z \in D$ and $\eps > 0$. Then $U_\eps(z) \cap C$ is uncountable. We would like to conclude that $U_\eps(z) \cap D$ is uncountable, too, since this would mean in particular that $U_\eps(z) \cap D$ is infinite. The conclusion holds if $C \setminus D$ is countable.
 
-To show that $C\setminus D$ is countable, assume that $y \in C \setminus D$. Then, for some $\delta > 0$,  $B_\delta(y) \cap C$ is countable. We can find and interval $I(y) \subseteq B_\delta(y)$ that contains $y$ and has rational endpoints. There are at most countably many intervals with rational endpoints and hence for each $y \in C \setminus D$ there are at most countably many choices for $I(y)$. Thus, we have
+To show that $C\setminus D$ is countable, assume that $y \in C \setminus D$. Then, for some $\delta > 0$,  $U_\delta(y) \cap C$ is countable. We can find and interval $I(y) \subseteq U_\delta(y)$ that contains $y$ and has rational endpoints. There are at most countably many intervals with rational endpoints and hence for each $y \in C \setminus D$ there are at most countably many choices for $I(y)$. Thus, we have
 
 $$
     C\setminus D \subseteq \bigcup_{y \in C \setminus D} I_y \cap C.
