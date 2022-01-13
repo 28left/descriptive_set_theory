@@ -296,7 +296,7 @@
 d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 \]</div>
 <p>that is, an isometry is a mapping that preserves distances. The function <span class="math notranslate nohighlight">\(f\)</span> is also called an <em>isometric embedding</em> of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are <em>isometric</em> if there exists a bijective isometry between them.</p>
-<p>There exist “universal” Polish spaces – complete, separable metric spaces that contains an isometric copy of any other Polish metric space.</p>
+<p>There exist “universal” Polish spaces – complete, separable metric spaces that contain an isometric copy of any other Polish metric space.</p>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
 <div class="theorem-content section" id="proof-content">
@@ -329,7 +329,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 <p>Furthermore, suppose <span class="math notranslate nohighlight">\(w = \lim x_{k_n}\)</span> is another point in <span class="math notranslate nohighlight">\(X\)</span>. Then (since a metric is a continuous mapping from <span class="math notranslate nohighlight">\(Y\times Y \to \Real\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[
-	d(e*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
+	d(e^*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
 \]</div>
 <p>Thus <span class="math notranslate nohighlight">\(e^*\)</span> is an isometry.</p>
 </div>
@@ -363,7 +363,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 <div class="proof proposition admonition" id="proposition-3">
 <p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>For any separable metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
+<p>For any Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
 </div>
 </div><p>But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.</p>
 <div class="proof proposition admonition" id="proposition-4">
@@ -455,8 +455,8 @@ Every compact metric space is separable: For every <span class="math notranslate
 </div><div class="proof admonition" id="proof">
 <p>Proof. We follow <span id="id4">[<a class="reference internal" href="bibliography.html#id3">Gromov, 1999</a>]</span>. Let <span class="math notranslate nohighlight">\(F = \{x_1, \dots, x_n\} \subset Y\)</span> and assume <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> is an extension with metric <span class="math notranslate nohighlight">\(d^*\)</span>.</p>
 <p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>aproximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a3b9081-727f-4911-86bf-b9450a031056">
-<span class="eqno">(1)<a class="headerlink" href="#equation-7a3b9081-727f-4911-86bf-b9450a031056" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
+<div class="amsmath math notranslate nohighlight" id="equation-732a6f27-5c3e-4e35-918e-2fb0c58d7e86">
+<span class="eqno">(1)<a class="headerlink" href="#equation-732a6f27-5c3e-4e35-918e-2fb0c58d7e86" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
 	|d(y*,x) - d^*(x^*,x)| &lt; \eps \quad \text{ for all $x \in F$}.
 \end{equation}\]</div>
 <p>This can be seen as follows. Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is dense in <span class="math notranslate nohighlight">\(Y\)</span>, we can find a finite set <span class="math notranslate nohighlight">\(F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}\)</span> such that</p>
@@ -582,7 +582,7 @@ The formal requirements for the sequence <span class="math notranslate nohighlig
 d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 \]</div>
 <p>that is, an isometry is a mapping that preserves distances. The function <span class="math notranslate nohighlight">\(f\)</span> is also called an <em>isometric embedding</em> of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are <em>isometric</em> if there exists a bijective isometry between them.</p>
-<p>There exist “universal” Polish spaces – complete, separable metric spaces that contains an isometric copy of any other Polish metric space.</p>
+<p>There exist “universal” Polish spaces – complete, separable metric spaces that contain an isometric copy of any other Polish metric space.</p>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
 <div class="theorem-content section" id="proof-content">
@@ -615,7 +615,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 <p>Furthermore, suppose <span class="math notranslate nohighlight">\(w = \lim x_{k_n}\)</span> is another point in <span class="math notranslate nohighlight">\(X\)</span>. Then (since a metric is a continuous mapping from <span class="math notranslate nohighlight">\(Y\times Y \to \Real\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[
-	d(e*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
+	d(e^*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
 \]</div>
 <p>Thus <span class="math notranslate nohighlight">\(e^*\)</span> is an isometry.</p>
 </div>
@@ -649,7 +649,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 <div class="proof proposition admonition" id="proposition-3">
 <p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>For any separable metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
+<p>For any Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
 </div>
 </div><p>But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.</p>
 <div class="proof proposition admonition" id="proposition-4">
@@ -741,8 +741,8 @@ Every compact metric space is separable: For every <span class="math notranslate
 </div><div class="proof admonition" id="proof">
 <p>Proof. We follow <span id="id4">[<a class="reference internal" href="bibliography.html#id3">Gromov, 1999</a>]</span>. Let <span class="math notranslate nohighlight">\(F = \{x_1, \dots, x_n\} \subset Y\)</span> and assume <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> is an extension with metric <span class="math notranslate nohighlight">\(d^*\)</span>.</p>
 <p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>aproximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a3b9081-727f-4911-86bf-b9450a031056">
-<span class="eqno">(1)<a class="headerlink" href="#equation-7a3b9081-727f-4911-86bf-b9450a031056" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
+<div class="amsmath math notranslate nohighlight" id="equation-732a6f27-5c3e-4e35-918e-2fb0c58d7e86">
+<span class="eqno">(1)<a class="headerlink" href="#equation-732a6f27-5c3e-4e35-918e-2fb0c58d7e86" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
 	|d(y*,x) - d^*(x^*,x)| &lt; \eps \quad \text{ for all $x \in F$}.
 \end{equation}\]</div>
 <p>This can be seen as follows. Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is dense in <span class="math notranslate nohighlight">\(Y\)</span>, we can find a finite set <span class="math notranslate nohighlight">\(F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}\)</span> such that</p>

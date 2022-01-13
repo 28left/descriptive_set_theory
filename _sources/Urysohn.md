@@ -25,7 +25,7 @@ $$
 
 that is, an isometry is a mapping that preserves distances. The function $f$ is also called an *isometric embedding* of $X$ into $Y$. $X$ and $Y$ are *isometric* if there exists a bijective isometry between them.
 
-There exist "universal" Polish spaces -- complete, separable metric spaces that contains an isometric copy of any other Polish metric space.
+There exist "universal" Polish spaces -- complete, separable metric spaces that contain an isometric copy of any other Polish metric space.
 
 ```{prf:theorem}
 There exists a Polish metric space $\Ury$ such that every Polish metric space isometrically embeds into $\Ury$.
@@ -68,7 +68,7 @@ To see that this mapping is well-defined, let $(x_{j_n})$ be another sequence wi
 Furthermore, suppose $w = \lim x_{k_n}$ is another point in $X$. Then (since a metric is a continuous mapping from $Y\times Y \to \Real$)
 
 $$
-	d(e*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
+	d(e^*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
 $$
 
 Thus $e^*$ is an isometry.
@@ -109,7 +109,7 @@ We will prove the existence of this unique Polish space, which we  denote by $\U
 As outlined above, the extension property of $\Ury$ implies the desired isometric embedding property.
 
 ```{prf:proposition}
-For any separable metric space $(X,d)$ there exists an isometric embedding from $X$ into $\Ury$.
+For any Polish metric space $(X,d)$ there exists an isometric embedding from $X$ into $\Ury$.
 ```
 
 But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.
