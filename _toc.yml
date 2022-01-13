@@ -8,6 +8,7 @@ parts:
     chapters:
       - file: perfect_subsets_R
       - file: polish
+      - file: Urysohn.md
   - caption: Reference
     chapters:
       - file: bibliography
