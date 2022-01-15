@@ -109,12 +109,16 @@ We will prove the existence of this unique Polish space, which we  denote by $\U
 As outlined above, the extension property of $\Ury$ implies the desired isometric embedding property.
 
 ```{prf:proposition}
+:label: prop-Urysohn-embedding
+
 For any Polish metric space $(X,d)$ there exists an isometric embedding from $X$ into $\Ury$.
 ```
 
 But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.
 
 ```{prf:proposition}	
+:label: prop-Urysohn-extension
+
 Every isometry between finite subsets of $\mathcal{U}$ extends to an isometry of $\mathcal{U}$ onto itself.
 ```
 

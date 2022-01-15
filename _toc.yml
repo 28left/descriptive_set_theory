@@ -4,11 +4,12 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Borel sets
+  - caption: Polish spaces
     chapters:
       - file: perfect_subsets_R
       - file: polish
       - file: Urysohn.md
+      - file: trees.md
   - caption: Reference
     chapters:
       - file: bibliography
