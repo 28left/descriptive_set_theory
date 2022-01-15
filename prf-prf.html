@@ -97,7 +97,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Borel sets
+  Polish spaces
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -114,6 +114,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Urysohn.html">
    Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
   </a>
  </li>
 </ul>
@@ -196,14 +201,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1></h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -216,15 +224,22 @@
    <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
    <a href="#cap-def-perfect"><strong>def-perfect</strong></a> | 
    <a href="#cap-def-polish"><strong>def-polish</strong></a> | 
+   <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
    <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
+   <a href="#cap-definition-3"><strong>definition-3</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
    <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
    <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
-   <a href="#cap-prop-polish"><strong>prop-polish</strong></a> | 
-   <a href="#cap-proposition-2"><strong>proposition-2</strong></a> | 
-   <a href="#cap-proposition-3"><strong>proposition-3</strong></a> | 
-   <a href="#cap-proposition-4"><strong>proposition-4</strong></a> | 
+   <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
+   <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
+   <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
+   <a href="#cap-prop-product-continuous"><strong>prop-product-continuous</strong></a> | 
+   <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
+   <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
+   <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
+   <a href="#cap-theorem-1"><strong>theorem-1</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
@@ -265,12 +280,28 @@
        <a href="polish.html#def-polish"><code class="xref">def-polish</code></a> <em>(polish)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-0"><td></td><td>
+       <strong>definition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#definition-0"><code class="xref">definition-0</code></a> <em>(trees)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-definition-2"><td></td><td>
        <strong>definition-2</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="Urysohn.html#definition-2"><code class="xref">definition-2</code></a> <em>(Urysohn)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-3"><td></td><td>
+       <strong>definition-3</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#definition-3"><code class="xref">definition-3</code></a> <em>(trees)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lemma-1"><td></td><td>
@@ -297,36 +328,68 @@
        <a href="Urysohn.html#lemma-6"><code class="xref">lemma-6</code></a> <em>(Urysohn)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-prop-polish"><td></td><td>
-       <strong>prop-polish</strong></td><td></td></tr>
+     <tr class="cap" id="cap-prop-KB-wellorder"><td></td><td>
+       <strong>prop-KB-wellorder</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="polish.html#prop-polish"><code class="xref">prop-polish</code></a> <em>(polish)</em></td><td>
+       <a href="trees.html#prop-KB-wellorder"><code class="xref">prop-KB-wellorder</code></a> <em>(trees)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-2"><td></td><td>
-       <strong>proposition-2</strong></td><td></td></tr>
+     <tr class="cap" id="cap-prop-Urysohn-embedding"><td></td><td>
+       <strong>prop-Urysohn-embedding</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="polish.html#proposition-2"><code class="xref">proposition-2</code></a> <em>(polish)</em></td><td>
+       <a href="Urysohn.html#prop-Urysohn-embedding"><code class="xref">prop-Urysohn-embedding</code></a> <em>(Urysohn)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-3"><td></td><td>
-       <strong>proposition-3</strong></td><td></td></tr>
+     <tr class="cap" id="cap-prop-Urysohn-extension"><td></td><td>
+       <strong>prop-Urysohn-extension</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Urysohn.html#proposition-3"><code class="xref">proposition-3</code></a> <em>(Urysohn)</em></td><td>
+       <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-4"><td></td><td>
-       <strong>proposition-4</strong></td><td></td></tr>
+     <tr class="cap" id="cap-prop-leftmost-branch"><td></td><td>
+       <strong>prop-leftmost-branch</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Urysohn.html#proposition-4"><code class="xref">proposition-4</code></a> <em>(Urysohn)</em></td><td>
+       <a href="trees.html#prop-leftmost-branch"><code class="xref">prop-leftmost-branch</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-product-continuous"><td></td><td>
+       <strong>prop-product-continuous</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-product-continuous"><code class="xref">prop-product-continuous</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-topological-product"><td></td><td>
+       <strong>prop-topological-product</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#prop-topological-product"><code class="xref">prop-topological-product</code></a> <em>(polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-trees-closed"><td></td><td>
+       <strong>prop-trees-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-trees-closed"><code class="xref">prop-trees-closed</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-polish"><td></td><td>
+       <strong>properties-polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#properties-polish"><code class="xref">properties-polish</code></a> <em>(polish)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-0"><td></td><td>
@@ -335,6 +398,14 @@
        <td></td>
        <td>
        <a href="Urysohn.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Urysohn)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-1"><td></td><td>
+       <strong>theorem-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(trees)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Cantor-embedding"><td></td><td>
@@ -373,184 +444,11 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-
-   <h1>Proof Index</h1>
-
-   <div class="modindex-jumpbox">
-   <a href="#cap-cantor-bendixson"><strong>cantor-bendixson</strong></a> | 
-   <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
-   <a href="#cap-def-perfect"><strong>def-perfect</strong></a> | 
-   <a href="#cap-def-polish"><strong>def-polish</strong></a> | 
-   <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
-   <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
-   <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
-   <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
-   <a href="#cap-prop-polish"><strong>prop-polish</strong></a> | 
-   <a href="#cap-proposition-2"><strong>proposition-2</strong></a> | 
-   <a href="#cap-proposition-3"><strong>proposition-3</strong></a> | 
-   <a href="#cap-proposition-4"><strong>proposition-4</strong></a> | 
-   <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
-   <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
-   <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
-   <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
-   <a href="#cap-thm-polish_cont_image_Baire"><strong>thm-polish_cont_image_Baire</strong></a>
-   </div>
-
-   <table class="indextable modindextable">
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-cantor-bendixson"><td></td><td>
-       <strong>cantor-bendixson</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="perfect_subsets_R.html#cantor-bendixson"><code class="xref">cantor-bendixson</code></a> <em>(perfect_subsets_R)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-corollary-3"><td></td><td>
-       <strong>corollary-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="perfect_subsets_R.html#corollary-3"><code class="xref">corollary-3</code></a> <em>(perfect_subsets_R)</em></td><td>
-       <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def-perfect"><td></td><td>
-       <strong>def-perfect</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="perfect_subsets_R.html#def-perfect"><code class="xref">def-perfect</code></a> <em>(perfect_subsets_R)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def-polish"><td></td><td>
-       <strong>def-polish</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#def-polish"><code class="xref">def-polish</code></a> <em>(polish)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-2"><td></td><td>
-       <strong>definition-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#definition-2"><code class="xref">definition-2</code></a> <em>(Urysohn)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lemma-1"><td></td><td>
-       <strong>lemma-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#lemma-1"><code class="xref">lemma-1</code></a> <em>(Urysohn)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lemma-5"><td></td><td>
-       <strong>lemma-5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#lemma-5"><code class="xref">lemma-5</code></a> <em>(Urysohn)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lemma-6"><td></td><td>
-       <strong>lemma-6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#lemma-6"><code class="xref">lemma-6</code></a> <em>(Urysohn)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-prop-polish"><td></td><td>
-       <strong>prop-polish</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#prop-polish"><code class="xref">prop-polish</code></a> <em>(polish)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-2"><td></td><td>
-       <strong>proposition-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#proposition-2"><code class="xref">proposition-2</code></a> <em>(polish)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-3"><td></td><td>
-       <strong>proposition-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#proposition-3"><code class="xref">proposition-3</code></a> <em>(Urysohn)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-4"><td></td><td>
-       <strong>proposition-4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#proposition-4"><code class="xref">proposition-4</code></a> <em>(Urysohn)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-0"><td></td><td>
-       <strong>theorem-0</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Urysohn.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Urysohn)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-Cantor-embedding"><td></td><td>
-       <strong>thm-Cantor-embedding</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#thm-Cantor-embedding"><code class="xref">thm-Cantor-embedding</code></a> <em>(polish)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-cantor_bendixson-polish"><td></td><td>
-       <strong>thm-cantor_bendixson-polish</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#thm-cantor_bendixson-polish"><code class="xref">thm-cantor_bendixson-polish</code></a> <em>(polish)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-card-perfect-sets"><td></td><td>
-       <strong>thm-card-perfect-sets</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="perfect_subsets_R.html#thm-card-perfect-sets"><code class="xref">thm-card-perfect-sets</code></a> <em>(perfect_subsets_R)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-polish_cont_image_Baire"><td></td><td>
-       <strong>thm-polish_cont_image_Baire</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="polish.html#thm-polish_cont_image_Baire"><code class="xref">thm-polish_cont_image_Baire</code></a> <em>(polish)</em></td><td>
-       <em>theorem</em></td></tr>
-   </table>
-
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
