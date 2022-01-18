@@ -225,6 +225,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#universal-spaces">
+   Universal spaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extensions-of-finite-isometries-and-urysohn-universality">
    Extensions of finite isometries and Urysohn universality
   </a>
@@ -235,8 +240,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mending-the-construction">
-   Mending the construction
+  <a class="reference internal nav-link" href="#finishing-the-construction">
+   Finishing the construction
   </a>
  </li>
 </ul>
@@ -260,6 +265,11 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#universal-spaces">
+   Universal spaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extensions-of-finite-isometries-and-urysohn-universality">
    Extensions of finite isometries and Urysohn universality
   </a>
@@ -270,8 +280,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mending-the-construction">
-   Mending the construction
+  <a class="reference internal nav-link" href="#finishing-the-construction">
+   Finishing the construction
   </a>
  </li>
 </ul>
@@ -304,7 +314,8 @@
 d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 \]</div>
 <p>that is, an isometry is a mapping that preserves distances. The function <span class="math notranslate nohighlight">\(f\)</span> is also called an <em>isometric embedding</em> of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are <em>isometric</em> if there exists a bijective isometry between them.</p>
-<p>There exist “universal” Polish spaces – complete, separable metric spaces that contain an isometric copy of any other Polish metric space.</p>
+<div class="section" id="universal-spaces">
+<h2>Universal spaces<a class="headerlink" href="#universal-spaces" title="Permalink to this headline">¶</a></h2>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
 <div class="theorem-content section" id="proof-content">
@@ -322,6 +333,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 </div>
 <p>But this example is not quite what we have in mind here. There exists another space with a stronger, more “intrinsic” universality property. This space was first constructed by Pavel Urysohn in 1927 <span id="id1">[<a class="reference internal" href="bibliography.html#id7">Urysohn, 1927</a>]</span>.</p>
 <p>The construction features an <strong>amalgamation principle</strong> that has surfaced in other areas like model theory or graph theory.</p>
+</div>
 <div class="section" id="extensions-of-finite-isometries-and-urysohn-universality">
 <h2>Extensions of finite isometries and Urysohn universality<a class="headerlink" href="#extensions-of-finite-isometries-and-urysohn-universality" title="Permalink to this headline">¶</a></h2>
 <p>Suppose <span class="math notranslate nohighlight">\(X\)</span> is a Polish metric space. Let <span class="math notranslate nohighlight">\(D = \{x_1, x_2, \dots\}\)</span> be a countable, dense subset. We first observe that, to isometrically embed <span class="math notranslate nohighlight">\(X\)</span> into another Polish space, it is sufficient to embed <span class="math notranslate nohighlight">\(D\)</span>.</p>
@@ -341,7 +353,7 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 \]</div>
 <p>Thus <span class="math notranslate nohighlight">\(e^*\)</span> is an isometry.</p>
 </div>
-<p>In order to embed <span class="math notranslate nohighlight">\(D\)</span>, we can now exploit inductive structure of <span class="math notranslate nohighlight">\(\Nat\)</span> and reduce the task to extending finite isometries.</p>
+<p>In order to embed <span class="math notranslate nohighlight">\(D\)</span>, we can now exploit the inductive structure of <span class="math notranslate nohighlight">\(\Nat\)</span> and reduce the task to extending finite isometries.</p>
 <p>Suppose we have constructed an isometry <span class="math notranslate nohighlight">\(e\)</span> between <span class="math notranslate nohighlight">\(F_N = \{x_1, \dots, x_N \} \subset D\)</span> and a space <span class="math notranslate nohighlight">\(Y\)</span>. We would like to extend the isometry to include <span class="math notranslate nohighlight">\(x_{N+1}\)</span>. For this we have to find an element <span class="math notranslate nohighlight">\(y \in Y\)</span> such that for all <span class="math notranslate nohighlight">\(i \leq N\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -362,25 +374,26 @@ d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
 	d_{Y}(u,x) = d^*(x^*,x) \quad \text{ for all $x \in F$}.
 \]</div>
 </div>
-</div><div class="tip admonition">
-<p class="admonition-title">Exercise</p>
-<p>Show that any two Urysohn universal spaces are isometric.</p>
-</div>
-<p>We will prove the existence of this unique Polish space, which we  denote by <span class="math notranslate nohighlight">\(\Ury\)</span>, in the following sections.</p>
-<p>As outlined above, the extension property of <span class="math notranslate nohighlight">\(\Ury\)</span> implies the desired isometric embedding property.</p>
+</div><p>As outlined above, the extension property of Urysohn universal spaces implies the desired isometric embedding property.</p>
 <div class="proof proposition admonition" id="prop-Urysohn-embedding">
 <p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>For any Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a Urysohn universal Polish metric space. For any Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(U\)</span>.</p>
 </div>
 </div><p>But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.</p>
 <div class="proof proposition admonition" id="prop-Urysohn-extension">
 <p class="admonition-title"><span class="caption-number">Proposition 4 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>Every isometry between finite subsets of <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> extends to an isometry of <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> onto itself.</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a Urysohn universal Polish metric space. Every isometry between finite subsets of <span class="math notranslate nohighlight">\(\Ury\)</span> extends to an isometry of <span class="math notranslate nohighlight">\(U\)</span> onto itself.</p>
 </div>
-</div><p>This property (which can be formulated for structures in general) is also known as <strong>homogeneity</strong>. It plays an important role, for example, in
+</div><p>The proof applies the <a class="reference external" href="https://en.wikipedia.org/wiki/Back-and-forth_method">Back-and-forth method</a> that you may know from the rationals: every order-isomorphism between finite subsets of <span class="math notranslate nohighlight">\(\Q\)</span> extends to an automorphism of <span class="math notranslate nohighlight">\((\Q,&lt;)\)</span>.</p>
+<p>This property (which can be formulated for structures in general) is also known as <strong>homogeneity</strong>. It plays an important role, for example, in
 model theory <span id="id2">[<a class="reference internal" href="bibliography.html#id6">Macpherson, 2011</a>]</span> and in the topological dynamics of automorphism groups of countable structures <span id="id3">[<a class="reference internal" href="bibliography.html#id5">Kechris <em>et al.</em>, 2005</a>]</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that any two Urysohn universal spaces are isometric.</p>
+</div>
+<p>We will prove the existence of this unique Polish space, which we denote by <span class="math notranslate nohighlight">\(\Ury\)</span>, in the following sections.</p>
 </div>
 <div class="section" id="constructing-the-urysohn-space-a-first-approximation">
 <h2>Constructing the Urysohn space – a first approximation<a class="headerlink" href="#constructing-the-urysohn-space-a-first-approximation" title="Permalink to this headline">¶</a></h2>
@@ -401,14 +414,14 @@ model theory <span id="id2">[<a class="reference internal" href="bibliography.ht
 	d(f,g) = \sup \{|f(x) - g(x)| \colon x \in X \}.
 \]</div>
 <p>If <span class="math notranslate nohighlight">\(\diam(X) \leq \mathrm{d}\)</span> and <span class="math notranslate nohighlight">\(f,g\)</span> are <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz, then <span class="math notranslate nohighlight">\(d(f,g)\)</span> is indeed finite.
-However, we will need that the resulting space is also bounded. Let  <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> be the space of all <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz functions from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\([0,\mathrm{d}]\)</span>.</p>
+However, we will <a class="reference internal" href="#ury-finishing-construction"><span class="std std-ref">later</span></a>  need that the resulting space is also bounded. Let  <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> be the space of all <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz functions from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\([0,\mathrm{d}]\)</span>.</p>
 <p>Clearly, <span class="math notranslate nohighlight">\(\diam(\Lip^{\mathrm{d}}_1(X)) \leq \mathrm{d}\)</span>.</p>
 <p>With this metric, the mapping <span class="math notranslate nohighlight">\(x \mapsto f_{x}(y) = d(x,y) \)</span> becomes an isometry: We have</p>
 <div class="math notranslate nohighlight">
 \[
 	d(f_{x}, f_{z}) = \sup\{ | d(x,y) - d(z,y)| \colon y \in X \}.
 \]</div>
-<p>By the reverse triangle inequality, this is always <span class="math notranslate nohighlight">\(\leq d(x,z)\)</span>. On the other hand, setting <span class="math notranslate nohighlight">\(z = x\)</span> yields <span class="math notranslate nohighlight">\(d(f_x,f_z) \geq d(x,z)\)</span>. This embedding of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is called the <strong>Kuratowski embedding</strong>.</p>
+<p>By the reverse triangle inequality, this is always <span class="math notranslate nohighlight">\(\leq d(x,z)\)</span>. On the other hand, setting <span class="math notranslate nohighlight">\(y=z\)</span> yields <span class="math notranslate nohighlight">\(d(f_x,f_z) \geq d(x,z)\)</span>. This embedding of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is called the <strong>Kuratowski embedding</strong>.</p>
 <p>We use this fact as follows: If <span class="math notranslate nohighlight">\(X^* = X \sqcup \{x^*\}\)</span> and <span class="math notranslate nohighlight">\(d^*\)</span> is an extension of <span class="math notranslate nohighlight">\(d_X\)</span>, then <span class="math notranslate nohighlight">\(f_{x^*}\)</span> is an element of <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span>, and as above, for any <span class="math notranslate nohighlight">\(x \in X\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -418,11 +431,11 @@ However, we will need that the resulting space is also bounded. Let  <span class
 <blockquote>
 <div><p><em>Iterative construction</em>: Let <span class="math notranslate nohighlight">\(X_0\)</span> be any non-empty Polish space with finite diameter <span class="math notranslate nohighlight">\(\mathrm{d} &gt; 0\)</span>. Given <span class="math notranslate nohighlight">\(X_n\)</span>, let <span class="math notranslate nohighlight">\(\mathrm{d}(n) = \diam(X_n)\)</span> and set <span class="math notranslate nohighlight">\(X_{n+1} = \Lip^{2\mathrm{d}(n)}_1(X_n)\)</span>. Finally, put <span class="math notranslate nohighlight">\(X_\infty = \bigcup_n X_n\)</span>. Note that <span class="math notranslate nohighlight">\(X_\infty\)</span> inherits a well-defined metric <span class="math notranslate nohighlight">\(d\)</span> from the <span class="math notranslate nohighlight">\(X_n\)</span>, which embed isometrically into it.</p>
 </div></blockquote>
-<p>We claim that <span class="math notranslate nohighlight">\(X_\infty\)</span> has the extension property needed to be Urysohn universal. Let <span class="math notranslate nohighlight">\(F\)</span> be a finite subset of <span class="math notranslate nohighlight">\(X_\infty\)</span>. There exists <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(F \subset X_N\)</span>. Suppose <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> and <span class="math notranslate nohighlight">\(d^*\)</span> is an extension of <span class="math notranslate nohighlight">\(d\)</span> to <span class="math notranslate nohighlight">\(F^*\)</span>. Let <span class="math notranslate nohighlight">\(\mathrm{d}^* = \diam(F^*)\)</span>. Note that <span class="math notranslate nohighlight">\(\diam(X_n) = 2^n \mathrm{d}\)</span>. Choose <span class="math notranslate nohighlight">\(M\)</span> so that <span class="math notranslate nohighlight">\(M \geq N\)</span> and <span class="math notranslate nohighlight">\(\diam(X_M) \geq \mathrm{d}^*\)</span>. The next lemma ensures that we can find <span class="math notranslate nohighlight">\(f \in X_{M+1}\)</span> such that <span class="math notranslate nohighlight">\(f(x) = d^*(x^*,x)\)</span> for all <span class="math notranslate nohighlight">\(x \in F\)</span>.</p>
+<p>We wan to verify that <span class="math notranslate nohighlight">\(X_\infty\)</span> has the extension property needed to be Urysohn universal. Let <span class="math notranslate nohighlight">\(F\)</span> be a finite subset of <span class="math notranslate nohighlight">\(X_\infty\)</span>. There exists <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(F \subset X_N\)</span>. Suppose <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> and <span class="math notranslate nohighlight">\(d^*\)</span> is an extension of <span class="math notranslate nohighlight">\(d\)</span> to <span class="math notranslate nohighlight">\(F^*\)</span>. Let <span class="math notranslate nohighlight">\(\mathrm{d}^* = \diam(F^*)\)</span>. Note that <span class="math notranslate nohighlight">\(\diam(X_n) = 2^n \mathrm{d}\)</span>. Choose <span class="math notranslate nohighlight">\(M\)</span> so that <span class="math notranslate nohighlight">\(M \geq N\)</span> and <span class="math notranslate nohighlight">\(\diam(X_M) \geq \mathrm{d}^*\)</span>. The next lemma ensures that we can find <span class="math notranslate nohighlight">\(f \in X_{M+1}\)</span> such that <span class="math notranslate nohighlight">\(f(x) = d^*(x^*,x)\)</span> for all <span class="math notranslate nohighlight">\(x \in F\)</span>.</p>
 <div class="proof lemma admonition" id="lemma-5">
 <p class="admonition-title"><span class="caption-number">Lemma 2 </span> (McShane-Whitney)</p>
 <div class="lemma-content section" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a metric space with <span class="math notranslate nohighlight">\(\diam(X) \leq \mathrm d\)</span>, <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, and <span class="math notranslate nohighlight">\(f \in \Lip^{\mathrm{d}}_1(A)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> can be extended to an <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz function <span class="math notranslate nohighlight">\(f^*\)</span> on all of <span class="math notranslate nohighlight">\(X\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a metric space with <span class="math notranslate nohighlight">\(\diam(X) \leq \mathrm d\)</span>, <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, and <span class="math notranslate nohighlight">\(f \in \Lip^{\mathrm{d}}_1(A)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz function <span class="math notranslate nohighlight">\(f^*\)</span> on all of <span class="math notranslate nohighlight">\(X\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[
 	f^*|_A = f \quad \text{ and } \quad f^* \in \Lip^{2\mathrm{d}}_1(X).
@@ -443,14 +456,14 @@ However, we will need that the resulting space is also bounded. Let  <span class
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 	|f^*(x) - f^*(y)| = f^*(y) - f^*(x) &amp; \leq f^*(y) - f_a(x) + \eps \\
-		&amp; \leq f_a(y) - f_a(x) + \eps \leq Ld(x,y) + \eps.
+		&amp; \leq f_a(y) - f_a(x) + \eps \leq d(x,y) + \eps.
 \end{align*}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span> was arbitrary, we have <span class="math notranslate nohighlight">\(|f^*(x) - f^*(y)| \leq L d(x,y)\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span> was arbitrary, we have <span class="math notranslate nohighlight">\(|f^*(x) - f^*(y)| \leq d(x,y)\)</span>.</p>
 <p>Finally, we have <span class="math notranslate nohighlight">\(f(a) \leq f_a(x) \leq f(a) + \mathrm{d}\)</span> and thus <span class="math notranslate nohighlight">\(0 \leq f^*(x) \leq f_a(x) \leq 2\mathrm{d}\)</span>.</p>
 </div>
 </div>
-<div class="section" id="mending-the-construction">
-<h2>Mending the construction<a class="headerlink" href="#mending-the-construction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="finishing-the-construction">
+<span id="ury-finishing-construction"></span><h2>Finishing the construction<a class="headerlink" href="#finishing-the-construction" title="Permalink to this headline">¶</a></h2>
 <p>The set <span class="math notranslate nohighlight">\(X_\infty\)</span> we constructed has two deficiencies with respect to our goal of constructing a Urysohn universal space: <span class="math notranslate nohighlight">\(X_\infty\)</span> is not necessarily separable, and <span class="math notranslate nohighlight">\(X_\infty\)</span> is not necessarily complete.</p>
 <p>To make <span class="math notranslate nohighlight">\(X_\infty\)</span> separable, we observe that if <span class="math notranslate nohighlight">\(X\)</span> is compact, then the set <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is closed in <span class="math notranslate nohighlight">\(\mathcal{C}(X)\)</span> (the set of all real-valued continuous functions on <span class="math notranslate nohighlight">\(X\)</span>), bounded, and equicontinuous. By the <strong>Arzelà-Ascoli Theorem</strong>, <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is compact.
 Every compact metric space is separable: For every <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a finite covering of the space with sets of <span class="math notranslate nohighlight">\(\diam &lt; \eps\)</span>. Letting <span class="math notranslate nohighlight">\(\eps\)</span> traverse all positive rationals and picking a point from each set in an <span class="math notranslate nohighlight">\(\eps\)</span>-covering yields a countable dense subset. Hence if we start with <span class="math notranslate nohighlight">\(X_0\)</span> compact, each <span class="math notranslate nohighlight">\(X_n\)</span> will be compact, too. A countable union of separable spaces is separable, thus <span class="math notranslate nohighlight">\(X_\infty\)</span> is separable.</p>
@@ -463,8 +476,8 @@ Every compact metric space is separable: For every <span class="math notranslate
 </div><div class="proof admonition" id="proof">
 <p>Proof. We follow <span id="id4">[<a class="reference internal" href="bibliography.html#id3">Gromov, 1999</a>]</span>. Let <span class="math notranslate nohighlight">\(F = \{x_1, \dots, x_n\} \subset Y\)</span> and assume <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> is an extension with metric <span class="math notranslate nohighlight">\(d^*\)</span>.</p>
 <p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>aproximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3883e3ee-d3da-485d-b9ec-e2a05287b2e9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3883e3ee-d3da-485d-b9ec-e2a05287b2e9" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
+<div class="amsmath math notranslate nohighlight" id="equation-995deafe-51c3-4389-95d1-aa88d1a50aa7">
+<span class="eqno">(1)<a class="headerlink" href="#equation-995deafe-51c3-4389-95d1-aa88d1a50aa7" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
 	|d(y*,x) - d^*(x^*,x)| &lt; \eps \quad \text{ for all $x \in F$}.
 \end{equation}\]</div>
 <p>This can be seen as follows. Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is dense in <span class="math notranslate nohighlight">\(Y\)</span>, we can find a finite set <span class="math notranslate nohighlight">\(F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}\)</span> such that</p>

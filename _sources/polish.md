@@ -108,7 +108,7 @@ $$
 \Cyl{\sigma} = \{\alpha \in A^\Nat \colon \sigma \Sle \alpha \},
 $$
 
-that is, the set of all infinite sequences extending $\sigma$. The complement of a cylinder is a finite union of cylinders and hence open. Therefore, each set $\Cyl{\sigma}$ is clopen.
+that is, the set of all infinite sequences extending $\sigma$. The complement of a cylinder is a union of cylinders and hence open. Therefore, each set $\Cyl{\sigma}$ is clopen.
 
 A compatible metric is given by
 

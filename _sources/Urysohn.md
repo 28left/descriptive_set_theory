@@ -25,7 +25,7 @@ $$
 
 that is, an isometry is a mapping that preserves distances. The function $f$ is also called an *isometric embedding* of $X$ into $Y$. $X$ and $Y$ are *isometric* if there exists a bijective isometry between them.
 
-There exist "universal" Polish spaces -- complete, separable metric spaces that contain an isometric copy of any other Polish metric space.
+## Universal spaces
 
 ```{prf:theorem}
 There exists a Polish metric space $\Ury$ such that every Polish metric space isometrically embeds into $\Ury$.
@@ -74,7 +74,7 @@ $$
 Thus $e^*$ is an isometry.
 ```
 
-In order to embed $D$, we can now exploit inductive structure of $\Nat$ and reduce the task to extending finite isometries.
+In order to embed $D$, we can now exploit the inductive structure of $\Nat$ and reduce the task to extending finite isometries.
 
 Suppose we have constructed an isometry $e$ between $F_N = \{x_1, \dots, x_N \} \subset D$ and a space $Y$. We would like to extend the isometry to include $x_{N+1}$. For this we have to find an element $y \in Y$ such that for all $i \leq N$
 
@@ -98,20 +98,12 @@ $$
 $$
 ```
 
-```{admonition} Exercise
-:class: tip
-
-Show that any two Urysohn universal spaces are isometric.
-``` 
-
-We will prove the existence of this unique Polish space, which we  denote by $\Ury$, in the following sections. 
-
-As outlined above, the extension property of $\Ury$ implies the desired isometric embedding property.
+As outlined above, the extension property of Urysohn universal spaces implies the desired isometric embedding property.
 
 ```{prf:proposition}
 :label: prop-Urysohn-embedding
 
-For any Polish metric space $(X,d)$ there exists an isometric embedding from $X$ into $\Ury$.
+Let $U$ be a Urysohn universal Polish metric space. For any Polish metric space $(X,d)$ there exists an isometric embedding from $X$ into $U$.
 ```
 
 But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.
@@ -119,11 +111,25 @@ But the extension property also implies a strong intrinsic extension property fo
 ```{prf:proposition}	
 :label: prop-Urysohn-extension
 
-Every isometry between finite subsets of $\mathcal{U}$ extends to an isometry of $\mathcal{U}$ onto itself.
+Let $U$ be a Urysohn universal Polish metric space. Every isometry between finite subsets of $\Ury$ extends to an isometry of $U$ onto itself.
 ```
+
+The proof applies the [Back-and-forth method](https://en.wikipedia.org/wiki/Back-and-forth_method) that you may know from the rationals: every order-isomorphism between finite subsets of $\Q$ extends to an automorphism of $(\Q,<)$.
 
 This property (which can be formulated for structures in general) is also known as **homogeneity**. It plays an important role, for example, in 
 model theory {cite}`Macpherson:2011a` and in the topological dynamics of automorphism groups of countable structures {cite}`Kechris-Pestov-Todorcevic:2005a`.
+
+```{admonition} Exercise
+:class: tip
+
+Show that any two Urysohn universal spaces are isometric.
+``` 
+
+We will prove the existence of this unique Polish space, which we denote by $\Ury$, in the following sections. 
+
+
+
+
 
 
 ## Constructing the Urysohn space -- a first approximation
@@ -149,7 +155,7 @@ $$
 $$
 
 If $\diam(X) \leq \mathrm{d}$ and $f,g$ are $1$-Lipschitz, then $d(f,g)$ is indeed finite.
-However, we will need that the resulting space is also bounded. Let  $\Lip^{\mathrm{d}}_1(X)$ be the space of all $1$-Lipschitz functions from $X$ to $[0,\mathrm{d}]$.
+However, we will [later](ury-finishing-construction)  need that the resulting space is also bounded. Let  $\Lip^{\mathrm{d}}_1(X)$ be the space of all $1$-Lipschitz functions from $X$ to $[0,\mathrm{d}]$.
 
 Clearly, $\diam(\Lip^{\mathrm{d}}_1(X)) \leq \mathrm{d}$.
 
@@ -160,7 +166,7 @@ $$
 	d(f_{x}, f_{z}) = \sup\{ | d(x,y) - d(z,y)| \colon y \in X \}.
 $$
 
-By the reverse triangle inequality, this is always $\leq d(x,z)$. On the other hand, setting $z = x$ yields $d(f_x,f_z) \geq d(x,z)$. This embedding of $X$ into $\Lip^{\mathrm{d}}_1(X)$ is called the **Kuratowski embedding**.
+By the reverse triangle inequality, this is always $\leq d(x,z)$. On the other hand, setting $y=z$ yields $d(f_x,f_z) \geq d(x,z)$. This embedding of $X$ into $\Lip^{\mathrm{d}}_1(X)$ is called the **Kuratowski embedding**.
 
 We use this fact as follows: If $X^* = X \sqcup \{x^*\}$ and $d^*$ is an extension of $d_X$, then $f_{x^*}$ is an element of $\Lip^{\mathrm{d}}_1(X)$, and as above, for any $x \in X$
 
@@ -172,11 +178,11 @@ Hence $\Lip^{\mathrm{d}}_1(X)$ has an extension property of the kind we are look
 
 > *Iterative construction*: Let $X_0$ be any non-empty Polish space with finite diameter $\mathrm{d} > 0$. Given $X_n$, let $\mathrm{d}(n) = \diam(X_n)$ and set $X_{n+1} = \Lip^{2\mathrm{d}(n)}_1(X_n)$. Finally, put $X_\infty = \bigcup_n X_n$. Note that $X_\infty$ inherits a well-defined metric $d$ from the $X_n$, which embed isometrically into it.
 
-We claim that $X_\infty$ has the extension property needed to be Urysohn universal. Let $F$ be a finite subset of $X_\infty$. There exists $N$ such that $F \subset X_N$. Suppose $F^* = F \sqcup \{x^*\}$ and $d^*$ is an extension of $d$ to $F^*$. Let $\mathrm{d}^* = \diam(F^*)$. Note that $\diam(X_n) = 2^n \mathrm{d}$. Choose $M$ so that $M \geq N$ and $\diam(X_M) \geq \mathrm{d}^*$. The next lemma ensures that we can find $f \in X_{M+1}$ such that $f(x) = d^*(x^*,x)$ for all $x \in F$. 
+We wan to verify that $X_\infty$ has the extension property needed to be Urysohn universal. Let $F$ be a finite subset of $X_\infty$. There exists $N$ such that $F \subset X_N$. Suppose $F^* = F \sqcup \{x^*\}$ and $d^*$ is an extension of $d$ to $F^*$. Let $\mathrm{d}^* = \diam(F^*)$. Note that $\diam(X_n) = 2^n \mathrm{d}$. Choose $M$ so that $M \geq N$ and $\diam(X_M) \geq \mathrm{d}^*$. The next lemma ensures that we can find $f \in X_{M+1}$ such that $f(x) = d^*(x^*,x)$ for all $x \in F$. 
 
 
 ```{prf:lemma} McShane-Whitney
-Let $X$ be a metric space with $\diam(X) \leq \mathrm d$, $A \subseteq X$, and $f \in \Lip^{\mathrm{d}}_1(A)$, then $f$ can be extended to an $1$-Lipschitz function $f^*$ on all of $X$ such that
+Let $X$ be a metric space with $\diam(X) \leq \mathrm d$, $A \subseteq X$, and $f \in \Lip^{\mathrm{d}}_1(A)$, then $f$ can be extended to a $1$-Lipschitz function $f^*$ on all of $X$ such that
 
 $$
 	f^*|_A = f \quad \text{ and } \quad f^* \in \Lip^{2\mathrm{d}}_1(X).
@@ -199,15 +205,15 @@ $$
 Then $f^*(a) = f(a)$ for all $a \in A$. Let $x,y \in X$ and $\eps > 0$. Wlog assume $f^*(y) \geq f^*(x)$. Pick $a \in A$ so that $f_a(x) \leq f^*(x)   + \eps$. Then 
 \begin{align*}
 	|f^*(x) - f^*(y)| = f^*(y) - f^*(x) & \leq f^*(y) - f_a(x) + \eps \\
-		& \leq f_a(y) - f_a(x) + \eps \leq Ld(x,y) + \eps.
+		& \leq f_a(y) - f_a(x) + \eps \leq d(x,y) + \eps.
 \end{align*}
-Since $\eps > 0$ was arbitrary, we have $|f^*(x) - f^*(y)| \leq L d(x,y)$. 
+Since $\eps > 0$ was arbitrary, we have $|f^*(x) - f^*(y)| \leq d(x,y)$. 
 
 Finally, we have $f(a) \leq f_a(x) \leq f(a) + \mathrm{d}$ and thus $0 \leq f^*(x) \leq f_a(x) \leq 2\mathrm{d}$.
 ```
 
-
-## Mending the construction
+(ury-finishing-construction)=
+## Finishing the construction
 
 The set $X_\infty$ we constructed has two deficiencies with respect to our goal of constructing a Urysohn universal space: $X_\infty$ is not necessarily separable, and $X_\infty$ is not necessarily complete.
 
