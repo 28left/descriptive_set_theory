@@ -475,11 +475,11 @@ Every compact metric space is separable: For every <span class="math notranslate
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We follow <span id="id4">[<a class="reference internal" href="bibliography.html#id3">Gromov, 1999</a>]</span>. Let <span class="math notranslate nohighlight">\(F = \{x_1, \dots, x_n\} \subset Y\)</span> and assume <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> is an extension with metric <span class="math notranslate nohighlight">\(d^*\)</span>.</p>
-<p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>aproximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-995deafe-51c3-4389-95d1-aa88d1a50aa7">
-<span class="eqno">(1)<a class="headerlink" href="#equation-995deafe-51c3-4389-95d1-aa88d1a50aa7" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
+<p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>approximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
 	|d(y*,x) - d^*(x^*,x)| &lt; \eps \quad \text{ for all $x \in F$}.
-\end{equation}\]</div>
+\end{equation*}\]</div>
 <p>This can be seen as follows. Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is dense in <span class="math notranslate nohighlight">\(Y\)</span>, we can find a finite set <span class="math notranslate nohighlight">\(F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -501,12 +501,12 @@ Every compact metric space is separable: For every <span class="math notranslate
 	|d(y^*,x_i) - d^*(x^*,x_i)| &amp; = | e^*(x^*,z_i) - d^*(x^*,x_i)|  \\
 	 	&amp; = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | &lt;  \eps.
 \end{align*}\]</div>
-<p>We use this approximate universality to construct a Cauchy sequence <span class="math notranslate nohighlight">\((y_k)\)</span> in <span class="math notranslate nohighlight">\(Y\)</span> of `approximate’ extension points that satisfy <span class="math notranslate nohighlight">\((*)\)</span> for smaller and smaller <span class="math notranslate nohighlight">\(\eps\)</span>.</p>
+<p>We use this approximate universality to construct a Cauchy sequence <span class="math notranslate nohighlight">\((y_k)\)</span> in <span class="math notranslate nohighlight">\(Y\)</span> of ‘approximate’ extension points that satisfy <span class="math notranslate nohighlight">\((*)\)</span> for smaller and smaller <span class="math notranslate nohighlight">\(\eps\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(0 &lt; \delta = \max \{d^*(x^*,x_i) \colon 1 \leq i \leq n \}\)</span>.
 The formal requirements for the sequence <span class="math notranslate nohighlight">\((y_i)\)</span> are as follows.</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(|d(y_k,x_i) - d^*(x^*,x_i)| \leq 2^{-k} \delta\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(d(x_{k+1},x_k) \leq 2^{-k}\delta\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d(y_{k+1},y_k) \leq 2^{-k}\delta\)</span>.</p></li>
 </ol>
 <p>The sequence necessarily converges in <span class="math notranslate nohighlight">\(Y\)</span> and the limit point must be a true extension point, due to (1.)</p>
 <p>Suppose we have already constructed <span class="math notranslate nohighlight">\(y_1, \dots, y_k\)</span> satisfying (1.), (2.). Add an (abstract) point <span class="math notranslate nohighlight">\(y^*_{k+1}\)</span> to <span class="math notranslate nohighlight">\(F_k = F \cup \{y_1, \dots, y_k\}\)</span>. Let <span class="math notranslate nohighlight">\(F^*_{k+1} = F_k \sqcup \{y^*_{k+1}\}\)</span>.</p>
@@ -517,7 +517,7 @@ The formal requirements for the sequence <span class="math notranslate nohighlig
 	(ii)  	\qquad &amp; e^*(y^*_{k+1},x_i) = d^*(x^*,x_i) \quad (1 \leq i \leq n) \\
 	(iii)	\qquad 	&amp; e^*(y^*_{k+1}, y_k) = 2^{-k-1}\delta 
 \end{align*}\]</div>
-<p>Indeed such a metric exists: The condition <span class="math notranslate nohighlight">\((i)\)</span> already defines a metric on the set <span class="math notranslate nohighlight">\(F_k\)</span>. <span class="math notranslate nohighlight">\((i)\)</span>-<span class="math notranslate nohighlight">\((iii)\)</span> also define a metric on <span class="math notranslate nohighlight">\(F \cup \{y_k,y^*_{k+1}\}\)</span>. The only thing left to check for this is the triangle inequality for <span class="math notranslate nohighlight">\(y_k, y^*_{k+1}\)</span>.</p>
+<p>Indeed such a metric exists: The condition <span class="math notranslate nohighlight">\((i)\)</span> already defines a metric on the set <span class="math notranslate nohighlight">\(F_k\)</span>. The conditions <span class="math notranslate nohighlight">\((i)\)</span>-<span class="math notranslate nohighlight">\((iii)\)</span> also define a metric on <span class="math notranslate nohighlight">\(F \cup \{y_k,y^*_{k+1}\}\)</span> – the only thing to check for this is the triangle inequality for <span class="math notranslate nohighlight">\(y_k, y^*_{k+1}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 	|e^*(x_i,y_k) - e^*(y^*_{k+1},x_i)| = |d(x_i,y_k) - d^*(x^*,x_i) | \leq 2^{-k}\delta = e^*(y_k, y^*_{k+1}),
