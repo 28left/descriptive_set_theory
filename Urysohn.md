@@ -229,10 +229,10 @@ If a complete metric space $(Y,d)$ admits a dense Urysohn universal subspace $\m
 ```{prf:proof}
 We follow {cite}`Gromov:1999a`. Let $F = \{x_1, \dots, x_n\} \subset Y$ and assume $F^* = F \sqcup \{x^*\}$ is an extension with metric $d^*$.
 
-We first note that $Y$ is **aproximately universal**. This means that for any $\eps > 0$, there exists a point $y^* \in Y$ such that 
-\begin{equation} \tag{$*$}
+We first note that $Y$ is **approximately universal**. This means that for any $\eps > 0$, there exists a point $y^* \in Y$ such that 
+\begin{equation*} \tag{$*$}
 	|d(y*,x) - d^*(x^*,x)| < \eps \quad \text{ for all $x \in F$}.
-\end{equation}
+\end{equation*}
 This can be seen as follows. Since $\mathcal{U}$ is dense in $Y$, we can find a finite set $F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}$ such that 
 
 $$
@@ -257,13 +257,13 @@ Hence
 	 	& = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | <  \eps.
 \end{align*}
 
-We use this approximate universality to construct a Cauchy sequence $(y_k)$ in $Y$ of `approximate' extension points that satisfy $(*)$ for smaller and smaller $\eps$. 
+We use this approximate universality to construct a Cauchy sequence $(y_k)$ in $Y$ of 'approximate' extension points that satisfy $(*)$ for smaller and smaller $\eps$. 
 
 Let $0 < \delta = \max \{d^*(x^*,x_i) \colon 1 \leq i \leq n \}$. 
 The formal requirements for the sequence $(y_i)$ are as follows.
 
 1. $|d(y_k,x_i) - d^*(x^*,x_i)| \leq 2^{-k} \delta$.
-2. $d(x_{k+1},x_k) \leq 2^{-k}\delta$.
+2. $d(y_{k+1},y_k) \leq 2^{-k}\delta$.
 
 The sequence necessarily converges in $Y$ and the limit point must be a true extension point, due to (1.)
 
@@ -277,7 +277,7 @@ We want to use approximate universality on $F^*_{k+1}$. To this end we have to d
 	(iii)	\qquad 	& e^*(y^*_{k+1}, y_k) = 2^{-k-1}\delta 
 \end{align*}
 
-Indeed such a metric exists: The condition $(i)$ already defines a metric on the set $F_k$. $(i)$-$(iii)$ also define a metric on $F \cup \{y_k,y^*_{k+1}\}$. The only thing left to check for this is the triangle inequality for $y_k, y^*_{k+1}$.
+Indeed such a metric exists: The condition $(i)$ already defines a metric on the set $F_k$. The conditions $(i)$-$(iii)$ also define a metric on $F \cup \{y_k,y^*_{k+1}\}$ -- the only thing to check for this is the triangle inequality for $y_k, y^*_{k+1}$:
 
 $$
 	|e^*(x_i,y_k) - e^*(y^*_{k+1},x_i)| = |d(x_i,y_k) - d^*(x^*,x_i) | \leq 2^{-k}\delta = e^*(y_k, y^*_{k+1}),
