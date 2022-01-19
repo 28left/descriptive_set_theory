@@ -4,6 +4,7 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -239,6 +240,28 @@ $$
 	d(x_i, z_i) < \eps \quad \text{ for $1 \leq i \leq n$}.
 $$
 
+Now use the Urysohn universality of $\mathcal{U}$ for the set $G^* = \{z_1, \dots , z_n\} \sqcup \{x^*\}$ with the metric
+
+$$
+	d^{**}(x^*, z_i) = d^*(x^*, x_i) \qquad (i = 1, \dots, n)
+$$
+
+to find $z \in \mathcal{U}$ with 
+
+$$
+	d(z,z_i) = d^{**}(x^*,z_i) = d^*(x^*,x_i) \qquad (i = 1, \dots, n)
+$$
+
+Then, by the reverse triangle inequality,
+
+$$
+	\left | d(z,x_i) - d^*(x^*,z_i) \right | = \left | d(z,x_i) - d(z,z_i) \right | \leq d(z_i, x_i) = \eps,
+$$
+
+as required.
+
+
+<!-- 
 To keep the proof technically simple, wlog we assume $\eps$ is much smaller than the individual distances between the $x_i$. Consider the extension $F^*_\eps = F_\eps \sqcup \{x^*\}$ with metric
 
 $$
@@ -255,7 +278,7 @@ Hence
 \begin{align*}
 	|d(y^*,x_i) - d^*(x^*,x_i)| & = | e^*(x^*,z_i) - d^*(x^*,x_i)|  \\
 	 	& = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | <  \eps.
-\end{align*}
+\end{align*} -->
 
 We use this approximate universality to construct a Cauchy sequence $(y_k)$ in $Y$ of 'approximate' extension points that satisfy $(*)$ for smaller and smaller $\eps$. 
 
