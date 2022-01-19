@@ -299,6 +299,7 @@
 \[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -485,22 +486,40 @@ Every compact metric space is separable: For every <span class="math notranslate
 \[
 	d(x_i, z_i) &lt; \eps \quad \text{ for $1 \leq i \leq n$}.
 \]</div>
-<p>To keep the proof technically simple, wlog we assume <span class="math notranslate nohighlight">\(\eps\)</span> is much smaller than the individual distances between the <span class="math notranslate nohighlight">\(x_i\)</span>. Consider the extension <span class="math notranslate nohighlight">\(F^*_\eps = F_\eps \sqcup \{x^*\}\)</span> with metric</p>
+<p>Now use the Urysohn universality of <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> for the set <span class="math notranslate nohighlight">\(G^* = \{z_1, \dots , z_n\} \sqcup \{x^*\}\)</span> with the metric</p>
 <div class="math notranslate nohighlight">
 \[
+	d^{**}(x^*, z_i) = d^*(x^*, x_i) \qquad (i = 1, \dots, n)
+\]</div>
+<p>to find <span class="math notranslate nohighlight">\(z \in \mathcal{U}\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[
+	d(z,z_i) = d^{**}(x^*,z_i) = d^*(x^*,x_i) \qquad (i = 1, \dots, n)
+\]</div>
+<p>Then, by the reverse triangle inequality,</p>
+<div class="math notranslate nohighlight">
+\[
+	\left | d(z,x_i) - d^*(x^*,z_i) \right | = \left | d(z,x_i) - d(z,z_i) \right | \leq d(z_i, x_i) = \eps,
+\]</div>
+<p>as required.</p>
+<!-- 
+To keep the proof technically simple, wlog we assume $\eps$ is much smaller than the individual distances between the $x_i$. Consider the extension $F^*_\eps = F_\eps \sqcup \{x^*\}$ with metric
+
+$$
 	e^*(x^*, z_i) = d^*(x^*,x_i) + d(x_i,z_i).
-\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> has the finite extension property, we can find <span class="math notranslate nohighlight">\(y^* \in \mathcal{U}\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[
+$$
+
+Since $\mathcal{U}$ has the finite extension property, we can find $y^* \in \mathcal{U}$ such that
+
+$$
 	d(y^*,z_i) = e^*(x^*,z_i) 
-\]</div>
-<p>Hence</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-	|d(y^*,x_i) - d^*(x^*,x_i)| &amp; = | e^*(x^*,z_i) - d^*(x^*,x_i)|  \\
-	 	&amp; = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | &lt;  \eps.
-\end{align*}\]</div>
+$$
+
+Hence 
+\begin{align*}
+	|d(y^*,x_i) - d^*(x^*,x_i)| & = | e^*(x^*,z_i) - d^*(x^*,x_i)|  \\
+	 	& = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | <  \eps.
+\end{align*} -->
 <p>We use this approximate universality to construct a Cauchy sequence <span class="math notranslate nohighlight">\((y_k)\)</span> in <span class="math notranslate nohighlight">\(Y\)</span> of ‘approximate’ extension points that satisfy <span class="math notranslate nohighlight">\((*)\)</span> for smaller and smaller <span class="math notranslate nohighlight">\(\eps\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(0 &lt; \delta = \max \{d^*(x^*,x_i) \colon 1 \leq i \leq n \}\)</span>.
 The formal requirements for the sequence <span class="math notranslate nohighlight">\((y_i)\)</span> are as follows.</p>
