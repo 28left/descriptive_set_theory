@@ -91,7 +91,7 @@ If $\leq_A$ is a well-ordering of $A$ and $T$ is a tree on $A$ with $[T] \neq \e
 ```{prf:proof}
 We **prune** the tree $T$ by deleting any node that is not on an infinite branch. This yields a subtree $T' \subseteq T$ with $[T'] = [T]$. 
 
-Let $T'_n = \{\sigma \in T' \colon |\sigma| = n \}$. Since $\leq$ is a well-ordering on $A$, $T'_1$ must have a $\leq_{\lex}$-least element. Denote it by $\alpha\Rest{1}$. Since $T'$ is pruned, $\alpha\Rest{1}$ must have an extension in $T$, and we can repeat the argument to obtain $\alpha\Rest{2}$. 
+Let $T'_n = \{\sigma \in T' \colon |\sigma| = n \}$. Since $\leq_A$ is a well-ordering on $A$, $T'_1$ must have a $\leq_{\lex}$-least element. Denote it by $\alpha\Rest{1}$. Since $T'$ is pruned, $\alpha\Rest{1}$ must have an extension in $T$, and we can repeat the argument to obtain $\alpha\Rest{2}$. 
 
 Continuing inductively, we define an infinite path $\alpha$ through $T'$, and it is straightforward to check that $\alpha$ is a  $\leq_{\lex}$-minimal element of $[T']$ and hence of $[T]$.
 ```
@@ -149,7 +149,7 @@ These two mappings allows us henceforth to see **trees as subsets of the natural
 
 ## Trees and closed sets
 
-Let $A$ be a set with the discrete topology. Consider $A^\Nat$ with the product topology defined in [Lecture 2](polish-product-spaces).
+Let $A$ be a set with the discrete topology. Consider $A^\Nat$ with the product topology (and compatible metric) defined in [Lecture 2](polish-product-spaces).
 
 ```{prf:proposition}
 :label: prop-trees-closed
@@ -160,7 +160,7 @@ A set $F \subseteq A^\Nat$ is closed if and only if there exists a tree $T$ on $
 ```{prf:proof}
 Suppose $F$ is closed. Let 
 \begin{equation*}
-	T_F = \{\sigma \in \Str[A] \colon \sigma \Sle \alpha \text{ for some }\alpha \in F$\}.
+	T_F = \{\sigma \in \Str[A] \colon \sigma \Sle \alpha \text{ for some }\alpha \in F\}.
 \end{equation*}
 Then clearly $F \subset [T_F]$. Suppose $\alpha \in [T_F]$. This means for any $n$, $\alpha\Rest{n} \in T_F$, which implies that there exists $\beta_n \in F$ such that $\alpha_n \Sle \beta_n$. The sequence $(\beta_n)$ converges to $\alpha$, and since $F$ is closed, $\alpha \in F$.
 
@@ -171,12 +171,12 @@ For the other direction, suppose $F = [T]$. Let $\alpha \in A^\Nat \setminus F$.
 
 Let $f: A^\Nat \to A^\Nat$ be continuous. We define a mapping $\phi: \Str[A] \to \Str[A]$ by setting
 \begin{equation*}
-	\phi(\sigma) = \text{ the longest $\tau$ such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
+	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma| such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
 \end{equation*}
 
 This mapping has the following properties:
 
-1. It is \emph{monotone}, i.e.\ $\sigma \Sleq \tau$ implies $\phi(\sigma) \Sleq \phi(\tau)$.
+1. It is **monotone**, i.e.\ $\sigma \Sleq \tau$ implies $\phi(\sigma) \Sleq \phi(\tau)$.
 2. For any $\alpha \in A^\Nat$ we have $\lim_n |\phi(\alpha\Rest{n})| = \infty$.
 This follows directly from the continuity of $f$: For any neighborhood $\Cyl{\tau}$ of $f(\alpha)$ there exists a neighborhood $\Cyl{\sigma}$ of $\alpha$ such that $f(\Cyl{\sigma}) \subseteq \Cyl{\tau}$. But $\tau$ has to be of the form $\tau = f(\alpha)\Rest{m}$, and $\sigma$ of the form $\alpha\Rest{n}$. Hence for any $m$ there must exist an $n$ such that $\phi(\alpha\Rest{n}) \Sgeq f(\alpha)\Rest{m}$.
 
