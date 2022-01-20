@@ -171,12 +171,12 @@ For the other direction, suppose $F = [T]$. Let $\alpha \in A^\Nat \setminus F$.
 
 Let $f: A^\Nat \to A^\Nat$ be continuous. We define a mapping $\phi: \Str[A] \to \Str[A]$ by setting
 \begin{equation*}
-	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma| such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
+	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma|$ such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
 \end{equation*}
 
 This mapping has the following properties:
 
-1. It is **monotone**, i.e.\ $\sigma \Sleq \tau$ implies $\phi(\sigma) \Sleq \phi(\tau)$.
+1. It is **monotone**, i.e. $\sigma \Sleq \tau$ implies $\phi(\sigma) \Sleq \phi(\tau)$.
 2. For any $\alpha \in A^\Nat$ we have $\lim_n |\phi(\alpha\Rest{n})| = \infty$.
 This follows directly from the continuity of $f$: For any neighborhood $\Cyl{\tau}$ of $f(\alpha)$ there exists a neighborhood $\Cyl{\sigma}$ of $\alpha$ such that $f(\Cyl{\sigma}) \subseteq \Cyl{\tau}$. But $\tau$ has to be of the form $\tau = f(\alpha)\Rest{m}$, and $\sigma$ of the form $\alpha\Rest{n}$. Hence for any $m$ there must exist an $n$ such that $\phi(\alpha\Rest{n}) \Sgeq f(\alpha)\Rest{m}$.
 

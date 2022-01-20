@@ -434,11 +434,11 @@ The <strong>lexicographical ordering</strong> <span class="math notranslate nohi
 <p>Let <span class="math notranslate nohighlight">\(f: A^\Nat \to A^\Nat\)</span> be continuous. We define a mapping <span class="math notranslate nohighlight">\(\phi: \Str[A] \to \Str[A]\)</span> by setting</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma| such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
+	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma|$ such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
 \end{equation*}\]</div>
 <p>This mapping has the following properties:</p>
 <ol class="simple">
-<li><p>It is <strong>monotone</strong>, i.e.\ <span class="math notranslate nohighlight">\(\sigma \Sleq \tau\)</span> implies <span class="math notranslate nohighlight">\(\phi(\sigma) \Sleq \phi(\tau)\)</span>.</p></li>
+<li><p>It is <strong>monotone</strong>, i.e. <span class="math notranslate nohighlight">\(\sigma \Sleq \tau\)</span> implies <span class="math notranslate nohighlight">\(\phi(\sigma) \Sleq \phi(\tau)\)</span>.</p></li>
 <li><p>For any <span class="math notranslate nohighlight">\(\alpha \in A^\Nat\)</span> we have <span class="math notranslate nohighlight">\(\lim_n |\phi(\alpha\Rest{n})| = \infty\)</span>.
 This follows directly from the continuity of <span class="math notranslate nohighlight">\(f\)</span>: For any neighborhood <span class="math notranslate nohighlight">\(\Cyl{\tau}\)</span> of <span class="math notranslate nohighlight">\(f(\alpha)\)</span> there exists a neighborhood <span class="math notranslate nohighlight">\(\Cyl{\sigma}\)</span> of <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(f(\Cyl{\sigma}) \subseteq \Cyl{\tau}\)</span>. But <span class="math notranslate nohighlight">\(\tau\)</span> has to be of the form <span class="math notranslate nohighlight">\(\tau = f(\alpha)\Rest{m}\)</span>, and <span class="math notranslate nohighlight">\(\sigma\)</span> of the form <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span>. Hence for any <span class="math notranslate nohighlight">\(m\)</span> there must exist an <span class="math notranslate nohighlight">\(n\)</span> such that <span class="math notranslate nohighlight">\(\phi(\alpha\Rest{n}) \Sgeq f(\alpha)\Rest{m}\)</span>.</p></li>
 </ol>
