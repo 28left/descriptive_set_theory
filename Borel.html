@@ -359,24 +359,24 @@ Show that in a Polish space, every closed set is a countable intersection of ope
 <h2>The Borel sets of finite order<a class="headerlink" href="#the-borel-sets-of-finite-order" title="Permalink to this headline">¶</a></h2>
 <p>We fix a Polish space <span class="math notranslate nohighlight">\(X\)</span>. We want to establish the basic relationships between the different classes <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_m\)</span> for <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>It follows from the definitions that <span class="math notranslate nohighlight">\(\bPi^0_n \subseteq \bSigma^0_{n+1}\)</span> and <span class="math notranslate nohighlight">\(\bSigma^0_n \subseteq \bPi_{n+1}\)</span>.</p>
-<div class="proof lemma admonition" id="open-is-Fsigma">
+<div class="proof lemma admonition" id="closed-is-Gdelta">
 <p class="admonition-title"><span class="caption-number">Lemma 4 </span></p>
 <div class="lemma-content section" id="proof-content">
-<p>In a Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span>, every open set is an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set.</p>
+<p>In any metric space <span class="math notranslate nohighlight">\((X,d)\)</span>, every closed set is a <span class="math notranslate nohighlight">\(G_\delta\)</span> set.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(D = \{x_1, x_2, \dots \} \subseteq X\)</span> be a countable dense subset, and assume <span class="math notranslate nohighlight">\(U \subseteq X\)</span> is open.</p>
-<p>For any <span class="math notranslate nohighlight">\(\eps &gt;0\)</span>, if <span class="math notranslate nohighlight">\(\delta &lt; \eps\)</span>, then <span class="math notranslate nohighlight">\(\Cl{U_\delta(x)} \subseteq U_\eps(x)\)</span> for any <span class="math notranslate nohighlight">\(x \in X\)</span>. Let <span class="math notranslate nohighlight">\(x_{i(1)}, x_{i(2)}, \dots \)</span> and <span class="math notranslate nohighlight">\(\eps_1, \eps_2, \dots\)</span> be such that</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    U = \bigcup_n U_{\eps_n}(x_{i(n)}).
-\end{equation*}\]</div>
-<p>For each <span class="math notranslate nohighlight">\(n \geq 1\)</span>, let <span class="math notranslate nohighlight">\((\delta^{(n)}_k)\)</span> be such that <span class="math notranslate nohighlight">\(\delta^{(n)}_k &lt; \delta^{(n)}_{k+1} &lt; \dots &lt; \eps_i\)</span>, and <span class="math notranslate nohighlight">\(\delta^{(n)}_k \to  \eps_n\)</span>. Then</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    U = \bigcup_k \bigcup_n \Cl{U_{\delta^{(n)}_k}(x_{i(n)})}.
-\end{equation*}\]</div>
-<p>The set on the right hand side is a countable union of closed sets.</p>
+<p>Proof. Let <span class="math notranslate nohighlight">\(F \subset X\)</span> be closed. For <span class="math notranslate nohighlight">\(n \geq 0\)</span>, put</p>
+<div class="math notranslate nohighlight">
+\[
+F_n = \bigcup_{x \in F} U_{2^{-n}}(x).
+\]</div>
+<p>Each <span class="math notranslate nohighlight">\(F_n\)</span> is open, and <span class="math notranslate nohighlight">\(F \subseteq \bigcup_{n \in \Nat} F_n\)</span>.</p>
+<p>Moreover, if <span class="math notranslate nohighlight">\(x \in \bigcup_{n \in \Nat} F_n\)</span>, then there exists a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> such that for all <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(x_n \in F\)</span> and <span class="math notranslate nohighlight">\(x \in U_{2^{-n}}(x_n)\)</span>. It follows that <span class="math notranslate nohighlight">\(x_n \to x\)</span>, and since <span class="math notranslate nohighlight">\(F\)</span> is closed, <span class="math notranslate nohighlight">\(x\in F\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[
+F = \bigcup_{n \in \Nat} F_n,
+\]</div>
+<p>which is <span class="math notranslate nohighlight">\(G_\delta\)</span>.</p>
 </div>
 <div class="proof corollary admonition" id="cor-weak-Borel-hierarchy-1">
 <p class="admonition-title"><span class="caption-number">Corollary 2 </span></p>
@@ -392,7 +392,7 @@ Show that in a Polish space, every closed set is a countable intersection of ope
 <p>There are also sets that can be both <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>, but neither <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> nor <span class="math notranslate nohighlight">\(\bPi^0_1\)</span>. For example, consider the half-open interval <span class="math notranslate nohighlight">\([0,1)\)</span>.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-	[0,1) = \bigcup_n [1,1-1/n] = \bigcap_m (-1/n,1).
+	[0,1) = \bigcup_n [0,1-1/n] = \bigcap_m (-1/n,1).
 \end{equation*}\]</div>
 <p>Therefore, it makes sense to define the <strong>hybrid classes</strong>:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -417,7 +417,7 @@ In a perfect Polish space, we can find countable sets that are neither open nor 
 <div class="proof theorem admonition" id="theorem-6">
 <p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Young)</p>
 <div class="theorem-content section" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f: X \to Y\)</span> be a mapping between Polish spaces. Then</p>
+<p>Let <span class="math notranslate nohighlight">\(f: X \to Y\)</span> be a mapping between metric spaces. Then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
     C_f = \{ x \colon f \text{ is continuous at $x$} \}
@@ -425,7 +425,7 @@ In a perfect Polish space, we can find countable sets that are neither open nor 
 <p>is a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> (i.e. <span class="math notranslate nohighlight">\(G_\delta\)</span>) set.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. It is not hard to see that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(a\)</span> if and only if for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>,</p>
+<p>Proof. The function <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(a\)</span> if and only if for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*} \tag{$*$}
         \exists \delta &gt; 0 \: \forall x,y \; [ x,y \in U_\delta(a) \: \Rightarrow \: d(f(x),f(y)) &lt; \eps  ].
@@ -457,7 +457,7 @@ In a perfect Polish space, we can find countable sets that are neither open nor 
 		1/q &amp; \text{ $x = p/q$, $p\in \Integer$, $q \in \Integer^{&gt;0} $, $p,q$ relatively prime} 
 	\end{cases}
 \end{equation*}\]</div>
-<p>is a function that is continuous at every irrational, discontinuous at every rational number. As noted above, the rationals are a <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set that is not <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>. Hence there cannot exist a function <span class="math notranslate nohighlight">\(g: \Real \to \Real\)</span> that is discontinuous at exactly the irrationals.</p>
+<p>is a function that is continuous at every irrational, discontinuous at every rational number. How about the other way around – <strong>discontinous at exactly the irrationals?</strong> As noted above, the rationals are a <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set that is not <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>. Hence <strong>such a function cannot exist</strong>.</p>
 <p>We finish this lecture by showing that Young’s Theorem can be reversed.</p>
 <div class="proof theorem admonition" id="theorem-7">
 <p class="admonition-title"><span class="caption-number">Theorem 10 </span></p>
@@ -474,7 +474,7 @@ We first deal with the easier case that <span class="math notranslate nohighligh
 		1 &amp; \text{ otherwise}.
 	\end{cases}
 \end{equation*}\]</div>
-<p>It is clear that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span>. Now assume <span class="math notranslate nohighlight">\(x \not \in A\)</span>. If <span class="math notranslate nohighlight">\(x \not\in \Cl{A}\)</span>, then there exists  <span class="math notranslate nohighlight">\(U_\eps(x) \subseteq \Co{\,\Cl{A}}\)</span>. Any <span class="math notranslate nohighlight">\(U_{\eps^*}(x) \subseteq U_\eps(x)\)</span> contains points from both <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(\Co{D}\)</span>, so it is clear that <span class="math notranslate nohighlight">\(f\)</span> is not continuous at <span class="math notranslate nohighlight">\(x\)</span>. Finally, let <span class="math notranslate nohighlight">\(x \in \Co{A} \setminus A\)</span>. Then <span class="math notranslate nohighlight">\(f(x) = 1\)</span>, but points of <span class="math notranslate nohighlight">\(A\)</span> are arbitrarily close, where <span class="math notranslate nohighlight">\(f\)</span> takes value <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>It is clear that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span>. Now assume <span class="math notranslate nohighlight">\(x \not \in A\)</span>. If <span class="math notranslate nohighlight">\(x \not\in \Cl{A}\)</span>, then there exists  <span class="math notranslate nohighlight">\(U_\eps(x) \subseteq \Co{\,\Cl{A}}\)</span>. Any <span class="math notranslate nohighlight">\(U_{\eps^*}(x) \subseteq U_\eps(x)\)</span> contains points from both <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(\Co{D}\)</span>, so it is clear that <span class="math notranslate nohighlight">\(f\)</span> is not continuous at <span class="math notranslate nohighlight">\(x\)</span>. Finally, let <span class="math notranslate nohighlight">\(x \in \Cl{A} \setminus A\)</span>. Then <span class="math notranslate nohighlight">\(f(x) = 1\)</span>, but points of <span class="math notranslate nohighlight">\(A\)</span> are arbitrarily close, where <span class="math notranslate nohighlight">\(f\)</span> takes value <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>Now we extend this approach to general <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> sets. Suppose</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -485,7 +485,7 @@ We first deal with the easier case that <span class="math notranslate nohighligh
 \[\begin{equation*}
 	X = G_0 \supseteq G_1 \supseteq G_2 \supseteq G_3 \supseteq \dots
 \end{equation*}\]</div>
-<p>The idea is to define <span class="math notranslate nohighlight">\(f_n\)</span> as above for each <span class="math notranslate nohighlight">\(G_n\)</span> and then ``amalgamate’’ the <span class="math notranslate nohighlight">\(f_n\)</span> is a suitable way.
+<p>The idea is to define <span class="math notranslate nohighlight">\(f_n\)</span> as above for each <span class="math notranslate nohighlight">\(G_n\)</span> and then ``amalgamate’’ the <span class="math notranslate nohighlight">\(f_n\)</span> in a suitable way.
 Assume for each <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f_n: X \to \Real\)</span> is defined as above such that <span class="math notranslate nohighlight">\(C_{f_n} = G_n\)</span>.
 Let <span class="math notranslate nohighlight">\((b_n)\)</span> be a sequence of positive real numbers such that for all <span class="math notranslate nohighlight">\(n\)</span>,</p>
 <div class="amsmath math notranslate nohighlight">
