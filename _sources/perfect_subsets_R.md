@@ -85,9 +85,9 @@ We can iterate this procedure recursively with smaller and smaller diameters, us
     \end{equation*}
 4. The center of each $U_\sigma$, call it $x_\sigma$, is in $P$.
 
-```{figure} ./images/Cantor_Scheme.pdf
+```{figure} ./images/Cantor_Scheme.png
 :height: 400px
-:name: cantor_scheme
+:name: Cantor Scheme
 
 Nested structure of a Cantor scheme
 ```
