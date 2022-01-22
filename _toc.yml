@@ -10,6 +10,7 @@ parts:
       - file: polish
       - file: Urysohn.md
       - file: trees.md
+      - file: Borel.md
   - caption: Reference
     chapters:
       - file: bibliography
