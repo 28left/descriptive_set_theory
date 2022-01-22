@@ -176,8 +176,8 @@ Here is a nice application of Young's theorem.
 The function $f: \Real \to \Real$ given by
 \begin{equation*}
 	f(x) = \begin{cases}
-		1 & \text{ $x$ irrational}, \\
-		0 & \text{ $x = 0$}, \\
+		0 & \text{ $x$ irrational}, \\
+		1 & \text{ $x = 0$}, \\
 		1/q & \text{ $x = p/q$, $p\in \Integer$, $q \in \Integer^{>0} $, $p,q$ relatively prime} 
 	\end{cases}
 \end{equation*}
