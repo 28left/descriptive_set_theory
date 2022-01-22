@@ -81,23 +81,26 @@ We fix a Polish space $X$. We want to establish the basic relationships between 
 It follows from the definitions that $\bPi^0_n \subseteq \bSigma^0_{n+1}$ and $\bSigma^0_n \subseteq \bPi_{n+1}$.
 
 ```{prf:lemma}
-:label: open-is-Fsigma
+:label: closed-is-Gdelta
 
-In a Polish metric space $(X,d)$, every open set is an $F_\sigma$ set.
+In any metric space $(X,d)$, every closed set is a $G_\delta$ set.
 ```
 
 ```{prf:proof}
-Let $D = \{x_1, x_2, \dots \} \subseteq X$ be a countable dense subset, and assume $U \subseteq X$ is open. 
+Let $F \subset X$ be closed. For $n \geq 0$, put
 
-For any $\eps >0$, if $\delta < \eps$, then $\Cl{U_\delta(x)} \subseteq U_\eps(x)$ for any $x \in X$. Let $x_{i(1)}, x_{i(2)}, \dots $ and $\eps_1, \eps_2, \dots$ be such that
-\begin{equation*}
-    U = \bigcup_n U_{\eps_n}(x_{i(n)}).
-\end{equation*} 
-For each $n \geq 1$, let $(\delta^{(n)}_k)$ be such that $\delta^{(n)}_k < \delta^{(n)}_{k+1} < \dots < \eps_i$, and $\delta^{(n)}_k \to  \eps_n$. Then 
-\begin{equation*}
-    U = \bigcup_k \bigcup_n \Cl{U_{\delta^{(n)}_k}(x_{i(n)})}.
-\end{equation*}
-The set on the right hand side is a countable union of closed sets.
+$$
+F_n = \bigcup_{x \in F} U_{2^{-n}}(x).
+$$
+
+Each $F_n$ is open, and $F \subseteq \bigcup_{n \in \Nat} F_n$. 
+
+Moreover, if $x \in \bigcup_{n \in \Nat} F_n$, then there exists a sequence $(x_n)$ such that for all $n$, $x_n \in F$ and $x \in U_{2^{-n}}(x_n)$. It follows that $x_n \to x$, and since $F$ is closed, $x\in F$. Thus
+
+$$
+F = \bigcup_{n \in \Nat} F_n,
+$$
+which is $G_\delta$.
 ```
 
 ```{prf:corollary}
@@ -114,7 +117,7 @@ where the $F_n$ are closed.
 
 There are also sets that can be both $\bSigma^0_2$ and $\bPi^0_2$, but neither $\bSigma^0_1$ nor $\bPi^0_1$. For example, consider the half-open interval $[0,1)$.
 \begin{equation*}
-	[0,1) = \bigcup_n [1,1-1/n] = \bigcap_m (-1/n,1).
+	[0,1) = \bigcup_n [0,1-1/n] = \bigcap_m (-1/n,1).
 \end{equation*} 
 
 Therefore, it makes sense to define the **hybrid classes**:
@@ -144,7 +147,7 @@ It is much harder to find specific examples for the higher levels, e.g. a $\bSig
 ## Examples of Borel sets -- continuity points of functions
 
 ```{prf:theorem} Young
-Let $f: X \to Y$ be a mapping between Polish spaces. Then 
+Let $f: X \to Y$ be a mapping between metric spaces. Then 
 \begin{equation*}
     C_f = \{ x \colon f \text{ is continuous at $x$} \}
 \end{equation*}
@@ -152,7 +155,7 @@ is a $\bPi^0_2$ (i.e. $G_\delta$) set.
 ```
 
 ```{prf:proof}
-It is not hard to see that $f$ is continuous at $a$ if and only if for any $\eps > 0$,
+The function $f$ is continuous at $a$ if and only if for any $\eps > 0$,
 \begin{equation*} \tag{$*$}
         \exists \delta > 0 \: \forall x,y \; [ x,y \in U_\delta(a) \: \Rightarrow \: d(f(x),f(y)) < \eps  ].
 \end{equation*}
@@ -181,7 +184,7 @@ The function $f: \Real \to \Real$ given by
 		1/q & \text{ $x = p/q$, $p\in \Integer$, $q \in \Integer^{>0} $, $p,q$ relatively prime} 
 	\end{cases}
 \end{equation*}
-is a function that is continuous at every irrational, discontinuous at every rational number. As noted above, the rationals are a $\bSigma^0_2$ set that is not $\bPi^0_2$. Hence there cannot exist a function $g: \Real \to \Real$ that is discontinuous at exactly the irrationals.
+is a function that is continuous at every irrational, discontinuous at every rational number. How about the other way around -- **discontinous at exactly the irrationals?** As noted above, the rationals are a $\bSigma^0_2$ set that is not $\bPi^0_2$. Hence **such a function cannot exist**.
 
 
 We finish this lecture by showing that Young's Theorem can be reversed.
@@ -199,7 +202,7 @@ We first deal with the easier case that $A$ is open. Let
 		1 & \text{ otherwise}.
 	\end{cases}
 \end{equation*}
-It is clear that $f$ is continuous on $A$. Now assume $x \not \in A$. If $x \not\in \Cl{A}$, then there exists  $U_\eps(x) \subseteq \Co{\,\Cl{A}}$. Any $U_{\eps^*}(x) \subseteq U_\eps(x)$ contains points from both $D$ and $\Co{D}$, so it is clear that $f$ is not continuous at $x$. Finally, let $x \in \Co{A} \setminus A$. Then $f(x) = 1$, but points of $A$ are arbitrarily close, where $f$ takes value $0$.
+It is clear that $f$ is continuous on $A$. Now assume $x \not \in A$. If $x \not\in \Cl{A}$, then there exists  $U_\eps(x) \subseteq \Co{\,\Cl{A}}$. Any $U_{\eps^*}(x) \subseteq U_\eps(x)$ contains points from both $D$ and $\Co{D}$, so it is clear that $f$ is not continuous at $x$. Finally, let $x \in \Cl{A} \setminus A$. Then $f(x) = 1$, but points of $A$ are arbitrarily close, where $f$ takes value $0$.
 
 Now we extend this approach to general $\bPi^0_2$ sets. Suppose 
 \begin{equation*}
@@ -209,7 +212,7 @@ By replacing $G_n$ with $G_n^* = G_1 \cap \dots \cap G_n$, we can assume that
 \begin{equation*}
 	X = G_0 \supseteq G_1 \supseteq G_2 \supseteq G_3 \supseteq \dots
 \end{equation*}
-The idea is to define $f_n$ as above for each $G_n$ and then ``amalgamate'' the $f_n$ is a suitable way. 
+The idea is to define $f_n$ as above for each $G_n$ and then ``amalgamate'' the $f_n$ in a suitable way. 
 Assume for each $n$, $f_n: X \to \Real$ is defined as above such that $C_{f_n} = G_n$.
 Let $(b_n)$ be a sequence of positive real numbers such that for all $n$,
 \begin{equation*}
