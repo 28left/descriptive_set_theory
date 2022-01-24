@@ -11,6 +11,7 @@ parts:
       - file: Urysohn.md
       - file: trees.md
       - file: Borel.md
+      - file: subsets_Polish.md
   - caption: Reference
     chapters:
       - file: bibliography

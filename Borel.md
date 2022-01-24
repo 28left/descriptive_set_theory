@@ -147,6 +147,7 @@ It is much harder to find specific examples for the higher levels, e.g. a $\bSig
 ## Examples of Borel sets -- continuity points of functions
 
 ```{prf:theorem} Young
+:label: thm-Young
 Let $f: X \to Y$ be a mapping between metric spaces. Then 
 \begin{equation*}
     C_f = \{ x \colon f \text{ is continuous at $x$} \}

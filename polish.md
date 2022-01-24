@@ -66,16 +66,17 @@ A **Polish space** is a separable topological space $X$ for which exists a compa
 
 There may be many different compatible metrics that make $X$ complete. If $X$ is already given as a complete metric space with countable dense subset, then we call $X$ a _Polish metric space_.
 
-The standard example is, of course, $\Real$, the set of real numbers. One can obtain other Polish spaces using the following basic observations.
+The standard example is, of course, $\Real$, the set of real numbers. One can obtain other Polish spaces using the following basic observations. (We leave the proof as an exercise.)
 
 ```{prf:proposition}
 :label: properties-polish
 
 1. A closed subset of a Polish space is Polish.
 2. The product of a countable (in particular, finite) sequence of Polish spaces is Polish.
+3. Any topological space homeomorphic to a Polish space is Polish.
 ```
 
-Hence we can conclude that $\Real^n$, $\C$, $\C^n$, the unit interval $[0,1]$, the unit circle $\Ci = \{z \in \C \colon |z| = 1\}$, and the infinite dimensional spaces $\Real^\Nat$ and $[0,1]^\Nat$ (the _Hilbert cube_) are Polish spaces.
+We conclude that $\Real^n$, $\C$, $\C^n$, the unit interval $[0,1]$, the unit circle $\Ci = \{z \in \C \colon |z| = 1\}$, and the infinite dimensional spaces $\Real^\Nat$ and $[0,1]^\Nat$ (the _Hilbert cube_) are Polish spaces.
 
 Any countable set with the **discrete topology** is Polish, by means of the **discrete metric** $d(x,y) = 1 \: \Leftrightarrow \: x \neq y$.
 
