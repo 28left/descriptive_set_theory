@@ -126,6 +126,11 @@
    Borel Sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish spaces
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -227,6 +232,7 @@
    <div class="modindex-jumpbox">
    <a href="#cap-cantor-bendixson"><strong>cantor-bendixson</strong></a> | 
    <a href="#cap-closed-is-Gdelta"><strong>closed-is-Gdelta</strong></a> | 
+   <a href="#cap-cor-prefect-Borel"><strong>cor-prefect-Borel</strong></a> | 
    <a href="#cap-cor-weak-Borel-hierarchy-1"><strong>cor-weak-Borel-hierarchy-1</strong></a> | 
    <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
    <a href="#cap-def-Borel"><strong>def-Borel</strong></a> | 
@@ -237,23 +243,29 @@
    <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
    <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
    <a href="#cap-definition-3"><strong>definition-3</strong></a> | 
+   <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
    <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
    <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
+   <a href="#cap-lemma-Kuratowski-extension"><strong>lemma-Kuratowski-extension</strong></a> | 
    <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
    <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
+   <a href="#cap-prop-open-subset-Polish"><strong>prop-open-subset-Polish</strong></a> | 
    <a href="#cap-prop-product-continuous"><strong>prop-product-continuous</strong></a> | 
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
    <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
+   <a href="#cap-subsets-Polish"><strong>subsets-Polish</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
    <a href="#cap-theorem-1"><strong>theorem-1</strong></a> | 
    <a href="#cap-theorem-5"><strong>theorem-5</strong></a> | 
-   <a href="#cap-theorem-6"><strong>theorem-6</strong></a> | 
    <a href="#cap-theorem-7"><strong>theorem-7</strong></a> | 
+   <a href="#cap-thm-Borel-clopen"><strong>thm-Borel-clopen</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
+   <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
    <a href="#cap-thm-polish_cont_image_Baire"><strong>thm-polish_cont_image_Baire</strong></a>
@@ -276,6 +288,14 @@
        <td>
        <a href="Borel.html#closed-is-Gdelta"><code class="xref">closed-is-Gdelta</code></a> <em>(Borel)</em></td><td>
        <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-prefect-Borel"><td></td><td>
+       <strong>cor-prefect-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#cor-prefect-Borel"><code class="xref">cor-prefect-Borel</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-weak-Borel-hierarchy-1"><td></td><td>
        <strong>cor-weak-Borel-hierarchy-1</strong></td><td></td></tr>
@@ -357,6 +377,14 @@
        <a href="trees.html#definition-3"><code class="xref">definition-3</code></a> <em>(trees)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
+       <strong>lem-closed-clopen</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#lem-closed-clopen"><code class="xref">lem-closed-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lemma-1"><td></td><td>
        <strong>lemma-1</strong></td><td></td></tr>
      <tr>
@@ -379,6 +407,14 @@
        <td></td>
        <td>
        <a href="Urysohn.html#lemma-6"><code class="xref">lemma-6</code></a> <em>(Urysohn)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-Kuratowski-extension"><td></td><td>
+       <strong>lemma-Kuratowski-extension</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#lemma-Kuratowski-extension"><code class="xref">lemma-Kuratowski-extension</code></a> <em>(subsets_Polish)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-KB-wellorder"><td></td><td>
@@ -405,12 +441,28 @@
        <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-intersection-Polish"><td></td><td>
+       <strong>prop-intersection-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#prop-intersection-Polish"><code class="xref">prop-intersection-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-leftmost-branch"><td></td><td>
        <strong>prop-leftmost-branch</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="trees.html#prop-leftmost-branch"><code class="xref">prop-leftmost-branch</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-open-subset-Polish"><td></td><td>
+       <strong>prop-open-subset-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#prop-open-subset-Polish"><code class="xref">prop-open-subset-Polish</code></a> <em>(subsets_Polish)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-product-continuous"><td></td><td>
@@ -445,6 +497,14 @@
        <a href="polish.html#properties-polish"><code class="xref">properties-polish</code></a> <em>(polish)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subsets-Polish"><td></td><td>
+       <strong>subsets-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#subsets-Polish"><code class="xref">subsets-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-0"><td></td><td>
        <strong>theorem-0</strong></td><td></td></tr>
      <tr>
@@ -469,14 +529,6 @@
        <a href="Borel.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Borel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-6"><td></td><td>
-       <strong>theorem-6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Borel.html#theorem-6"><code class="xref">theorem-6</code></a> <em>(Borel)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-7"><td></td><td>
        <strong>theorem-7</strong></td><td></td></tr>
      <tr>
@@ -485,12 +537,28 @@
        <a href="Borel.html#theorem-7"><code class="xref">theorem-7</code></a> <em>(Borel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-clopen"><td></td><td>
+       <strong>thm-Borel-clopen</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#thm-Borel-clopen"><code class="xref">thm-Borel-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Cantor-embedding"><td></td><td>
        <strong>thm-Cantor-embedding</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="polish.html#thm-Cantor-embedding"><code class="xref">thm-Cantor-embedding</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Young"><td></td><td>
+       <strong>thm-Young</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#thm-Young"><code class="xref">thm-Young</code></a> <em>(Borel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-cantor_bendixson-polish"><td></td><td>
