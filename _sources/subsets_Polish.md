@@ -1,4 +1,4 @@
-# Subspaces of Polish spaces
+# Subspaces of Polish Spaces
 ```{math}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
@@ -12,7 +12,7 @@
 \newcommand{\eps}{\varepsilon}
 ```
 
-We have already mentioned that closed subsets of Polish spaces (with the subspace topology) are Polish ({prf:ref}`properties-polish`).
+Closed subsets of Polish spaces (with the subspace topology) are Polish ({prf:ref}`properties-polish`).
 
 What about open subsets like $(0,1) \subset \Real$? It is clear from this example that we have to find a different compatible metric.
 
