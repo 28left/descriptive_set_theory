@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measure and Baire Category &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Subspaces of Polish Spaces" href="subsets_Polish.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Polish spaces
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perfect_subsets_R.html">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urysohn.html">
+   Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Borel.html">
+   Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Measure and Baire Category
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/measure.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmeasure.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filters-and-ideals">
+   Filters and Ideals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures">
+   Measures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lebesgue-measure">
+   Lebesgue measure
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Measure and Baire Category</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filters-and-ideals">
+   Filters and Ideals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures">
+   Measures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lebesgue-measure">
+   Lebesgue measure
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="measure-and-baire-category">
+<h1>Measure and Baire Category<a class="headerlink" href="#measure-and-baire-category" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\]</div>
+<p>At the end of the previous section, we saw that Borel sets are well-behaved in the sense that they possess the <strong>perfect subset property</strong>. Two other important regularity properties are <strong>measurability</strong> and the <strong>Baire property</strong>, which we will introduce in this section.</p>
+<div class="section" id="filters-and-ideals">
+<h2>Filters and Ideals<a class="headerlink" href="#filters-and-ideals" title="Permalink to this headline">¶</a></h2>
+<p>The most common measure of size is, of course, cardinality. In the presence of uncountable sets (like in a perfect Polish space), the usual division is between countable and uncountable sets. The smallness of the countable sets is reflected, in particular, by two properties: A subset of a countable set is countable, and countable unions of countable set are countable. These characteristics are shared with other notions of smallness, two of which we will encounter in this lecture.</p>
+<div class="proof definition admonition" id="def-ideal">
+<p class="admonition-title"><span class="caption-number">Definition 9 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is an <strong>ideal</strong> if</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(A \in \mathcal{I}\)</span> and <span class="math notranslate nohighlight">\(B \subseteq A\)</span> implies <span class="math notranslate nohighlight">\(B \in \mathcal{I}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(A, B \in \mathcal{I}\)</span>  implies <span class="math notranslate nohighlight">\(A \cup B \in\mathcal{I}\)</span>.</p></li>
+</ol>
+</div>
+</div><p>If we have closure even under <em>countable unions</em>, we speak of a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-ideal</strong>. For example, while the countable sets in <span class="math notranslate nohighlight">\(\Real\)</span> form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, the finite subsets only form an ideal.</p>
+<p>Another example of ideals are the so-called <strong>principal ideals</strong>. These are ideals of the form</p>
+<div class="math notranslate nohighlight">
+\[
+	\langle Z \rangle = \{ A \colon A \subseteq Z\}
+\]</div>
+<p>for a fixed <span class="math notranslate nohighlight">\(Z \subseteq X\)</span>.</p>
+<p>The <strong>dual notion</strong> to an ideal is that of a <strong>filter</strong>. It reflects that the sets in a filter share some <strong>largeness property</strong>.</p>
+<div class="proof definition admonition" id="def-filter">
+<p class="admonition-title"><span class="caption-number">Definition 10 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is an <strong>filter</strong> if</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(A \in \mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(B \supseteq A\)</span> implies <span class="math notranslate nohighlight">\(B \in \mathcal{F}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(A, B \in \mathcal{F}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span> implies <span class="math notranslate nohighlight">\(A\cap B \in\mathcal{F}\)</span>.</p></li>
+</ol>
+</div>
+</div><p>Again, closure under countable intersections yields <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-filters</strong>.</p>
+<p>If <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) ideal, then <span class="math notranslate nohighlight">\(\mathcal{F} = \{\Co{A} \colon A \in \mathcal{I}\}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) filter. Hence the co-finite subsets of <span class="math notranslate nohighlight">\(\Real\)</span> form a filter, and the co-countable subsets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-filter.</p>
+<p>Note that the complement of a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) ideal (in <span class="math notranslate nohighlight">\(\Pow(X)\)</span>) is not necessarily a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) filter. This is true, however, for a special class of ideals/filters.</p>
+<div class="proof definition admonition" id="def-ultrafilter">
+<p class="admonition-title"><span class="caption-number">Definition 11 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> is a <strong>prime ideal</strong> if it is an ideal for which</p>
+<div class="math notranslate nohighlight">
+\[
+    \text{for every $A \in X$, either $A\in \mathcal{I}$ or $\Co{A} \in \mathcal{I}$}.
+\]</div>
+<p>An <strong>ultrafilter</strong> is a filter whose complement in <span class="math notranslate nohighlight">\(\Pow(X)\)</span> is a prime ideal.</p>
+</div>
+</div><p>In light of the small-/largeness motivation, prime ideals and ultrafilters provide a <em>complete</em> separation of <span class="math notranslate nohighlight">\(X\)</span>: Each set is either small or large.</p>
+</div>
+<div class="section" id="measures">
+<h2>Measures<a class="headerlink" href="#measures" title="Permalink to this headline">¶</a></h2>
+<p>Coarsely speaking, a measure assigns a size to a set in a way that reflects our basic geometric intuition about sizes: The size of the union of disjoint objects is the sum of their sizes. The question whether this can be done in a consistent way for <em>all</em> subsets of a given space is of fundamental importance and has motivated many questions in set theory.</p>
+<p>The formally, a measure <span class="math notranslate nohighlight">\(\mu\)</span> on <span class="math notranslate nohighlight">\(X\)</span> is a <span class="math notranslate nohighlight">\([0,\infty]\)</span>-valued function defined on subsets of <span class="math notranslate nohighlight">\(X\)</span> that satisfies</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\Op{M1}) &amp; \qquad \mu(\emptyset) = 0 \\
+    (\Op{M2}) &amp; \qquad \mu(\bigcup_n A_n) = \sum_n \mu(A_n), \\
+              &amp; \qquad \qquad \text{whenever the $A_n$ are pairwise disjoint.}
+\end{align*}\]</div>
+<p>The question is, of course, which subsets of <span class="math notranslate nohighlight">\(X\)</span> can be assigned a measure. The condition (M2) suggests that this family is closed under countable unions. Furthermore, if <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, then the equation <span class="math notranslate nohighlight">\(\mu(X) = \mu(A) + \mu(\Co{A})\)</span> suggests that <span class="math notranslate nohighlight">\(\Co{A}\)</span> should be measurable, too. In other words, the sets who are assigned a measure form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
+<div class="proof definition admonition" id="def-measure">
+<p class="admonition-title"><span class="caption-number">Definition 12 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A <strong>measurable space</strong> is a pair <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span>, where <span class="math notranslate nohighlight">\(X\)</span> is a set and <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra on <span class="math notranslate nohighlight">\(X\)</span>. A <strong>measure</strong> on a measurable space <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span> is a function <span class="math notranslate nohighlight">\(\mu: \mathcal{S} \to [0,\infty]\)</span> that satisfies (M1) and (M2) for any pairwise disjoint family <span class="math notranslate nohighlight">\(\{A_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>. If <span class="math notranslate nohighlight">\(\mu\)</span> is a measure on <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span>, then the triple <span class="math notranslate nohighlight">\((X,\mathcal{S}, \mu)\)</span> is called a <strong>measure space</strong>.</p>
+</div>
+</div><p>If we want the measure <span class="math notranslate nohighlight">\(\mu\)</span> to reflect also some other basic intuition about geometric sizes, this often puts restrictions on the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets. For example, in <span class="math notranslate nohighlight">\(\Real\)</span> the measure of an interval should be its <em>length</em>. We will see later that, if we assume the Axiom of Choice, it is impossible to assign every subset of <span class="math notranslate nohighlight">\(\Real\)</span> a measure, so that (M1) and (M2) are satisfied, and the measure of an interval is its length.</p>
+<p>To have some control over what the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets should be, one can construct a measure more carefully, start with a measure on basic objects such as intervals or balls, and then extend it to larger classes of sets by approximation.</p>
+<p>An essential component in this extension process is the concept of an \emph{outer measure}.</p>
+<div class="proof definition admonition" id="def-outer-measure">
+<p class="admonition-title"><span class="caption-number">Definition 13 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>An <strong>outer measure</strong> on a set <span class="math notranslate nohighlight">\(X\)</span> is a function <span class="math notranslate nohighlight">\(\mu^*: \Pow(X) \to [0,\infty]\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\Op{O1}) &amp; \qquad  \mu^*(\emptyset) = 0,\\
+    (\Op{O2}) &amp; \qquad  A \subseteq B \text{ implies } \mu^*(A) \leq \mu^*(B), \\
+    (\Op{O3}) &amp; \qquad  \mu^*(\bigcup_n A_n) \leq \sum_n \mu^*(A_n), \\
+         &amp; \qquad  \qquad \text{for any countable family  $\{A_n\}$ in $X$}.
+\end{align*}\]</div>
+</div>
+</div><p>An outer measure hence weakens the conditions of <strong>additivity</strong> (M2) to <strong>subadditivity</strong> (O3). This makes it possible to have non-trivial outer measures that are defined on <em>all</em> subsets of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>The usefulness of outer measures lies in the fact that they can always be restricted to subset of <span class="math notranslate nohighlight">\(\Pow(X)\)</span> on which they behave as measures.</p>
+<div class="proof definition admonition" id="def-measurable">
+<p class="admonition-title"><span class="caption-number">Definition 14 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\mu^*\)</span> be an outer measure on <span class="math notranslate nohighlight">\(X\)</span>. A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong><span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable</strong> if</p>
+<div class="math notranslate nohighlight">
+\[
+\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \setminus A) \quad \text{ for all $B \subseteq X$}.
+\]</div>
+</div>
+</div><p>The definition singles out those sets that split all other sets correctly, with regard to measure.</p>
+<div class="proof proposition admonition" id="prop-measurable-sets">
+<p class="admonition-title"><span class="caption-number">Proposition 11 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The class of <span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable sets forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and the restriction of <span class="math notranslate nohighlight">\(\mu^*\)</span> to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is a measure.</p>
+</div>
+</div><p>For a proof see for instance <span id="id1">[<a class="reference internal" href="bibliography.html#id4">Halmos, 1950</a>]</span>.</p>
+<p>The size of the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets depends, of course, on the outer measure <span class="math notranslate nohighlight">\(\mu^*\)</span>. If <span class="math notranslate nohighlight">\(\mu^*\)</span> is behaving rather pathetically, we cannot expect <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> to contain many sets.</p>
+</div>
+<div class="section" id="lebesgue-measure">
+<h2>Lebesgue measure<a class="headerlink" href="#lebesgue-measure" title="Permalink to this headline">¶</a></h2>
+<p>A standard way to obtain `nice’ outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of <strong>Lebesgue measure</strong> on <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof definition admonition" id="def-Lebesgue">
+<p class="admonition-title"><span class="caption-number">Definition 15 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(\lambda^*\)</span> of a set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^*(A) = \inf \left \{ \sum_n |b_n - a_n| \colon A \subseteq \bigcup_n (a_n,b_n) \right \}. 
+\]</div>
+</div>
+</div><div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(\lambda^*\)</span> indeed defines an outer measure.</p>
+</div>
+<p>We call the <span class="math notranslate nohighlight">\(\lambda^*\)</span>-measurable sets <strong>Lebesgue measurable</strong>. One can verify that every open interval is Lebesgue measurable. It follows from Proposition \ref{prop-measurable-sets} that every Borel set is Lebesgue measurable.</p>
+<p>The construction of Lebesgue measure can be generalized and extended to other metric spaces, for example through the concept of <strong>Hausdorff measures</strong>.</p>
+<p>All these measures are <strong>Borel measures</strong>, in the sense that the Borel measures are measurable. However, there measurable sets that are not Borel sets. The reason for this lies in the presence of <strong>nullsets</strong>, which are measure theoretically “easy” (since they do not contribute any measure at all), but can be topologically quite complicated.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="subsets_Polish.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Subspaces of Polish Spaces</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
