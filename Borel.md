@@ -39,7 +39,6 @@ The definition of Borel sets is rather *"external"*. It does not give us much of
 
 ## The Borel hierarchy
 
-We will restrict ourselves from now on to Polish spaces.
 
 <!-- 
 ```{admonition} Exercise
@@ -57,9 +56,11 @@ We can continue this way and form the $F_{\sigma\delta}$ sets -- countable inter
 
 The $\sigma\delta$-notation soon becomes rather impractical, and hence we replace it by something more convenient, and much more suggestive, as we will see later.
 
+To make the hierarchy that we are introducing well-behaved, we focus on **metrizable spaces**.
+
 ```{prf:definition}
 :label: def-Borel-finite
-Let $X$ be a Polish space. We inductively define the following collection of subsets of $X$.
+Let $X$ be a metrizable topological space. We inductively define the following collection of subsets of $X$.
 \begin{align*}
     & \bSigma^0_1(X) = \{ U \colon U\subseteq X \text{ open } \} \\
     & \bPi^0_n(X) = \{ \Co{A} \colon A \in \bSigma^0_n(X) \} = \Co{\bSigma^0_n(X)} \\

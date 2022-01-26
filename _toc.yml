@@ -12,6 +12,7 @@ parts:
       - file: trees.md
       - file: Borel.md
       - file: subsets_Polish.md
+      # - file: measure.md
   - caption: Reference
     chapters:
       - file: bibliography
