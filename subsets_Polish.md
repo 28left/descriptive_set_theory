@@ -78,7 +78,7 @@ $$
     \Delta = \{(x,x,x, \dots) \colon \: x \in Y_n \text{ for all } n \in \Nat \}.
 $$
 
-$\Delta$ is closed in the product space $\bigcap_n Y_n$ and hence Polish, and this property pushes over to $\bigcap_n Y_n$ (see {prf:ref}`properties-polish`).
+$\Delta$ is closed in the product space $\prod_n Y_n$ and hence Polish, and this property pushes over to $\bigcap_n Y_n$ (see {prf:ref}`properties-polish`).
 ```
 
 Hence every $G_\delta$ subset of a Polish space is Polish. This is as far as we can get.
