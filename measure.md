@@ -2,10 +2,14 @@
 ```{math}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
 \newcommand{\Pow}{\mathcal{P}}
 \newcommand{\Co}[1]{\neg \,#1}
 \newcommand{\Op}[1]{\operatorname{#1}}
-
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\Cl}[1]{\overline{#1}}
 ```
 
 At the end of the previous section, we saw that Borel sets are well-behaved in the sense that they possess the **perfect subset property**. Two other important regularity properties are **measurability** and the **Baire property**, which we will introduce in this section.
@@ -56,9 +60,7 @@ Note that the complement of a ($\sigma$-) ideal (in $\Pow(X)$) is not necessaril
 :label: def-ultrafilter
 A non-empty family $\mathcal{I} \subseteq \Pow(X)$ is a **prime ideal** if it is an ideal for which
 
-$$
-    \text{for every $A \in X$, either $A\in \mathcal{I}$ or $\Co{A} \in \mathcal{I}$}.
-$$
+> for every $A \in X$, either $A\in \mathcal{I}$ or $\Co{A} \in \mathcal{I}$ (but not both).
 
 An **ultrafilter** is a filter whose complement in $\Pow(X)$ is a prime ideal.
 ```
@@ -118,7 +120,7 @@ $$
 $$ 
 ```
 
-The definition singles out those sets that split all other sets correctly, with regard to measure.
+This definition is justified rather by its consequences than by its intuitive appeal. Regarding the latter, suffice it to say here that outer measures may be rather far from being even \emph{finitely} additive. The definition singles out those sets that split all other sets correctly, with regard to measure.
 
 ```{prf:proposition}
 :label: prop-measurable-sets
@@ -126,14 +128,14 @@ The definition singles out those sets that split all other sets correctly, with 
 The class of $\mu^*$-measurable sets forms a $\sigma$-algebra $\mathcal{M}$, and the restriction of $\mu^*$ to $\mathcal{M}$ is a measure.
 ```
 
-For a proof see for instance {cite}`Halmos:1950a`.
+A proof can be found in any standard book on measure theory, for instance {cite}`Halmos:1950a` or {cite}`RoydenFitzpatrick_1988n`.
 
 The size of the $\sigma$-algebra of measurable sets depends, of course, on the outer measure $\mu^*$. If $\mu^*$ is behaving rather pathetically, we cannot expect $\mathcal{M}$ to contain many sets.
 
 
 ## Lebesgue measure
 
-A standard way to obtain `nice' outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of **Lebesgue measure** on $\Real$. 
+A standard way to obtain "nice" outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of **Lebesgue measure** on $\Real$. 
 
 ```{prf:definition}
 :label: def-Lebesgue
@@ -149,11 +151,35 @@ $$
 Show that $\lambda^*$ indeed defines an outer measure.
 ```
 
-We call the $\lambda^*$-measurable sets **Lebesgue measurable**. One can verify that every open interval is Lebesgue measurable. It follows from Proposition \ref{prop-measurable-sets} that every Borel set is Lebesgue measurable. 
+We call the $\lambda^*$-measurable sets **Lebesgue measurable**. 
+
+The following two facts are also standard {cite}`RoydenFitzpatrick_1988n`.
+
+```{prf:proposition}
+:label: prop-outer-meas-interval
+
+If $I \subseteq \Real$ is an interval, then $\lambda^*(I)$ is equal to the length of $I$ (possibly infinite).
+```
+
+```{prf:proposition}
+:label: prop-interval-measurable
+
+Any interval $I \subseteq \Real$ is Lebesgue measurable.
+```
+
+```{prf:corollary}
+:label: cor-Borel-measurable
+
+Any Borel set in $\Real$ is Lebesgue measurable
+```
+
+```{prf:proof}
+This follows from {prf:ref}`prop-measurable-sets`, {prf:ref}`prop-interval-measurable` and the fact that any open set in $\Real$ is a countable union of intervals.
+```
 
 The construction of Lebesgue measure can be generalized and extended to other metric spaces, for example through the concept of **Hausdorff measures**. 
 
-All these measures are **Borel measures**, in the sense that the Borel measures are measurable. However, there measurable sets that are not Borel sets. The reason for this lies in the presence of **nullsets**, which are measure theoretically "easy" (since they do not contribute any measure at all), but can be topologically quite complicated.
+All these measures are **Borel measures**, in the sense that the Borel sets are measurable. However, there are measurable sets that are not Borel sets. The reason for this lies in the presence of **nullsets**, which are measure theoretically "easy" (since they do not contribute any measure at all), but can be topologically quite complicated.
 
 
 ## Nullsets
@@ -161,22 +187,25 @@ All these measures are **Borel measures**, in the sense that the Borel measures 
 Let $\mu^*$ be an outer measure on $X$. If $\mu^*(A) = 0$, then $A$ is called a **$\mu^*$-nullset**.
 
 ```{prf:proposition} 
-:label:prop-nullsets-measurable
+:label: prop-nullsets-measurable
+
 Any $\mu^*$-nullset is $\mu^*$-measurable.
 ```
 
 ```{prf:proof}
 Suppose $\mu^*(A)=0$. Let $B \subseteq X$. Then, since $\mu^*$ is subadditive and monotone,
-\[
+
+$$
     \mu^*(B) \leq \mu^*(B \cap A) + \mu^*(B \cap \Co{A}) = \mu^*(B \cap \Co{A}) \leq \mu^*(B),
-\]
+$$
+
 and therefore $\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \cap \Co{A})$.
 ```
 
 The next result confirms the intuition that nullsets are a notion of smallness.
 
 ```{prf:proposition} 
-:label:prop-null-sigmaideal
+:label: prop-null-sigmaideal
 
 The $\mu^*$-nullsets form a $\sigma$-ideal.
 ```
@@ -188,6 +217,8 @@ The $\mu^*$-nullsets form a $\sigma$-ideal.
 In case of Lebesgue measure, we can use Proposition {prf:ref}`prop-nullsets-measurable` to further describe the Lebesgue measurable subsets of $\Real$.
 
 ```{prf:proposition}
+:label: measurable-diff-Borel
+
 A set $A \subseteq \Real$ is Lebesgue measurable if and only if it is the difference of a $\bPi^0_2$ set and a Lebesgue nullset.
 ```
 
@@ -225,13 +256,120 @@ Hence if a set is measurable, it differs from a (rather simple) Borel set only b
  
 We also obtain the following characterization of the $\sigma$-algebra of Lebesgue measurable sets.
 
-\begin{prop}
-	The $\sigma$-algebra of Lebesgue measurable sets in $\Real$ is the smallest $\sigma$-algebra containing the open sets and the nullsets.
-\end{prop}
+```{prf:proposition}
+:label: prop-measurable-sigma-algebra
+
+The $\sigma$-algebra of Lebesgue measurable sets in $\Real$ is the smallest $\sigma$-algebra containing the open sets and the nullsets.
+```
 
 As mentioned before, there are Lebesgue measurable sets that are not Borel sets. We will eventually encounter such sets. The question which sets exactly are Lebesgue measurable was one of the major questions that drove the development of descriptive set theory, just like the question which uncountable sets have perfect subsets.
  
 
+
+## Baire category
+
+The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let $X$ be a Polish space.
+
+```{prf:definition}
+:label: def-nowhere-dense
+
+A set $A \subseteq X$ is **nowhere dense** if its complement contains an open, dense set.
+```
+
+Being nowhere dense means for any open set $U \subseteq X$ we can find a non-empty open subset $V \subseteq U$ such that $V \subseteq \Co{A}$. In other words, a nowhere dense set is "full of holes".
+
+Examples of nowhere dense sets are all finite, or more generally, all discrete subsets of a perfect Polish space, i.e. sets all whose points are isolated. There are non-discrete nowhere dense sets, such as $\{0\} \cup \{1/n \colon n \in \Nat \}$ in $\Real$, even uncountable ones, such as the middle-third Cantor set.
+
+The nowhere dense sets form an ideal, but not a $\sigma$-ideal: Every singleton set is nowhere dense, but there are countable sets that are not, such as the rationals $\Rat$ in $\Real$.
+
+To obtain a $\sigma$-ideal, we close the nowhere dense sets under countable unions.
+
+```{prf:definition}
+:label: def-meager
+
+A set $A \subseteq X$ is **meager** or of **first category** if it is the countable union of nowhere dense sets. Non-meager sets are also called sets of **second category**. Complements of meager sets are called **comeager** or **residual**.
+```
+
+The meager subsets of $X$ form a $\sigma$-ideal. Examples of meager sets are all countable sets, but there are uncountable ones (Cantor set).
+
+The concept of Baire category is often used in existence proofs: To show that a set with a certain property exists, one shows that the set of points *not having the property* is meager. A famous example is Banach's proof of the existence of continuous, nowhere differentiable functions. For this to work, of course, we have to ensure that the complements of meager sets are non-empty.
+
+```{prf:theorem} Baire Category Theorem
+:label: thm-Baire-category
+
+For any Polish space $X$, the following statements hold.
+- **(a)** For every meager set $M \subseteq X$, the complement $\Co{M}$ is dense in $X$.
+- **(b)** No non-empty open set is meager.
+- **(c)** If $\{D_n\}$ is a countable family of open, dense sets, then  $\bigcap_{n} D_n$ is dense.
+```
+
+```{prf:proof}
+(a) Assume  $M = \bigcup_n N_n$, where each $N_n$ is nowhere dense. Then $\Co{M} = \bigcap D_n$, where each $D_n$ contains a dense, open set. Let $U \subseteq X$ be open. 
+
+We construct a point $x \in U \cap \Co{M}$ by induction. We can find an open ball $B_1$ of radius $<1$ such that $\Cl{B_1} \subseteq U \cap D_1$, since $D_1$ contains a dense open set. In the next step, we use the same property of $D_2$ to find an open ball $B_2$ of radius $<1/2$ whose closure is completely contained in $B_1 \cap D_2$. 
+Continuing inductively, we obtain a  nested sequence of balls $B_n$ of radius $<1/n$ such that $\Cl{B_n} \subseteq B_{n-1} \cap D_n$. 
+
+Let $x_n$ be the center of $B_n$. Then $(x_n)$ is a Cauchy sequence, so $x = \lim_n x_n$ exists in $X$. Since for any $n$, all but finitely many $x_i$ are in $B_n$, we have $x \in \Cl{B_n}$ for all $n$. Therefore, by construction
+
+$$
+    x \in \bigcap_n \Cl{B_n} = \bigcap_n B_n \subseteq U \cap \bigcap_n D_n \subseteq U.
+$$
+
+(b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent. 
+```
+
+As an application, we determine the exact location of $\Rat$ in the Borel hierarchy of $\Real$.
+
+```{prf:corollary}
+:label: cor-rationals-not-pi2
+
+$\Rat$ is not a $\bPi^0_2$ set, hence a true $\bSigma^0_2$ set.
+```
+
+```{prf:proof}
+Note that $\Real$ cannot be meager, by (b). Since $\Rat$ is meager, $\Real \setminus \Rat$ cannot be meager either. 
+If $\Rat$ were a $\bPi^0_2$ set, it would be the intersection of open, dense sets and hence its complement $\Real \setminus \Rat$ would be meager.
+```
+
+We have seen that the measurable sets are precisely the ones that differ from a $\bPi^0_2$ set by a nullset.
+We can introduce a similar concept for Baire category.
+
+```{prf:definition}
+:label: def-BP
+
+A set $B \subseteq X$ has the **Baire property** if there exists an open set $G$ and a meager set $M$ such that 
+
+$$
+    B \bigtriangleup G = M,
+$$
+
+where $\bigtriangleup$ denotes the *symmetric difference* between two sets.
+```
+
+```{prf:proposition}
+:label: prop-BP-sigma-algebra
+
+The sets having the Baire property form a $\sigma$-algebra.
+```
+
+```{prf:corollary}
+:label: cor-BP-algebra-small
+
+The $\sigma$-algebra of sets having the Baire property is the smallest $\sigma$-algebra containing all open and all meager sets.
+```
+
+As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.
+ 
+
+We conclude this lecture with a note on the relationship between measure and category. From the results so far it seems that they behave quite similarly. This might lead to the conjecture that maybe they more or less coincide. This is not so, in fact, they are quite orthogonal to each other, as the next result shows.
+
+```{prf:proposition}
+The real numbers can be partitioned into two subsets, one a Lebesgue nullset and the other one meager.
+```
+
+```{prf:proof}
+Let $(G_n)$  be a sequence of open sets witnessing that $\Rat$ is a nullset, i.e. each $G_n$ is a union of disjoint open intervals that covers $\Rat$ and whose total length does not exceed $2^{-n}$. Then $G = \bigcap_n G_n$ is a nullset, but at the same time it is an intersection of open dense sets, thus comeager, hence its complement is meager.
+``` 
 
 
 
