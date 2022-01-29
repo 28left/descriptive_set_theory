@@ -209,11 +209,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/28left/descriptive_set_theory"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmeasure.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fmeasure.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -254,6 +254,16 @@
    Lebesgue measure
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nullsets">
+   Nullsets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#baire-category">
+   Baire category
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -289,6 +299,16 @@
    Lebesgue measure
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nullsets">
+   Nullsets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#baire-category">
+   Baire category
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -303,10 +323,14 @@
 <div class="math notranslate nohighlight">
 \[\newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
 \newcommand{\Pow}{\mathcal{P}}
 \newcommand{\Co}[1]{\neg \,#1}
 \newcommand{\Op}[1]{\operatorname{#1}}
-\]</div>
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\Cl}[1]{\overline{#1}}\]</div>
 <p>At the end of the previous section, we saw that Borel sets are well-behaved in the sense that they possess the <strong>perfect subset property</strong>. Two other important regularity properties are <strong>measurability</strong> and the <strong>Baire property</strong>, which we will introduce in this section.</p>
 <div class="section" id="filters-and-ideals">
 <h2>Filters and Ideals<a class="headerlink" href="#filters-and-ideals" title="Permalink to this headline">¶</a></h2>
@@ -315,10 +339,11 @@
 <p class="admonition-title"><span class="caption-number">Definition 9 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is an <strong>ideal</strong> if</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(A \in \mathcal{I}\)</span> and <span class="math notranslate nohighlight">\(B \subseteq A\)</span> implies <span class="math notranslate nohighlight">\(B \in \mathcal{I}\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(A, B \in \mathcal{I}\)</span>  implies <span class="math notranslate nohighlight">\(A \cup B \in\mathcal{I}\)</span>.</p></li>
-</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(\Op{I1}) &amp; \qquad A \in \mathcal{I} \text{ and } B \subseteq A \text{ implies } B \in \mathcal{I},\\
+(\Op{I2}) &amp; \qquad A, B \in \mathcal{I}  \text{ implies } A \cup B \in\mathcal{I}.
+\end{align*}\]</div>
 </div>
 </div><p>If we have closure even under <em>countable unions</em>, we speak of a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-ideal</strong>. For example, while the countable sets in <span class="math notranslate nohighlight">\(\Real\)</span> form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, the finite subsets only form an ideal.</p>
 <p>Another example of ideals are the so-called <strong>principal ideals</strong>. These are ideals of the form</p>
@@ -331,11 +356,12 @@
 <div class="proof definition admonition" id="def-filter">
 <p class="admonition-title"><span class="caption-number">Definition 10 </span></p>
 <div class="definition-content section" id="proof-content">
-<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is an <strong>filter</strong> if</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(A \in \mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(B \supseteq A\)</span> implies <span class="math notranslate nohighlight">\(B \in \mathcal{F}\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(A, B \in \mathcal{F}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span> implies <span class="math notranslate nohighlight">\(A\cap B \in\mathcal{F}\)</span>.</p></li>
-</ol>
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is a <strong>filter</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(\Op{F1}) &amp; \qquad A \in \mathcal{F} \text{ and } B \supseteq A \text{ implies } B \in \mathcal{F},\\
+(\Op{F2}) &amp; \qquad A, B \in \mathcal{F}  \text{ implies } A \cap B \in\mathcal{F}.
+\end{align*}\]</div>
 </div>
 </div><p>Again, closure under countable intersections yields <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-filters</strong>.</p>
 <p>If <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) ideal, then <span class="math notranslate nohighlight">\(\mathcal{F} = \{\Co{A} \colon A \in \mathcal{I}\}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) filter. Hence the co-finite subsets of <span class="math notranslate nohighlight">\(\Real\)</span> form a filter, and the co-countable subsets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-filter.</p>
@@ -344,10 +370,9 @@
 <p class="admonition-title"><span class="caption-number">Definition 11 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> is a <strong>prime ideal</strong> if it is an ideal for which</p>
-<div class="math notranslate nohighlight">
-\[
-    \text{for every $A \in X$, either $A\in \mathcal{I}$ or $\Co{A} \in \mathcal{I}$}.
-\]</div>
+<blockquote>
+<div><p>for every <span class="math notranslate nohighlight">\(A \in X\)</span>, either <span class="math notranslate nohighlight">\(A\in \mathcal{I}\)</span> or <span class="math notranslate nohighlight">\(\Co{A} \in \mathcal{I}\)</span> (but not both).</p>
+</div></blockquote>
 <p>An <strong>ultrafilter</strong> is a filter whose complement in <span class="math notranslate nohighlight">\(\Pow(X)\)</span> is a prime ideal.</p>
 </div>
 </div><p>In light of the small-/largeness motivation, prime ideals and ultrafilters provide a <em>complete</em> separation of <span class="math notranslate nohighlight">\(X\)</span>: Each set is either small or large.</p>
@@ -394,18 +419,18 @@
 \mu^*(B) = \mu^*(B \cap A) + \mu^*(B \setminus A) \quad \text{ for all $B \subseteq X$}.
 \]</div>
 </div>
-</div><p>The definition singles out those sets that split all other sets correctly, with regard to measure.</p>
+</div><p>This definition is justified rather by its consequences than by its intuitive appeal. Regarding the latter, suffice it to say here that outer measures may be rather far from being even \emph{finitely} additive. The definition singles out those sets that split all other sets correctly, with regard to measure.</p>
 <div class="proof proposition admonition" id="prop-measurable-sets">
 <p class="admonition-title"><span class="caption-number">Proposition 11 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>The class of <span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable sets forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and the restriction of <span class="math notranslate nohighlight">\(\mu^*\)</span> to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is a measure.</p>
 </div>
-</div><p>For a proof see for instance <span id="id1">[<a class="reference internal" href="bibliography.html#id4">Halmos, 1950</a>]</span>.</p>
+</div><p>A proof can be found in any standard book on measure theory, for instance <span id="id1">[<a class="reference internal" href="bibliography.html#id4">Halmos, 1950</a>]</span> or <span id="id2">[<a class="reference internal" href="bibliography.html#id8">Royden and Fitzpatrick, 1988</a>]</span>.</p>
 <p>The size of the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets depends, of course, on the outer measure <span class="math notranslate nohighlight">\(\mu^*\)</span>. If <span class="math notranslate nohighlight">\(\mu^*\)</span> is behaving rather pathetically, we cannot expect <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> to contain many sets.</p>
 </div>
 <div class="section" id="lebesgue-measure">
 <h2>Lebesgue measure<a class="headerlink" href="#lebesgue-measure" title="Permalink to this headline">¶</a></h2>
-<p>A standard way to obtain `nice’ outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of <strong>Lebesgue measure</strong> on <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<p>A standard way to obtain “nice” outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of <strong>Lebesgue measure</strong> on <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
 <div class="proof definition admonition" id="def-Lebesgue">
 <p class="admonition-title"><span class="caption-number">Definition 15 </span></p>
 <div class="definition-content section" id="proof-content">
@@ -419,9 +444,174 @@
 <p class="admonition-title">Exercise</p>
 <p>Show that <span class="math notranslate nohighlight">\(\lambda^*\)</span> indeed defines an outer measure.</p>
 </div>
-<p>We call the <span class="math notranslate nohighlight">\(\lambda^*\)</span>-measurable sets <strong>Lebesgue measurable</strong>. One can verify that every open interval is Lebesgue measurable. It follows from Proposition \ref{prop-measurable-sets} that every Borel set is Lebesgue measurable.</p>
+<p>We call the <span class="math notranslate nohighlight">\(\lambda^*\)</span>-measurable sets <strong>Lebesgue measurable</strong>.</p>
+<p>The following two facts are also standard <span id="id3">[<a class="reference internal" href="bibliography.html#id8">Royden and Fitzpatrick, 1988</a>]</span>.</p>
+<div class="proof proposition admonition" id="prop-outer-meas-interval">
+<p class="admonition-title"><span class="caption-number">Proposition 12 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(I \subseteq \Real\)</span> is an interval, then <span class="math notranslate nohighlight">\(\lambda^*(I)\)</span> is equal to the length of <span class="math notranslate nohighlight">\(I\)</span> (possibly infinite).</p>
+</div>
+</div><div class="proof proposition admonition" id="prop-interval-measurable">
+<p class="admonition-title"><span class="caption-number">Proposition 13 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>Any interval <span class="math notranslate nohighlight">\(I \subseteq \Real\)</span> is Lebesgue measurable.</p>
+</div>
+</div><div class="proof corollary admonition" id="cor-Borel-measurable">
+<p class="admonition-title"><span class="caption-number">Corollary 4 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>Any Borel set in <span class="math notranslate nohighlight">\(\Real\)</span> is Lebesgue measurable</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. This follows from <a class="reference internal" href="#prop-measurable-sets">Proposition 11</a>, <a class="reference internal" href="#prop-interval-measurable">Proposition 13</a> and the fact that any open set in <span class="math notranslate nohighlight">\(\Real\)</span> is a countable union of intervals.</p>
+</div>
 <p>The construction of Lebesgue measure can be generalized and extended to other metric spaces, for example through the concept of <strong>Hausdorff measures</strong>.</p>
-<p>All these measures are <strong>Borel measures</strong>, in the sense that the Borel measures are measurable. However, there measurable sets that are not Borel sets. The reason for this lies in the presence of <strong>nullsets</strong>, which are measure theoretically “easy” (since they do not contribute any measure at all), but can be topologically quite complicated.</p>
+<p>All these measures are <strong>Borel measures</strong>, in the sense that the Borel sets are measurable. However, there are measurable sets that are not Borel sets. The reason for this lies in the presence of <strong>nullsets</strong>, which are measure theoretically “easy” (since they do not contribute any measure at all), but can be topologically quite complicated.</p>
+</div>
+<div class="section" id="nullsets">
+<h2>Nullsets<a class="headerlink" href="#nullsets" title="Permalink to this headline">¶</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mu^*\)</span> be an outer measure on <span class="math notranslate nohighlight">\(X\)</span>. If <span class="math notranslate nohighlight">\(\mu^*(A) = 0\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> is called a <strong><span class="math notranslate nohighlight">\(\mu^*\)</span>-nullset</strong>.</p>
+<div class="proof proposition admonition" id="prop-nullsets-measurable">
+<p class="admonition-title"><span class="caption-number">Proposition 14 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>Any <span class="math notranslate nohighlight">\(\mu^*\)</span>-nullset is <span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(\mu^*(A)=0\)</span>. Let <span class="math notranslate nohighlight">\(B \subseteq X\)</span>. Then, since <span class="math notranslate nohighlight">\(\mu^*\)</span> is subadditive and monotone,</p>
+<div class="math notranslate nohighlight">
+\[
+    \mu^*(B) \leq \mu^*(B \cap A) + \mu^*(B \cap \Co{A}) = \mu^*(B \cap \Co{A}) \leq \mu^*(B),
+\]</div>
+<p>and therefore <span class="math notranslate nohighlight">\(\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \cap \Co{A})\)</span>.</p>
+</div>
+<p>The next result confirms the intuition that nullsets are a notion of smallness.</p>
+<div class="proof proposition admonition" id="prop-null-sigmaideal">
+<p class="admonition-title"><span class="caption-number">Proposition 15 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\mu^*\)</span>-nullsets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (I1) follows directly from monotonicity (O2). Countable additivity follows immediately from subadditivity (O3).</p>
+</div>
+<p>In case of Lebesgue measure, we can use Proposition <a class="reference internal" href="#prop-nullsets-measurable">Proposition 14</a> to further describe the Lebesgue measurable subsets of <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof proposition admonition" id="measurable-diff-Borel">
+<p class="admonition-title"><span class="caption-number">Proposition 16 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is Lebesgue measurable if and only if it is the difference of a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set and a Lebesgue nullset.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first assume <span class="math notranslate nohighlight">\(\lambda^*(A) &lt; \infty\)</span>.  Let <span class="math notranslate nohighlight">\(G_n \subseteq \Real\)</span> be an open set such that <span class="math notranslate nohighlight">\(G_n \supseteq A\)</span> and  <span class="math notranslate nohighlight">\(\lambda^*(G_n) \leq \lambda^*(A) + 1/n\)</span>. The existence of such a <span class="math notranslate nohighlight">\(G_n\)</span> follows from the definition of <span class="math notranslate nohighlight">\(\lambda^*\)</span>, and the fact that every open set is the disjoint union of open intervals.  Then <span class="math notranslate nohighlight">\(G = \bigcap_n G_n\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>, <span class="math notranslate nohighlight">\(A \subseteq G\)</span>, and for all <span class="math notranslate nohighlight">\(n\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    \lambda^*(A) \leq \lambda^*(G) \leq \lambda^*(A) + 1/n  
+\]</div>
+<p>hence <span class="math notranslate nohighlight">\(\lambda^*(A) = \lambda^*(G)\)</span>. Hence for <span class="math notranslate nohighlight">\(N = G \setminus A\)</span>, since <span class="math notranslate nohighlight">\(A\)</span> is measurable,</p>
+<div class="math notranslate nohighlight">
+\[
+    \lambda^*(N) = \lambda^*(G) - \lambda^*(A)  = 0 \quad \text{ and } \quad A = G \setminus N.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\lambda^*(A) = \infty\)</span>, we set <span class="math notranslate nohighlight">\(A_m = A \cap [m,m+1)\)</span> for <span class="math notranslate nohighlight">\(m \in \Integer\)</span>. By monotonicity, each <span class="math notranslate nohighlight">\(\lambda^*(A_m)\)</span> is finite. For each <span class="math notranslate nohighlight">\(m \in \Integer\)</span>, <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, pick <span class="math notranslate nohighlight">\(G^{(m)}_n\)</span> open such that <span class="math notranslate nohighlight">\(\lambda^*(G^{(m)}_n) \leq \lambda^*(A) + 1/2^{n+2|m|+1}\)</span>. Then, with</p>
+<div class="math notranslate nohighlight">
+\[
+    \bigcap_{n \in \Nat} \bigcup_{m \in \Integer} G^{(m)}_n,
+\]</div>
+<p><span class="math notranslate nohighlight">\(N = G\setminus A\)</span> is the desired set.</p>
+<p>For the other direction, note that the measurable sets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra which contains both the Borel sets and the nullsets. Hence any set that is the difference of a Borel set and a nullset is measurable, too.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that each Lebesgue measurable set can be written as a disjoint union of a <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set and a nullset.</p>
+</div>
+<p>Hence if a set is measurable, it differs from a (rather simple) Borel set only by a nullset.</p>
+<p>We also obtain the following characterization of the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of Lebesgue measurable sets.</p>
+<div class="proof proposition admonition" id="prop-measurable-sigma-algebra">
+<p class="admonition-title"><span class="caption-number">Proposition 17 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of Lebesgue measurable sets in <span class="math notranslate nohighlight">\(\Real\)</span> is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing the open sets and the nullsets.</p>
+</div>
+</div><p>As mentioned before, there are Lebesgue measurable sets that are not Borel sets. We will eventually encounter such sets. The question which sets exactly are Lebesgue measurable was one of the major questions that drove the development of descriptive set theory, just like the question which uncountable sets have perfect subsets.</p>
+</div>
+<div class="section" id="baire-category">
+<h2>Baire category<a class="headerlink" href="#baire-category" title="Permalink to this headline">¶</a></h2>
+<p>The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space.</p>
+<div class="proof definition admonition" id="def-nowhere-dense">
+<p class="admonition-title"><span class="caption-number">Definition 16 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>nowhere dense</strong> if its complement contains an open, dense set.</p>
+</div>
+</div><p>Being nowhere dense means for any open set <span class="math notranslate nohighlight">\(U \subseteq X\)</span> we can find a non-empty open subset <span class="math notranslate nohighlight">\(V \subseteq U\)</span> such that <span class="math notranslate nohighlight">\(V \subseteq \Co{A}\)</span>. In other words, a nowhere dense set is “full of holes”.</p>
+<p>Examples of nowhere dense sets are all finite, or more generally, all discrete subsets of a perfect Polish space, i.e. sets all whose points are isolated. There are non-discrete nowhere dense sets, such as <span class="math notranslate nohighlight">\(\{0\} \cup \{1/n \colon n \in \Nat \}\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span>, even uncountable ones, such as the middle-third Cantor set.</p>
+<p>The nowhere dense sets form an ideal, but not a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal: Every singleton set is nowhere dense, but there are countable sets that are not, such as the rationals <span class="math notranslate nohighlight">\(\Rat\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<p>To obtain a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, we close the nowhere dense sets under countable unions.</p>
+<div class="proof definition admonition" id="def-meager">
+<p class="admonition-title"><span class="caption-number">Definition 17 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>meager</strong> or of <strong>first category</strong> if it is the countable union of nowhere dense sets. Non-meager sets are also called sets of <strong>second category</strong>. Complements of meager sets are called <strong>comeager</strong> or <strong>residual</strong>.</p>
+</div>
+</div><p>The meager subsets of <span class="math notranslate nohighlight">\(X\)</span> form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal. Examples of meager sets are all countable sets, but there are uncountable ones (Cantor set).</p>
+<p>The concept of Baire category is often used in existence proofs: To show that a set with a certain property exists, one shows that the set of points <em>not having the property</em> is meager. A famous example is Banach’s proof of the existence of continuous, nowhere differentiable functions. For this to work, of course, we have to ensure that the complements of meager sets are non-empty.</p>
+<div class="proof theorem admonition" id="thm-Baire-category">
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Baire Category Theorem)</p>
+<div class="theorem-content section" id="proof-content">
+<p>For any Polish space <span class="math notranslate nohighlight">\(X\)</span>, the following statements hold.</p>
+<ul class="simple">
+<li><p><strong>(a)</strong> For every meager set <span class="math notranslate nohighlight">\(M \subseteq X\)</span>, the complement <span class="math notranslate nohighlight">\(\Co{M}\)</span> is dense in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p><strong>(b)</strong> No non-empty open set is meager.</p></li>
+<li><p><strong>(c)</strong> If <span class="math notranslate nohighlight">\(\{D_n\}\)</span> is a countable family of open, dense sets, then  <span class="math notranslate nohighlight">\(\bigcap_{n} D_n\)</span> is dense.</p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (a) Assume  <span class="math notranslate nohighlight">\(M = \bigcup_n N_n\)</span>, where each <span class="math notranslate nohighlight">\(N_n\)</span> is nowhere dense. Then <span class="math notranslate nohighlight">\(\Co{M} = \bigcap D_n\)</span>, where each <span class="math notranslate nohighlight">\(D_n\)</span> contains a dense, open set. Let <span class="math notranslate nohighlight">\(U \subseteq X\)</span> be open.</p>
+<p>We construct a point <span class="math notranslate nohighlight">\(x \in U \cap \Co{M}\)</span> by induction. We can find an open ball <span class="math notranslate nohighlight">\(B_1\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1\)</span> such that <span class="math notranslate nohighlight">\(\Cl{B_1} \subseteq U \cap D_1\)</span>, since <span class="math notranslate nohighlight">\(D_1\)</span> contains a dense open set. In the next step, we use the same property of <span class="math notranslate nohighlight">\(D_2\)</span> to find an open ball <span class="math notranslate nohighlight">\(B_2\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1/2\)</span> whose closure is completely contained in <span class="math notranslate nohighlight">\(B_1 \cap D_2\)</span>.
+Continuing inductively, we obtain a  nested sequence of balls <span class="math notranslate nohighlight">\(B_n\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1/n\)</span> such that <span class="math notranslate nohighlight">\(\Cl{B_n} \subseteq B_{n-1} \cap D_n\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x_n\)</span> be the center of <span class="math notranslate nohighlight">\(B_n\)</span>. Then <span class="math notranslate nohighlight">\((x_n)\)</span> is a Cauchy sequence, so <span class="math notranslate nohighlight">\(x = \lim_n x_n\)</span> exists in <span class="math notranslate nohighlight">\(X\)</span>. Since for any <span class="math notranslate nohighlight">\(n\)</span>, all but finitely many <span class="math notranslate nohighlight">\(x_i\)</span> are in <span class="math notranslate nohighlight">\(B_n\)</span>, we have <span class="math notranslate nohighlight">\(x \in \Cl{B_n}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>. Therefore, by construction</p>
+<div class="math notranslate nohighlight">
+\[
+    x \in \bigcap_n \Cl{B_n} = \bigcap_n B_n \subseteq U \cap \bigcap_n D_n \subseteq U.
+\]</div>
+<p>(b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent.</p>
+</div>
+<p>As an application, we determine the exact location of <span class="math notranslate nohighlight">\(\Rat\)</span> in the Borel hierarchy of <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof corollary admonition" id="cor-rationals-not-pi2">
+<p class="admonition-title"><span class="caption-number">Corollary 5 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\Rat\)</span> is not a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set, hence a true <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Note that <span class="math notranslate nohighlight">\(\Real\)</span> cannot be meager, by (b). Since <span class="math notranslate nohighlight">\(\Rat\)</span> is meager, <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> cannot be meager either.
+If <span class="math notranslate nohighlight">\(\Rat\)</span> were a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set, it would be the intersection of open, dense sets and hence its complement <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> would be meager.</p>
+</div>
+<p>We have seen that the measurable sets are precisely the ones that differ from a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set by a nullset.
+We can introduce a similar concept for Baire category.</p>
+<div class="proof definition admonition" id="def-BP">
+<p class="admonition-title"><span class="caption-number">Definition 18 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(B \subseteq X\)</span> has the <strong>Baire property</strong> if there exists an open set <span class="math notranslate nohighlight">\(G\)</span> and a meager set <span class="math notranslate nohighlight">\(M\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    B \bigtriangleup G = M,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets.</p>
+</div>
+</div><div class="proof proposition admonition" id="prop-BP-sigma-algebra">
+<p class="admonition-title"><span class="caption-number">Proposition 18 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The sets having the Baire property form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
+</div>
+</div><div class="proof corollary admonition" id="cor-BP-algebra-small">
+<p class="admonition-title"><span class="caption-number">Corollary 6 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of sets having the Baire property is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing all open and all meager sets.</p>
+</div>
+</div><p>As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.</p>
+<p>We conclude this lecture with a note on the relationship between measure and category. From the results so far it seems that they behave quite similarly. This might lead to the conjecture that maybe they more or less coincide. This is not so, in fact, they are quite orthogonal to each other, as the next result shows.</p>
+<div class="proof proposition admonition" id="proposition-22">
+<p class="admonition-title"><span class="caption-number">Proposition 19 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The real numbers can be partitioned into two subsets, one a Lebesgue nullset and the other one meager.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\((G_n)\)</span>  be a sequence of open sets witnessing that <span class="math notranslate nohighlight">\(\Rat\)</span> is a nullset, i.e. each <span class="math notranslate nohighlight">\(G_n\)</span> is a union of disjoint open intervals that covers <span class="math notranslate nohighlight">\(\Rat\)</span> and whose total length does not exceed <span class="math notranslate nohighlight">\(2^{-n}\)</span>. Then <span class="math notranslate nohighlight">\(G = \bigcap_n G_n\)</span> is a nullset, but at the same time it is an intersection of open dense sets, thus comeager, hence its complement is meager.</p>
+</div>
 </div>
 </div>
 
