@@ -13,6 +13,7 @@ parts:
       - file: Borel.md
       - file: subsets_Polish.md
       - file: measure.md
+      - file: choice.md
   - caption: Reference
     chapters:
       - file: bibliography
