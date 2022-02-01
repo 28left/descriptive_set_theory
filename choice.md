@@ -118,4 +118,4 @@ Stronger than Countable Choice, but still weaker than the full Axiom of Choice i
 
 > **(DC)** &nbsp;&nbsp;&nbsp; If $E$ is a binary relation on a non-empty set $A$, and if for every $a \in A$ there exists $b \in A$ such that $a \: E\: b$, then there exists a function $f:\Nat \to A$ such that for all $n \in \Nat$, $f(n) \: E \: f(n+1)$.
 
-A seminal result by {cite}`Solovay:1970a` showed that DC is no longer sufficient to prove the existence of non-regular sets in the above sense. He constructed (though under a large cardinal assumption) a model of ZF+DC in which every set of real numbers is Lebesgue measurable, has the Baire property, and has the perfect subset property.
+A seminal result by {cite:t}`Solovay:1970a` showed that DC is no longer sufficient to prove the existence of non-regular sets in the above sense. He constructed (though under a large cardinal assumption) a model of ZF+DC in which every set of real numbers is Lebesgue measurable, has the Baire property, and has the perfect subset property.
