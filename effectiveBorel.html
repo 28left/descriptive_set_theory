@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effective Borel Sets &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="The Axiom of Choice" href="choice.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Polish spaces
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perfect_subsets_R.html">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urysohn.html">
+   Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Borel.html">
+   Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measure.html">
+   Measure and Baire Category
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="choice.html">
+   The Axiom of Choice
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Effective Borel Sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/effectiveBorel.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/28left/descriptive_set_theory"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FeffectiveBorel.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borel-codes">
+   Borel codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borel-sets-with-computable-codes">
+   Borel sets with computable codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-effective-borel-hierarchy">
+   The effective Borel hierarchy
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Effective Borel Sets</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borel-codes">
+   Borel codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borel-sets-with-computable-codes">
+   Borel sets with computable codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-effective-borel-hierarchy">
+   The effective Borel hierarchy
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="effective-borel-sets">
+<h1>Effective Borel Sets<a class="headerlink" href="#effective-borel-sets" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}\]</div>
+<p>Suppose <span class="math notranslate nohighlight">\(U \subseteq \Baire\)</span> is open. Then there exists a set <span class="math notranslate nohighlight">\(W \subseteq \Nstr\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[ 
+U = \bigcup_{\sigma \in W} \Cyl{\sigma}. 
+\]</div>
+<p>Using a standard (effective) coding procedure, we can identify a finite sequence of natural numbers with a natural number, and thus can see <span class="math notranslate nohighlight">\(W\)</span> as a subset of <span class="math notranslate nohighlight">\(\Nat\)</span>.</p>
+<p>If we provide a Turing machine with oracle <span class="math notranslate nohighlight">\(W\)</span>, we can semi-effectively test for membership in <span class="math notranslate nohighlight">\(U\)</span> as follows. Assume we want to determine whether some <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> is in <span class="math notranslate nohighlight">\(U\)</span>. Write <span class="math notranslate nohighlight">\(\alpha\)</span> on another oracle tape, and start scanning the <span class="math notranslate nohighlight">\(W\)</span> oracle. If we retrieve a <span class="math notranslate nohighlight">\(\sigma\)</span> that coincides with an initial segment of <span class="math notranslate nohighlight">\(\alpha\)</span>, we know <span class="math notranslate nohighlight">\(\alpha \in U\)</span>. On the other hand, if <span class="math notranslate nohighlight">\(\alpha \in U\)</span>, then we will eventually find some <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span> in <span class="math notranslate nohighlight">\(W\)</span>. If <span class="math notranslate nohighlight">\(\alpha \not\in U\)</span>, then the search will run forever. In other words, given <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(U\)</span> is <strong>semi-decidable</strong>, or, extending terminology from subsets of <span class="math notranslate nohighlight">\(\Nat\)</span> to subsets of <span class="math notranslate nohighlight">\(\Baire\)</span>, <span class="math notranslate nohighlight">\(U\)</span> is
+<strong>recusively enumerable</strong> relative to <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p>Similarly, we can identify a closed set <span class="math notranslate nohighlight">\(F\)</span> with the code for the tree</p>
+<div class="math notranslate nohighlight">
+\[ 
+T_F = \{\alpha\Rest{n} \colon \alpha\in F,\, n\in \Nat \}.
+\]</div>
+<p>Then determining whether <span class="math notranslate nohighlight">\(\alpha \in F\)</span> is <strong>co-r.e.</strong> in (the code of) <span class="math notranslate nohighlight">\(T_F\)</span>. If <span class="math notranslate nohighlight">\(\alpha \not\in F\)</span> we will learn so after a finite amount of time.</p>
+<p>These simple observations suggest the following general approach to Borel sets.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<ul class="simple">
+<li><p class="card-text">Borel sets can be coded by a single infinite sequence in <span class="math notranslate nohighlight">\(\Baire\)</span> (or <span class="math notranslate nohighlight">\(\Cant\)</span>).</p></li>
+<li><p class="card-text">Given the code, we can describe the Borel set effectively, by means of oracle computations.</p></li>
+<li><p class="card-text">The connection between degrees of unsolvability and definability results in a close correspondence between arithmetical sets (<span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>) and Borel sets of finite order (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>).</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In this lecture we will fully develop this correspondence. Later, we will see that it even extends beyond the finite level.</p>
+<div class="section" id="borel-codes">
+<h2>Borel codes<a class="headerlink" href="#borel-codes" title="Permalink to this headline">¶</a></h2>
+<p>We fix a computable bijection <span class="math notranslate nohighlight">\(\pi: \Nat \to \Nstr\)</span>. Furthermore, let <span class="math notranslate nohighlight">\(\Tup{.,.}\)</span> be the standard coding function for pairs,</p>
+<div class="math notranslate nohighlight">
+\[ 
+\Tup{x,y} = \frac{(x+y)(x+y+1)}{2}+y.
+\]</div>
+<p>Borel codes are defined inductively.</p>
+<div class="proof definition admonition" id="def-Borel-codes">
+<p class="admonition-title"><span class="caption-number">Definition 19 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>-<strong>code</strong> if <span class="math notranslate nohighlight">\(\gamma(0) = 2\)</span> and <span class="math notranslate nohighlight">\(\gamma(n) \in \{0,1\}\)</span> for all <span class="math notranslate nohighlight">\(n \geq 1\)</span> . In this case we say that <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>codes the open set</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+U_\gamma = \bigcup_{n \geq 1, \gamma(n) = 1} \Cyl{\pi(n-1)}.
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-<strong>code</strong> if <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> given by <span class="math notranslate nohighlight">\(\alpha(n) = \gamma(n+1)\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>-code for a set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>. In this case, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>codes the set <span class="math notranslate nohighlight">\(\Co{A}\)</span></strong>.</p></li>
+<li><p>$<span class="math notranslate nohighlight">\(\gamma\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span>-<strong>code</strong> if <span class="math notranslate nohighlight">\(\gamma(0)=4\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\alpha_m\)</span> given by <span class="math notranslate nohighlight">\(\alpha_m(j) = \gamma(\Tup{m,j}+1)\)</span> is a <span class="math notranslate nohighlight">\(\bPi\)</span>-code of a set <span class="math notranslate nohighlight">\(A_m\)</span>. In this case, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>codes the set <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span></strong>.</p></li>
+</ul>
+</div>
+</div><p>The first position in each code indicates the kind of set it codes – an open set, a complement, or a union.</p>
+<p>We also define the <strong>set of Borel codes of finite order</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\Op{Bc}_\omega = \{\gamma \in \Baire \colon \gamma \text{ is a $\bSigma^0_n$- or $\bPi^0_n$-code, for some $n \geq 1$}\}\}. 
+\]</div>
+<p>The following is a straightforward induction.</p>
+<div class="proof proposition admonition" id="prop-Borel-codes">
+<p class="admonition-title"><span class="caption-number">Proposition 21 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>A set is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> <span class="math notranslate nohighlight">\((\bPi^0_n)\)</span> if and only if it has a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> <span class="math notranslate nohighlight">\((\bPi^0_n)\)</span> code.</p>
+</div>
+</div><p>Note that the definition actually assigns codes to <strong>representations of sets</strong>. A Borel set can have (and has) multiple codes, just as it has multiple representations. We can, for example, represent an open set by different sets <span class="math notranslate nohighlight">\(W\)</span> of initial segments.</p>
+<p>Moreover, every <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> set is also <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span>, and thus a set has codes which reflect the ``more complicated’’ definition of the <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> set as a union of closed sets. It is useful to keep this distinction between a Borel set and its Borel representation in mind.</p>
+<p>Each Borel code induces a tree structure that reflects how the corresponding Borel set is built up from open sets. A <span class="math notranslate nohighlight">\(3\)</span> corresponds to a node with infinitely many nodes immediately below it, a <span class="math notranslate nohighlight">\(2\)</span> to a node with just one immediate extension, and a <span class="math notranslate nohighlight">\(1\)</span> represents a terminal node, since the open sets are the ``building blocks’’ of the Borel sets and hence are not split further.</p>
+<p>The tree of a Borel code is well-founded (i.e.\ has no infinite path), since a Borel code is defined via a well-founded recursion. The rank of the tree is a countable ordinal.</p>
+<p>How hard is it to decide whether a given real is a Borel code? We will see later that this question is quite difficult. In particular, we will extend the set of Borel codes to transfinite orders and see that the <strong>set of all Borel codes is not Borel</strong>. Deciding whether a tree on <span class="math notranslate nohighlight">\(\Nat\)</span> is well-founded will play a fundamental role in this regard.</p>
+</div>
+<div class="section" id="borel-sets-with-computable-codes">
+<h2>Borel sets with computable codes<a class="headerlink" href="#borel-sets-with-computable-codes" title="Permalink to this headline">¶</a></h2>
+<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a computable code for an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set <span class="math notranslate nohighlight">\(F\)</span>. Then <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((4,\gamma')\)</span>, where, for <span class="math notranslate nohighlight">\(m \geq 0\)</span>, the <strong>m-th column</strong> of <span class="math notranslate nohighlight">\(\gamma'\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma')_m(n) = \gamma'(\Tup{m,n}) = \gamma(\Tup{m,n}+1)
+\]</div>
+<p>is of the form <span class="math notranslate nohighlight">\((3,\alpha_m)\)</span>, each <span class="math notranslate nohighlight">\(\alpha_m\)</span> in turn being a <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>-code for an open set. Observe that <span class="math notranslate nohighlight">\(\gamma'\)</span> as well as the <span class="math notranslate nohighlight">\(\alpha_m\)</span> are uniformly computable in <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>With this, we can express membership in <span class="math notranslate nohighlight">\(F\)</span> as follows:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \beta \in F \quad &amp; \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $(\gamma')_m$}] \\
+        &amp; \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(n+1) = 1 \; \Rightarrow \; \pi(n) \not\subset \beta ]. \\
+        &amp; \Leftrightarrow \quad \exists m \forall n \forall k \: \neg [\alpha_m(n+1) = 1 \;  \&amp; \; \pi(n) = \beta\Rest{k} ].
+\end{align*}\]</div>
+<p>Note that the <strong>inner predicate</strong> <span class="math notranslate nohighlight">\(R(m,n,\tau)\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[
+R(m,n, \tau) :\iff \alpha_m(n+1) = 1 \; \&amp; \; \pi(n) = \tau
+\]</div>
+<p>is <strong>decidable</strong> (as is its negation <span class="math notranslate nohighlight">\(\neg R\)</span>). Hence an <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set <span class="math notranslate nohighlight">\(F\)</span> with a computable code can be represented in the following form:</p>
+<blockquote>
+<div><p>There exists a decidable predicate <span class="math notranslate nohighlight">\(R(m,n,\tau)\)</span> such that</p>
+</div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \beta \in F \quad \Leftrightarrow \quad \exists m \: \forall n,k \; \neg R(m, n, \beta\Rest{k}). 
+\end{equation*}\]</div>
+<p>On the other hand, if <span class="math notranslate nohighlight">\(R(m,n,\tau)\)</span> is a recursive predicate, we can define the set</p>
+<div class="math notranslate nohighlight">
+\[
+W_m = \{ \sigma \colon \exists n \: R(m,n,\sigma) \}.
+\]</div>
+<p>Then the set <span class="math notranslate nohighlight">\(U_m = \bigcup_{\sigma \in W_m} \Cyl{\sigma}\)</span> is open, and the set <span class="math notranslate nohighlight">\(F\)</span> given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\alpha \in F : &amp; \iff \exists m \: \alpha \in \Co{U_m} \\
+    &amp; \iff \exists m \: \forall n,k \: \neg R(m,n,\alpha\Rest{k})
+\end{align*}\]</div>
+<p>is <span class="math notranslate nohighlight">\(F_\sigma\)</span>.</p>
+<p>Thus, there seems to be a close connection between <span class="math notranslate nohighlight">\(F_\sigma\)</span> sets with computable Borel codes and sets definable by <span class="math notranslate nohighlight">\(\Sigma^0_2\)</span> formulas over computable predicates. Given that we introduced the notation <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> for <span class="math notranslate nohighlight">\(F_\sigma\)</span> sets earlier, this is perhaps not very surprising.</p>
+<p>In this analysis, there seems to be nothing specific about the <span class="math notranslate nohighlight">\(F_\sigma\)</span> used in the example. Indeed, it can be extended to Borel sets of finite order, which we will do next.</p>
+<p>We will next introduce the
+<strong>lightface</strong> Borel hierarchy and show that it corresponds to Borel sets of finite order with recursive codes. Using <strong>relativization</strong>, we then obtain a complete characterization of Borel sets of finite order: <em>They are precisely those sets definable by arithmetical formulas, relative to a real parameter.</em></p>
+</div>
+<div class="section" id="the-effective-borel-hierarchy">
+<h2>The effective Borel hierarchy<a class="headerlink" href="#the-effective-borel-hierarchy" title="Permalink to this headline">¶</a></h2>
+<div class="proof definition admonition" id="def-effective-Borel">
+<p class="admonition-title"><span class="caption-number">Definition 20 </span> (The Lightface Hierarchy)</p>
+<div class="definition-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is</p>
+<ul class="simple">
+<li><p>(lightface) <span class="math notranslate nohighlight">\(\Sigma^0_1\)</span> if there exists a computable predicate <span class="math notranslate nohighlight">\(R(n,\sigma)\)</span> such that</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \alpha \in A \iff \exists n,k \: R(n,\alpha\Rest{k}),
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>(lightface) <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> if <span class="math notranslate nohighlight">\(\Co{A}\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>,</p></li>
+<li><p>(lightface) <span class="math notranslate nohighlight">\(\Sigma^0_{n+1}\)</span> if there exists a <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> set <span class="math notranslate nohighlight">\(P\)</span> such that</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \alpha \in A \iff \exists n \; (n,\alpha) \in P. 
+\end{equation*}\]</div>
+</div>
+</div><p>The following result is at the heart of the effective theory.</p>
+<div class="proof proposition admonition" id="prop-computable-codes">
+<p class="admonition-title"><span class="caption-number">Proposition 22 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>. Then</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(A\)</span> is (lightface) <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\Pi^0_n\)</span>) iff <span class="math notranslate nohighlight">\(A\)</span> is (boldface) <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) and has a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>- (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-) code.</p>
+</div></blockquote>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We proceed by induction on the Borel complexity.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_1\)</span>. Let <span class="math notranslate nohighlight">\(R\)</span> be recursive such that <span class="math notranslate nohighlight">\(A = \{ \alpha \colon \exists n,k \: R(n,\alpha\Rest{k})\}\)</span>. If we let <span class="math notranslate nohighlight">\(W = \{\sigma \colon \exists n R(n,\sigma)\}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[ 
+A = \bigcup_{\sigma \in W} \Cyl{\sigma},
+\]</div>
+<p>and hence is an open set. Furthermore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\gamma(n) = 
+\begin{cases}
+    2 &amp; n = 0, \\
+    1 &amp; n \geq 1 \: \&amp; \: R(n-1),\\
+    0 &amp; n \geq 1 \: \&amp; \: \neg R(n-1), 
+\end{cases}
+\end{split}\]</div>
+<p>is a computable Borel code for <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> with a computable, <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>-code <span class="math notranslate nohighlight">\(\gamma\)</span>, then <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((2,\gamma')\)</span>, <span class="math notranslate nohighlight">\(\gamma'\)</span> coding a representation of <span class="math notranslate nohighlight">\(A\)</span> as a union of basic open cylinders. Then
+[ \alpha \in A \Iff \exists n : [\gamma’(\alpha\Rest{n}) = 1]. ]
+Hence we can set <span class="math notranslate nohighlight">\(R(\sigma) = \gamma'(\sigma)\)</span>.</p>
+<p>\medskip If <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span>, then <span class="math notranslate nohighlight">\(\Co{A}\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>. By induction hypothesis, <span class="math notranslate nohighlight">\(\Co{A}\)</span> has a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>-code <span class="math notranslate nohighlight">\(\gamma\)</span>. Then <span class="math notranslate nohighlight">\((3,\gamma)\)</span> is a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code for <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Conversely, if <span class="math notranslate nohighlight">\(\gamma = (3,\gamma')\)</span> is a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code for a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> set <span class="math notranslate nohighlight">\(A\)</span>, then <span class="math notranslate nohighlight">\(\gamma'\)</span> is a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>-code for the <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> set <span class="math notranslate nohighlight">\(\Co{A}\)</span>. By induction hypothesis, <span class="math notranslate nohighlight">\(\Co{A}\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> and hence <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span>.</p>
+<p>\medskip Finally, assume that <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_{n+1}\)</span>. Let <span class="math notranslate nohighlight">\(P\)</span> be <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> such that
+[ \alpha \in A \Iff \exists n ; [(n,\alpha) \in P]. ]
+By induction hypothesis, there exists <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> with a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code <span class="math notranslate nohighlight">\(\gamma = (3,4, \dots)\)</span>. Let
+[ P_m = { \beta \colon (m,\beta) \in P } = P \cap \Cyl{\Tup{m}}. ]
+Then each <span class="math notranslate nohighlight">\(P_m\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, since the Borel levels are closed under finite intersections, and we have
+[ A = \bigcup_m P_m. ]
+Therefore, <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span>. Furthermore, each <span class="math notranslate nohighlight">\(P_m\)</span> has a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code <span class="math notranslate nohighlight">\(\gamma_m\)</span>, which can be computed uniformly in <span class="math notranslate nohighlight">\(m\)</span>, and thus <span class="math notranslate nohighlight">\(\gamma^* = (4,(\gamma_m(n))_{m,n})\)</span> is a computable, <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span>-optimal code for <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>For the converse, let <span class="math notranslate nohighlight">\(A\)</span> be <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> with a computable <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span>-code <span class="math notranslate nohighlight">\(\gamma = (4,\gamma')\)</span>. Then each of the columns of <span class="math notranslate nohighlight">\(\gamma'\)</span> is a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code for a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> set <span class="math notranslate nohighlight">\(P_m\)</span>. Let <span class="math notranslate nohighlight">\(P'_m = \{ (m,\alpha) \colon \alpha \in P_m \}\)</span>. <span class="math notranslate nohighlight">\(P'_m\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, too. This can be seen as follows. <span class="math notranslate nohighlight">\(\Nat \times \Baire\)</span> is homeomorphic to <span class="math notranslate nohighlight">\(\Baire\)</span>. <span class="math notranslate nohighlight">\(\{m\}\times P_m\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> in <span class="math notranslate nohighlight">\(\Nat \times \Baire\)</span>, by replacing each set <span class="math notranslate nohighlight">\(S\)</span> in the definition of <span class="math notranslate nohighlight">\(P_m\)</span> by <span class="math notranslate nohighlight">\(\{m\}\times S\)</span> (note that <span class="math notranslate nohighlight">\(\{m\}\)</span> is clopen in <span class="math notranslate nohighlight">\(\Nat\)</span>). Borel complexities are preserved under homeomorphic images. (We will discuss the closure properties of Borel sets in detail later.)</p>
+<p>A similar argument shows that <span class="math notranslate nohighlight">\(P^*_m = \{(k,\alpha) \colon k\neq m \text{ or } (k=m \: \&amp; \: \alpha\in P_m)\}\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> for each <span class="math notranslate nohighlight">\(n\)</span>. Now let <span class="math notranslate nohighlight">\(P^* = \bigcup_m P^*_m\)</span>. Then <span class="math notranslate nohighlight">\(P^*\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, and we can effectively and uniformly in <span class="math notranslate nohighlight">\(m\)</span> compute an <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>-code for it. By induction hypothesis, <span class="math notranslate nohighlight">\(P^*\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span>, and we have
+[ \alpha \in A \Iff \exists m ; (m,\alpha) \in P^*, ]
+as desired.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="choice.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Axiom of Choice</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
