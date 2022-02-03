@@ -71,7 +71,7 @@ Let $\mathcal{P}$ be the set of perfect subsets of $\Real$. We can well-order th
 \begin{equation*}
     \mathcal{P} = \{P_\xi \colon \xi < 2^{\aleph_0} \}.
 \end{equation*}
-Note that every perfect subset corresponds to Cantor-Scheme, which can be coded by a real number (see Lecture \ref{lec-Borel-codes}). Therefore, there are at most $2^{\aleph_0}$-many perfect subsets of $\Real$, and it is not hard to see that there are exactly $2^{\aleph_0}$-many. 
+Note that every perfect subset corresponds to Cantor-Scheme, which can be coded by a real number (see {ref}`ch_perfect`). Therefore, there are at most $2^{\aleph_0}$-many perfect subsets of $\Real$, and it is not hard to see that there are exactly $2^{\aleph_0}$-many. 
 
 Furthermore, we assume each $P_\xi$ is well-ordered.
 
@@ -95,13 +95,15 @@ A Bernstein set does not have the Baire property.
 ```
 
 ```{prf:proof}
-Assume for a contradiction a Bernstein set $B$ has the Baire property. Then there exists an open set $U$ and a meager $F_\sigma$ set $F$ such that
-\begin{equation*}
-    B \bigtriangleup U \subseteq F.
-\end{equation*}
-Then $G = U \setminus F$ is $G_\delta$, and $G \subseteq U\cap B \subseteq B$. Furthermore, $M = B\setminus G \subseteq F$ is meager, and thus we have $B = M \cup G$, where $M$ is meager and $G$ is $G_\delta$.
+Assume for a contradiction a Bernstein set $B$ has the Baire property. By [an exercise](exercise-BP-gdelta-plus) in the previous chapter, we can write $B = M \cup G$, where $M$ is meager and $G$ is $G_\delta$.
 
-At least one of $B$, $\Real\setminus B$ is not meager. Wlog assume $B$ is not meager. (If not, obtain the representation ``meager $\cup$ $G_\delta$'' above for $\Real\setminus B$ and proceed analogously.) Then $B$ contains a non-meager $G_\delta$ set $G$, which must be uncountable. By Theorem \ref{thm-subset-Polish}, $G$ is Polish and hence must contain a perfect subset, contradiction.
+At least one of $B$, $\Real\setminus B$ is not meager. Wlog assume $B$ is not meager. (If not, obtain the representation "meager $\cup$ $G_\delta$" above for $\Real\setminus B$ and proceed analogously.) Then $G \subseteq B$ must be non-meager, too, and hence is an uncountable $G_\delta$ set. By {prf:ref}`subsets-Polish`, $G$ is Polish and hence must contain a perfect subset, contradiction.
+```
+
+```{admonition} Exercise
+:class: tip
+
+Show that a Bernstein set is not Lebesgue measurable.
 ```
 
 The existence of arbitrary choice functions appears to be a rather strong assumption. It has consequences that seem paradoxical in the sense that they conflict with basic intuitions we have about objects and they behavior with respect to size or other characteristics. Arguably the most famous example is the **Banach-Tarski Paradox**, which uses the Axiom of Choice to partition a ball in $\Real^3$ into finitely many pieces, and then, using rigid transformations (i.e.\ rotations and translations), to assemble them into two balls of the original size.

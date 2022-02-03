@@ -54,26 +54,23 @@ In this lecture we will fully develop this correspondence. Later, we will see th
 
 ## Borel codes
 
-We fix a computable bijection $\pi: \Nat \to \Nstr$. Furthermore, let $\Tup{.,.}$ be the standard coding function for pairs,
+We fix a computable bijection $\pi: \Nat \to \Nstr$. In general, we will often use string and their images under $\pi$ interchangeably, that is, for example, if $A \subset \Nat$, we will write $\sigma \in A$ to denote $\pi(\sigma) \in A$. Furthermore, let $\Tup{.,.}$ be the standard coding function for pairs,
 
 $$ 
 \Tup{x,y} = \frac{(x+y)(x+y+1)}{2}+y.
 $$
 
-Borel codes are defined inductively.
+Borel codes are defined inductively. 
 
 ```{prf:definition}
 :label: def-Borel-codes
 Let $\gamma \in \Baire$.
 
-- $\gamma$ is a $\bSigma^0_1$-**code** if $\gamma(0) = 2$ and $\gamma(n) \in \{0,1\}$ for all $n \geq 1$ . In this case we say that $\gamma$ **codes the open set**
-\begin{equation*}
-U_\gamma = \bigcup_{n \geq 1, \gamma(n) = 1} \Cyl{\pi(n-1)}.
-\end{equation*}
+- $\gamma$ is a $\bPi^0_1$-**code** if $\gamma(0) = 2$ and the sequence $\gamma'$ given by $\gamma'(n):= \gamma(n+1)$ codes a tree $T$. More precisely, $\gamma'(n) \in \{0,1\}$ for all $n$ and $T = \{\pi(n) \colon \gamma'(n) = 1 \}$ is a tree.  In this case we say that $\gamma$ **codes the closed set $[T]$**.
 
-- $\gamma$ is a $\bPi^0_n$-**code** if $\gamma(0)=3$ and $\alpha$ given by $\alpha(n) = \gamma(n+1)$ is a $\bSigma^0_n$-code for a set $A \subseteq \Baire$. In this case, we say $\gamma$ **codes the set $\Co{A}$**.
+- $\gamma$ is a $\bSigma^0_n$-**code** if $\gamma(0)=3$ and $\alpha$ given by $\alpha(n) = \gamma(n+1)$ is a $\bSigma^0_n$-code for a set $A \subseteq \Baire$. In this case, we say $\gamma$ **codes the set $\Co{A}$**.
 
-- $$\gamma$ is a $\bSigma^0_{n+1}$-**code** if $\gamma(0)=4$ and for each $m$, $\alpha_m$ given by $\alpha_m(j) = \gamma(\Tup{m,j}+1)$ is a $\bPi$-code of a set $A_m$. In this case, we say $\gamma$ **codes the set $\bigcup_n A_n$**.
+- $\gamma$ is a $\bSigma^0_{n+1}$-**code** if $\gamma(0)=4$ and for each $m$, $\alpha_m$ given by $\alpha_m(j) = \gamma(\Tup{m,j}+1)$ is a $\bPi$-code of a set $A_m$. In this case, we say $\gamma$ **codes the set $\bigcup_n A_n$**.
 ```
 
 The first position in each code indicates the kind of set it codes -- an open set, a complement, or a union.
@@ -104,7 +101,7 @@ How hard is it to decide whether a given real is a Borel code? We will see later
 
 
 
-## Borel sets with computable codes
+## Computing with Borel codes
 
 Suppose $\gamma$ is a computable code for an $F_\sigma$ set $F$. Then $\gamma$ is of the form $(4,\gamma')$, where, for $m \geq 0$, the **m-th column** of $\gamma'$,
 
