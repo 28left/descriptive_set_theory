@@ -331,6 +331,9 @@ Note that $\Real$ cannot be meager, by (b). Since $\Rat$ is meager, $\Real \setm
 If $\Rat$ were a $\bPi^0_2$ set, it would be the intersection of open, dense sets and hence its complement $\Real \setminus \Rat$ would be meager.
 ```
 
+
+## The Baire property
+
 We have seen that the measurable sets are precisely the ones that differ from a $\bPi^0_2$ set by a nullset.
 We can introduce a similar concept for Baire category.
 
@@ -343,7 +346,38 @@ $$
     B \bigtriangleup G = M,
 $$
 
-where $\bigtriangleup$ denotes the *symmetric difference* between two sets.
+where $\bigtriangleup$ denotes the *symmetric difference* between two sets -- $A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)$.
+```
+
+```{admonition} Exercise
+:class: tip
+
+Show that $\bigtriangleup$ is commutative, associative, and satisfies the distributive law
+
+$$
+A \cap (B \bigtriangleup C) = (A \cap B) \bigtriangleup (A \cap C).
+$$
+```
+
+In the above definition, we can replace open sets by closed sets.
+
+```{prf:lemma}
+:label: lem-BP-closed
+
+A set $B$ has the Baire property if and only if it can be represented in the form $B = F \bigtriangleup M$,  where $F$ is closed and $M$ is meager.
+```
+
+```{prf:proof}
+Suppose $B = G \bigtriangleup M$, $G$ open and $M$ meager.
+
+Then $N = \Cl{G} \setminus G$ is nowhere dense and closed. Furthermore, $Q = M \bigtriangleup N$ is meager (it is the union of two meager sets). We easily verify that $G = \Cl{G} \bigtriangleup N$, and therefore
+
+$$
+B = G \bigtriangleup M = (\Cl{G} \bigtriangleup N) \bigtriangleup M = \Cl{G} \bigtriangleup (N \bigtriangleup M) = \Cl{G} \bigtriangleup Q,
+$$ 
+as desired.
+
+The converse direction is similar, using the interior instead of the closure.
 ```
 
 ```{prf:proposition}
@@ -352,11 +386,45 @@ where $\bigtriangleup$ denotes the *symmetric difference* between two sets.
 The sets having the Baire property form a $\sigma$-algebra.
 ```
 
+```{prf:proof}
+To show closure under complement, note that $\Co{A \bigtriangleup B} = \Co{A} \bigtriangleup B$. Therefore,
+if $B = G \bigtriangleup M$ with $G$ open and $M$ meager, we have $\Co{B} = \Co{G} \bigtriangleup M$, and we can use {prf:ref}`lem-BP-closed`.
+
+Now assume $B = \bigcup B_i$, and for each $i$ there exist open $G_i$ and meager $M_i$ such that $B_i = G_i \bigtriangleup M_i$.
+
+Let $G = \bigcup G_i$ and $M = \bigcup M_i$. Then $G$ is open and $M$ is meager (since the meager sets for a $\sigma$-ideal). 
+
+We easily check that
+
+$$
+G \setminus M  \subseteq B \subseteq G \cup M.
+$$
+
+This implies $B \bigtriangleup G \subseteq M$ and hence $B \bigtriangleup G$ is meager. 
+
+Since
+
+$$
+B = G \bigtriangleup (B \bigtriangleup G),
+$$
+
+we conclude that $B$ has the Baire property. 
+```
+
+
 ```{prf:corollary}
 :label: cor-BP-algebra-small
 
 The $\sigma$-algebra of sets having the Baire property is the smallest $\sigma$-algebra containing all open and all meager sets.
 ```
+
+(exercise-BP-gdelta-plus)=
+```{admonition} Exercise
+:class: tip
+
+Show that $B$ has the Baire property if and only if it can be represented as a $G_\delta$ set plus a meager set.
+```
+
 
 As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.
  

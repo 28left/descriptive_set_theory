@@ -269,6 +269,11 @@
    Baire category
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-baire-property">
+   The Baire property
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -312,6 +317,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#baire-category">
    Baire category
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-baire-property">
+   The Baire property
   </a>
  </li>
 </ul>
@@ -585,6 +595,9 @@ Continuing inductively, we obtain a  nested sequence of balls <span class="math 
 <p>Proof. Note that <span class="math notranslate nohighlight">\(\Real\)</span> cannot be meager, by (b). Since <span class="math notranslate nohighlight">\(\Rat\)</span> is meager, <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> cannot be meager either.
 If <span class="math notranslate nohighlight">\(\Rat\)</span> were a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set, it would be the intersection of open, dense sets and hence its complement <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> would be meager.</p>
 </div>
+</div>
+<div class="section" id="the-baire-property">
+<h2>The Baire property<a class="headerlink" href="#the-baire-property" title="Permalink to this headline">¶</a></h2>
 <p>We have seen that the measurable sets are precisely the ones that differ from a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set by a nullset.
 We can introduce a similar concept for Baire category.</p>
 <div class="proof definition admonition" id="def-BP">
@@ -595,21 +608,67 @@ We can introduce a similar concept for Baire category.</p>
 \[
     B \bigtriangleup G = M,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets.</p>
+<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets – <span class="math notranslate nohighlight">\(A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)\)</span>.</p>
 </div>
-</div><div class="proof proposition admonition" id="prop-BP-sigma-algebra">
+</div><div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> is commutative, associative, and satisfies the distributive law</p>
+<div class="math notranslate nohighlight">
+\[
+A \cap (B \bigtriangleup C) = (A \cap B) \bigtriangleup (A \cap C).
+\]</div>
+</div>
+<p>In the above definition, we can replace open sets by closed sets.</p>
+<div class="proof lemma admonition" id="lem-BP-closed">
+<p class="admonition-title"><span class="caption-number">Lemma 7 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(B\)</span> has the Baire property if and only if it can be represented in the form <span class="math notranslate nohighlight">\(B = F \bigtriangleup M\)</span>,  where <span class="math notranslate nohighlight">\(F\)</span> is closed and <span class="math notranslate nohighlight">\(M\)</span> is meager.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(B = G \bigtriangleup M\)</span>, <span class="math notranslate nohighlight">\(G\)</span> open and <span class="math notranslate nohighlight">\(M\)</span> meager.</p>
+<p>Then <span class="math notranslate nohighlight">\(N = \Cl{G} \setminus G\)</span> is nowhere dense and closed. Furthermore, <span class="math notranslate nohighlight">\(Q = M \bigtriangleup N\)</span> is meager (it is the union of two meager sets). We easily verify that <span class="math notranslate nohighlight">\(G = \Cl{G} \bigtriangleup N\)</span>, and therefore</p>
+<div class="math notranslate nohighlight">
+\[
+B = G \bigtriangleup M = (\Cl{G} \bigtriangleup N) \bigtriangleup M = \Cl{G} \bigtriangleup (N \bigtriangleup M) = \Cl{G} \bigtriangleup Q,
+\]</div>
+<p>as desired.</p>
+<p>The converse direction is similar, using the interior instead of the closure.</p>
+</div>
+<div class="proof proposition admonition" id="prop-BP-sigma-algebra">
 <p class="admonition-title"><span class="caption-number">Proposition 18 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>The sets having the Baire property form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
 </div>
-</div><div class="proof corollary admonition" id="cor-BP-algebra-small">
+</div><div class="proof admonition" id="proof">
+<p>Proof. To show closure under complement, note that <span class="math notranslate nohighlight">\(\Co{A \bigtriangleup B} = \Co{A} \bigtriangleup B\)</span>. Therefore,
+if <span class="math notranslate nohighlight">\(B = G \bigtriangleup M\)</span> with <span class="math notranslate nohighlight">\(G\)</span> open and <span class="math notranslate nohighlight">\(M\)</span> meager, we have <span class="math notranslate nohighlight">\(\Co{B} = \Co{G} \bigtriangleup M\)</span>, and we can use <a class="reference internal" href="#lem-BP-closed">Lemma 7</a>.</p>
+<p>Now assume <span class="math notranslate nohighlight">\(B = \bigcup B_i\)</span>, and for each <span class="math notranslate nohighlight">\(i\)</span> there exist open <span class="math notranslate nohighlight">\(G_i\)</span> and meager <span class="math notranslate nohighlight">\(M_i\)</span> such that <span class="math notranslate nohighlight">\(B_i = G_i \bigtriangleup M_i\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(G = \bigcup G_i\)</span> and <span class="math notranslate nohighlight">\(M = \bigcup M_i\)</span>. Then <span class="math notranslate nohighlight">\(G\)</span> is open and <span class="math notranslate nohighlight">\(M\)</span> is meager (since the meager sets for a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal).</p>
+<p>We easily check that</p>
+<div class="math notranslate nohighlight">
+\[
+G \setminus M  \subseteq B \subseteq G \cup M.
+\]</div>
+<p>This implies <span class="math notranslate nohighlight">\(B \bigtriangleup G \subseteq M\)</span> and hence <span class="math notranslate nohighlight">\(B \bigtriangleup G\)</span> is meager.</p>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[
+B = G \bigtriangleup (B \bigtriangleup G),
+\]</div>
+<p>we conclude that <span class="math notranslate nohighlight">\(B\)</span> has the Baire property.</p>
+</div>
+<div class="proof corollary admonition" id="cor-BP-algebra-small">
 <p class="admonition-title"><span class="caption-number">Corollary 6 </span></p>
 <div class="corollary-content section" id="proof-content">
 <p>The <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of sets having the Baire property is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing all open and all meager sets.</p>
 </div>
-</div><p>As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.</p>
+</div><div class="tip admonition" id="exercise-bp-gdelta-plus">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(B\)</span> has the Baire property if and only if it can be represented as a <span class="math notranslate nohighlight">\(G_\delta\)</span> set plus a meager set.</p>
+</div>
+<p>As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.</p>
 <p>We conclude this lecture with a note on the relationship between measure and category. From the results so far it seems that they behave quite similarly. This might lead to the conjecture that maybe they more or less coincide. This is not so, in fact, they are quite orthogonal to each other, as the next result shows.</p>
-<div class="proof proposition admonition" id="proposition-22">
+<div class="proof proposition admonition" id="proposition-23">
 <p class="admonition-title"><span class="caption-number">Proposition 19 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>The real numbers can be partitioned into two subsets, one a Lebesgue nullset and the other one meager.</p>
