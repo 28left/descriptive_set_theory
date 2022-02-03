@@ -585,6 +585,7 @@ Continuing inductively, we obtain a  nested sequence of balls <span class="math 
 \]</div>
 <p>(b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent.</p>
 </div>
+<p>Any topological space that satisfies the three equivalent conditions (a)-(c) is called a <strong>Baire space</strong> (not to be confused with <em>the</em> Baire space <span class="math notranslate nohighlight">\(\Baire\)</span>. The latter is, of course, a Baire space, too).</p>
 <p>As an application, we determine the exact location of <span class="math notranslate nohighlight">\(\Rat\)</span> in the Borel hierarchy of <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
 <div class="proof corollary admonition" id="cor-rationals-not-pi2">
 <p class="admonition-title"><span class="caption-number">Corollary 5 </span></p>
@@ -608,7 +609,7 @@ We can introduce a similar concept for Baire category.</p>
 \[
     B \bigtriangleup G = M,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets – <span class="math notranslate nohighlight">\(A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets: <span class="math notranslate nohighlight">\(A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)\)</span>.</p>
 </div>
 </div><div class="tip admonition">
 <p class="admonition-title">Exercise</p>
@@ -640,7 +641,7 @@ B = G \bigtriangleup M = (\Cl{G} \bigtriangleup N) \bigtriangleup M = \Cl{G} \bi
 <p>The sets having the Baire property form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. To show closure under complement, note that <span class="math notranslate nohighlight">\(\Co{A \bigtriangleup B} = \Co{A} \bigtriangleup B\)</span>. Therefore,
+<p>Proof. To show closure under complement, note that <span class="math notranslate nohighlight">\(\Co{(A \bigtriangleup B)} = \Co{A} \bigtriangleup B\)</span>. Therefore,
 if <span class="math notranslate nohighlight">\(B = G \bigtriangleup M\)</span> with <span class="math notranslate nohighlight">\(G\)</span> open and <span class="math notranslate nohighlight">\(M\)</span> meager, we have <span class="math notranslate nohighlight">\(\Co{B} = \Co{G} \bigtriangleup M\)</span>, and we can use <a class="reference internal" href="#lem-BP-closed">Lemma 7</a>.</p>
 <p>Now assume <span class="math notranslate nohighlight">\(B = \bigcup B_i\)</span>, and for each <span class="math notranslate nohighlight">\(i\)</span> there exist open <span class="math notranslate nohighlight">\(G_i\)</span> and meager <span class="math notranslate nohighlight">\(M_i\)</span> such that <span class="math notranslate nohighlight">\(B_i = G_i \bigtriangleup M_i\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(G = \bigcup G_i\)</span> and <span class="math notranslate nohighlight">\(M = \bigcup M_i\)</span>. Then <span class="math notranslate nohighlight">\(G\)</span> is open and <span class="math notranslate nohighlight">\(M\)</span> is meager (since the meager sets for a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal).</p>

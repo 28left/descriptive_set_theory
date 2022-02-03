@@ -318,6 +318,8 @@ $$
 (b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent. 
 ```
 
+Any topological space that satisfies the three equivalent conditions (a)-(c) is called a **Baire space** (not to be confused with *the* Baire space $\Baire$. The latter is, of course, a Baire space, too).
+
 As an application, we determine the exact location of $\Rat$ in the Borel hierarchy of $\Real$.
 
 ```{prf:corollary}
@@ -346,7 +348,7 @@ $$
     B \bigtriangleup G = M,
 $$
 
-where $\bigtriangleup$ denotes the *symmetric difference* between two sets -- $A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)$.
+where $\bigtriangleup$ denotes the *symmetric difference* between two sets: $A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)$.
 ```
 
 ```{admonition} Exercise
@@ -387,7 +389,7 @@ The sets having the Baire property form a $\sigma$-algebra.
 ```
 
 ```{prf:proof}
-To show closure under complement, note that $\Co{A \bigtriangleup B} = \Co{A} \bigtriangleup B$. Therefore,
+To show closure under complement, note that $\Co{(A \bigtriangleup B)} = \Co{A} \bigtriangleup B$. Therefore,
 if $B = G \bigtriangleup M$ with $G$ open and $M$ meager, we have $\Co{B} = \Co{G} \bigtriangleup M$, and we can use {prf:ref}`lem-BP-closed`.
 
 Now assume $B = \bigcup B_i$, and for each $i$ there exist open $G_i$ and meager $M_i$ such that $B_i = G_i \bigtriangleup M_i$.

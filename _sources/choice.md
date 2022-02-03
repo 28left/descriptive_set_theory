@@ -116,7 +116,7 @@ The **Axiom of Countable Choice**:
 
 > **(AC$_\omega$)** &nbsp;&nbsp;&nbsp; Every *countable* family $\mathcal{X}$ of non-empty sets has a choice-function.
 
-Stronger than Countable Choice, but still weaker than the full Axiom of Choice is  **Axiom of Dependent Choices**:
+Stronger than Countable Choice, but still weaker than the full Axiom of Choice is  **Axiom of Dependent Choice**:
 
 > **(DC)** &nbsp;&nbsp;&nbsp; If $E$ is a binary relation on a non-empty set $A$, and if for every $a \in A$ there exists $b \in A$ such that $a \: E\: b$, then there exists a function $f:\Nat \to A$ such that for all $n \in \Nat$, $f(n) \: E \: f(n+1)$.
 
