@@ -138,6 +138,7 @@ $$
 \alpha \mapsto \sum_{i = 0}^\infty \frac{2\alpha_i}{3^{i+1}},
 $$
 
+(fact-paths-as-reals)=
 $\Cant$ is homeomorphic to the middle-third Cantor set in $\Real$, whereas the **continued fraction** mapping
 
 $$
