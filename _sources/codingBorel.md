@@ -229,7 +229,7 @@ is a computable $\bPi^0_1$ code for $\Co{A}$. Then $(3,\gamma$) is a $\bSigma^0_
 
 Generally, if $A$ is $\Pi^0_n$ ($\Sigma^0_n$) with a computable $\bPi^0_n$ ($\bSigma^0_n$) code $\gamma$, then $(3,\gamma)$ is a computable $\bSigma^0_n$ ($\bPi^0_n$) code for $\Co{A}$.
 
-Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P.
+Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P$.
 
 By inductive hypothesis, $P$ has a computable $\bPi^0_n$ code $\gamma$.
 If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus, it suffices to show that we can uniformly obtain codes for $P_m$. This is the subject of the following Lemma.
@@ -237,7 +237,7 @@ If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus
 ```{prf:lemma}
 :label: lem-Borel-codes-shift
 
-If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a code for 
+If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a $\bPi^0_n$ code for 
 
 $$
 B_m = \{ \beta\colon (m,\beta) \in B\}
@@ -250,7 +250,7 @@ The case $n=1$ is a simple, effective manipulation of trees. Then use induction.
 
 ($\Leftarrow$) We proceed by induction on the complexity of $\gamma$, where $\gamma$ is a $\bSigma^0_n$ or $\bPi^0_n$ code.
 
-If $\rho(T_\gamma) = 1$, then $\gamma$ must be of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
+If $\gamma$ is of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
 
 $$
 \alpha \in [T] \iff \forall n \: \alpha\Rest{n} \in T.
