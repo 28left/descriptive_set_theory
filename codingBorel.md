@@ -229,7 +229,7 @@ is a computable $\bPi^0_1$ code for $\Co{A}$. Then $(3,\gamma$) is a $\bSigma^0_
 
 Generally, if $A$ is $\Pi^0_n$ ($\Sigma^0_n$) with a computable $\bPi^0_n$ ($\bSigma^0_n$) code $\gamma$, then $(3,\gamma)$ is a computable $\bSigma^0_n$ ($\bPi^0_n$) code for $\Co{A}$.
 
-Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P.
+Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P$.
 
 By inductive hypothesis, $P$ has a computable $\bPi^0_n$ code $\gamma$.
 If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus, it suffices to show that we can uniformly obtain codes for $P_m$. This is the subject of the following Lemma.
@@ -237,7 +237,7 @@ If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus
 ```{prf:lemma}
 :label: lem-Borel-codes-shift
 
-If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a code for 
+If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a $\bPi^0_n$ code for 
 
 $$
 B_m = \{ \beta\colon (m,\beta) \in B\}
@@ -250,7 +250,7 @@ The case $n=1$ is a simple, effective manipulation of trees. Then use induction.
 
 ($\Leftarrow$) We proceed by induction on the complexity of $\gamma$, where $\gamma$ is a $\bSigma^0_n$ or $\bPi^0_n$ code.
 
-If $\rho(T_\gamma) = 1$, then $\gamma$ must be of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
+If $\gamma$ is of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
 
 $$
 \alpha \in [T] \iff \forall n \: \alpha\Rest{n} \in T.
@@ -297,7 +297,7 @@ Using relativized computations via oracles, we can define a relativized version 
 
 ```{prf:definition}
 Let $\gamma \in \Baire$. A set $A \subseteq \Baire$ is 
-- **(a)** $\Sigma^0_1(\gamma)$ if there exists a predicate $R(x)$ \emph{recursive} in $\gamma$ such that
+- **(a)** $\Sigma^0_1(\gamma)$ if there exists a predicate $R(x)$ computable in $\gamma$ such that
 \begin{equation*}
 \alpha \in A \iff \exists n \: R(\alpha\Rest{n}),
 \end{equation*}
@@ -335,7 +335,7 @@ The argument for $\bPi^0_n$ is completely analogous.
 
 One of the fundamental insights of computability theory is the close relation between computability and definability in arithmetic. The recursively enumerable subsets of $\Nat$ are precisely the sets $\Sigma_1$-definable over the standard model of arithmetic, $(\Nat,+,\cdot,0,1)$, and **Post's Theorem** uses this result to establish a rigid connection between levels of arithmetical complexity and computational complexity.
 
-As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of $\Baire$, that is, with \emph{sets} of functions on $\Nat$ rather than just functions on $\Nat$, we will work in the framework of **second order arithmetic**.
+As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of $\Baire$, that is, with sets of functions on $\Nat$ rather than just functions on $\Nat$, we will work in the framework of **second order arithmetic**.
 
 The 
 **language of second order arithmetic** has two kinds of variables: **number variables** $x,y,z, \dots$ (and sometimes $k,l,m,n$ if they are not used as metavariables), to be interpreted as elements of $\Nat$, and **function variables** $\alpha,\beta,\gamma,\dots$, intended to range over functions from $\Nat$ into $\Nat$, i.e. elements of Baire space, i.e. reals. The non-logical symbols are the binary function symbols $+,\cdot$, the binary relation symbol $<$, the **application function** symbol $\Ap$, and the constants $\underline{0}, \underline{1}$.  **Numerical terms** are defined in usual way using $+,\cdot,\underline{0},\underline{1}$, and involve only number variables. **Atomic formulas** are $t_1 = t_2$, $t_1 < t_2$, and $\Ap(\alpha,t_1) = t_2$, where $t_1, t_2$ are numerical terms.  
