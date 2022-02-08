@@ -19,6 +19,7 @@
 \newcommand{\Rest}[1]{\mid_{#1}}
 \newcommand{\Sle}{\subset}
 \newcommand{\Sleq}{\subseteq}
+\DeclareMathOperator{\Ap}{ap}
 ```
 
 In this chapter, we take a further look at Borel subsets of $\Baire$. As is common in this setting, we call the elements of $\Baire$ **reals**. This is motivated by the fact that, via the continued fration expansion, $\Baire$ [is homeomorphic to the set of irrational real numbers](fact-paths-as-reals). Suppose $U \subseteq \Baire$ is open. Then there exists a set $W \subseteq \Nstr$ such that
@@ -92,17 +93,6 @@ $$
 \Op{Bc} = \{\gamma \in \Baire \colon \gamma \text{ is a Borel code}\}. 
 $$
 
-The following is a straightforward induction.
-
-```{prf:proposition}
-:label: prop-Borel-codes
-
-Every $\bPi^0_n$ ($\bSigma^0_n$) set has a $\bPi^0_n$ ($bSigma^0_n) Borel code.
-```
-
-The proposition actually holds for *all* Borel sets, which can be proved by **transfinite induction**. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for $\pPi^0_n$ ($\pSigma^0_n$) sets. In the next chapter, we will study the *full* Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets. 
-
-
 Note that the definition of Borel code actually assigns codes to **representations of sets**. A Borel set can have (and has) multiple codes, just as it has multiple representations. We can, for example, represent an open set by different sets $W$ of initial segments. 
 
 Moreover, every $\bSigma^0_1$ set is also $\bSigma^0_2$, and thus a set has codes which reflect the ``more complicated'' definition of the $\bSigma^0_1$ set as a union of closed sets. It is useful to keep this distinction between a Borel set and its Borel representation in mind.
@@ -111,7 +101,7 @@ Moreover, every $\bSigma^0_1$ set is also $\bSigma^0_2$, and thus a set has code
 ## The tree structure of Borel codes
 
 Each Borel code induces a tree structure that reflects how the corresponding Borel set is built up from closed sets.
-The terminal nodes are given by codes for closed sets (the ones starting with "$2$"), since they are the ``building blocks'' of the Borel sets and hence are not extend/split further. A "$3$-code" represents a node  with just one immediate successor, while a "$4$-code" corresponds to a node with infinitely many immediate successors.
+The terminal nodes are given by codes for closed sets (the ones starting with "$2$"), since they are the ``building blocks'' of the Borel sets and hence are not extend/split further. A "$3$-code" represents a node  with just one immediate successor, while a "$4$-code" corresponds to a node with infinitely many immediate successors. Given a Borel code $\gamma$, we **denote the corresponding tree by $T_\gamma$**.
 
 The tree of a Borel code defined this way **is always well-founded** (i.e. has no infinite path), since a Borel code is defined via a well-founded recursion. The rank of the tree is a countable ordinal. 
 
@@ -120,8 +110,18 @@ How hard is it to decide whether a given real is a Borel code? We will see later
 The tree structure of a code also lets us assign levels to a Borel code similar to the levels of the Borel hierarchy:
 
 - Trees with a single node $(2)$ correspond to **$\bPi^0_1$ codes**. 
-- If $T$ is a  a $\bPi^0_n$ ($\bSigma^0_n$) code, then the tree with new top node $(3)$ represents a $\bSigma^0_n$ ($\bPi^0_n$) code. 
+- If $T$ is a $\bPi^0_n$ ($\bSigma^0_n$) code, then the tree with new top node $(3)$ represents a $\bSigma^0_n$ ($\bPi^0_n$) code. 
 - And if $T_n$ is a sequence of $\bPi^0_n$ codes, then the tree with new top node $(4)$ and each $T_n$ directly below it corresponds to a **$\bSigma^0_{n+1}$ code**.
+
+The following is a straightforward induction.
+
+```{prf:proposition}
+:label: prop-Borel-codes
+
+Every $\bPi^0_n$ ($\bSigma^0_n$) set has a $\bPi^0_n$ ($\bSigma^0_n$) Borel code, and every $\bPi^0_n$ ($\bSigma^0_n$) code represents a $\bPi^0_n$ ($\bSigma^0_n$) set.
+```
+
+The proposition actually holds for *all* Borel sets, which can be proved by **transfinite induction**. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for $\bPi^0_n$ ($\bSigma^0_n$) sets. In the next chapter, we will study the *full* Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets. 
 
 ## Computing with Borel codes
 
@@ -184,11 +184,11 @@ You may notice some sloppy notation in the third item here, since as written the
 ```{prf:definition} The Lightface Hierarchy
 :label: def-effective-Borel
 A set $A \subseteq \Baire$ is 
-- (lightface) $\Pi^0_1$ if there exists a computable predicate $R(\sigma)$ such that
+- (lightface) $\Sigma^0_1$ if there exists a computable predicate $R(\sigma)$ such that
 \begin{equation*}
-    \alpha \in A \iff \forall k \: R(\alpha\Rest{k}),
+    \alpha \in A \iff \exists k \: R(\alpha\Rest{k}),
 \end{equation*}
-- (lightface) $\Sigma^0_n$ if $\Co{A}$ is $\Pi^0_n$,
+- (lightface) $\Pi^0_n$ if $\Co{A}$ is $\Sigma^0_n$,
 - (lightface) $\Sigma^0_{n+1}$ if there exists a $\Pi^0_n$ set $P$ such that
 \begin{equation*}
     \alpha \in A \iff \exists n \; (n,\alpha) \in P. 
@@ -201,45 +201,201 @@ The following result is at the heart of the effective theory.
 :label: prop-computable-codes 
 Let $A \subseteq \Baire$. Then
 
-> $A$ is (lightface) $\Pi^0_n$ ($\Sigma^0_n$) iff $A$ is (boldface) $\bPi^0_n$ ($\bSigma^0_n$) and has a computable $\bPi^0_n$ ($\bSigma^0_n$) code.
+> $A$ is (lightface) $\Pi^0_n$ ($\Sigma^0_n$) iff $A$ has a computable $\bPi^0_n$ ($\bSigma^0_n$) code.
 ```
 
 ````{prf:proof}
-We proceed by induction on the Borel complexity. 
+($\Rightarrow$) We proceed by induction on the Borel complexity. 
 
-Suppose $A$ is $\Pi^0_1$. Let $R$ be computable such that $A = \{ \alpha \colon \ \: \forall k R(\alpha\Rest{k})\}$. As observed above, if we let $T = \{\sigma \colon \forall \tau \Sleq \sigma R(\tau)\}$, then $T$ is a tree with $[T] = A$. Moreover, since $R$ is computable, so is $T$, and $(1,T)$ is a computable $\Pi^0_1$ code for $A$. (Recall that we identify sets of strings with subsets of $\Nat$, which in turn we identify with the characteristic sequence.)
+Suppose $A$ is $\Sigma^0_1$. Let $R$ be computable such that $A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}$. Define a tree $T$ by letting
 
-Conversely, if $(1,T)$ is a computable $\bPi^0_1$ code for a $\bPi^0_1$ set $A$, then 
+$$
+    T = \{ \sigma \in \Nstr \colon \forall \tau \leq \sigma \: \neg R(\tau)\}.
+$$
+
+We have $\alpha \in A$ if and only if $\alpha \notin [T]$.
+Since $R$ is decidable, $T$ is computable and $\gamma \in \Baire$ given by
+
+$$
+\gamma(n) = 
+	\begin{cases}
+		2 & n = 0, \\
+		1 & n \geq 1 \: \& \: \pi(n-1) \in T,\\
+		0 & n \geq 1 \: \& \: \pi(n-1) \notin T, 
+	\end{cases}
+$$
+
+is a computable $\bPi^0_1$ code for $\Co{A}$. Then $(3,\gamma$) is a $\bSigma^0_1$ code for $A$.
+
+Generally, if $A$ is $\Pi^0_n$ ($\Sigma^0_n$) with a computable $\bPi^0_n$ ($\bSigma^0_n$) code $\gamma$, then $(3,\gamma)$ is a computable $\bSigma^0_n$ ($\bPi^0_n$) code for $\Co{A}$.
+
+Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P.
+
+By inductive hypothesis, $P$ has a computable $\bPi^0_n$ code $\gamma$.
+If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus, it suffices to show that we can uniformly obtain codes for $P_m$. This is the subject of the following Lemma.
+
+```{prf:lemma}
+:label: lem-Borel-codes-shift
+
+If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a code for 
+
+$$
+B_m = \{ \beta\colon (m,\beta) \in B\}
+$$
+```
+
+```{prf:proof}
+The case $n=1$ is a simple, effective manipulation of trees. Then use induction.
+```
+
+($\Leftarrow$) We proceed by induction on the complexity of $\gamma$, where $\gamma$ is a $\bSigma^0_n$ or $\bPi^0_n$ code.
+
+If $\rho(T_\gamma) = 1$, then $\gamma$ must be of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
+
+$$
+\alpha \in [T] \iff \forall n \: \alpha\Rest{n} \in T.
+$$
+
+Since $\gamma$ is assumed to be computable, $T$ is computable, and the relation 
 
 $$
 R(\sigma) :\iff \sigma \in T
 $$
 
-is computable and $\alpha \in A$ if and only if $\forall n \: R(\alpha\Rest{n})$.
+witnesses that $[T]$ is $\Pi^0_1$. 
 
+If $\gamma = (3, \alpha)$ is a $\bSigma^0_n$ ($\bPi^0_n$) code, then $\alpha$ is a $\bPi^0_n$ ($\bSigma^0_n$) code. By inductive hypothesis, the set coded by $\alpha$ is $\Pi^0_n$ ($\Sigma^0_n$), so by definition of the effective hierarchy, $\gamma$ codes a $\Sigma^0_n$ ($\Pi^0_n$) set.
 
-Now assume 
+Finally, assume $\gamma = (4,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $\alpha_m$ is a $\bPi^0_n$ code for a set $A_m$.
 
+```{prf:lemma}
+:label: lem-Borel-codes-inverse-shift
 
-If $A$ is $\bSigma^0_1$ with a computable, $\bSigma^0_1$-code $\gamma$, then $\gamma$ is of the form $(2,\gamma')$, $\gamma'$ coding a representation of $A$ as a union of basic open cylinders. Then
-\[ \alpha \in A \Iff \exists n \: [\gamma'(\alpha\Rest{n}) = 1]. \]
-Hence we can set $R(\sigma) = \gamma'(\sigma)$.
+If $(\alpha_m)$ is a uniformly computable sequence of $\bPi^0_n$ codes for sets $A_m$, respectively, then there exists a $\bPi^0_n$ code $\alpha$ for the set
 
-\medskip If $A$ is $\Pi^0_n$, then $\Co{A}$ is $\Sigma^0_n$. By induction hypothesis, $\Co{A}$ has a computable $\bSigma^0_n$-code $\gamma$. Then $(3,\gamma)$ is a computable $\bPi^0_n$-code for $A$.
+$$
+    A = \{(m,\beta) \colon \beta \in A_m\}
+$$
+```
+```{prf:proof}
+Similar to {prf:ref}`lem-Borel-codes-shift`
+```
 
-Conversely, if $\gamma = (3,\gamma')$ is a computable $\bPi^0_n$-code for a $\bPi^0_n$ set $A$, then $\gamma'$ is a computable $\bSigma^0_n$-code for the $\bSigma^0_n$ set $\Co{A}$. By induction hypothesis, $\Co{A}$ is $\Sigma^0_n$ and hence $A$ is $\Pi^0_n$.
+By inductive hypothesis, the set $A$ as in the Lemma is $\Pi^0_n$ and we have
 
-\medskip Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that
-\[ \alpha \in A \Iff \exists n \; [(n,\alpha) \in P]. \]
-By induction hypothesis, there exists $P$ is $\bPi^0_n$ with a computable $\bPi^0_n$-code $\gamma = (3,4, \dots)$. Let
-\[ P_m = \{ \beta \colon (m,\beta) \in P \} = P \cap \Cyl{\Tup{m}}. \]
-Then each $P_m$ is $\bPi^0_n$, since the Borel levels are closed under finite intersections, and we have
-\[ A = \bigcup_m P_m. \]
-Therefore, $A$ is $\bSigma^0_{n+1}$. Furthermore, each $P_m$ has a computable $\bPi^0_n$-code $\gamma_m$, which can be computed uniformly in $m$, and thus $\gamma^* = (4,(\gamma_m(n))_{m,n})$ is a computable, $\bSigma^0_{n+1}$-optimal code for $A$.
+$$
+    \beta \in B \iff \exists m (m, \beta )\in A,
+$$
 
-For the converse, let $A$ be $\bSigma^0_{n+1}$ with a computable $\bSigma^0_{n+1}$-code $\gamma = (4,\gamma')$. Then each of the columns of $\gamma'$ is a computable $\bPi^0_n$-code for a $\bPi^0_n$ set $P_m$. Let $P'_m = \{ (m,\alpha) \colon \alpha \in P_m \}$. $P'_m$ is $\bPi^0_n$, too. This can be seen as follows. $\Nat \times \Baire$ is homeomorphic to $\Baire$. $\{m\}\times P_m$ is $\Pi^0_n$ in $\Nat \times \Baire$, by replacing each set $S$ in the definition of $P_m$ by $\{m\}\times S$ (note that $\{m\}$ is clopen in $\Nat$). Borel complexities are preserved under homeomorphic images. (We will discuss the closure properties of Borel sets in detail later.) 
-
-A similar argument shows that $P^*_m = \{(k,\alpha) \colon k\neq m \text{ or } (k=m \: \& \: \alpha\in P_m)\}$ is $\bPi^0_n$ for each $n$. Now let $P^* = \bigcup_m P^*_m$. Then $P^*$ is $\bPi^0_n$, and we can effectively and uniformly in $m$ compute an $\bPi^0_n$-code for it. By induction hypothesis, $P^*$ is $\Pi^0_n$, and we have
-\[ \alpha \in A \Iff \exists m \; (m,\alpha) \in P^*, \]
-as desired. 
+which implies $B$ is $\Sigma^0_{n+1}$.
 ````
+
+
+## Relativization
+
+Using relativized computations via oracles, we can define a relativized version of the effective Borel hierarchy. This way we can capture *all* Borel sets of finite order, not just the ones with computable codes.
+
+```{prf:definition}
+Let $\gamma \in \Baire$. A set $A \subseteq \Baire$ is 
+- **(a)** $\Sigma^0_1(\gamma)$ if there exists a predicate $R(x)$ \emph{recursive} in $\gamma$ such that
+\begin{equation*}
+\alpha \in A \iff \exists n \: R(\alpha\Rest{n}),
+\end{equation*}
+- **(b)** $\Pi^0_n(\gamma)$ if $\Co{A}$ is $\Sigma^0_n(\gamma)$,
+- **(c)** $\Sigma^0_{n+1}(\gamma)$ if there exists a $\Pi^0_n(\gamma)$ set $P$ such that
+\begin{equation*}
+\alpha \in A \iff \exists n \;[(n,\alpha) \in P].
+\end{equation*}
+```
+
+A straightforward relativization gives the following analogue of {prf:ref}`prop-computable-codes`.
+
+```{prf:proposition}
+:label: prop-relative-codes 
+Let $A \subseteq \Baire$ and $\gamma \in \Baire$. Then
+
+> $A$ is $\Sigma^0_n(\gamma)$ ($\Pi^0_n(\gamma)$) if and only if $A$ has a $\bSigma^0_n$ ($\bPi^0_n$) code computable in $\gamma$. 
+```
+
+We can now present the **fundamental theorem of effective descriptive set theory**.
+
+```{prf:theorem}
+:label: thm-fundamental 
+
+A set $A \subseteq \Baire$ is $\bSigma^0_n$ ($\bPi^0_n$) if and only if it is $\Sigma^0_n(\gamma)$ $(\Pi^0_n(\gamma))$ for some $\gamma \in \Baire$. 
+```
+
+```{prf:proof}
+If $A$ is $\bSigma^0_n$, then by {prf:ref}`prop-Borel-codes` it has a $\bSigma^0_n$-code $\gamma$, and by {prf:ref}`prop-relative-codes`, $A$ is $\Sigma^0_n(\gamma)$. The other direction follows immediately from {prf:ref}`prop-relative-codes`.
+
+The argument for $\bPi^0_n$ is completely analogous. 
+```
+
+## Definability in Arithmetic
+
+One of the fundamental insights of computability theory is the close relation between computability and definability in arithmetic. The recursively enumerable subsets of $\Nat$ are precisely the sets $\Sigma_1$-definable over the standard model of arithmetic, $(\Nat,+,\cdot,0,1)$, and **Post's Theorem** uses this result to establish a rigid connection between levels of arithmetical complexity and computational complexity.
+
+As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of $\Baire$, that is, with \emph{sets} of functions on $\Nat$ rather than just functions on $\Nat$, we will work in the framework of **second order arithmetic**.
+
+The 
+**language of second order arithmetic** has two kinds of variables: **number variables** $x,y,z, \dots$ (and sometimes $k,l,m,n$ if they are not used as metavariables), to be interpreted as elements of $\Nat$, and **function variables** $\alpha,\beta,\gamma,\dots$, intended to range over functions from $\Nat$ into $\Nat$, i.e. elements of Baire space, i.e. reals. The non-logical symbols are the binary function symbols $+,\cdot$, the binary relation symbol $<$, the **application function** symbol $\Ap$, and the constants $\underline{0}, \underline{1}$.  **Numerical terms** are defined in usual way using $+,\cdot,\underline{0},\underline{1}$, and involve only number variables. **Atomic formulas** are $t_1 = t_2$, $t_1 < t_2$, and $\Ap(\alpha,t_1) = t_2$, where $t_1, t_2$ are numerical terms.  
+
+The 
+**standard model of second order arithmetic** is the structure
+
+$$
+\mathcal{A}^2 = (\Nat, \Baire, \Ap, +, \cdot, <, 0, 1),
+$$
+
+where $+$ and $\cdot$ are the usual operations on natural numbers, $<$ is the standard ordering of $\Nat$. The two domains are connected by the binary operation $\Ap: \Baire \times \Nat \to \Nat$, defined as
+
+$$
+\Ap(\alpha,x) = \alpha(x).
+$$
+
+A relation $R \subseteq \Nat^m \times (\Baire)^n$ is **definable over $\mathcal{A}^2$** if there exists a formula $\varphi$ of second order arithmetic such that for any $x_1, \dots, x_m \in \Nat$ and $\alpha_1, \dots \alpha_n \in \Baire$,
+
+$$
+R(x_1, \dots, x_m, \alpha_1, \dots \alpha_n) \quad \text{iff} \quad \mathcal{A}^2 \models \varphi[x_1, \dots, x_m, \alpha_1, \dots \alpha_n].
+$$
+
+```{prf:theorem}
+:label: lightface-definability
+A set $A \subseteq \Baire$ is $\Sigma^0_n$ $(\Pi^0_n)$ if and only if it is definable over $\mathcal{A}^2$ by a $\Sigma^0_n$ $(\Pi^0_n)$ formula. 
+```
+
+Here, $\Sigma^0_n$ $(\Pi^0_n)$ formula means that we can **only quantify over number variables**, as opposed to $\Sigma^1_n$ $(\Pi^1_n)$ formulas, where we can also quantify over function variables.
+
+The proof is a straightforward extension of the standard argument for subsets of $\Nat$.
+
+To formulate the fundamental {prf:ref}`thm-fundamental` in terms of definability, we need the concept of **relative definability**. We add a new constant function symbol $\underline{\gamma}$ to the language. Given a function $\gamma$, a relation is 
+**definable in $\gamma$** if it is definable over the structure
+
+$$
+\mathcal{A}^2(\gamma) = (\Nat, \Baire, \Ap, +, \cdot, <, 0, 1, \gamma),
+$$
+
+where the symbol $\underline{\gamma}$ is interpreted as $\gamma$.
+
+Then the following holds.
+
+```{prf:theorem} 
+:label: thm-Borel-arith
+
+A set $A \subseteq \Baire$ is $\bSigma^0_n$ $(\bPi^0_n)$ if and only if it is definable in $\gamma$ by a $\Sigma^0_n$ $(\Pi^0_n)$ formula, for some $\gamma \in \Baire$. 
+```
+
+This theorem facilitates the description of Borel sets considerably. As an example, consider the set
+
+$$
+	A = \{ \alpha \colon \text{$\alpha$ eventually constant} \}.
+$$
+
+We have
+
+$$
+	\alpha \in A \iff \exists n \forall m [ m \geq n \: \Rightarrow \: \alpha(n) = \alpha(m) ]
+$$
+
+The right hand side is a $\Sigma^0_2$-formula. Hence the set $A$ is $\Sigma^0_2$.
+
