@@ -141,6 +141,11 @@
    The Axiom of Choice
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="codingBorel.html">
+   Coding Borel Sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -250,8 +255,10 @@
    <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
    <a href="#cap-def-BP"><strong>def-BP</strong></a> | 
    <a href="#cap-def-Borel"><strong>def-Borel</strong></a> | 
+   <a href="#cap-def-Borel-codes"><strong>def-Borel-codes</strong></a> | 
    <a href="#cap-def-Borel-finite"><strong>def-Borel-finite</strong></a> | 
    <a href="#cap-def-Lebesgue"><strong>def-Lebesgue</strong></a> | 
+   <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
    <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
    <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
    <a href="#cap-def-meager"><strong>def-meager</strong></a> | 
@@ -266,18 +273,24 @@
    <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
    <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
    <a href="#cap-definition-3"><strong>definition-3</strong></a> | 
+   <a href="#cap-definition-6"><strong>definition-6</strong></a> | 
    <a href="#cap-lem-BP-closed"><strong>lem-BP-closed</strong></a> | 
+   <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
+   <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
    <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
    <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
    <a href="#cap-lemma-Kuratowski-extension"><strong>lemma-Kuratowski-extension</strong></a> | 
+   <a href="#cap-lightface-definability"><strong>lightface-definability</strong></a> | 
    <a href="#cap-measurable-diff-Borel"><strong>measurable-diff-Borel</strong></a> | 
    <a href="#cap-prop-BP-sigma-algebra"><strong>prop-BP-sigma-algebra</strong></a> | 
    <a href="#cap-prop-Bernstein-BP"><strong>prop-Bernstein-BP</strong></a> | 
+   <a href="#cap-prop-Borel-codes"><strong>prop-Borel-codes</strong></a> | 
    <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
    <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
    <a href="#cap-prop-interval-measurable"><strong>prop-interval-measurable</strong></a> | 
    <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
@@ -288,6 +301,7 @@
    <a href="#cap-prop-open-subset-Polish"><strong>prop-open-subset-Polish</strong></a> | 
    <a href="#cap-prop-outer-meas-interval"><strong>prop-outer-meas-interval</strong></a> | 
    <a href="#cap-prop-product-continuous"><strong>prop-product-continuous</strong></a> | 
+   <a href="#cap-prop-relative-codes"><strong>prop-relative-codes</strong></a> | 
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
    <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
@@ -299,12 +313,14 @@
    <a href="#cap-theorem-7"><strong>theorem-7</strong></a> | 
    <a href="#cap-thm-Baire-category"><strong>thm-Baire-category</strong></a> | 
    <a href="#cap-thm-Bernstein"><strong>thm-Bernstein</strong></a> | 
+   <a href="#cap-thm-Borel-arith"><strong>thm-Borel-arith</strong></a> | 
    <a href="#cap-thm-Borel-clopen"><strong>thm-Borel-clopen</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
+   <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
    <a href="#cap-thm-polish_cont_image_Baire"><strong>thm-polish_cont_image_Baire</strong></a>
    </div>
 
@@ -390,6 +406,14 @@
        <a href="Borel.html#def-Borel"><code class="xref">def-Borel</code></a> <em>(Borel)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Borel-codes"><td></td><td>
+       <strong>def-Borel-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#def-Borel-codes"><code class="xref">def-Borel-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-Borel-finite"><td></td><td>
        <strong>def-Borel-finite</strong></td><td></td></tr>
      <tr>
@@ -404,6 +428,14 @@
        <td></td>
        <td>
        <a href="measure.html#def-Lebesgue"><code class="xref">def-Lebesgue</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-effective-Borel"><td></td><td>
+       <strong>def-effective-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#def-effective-Borel"><code class="xref">def-effective-Borel</code></a> <em>(codingBorel)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-filter"><td></td><td>
@@ -518,12 +550,36 @@
        <a href="trees.html#definition-3"><code class="xref">definition-3</code></a> <em>(trees)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-6"><td></td><td>
+       <strong>definition-6</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#definition-6"><code class="xref">definition-6</code></a> <em>(codingBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-BP-closed"><td></td><td>
        <strong>lem-BP-closed</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="measure.html#lem-BP-closed"><code class="xref">lem-BP-closed</code></a> <em>(measure)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Borel-codes-inverse-shift"><td></td><td>
+       <strong>lem-Borel-codes-inverse-shift</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lem-Borel-codes-inverse-shift"><code class="xref">lem-Borel-codes-inverse-shift</code></a> <em>(codingBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Borel-codes-shift"><td></td><td>
+       <strong>lem-Borel-codes-shift</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lem-Borel-codes-shift"><code class="xref">lem-Borel-codes-shift</code></a> <em>(codingBorel)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
@@ -566,6 +622,14 @@
        <a href="subsets_Polish.html#lemma-Kuratowski-extension"><code class="xref">lemma-Kuratowski-extension</code></a> <em>(subsets_Polish)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lightface-definability"><td></td><td>
+       <strong>lightface-definability</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lightface-definability"><code class="xref">lightface-definability</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-measurable-diff-Borel"><td></td><td>
        <strong>measurable-diff-Borel</strong></td><td></td></tr>
      <tr>
@@ -590,6 +654,14 @@
        <a href="choice.html#prop-Bernstein-BP"><code class="xref">prop-Bernstein-BP</code></a> <em>(choice)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-codes"><td></td><td>
+       <strong>prop-Borel-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-Borel-codes"><code class="xref">prop-Borel-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-KB-wellorder"><td></td><td>
        <strong>prop-KB-wellorder</strong></td><td></td></tr>
      <tr>
@@ -612,6 +684,14 @@
        <td></td>
        <td>
        <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-computable-codes"><td></td><td>
+       <strong>prop-computable-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-computable-codes"><code class="xref">prop-computable-codes</code></a> <em>(codingBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-intersection-Polish"><td></td><td>
@@ -692,6 +772,14 @@
        <td></td>
        <td>
        <a href="trees.html#prop-product-continuous"><code class="xref">prop-product-continuous</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-relative-codes"><td></td><td>
+       <strong>prop-relative-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-relative-codes"><code class="xref">prop-relative-codes</code></a> <em>(codingBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-topological-product"><td></td><td>
@@ -782,6 +870,14 @@
        <a href="choice.html#thm-Bernstein"><code class="xref">thm-Bernstein</code></a> <em>(choice)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-arith"><td></td><td>
+       <strong>thm-Borel-arith</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#thm-Borel-arith"><code class="xref">thm-Borel-arith</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Borel-clopen"><td></td><td>
        <strong>thm-Borel-clopen</strong></td><td></td></tr>
      <tr>
@@ -828,6 +924,14 @@
        <td></td>
        <td>
        <a href="perfect_subsets_R.html#thm-card-perfect-sets"><code class="xref">thm-card-perfect-sets</code></a> <em>(perfect_subsets_R)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-fundamental"><td></td><td>
+       <strong>thm-fundamental</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#thm-fundamental"><code class="xref">thm-fundamental</code></a> <em>(codingBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-polish_cont_image_Baire"><td></td><td>
