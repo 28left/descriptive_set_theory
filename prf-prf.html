@@ -146,6 +146,11 @@
    Coding Borel Sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="structureBorel.html">
+   The Structure of Borel Sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -249,6 +254,7 @@
    <a href="#cap-closed-is-Gdelta"><strong>closed-is-Gdelta</strong></a> | 
    <a href="#cap-cor-BP-algebra-small"><strong>cor-BP-algebra-small</strong></a> | 
    <a href="#cap-cor-Borel-measurable"><strong>cor-Borel-measurable</strong></a> | 
+   <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
    <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
    <a href="#cap-cor-rationals-not-pi2"><strong>cor-rationals-not-pi2</strong></a> | 
    <a href="#cap-cor-weak-Borel-hierarchy-1"><strong>cor-weak-Borel-hierarchy-1</strong></a> | 
@@ -268,7 +274,9 @@
    <a href="#cap-def-outer-measure"><strong>def-outer-measure</strong></a> | 
    <a href="#cap-def-perfect"><strong>def-perfect</strong></a> | 
    <a href="#cap-def-polish"><strong>def-polish</strong></a> | 
+   <a href="#cap-def-transfinite-Borel"><strong>def-transfinite-Borel</strong></a> | 
    <a href="#cap-def-ultrafilter"><strong>def-ultrafilter</strong></a> | 
+   <a href="#cap-def-universal"><strong>def-universal</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
    <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
    <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
@@ -286,7 +294,12 @@
    <a href="#cap-measurable-diff-Borel"><strong>measurable-diff-Borel</strong></a> | 
    <a href="#cap-prop-BP-sigma-algebra"><strong>prop-BP-sigma-algebra</strong></a> | 
    <a href="#cap-prop-Bernstein-BP"><strong>prop-Bernstein-BP</strong></a> | 
+   <a href="#cap-prop-Borel-closure-bounded-projection"><strong>prop-Borel-closure-bounded-projection</strong></a> | 
+   <a href="#cap-prop-Borel-closure-finite"><strong>prop-Borel-closure-finite</strong></a> | 
    <a href="#cap-prop-Borel-codes"><strong>prop-Borel-codes</strong></a> | 
+   <a href="#cap-prop-Borel-omega1"><strong>prop-Borel-omega1</strong></a> | 
+   <a href="#cap-prop-Borel-universal"><strong>prop-Borel-universal</strong></a> | 
+   <a href="#cap-prop-Borel_closure-preimages"><strong>prop-Borel_closure-preimages</strong></a> | 
    <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
@@ -296,6 +309,7 @@
    <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
    <a href="#cap-prop-measurable-sets"><strong>prop-measurable-sets</strong></a> | 
    <a href="#cap-prop-measurable-sigma-algebra"><strong>prop-measurable-sigma-algebra</strong></a> | 
+   <a href="#cap-prop-nonfinite-Borel"><strong>prop-nonfinite-Borel</strong></a> | 
    <a href="#cap-prop-null-sigmaideal"><strong>prop-null-sigmaideal</strong></a> | 
    <a href="#cap-prop-nullsets-measurable"><strong>prop-nullsets-measurable</strong></a> | 
    <a href="#cap-prop-open-subset-Polish"><strong>prop-open-subset-Polish</strong></a> | 
@@ -304,7 +318,9 @@
    <a href="#cap-prop-relative-codes"><strong>prop-relative-codes</strong></a> | 
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
+   <a href="#cap-prop-universal-general"><strong>prop-universal-general</strong></a> | 
    <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
+   <a href="#cap-proposition-0"><strong>proposition-0</strong></a> | 
    <a href="#cap-proposition-23"><strong>proposition-23</strong></a> | 
    <a href="#cap-subsets-Polish"><strong>subsets-Polish</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
@@ -315,6 +331,7 @@
    <a href="#cap-thm-Bernstein"><strong>thm-Bernstein</strong></a> | 
    <a href="#cap-thm-Borel-arith"><strong>thm-Borel-arith</strong></a> | 
    <a href="#cap-thm-Borel-clopen"><strong>thm-Borel-clopen</strong></a> | 
+   <a href="#cap-thm-Borel-proper"><strong>thm-Borel-proper</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
@@ -356,6 +373,14 @@
        <td></td>
        <td>
        <a href="measure.html#cor-Borel-measurable"><code class="xref">cor-Borel-measurable</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-hier-proper"><td></td><td>
+       <strong>cor-hier-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#cor-hier-proper"><code class="xref">cor-hier-proper</code></a> <em>(structureBorel)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-perfect-Borel"><td></td><td>
@@ -510,12 +535,28 @@
        <a href="polish.html#def-polish"><code class="xref">def-polish</code></a> <em>(polish)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-transfinite-Borel"><td></td><td>
+       <strong>def-transfinite-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#def-transfinite-Borel"><code class="xref">def-transfinite-Borel</code></a> <em>(structureBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-ultrafilter"><td></td><td>
        <strong>def-ultrafilter</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="measure.html#def-ultrafilter"><code class="xref">def-ultrafilter</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-universal"><td></td><td>
+       <strong>def-universal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#def-universal"><code class="xref">def-universal</code></a> <em>(structureBorel)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-definition-0"><td></td><td>
@@ -654,12 +695,52 @@
        <a href="choice.html#prop-Bernstein-BP"><code class="xref">prop-Bernstein-BP</code></a> <em>(choice)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-closure-bounded-projection"><td></td><td>
+       <strong>prop-Borel-closure-bounded-projection</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-closure-bounded-projection"><code class="xref">prop-Borel-closure-bounded-projection</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-closure-finite"><td></td><td>
+       <strong>prop-Borel-closure-finite</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-closure-finite"><code class="xref">prop-Borel-closure-finite</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-Borel-codes"><td></td><td>
        <strong>prop-Borel-codes</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="codingBorel.html#prop-Borel-codes"><code class="xref">prop-Borel-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-omega1"><td></td><td>
+       <strong>prop-Borel-omega1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-omega1"><code class="xref">prop-Borel-omega1</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-universal"><td></td><td>
+       <strong>prop-Borel-universal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-universal"><code class="xref">prop-Borel-universal</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel_closure-preimages"><td></td><td>
+       <strong>prop-Borel_closure-preimages</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel_closure-preimages"><code class="xref">prop-Borel_closure-preimages</code></a> <em>(structureBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-KB-wellorder"><td></td><td>
@@ -734,6 +815,14 @@
        <a href="measure.html#prop-measurable-sigma-algebra"><code class="xref">prop-measurable-sigma-algebra</code></a> <em>(measure)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-nonfinite-Borel"><td></td><td>
+       <strong>prop-nonfinite-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-nonfinite-Borel"><code class="xref">prop-nonfinite-Borel</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-null-sigmaideal"><td></td><td>
        <strong>prop-null-sigmaideal</strong></td><td></td></tr>
      <tr>
@@ -798,12 +887,28 @@
        <a href="trees.html#prop-trees-closed"><code class="xref">prop-trees-closed</code></a> <em>(trees)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-universal-general"><td></td><td>
+       <strong>prop-universal-general</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-universal-general"><code class="xref">prop-universal-general</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-properties-polish"><td></td><td>
        <strong>properties-polish</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="polish.html#properties-polish"><code class="xref">properties-polish</code></a> <em>(polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-0"><td></td><td>
+       <strong>proposition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#proposition-0"><code class="xref">proposition-0</code></a> <em>(structureBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-proposition-23"><td></td><td>
@@ -884,6 +989,14 @@
        <td></td>
        <td>
        <a href="subsets_Polish.html#thm-Borel-clopen"><code class="xref">thm-Borel-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-proper"><td></td><td>
+       <strong>thm-Borel-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#thm-Borel-proper"><code class="xref">thm-Borel-proper</code></a> <em>(structureBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Cantor-embedding"><td></td><td>
