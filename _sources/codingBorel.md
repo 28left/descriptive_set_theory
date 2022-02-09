@@ -78,7 +78,7 @@ Borel codes are defined inductively.
 :label: def-Borel-codes
 Let $\gamma \in \Baire$.
 
-- Suppose $F \subseteq \Baire$ is open, and $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma' \in \Cant$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
+- Suppose $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma' \in \Cant$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
 \begin{equation*}
     U = \bigcup_{\gamma'(\sigma) = 1} \Cyl{\sigma}
 \end{equation*}
