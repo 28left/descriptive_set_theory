@@ -81,6 +81,7 @@ Let $\gamma \in \Baire$.
 - Suppose $F \subseteq \Baire$ is closed, and $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma' \in \Cant$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
 \begin{equation*}
     U = \bigcup_{\gamma'(\sigma) = 1} \Cyl{\sigma}
+\end{equation*}
 
 - If $\gamma$ is such that $\gamma(0)=3$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
 
@@ -191,7 +192,7 @@ B'_k = \{ \delta \colon (k, \delta) \in B\}
 $$
 ```
 
-We leave the proof as an exercise. Proceed by induction on the Borel complexity of $\gamma$. 
+We leave the proofs as an exercise. Proceed by induction on the Borel complexity of $\gamma$. 
 
 
 ## The effective Borel hierarchy
