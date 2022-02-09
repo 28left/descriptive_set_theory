@@ -178,7 +178,7 @@ But before we do that, we observe a basic fact about how we can compute with cod
 ```{prf:lemma}
 :label: lem-Borel-codes-clopen
 
-Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$, and $\delta$ is a computable $bSigma^0_1$ code for a clopen set $C \subseteq \Baire$. We can, uniformly in $\gamma$, compute Borel codes for $B \cap C$ and $B \cup C$ of the same Borel complexity as $\gamma$.
+Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$, and $\delta$ is a computable $\bSigma^0_1$ code for a clopen set $C \subseteq \Baire$. We can, uniformly in $\gamma$, compute Borel codes for $B \cap C$ and $B \cup C$ of the same Borel complexity as $\gamma$.
 ```
 
 ```{prf:lemma}
@@ -191,7 +191,7 @@ B'_k = \{ \delta \colon (k, \delta) \in B\}
 $$
 ```
 
-We leave the proof as an exercise. Proceed by induction on the Borel complexity of $\gamma$. 
+We leave the proofs as an exercise. Proceed by induction on the Borel complexity of $\gamma$. 
 
 
 ## The effective Borel hierarchy
