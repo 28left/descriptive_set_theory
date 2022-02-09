@@ -260,13 +260,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#borel-codes">
-   Borel codes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-tree-structure-of-borel-codes">
-   The tree structure of Borel codes
+  <a class="reference internal nav-link" href="#borel-codes-of-finite-order">
+   Borel codes of finite order
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -315,13 +310,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#borel-codes">
-   Borel codes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-tree-structure-of-borel-codes">
-   The tree structure of Borel codes
+  <a class="reference internal nav-link" href="#borel-codes-of-finite-order">
+   Borel codes of finite order
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -422,62 +412,61 @@ We will also freely identify infinite binary sequences with the set of natural n
 <li><p>for <span class="math notranslate nohighlight">\(m \geq 0\)</span>, let <span class="math notranslate nohighlight">\(\beta_m\)</span> be the <em><span class="math notranslate nohighlight">\(m\)</span>-th column</em> of <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(\beta_m(n) = \beta(\Tup{m,n})\)</span>.</p></li>
 </ul>
 </div>
-<div class="section" id="borel-codes">
-<h2>Borel codes<a class="headerlink" href="#borel-codes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="borel-codes-of-finite-order">
+<h2>Borel codes of finite order<a class="headerlink" href="#borel-codes-of-finite-order" title="Permalink to this headline">¶</a></h2>
 <p>Borel codes are defined inductively.</p>
 <div class="proof definition admonition" id="def-Borel-codes">
 <p class="admonition-title"><span class="caption-number">Definition 19 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
 <ul class="simple">
-<li><p>Suppose <span class="math notranslate nohighlight">\(F \subseteq \Baire\)</span> is closed, and <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0) = 2\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> codes the tree <span class="math notranslate nohighlight">\(T_F\)</span>. More precisely, <span class="math notranslate nohighlight">\(\gamma'(n) \in \{0,1\}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(T_F = \{\pi(n) \colon \gamma'(n) = 1 \}\)</span>.  In this case we say that <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a Borel code for the closed set <span class="math notranslate nohighlight">\(F (= [T_F])\)</span></strong>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> is a Borel code for <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a Borel code for <span class="math notranslate nohighlight">\(\Co{A}\)</span></strong>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=4\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma'_m\)</span> is a Borel code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a Borel code for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span></strong>.</p></li>
+<li><p>Suppose <span class="math notranslate nohighlight">\(F \subseteq \Baire\)</span> is closed, and <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0) = 2\)</span> and <span class="math notranslate nohighlight">\(\gamma' \in \Cant\)</span>. <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> code</strong> for the open set
+\begin{equation*}
+U = \bigcup_{\gamma’(\sigma) = 1} \Cyl{\sigma}</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> code for <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code</strong> for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=4\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma'_m\)</span> is a Borel code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code</strong> for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span>.</p></li>
 </ul>
 </div>
 </div><p>The first position in each code indicates the kind of set it codes – an open set, a complement, or a union.</p>
-<p>We also define the <strong>set of Borel codes</strong></p>
-<div class="math notranslate nohighlight">
-\[
-\Op{Bc} = \{\gamma \in \Baire \colon \gamma \text{ is a Borel code}\}. 
-\]</div>
 <p>Note that the definition of Borel code actually assigns codes to <strong>representations of sets</strong>. A Borel set can have (and has) multiple codes, just as it has multiple representations. We can, for example, represent an open set by different sets <span class="math notranslate nohighlight">\(W\)</span> of initial segments.</p>
 <p>Moreover, every <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> set is also <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span>, and thus a set has codes which reflect the ``more complicated’’ definition of the <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> set as a union of closed sets. It is useful to keep this distinction between a Borel set and its Borel representation in mind.</p>
-</div>
-<div class="section" id="the-tree-structure-of-borel-codes">
-<h2>The tree structure of Borel codes<a class="headerlink" href="#the-tree-structure-of-borel-codes" title="Permalink to this headline">¶</a></h2>
-<p>Each Borel code induces a tree structure that reflects how the corresponding Borel set is built up from closed sets.
-The terminal nodes are given by codes for closed sets (the ones starting with “<span class="math notranslate nohighlight">\(2\)</span>”), since they are the ``building blocks’’ of the Borel sets and hence are not extend/split further. A “<span class="math notranslate nohighlight">\(3\)</span>-code” represents a node  with just one immediate successor, while a “<span class="math notranslate nohighlight">\(4\)</span>-code” corresponds to a node with infinitely many immediate successors. Given a Borel code <span class="math notranslate nohighlight">\(\gamma\)</span>, we <strong>denote the corresponding tree by <span class="math notranslate nohighlight">\(T_\gamma\)</span></strong>.</p>
-<p>The tree of a Borel code defined this way <strong>is always well-founded</strong> (i.e. has no infinite path), since a Borel code is defined via a well-founded recursion. The rank of the tree is a countable ordinal.</p>
-<p>How hard is it to decide whether a given real is a Borel code? We will see later that this question is quite difficult. More precisely, we will see that the <strong>set <span class="math notranslate nohighlight">\(\Op{Bc}\)</span> of all Borel codes is not Borel</strong>. Deciding whether a tree on <span class="math notranslate nohighlight">\(\Nat\)</span> is well-founded will play a fundamental role in this regard.</p>
-<p>The tree structure of a code also lets us assign levels to a Borel code similar to the levels of the Borel hierarchy:</p>
-<ul class="simple">
-<li><p>Trees with a single node <span class="math notranslate nohighlight">\((2)\)</span> correspond to <strong><span class="math notranslate nohighlight">\(\bPi^0_1\)</span> codes</strong>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(T\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) code, then the tree with new top node <span class="math notranslate nohighlight">\((3)\)</span> represents a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) code.</p></li>
-<li><p>And if <span class="math notranslate nohighlight">\(T_n\)</span> is a sequence of <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> codes, then the tree with new top node <span class="math notranslate nohighlight">\((4)\)</span> and each <span class="math notranslate nohighlight">\(T_n\)</span> directly below it corresponds to a <strong><span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code</strong>.</p></li>
-</ul>
 <p>The following is a straightforward induction.</p>
 <div class="proof proposition admonition" id="prop-Borel-codes">
 <p class="admonition-title"><span class="caption-number">Proposition 21 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>Every <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) set has a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) Borel code, and every <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) code represents a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) set.</p>
+<p>Every <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) set has a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) Borel code, and every <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) code represents a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) set.</p>
 </div>
-</div><p>The proposition actually holds for <em>all</em> Borel sets, which can be proved by <strong>transfinite induction</strong>. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) sets. In the next chapter, we will study the <em>full</em> Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets.</p>
+</div><!-- The proposition actually holds for *all* Borel sets, which can be proved by **transfinite induction**. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for $\bPi^0_n$ ($\bSigma^0_n$) sets. In the next chapter, we will study the *full* Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets.  -->
+<!-- ## The tree structure of Borel codes
+
+Each Borel code induces a tree structure that reflects how the corresponding Borel set is built up from closed sets.
+The terminal nodes are given by codes for closed sets (the ones starting with "$2$"), since they are the ``building blocks'' of the Borel sets and hence are not extend/split further. A "$3$-code" represents a node  with just one immediate successor, while a "$4$-code" corresponds to a node with infinitely many immediate successors. Given a Borel code $\gamma$, we **denote the corresponding tree by $T_\gamma$**.
+
+The tree of a Borel code defined this way **is always well-founded** (i.e. has no infinite path), since a Borel code is defined via a well-founded recursion. The rank of the tree is a countable ordinal. 
+
+How hard is it to decide whether a given real is a Borel code? We will see later that this question is quite difficult. More precisely, we will see that the **set $\Op{Bc}$ of all Borel codes is not Borel**. Deciding whether a tree on $\Nat$ is well-founded will play a fundamental role in this regard.
+
+The tree structure of a code also lets us assign levels to a Borel code similar to the levels of the Borel hierarchy:
+
+- Trees with a single node $(2)$ correspond to **$\bPi^0_1$ codes**. 
+- If $T$ is a $\bPi^0_n$ ($\bSigma^0_n$) code, then the tree with new top node $(3)$ represents a $\bSigma^0_n$ ($\bPi^0_n$) code. 
+- And if $T_n$ is a sequence of $\bPi^0_n$ codes, then the tree with new top node $(4)$ and each $T_n$ directly below it corresponds to a **$\bSigma^0_{n+1}$ code**.
+ -->
 </div>
 <div class="section" id="computing-with-borel-codes">
 <h2>Computing with Borel codes<a class="headerlink" href="#computing-with-borel-codes" title="Permalink to this headline">¶</a></h2>
-<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a <strong>computable</strong> code for an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set <span class="math notranslate nohighlight">\(B\)</span>. We may assume <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((4,\gamma')\)</span>, with each column <span class="math notranslate nohighlight">\(\gamma'_m\)</span> being of the form <span class="math notranslate nohighlight">\((2,\alpha_m)\)</span>, coding a closed set <span class="math notranslate nohighlight">\(F_m\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a <strong>computable</strong> code for an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set <span class="math notranslate nohighlight">\(B\)</span>. We may assume <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((4,\gamma')\)</span>, with each column <span class="math notranslate nohighlight">\(\gamma'_m\)</span> being of the form <span class="math notranslate nohighlight">\((3,2,\alpha_m)\)</span>, coding a closed set <span class="math notranslate nohighlight">\(F_m\)</span>.</p>
 <p>With this, we can express membership in <span class="math notranslate nohighlight">\(B\)</span> as follows:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \beta \in B \quad &amp; \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $\gamma'_m$}] \\
-        &amp; \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is in the tree coded by } \gamma'_m]. \\
-        &amp; \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) = 1 ].
+        &amp; \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } \alpha_m]. \\
+        &amp; \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) = 0 ].
 \end{align*}\]</div>
 <p>Note that, since we assume <span class="math notranslate nohighlight">\(\gamma\)</span> to be computable, the <strong>inner predicate</strong> <span class="math notranslate nohighlight">\(R(m,\sigma)\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[
-R(m,\sigma) :\iff \alpha_m(\sigma) = 1 
+R(m,\sigma) :\iff \alpha_m(\sigma) = 0
 \]</div>
 <p>is <strong>decidable</strong>, that is, it can be decided by a Turing machine.</p>
 <p>Hence any <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set <span class="math notranslate nohighlight">\(B\)</span> with a computable code can be represented in the following form:</p>
@@ -488,7 +477,7 @@ R(m,\sigma) :\iff \alpha_m(\sigma) = 1
 \[\begin{equation*}
     \beta \in B \quad \Leftrightarrow \quad \exists m \: \forall n \; \neg R(m, \beta\Rest{n}). 
 \end{equation*}\]</div>
-<p>Conversely, if <span class="math notranslate nohighlight">\(R(m,\sigma)\)</span> is a decidable predicate, let</p>
+<p>Conversely, if <span class="math notranslate nohighlight">\(R(m,\sigma)\)</span> is a (decidable) predicate, let</p>
 <div class="math notranslate nohighlight">
 \[
 F_m = \{ \beta \colon \forall n \: R(m,\beta) \}.
@@ -507,6 +496,22 @@ F_m = \{ \beta \colon \forall n \: R(m,\beta) \}.
 <p>In this analysis, there seems to be nothing specific about the <span class="math notranslate nohighlight">\(F_\sigma\)</span> used in the example. Indeed, it can be extended to Borel sets of finite order, which we will do next.</p>
 <p>We will next introduce the
 <strong>lightface</strong> Borel hierarchy and show that it corresponds to Borel sets of finite order with recursive codes. Using <strong>relativization</strong>, we then obtain a complete characterization of Borel sets of finite order: <em>They are precisely those sets definable by arithmetical formulas, relative to a real parameter.</em></p>
+<p>But before we do that, we observe a basic fact about how we can compute with codes.</p>
+<div class="proof lemma admonition" id="lem-Borel-codes-clopen">
+<p class="admonition-title"><span class="caption-number">Lemma 8 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code of finite order representing a set <span class="math notranslate nohighlight">\(B \subseteq \Baire\)</span>, and <span class="math notranslate nohighlight">\(\delta\)</span> is a computable <span class="math notranslate nohighlight">\(bSigma^0_1\)</span> code for a clopen set <span class="math notranslate nohighlight">\(C \subseteq \Baire\)</span>. We can, uniformly in <span class="math notranslate nohighlight">\(\gamma\)</span>, compute Borel codes for <span class="math notranslate nohighlight">\(B \cap C\)</span> and <span class="math notranslate nohighlight">\(B \cup C\)</span> of the same Borel complexity as <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+</div>
+</div><div class="proof lemma admonition" id="lem-Borel-codes-shift">
+<p class="admonition-title"><span class="caption-number">Lemma 9 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code of finite order representing a set <span class="math notranslate nohighlight">\(B \subseteq \Baire\)</span>. Then can, uniformly in <span class="math notranslate nohighlight">\(\gamma\)</span> and <span class="math notranslate nohighlight">\(k\)</span>, compute Borel codes of the same Borel complexity as <span class="math notranslate nohighlight">\(\gamma\)</span> for the set</p>
+<div class="math notranslate nohighlight">
+\[
+B'_k = \{ \delta \colon (k, \delta) \in B\}
+\]</div>
+</div>
+</div><p>We leave the proof as an exercise. Proceed by induction on the Borel complexity of <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
 </div>
 <div class="section" id="the-effective-borel-hierarchy">
 <h2>The effective Borel hierarchy<a class="headerlink" href="#the-effective-borel-hierarchy" title="Permalink to this headline">¶</a></h2>
@@ -540,60 +545,48 @@ F_m = \{ \beta \colon \forall n \: R(m,\beta) \}.
 <div class="proposition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>. Then</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(A\)</span> is (lightface) <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> (<span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>) iff <span class="math notranslate nohighlight">\(A\)</span> has a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) code.</p>
+<div><p><span class="math notranslate nohighlight">\(A\)</span> is (lightface) <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\Pi^0_n\)</span>) iff <span class="math notranslate nohighlight">\(A\)</span> has a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) code.</p>
 </div></blockquote>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (<span class="math notranslate nohighlight">\(\Rightarrow\)</span>) We proceed by induction on the Borel complexity.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_1\)</span>. Let <span class="math notranslate nohighlight">\(R\)</span> be computable such that <span class="math notranslate nohighlight">\(A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}\)</span>. Define a tree <span class="math notranslate nohighlight">\(T\)</span> by letting</p>
+<p>Suppose <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_1\)</span>. Let <span class="math notranslate nohighlight">\(R\)</span> be computable such that <span class="math notranslate nohighlight">\(A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}\)</span>. Let</p>
 <div class="math notranslate nohighlight">
 \[
-    T = \{ \sigma \in \Nstr \colon \forall \tau \leq \sigma \: \neg R(\tau)\}.
+    W = \{ \sigma \in \Nstr \colon R(\sigma)\}.
 \]</div>
-<p>We have <span class="math notranslate nohighlight">\(\alpha \in A\)</span> if and only if <span class="math notranslate nohighlight">\(\alpha \notin [T]\)</span>.
-Since <span class="math notranslate nohighlight">\(R\)</span> is decidable, <span class="math notranslate nohighlight">\(T\)</span> is computable and <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> given by</p>
+<p>We have <span class="math notranslate nohighlight">\(\alpha \in A\)</span> if and only if <span class="math notranslate nohighlight">\(\alpha \in \bigcup_{\sigma \in W} \Cyl{\sigma}\)</span>.
+Since <span class="math notranslate nohighlight">\(R\)</span> is decidable, <span class="math notranslate nohighlight">\(W\)</span> is computable and <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \gamma(n) = 
 	\begin{cases}
 		2 &amp; n = 0, \\
-		1 &amp; n \geq 1 \: \&amp; \: \pi(n-1) \in T,\\
-		0 &amp; n \geq 1 \: \&amp; \: \pi(n-1) \notin T, 
+		1 &amp; n \geq 1 \: \&amp; \: \pi(n-1) \in W,\\
+		0 &amp; n \geq 1 \: \&amp; \: \pi(n-1) \notin W, 
 	\end{cases}
 \end{split}\]</div>
-<p>is a computable <span class="math notranslate nohighlight">\(\bPi^0_1\)</span> code for <span class="math notranslate nohighlight">\(\Co{A}\)</span>. Then <span class="math notranslate nohighlight">\((3,\gamma\)</span>) is a <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> code for <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<p>Generally, if <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> (<span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>) with a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) code <span class="math notranslate nohighlight">\(\gamma\)</span>, then <span class="math notranslate nohighlight">\((3,\gamma)\)</span> is a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) code for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p>
+<p>is a computable <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> code for <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span>, then <span class="math notranslate nohighlight">\(A = \Co{B}\)</span> for some <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> <span class="math notranslate nohighlight">\(B\)</span>. By inductive hypothesis, <span class="math notranslate nohighlight">\(B\)</span> has a computable <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> code <span class="math notranslate nohighlight">\(\gamma\)</span>. Then <span class="math notranslate nohighlight">\((3,\gamma)\)</span> is a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p>
 <p>Finally, assume that <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_{n+1}\)</span>. Let <span class="math notranslate nohighlight">\(P\)</span> be <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> such that <span class="math notranslate nohighlight">\(\alpha \in A \iff \exists n \; (n,\alpha) \in P\)</span>.</p>
 <p>By inductive hypothesis, <span class="math notranslate nohighlight">\(P\)</span> has a computable <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code <span class="math notranslate nohighlight">\(\gamma\)</span>.
-If we let <span class="math notranslate nohighlight">\(P_m = \{\beta \colon (m,\beta) \in P\}\)</span>, then <span class="math notranslate nohighlight">\(A = \bigcup P_m\)</span>. Thus, it suffices to show that we can uniformly obtain codes for <span class="math notranslate nohighlight">\(P_m\)</span>. This is the subject of the following Lemma.</p>
-<div class="proof lemma admonition" id="lem-Borel-codes-shift">
-<p class="admonition-title"><span class="caption-number">Lemma 8 </span></p>
-<div class="lemma-content section" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for a set <span class="math notranslate nohighlight">\(B\)</span>, then we can, uniformly in <span class="math notranslate nohighlight">\(\gamma\)</span> and <span class="math notranslate nohighlight">\(m\)</span>, compute a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for</p>
+If we let <span class="math notranslate nohighlight">\(P_m = \{\beta \colon (m,\beta) \in P\}\)</span>, then <span class="math notranslate nohighlight">\(A = \bigcup P_m\)</span>. Thus, it suffices to show that we can uniformly obtain codes for <span class="math notranslate nohighlight">\(P_m\)</span>. This follows from <a class="reference internal" href="#lem-Borel-codes-shift">Lemma 9</a>.</p>
+<p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) We proceed by induction on the complexity of the code <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((2,\alpha)\)</span>, with <span class="math notranslate nohighlight">\(\alpha\)</span> coding an open set <span class="math notranslate nohighlight">\(U\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
-B_m = \{ \beta\colon (m,\beta) \in B\}
+\alpha \in U \iff \exists n \: \alpha(\Rest{n})= 1.
 \]</div>
-</div>
-</div><div class="proof admonition" id="proof">
-<p>Proof. The case <span class="math notranslate nohighlight">\(n=1\)</span> is a simple, effective manipulation of trees. Then use induction.</p>
-</div>
-<p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) We proceed by induction on the complexity of <span class="math notranslate nohighlight">\(\gamma\)</span>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> or <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code.</p>
-<p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((2,\alpha)\)</span>, with <span class="math notranslate nohighlight">\(\alpha\)</span> coding a tree <span class="math notranslate nohighlight">\(T\)</span>, representing a <span class="math notranslate nohighlight">\(\bPi^0_1\)</span> set <span class="math notranslate nohighlight">\([T]\)</span>. Then</p>
+<p>Since <span class="math notranslate nohighlight">\(\gamma\)</span> is assumed to be computable, the computable relation</p>
 <div class="math notranslate nohighlight">
 \[
-\alpha \in [T] \iff \forall n \: \alpha\Rest{n} \in T.
+R(\sigma) :\iff \alpha(\sigma)
 \]</div>
-<p>Since <span class="math notranslate nohighlight">\(\gamma\)</span> is assumed to be computable, <span class="math notranslate nohighlight">\(T\)</span> is computable, and the relation</p>
-<div class="math notranslate nohighlight">
-\[
-R(\sigma) :\iff \sigma \in T
-\]</div>
-<p>witnesses that <span class="math notranslate nohighlight">\([T]\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_1\)</span>.</p>
-<p>If <span class="math notranslate nohighlight">\(\gamma = (3, \alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) code, then <span class="math notranslate nohighlight">\(\alpha\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> (<span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>) code. By inductive hypothesis, the set coded by <span class="math notranslate nohighlight">\(\alpha\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> (<span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>), so by definition of the effective hierarchy, <span class="math notranslate nohighlight">\(\gamma\)</span> codes a <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\Pi^0_n\)</span>) set.</p>
+<p>witnesses that <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_1\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\gamma = (3, \alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code, then <span class="math notranslate nohighlight">\(\alpha\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> code. By inductive hypothesis, the set coded by <span class="math notranslate nohighlight">\(\alpha\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>, so by definition of the effective hierarchy and the Borel codes, <span class="math notranslate nohighlight">\(\gamma\)</span> codes a <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> set.</p>
 <p>Finally, assume <span class="math notranslate nohighlight">\(\gamma = (4,\alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code for a set <span class="math notranslate nohighlight">\(B\)</span>. Then each <span class="math notranslate nohighlight">\(\alpha_m\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for a set <span class="math notranslate nohighlight">\(A_m\)</span>.</p>
 <div class="proof lemma admonition" id="lem-Borel-codes-inverse-shift">
-<p class="admonition-title"><span class="caption-number">Lemma 9 </span></p>
+<p class="admonition-title"><span class="caption-number">Lemma 10 </span></p>
 <div class="lemma-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\((\alpha_m)\)</span> is a uniformly computable sequence of <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> codes for sets <span class="math notranslate nohighlight">\(A_m\)</span>, respectively, then there exists a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code <span class="math notranslate nohighlight">\(\alpha\)</span> for the set</p>
 <div class="math notranslate nohighlight">
@@ -602,7 +595,7 @@ R(\sigma) :\iff \sigma \in T
 \]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Similar to <a class="reference internal" href="#lem-Borel-codes-shift">Lemma 8</a></p>
+<p>Proof. Similar to <a class="reference internal" href="#lem-Borel-codes-shift">Lemma 9</a></p>
 </div>
 <p>By inductive hypothesis, the set <span class="math notranslate nohighlight">\(A\)</span> as in the Lemma is <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> and we have</p>
 <div class="math notranslate nohighlight">
@@ -615,12 +608,12 @@ R(\sigma) :\iff \sigma \in T
 <div class="section" id="relativization">
 <h2>Relativization<a class="headerlink" href="#relativization" title="Permalink to this headline">¶</a></h2>
 <p>Using relativized computations via oracles, we can define a relativized version of the effective Borel hierarchy. This way we can capture <em>all</em> Borel sets of finite order, not just the ones with computable codes.</p>
-<div class="proof definition admonition" id="definition-6">
+<div class="proof definition admonition" id="definition-7">
 <p class="admonition-title"><span class="caption-number">Definition 21 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>. A set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is</p>
 <ul class="simple">
-<li><p><strong>(a)</strong> <span class="math notranslate nohighlight">\(\Sigma^0_1(\gamma)\)</span> if there exists a predicate <span class="math notranslate nohighlight">\(R(x)\)</span> \emph{recursive} in <span class="math notranslate nohighlight">\(\gamma\)</span> such that</p></li>
+<li><p><strong>(a)</strong> <span class="math notranslate nohighlight">\(\Sigma^0_1(\gamma)\)</span> if there exists a predicate <span class="math notranslate nohighlight">\(R(x)\)</span> computable in <span class="math notranslate nohighlight">\(\gamma\)</span> such that</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -658,7 +651,7 @@ R(\sigma) :\iff \sigma \in T
 <div class="section" id="definability-in-arithmetic">
 <h2>Definability in Arithmetic<a class="headerlink" href="#definability-in-arithmetic" title="Permalink to this headline">¶</a></h2>
 <p>One of the fundamental insights of computability theory is the close relation between computability and definability in arithmetic. The recursively enumerable subsets of <span class="math notranslate nohighlight">\(\Nat\)</span> are precisely the sets <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable over the standard model of arithmetic, <span class="math notranslate nohighlight">\((\Nat,+,\cdot,0,1)\)</span>, and <strong>Post’s Theorem</strong> uses this result to establish a rigid connection between levels of arithmetical complexity and computational complexity.</p>
-<p>As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of <span class="math notranslate nohighlight">\(\Baire\)</span>, that is, with \emph{sets} of functions on <span class="math notranslate nohighlight">\(\Nat\)</span> rather than just functions on <span class="math notranslate nohighlight">\(\Nat\)</span>, we will work in the framework of <strong>second order arithmetic</strong>.</p>
+<p>As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of <span class="math notranslate nohighlight">\(\Baire\)</span>, that is, with sets of functions on <span class="math notranslate nohighlight">\(\Nat\)</span> rather than just functions on <span class="math notranslate nohighlight">\(\Nat\)</span>, we will work in the framework of <strong>second order arithmetic</strong>.</p>
 <p>The
 <strong>language of second order arithmetic</strong> has two kinds of variables: <strong>number variables</strong> <span class="math notranslate nohighlight">\(x,y,z, \dots\)</span> (and sometimes <span class="math notranslate nohighlight">\(k,l,m,n\)</span> if they are not used as metavariables), to be interpreted as elements of <span class="math notranslate nohighlight">\(\Nat\)</span>, and <strong>function variables</strong> <span class="math notranslate nohighlight">\(\alpha,\beta,\gamma,\dots\)</span>, intended to range over functions from <span class="math notranslate nohighlight">\(\Nat\)</span> into <span class="math notranslate nohighlight">\(\Nat\)</span>, i.e. elements of Baire space, i.e. reals. The non-logical symbols are the binary function symbols <span class="math notranslate nohighlight">\(+,\cdot\)</span>, the binary relation symbol <span class="math notranslate nohighlight">\(&lt;\)</span>, the <strong>application function</strong> symbol <span class="math notranslate nohighlight">\(\Ap\)</span>, and the constants <span class="math notranslate nohighlight">\(\underline{0}, \underline{1}\)</span>.  <strong>Numerical terms</strong> are defined in usual way using <span class="math notranslate nohighlight">\(+,\cdot,\underline{0},\underline{1}\)</span>, and involve only number variables. <strong>Atomic formulas</strong> are <span class="math notranslate nohighlight">\(t_1 = t_2\)</span>, <span class="math notranslate nohighlight">\(t_1 &lt; t_2\)</span>, and <span class="math notranslate nohighlight">\(\Ap(\alpha,t_1) = t_2\)</span>, where <span class="math notranslate nohighlight">\(t_1, t_2\)</span> are numerical terms.</p>
 <p>The
