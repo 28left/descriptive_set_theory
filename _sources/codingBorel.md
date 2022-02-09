@@ -85,7 +85,7 @@ Let $\gamma \in \Baire$.
 
 - If $\gamma$ is such that $\gamma(0)=3$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
 
-- If $\gamma$ is such that $\gamma(0)=4$ and for each $m$, $\gamma'_m$ is a Borel code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
+- If $\gamma$ is such that $\gamma(0)=4$ and for each $m$, $\gamma'_m$ is a $\bPi^0_n$ code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
 ```
 
 The first position in each code indicates the kind of set it codes -- an open set, a complement, or a union. 
