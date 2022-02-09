@@ -69,7 +69,7 @@ Finally, let us define the following operation on elements of Baire (or Cantor) 
 - for $m \geq 0$, let $\beta_m$ be the *$m$-th column* of $\beta$, $\beta_m(n) = \beta(\Tup{m,n})$.
 
 
-## Borel codes
+## Borel codes of finite order
 
 
 Borel codes are defined inductively. 
@@ -78,27 +78,33 @@ Borel codes are defined inductively.
 :label: def-Borel-codes
 Let $\gamma \in \Baire$.
 
-- Suppose $F \subseteq \Baire$ is closed, and $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma'$ codes the tree $T_F$. More precisely, $\gamma'(n) \in \{0,1\}$ for all $n$ and $T_F = \{\pi(n) \colon \gamma'(n) = 1 \}$.  In this case we say that $\gamma$ **is a Borel code for the closed set $F (= [T_F])$**.
+- Suppose $F \subseteq \Baire$ is closed, and $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma' \in \Cant$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
+\begin{equation*}
+    U = \bigcup_{\gamma'(\sigma) = 1} \Cyl{\sigma}
 
-- If $\gamma$ is such that $\gamma(0)=3$ and $\gamma'$ is a Borel code for $A \subseteq \Baire$, we say $\gamma$ **is a Borel code for $\Co{A}$**.
+- If $\gamma$ is such that $\gamma(0)=3$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
 
-- If $\gamma$ is such that $\gamma(0)=4$ and for each $m$, $\gamma'_m$ is a Borel code of a set $A_m$, we say $\gamma$ **is a Borel code for $\bigcup_n A_n$**.
+- If $\gamma$ is such that $\gamma(0)=4$ and for each $m$, $\gamma'_m$ is a Borel code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
 ```
 
 The first position in each code indicates the kind of set it codes -- an open set, a complement, or a union. 
-
-We also define the **set of Borel codes**
-
-$$
-\Op{Bc} = \{\gamma \in \Baire \colon \gamma \text{ is a Borel code}\}. 
-$$
 
 Note that the definition of Borel code actually assigns codes to **representations of sets**. A Borel set can have (and has) multiple codes, just as it has multiple representations. We can, for example, represent an open set by different sets $W$ of initial segments. 
 
 Moreover, every $\bSigma^0_1$ set is also $\bSigma^0_2$, and thus a set has codes which reflect the ``more complicated'' definition of the $\bSigma^0_1$ set as a union of closed sets. It is useful to keep this distinction between a Borel set and its Borel representation in mind.
 
+The following is a straightforward induction.
 
-## The tree structure of Borel codes
+```{prf:proposition}
+:label: prop-Borel-codes
+
+Every $\bSigma^0_n$ ($\bPi^0_n$) set has a $\bSigma^0_n$ ($\bPi^0_n$) Borel code, and every $\bSigma^0_n$ ($\bPi^0_n$) code represents a $\bSigma^0_n$ ($\bPi^0_n$) set.
+```
+
+<!-- The proposition actually holds for *all* Borel sets, which can be proved by **transfinite induction**. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for $\bPi^0_n$ ($\bSigma^0_n$) sets. In the next chapter, we will study the *full* Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets.  -->
+
+
+<!-- ## The tree structure of Borel codes
 
 Each Borel code induces a tree structure that reflects how the corresponding Borel set is built up from closed sets.
 The terminal nodes are given by codes for closed sets (the ones starting with "$2$"), since they are the ``building blocks'' of the Borel sets and hence are not extend/split further. A "$3$-code" represents a node  with just one immediate successor, while a "$4$-code" corresponds to a node with infinitely many immediate successors. Given a Borel code $\gamma$, we **denote the corresponding tree by $T_\gamma$**.
@@ -112,33 +118,25 @@ The tree structure of a code also lets us assign levels to a Borel code similar 
 - Trees with a single node $(2)$ correspond to **$\bPi^0_1$ codes**. 
 - If $T$ is a $\bPi^0_n$ ($\bSigma^0_n$) code, then the tree with new top node $(3)$ represents a $\bSigma^0_n$ ($\bPi^0_n$) code. 
 - And if $T_n$ is a sequence of $\bPi^0_n$ codes, then the tree with new top node $(4)$ and each $T_n$ directly below it corresponds to a **$\bSigma^0_{n+1}$ code**.
+ -->
 
-The following is a straightforward induction.
-
-```{prf:proposition}
-:label: prop-Borel-codes
-
-Every $\bPi^0_n$ ($\bSigma^0_n$) set has a $\bPi^0_n$ ($\bSigma^0_n$) Borel code, and every $\bPi^0_n$ ($\bSigma^0_n$) code represents a $\bPi^0_n$ ($\bSigma^0_n$) set.
-```
-
-The proposition actually holds for *all* Borel sets, which can be proved by **transfinite induction**. However, we have not introduced Borel sets of transfinite order yet, so we state the existence of codes only for $\bPi^0_n$ ($\bSigma^0_n$) sets. In the next chapter, we will study the *full* Borel hierarchy, and then it should be clear that the above proposition extends to all Borel sets. 
 
 ## Computing with Borel codes
 
-Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(4,\gamma')$, with each column $\gamma'_m$ being of the form $(2,\alpha_m)$, coding a closed set $F_m$.
+Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(4,\gamma')$, with each column $\gamma'_m$ being of the form $(3,2,\alpha_m)$, coding a closed set $F_m$.
 
 With this, we can express membership in $B$ as follows:
 
 \begin{align*}
     \beta \in B \quad & \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $\gamma'_m$}] \\
-        & \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is in the tree coded by } \gamma'_m]. \\
-        & \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) = 1 ].
+        & \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } \alpha_m]. \\
+        & \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) = 0 ].
 \end{align*}
 
 Note that, since we assume $\gamma$ to be computable, the **inner predicate** $R(m,\sigma)$ given by
 
 $$
-R(m,\sigma) :\iff \alpha_m(\sigma) = 1 
+R(m,\sigma) :\iff \alpha_m(\sigma) = 0
 $$
 
 is **decidable**, that is, it can be decided by a Turing machine.
@@ -150,7 +148,7 @@ Hence any $\bSigma^0_2$ set $B$ with a computable code can be represented in the
     \beta \in B \quad \Leftrightarrow \quad \exists m \: \forall n \; \neg R(m, \beta\Rest{n}). 
 \end{equation*}
 
-Conversely, if $R(m,\sigma)$ is a decidable predicate, let
+Conversely, if $R(m,\sigma)$ is a (decidable) predicate, let
 
 $$
 F_m = \{ \beta \colon \forall n \: R(m,\beta) \}.
@@ -174,6 +172,26 @@ In this analysis, there seems to be nothing specific about the $F_\sigma$ used i
 
 We will next introduce the 
 **lightface** Borel hierarchy and show that it corresponds to Borel sets of finite order with recursive codes. Using **relativization**, we then obtain a complete characterization of Borel sets of finite order: *They are precisely those sets definable by arithmetical formulas, relative to a real parameter.*
+
+But before we do that, we observe a basic fact about how we can compute with codes.
+
+```{prf:lemma}
+:label: lem-Borel-codes-clopen
+
+Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$, and $\delta$ is a computable $bSigma^0_1$ code for a clopen set $C \subseteq \Baire$. We can, uniformly in $\gamma$, compute Borel codes for $B \cap C$ and $B \cup C$ of the same Borel complexity as $\gamma$.
+```
+
+```{prf:lemma}
+:label: lem-Borel-codes-shift
+
+Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$. Then can, uniformly in $\gamma$ and $k$, compute Borel codes of the same Borel complexity as $\gamma$ for the set
+
+$$
+B'_k = \{ \delta \colon (k, \delta) \in B\}
+$$
+```
+
+We leave the proof as an exercise. Proceed by induction on the Borel complexity of $\gamma$. 
 
 
 ## The effective Borel hierarchy
@@ -201,70 +219,57 @@ The following result is at the heart of the effective theory.
 :label: prop-computable-codes 
 Let $A \subseteq \Baire$. Then
 
-> $A$ is (lightface) $\Pi^0_n$ ($\Sigma^0_n$) iff $A$ has a computable $\bPi^0_n$ ($\bSigma^0_n$) code.
+> $A$ is (lightface) $\Sigma^0_n$ ($\Pi^0_n$) iff $A$ has a computable $\bSigma^0_n$ ($\bPi^0_n$) code.
 ```
 
 ````{prf:proof}
 ($\Rightarrow$) We proceed by induction on the Borel complexity. 
 
-Suppose $A$ is $\Sigma^0_1$. Let $R$ be computable such that $A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}$. Define a tree $T$ by letting
+Suppose $A$ is $\Sigma^0_1$. Let $R$ be computable such that $A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}$. Let
 
 $$
-    T = \{ \sigma \in \Nstr \colon \forall \tau \leq \sigma \: \neg R(\tau)\}.
+    W = \{ \sigma \in \Nstr \colon R(\sigma)\}.
 $$
 
-We have $\alpha \in A$ if and only if $\alpha \notin [T]$.
-Since $R$ is decidable, $T$ is computable and $\gamma \in \Baire$ given by
+We have $\alpha \in A$ if and only if $\alpha \in \bigcup_{\sigma \in W} \Cyl{\sigma}$.
+Since $R$ is decidable, $W$ is computable and $\gamma \in \Baire$ given by
 
 $$
 \gamma(n) = 
 	\begin{cases}
 		2 & n = 0, \\
-		1 & n \geq 1 \: \& \: \pi(n-1) \in T,\\
-		0 & n \geq 1 \: \& \: \pi(n-1) \notin T, 
+		1 & n \geq 1 \: \& \: \pi(n-1) \in W,\\
+		0 & n \geq 1 \: \& \: \pi(n-1) \notin W, 
 	\end{cases}
 $$
 
-is a computable $\bPi^0_1$ code for $\Co{A}$. Then $(3,\gamma$) is a $\bSigma^0_1$ code for $A$.
+is a computable $\bSigma^0_1$ code for $A$. 
 
-Generally, if $A$ is $\Pi^0_n$ ($\Sigma^0_n$) with a computable $\bPi^0_n$ ($\bSigma^0_n$) code $\gamma$, then $(3,\gamma)$ is a computable $\bSigma^0_n$ ($\bPi^0_n$) code for $\Co{A}$.
+If $A$ is $\Pi^0_n$, then $A = \Co{B}$ for some $\Sigma^0_n$ $B$. By inductive hypothesis, $B$ has a computable $\bSigma^0_n$ code $\gamma$. Then $(3,\gamma)$ is a computable $\bPi^0_n$ code for $\Co{A}$.
 
 Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P$.
 
 By inductive hypothesis, $P$ has a computable $\bPi^0_n$ code $\gamma$.
-If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus, it suffices to show that we can uniformly obtain codes for $P_m$. This is the subject of the following Lemma.
+If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus, it suffices to show that we can uniformly obtain codes for $P_m$. This follows from {prf:ref}`lem-Borel-codes-shift`.
 
-```{prf:lemma}
-:label: lem-Borel-codes-shift
 
-If $\gamma$ is a $\bPi^0_n$ code for a set $B$, then we can, uniformly in $\gamma$ and $m$, compute a $\bPi^0_n$ code for 
+($\Leftarrow$) We proceed by induction on the complexity of the code $\gamma$.
 
-$$
-B_m = \{ \beta\colon (m,\beta) \in B\}
-$$
-```
-
-```{prf:proof}
-The case $n=1$ is a simple, effective manipulation of trees. Then use induction.
-```
-
-($\Leftarrow$) We proceed by induction on the complexity of $\gamma$, where $\gamma$ is a $\bSigma^0_n$ or $\bPi^0_n$ code.
-
-If $\gamma$ is of the form $(2,\alpha)$, with $\alpha$ coding a tree $T$, representing a $\bPi^0_1$ set $[T]$. Then 
+If $\gamma$ is of the form $(2,\alpha)$, with $\alpha$ coding an open set $U$. Then 
 
 $$
-\alpha \in [T] \iff \forall n \: \alpha\Rest{n} \in T.
+\alpha \in U \iff \exists n \: \alpha(\Rest{n})= 1.
 $$
 
-Since $\gamma$ is assumed to be computable, $T$ is computable, and the relation 
+Since $\gamma$ is assumed to be computable, the computable relation 
 
 $$
-R(\sigma) :\iff \sigma \in T
+R(\sigma) :\iff \alpha(\sigma)
 $$
 
-witnesses that $[T]$ is $\Pi^0_1$. 
+witnesses that $U$ is $\Pi^0_1$. 
 
-If $\gamma = (3, \alpha)$ is a $\bSigma^0_n$ ($\bPi^0_n$) code, then $\alpha$ is a $\bPi^0_n$ ($\bSigma^0_n$) code. By inductive hypothesis, the set coded by $\alpha$ is $\Pi^0_n$ ($\Sigma^0_n$), so by definition of the effective hierarchy, $\gamma$ codes a $\Sigma^0_n$ ($\Pi^0_n$) set.
+If $\gamma = (3, \alpha)$ is a $\bPi^0_n$ code, then $\alpha$ is a $\bSigma^0_n$ code. By inductive hypothesis, the set coded by $\alpha$ is $\Sigma^0_n$, so by definition of the effective hierarchy and the Borel codes, $\gamma$ codes a $\Pi^0_n$ set.
 
 Finally, assume $\gamma = (4,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $\alpha_m$ is a $\bPi^0_n$ code for a set $A_m$.
 
