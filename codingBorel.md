@@ -78,13 +78,14 @@ Borel codes are defined inductively.
 :label: def-Borel-codes
 Let $\gamma \in \Baire$.
 
-- Suppose $F \subseteq \Baire$ is closed, and $\gamma \in \Baire$ is such that $\gamma(0) = 2$ and $\gamma' \in \Cant$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
+- Suppose $\gamma \in \Baire$ is such that $\gamma(0) = 1$ and $\gamma' \in \Baire$. $\gamma$ **is a $\bSigma^0_1$ code** for the open set 
 \begin{equation*}
-    U = \bigcup_{\gamma'(\sigma) = 1} \Cyl{\sigma}
+    U = \bigcup_{\gamma'(\sigma) = 0} \Cyl{\sigma}
+\end{equation*}
 
-- If $\gamma$ is such that $\gamma(0)=3$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
+- If $\gamma$ is such that $\gamma(0)=2$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
 
-- If $\gamma$ is such that $\gamma(0)=4$ and for each $m$, $\gamma'_m$ is a Borel code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
+- If $\gamma$ is such that $\gamma(0)=3$ and for each $m$, $\gamma'_m$ is a $\bPi^0_n$ code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
 ```
 
 The first position in each code indicates the kind of set it codes -- an open set, a complement, or a union. 
@@ -123,20 +124,20 @@ The tree structure of a code also lets us assign levels to a Borel code similar 
 
 ## Computing with Borel codes
 
-Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(4,\gamma')$, with each column $\gamma'_m$ being of the form $(3,2,\alpha_m)$, coding a closed set $F_m$.
+Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(3,\gamma')$, with each column $\gamma'_m$ being of the form $(2,1,\alpha_m)$, coding a closed set $F_m$.
 
 With this, we can express membership in $B$ as follows:
 
 \begin{align*}
     \beta \in B \quad & \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $\gamma'_m$}] \\
         & \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } \alpha_m]. \\
-        & \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) = 0 ].
+        & \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) \neq 0 ].
 \end{align*}
 
 Note that, since we assume $\gamma$ to be computable, the **inner predicate** $R(m,\sigma)$ given by
 
 $$
-R(m,\sigma) :\iff \alpha_m(\sigma) = 0
+R(m,\sigma) :\iff \alpha_m(\sigma) \neq 0
 $$
 
 is **decidable**, that is, it can be decided by a Turing machine.
@@ -237,15 +238,15 @@ Since $R$ is decidable, $W$ is computable and $\gamma \in \Baire$ given by
 $$
 \gamma(n) = 
 	\begin{cases}
-		2 & n = 0, \\
-		1 & n \geq 1 \: \& \: \pi(n-1) \in W,\\
-		0 & n \geq 1 \: \& \: \pi(n-1) \notin W, 
+		1 & n = 0, \\
+		0 & n \geq 1 \: \& \: \pi(n-1) \in W,\\
+		17 & n \geq 1 \: \& \: \pi(n-1) \notin W, 
 	\end{cases}
 $$
 
 is a computable $\bSigma^0_1$ code for $A$. 
 
-If $A$ is $\Pi^0_n$, then $A = \Co{B}$ for some $\Sigma^0_n$ $B$. By inductive hypothesis, $B$ has a computable $\bSigma^0_n$ code $\gamma$. Then $(3,\gamma)$ is a computable $\bPi^0_n$ code for $\Co{A}$.
+If $A$ is $\Pi^0_n$, then $A = \Co{B}$ for some $\Sigma^0_n$ $B$. By inductive hypothesis, $B$ has a computable $\bSigma^0_n$ code $\gamma$. Then $(2,\gamma)$ is a computable $\bPi^0_n$ code for $\Co{A}$.
 
 Finally, assume that $A$ is $\Sigma^0_{n+1}$. Let $P$ be $\Pi^0_n$ such that $\alpha \in A \iff \exists n \; (n,\alpha) \in P$.
 
@@ -255,23 +256,23 @@ If we let $P_m = \{\beta \colon (m,\beta) \in P\}$, then $A = \bigcup P_m$. Thus
 
 ($\Leftarrow$) We proceed by induction on the complexity of the code $\gamma$.
 
-If $\gamma$ is of the form $(2,\alpha)$, with $\alpha$ coding an open set $U$. Then 
+If $\gamma$ is of the form $(1,\alpha)$, with $\alpha$ coding an open set $U$. Then 
 
 $$
-\alpha \in U \iff \exists n \: \alpha(\Rest{n})= 1.
+\alpha \in U \iff \exists n \: \alpha(\Rest{n})= 0.
 $$
 
 Since $\gamma$ is assumed to be computable, the computable relation 
 
 $$
-R(\sigma) :\iff \alpha(\sigma)
+R(\sigma) :\iff \alpha(\sigma) = 0
 $$
 
 witnesses that $U$ is $\Pi^0_1$. 
 
-If $\gamma = (3, \alpha)$ is a $\bPi^0_n$ code, then $\alpha$ is a $\bSigma^0_n$ code. By inductive hypothesis, the set coded by $\alpha$ is $\Sigma^0_n$, so by definition of the effective hierarchy and the Borel codes, $\gamma$ codes a $\Pi^0_n$ set.
+If $\gamma = (2, \alpha)$ is a $\bPi^0_n$ code, then $\alpha$ is a $\bSigma^0_n$ code. By inductive hypothesis, the set coded by $\alpha$ is $\Sigma^0_n$, so by definition of the effective hierarchy and the Borel codes, $\gamma$ codes a $\Pi^0_n$ set.
 
-Finally, assume $\gamma = (4,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $\alpha_m$ is a $\bPi^0_n$ code for a set $A_m$.
+Finally, assume $\gamma = (3,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $\alpha_m$ is a $\bPi^0_n$ code for a set $A_m$.
 
 ```{prf:lemma}
 :label: lem-Borel-codes-inverse-shift

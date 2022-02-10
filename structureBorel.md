@@ -54,7 +54,7 @@ Another notation identifies sets and relations. We will identify sets $A \subset
 
 ## Normal forms
 
-Theorem {prf:ref}`thm-Borel-arith` tells us that a set $A \subseteq \Baire$ is $\bSigma^0_n$ if and only if it is definable by a $\Sigma^0_n$ formulas over $\mathcal{A}^2$, relative to some parameter. That means that there exists a **bounded formula** $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ (i.e.\ all quantifiers are bounded) such that 
+Theorem {prf:ref}`thm-Borel-arith` tells us that a set $A \subseteq \Baire$ is $\bSigma^0_n$ if and only if it is definable by a $\Sigma^0_n$ formulas over $\mathcal{A}^2$, relative to some parameter. That means that there exists a **bounded formula** $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ (i.e. all quantifiers are bounded) such that 
 
 $$
 A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
@@ -63,9 +63,11 @@ $$
 Here $\gamma$ is the parameter, and $\Qu$ is "$\exists$" if $n$ is odd, and "$\forall$" if $n$ is even. 
 
 Similarly, $A \subseteq \Baire$ is $\bPi^0_n$ if and only if it is definable as
-\[
+
+$$
 	A(\alpha) \iff \forall x_1 \: \dots \:  \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
-\]
+$$
+
 where $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ is bounded, and $\Qu$ is ``$\forall$'' if $n$ is odd, and "$\exists$" if $n$ is even.
 
 What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form $\alpha(t_1) = t_2$. This implies that the truth of an atomic formula is determined by \emph{finitely many positions} in $\alpha$. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of $\Baire$. 
@@ -168,20 +170,12 @@ For all $n \geq 1$, $\bSigma^0_n$, $\bPi^0_n$, and $\bDelta^0_n$ are closed unde
 ```
 
 ```{prf:proof}
-In this case we use the coding function $\pi: \Nstr \to \Nat$. We can define a \emph{partial inverse}
-
-$$
-    (k)_i = \begin{cases}
-        \sigma_i  & \text{if $k = \pi(\sigma)$ for a finite sequence } \sigma = (\sigma_0,\ldots,\sigma_{n-1}) \\& \text{  and } i < n\\
-        0  & \text{otherwise.} 
-    \end{cases}
-$$
-
-Using this decoding, we have the following equivalence, which immediately imply the closure properties for $\bSigma^0_n$ and $\bPi^0_n$, respectively, and hence also for $\bDelta^0_n$.
+In this case we use the computable coding function $\pi: \Nat \to \Nstr$. 
+We have the following equivalence, which immediately implies the closure properties for $\bSigma^0_n$ and $\bPi^0_n$, respectively, and hence also for $\bDelta^0_n$.
 
 \begin{eqnarray*}
-    \forall m \le n \, \exists k \; P(m,k) &\iff& \exists k  \, \forall m \le n \:  P(m,(k)_m)\\
-    \exists m \le n  \, \forall k \; P(m,k) &\iff& \forall k  \, \exists m \le n \;   P(m,(k)_m)
+    \forall m \le n \, \exists k \; P(m,k) &\iff& \exists k  \, \forall m \le n \:  P(m,\pi(k)_m)\\
+    \exists m \le n  \, \forall k \; P(m,k) &\iff& \forall k  \, \exists m \le n \;   P(m,\pi(k)_m)
 \end{eqnarray*}
 ```
 
@@ -196,7 +190,7 @@ For all $n \geq 1$, for any $A \subseteq \Baire$, and for any continuous $f: \Ba
 ```{prf:proof}
 This follows easily by induction on $n$, since open and closed sets are closed under continuous preimages.
 
-However, we can also argue via definability, since by Proposition \ref{prop-cont-tree} one can represent a continuous function through a monotone mapping $\psi$ from finite strings to finite strings.  We have
+However, we can also argue via definability, since by {prf:ref}`prop-product-continuous` one can represent a continuous function through a monotone mapping $\psi$ from finite strings to finite strings.  We have
 
 $$
     f^{-1}(A) = \{ \alpha \colon A(f(\alpha)) \}.
@@ -242,7 +236,21 @@ In the sense of the above definition, $K_0$ is $\Nat$-universal for the family o
 For any $n \geq 1$, there exists a set $U \subseteq \Baire \times \Baire$ that is $\Baire$-universal for $\bSigma^0_n$ ($\bPi^0_n$).
 ```
 
-The result can be generalized to hold for arbitrary Polish spaces $X$, i.e.\ for any $n \geq 1$, there exists a set $U \subseteq \Baire \times X$ that is $\Baire$-universal for $\bSigma^0_n(X)$ ($\bPi^0_n(X)$). To achieve this, one has to define Borel codes for $X$. This can be done by fixing a countable basis $(V_n)$ of the topology of $X$, and assign a sequence $\gamma \in \Baire$ the open set
+```{prf:proof}
+We can use the Borel codes defined in the previous lecture.
+
+First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
+
+For fixed $n$, we let
+
+$$
+    U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and $\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by $\gamma$}\}.
+$$
+
+It follows easily from {prf:ref}`thm-fundamental` that $U_n$ is $\bSigma^0_n$ ($\bPi^0_n$), too, and it is clear from the definition of $U$ that it parametrizes $\bSigma^0_n$ ($\bPi^0_n$).
+```
+
+The result can be generalized to hold for arbitrary Polish spaces $X$, i.e. for any $n \geq 1$, there exists a set $U \subseteq \Baire \times X$ that is $\Baire$-universal for $\bSigma^0_n(X)$ ($\bPi^0_n(X)$). To achieve this, one has to define Borel codes for $X$. This can be done by fixing a countable basis $(V_n)$ of the topology of $X$, and assign a sequence $\gamma \in \Baire$ the open set
 
 $$
 	U_\gamma = \bigcup_{n \in \Nat} V_{\gamma(n)}.
@@ -373,9 +381,9 @@ $$
 Since each $\xi_n$ is countable, $\xi$ is countable.
 ```
 
-Borel sets of infinite order have the same closure properties as their counterparts of finite order. The proofs, however have to proceed by induction using the topological properties of $\BS[\xi]$ and $\BP[\xi]$, since the characterization via definability in arithmetic is no longer available -- the arithmetical hierarchy reaches only to $\omega$.
+Borel sets of infinite order have the **same closure properties as their counterparts of finite order**. The proofs, however have to proceed by induction using the topological properties of $\BS[\xi]$ and $\BP[\xi]$, since the characterization via definability in arithmetic is no longer available -- the arithmetical hierarchy reaches only to $\omega$.
 
-Similarly, the Hierarchy Theorem ({prf:ref}`thm-Borel-proper`) extends to the transfinite levels. For the finite levels, this followed from the existence of universal sets for each level. 
+Similarly, the Hierarchy Theorem ({prf:ref}`thm-Borel-proper`) extends to the transfinite levels. As the finite levels, this follows from the existence of universal sets for each level, which we now prove for the full hierarchy.
 
 ```{prf:proposition} 
 :label: prop-universal-general
@@ -411,6 +419,28 @@ where $(\gamma)_n$ denotes the $n$th column of $\gamma$.
 
 It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS[\xi]$. (Note that any set $A$ in $\BS[\xi]$ can be represented as $\bigcup_n A_n$ with $A_n \in \BP[\xi_n]$, since $(\xi_n+1)$ is cofinal in $\xi$.)
 ```
+
+The construction of the universal $\BS[\xi]$ set bears some resemblance to the construction of a $\bSigma^0_{n+1}$ code. It is indeed possible to formally define Borel codes for *all* Borel sets.
+
+```{prf:definition}
+:label: def-Borel-codes-transfinite
+Let $\gamma \in \Baire$.
+
+- Suppose $\gamma \in \Baire$ is such that $\gamma(0) = 1$ and $\gamma' \in \Baire$. $\gamma$ is a Borel code for the open set 
+\begin{equation*}
+    U = \bigcup_{\gamma'(\sigma) = 0} \Cyl{\sigma}
+\end{equation*}
+
+- If $\gamma$ is such that $\gamma(0)=2$ and $\gamma'$ is a Borel code for $A \subseteq \Baire$, we say $\gamma$ is a Borel code for $\Co{A}$.
+
+- If $\gamma$ is such that $\gamma(0)=3$ and for each $m$, $\gamma'_m$ is a Borel code of a set $A_m$, we say $\gamma$ is a Borel code for $\bigcup_n A_n$.
+```
+
+Any Borel code induces a well-founded tree (given by the coding nodes $1$, $2$,and $3$). We can also consider Borel sets with computable codes. But there is no more straightforward connection with effective definability. It is possible to do this, but it requires a careful development of what it means to take effective unions along countable ordinals. We will return to it later.
+
+Looking further ahead, one can show that **the set of all Borel codes is not Borel** (exercise -- use a diagonalization argument as in the proof of {prf:ref}`thm-Borel-proper`). At the heart of this lies the fact that we cannot, in a Borel way, describe whether an arbitrary tree over $\Nat$ is well-founded or not. This will soon be a central topic when we turn our investigation to analytic and co-analytic sets. 
+
+
 
 <!-- This general proof of existence of universal sets does not use Borel codes, since those were defined only for Borel sets of finite order. The proof of {prf:ref}`prop-universal-general` provides an idea how we could extend the definition of a code to transfinite orders: Take unions of codes along a cofinal sequence. However, we would like to this in an effective way, and it is not clear how to do this for infinite ordinals in general. 
 
