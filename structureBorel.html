@@ -381,17 +381,18 @@
 </div>
 <div class="section" id="normal-forms">
 <h2>Normal forms<a class="headerlink" href="#normal-forms" title="Permalink to this headline">¶</a></h2>
-<p>Theorem <a class="reference internal" href="codingBorel.html#thm-Borel-arith">Theorem 18</a> tells us that a set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> if and only if it is definable by a <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> formulas over <span class="math notranslate nohighlight">\(\mathcal{A}^2\)</span>, relative to some parameter. That means that there exists a <strong>bounded formula</strong> <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> (i.e.\ all quantifiers are bounded) such that</p>
+<p>Theorem <a class="reference internal" href="codingBorel.html#thm-Borel-arith">Theorem 18</a> tells us that a set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> if and only if it is definable by a <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> formulas over <span class="math notranslate nohighlight">\(\mathcal{A}^2\)</span>, relative to some parameter. That means that there exists a <strong>bounded formula</strong> <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> (i.e. all quantifiers are bounded) such that</p>
 <div class="math notranslate nohighlight">
 \[
 A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\(\gamma\)</span> is the parameter, and <span class="math notranslate nohighlight">\(\Qu\)</span> is “<span class="math notranslate nohighlight">\(\exists\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is odd, and “<span class="math notranslate nohighlight">\(\forall\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is even.</p>
-<p>Similarly, <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> if and only if it is definable as
-[
-A(\alpha) \iff \forall x_1 : \dots :  \Qu x_n ; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
-]
-where <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> is bounded, and <span class="math notranslate nohighlight">\(\Qu\)</span> is ``<span class="math notranslate nohighlight">\(\forall\)</span>’’ if <span class="math notranslate nohighlight">\(n\)</span> is odd, and “<span class="math notranslate nohighlight">\(\exists\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is even.</p>
+<p>Similarly, <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> if and only if it is definable as</p>
+<div class="math notranslate nohighlight">
+\[
+	A(\alpha) \iff \forall x_1 \: \dots \:  \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> is bounded, and <span class="math notranslate nohighlight">\(\Qu\)</span> is ``<span class="math notranslate nohighlight">\(\forall\)</span>’’ if <span class="math notranslate nohighlight">\(n\)</span> is odd, and “<span class="math notranslate nohighlight">\(\exists\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is even.</p>
 <p>What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form <span class="math notranslate nohighlight">\(\alpha(t_1) = t_2\)</span>. This implies that the truth of an atomic formula is determined by \emph{finitely many positions} in <span class="math notranslate nohighlight">\(\alpha\)</span>. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
 <p>On the other hand, the reals for which a bounded formula does not hold are definable by a bounded formula, too, since the negation of a bounded formula is again a bounded formula. We conclude that <strong>bounded formulas define clopen subsets of <span class="math notranslate nohighlight">\(\Baire\)</span></strong>. On the other hand, if we have <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>-code for a set <span class="math notranslate nohighlight">\(A\)</span> and its complement, we can decide the relation <span class="math notranslate nohighlight">\(A(\alpha\Rest{n})\)</span> computably in the code.</p>
 <p>Hence we can formulate the Normal Form above as follows.
@@ -476,19 +477,12 @@ is defined as</p>
 <p>For all <span class="math notranslate nohighlight">\(n \geq 1\)</span>, <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>, <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, and <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span> are closed under <span class="math notranslate nohighlight">\(\exists^\leq\)</span> and <span class="math notranslate nohighlight">\(\forall^\leq\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. In this case we use the coding function <span class="math notranslate nohighlight">\(\pi: \Nstr \to \Nat\)</span>. We can define a \emph{partial inverse}</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    (k)_i = \begin{cases}
-        \sigma_i  &amp; \text{if $k = \pi(\sigma)$ for a finite sequence } \sigma = (\sigma_0,\ldots,\sigma_{n-1}) \\&amp; \text{  and } i &lt; n\\
-        0  &amp; \text{otherwise.} 
-    \end{cases}
-\end{split}\]</div>
-<p>Using this decoding, we have the following equivalence, which immediately imply the closure properties for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, respectively, and hence also for <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span>.</p>
+<p>Proof. In this case we use the computable coding function <span class="math notranslate nohighlight">\(\pi: \Nat \to \Nstr\)</span>.
+We have the following equivalence, which immediately implies the closure properties for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, respectively, and hence also for <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span>.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{eqnarray*}
-    \forall m \le n \, \exists k \; P(m,k) &amp;\iff&amp; \exists k  \, \forall m \le n \:  P(m,(k)_m)\\
-    \exists m \le n  \, \forall k \; P(m,k) &amp;\iff&amp; \forall k  \, \exists m \le n \;   P(m,(k)_m)
+    \forall m \le n \, \exists k \; P(m,k) &amp;\iff&amp; \exists k  \, \forall m \le n \:  P(m,\pi(k)_m)\\
+    \exists m \le n  \, \forall k \; P(m,k) &amp;\iff&amp; \forall k  \, \exists m \le n \;   P(m,\pi(k)_m)
 \end{eqnarray*}\]</div>
 </div>
 <p>Finally, the levels of the Borel hierarchy are closed under continuous preimages.</p>
@@ -499,7 +493,7 @@ is defined as</p>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. This follows easily by induction on <span class="math notranslate nohighlight">\(n\)</span>, since open and closed sets are closed under continuous preimages.</p>
-<p>However, we can also argue via definability, since by Proposition \ref{prop-cont-tree} one can represent a continuous function through a monotone mapping <span class="math notranslate nohighlight">\(\psi\)</span> from finite strings to finite strings.  We have</p>
+<p>However, we can also argue via definability, since by <a class="reference internal" href="trees.html#prop-product-continuous">Proposition 8</a> one can represent a continuous function through a monotone mapping <span class="math notranslate nohighlight">\(\psi\)</span> from finite strings to finite strings.  We have</p>
 <div class="math notranslate nohighlight">
 \[
     f^{-1}(A) = \{ \alpha \colon A(f(\alpha)) \}.
@@ -536,7 +530,17 @@ is defined as</p>
 <div class="proposition-content section" id="proof-content">
 <p>For any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, there exists a set <span class="math notranslate nohighlight">\(U \subseteq \Baire \times \Baire\)</span> that is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>).</p>
 </div>
-</div><p>The result can be generalized to hold for arbitrary Polish spaces <span class="math notranslate nohighlight">\(X\)</span>, i.e.\ for any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, there exists a set <span class="math notranslate nohighlight">\(U \subseteq \Baire \times X\)</span> that is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_n(X)\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n(X)\)</span>). To achieve this, one has to define Borel codes for <span class="math notranslate nohighlight">\(X\)</span>. This can be done by fixing a countable basis <span class="math notranslate nohighlight">\((V_n)\)</span> of the topology of <span class="math notranslate nohighlight">\(X\)</span>, and assign a sequence <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> the open set</p>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We can use the Borel codes defined in the previous lecture.</p>
+<p>First of all, notice that for each <span class="math notranslate nohighlight">\(n \geq 1\)</span>, the set of all <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\BP\)</span>)-codes is homeomorphic to <span class="math notranslate nohighlight">\(\Baire\)</span>. This follows easily from the definition of the Borel codes. Hence, if we fix <span class="math notranslate nohighlight">\(n\)</span>, every <span class="math notranslate nohighlight">\(\gamma\in \Baire\)</span> represents a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>)-code of a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) set, and every such set in turn has a code <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
+<p>For fixed <span class="math notranslate nohighlight">\(n\)</span>, we let</p>
+<div class="math notranslate nohighlight">
+\[
+    U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and $\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by $\gamma$}\}.
+\]</div>
+<p>It follows easily from <a class="reference internal" href="codingBorel.html#thm-fundamental">Theorem 16</a> that <span class="math notranslate nohighlight">\(U_n\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>), too, and it is clear from the definition of <span class="math notranslate nohighlight">\(U\)</span> that it parametrizes <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>).</p>
+</div>
+<p>The result can be generalized to hold for arbitrary Polish spaces <span class="math notranslate nohighlight">\(X\)</span>, i.e. for any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, there exists a set <span class="math notranslate nohighlight">\(U \subseteq \Baire \times X\)</span> that is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_n(X)\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n(X)\)</span>). To achieve this, one has to define Borel codes for <span class="math notranslate nohighlight">\(X\)</span>. This can be done by fixing a countable basis <span class="math notranslate nohighlight">\((V_n)\)</span> of the topology of <span class="math notranslate nohighlight">\(X\)</span>, and assign a sequence <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> the open set</p>
 <div class="math notranslate nohighlight">
 \[
 	U_\gamma = \bigcup_{n \in \Nat} V_{\gamma(n)}.
@@ -644,8 +648,8 @@ is defined as</p>
 \]</div>
 <p>Since each <span class="math notranslate nohighlight">\(\xi_n\)</span> is countable, <span class="math notranslate nohighlight">\(\xi\)</span> is countable.</p>
 </div>
-<p>Borel sets of infinite order have the same closure properties as their counterparts of finite order. The proofs, however have to proceed by induction using the topological properties of <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> and <span class="math notranslate nohighlight">\(\BP[\xi]\)</span>, since the characterization via definability in arithmetic is no longer available – the arithmetical hierarchy reaches only to <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
-<p>Similarly, the Hierarchy Theorem (<a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>) extends to the transfinite levels. For the finite levels, this followed from the existence of universal sets for each level.</p>
+<p>Borel sets of infinite order have the <strong>same closure properties as their counterparts of finite order</strong>. The proofs, however have to proceed by induction using the topological properties of <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> and <span class="math notranslate nohighlight">\(\BP[\xi]\)</span>, since the characterization via definability in arithmetic is no longer available – the arithmetical hierarchy reaches only to <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<p>Similarly, the Hierarchy Theorem (<a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>) extends to the transfinite levels. As the finite levels, this follows from the existence of universal sets for each level, which we now prove for the full hierarchy.</p>
 <div class="proof proposition admonition" id="prop-universal-general">
 <p class="admonition-title"><span class="caption-number">Proposition 31 </span></p>
 <div class="proposition-content section" id="proof-content">
@@ -675,6 +679,25 @@ is defined as</p>
 <p>where <span class="math notranslate nohighlight">\((\gamma)_n\)</span> denotes the <span class="math notranslate nohighlight">\(n\)</span>th column of <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
 <p>It is straightforward to check that <span class="math notranslate nohighlight">\(U_\xi\)</span> is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\BS[\xi]\)</span>. (Note that any set <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> can be represented as <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span> with <span class="math notranslate nohighlight">\(A_n \in \BP[\xi_n]\)</span>, since <span class="math notranslate nohighlight">\((\xi_n+1)\)</span> is cofinal in <span class="math notranslate nohighlight">\(\xi\)</span>.)</p>
 </div>
+<p>The construction of the universal <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> set bears some resemblance to the construction of a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code. It is indeed possible to formally define Borel codes for <em>all</em> Borel sets.</p>
+<div class="proof definition admonition" id="def-Borel-codes-transfinite">
+<p class="admonition-title"><span class="caption-number">Definition 24 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
+<ul class="simple">
+<li><p>Suppose <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0) = 1\)</span> and <span class="math notranslate nohighlight">\(\gamma' \in \Baire\)</span>. <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for the open set</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    U = \bigcup_{\gamma'(\sigma) = 0} \Cyl{\sigma}
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=2\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> is a Borel code for <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma'_m\)</span> is a Borel code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span>.</p></li>
+</ul>
+</div>
+</div><p>Any Borel code induces a well-founded tree (given by the coding nodes <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span>,and <span class="math notranslate nohighlight">\(3\)</span>). We can also consider Borel sets with computable codes. But there is no more straightforward connection with effective definability. It is possible to do this, but it requires a careful development of what it means to take effective unions along countable ordinals. We will return to it later.</p>
+<p>Looking further ahead, one can show that <strong>the set of all Borel codes is not Borel</strong> (exercise – use a diagonalization argument as in the proof of <a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>). At the heart of this lies the fact that we cannot, in a Borel way, describe whether an arbitrary tree over <span class="math notranslate nohighlight">\(\Nat\)</span> is well-founded or not. This will soon be a central topic when we turn our investigation to analytic and co-analytic sets.</p>
 <!-- This general proof of existence of universal sets does not use Borel codes, since those were defined only for Borel sets of finite order. The proof of {prf:ref}`prop-universal-general` provides an idea how we could extend the definition of a code to transfinite orders: Take unions of codes along a cofinal sequence. However, we would like to this in an effective way, and it is not clear how to do this for infinite ordinals in general. 
 
 We will later return to this question, when we introduce computable ordinals}.
