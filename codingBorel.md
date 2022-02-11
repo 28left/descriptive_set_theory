@@ -179,7 +179,7 @@ But before we do that, we observe a basic fact about how we can compute with cod
 ```{prf:lemma}
 :label: lem-Borel-codes-clopen
 
-Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$, and $\delta$ is a computable $\bSigma^0_1$ code for a clopen set $C \subseteq \Baire$. We can, uniformly in $\gamma$, compute Borel codes for $B \cap C$ and $B \cup C$ of the same Borel complexity as $\gamma$.
+Suppose $\gamma$ is a Borel code of finite order representing a set $B \subseteq \Baire$. Suppose further $C \subseteq \Baire$ is clopen and both $C$ and its complement have computable $\bSigma^0_1$ codes. We can, uniformly in $\gamma$, compute Borel codes for $B \cap C$ and $B \cup C$ of the same Borel complexity as $\gamma$.
 ```
 
 ```{prf:lemma}
