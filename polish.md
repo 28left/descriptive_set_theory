@@ -171,7 +171,7 @@ Every uncountable closed subset of a Polish space contains a perfect subset.
 Finally, we can characterize Polish spaces as continuous images of Baire space.
 
 ```{prf:theorem}
-:label: thm-polish_cont_image_Baire
+:label: thm-polish-cont-image-Baire
 
 Every Polish space $X$ is the continuous image of $\Baire$.
 ```

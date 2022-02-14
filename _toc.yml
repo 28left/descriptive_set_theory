@@ -16,6 +16,7 @@ parts:
       - file: choice.md
       - file: codingBorel.md
       - file: structureBorel.md
+      - file: imagesBorel.md
   - caption: Reference
     chapters:
       - file: bibliography
