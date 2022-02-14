@@ -27,6 +27,8 @@
 Let $A$ be a set. Recall that the set of all finite sequences over $A$ is denoted by $\Str[A]$, while $A^\Nat$ denotes the set of all infinite sequences over $A$. Given $\alpha \in A^\N$, $n \in \N$, $\alpha\Rest{n}$ denotes the initial segment of $\alpha$ of length $n$.
 
 ```{prf:definition}
+:label: def-tree
+
 A **tree** on $A$ is a set $T \subseteq \Str[A]$ that is **closed under prefixes**, that is
 
 $$
@@ -41,6 +43,8 @@ A sequence $\alpha \in A^\Nat$ is an **infinite path through** or **infinite bra
 An important criterion for a tree to have infinite paths is the following.
 
 ```{prf:theorem} König's Lemma
+:label: thm-Koenigs-lemma
+
 Any tree $T$ with infinitely many nodes that is **finite branching** (i.e. each node has at most finitely many immediate extensions) has an infinite path.
 ```
 
@@ -99,6 +103,8 @@ Continuing inductively, we define an infinite path $\alpha$ through $T'$, and it
 We can combine the $\leq_{\lex}$-ordering with the inverse prefix order to obtain a linear ordering of $\Str[A]$. This ordering has the nice property that if $A$ is well-ordered and $T$ is well-founded, then the ordering restricted to $T$ is a well-ordering. 
 
 ```{prf:definition}
+:label: def-Kleene-Brouwer
+
 The **Kleene-Brouwer ordering** $\leq_{\KB}$ of $\Str[A]$ is defined as follows.
 
 $\qquad \sigma \leq_{\KB} \tau$ $\quad :\Leftrightarrow \quad$  $\sigma \Sgeq \tau \;\;$  or $\; \; \sigma \leq_{\lex} \tau$.

@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytic Sets &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Continuous Images of Borel sets" href="imagesBorel.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Polish spaces
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perfect_subsets_R.html">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urysohn.html">
+   Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Borel.html">
+   Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measure.html">
+   Measure and Baire Category
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="choice.html">
+   The Axiom of Choice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="codingBorel.html">
+   Coding Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="structureBorel.html">
+   The Structure of Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imagesBorel.html">
+   Continuous Images of Borel sets
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Analytic Sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/analytic.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/28left/descriptive_set_theory"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fanalytic.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-lusin-separation-theorem">
+   The Lusin Separation Theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-souslin-operation">
+   The Souslin operation
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Analytic Sets</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-lusin-separation-theorem">
+   The Lusin Separation Theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-souslin-operation">
+   The Souslin operation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="analytic-sets">
+<h1>Analytic Sets<a class="headerlink" href="#analytic-sets" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
+\newcommand{\PP}[1][n]{\bPi^1_{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\DeclareMathOperator{\diam}{diam}\]</div>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 26 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A subset <span class="math notranslate nohighlight">\(A\)</span> of a Polish space <span class="math notranslate nohighlight">\(X\)</span> is <strong>analytic</strong> if it is empty or there exists a continuous function <span class="math notranslate nohighlight">\(f:\Baire \to X\)</span> such that <span class="math notranslate nohighlight">\(f(\Baire) = A\)</span>.</p>
+</div>
+</div><p>We will later see that the analytic sets correspond to the sets definable by means of <span class="math notranslate nohighlight">\(\Sigma^1_1\)</span> formulas, that is formulas in the language of second order arithmetic that have <strong>one existential function quantifier</strong>.</p>
+<p>Therefore, we will denote the analytic subsets of <span class="math notranslate nohighlight">\(X\)</span> also by</p>
+<div class="math notranslate nohighlight">
+\[
+	\PS[1](X).
+\]</div>
+<p>Here are some simple properties of analytic sets.</p>
+<div class="proof proposition admonition" id="prop-prop-analytic">
+<p class="admonition-title"><span class="caption-number">Proposition 32 </span></p>
+<div class="proposition-content section" id="proof-content">
+<ul class="simple">
+<li><p><strong>(i)</strong> Every Borel set is analytic.</p></li>
+<li><p><strong>(ii)</strong> A continuous image of analytic set is analytic.</p></li>
+<li><p><strong>(iii)</strong> Countable unions of analytic sets are analytic.</p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (i): This follows directly from Corollary <a class="reference internal" href="imagesBorel.html#cor-Borel-image-closed">Corollary 8</a>.</p>
+<p>(ii): The composition of continuous mappings is continuous.</p>
+<p>(iii): Let <span class="math notranslate nohighlight">\(A_n\)</span> be analytic and <span class="math notranslate nohighlight">\(f_n:\Baire \to X\)</span> such that <span class="math notranslate nohighlight">\(f_n(\Baire) = A_n\)</span>. Define <span class="math notranslate nohighlight">\(f: \Baire \to X\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+    f(m,\alpha) = f_n(\alpha).
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is continuous and <span class="math notranslate nohighlight">\(f(\Baire) = \bigcup_n A_n\)</span>.</p>
+</div>
+<p>We can use our previous results about Borel sets to give various equivalent characterizations of analytic sets.</p>
+<div class="proof proposition admonition" id="characterization-analytic">
+<p class="admonition-title"><span class="caption-number">Proposition 33 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>For a subset <span class="math notranslate nohighlight">\(A\)</span> of a Polish space <span class="math notranslate nohighlight">\(X\)</span>, the following are equivalent.</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\(A\)</span> is analytic,</p></li>
+<li><p><strong>(ii)</strong> <span class="math notranslate nohighlight">\(A\)</span> is empty or there exists a Polish space <span class="math notranslate nohighlight">\(Y\)</span> and a continuous <span class="math notranslate nohighlight">\(f:Y \to X\)</span> such that <span class="math notranslate nohighlight">\(f(Y) = A\)</span>,</p></li>
+<li><p><strong>(iii)</strong> <span class="math notranslate nohighlight">\(A\)</span> is empty or there exists a Polish space <span class="math notranslate nohighlight">\(Y\)</span>, a Borel set <span class="math notranslate nohighlight">\(B \subseteq Y\)</span> and a continuous <span class="math notranslate nohighlight">\(f:Y \to X\)</span> such that <span class="math notranslate nohighlight">\(f(B) = A\)</span>.</p></li>
+<li><p><strong>(iv)</strong> <span class="math notranslate nohighlight">\(A\)</span> is the <strong>projection</strong> of a closed set <span class="math notranslate nohighlight">\(F \subseteq \Baire \times X\)</span> along <span class="math notranslate nohighlight">\(\Baire\)</span>,</p></li>
+<li><p><strong>(v)</strong> <span class="math notranslate nohighlight">\(A\)</span> is the projection of a <span class="math notranslate nohighlight">\(\BP[2]\)</span> set <span class="math notranslate nohighlight">\(G \subseteq  \Cant \times   X  \)</span> along <span class="math notranslate nohighlight">\(\Cant\)</span>,</p></li>
+<li><p><strong>(vi)</strong> <span class="math notranslate nohighlight">\(A\)</span> is the projection of a Borel set <span class="math notranslate nohighlight">\(B \subseteq X\times Y\)</span> along <span class="math notranslate nohighlight">\(Y\)</span>, for some Polish space <span class="math notranslate nohighlight">\(Y\)</span>.</p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (i) <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> (ii): Follows from <a class="reference internal" href="polish.html#thm-polish-cont-image-Baire">Theorem 5</a> and Proposition <a class="reference internal" href="#prop-prop-analytic">Proposition 32</a> (ii).</p>
+<p>(ii) <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> (iii): Follows from Corollary <a class="reference internal" href="imagesBorel.html#cor-Borel-image-closed">Corollary 8</a> and <a class="reference internal" href="#prop-prop-analytic">Proposition 32</a> (ii).</p>
+<p>(i) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (iv):  Let <span class="math notranslate nohighlight">\(f:\Baire \to X\)</span> be continuous, <span class="math notranslate nohighlight">\(f(\Baire) = A\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+    x \in A \iff \exists \alpha \; (\alpha,x) \in \Op{Graph}(f),
+\]</div>
+<p>hence <span class="math notranslate nohighlight">\(A\)</span> is the projection of the closed set <span class="math notranslate nohighlight">\(\Op{Graph}(f)\)</span> along <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+<p>(iv) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (iii): Clear, since projections are continuous.</p>
+<p>(iv) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (v): <span class="math notranslate nohighlight">\(\Baire\)</span> is homeomorphic to a <span class="math notranslate nohighlight">\(\BP[2]\)</span> subset of <span class="math notranslate nohighlight">\(\Cant\)</span>. (Exercise!)</p>
+<p>(v) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (vi), (vi) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (iii): Obvious.</p>
+</div>
+<div class="section" id="the-lusin-separation-theorem">
+<h2>The Lusin Separation Theorem<a class="headerlink" href="#the-lusin-separation-theorem" title="Permalink to this headline">¶</a></h2>
+<p>In a course on computability theory one learns that there are <strong>effectively inseparable</strong> disjoint computably enumerable sets. i.e. disjoint c.e. sets <span class="math notranslate nohighlight">\(W,Z \subseteq \Nat\)</span> for which no recursive set <span class="math notranslate nohighlight">\(A\)</span> exists with <span class="math notranslate nohighlight">\(W \subseteq A\)</span> and <span class="math notranslate nohighlight">\(A \cap Z = \emptyset\)</span>.</p>
+<p>In contrast to this, disjoint analytic sets can always be separated by a Borel set, they are <strong>Borel separable</strong>.</p>
+<div class="proof theorem admonition" id="thm-Lusin-separation">
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Lusin)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A, B \subseteq X\)</span> be disjoint analytic sets. Then there exists a Borel <span class="math notranslate nohighlight">\(C \subseteq X\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+        A \subseteq C \quad \text{ and } \quad B \cap C = \emptyset,
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(f:\Baire \to A\)</span> and <span class="math notranslate nohighlight">\(g:\Baire \to B\)</span> be continuous surjections.</p>
+<p>We argue by contradiction. The key idea is: if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are Borel inseparable, then, for some <span class="math notranslate nohighlight">\(i,j \in \Nat\)</span>, <span class="math notranslate nohighlight">\(A_{\Tup{i}} = f(\Cyl{\Tup{i}})\)</span> and <span class="math notranslate nohighlight">\(B_{\Tup{j}} = g(\Cyl{\Tup{j}})\)</span> are Borel inseparable.</p>
+<p>This follows from the observation</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((*)\quad \)</span> if the sets  <span class="math notranslate nohighlight">\(R_{m,n}\)</span> separate the sets  <span class="math notranslate nohighlight">\(P_m, \, Q_n\)</span> (for each <span class="math notranslate nohighlight">\(m,n\)</span>), then\
+, <span class="math notranslate nohighlight">\(R = \bigcup_m \bigcap_n R_{m,n}\)</span> separates the sets <span class="math notranslate nohighlight">\(P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.\)</span></p>
+</div></blockquote>
+<p>So, by using <span class="math notranslate nohighlight">\((*)\)</span> repeatedly, we can construct sequences <span class="math notranslate nohighlight">\(\alpha, \beta \in \Baire\)</span> such that for all <span class="math notranslate nohighlight">\(n\)</span>,
+<span class="math notranslate nohighlight">\(A_{\alpha\Rest{n}}\)</span> and <span class="math notranslate nohighlight">\(B_{\beta\Rest{n}}\)</span> are Borel inseparable, where</p>
+<div class="math notranslate nohighlight">
+\[
+    A_{\sigma} = f(\Cyl{\sigma}) \quad \text{ and } \quad B_{\sigma} = g(\Cyl{\sigma}).
+\]</div>
+<p>Then we have <span class="math notranslate nohighlight">\(f(\alpha) \in A\)</span> and <span class="math notranslate nohighlight">\(g(\beta) \in B\)</span>, and since <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint, <span class="math notranslate nohighlight">\(f(\alpha) \neq g(\beta)\)</span>. Let <span class="math notranslate nohighlight">\(U,V\)</span> be disjoint open sets such that <span class="math notranslate nohighlight">\(f(\alpha) \in U\)</span>, <span class="math notranslate nohighlight">\(g(\beta) \in V\)</span>. Since <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are continuous, there exists <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(f(\Cyl{\alpha\Rest{N}}) \subseteq U\)</span>, <span class="math notranslate nohighlight">\(g(\Cyl{\beta\Rest{N}}) \subseteq V\)</span>, hence <span class="math notranslate nohighlight">\(U\)</span> separates <span class="math notranslate nohighlight">\(A_{\alpha\Rest{N}}\)</span> and <span class="math notranslate nohighlight">\(B_{\beta\Rest{N}}\)</span>, contradiction.</p>
+</div>
+<p>The Separation Theorem yields a nice characterization of the Borel sets.</p>
+<div class="proof theorem admonition" id="Borel-Delta11">
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Souslin)</p>
+<div class="theorem-content section" id="proof-content">
+<p>If a set <span class="math notranslate nohighlight">\(A\)</span> and its complement <span class="math notranslate nohighlight">\(\Co{A}\)</span> are both analytic, then <span class="math notranslate nohighlight">\(A\)</span> is Borel.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. In <a class="reference internal" href="#thm-Lusin-separation">Theorem 23</a>, chose <span class="math notranslate nohighlight">\(A = A\)</span> and <span class="math notranslate nohighlight">\(B = \Co{A}\)</span>.</p>
+</div>
+<p>Sets whose complement is analytic are called <strong>co-analytic</strong>. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space <span class="math notranslate nohighlight">\(X\)</span> are denoted by</p>
+<div class="math notranslate nohighlight">
+\[
+	\PP[1](X).
+\]</div>
+<p>If we define, again analogy to the Borel hierarchy,</p>
+<div class="math notranslate nohighlight">
+\[
+	\bDelta^1_1(X) = \PS[1](X) \cap \PP[1](X),
+\]</div>
+<p>then Souslin’s Theorem states that</p>
+<div class="math notranslate nohighlight">
+\[
+	\Op{Borel}(X) = \bDelta^1_1(X).
+\]</div>
+</div>
+<div class="section" id="the-souslin-operation">
+<h2>The Souslin operation<a class="headerlink" href="#the-souslin-operation" title="Permalink to this headline">¶</a></h2>
+<p>Souslin schemes give an alternative presentation of analytic sets which will be useful later.</p>
+<div class="proof definition admonition" id="definition-5">
+<p class="admonition-title"><span class="caption-number">Definition 27 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A <strong>Souslin scheme</strong> on a Polish space <span class="math notranslate nohighlight">\(X\)</span> is a family <span class="math notranslate nohighlight">\(P = (P_\sigma)_{\sigma\in \Nstr}\)</span> of subsets of <span class="math notranslate nohighlight">\(X\)</span> indexed by <span class="math notranslate nohighlight">\(\Nstr\)</span>.</p>
+<p>The <strong>Souslin operation</strong> <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> for a Souslin scheme is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathcal{A}P = \bigcup_{\alpha \in \Baire}  \bigcap_{n \in \Nat} P_{\alpha\Rest{n}}.
+\]</div>
+<p>This means</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$**$}
+    x \in \mathcal{A}P \iff \exists \alpha \in \Baire \; \forall n \in \Nat \; x \in P_{\alpha\Rest{n}}.
+\end{equation*}\]</div>
+</div>
+</div><p>The analytic sets are precisely the sets that can be obtained by Souslin operations on closed sets. If a <span class="math notranslate nohighlight">\(\Gamma\)</span> is a class of sets in various Polish spaces, we let</p>
+<div class="math notranslate nohighlight">
+\[
+	\mathcal{A}\Gamma = \{\mathcal{A}P \colon \text{ $P = (P_\sigma)$ is a Souslin scheme with $P_\sigma \in \Gamma$ for all $\sigma$} \}.
+\]</div>
+<div class="proof theorem admonition" id="analytic-Souslin-op">
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
+<div class="theorem-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[
+	\PS[1](X)\; = \; \mathcal{A}\,\BP[1](X).
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(f: \Baire \to X\)</span> is continuous with <span class="math notranslate nohighlight">\(f(\Baire) = A\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x \in A \iff \exists \alpha  \in \Baire \; \forall n \in \Nat \; x \in \Cl{f(\Cyl{\alpha\Rest{n}})}.
+\end{equation*}\]</div>
+<p>Hence if we let <span class="math notranslate nohighlight">\(P_\sigma = \Cl{f(\Cyl{\sigma})}\)</span>, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A =  \mathcal{A} \,P,
+\end{equation*}\]</div>
+<p>for the Souslin scheme <span class="math notranslate nohighlight">\(P = (P_\sigma)\)</span>.</p>
+<p>To see that any set <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(\mathcal{A}\,\BP[1](X)\)</span> is analytic, consider (<span class="math notranslate nohighlight">\(**\)</span>). If the <span class="math notranslate nohighlight">\(P_\sigma\)</span> are closed, the condition</p>
+<div class="math notranslate nohighlight">
+\[
+    (\alpha,x) \in F \iff \forall n \in \Nat \; x \in P_{\alpha\Rest{n}}
+\]</div>
+<p>defines a closed subset of <span class="math notranslate nohighlight">\(\Baire \times X\)</span> such that <span class="math notranslate nohighlight">\(A\)</span> is the projection of <span class="math notranslate nohighlight">\(F\)</span> along <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+</div>
+<p>Note that the Souslin scheme <span class="math notranslate nohighlight">\((P_\sigma)\)</span> used in the previous proof has the additional property that</p>
+<div class="math notranslate nohighlight">
+\[
+	\sigma \Sleq \tau \quad \Rightarrow \quad P_\sigma \supseteq P_\tau.
+\]</div>
+<p>Such Souslin schemes are called <strong>regular</strong>. By replacing <span class="math notranslate nohighlight">\(P_\sigma\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[
+	Q_\sigma = \bigcap_{\tau \Sleq \sigma} P_\tau,
+\]</div>
+<p>we obtain a Souslin scheme <span class="math notranslate nohighlight">\(Q = (Q_\sigma)\)</span> with <span class="math notranslate nohighlight">\(\mathcal{A} \, Q = \mathcal{A}\, P\)</span>. Moreover, if the <span class="math notranslate nohighlight">\(P_\sigma\)</span> are from a class <span class="math notranslate nohighlight">\(\Gamma\)</span>, and <span class="math notranslate nohighlight">\(\Gamma\)</span> is closed under finite intersections, then the <span class="math notranslate nohighlight">\(Q_\sigma\)</span> are also from <span class="math notranslate nohighlight">\(\Gamma\)</span>. In particular, any analytic set can be obtained from a regular Souslin scheme of closed sets via the Souslin operation.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="imagesBorel.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Continuous Images of Borel sets</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

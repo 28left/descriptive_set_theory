@@ -160,6 +160,11 @@
    Continuous Images of Borel sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analytic.html">
+   Analytic Sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -351,7 +356,7 @@
 \newcommand{\Cyl}[1]{N_{#1}}\\\DeclareMathOperator{\KB}{KB}
 \DeclareMathOperator{\lex}{lex}\end{aligned}\end{align} \]</div>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a set. Recall that the set of all finite sequences over <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\Str[A]\)</span>, while <span class="math notranslate nohighlight">\(A^\Nat\)</span> denotes the set of all infinite sequences over <span class="math notranslate nohighlight">\(A\)</span>. Given <span class="math notranslate nohighlight">\(\alpha \in A^\N\)</span>, <span class="math notranslate nohighlight">\(n \in \N\)</span>, <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span> denotes the initial segment of <span class="math notranslate nohighlight">\(\alpha\)</span> of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<div class="proof definition admonition" id="definition-0">
+<div class="proof definition admonition" id="def-tree">
 <p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>A <strong>tree</strong> on <span class="math notranslate nohighlight">\(A\)</span> is a set <span class="math notranslate nohighlight">\(T \subseteq \Str[A]\)</span> that is <strong>closed under prefixes</strong>, that is</p>
@@ -363,7 +368,7 @@
 </div><p>We call the elements of <span class="math notranslate nohighlight">\(T\)</span> <strong>nodes</strong>.</p>
 <p>A sequence <span class="math notranslate nohighlight">\(\alpha \in A^\Nat\)</span> is an <strong>infinite path through</strong> or <strong>infinite branch of</strong> <span class="math notranslate nohighlight">\(T\)</span> if for all <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\alpha\Rest{n} = (\alpha_0, \alpha_1, \dots, \alpha_{n-1}) \in T\)</span>. We denote the set of infinite paths through <span class="math notranslate nohighlight">\(T\)</span> by <span class="math notranslate nohighlight">\([T]\)</span>.</p>
 <p>An important criterion for a tree to have infinite paths is the following.</p>
-<div class="proof theorem admonition" id="theorem-1">
+<div class="proof theorem admonition" id="thm-Koenigs-lemma">
 <p class="admonition-title"><span class="caption-number">Theorem 7 </span> (König’s Lemma)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Any tree <span class="math notranslate nohighlight">\(T\)</span> with infinitely many nodes that is <strong>finite branching</strong> (i.e. each node has at most finitely many immediate extensions) has an infinite path.</p>
@@ -406,7 +411,7 @@ The <strong>lexicographical ordering</strong> <span class="math notranslate nohi
 <p>Continuing inductively, we define an infinite path <span class="math notranslate nohighlight">\(\alpha\)</span> through <span class="math notranslate nohighlight">\(T'\)</span>, and it is straightforward to check that <span class="math notranslate nohighlight">\(\alpha\)</span> is a  <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-minimal element of <span class="math notranslate nohighlight">\([T']\)</span> and hence of <span class="math notranslate nohighlight">\([T]\)</span>.</p>
 </div>
 <p>We can combine the <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-ordering with the inverse prefix order to obtain a linear ordering of <span class="math notranslate nohighlight">\(\Str[A]\)</span>. This ordering has the nice property that if <span class="math notranslate nohighlight">\(A\)</span> is well-ordered and <span class="math notranslate nohighlight">\(T\)</span> is well-founded, then the ordering restricted to <span class="math notranslate nohighlight">\(T\)</span> is a well-ordering.</p>
-<div class="proof definition admonition" id="definition-3">
+<div class="proof definition admonition" id="def-Kleene-Brouwer">
 <p class="admonition-title"><span class="caption-number">Definition 5 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>The <strong>Kleene-Brouwer ordering</strong> <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span> of <span class="math notranslate nohighlight">\(\Str[A]\)</span> is defined as follows.</p>
