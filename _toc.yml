@@ -17,6 +17,7 @@ parts:
       - file: codingBorel.md
       - file: structureBorel.md
       - file: imagesBorel.md
+      - file: analytic.md
   - caption: Reference
     chapters:
       - file: bibliography
