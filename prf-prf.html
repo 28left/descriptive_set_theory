@@ -151,6 +151,11 @@
    The Structure of Borel Sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imagesBorel.html">
+   Continuous Images of Borel sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -253,6 +258,7 @@
    <a href="#cap-cantor-bendixson"><strong>cantor-bendixson</strong></a> | 
    <a href="#cap-closed-is-Gdelta"><strong>closed-is-Gdelta</strong></a> | 
    <a href="#cap-cor-BP-algebra-small"><strong>cor-BP-algebra-small</strong></a> | 
+   <a href="#cap-cor-Borel-image-closed"><strong>cor-Borel-image-closed</strong></a> | 
    <a href="#cap-cor-Borel-measurable"><strong>cor-Borel-measurable</strong></a> | 
    <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
    <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
@@ -265,6 +271,7 @@
    <a href="#cap-def-Borel-codes-transfinite"><strong>def-Borel-codes-transfinite</strong></a> | 
    <a href="#cap-def-Borel-finite"><strong>def-Borel-finite</strong></a> | 
    <a href="#cap-def-Lebesgue"><strong>def-Lebesgue</strong></a> | 
+   <a href="#cap-def-Lusin-scheme"><strong>def-Lusin-scheme</strong></a> | 
    <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
    <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
    <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
@@ -288,6 +295,7 @@
    <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
    <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
+   <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
    <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
    <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
@@ -333,14 +341,16 @@
    <a href="#cap-thm-Bernstein"><strong>thm-Bernstein</strong></a> | 
    <a href="#cap-thm-Borel-arith"><strong>thm-Borel-arith</strong></a> | 
    <a href="#cap-thm-Borel-clopen"><strong>thm-Borel-clopen</strong></a> | 
+   <a href="#cap-thm-Borel-injective"><strong>thm-Borel-injective</strong></a> | 
    <a href="#cap-thm-Borel-proper"><strong>thm-Borel-proper</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
+   <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
    <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
-   <a href="#cap-thm-polish_cont_image_Baire"><strong>thm-polish_cont_image_Baire</strong></a>
+   <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a>
    </div>
 
    <table class="indextable modindextable">
@@ -367,6 +377,14 @@
        <td></td>
        <td>
        <a href="measure.html#cor-BP-algebra-small"><code class="xref">cor-BP-algebra-small</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Borel-image-closed"><td></td><td>
+       <strong>cor-Borel-image-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#cor-Borel-image-closed"><code class="xref">cor-Borel-image-closed</code></a> <em>(imagesBorel)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-Borel-measurable"><td></td><td>
@@ -463,6 +481,14 @@
        <td></td>
        <td>
        <a href="measure.html#def-Lebesgue"><code class="xref">def-Lebesgue</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Lusin-scheme"><td></td><td>
+       <strong>def-Lusin-scheme</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#def-Lusin-scheme"><code class="xref">def-Lusin-scheme</code></a> <em>(imagesBorel)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-effective-Borel"><td></td><td>
@@ -647,6 +673,14 @@
        <td></td>
        <td>
        <a href="subsets_Polish.html#lem-closed-clopen"><code class="xref">lem-closed-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-closed-retract-Baire"><td></td><td>
+       <strong>lem-closed-retract-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#lem-closed-retract-Baire"><code class="xref">lem-closed-retract-Baire</code></a> <em>(imagesBorel)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lemma-1"><td></td><td>
@@ -966,7 +1000,7 @@
      <tr>
        <td></td>
        <td>
-       <a href="Borel.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Borel)</em></td><td>
+       <a href="imagesBorel.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(imagesBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-7"><td></td><td>
@@ -1009,6 +1043,14 @@
        <a href="subsets_Polish.html#thm-Borel-clopen"><code class="xref">thm-Borel-clopen</code></a> <em>(subsets_Polish)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-injective"><td></td><td>
+       <strong>thm-Borel-injective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Borel-injective"><code class="xref">thm-Borel-injective</code></a> <em>(imagesBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Borel-proper"><td></td><td>
        <strong>thm-Borel-proper</strong></td><td></td></tr>
      <tr>
@@ -1023,6 +1065,14 @@
        <td></td>
        <td>
        <a href="polish.html#thm-Cantor-embedding"><code class="xref">thm-Cantor-embedding</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Polish-bijection-Baire"><td></td><td>
+       <strong>thm-Polish-bijection-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Polish-bijection-Baire"><code class="xref">thm-Polish-bijection-Baire</code></a> <em>(imagesBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Vitali-nonmeasurable"><td></td><td>
@@ -1065,12 +1115,12 @@
        <a href="codingBorel.html#thm-fundamental"><code class="xref">thm-fundamental</code></a> <em>(codingBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-polish_cont_image_Baire"><td></td><td>
-       <strong>thm-polish_cont_image_Baire</strong></td><td></td></tr>
+     <tr class="cap" id="cap-thm-polish-cont-image-Baire"><td></td><td>
+       <strong>thm-polish-cont-image-Baire</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="polish.html#thm-polish_cont_image_Baire"><code class="xref">thm-polish_cont_image_Baire</code></a> <em>(polish)</em></td><td>
+       <a href="polish.html#thm-polish-cont-image-Baire"><code class="xref">thm-polish-cont-image-Baire</code></a> <em>(polish)</em></td><td>
        <em>theorem</em></td></tr>
    </table>
 

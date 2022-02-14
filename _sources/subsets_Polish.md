@@ -1,3 +1,4 @@
+(chap-subspace-Polish)=
 # Subspaces of Polish Spaces
 ```{math}
 \newcommand{\Nat}{\mathbb{N}}
@@ -165,6 +166,7 @@ Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in th
 
 ```{prf:theorem}
 :label: thm-Borel-clopen
+
 Let $X$ be a Polish space with topology $\mathcal{O}$, and suppose $B \subseteq X$ is Borel. Then there exists 
 a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal{O}$ and $\mathcal{O}'$ give rise to the same class of Borel sets in $X$, and $B$ is clopen with respect to $\mathcal{O}'$.
 ```
