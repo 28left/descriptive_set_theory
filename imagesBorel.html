@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="Analytic Sets" href="analytic.html" />
     <link rel="prev" title="The Structure of Borel Sets" href="structureBorel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -158,6 +158,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Continuous Images of Borel sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analytic.html">
+   Analytic Sets
   </a>
  </li>
 </ul>
@@ -388,7 +393,7 @@ F =  \bigcup_{i,n\in \Nat} E^{(i)}_n \; \text{ and } \;  \Cl{E^{(i)}_n} \subsete
 <p>The mapping <span class="math notranslate nohighlight">\(f\)</span> associated with this Lusin scheme is surjective due to (a) and (d).
 Furthermore, the domain <span class="math notranslate nohighlight">\(D\)</span> of <span class="math notranslate nohighlight">\(f\)</span> is closed: Suppose <span class="math notranslate nohighlight">\(\alpha_n \in D\)</span>, <span class="math notranslate nohighlight">\(\alpha_n \to \alpha\)</span>. Then <span class="math notranslate nohighlight">\(f(\alpha_n)\)</span> is Cauchy, since for <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N\)</span> with <span class="math notranslate nohighlight">\(\diam(F_{\alpha\Rest{N}}) &lt; \eps\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> such that <span class="math notranslate nohighlight">\(\alpha_n\Rest{N} = \alpha\Rest{N}\)</span> for all <span class="math notranslate nohighlight">\(n \geq n_0\)</span>, so that <span class="math notranslate nohighlight">\(d(f(\alpha_n),f(\alpha_m)) &lt; \eps\)</span> whenever <span class="math notranslate nohighlight">\(n,m \geq n_0\)</span>. Since <span class="math notranslate nohighlight">\(X\)</span> is Polish <span class="math notranslate nohighlight">\(f(\alpha_n) \to y\)</span> for some <span class="math notranslate nohighlight">\(y \in X\)</span>.</p>
 <p>By (d) we have <span class="math notranslate nohighlight">\(y \in \bigcap_n \Cl{F_{\alpha\Rest{n}}} = \bigcap_n F_{\alpha\Rest{n}}\)</span>, hence <span class="math notranslate nohighlight">\(\alpha \in D\)</span> and <span class="math notranslate nohighlight">\(f(\alpha) = y\)</span>.</p>
-<p>It remains to show that we can extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous surjection <span class="math notranslate nohighlight">\(g: \Baire \to X\)</span>. Say a closed subset <span class="math notranslate nohighlight">\(C\)</span> of a topological space <span class="math notranslate nohighlight">\(Y\)</span> is a <strong>retract</strong> of <span class="math notranslate nohighlight">\(Y\)</span> if there exists a continuous surjection <span class="math notranslate nohighlight">\(g: Y \to F\)</span> such that <span class="math notranslate nohighlight">\(g\Rest{C} = \Op{id}\)</span>.</p>
+<p>It remains to show that we can extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous surjection <span class="math notranslate nohighlight">\(g: \Baire \to X\)</span>. Say a closed subset <span class="math notranslate nohighlight">\(C\)</span> of a topological space <span class="math notranslate nohighlight">\(Y\)</span> is a <strong>retract</strong> of <span class="math notranslate nohighlight">\(Y\)</span> if there exists a continuous surjection <span class="math notranslate nohighlight">\(g: Y \to C\)</span> such that <span class="math notranslate nohighlight">\(g\Rest{C} = \Op{id}\)</span>.</p>
 <div class="proof lemma admonition" id="lem-closed-retract-Baire">
 <p class="admonition-title"><span class="caption-number">Lemma 11 </span></p>
 <div class="lemma-content section" id="proof-content">
@@ -415,7 +420,7 @@ Furthermore, the domain <span class="math notranslate nohighlight">\(D\)</span> 
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Enlarge the topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> of <span class="math notranslate nohighlight">\(X\)</span> to a topology <span class="math notranslate nohighlight">\(\mathcal{O}_B\)</span> for which <span class="math notranslate nohighlight">\(B\)</span> is clopen.
-By Theorem \ref{thm-subset-Polish}, <span class="math notranslate nohighlight">\((B,\mathcal{O}_B\Rest{B})\)</span> is a Polish space. By the previous theorem, there exists a closed set <span class="math notranslate nohighlight">\(F \subset \Baire\)</span> and a continuous bijection <span class="math notranslate nohighlight">\(f:\Baire \to (B,\mathcal{O}_B\Rest{B})\)</span>. Since <span class="math notranslate nohighlight">\(\mathcal{O} \subseteq \mathcal{O}_B\)</span>, <span class="math notranslate nohighlight">\(f:F \to B\)</span> is continuous for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, too.</p>
+By <a class="reference internal" href="subsets_Polish.html#thm-subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\((B,\mathcal{O}_B\Rest{B})\)</span> is a Polish space. By the previous theorem, there exists a closed set <span class="math notranslate nohighlight">\(F \subset \Baire\)</span> and a continuous bijection <span class="math notranslate nohighlight">\(f:\Baire \to (B,\mathcal{O}_B\Rest{B})\)</span>. Since <span class="math notranslate nohighlight">\(\mathcal{O} \subseteq \mathcal{O}_B\)</span>, <span class="math notranslate nohighlight">\(f:F \to B\)</span> is continuous for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, too.</p>
 </div>
 <p>This theorem can be reversed in the following sense.</p>
 <div class="proof theorem admonition" id="thm-Borel-injective">
@@ -440,8 +445,8 @@ Define</p>
 \[\begin{equation*}
     F:= \{(\alpha,\beta) \colon \exists \gamma  \; (\alpha,\gamma,\beta) \in U\}.
 \end{equation*}\]</div>
-<p>We claim that this set is \emph{<span class="math notranslate nohighlight">\(\Baire\)</span>-universal for the set of all continuous images of closed subsets of <span class="math notranslate nohighlight">\(\Baire\)</span>}:</p>
-<p>On the one hand <span class="math notranslate nohighlight">\(F\)</span> is a projection of a closed set, and projections are continuous. This also also implies that all the sets <span class="math notranslate nohighlight">\(F_\beta = \{ \alpha \colon (\alpha,\beta) \in F \}\)</span> are continuous images of a closed set.</p>
+<p>We claim that this set is <em><span class="math notranslate nohighlight">\(\Baire\)</span>-universal for the set of all continuous images of closed subsets of <span class="math notranslate nohighlight">\(\Baire\)</span></em>:</p>
+<p>On the one hand <span class="math notranslate nohighlight">\(F\)</span> is a projection of a closed set, and projections are continuous. This implies that all the sets <span class="math notranslate nohighlight">\(F_\beta = \{ \alpha \colon (\alpha,\beta) \in F \}\)</span> are continuous images of a closed set.</p>
 <p>On the other hand, if <span class="math notranslate nohighlight">\(f: C \to \Baire\)</span> is continuous with <span class="math notranslate nohighlight">\(C \subseteq \Baire\)</span> closed (possibly empty) and <span class="math notranslate nohighlight">\(f(C) = A\)</span>, then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -457,7 +462,7 @@ Define</p>
 \[
     A = F_\beta.
 \]</div>
-<p><span class="math notranslate nohighlight">\(F\)</span> cannot be Borel: Otherwise <span class="math notranslate nohighlight">\(D_F = \{\alpha \colon (\alpha,\alpha) \not\in F \}\)</span> were Borel. By Corollary \ref{cor-Borel-image-closed}, every Borel set is the image of a closed set under a continuous mapping. This implies that <span class="math notranslate nohighlight">\(D_F = F_\beta\)</span>. But then</p>
+<p><span class="math notranslate nohighlight">\(F\)</span> cannot be Borel: Otherwise <span class="math notranslate nohighlight">\(D_F = \{\alpha \colon (\alpha,\alpha) \not\in F \}\)</span> were Borel. By <a class="reference internal" href="#cor-Borel-image-closed">Corollary 8</a>, every Borel set is the image of a closed set under a continuous mapping. This implies that <span class="math notranslate nohighlight">\(D_F = F_\beta\)</span>. But then</p>
 <div class="math notranslate nohighlight">
 \[
     \beta \in D_F \iff \beta \in F_\beta \iff (\beta,\beta) \in F \iff \beta \not\in D_F,  
@@ -499,10 +504,10 @@ Define</p>
             <p class="prev-next-title">The Structure of Borel Sets</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="analytic.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Analytic Sets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

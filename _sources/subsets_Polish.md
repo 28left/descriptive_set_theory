@@ -85,7 +85,7 @@ $\Delta$ is closed in the product space $\prod_n Y_n$ and hence Polish, and this
 Hence every $G_\delta$ subset of a Polish space is Polish. This is as far as we can get.
 
 ```{prf:theorem} Mazurkiewicz
-:label: subsets-Polish
+:label: thm-subsets-Polish
 
 A subset of a Polish space is Polish if and only if it is $G_\delta$.
 ```
@@ -131,7 +131,7 @@ $$
 x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y,
 $$
 
-contradiction. This completes the proof of {prf:ref}`subsets-Polish`.
+contradiction. This completes the proof of {prf:ref}`thm-subsets-Polish`.
 
 
 ## Borel set as clopen sets
@@ -168,7 +168,7 @@ Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in th
 :label: thm-Borel-clopen
 
 Let $X$ be a Polish space with topology $\mathcal{O}$, and suppose $B \subseteq X$ is Borel. Then there exists 
-a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal{O}$ and $\mathcal{O}'$ give rise to the same class of Borel sets in $X$, and $B$ is clopen with respect to $\mathcal{O}'$.
+a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal{O}$ and $\mathcal{O}'$ give rise to the same class of Borel sets in $X$, and $B$ is clopen with respect to $\mathcal{O}'$.
 ```
 
 ```{prf:proof}
@@ -211,7 +211,7 @@ In a Polish space, every uncountable Borel set has a perfect subset.
 ```
 
 ```{prf:proof}
-Let $(X,\mathcal{O})$ be Polish, and assume $B \subseteq X$ is Borel. We can choose a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ so that $B$ becomes clopen, but the Borel sets stay the same. By {prf:ref}`subsets-Polish`, $B$ is Polish with respect to the subspace topology $\mathcal{O}'|_B$
+Let $(X,\mathcal{O})$ be Polish, and assume $B \subseteq X$ is Borel. We can choose a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ so that $B$ becomes clopen, but the Borel sets stay the same. By {prf:ref}`thm-subsets-Polish`, $B$ is Polish with respect to the subspace topology $\mathcal{O}'|_B$
 
 Suppose $B$ is uncountable. By {prf:ref}`thm-Cantor-embedding` there exists a continuous injection $f$ from $\Cant$ (with respect to the standard topology) into $(B,\mathcal{O}'|_B)$. 	
 

@@ -91,7 +91,7 @@ Furthermore, the domain $D$ of $f$ is closed: Suppose $\alpha_n \in D$, $\alpha_
 
 By (d) we have $y \in \bigcap_n \Cl{F_{\alpha\Rest{n}}} = \bigcap_n F_{\alpha\Rest{n}}$, hence $\alpha \in D$ and $f(\alpha) = y$.
 
-It remains to show that we can extend $f$ to a continuous surjection $g: \Baire \to X$. Say a closed subset $C$ of a topological space $Y$ is a **retract** of $Y$ if there exists a continuous surjection $g: Y \to F$ such that $g\Rest{C} = \Op{id}$.
+It remains to show that we can extend $f$ to a continuous surjection $g: \Baire \to X$. Say a closed subset $C$ of a topological space $Y$ is a **retract** of $Y$ if there exists a continuous surjection $g: Y \to C$ such that $g\Rest{C} = \Op{id}$.
 
 ```{prf:lemma}
 :label: lem-closed-retract-Baire
@@ -127,7 +127,7 @@ For every Borel subset $B$ of a Polish space $X$ there exists a closed set $F \s
 
 ```{prf:proof}	
 Enlarge the topology $\mathcal{O}$ of $X$ to a topology $\mathcal{O}_B$ for which $B$ is clopen. 
-By Theorem \ref{thm-subset-Polish}, $(B,\mathcal{O}_B\Rest{B})$ is a Polish space. By the previous theorem, there exists a closed set $F \subset \Baire$ and a continuous bijection $f:\Baire \to (B,\mathcal{O}_B\Rest{B})$. Since $\mathcal{O} \subseteq \mathcal{O}_B$, $f:F \to B$ is continuous for $\mathcal{O}$, too. 
+By {prf:ref}`thm-subsets-Polish`, $(B,\mathcal{O}_B\Rest{B})$ is a Polish space. By the previous theorem, there exists a closed set $F \subset \Baire$ and a continuous bijection $f:\Baire \to (B,\mathcal{O}_B\Rest{B})$. Since $\mathcal{O} \subseteq \mathcal{O}_B$, $f:F \to B$ is continuous for $\mathcal{O}$, too. 
 ```  
 
 This theorem can be reversed in the following sense.
@@ -157,9 +157,9 @@ Define
     F:= \{(\alpha,\beta) \colon \exists \gamma  \; (\alpha,\gamma,\beta) \in U\}.
 \end{equation*}
 
-We claim that this set is \emph{$\Baire$-universal for the set of all continuous images of closed subsets of $\Baire$}:	
+We claim that this set is *$\Baire$-universal for the set of all continuous images of closed subsets of $\Baire$*:	
 
-On the one hand $F$ is a projection of a closed set, and projections are continuous. This also also implies that all the sets $F_\beta = \{ \alpha \colon (\alpha,\beta) \in F \}$ are continuous images of a closed set.
+On the one hand $F$ is a projection of a closed set, and projections are continuous. This implies that all the sets $F_\beta = \{ \alpha \colon (\alpha,\beta) \in F \}$ are continuous images of a closed set.
 
 On the other hand, if $f: C \to \Baire$ is continuous with $C \subseteq \Baire$ closed (possibly empty) and $f(C) = A$, then  
 \begin{equation*}
@@ -178,7 +178,7 @@ $$
     A = F_\beta.
 $$
 
-$F$ cannot be Borel: Otherwise $D_F = \{\alpha \colon (\alpha,\alpha) \not\in F \}$ were Borel. By Corollary \ref{cor-Borel-image-closed}, every Borel set is the image of a closed set under a continuous mapping. This implies that $D_F = F_\beta$. But then
+$F$ cannot be Borel: Otherwise $D_F = \{\alpha \colon (\alpha,\alpha) \not\in F \}$ were Borel. By {prf:ref}`cor-Borel-image-closed`, every Borel set is the image of a closed set under a continuous mapping. This implies that $D_F = F_\beta$. But then
 
 $$
     \beta \in D_F \iff \beta \in F_\beta \iff (\beta,\beta) \in F \iff \beta \not\in D_F,  

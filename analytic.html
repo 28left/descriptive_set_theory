@@ -365,7 +365,7 @@
 </ul>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (i): This follows directly from Corollary <a class="reference internal" href="imagesBorel.html#cor-Borel-image-closed">Corollary 8</a>.</p>
+<p>Proof. (i): This follows directly from <a class="reference internal" href="imagesBorel.html#cor-Borel-image-closed">Corollary 8</a>.</p>
 <p>(ii): The composition of continuous mappings is continuous.</p>
 <p>(iii): Let <span class="math notranslate nohighlight">\(A_n\)</span> be analytic and <span class="math notranslate nohighlight">\(f_n:\Baire \to X\)</span> such that <span class="math notranslate nohighlight">\(f_n(\Baire) = A_n\)</span>. Define <span class="math notranslate nohighlight">\(f: \Baire \to X\)</span> by</p>
 <div class="math notranslate nohighlight">
@@ -389,7 +389,7 @@
 </ul>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (i) <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> (ii): Follows from <a class="reference internal" href="polish.html#thm-polish-cont-image-Baire">Theorem 5</a> and Proposition <a class="reference internal" href="#prop-prop-analytic">Proposition 32</a> (ii).</p>
+<p>Proof. (i) <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> (ii): Follows from <a class="reference internal" href="polish.html#thm-polish-cont-image-Baire">Theorem 5</a> and <a class="reference internal" href="#prop-prop-analytic">Proposition 32</a> (ii).</p>
 <p>(ii) <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> (iii): Follows from Corollary <a class="reference internal" href="imagesBorel.html#cor-Borel-image-closed">Corollary 8</a> and <a class="reference internal" href="#prop-prop-analytic">Proposition 32</a> (ii).</p>
 <p>(i) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> (iv):  Let <span class="math notranslate nohighlight">\(f:\Baire \to X\)</span> be continuous, <span class="math notranslate nohighlight">\(f(\Baire) = A\)</span>. Then</p>
 <div class="math notranslate nohighlight">
@@ -404,7 +404,7 @@
 <div class="section" id="the-lusin-separation-theorem">
 <h2>The Lusin Separation Theorem<a class="headerlink" href="#the-lusin-separation-theorem" title="Permalink to this headline">¶</a></h2>
 <p>In a course on computability theory one learns that there are <strong>effectively inseparable</strong> disjoint computably enumerable sets. i.e. disjoint c.e. sets <span class="math notranslate nohighlight">\(W,Z \subseteq \Nat\)</span> for which no recursive set <span class="math notranslate nohighlight">\(A\)</span> exists with <span class="math notranslate nohighlight">\(W \subseteq A\)</span> and <span class="math notranslate nohighlight">\(A \cap Z = \emptyset\)</span>.</p>
-<p>In contrast to this, disjoint analytic sets can always be separated by a Borel set, they are <strong>Borel separable</strong>.</p>
+<p>In contrast to this, disjoint analytic sets can always be separated by a Borel set – they are <strong>Borel separable</strong>.</p>
 <div class="proof theorem admonition" id="thm-Lusin-separation">
 <p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Lusin)</p>
 <div class="theorem-content section" id="proof-content">
@@ -419,8 +419,7 @@
 <p>We argue by contradiction. The key idea is: if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are Borel inseparable, then, for some <span class="math notranslate nohighlight">\(i,j \in \Nat\)</span>, <span class="math notranslate nohighlight">\(A_{\Tup{i}} = f(\Cyl{\Tup{i}})\)</span> and <span class="math notranslate nohighlight">\(B_{\Tup{j}} = g(\Cyl{\Tup{j}})\)</span> are Borel inseparable.</p>
 <p>This follows from the observation</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\((*)\quad \)</span> if the sets  <span class="math notranslate nohighlight">\(R_{m,n}\)</span> separate the sets  <span class="math notranslate nohighlight">\(P_m, \, Q_n\)</span> (for each <span class="math notranslate nohighlight">\(m,n\)</span>), then\
-, <span class="math notranslate nohighlight">\(R = \bigcup_m \bigcap_n R_{m,n}\)</span> separates the sets <span class="math notranslate nohighlight">\(P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.\)</span></p>
+<div><p><span class="math notranslate nohighlight">\((*)\quad \)</span> if the sets  <span class="math notranslate nohighlight">\(R_{m,n}\)</span> separate the sets  <span class="math notranslate nohighlight">\(P_m, \, Q_n\)</span> (for each <span class="math notranslate nohighlight">\(m,n\)</span>), then <span class="math notranslate nohighlight">\(R = \bigcup_m \bigcap_n R_{m,n}\)</span> separates the sets <span class="math notranslate nohighlight">\(P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.\)</span></p>
 </div></blockquote>
 <p>So, by using <span class="math notranslate nohighlight">\((*)\)</span> repeatedly, we can construct sequences <span class="math notranslate nohighlight">\(\alpha, \beta \in \Baire\)</span> such that for all <span class="math notranslate nohighlight">\(n\)</span>,
 <span class="math notranslate nohighlight">\(A_{\alpha\Rest{n}}\)</span> and <span class="math notranslate nohighlight">\(B_{\beta\Rest{n}}\)</span> are Borel inseparable, where</p>

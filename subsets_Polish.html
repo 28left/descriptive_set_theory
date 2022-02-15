@@ -160,6 +160,11 @@
    Continuous Images of Borel sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analytic.html">
+   Analytic Sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -366,7 +371,7 @@ with respect to which <span class="math notranslate nohighlight">\(U\)</span> is
 <p><span class="math notranslate nohighlight">\(\Delta\)</span> is closed in the product space <span class="math notranslate nohighlight">\(\prod_n Y_n\)</span> and hence Polish, and this property pushes over to <span class="math notranslate nohighlight">\(\bigcap_n Y_n\)</span> (see <a class="reference internal" href="polish.html#properties-polish">Proposition 1</a>).</p>
 </div>
 <p>Hence every <span class="math notranslate nohighlight">\(G_\delta\)</span> subset of a Polish space is Polish. This is as far as we can get.</p>
-<div class="proof theorem admonition" id="subsets-Polish">
+<div class="proof theorem admonition" id="thm-subsets-Polish">
 <p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Mazurkiewicz)</p>
 <div class="theorem-content section" id="proof-content">
 <p>A subset of a Polish space is Polish if and only if it is <span class="math notranslate nohighlight">\(G_\delta\)</span>.</p>
@@ -403,7 +408,7 @@ g(x) = y,
 \[
 x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y,
 \]</div>
-<p>contradiction. This completes the proof of <a class="reference internal" href="#subsets-Polish">Theorem 11</a>.</p>
+<p>contradiction. This completes the proof of <a class="reference internal" href="#thm-subsets-Polish">Theorem 11</a>.</p>
 <div class="section" id="borel-set-as-clopen-sets">
 <h2>Borel set as clopen sets<a class="headerlink" href="#borel-set-as-clopen-sets" title="Permalink to this headline">¶</a></h2>
 <p>More complicated Borel sets in Polish spaces are not Polish anymore in the subspace topology, as we just saw. But what if we are allowed to change the topology? In the process, we would like to “preserve” as much as possible of the original space. It turns out we can change the topology so that a given Borel set becomes clopen while inducing the same family of Borel sets overall.</p>
@@ -432,7 +437,7 @@ x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y,
 <p class="admonition-title"><span class="caption-number">Theorem 12 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space with topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, and suppose <span class="math notranslate nohighlight">\(B \subseteq X\)</span> is Borel. Then there exists
-a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> such that <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> give rise to the same class of Borel sets in <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(B\)</span> is clopen with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>.</p>
+a finer Polish topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> such that <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> give rise to the same class of Borel sets in <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(B\)</span> is clopen with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> be the family of all subsets <span class="math notranslate nohighlight">\(A\)</span> of <span class="math notranslate nohighlight">\(X\)</span> for which a finer topology exists that has the same Borel sets as <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and in which <span class="math notranslate nohighlight">\(A\)</span> is clopen.</p>
@@ -461,7 +466,7 @@ a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \sups
 <p>In a Polish space, every uncountable Borel set has a perfect subset.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> be Polish, and assume <span class="math notranslate nohighlight">\(B \subseteq X\)</span> is Borel. We can choose a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> so that <span class="math notranslate nohighlight">\(B\)</span> becomes clopen, but the Borel sets stay the same. By <a class="reference internal" href="#subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\(B\)</span> is Polish with respect to the subspace topology <span class="math notranslate nohighlight">\(\mathcal{O}'|_B\)</span></p>
+<p>Proof. Let <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> be Polish, and assume <span class="math notranslate nohighlight">\(B \subseteq X\)</span> is Borel. We can choose a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> so that <span class="math notranslate nohighlight">\(B\)</span> becomes clopen, but the Borel sets stay the same. By <a class="reference internal" href="#thm-subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\(B\)</span> is Polish with respect to the subspace topology <span class="math notranslate nohighlight">\(\mathcal{O}'|_B\)</span></p>
 <p>Suppose <span class="math notranslate nohighlight">\(B\)</span> is uncountable. By <a class="reference internal" href="polish.html#thm-Cantor-embedding">Theorem 3</a> there exists a continuous injection <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(\Cant\)</span> (with respect to the standard topology) into <span class="math notranslate nohighlight">\((B,\mathcal{O}'|_B)\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> is finer than <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, <span class="math notranslate nohighlight">\(f\)</span> is continuous with respect to <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, too. Since <span class="math notranslate nohighlight">\(\Cant\)</span> is compact, <span class="math notranslate nohighlight">\(f(\Cant)\)</span> is closed with respect to <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>. Finally, <span class="math notranslate nohighlight">\(f(\Cant)\)</span> has no isolated points with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>, which then also holds for the coarser topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>.</p>
 <p>Therefore, <span class="math notranslate nohighlight">\(B\)</span> has a perfect subset.</p>
