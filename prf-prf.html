@@ -161,6 +161,11 @@
    Analytic Sets
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regularityAnalytic.html">
+   Regularity Properties of Analytic sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -268,6 +273,8 @@
    <a href="#cap-cor-BP-algebra-small"><strong>cor-BP-algebra-small</strong></a> | 
    <a href="#cap-cor-Borel-image-closed"><strong>cor-Borel-image-closed</strong></a> | 
    <a href="#cap-cor-Borel-measurable"><strong>cor-Borel-measurable</strong></a> | 
+   <a href="#cap-cor-analytic-Souslin-closed"><strong>cor-analytic-Souslin-closed</strong></a> | 
+   <a href="#cap-cor-analytic-measurable"><strong>cor-analytic-measurable</strong></a> | 
    <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
    <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
    <a href="#cap-cor-rationals-not-pi2"><strong>cor-rationals-not-pi2</strong></a> | 
@@ -304,6 +311,8 @@
    <a href="#cap-lem-Borel-codes-clopen"><strong>lem-Borel-codes-clopen</strong></a> | 
    <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
    <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
+   <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
+   <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
@@ -321,6 +330,8 @@
    <a href="#cap-prop-Borel-universal"><strong>prop-Borel-universal</strong></a> | 
    <a href="#cap-prop-Borel_closure-preimages"><strong>prop-Borel_closure-preimages</strong></a> | 
    <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
+   <a href="#cap-prop-Souslin-Baire"><strong>prop-Souslin-Baire</strong></a> | 
+   <a href="#cap-prop-Souslin-Lebesgue"><strong>prop-Souslin-Lebesgue</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
    <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
@@ -358,9 +369,11 @@
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
+   <a href="#cap-thm-analytic-universally-measurable"><strong>thm-analytic-universally-measurable</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
    <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
+   <a href="#cap-thm-idempotent-Souslin"><strong>thm-idempotent-Souslin</strong></a> | 
    <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
    <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a>
    </div>
@@ -429,6 +442,22 @@
        <td></td>
        <td>
        <a href="measure.html#cor-Borel-measurable"><code class="xref">cor-Borel-measurable</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-analytic-Souslin-closed"><td></td><td>
+       <strong>cor-analytic-Souslin-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#cor-analytic-Souslin-closed"><code class="xref">cor-analytic-Souslin-closed</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-analytic-measurable"><td></td><td>
+       <strong>cor-analytic-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#cor-analytic-measurable"><code class="xref">cor-analytic-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-hier-proper"><td></td><td>
@@ -719,6 +748,22 @@
        <a href="codingBorel.html#lem-Borel-codes-shift"><code class="xref">lem-Borel-codes-shift</code></a> <em>(codingBorel)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-approx-category"><td></td><td>
+       <strong>lem-approx-category</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#lem-approx-category"><code class="xref">lem-approx-category</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-approx-measurable"><td></td><td>
+       <strong>lem-approx-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#lem-approx-measurable"><code class="xref">lem-approx-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
        <strong>lem-closed-clopen</strong></td><td></td></tr>
      <tr>
@@ -853,6 +898,22 @@
        <td></td>
        <td>
        <a href="trees.html#prop-KB-wellorder"><code class="xref">prop-KB-wellorder</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Souslin-Baire"><td></td><td>
+       <strong>prop-Souslin-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#prop-Souslin-Baire"><code class="xref">prop-Souslin-Baire</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Souslin-Lebesgue"><td></td><td>
+       <strong>prop-Souslin-Lebesgue</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#prop-Souslin-Lebesgue"><code class="xref">prop-Souslin-Lebesgue</code></a> <em>(regularityAnalytic)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-Urysohn-embedding"><td></td><td>
@@ -1151,6 +1212,14 @@
        <a href="Borel.html#thm-Young"><code class="xref">thm-Young</code></a> <em>(Borel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-analytic-universally-measurable"><td></td><td>
+       <strong>thm-analytic-universally-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#thm-analytic-universally-measurable"><code class="xref">thm-analytic-universally-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-cantor_bendixson-polish"><td></td><td>
        <strong>thm-cantor_bendixson-polish</strong></td><td></td></tr>
      <tr>
@@ -1173,6 +1242,14 @@
        <td></td>
        <td>
        <a href="codingBorel.html#thm-fundamental"><code class="xref">thm-fundamental</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-idempotent-Souslin"><td></td><td>
+       <strong>thm-idempotent-Souslin</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#thm-idempotent-Souslin"><code class="xref">thm-idempotent-Souslin</code></a> <em>(regularityAnalytic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-polish-cont-image-Baire"><td></td><td>

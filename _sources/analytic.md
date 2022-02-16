@@ -173,7 +173,7 @@ $$
 Souslin schemes give an alternative presentation of analytic sets which will be useful later.
 
 ```{prf:definition}
-A **Souslin scheme** on a Polish space $X$ is a family $P = (P_\sigma)_{\sigma\in \Nstr}$ of subsets of $X$ indexed by $\Nstr$.
+A **Souslin scheme** on a set $X$ is a family $P = (P_\sigma)_{\sigma\in \Nstr}$ of subsets of $X$ indexed by $\Nstr$.
 
 The **Souslin operation** $\mathcal{A}$ for a Souslin scheme is given by 
 
@@ -187,7 +187,7 @@ This means
 \end{equation*}
 ```
 
-The analytic sets are precisely the sets that can be obtained by Souslin operations on closed sets. If a $\Gamma$ is a class of sets in various Polish spaces, we let
+The analytic sets are precisely the sets that can be obtained by Souslin operations on closed sets. If a $\Gamma$ is a family of subsets of a set $X$, we let
 
 $$
 	\mathcal{A}\Gamma = \{\mathcal{A}P \colon \text{ $P = (P_\sigma)$ is a Souslin scheme with $P_\sigma \in \Gamma$ for all $\sigma$} \}.
