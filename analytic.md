@@ -52,7 +52,7 @@ Here are some simple properties of analytic sets.
 ```
 
 ```{prf:proof}
-(i): This follows directly from Corollary {prf:ref}`cor-Borel-image-closed`.
+(i): This follows directly from {prf:ref}`cor-Borel-image-closed`.
 
 (ii): The composition of continuous mappings is continuous.
 
@@ -80,7 +80,7 @@ For a subset $A$ of a Polish space $X$, the following are equivalent.
 ```
 
 ```{prf:proof}
-(i) $\Leftrightarrow$ (ii): Follows from {prf:ref}`thm-polish-cont-image-Baire` and Proposition {prf:ref}`prop-prop-analytic` (ii).
+(i) $\Leftrightarrow$ (ii): Follows from {prf:ref}`thm-polish-cont-image-Baire` and {prf:ref}`prop-prop-analytic` (ii).
 
 (ii) $\Leftrightarrow$ (iii): Follows from Corollary {prf:ref}`cor-Borel-image-closed` and {prf:ref}`prop-prop-analytic` (ii).
 
@@ -104,7 +104,7 @@ hence $A$ is the projection of the closed set $\Op{Graph}(f)$ along $\Baire$.
 
 In a course on computability theory one learns that there are **effectively inseparable** disjoint computably enumerable sets. i.e. disjoint c.e. sets $W,Z \subseteq \Nat$ for which no recursive set $A$ exists with $W \subseteq A$ and $A \cap Z = \emptyset$. 
 
-In contrast to this, disjoint analytic sets can always be separated by a Borel set, they are **Borel separable**.
+In contrast to this, disjoint analytic sets can always be separated by a Borel set -- they are **Borel separable**.
 
 ```{prf:theorem} Lusin
 :label: thm-Lusin-separation
@@ -123,8 +123,7 @@ We argue by contradiction. The key idea is: if $A$ and $B$ are Borel inseparable
 
 This follows from the observation
 
->$(*)\quad $ if the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then\\
-\, $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
+>$(*)\quad $ if the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
 
 So, by using $(*)$ repeatedly, we can construct sequences $\alpha, \beta \in \Baire$ such that for all $n$,
 $A_{\alpha\Rest{n}}$ and $B_{\beta\Rest{n}}$ are Borel inseparable, where
@@ -174,7 +173,7 @@ $$
 Souslin schemes give an alternative presentation of analytic sets which will be useful later.
 
 ```{prf:definition}
-A **Souslin scheme** on a Polish space $X$ is a family $P = (P_\sigma)_{\sigma\in \Nstr}$ of subsets of $X$ indexed by $\Nstr$.
+A **Souslin scheme** on a set $X$ is a family $P = (P_\sigma)_{\sigma\in \Nstr}$ of subsets of $X$ indexed by $\Nstr$.
 
 The **Souslin operation** $\mathcal{A}$ for a Souslin scheme is given by 
 
@@ -188,7 +187,7 @@ This means
 \end{equation*}
 ```
 
-The analytic sets are precisely the sets that can be obtained by Souslin operations on closed sets. If a $\Gamma$ is a class of sets in various Polish spaces, we let
+The analytic sets are precisely the sets that can be obtained by Souslin operations on closed sets. If a $\Gamma$ is a family of subsets of a set $X$, we let
 
 $$
 	\mathcal{A}\Gamma = \{\mathcal{A}P \colon \text{ $P = (P_\sigma)$ is a Souslin scheme with $P_\sigma \in \Gamma$ for all $\sigma$} \}.

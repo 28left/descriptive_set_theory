@@ -18,6 +18,7 @@ parts:
       - file: structureBorel.md
       - file: imagesBorel.md
       - file: analytic.md
+      - file: regularityAnalytic.md 
   - caption: Reference
     chapters:
       - file: bibliography
