@@ -147,6 +147,8 @@ If a set $A$ and its complement $\Co{A}$ are both analytic, then $A$ is Borel.
 In {prf:ref}`thm-Lusin-separation`, chose $A = A$ and $B = \Co{A}$.
 ```
 
+It follows from {prf:ref}`thm-Souslin-Borel-images` and the {prf:ref}`Lusin separation theorem <thm-Lusin-separation>` that the analytic sets are not closed under complements. 
+
 Sets whose complement is analytic are called **co-analytic**. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space $X$ are denoted by
 
 $$
@@ -228,10 +230,10 @@ $$
 	\sigma \Sleq \tau \quad \Rightarrow \quad P_\sigma \supseteq P_\tau.
 $$
 
-Such Souslin schemes are called **regular**. By replacing $P_\sigma$ with 
+Such Souslin schemes are called **regular**. By replacing any Souslin scheme $P_\sigma$ with 
 
 $$
 	Q_\sigma = \bigcap_{\tau \Sleq \sigma} P_\tau,
 $$
 
-we obtain a Souslin scheme $Q = (Q_\sigma)$ with $\mathcal{A} \, Q = \mathcal{A}\, P$. Moreover, if the $P_\sigma$ are from a class $\Gamma$, and $\Gamma$ is closed under finite intersections, then the $Q_\sigma$ are also from $\Gamma$. In particular, any analytic set can be obtained from a regular Souslin scheme of closed sets via the Souslin operation. 
+we obtain a regular Souslin scheme $Q = (Q_\sigma)$ with $\mathcal{A} \, Q = \mathcal{A}\, P$. Moreover, if the $P_\sigma$ are from a class $\Gamma$, and $\Gamma$ is closed under finite intersections, then the $Q_\sigma$ are also from $\Gamma$. In particular, **any analytic set can be obtained from a regular Souslin scheme of closed sets** via the Souslin operation. 

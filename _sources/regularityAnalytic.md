@@ -26,7 +26,6 @@
 \newcommand{\PS}[1][n]{\bSigma^1_{#1}}
 \newcommand{\PP}[1][n]{\bPi^1_{#1}}
 \newcommand{\Op}[1]{\operatorname{#1}}
-\DeclareMathOperator{\diam}{diam}
 ```
 
 
@@ -132,7 +131,7 @@ measurable.
 ```{prf:proposition}
 :label: prop-Souslin-Lebesgue
 
-The class $\mathbf{LM}$ of all Lebesgue measurable sets $\subseteq \Real$ is closed under the Souslin operation, i.e.\
+The class $\mathbf{LM}$ of all Lebesgue measurable sets $\subseteq \Real$ is closed under the Souslin operation, that is,
 
 $$
     \mathcal{A} \; \mathbf{LM} \subseteq  \mathbf{LM}.
@@ -150,7 +149,7 @@ Note that $A^\Estr = \mathcal{A}\, A$.
 
 By the previous lemma, there exist measurable sets $B^\sigma \supseteq A^\sigma$ so that for every measurable $B \supseteq A^\sigma$, $B^\sigma \setminus B$ is null. 
 
-By replacing $B^\sigma$ with $B^\sigma \cap \, A_\sigma$, we can further assume $B^\sigma \subseteq A_\sigma$. This makes $(B^\sigma)$ a regular Souslin scheme.
+By replacing $B^\sigma$ with $B^\sigma \cap \, A_\sigma$, we can further assume $B^\sigma \subseteq A_\sigma$, and also that $(B^\sigma)$ is a regular Souslin scheme.
 
 Now let $C_\sigma = B^\sigma \setminus \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}$. Each $C_\sigma$ is a nullset, by the choice of the $B^\sigma$ and the fact that  $A^\sigma = \bigcup_{n \in \Nat} A^{\sigma\Conc\Tup{n}} \subseteq \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}$ . Hence $C= \bigcup_{\sigma} C_\sigma$ is a nullset, too.
 

@@ -146,6 +146,8 @@ For a proof (which uses facts about analytic sets), see {cite}`Kechris:1995a` (I
 As announced in the introduction, Borel sets are *not* closed under *arbitrary* continuous mappings.
 
 ```{prf:theorem} Souslin
+:label: thm-Souslin-Borel-images
+
 The Borel sets are not closed under continuous images.
 ```
 

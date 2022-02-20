@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="The Projective Hierarchy" href="projective.html" />
     <link rel="prev" title="Analytic Sets" href="analytic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -104,7 +104,7 @@
   Polish spaces
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="perfect_subsets_R.html">
    Perfect Subsets of the Real Line
@@ -125,6 +125,13 @@
    Trees
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Borel hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Borel.html">
    Borel Sets
@@ -160,6 +167,13 @@
    Continuous Images of Borel sets
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projective sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="analytic.html">
    Analytic Sets
@@ -168,6 +182,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Regularity Properties of Analytic sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projective.html">
+   The Projective Hierarchy
   </a>
  </li>
 </ul>
@@ -366,8 +385,7 @@
 \newcommand{\BP}[1][n]{\bPi^0_{#1}}
 \newcommand{\PS}[1][n]{\bSigma^1_{#1}}
 \newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\DeclareMathOperator{\diam}{diam}\]</div>
+\newcommand{\Op}[1]{\operatorname{#1}}\]</div>
 <p>In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of <strong>co-analytic sets</strong> <span class="math notranslate nohighlight">\(\PP[1]\)</span>.</p>
 <p>The analytic sets also have the perfect subset property (PS).</p>
 <div class="tip admonition">
@@ -452,7 +470,7 @@ measurable.</p>
 <div class="proof proposition admonition" id="prop-Souslin-Lebesgue">
 <p class="admonition-title"><span class="caption-number">Proposition 34 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>The class <span class="math notranslate nohighlight">\(\mathbf{LM}\)</span> of all Lebesgue measurable sets <span class="math notranslate nohighlight">\(\subseteq \Real\)</span> is closed under the Souslin operation, i.e.\</p>
+<p>The class <span class="math notranslate nohighlight">\(\mathbf{LM}\)</span> of all Lebesgue measurable sets <span class="math notranslate nohighlight">\(\subseteq \Real\)</span> is closed under the Souslin operation, that is,</p>
 <div class="math notranslate nohighlight">
 \[
     \mathcal{A} \; \mathbf{LM} \subseteq  \mathbf{LM}.
@@ -466,7 +484,7 @@ measurable.</p>
 \end{equation*}\]</div>
 <p>Note that <span class="math notranslate nohighlight">\(A^\Estr = \mathcal{A}\, A\)</span>.</p>
 <p>By the previous lemma, there exist measurable sets <span class="math notranslate nohighlight">\(B^\sigma \supseteq A^\sigma\)</span> so that for every measurable <span class="math notranslate nohighlight">\(B \supseteq A^\sigma\)</span>, <span class="math notranslate nohighlight">\(B^\sigma \setminus B\)</span> is null.</p>
-<p>By replacing <span class="math notranslate nohighlight">\(B^\sigma\)</span> with <span class="math notranslate nohighlight">\(B^\sigma \cap \, A_\sigma\)</span>, we can further assume <span class="math notranslate nohighlight">\(B^\sigma \subseteq A_\sigma\)</span>. This makes <span class="math notranslate nohighlight">\((B^\sigma)\)</span> a regular Souslin scheme.</p>
+<p>By replacing <span class="math notranslate nohighlight">\(B^\sigma\)</span> with <span class="math notranslate nohighlight">\(B^\sigma \cap \, A_\sigma\)</span>, we can further assume <span class="math notranslate nohighlight">\(B^\sigma \subseteq A_\sigma\)</span>, and also that <span class="math notranslate nohighlight">\((B^\sigma)\)</span> is a regular Souslin scheme.</p>
 <p>Now let <span class="math notranslate nohighlight">\(C_\sigma = B^\sigma \setminus \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}\)</span>. Each <span class="math notranslate nohighlight">\(C_\sigma\)</span> is a nullset, by the choice of the <span class="math notranslate nohighlight">\(B^\sigma\)</span> and the fact that  <span class="math notranslate nohighlight">\(A^\sigma = \bigcup_{n \in \Nat} A^{\sigma\Conc\Tup{n}} \subseteq \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}\)</span> . Hence <span class="math notranslate nohighlight">\(C= \bigcup_{\sigma} C_\sigma\)</span> is a nullset, too.</p>
 <p>It remains to show that</p>
 <div class="amsmath math notranslate nohighlight">
@@ -603,10 +621,10 @@ with the Baire property is closed under the Souslin operation, i.e.</p>
             <p class="prev-next-title">Analytic Sets</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="projective.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">The Projective Hierarchy</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

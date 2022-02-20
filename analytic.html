@@ -104,7 +104,7 @@
   Polish spaces
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="perfect_subsets_R.html">
    Perfect Subsets of the Real Line
@@ -125,6 +125,13 @@
    Trees
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Borel hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Borel.html">
    Borel Sets
@@ -160,6 +167,13 @@
    Continuous Images of Borel sets
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projective sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Analytic Sets
@@ -168,6 +182,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="regularityAnalytic.html">
    Regularity Properties of Analytic sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projective.html">
+   The Projective Hierarchy
   </a>
  </li>
 </ul>
@@ -443,6 +462,7 @@
 </div><div class="proof admonition" id="proof">
 <p>Proof. In <a class="reference internal" href="#thm-Lusin-separation">Theorem 23</a>, chose <span class="math notranslate nohighlight">\(A = A\)</span> and <span class="math notranslate nohighlight">\(B = \Co{A}\)</span>.</p>
 </div>
+<p>It follows from <a class="reference internal" href="imagesBorel.html#thm-Souslin-Borel-images">Theorem 22</a> and the <a class="reference internal" href="#thm-Lusin-separation">Lusin separation theorem</a> that the analytic sets are not closed under complements.</p>
 <p>Sets whose complement is analytic are called <strong>co-analytic</strong>. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space <span class="math notranslate nohighlight">\(X\)</span> are denoted by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -514,12 +534,12 @@ A =  \mathcal{A} \,P,
 \[
 	\sigma \Sleq \tau \quad \Rightarrow \quad P_\sigma \supseteq P_\tau.
 \]</div>
-<p>Such Souslin schemes are called <strong>regular</strong>. By replacing <span class="math notranslate nohighlight">\(P_\sigma\)</span> with</p>
+<p>Such Souslin schemes are called <strong>regular</strong>. By replacing any Souslin scheme <span class="math notranslate nohighlight">\(P_\sigma\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[
 	Q_\sigma = \bigcap_{\tau \Sleq \sigma} P_\tau,
 \]</div>
-<p>we obtain a Souslin scheme <span class="math notranslate nohighlight">\(Q = (Q_\sigma)\)</span> with <span class="math notranslate nohighlight">\(\mathcal{A} \, Q = \mathcal{A}\, P\)</span>. Moreover, if the <span class="math notranslate nohighlight">\(P_\sigma\)</span> are from a class <span class="math notranslate nohighlight">\(\Gamma\)</span>, and <span class="math notranslate nohighlight">\(\Gamma\)</span> is closed under finite intersections, then the <span class="math notranslate nohighlight">\(Q_\sigma\)</span> are also from <span class="math notranslate nohighlight">\(\Gamma\)</span>. In particular, any analytic set can be obtained from a regular Souslin scheme of closed sets via the Souslin operation.</p>
+<p>we obtain a regular Souslin scheme <span class="math notranslate nohighlight">\(Q = (Q_\sigma)\)</span> with <span class="math notranslate nohighlight">\(\mathcal{A} \, Q = \mathcal{A}\, P\)</span>. Moreover, if the <span class="math notranslate nohighlight">\(P_\sigma\)</span> are from a class <span class="math notranslate nohighlight">\(\Gamma\)</span>, and <span class="math notranslate nohighlight">\(\Gamma\)</span> is closed under finite intersections, then the <span class="math notranslate nohighlight">\(Q_\sigma\)</span> are also from <span class="math notranslate nohighlight">\(\Gamma\)</span>. In particular, <strong>any analytic set can be obtained from a regular Souslin scheme of closed sets</strong> via the Souslin operation.</p>
 </div>
 </div>
 

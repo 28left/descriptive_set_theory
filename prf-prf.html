@@ -121,6 +121,13 @@
    Trees
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Borel hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Borel.html">
    Borel Sets
@@ -156,6 +163,13 @@
    Continuous Images of Borel sets
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projective sets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="analytic.html">
    Analytic Sets
@@ -164,6 +178,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="regularityAnalytic.html">
    Regularity Properties of Analytic sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projective.html">
+   The Projective Hierarchy
   </a>
  </li>
 </ul>
@@ -277,6 +296,7 @@
    <a href="#cap-cor-analytic-measurable"><strong>cor-analytic-measurable</strong></a> | 
    <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
    <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
+   <a href="#cap-cor-projective-proper"><strong>cor-projective-proper</strong></a> | 
    <a href="#cap-cor-rationals-not-pi2"><strong>cor-rationals-not-pi2</strong></a> | 
    <a href="#cap-cor-weak-Borel-hierarchy-1"><strong>cor-weak-Borel-hierarchy-1</strong></a> | 
    <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
@@ -288,6 +308,7 @@
    <a href="#cap-def-Kleene-Brouwer"><strong>def-Kleene-Brouwer</strong></a> | 
    <a href="#cap-def-Lebesgue"><strong>def-Lebesgue</strong></a> | 
    <a href="#cap-def-Lusin-scheme"><strong>def-Lusin-scheme</strong></a> | 
+   <a href="#cap-def-analytical-hierarchy"><strong>def-analytical-hierarchy</strong></a> | 
    <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
    <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
    <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
@@ -311,6 +332,7 @@
    <a href="#cap-lem-Borel-codes-clopen"><strong>lem-Borel-codes-clopen</strong></a> | 
    <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
    <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
+   <a href="#cap-lem-Fubini-category"><strong>lem-Fubini-category</strong></a> | 
    <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
    <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
@@ -334,12 +356,14 @@
    <a href="#cap-prop-Souslin-Lebesgue"><strong>prop-Souslin-Lebesgue</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-closure-projective"><strong>prop-closure-projective</strong></a> | 
    <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
    <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
    <a href="#cap-prop-interval-measurable"><strong>prop-interval-measurable</strong></a> | 
    <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
    <a href="#cap-prop-measurable-sets"><strong>prop-measurable-sets</strong></a> | 
    <a href="#cap-prop-measurable-sigma-algebra"><strong>prop-measurable-sigma-algebra</strong></a> | 
+   <a href="#cap-prop-non-meas"><strong>prop-non-meas</strong></a> | 
    <a href="#cap-prop-nonfinite-Borel"><strong>prop-nonfinite-Borel</strong></a> | 
    <a href="#cap-prop-null-sigmaideal"><strong>prop-null-sigmaideal</strong></a> | 
    <a href="#cap-prop-nullsets-measurable"><strong>prop-nullsets-measurable</strong></a> | 
@@ -351,6 +375,7 @@
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
    <a href="#cap-prop-universal-general"><strong>prop-universal-general</strong></a> | 
+   <a href="#cap-prop-universal-projective"><strong>prop-universal-projective</strong></a> | 
    <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
    <a href="#cap-proposition-0"><strong>proposition-0</strong></a> | 
    <a href="#cap-proposition-23"><strong>proposition-23</strong></a> | 
@@ -367,6 +392,7 @@
    <a href="#cap-thm-Koenigs-lemma"><strong>thm-Koenigs-lemma</strong></a> | 
    <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
+   <a href="#cap-thm-Souslin-Borel-images"><strong>thm-Souslin-Borel-images</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
    <a href="#cap-thm-analytic-universally-measurable"><strong>thm-analytic-universally-measurable</strong></a> | 
@@ -375,6 +401,7 @@
    <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
    <a href="#cap-thm-idempotent-Souslin"><strong>thm-idempotent-Souslin</strong></a> | 
    <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
+   <a href="#cap-thm-projective-definable"><strong>thm-projective-definable</strong></a> | 
    <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a>
    </div>
 
@@ -476,6 +503,14 @@
        <a href="subsets_Polish.html#cor-perfect-Borel"><code class="xref">cor-perfect-Borel</code></a> <em>(subsets_Polish)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-projective-proper"><td></td><td>
+       <strong>cor-projective-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#cor-projective-proper"><code class="xref">cor-projective-proper</code></a> <em>(projective)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-rationals-not-pi2"><td></td><td>
        <strong>cor-rationals-not-pi2</strong></td><td></td></tr>
      <tr>
@@ -562,6 +597,14 @@
        <td></td>
        <td>
        <a href="imagesBorel.html#def-Lusin-scheme"><code class="xref">def-Lusin-scheme</code></a> <em>(imagesBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-analytical-hierarchy"><td></td><td>
+       <strong>def-analytical-hierarchy</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#def-analytical-hierarchy"><code class="xref">def-analytical-hierarchy</code></a> <em>(projective)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-effective-Borel"><td></td><td>
@@ -748,6 +791,14 @@
        <a href="codingBorel.html#lem-Borel-codes-shift"><code class="xref">lem-Borel-codes-shift</code></a> <em>(codingBorel)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Fubini-category"><td></td><td>
+       <strong>lem-Fubini-category</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#lem-Fubini-category"><code class="xref">lem-Fubini-category</code></a> <em>(projective)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-approx-category"><td></td><td>
        <strong>lem-approx-category</strong></td><td></td></tr>
      <tr>
@@ -932,6 +983,14 @@
        <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-closure-projective"><td></td><td>
+       <strong>prop-closure-projective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-closure-projective"><code class="xref">prop-closure-projective</code></a> <em>(projective)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-computable-codes"><td></td><td>
        <strong>prop-computable-codes</strong></td><td></td></tr>
      <tr>
@@ -978,6 +1037,14 @@
        <td></td>
        <td>
        <a href="measure.html#prop-measurable-sigma-algebra"><code class="xref">prop-measurable-sigma-algebra</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-non-meas"><td></td><td>
+       <strong>prop-non-meas</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-non-meas"><code class="xref">prop-non-meas</code></a> <em>(projective)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-nonfinite-Borel"><td></td><td>
@@ -1068,6 +1135,14 @@
        <a href="structureBorel.html#prop-universal-general"><code class="xref">prop-universal-general</code></a> <em>(structureBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-universal-projective"><td></td><td>
+       <strong>prop-universal-projective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-universal-projective"><code class="xref">prop-universal-projective</code></a> <em>(projective)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-properties-polish"><td></td><td>
        <strong>properties-polish</strong></td><td></td></tr>
      <tr>
@@ -1105,7 +1180,7 @@
      <tr>
        <td></td>
        <td>
-       <a href="imagesBorel.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(imagesBorel)</em></td><td>
+       <a href="Borel.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Borel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-7"><td></td><td>
@@ -1196,6 +1271,14 @@
        <a href="imagesBorel.html#thm-Polish-bijection-Baire"><code class="xref">thm-Polish-bijection-Baire</code></a> <em>(imagesBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Souslin-Borel-images"><td></td><td>
+       <strong>thm-Souslin-Borel-images</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Souslin-Borel-images"><code class="xref">thm-Souslin-Borel-images</code></a> <em>(imagesBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Vitali-nonmeasurable"><td></td><td>
        <strong>thm-Vitali-nonmeasurable</strong></td><td></td></tr>
      <tr>
@@ -1258,6 +1341,14 @@
        <td></td>
        <td>
        <a href="polish.html#thm-polish-cont-image-Baire"><code class="xref">thm-polish-cont-image-Baire</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-projective-definable"><td></td><td>
+       <strong>thm-projective-definable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#thm-projective-definable"><code class="xref">thm-projective-definable</code></a> <em>(projective)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-subsets-Polish"><td></td><td>
