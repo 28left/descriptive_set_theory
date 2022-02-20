@@ -10,6 +10,8 @@ parts:
       - file: polish
       - file: Urysohn.md
       - file: trees.md
+  - caption: The Borel hierarchy
+    chapters:
       - file: Borel.md
       - file: subsets_Polish.md
       - file: measure.md
@@ -17,8 +19,11 @@ parts:
       - file: codingBorel.md
       - file: structureBorel.md
       - file: imagesBorel.md
+  - caption: Projective sets
+    chapters:
       - file: analytic.md
       - file: regularityAnalytic.md 
+      - file: projective.md
   - caption: Reference
     chapters:
       - file: bibliography
