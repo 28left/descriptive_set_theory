@@ -24,6 +24,7 @@ parts:
       - file: analytic.md
       - file: regularityAnalytic.md 
       - file: projective.md
+      - file: coanalytic.md
   - caption: Reference
     chapters:
       - file: bibliography
