@@ -185,6 +185,11 @@
    The Projective Hierarchy
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -292,8 +297,11 @@
    <a href="#cap-cor-BP-algebra-small"><strong>cor-BP-algebra-small</strong></a> | 
    <a href="#cap-cor-Borel-image-closed"><strong>cor-Borel-image-closed</strong></a> | 
    <a href="#cap-cor-Borel-measurable"><strong>cor-Borel-measurable</strong></a> | 
+   <a href="#cap-cor-aleph-union-intersect"><strong>cor-aleph-union-intersect</strong></a> | 
    <a href="#cap-cor-analytic-Souslin-closed"><strong>cor-analytic-Souslin-closed</strong></a> | 
    <a href="#cap-cor-analytic-measurable"><strong>cor-analytic-measurable</strong></a> | 
+   <a href="#cap-cor-coanal-union-Borel"><strong>cor-coanal-union-Borel</strong></a> | 
+   <a href="#cap-cor-coanalytic-cardinality"><strong>cor-coanalytic-cardinality</strong></a> | 
    <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
    <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
    <a href="#cap-cor-projective-proper"><strong>cor-projective-proper</strong></a> | 
@@ -308,7 +316,9 @@
    <a href="#cap-def-Kleene-Brouwer"><strong>def-Kleene-Brouwer</strong></a> | 
    <a href="#cap-def-Lebesgue"><strong>def-Lebesgue</strong></a> | 
    <a href="#cap-def-Lusin-scheme"><strong>def-Lusin-scheme</strong></a> | 
+   <a href="#cap-def-Wadge"><strong>def-Wadge</strong></a> | 
    <a href="#cap-def-analytical-hierarchy"><strong>def-analytical-hierarchy</strong></a> | 
+   <a href="#cap-def-completeness"><strong>def-completeness</strong></a> | 
    <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
    <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
    <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
@@ -321,6 +331,7 @@
    <a href="#cap-def-polish"><strong>def-polish</strong></a> | 
    <a href="#cap-def-transfinite-Borel"><strong>def-transfinite-Borel</strong></a> | 
    <a href="#cap-def-tree"><strong>def-tree</strong></a> | 
+   <a href="#cap-def-two-dim-tree"><strong>def-two-dim-tree</strong></a> | 
    <a href="#cap-def-ultrafilter"><strong>def-ultrafilter</strong></a> | 
    <a href="#cap-def-universal"><strong>def-universal</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
@@ -335,6 +346,7 @@
    <a href="#cap-lem-Fubini-category"><strong>lem-Fubini-category</strong></a> | 
    <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
    <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
+   <a href="#cap-lem-bounded-rank-Borel"><strong>lem-bounded-rank-Borel</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
@@ -356,6 +368,7 @@
    <a href="#cap-prop-Souslin-Lebesgue"><strong>prop-Souslin-Lebesgue</strong></a> | 
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-Wadge-preimages"><strong>prop-Wadge-preimages</strong></a> | 
    <a href="#cap-prop-closure-projective"><strong>prop-closure-projective</strong></a> | 
    <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
    <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
@@ -365,6 +378,7 @@
    <a href="#cap-prop-measurable-sigma-algebra"><strong>prop-measurable-sigma-algebra</strong></a> | 
    <a href="#cap-prop-non-meas"><strong>prop-non-meas</strong></a> | 
    <a href="#cap-prop-nonfinite-Borel"><strong>prop-nonfinite-Borel</strong></a> | 
+   <a href="#cap-prop-norm-form-coanalytic"><strong>prop-norm-form-coanalytic</strong></a> | 
    <a href="#cap-prop-null-sigmaideal"><strong>prop-null-sigmaideal</strong></a> | 
    <a href="#cap-prop-nullsets-measurable"><strong>prop-nullsets-measurable</strong></a> | 
    <a href="#cap-prop-open-subset-Polish"><strong>prop-open-subset-Polish</strong></a> | 
@@ -394,6 +408,7 @@
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
    <a href="#cap-thm-Souslin-Borel-images"><strong>thm-Souslin-Borel-images</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
+   <a href="#cap-thm-WF-Wadge-complete"><strong>thm-WF-Wadge-complete</strong></a> | 
    <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
    <a href="#cap-thm-analytic-universally-measurable"><strong>thm-analytic-universally-measurable</strong></a> | 
    <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
@@ -471,6 +486,14 @@
        <a href="measure.html#cor-Borel-measurable"><code class="xref">cor-Borel-measurable</code></a> <em>(measure)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-aleph-union-intersect"><td></td><td>
+       <strong>cor-aleph-union-intersect</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-aleph-union-intersect"><code class="xref">cor-aleph-union-intersect</code></a> <em>(coanalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-analytic-Souslin-closed"><td></td><td>
        <strong>cor-analytic-Souslin-closed</strong></td><td></td></tr>
      <tr>
@@ -485,6 +508,22 @@
        <td></td>
        <td>
        <a href="regularityAnalytic.html#cor-analytic-measurable"><code class="xref">cor-analytic-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-coanal-union-Borel"><td></td><td>
+       <strong>cor-coanal-union-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-coanal-union-Borel"><code class="xref">cor-coanal-union-Borel</code></a> <em>(coanalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-coanalytic-cardinality"><td></td><td>
+       <strong>cor-coanalytic-cardinality</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-coanalytic-cardinality"><code class="xref">cor-coanalytic-cardinality</code></a> <em>(coanalytic)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-hier-proper"><td></td><td>
@@ -599,12 +638,28 @@
        <a href="imagesBorel.html#def-Lusin-scheme"><code class="xref">def-Lusin-scheme</code></a> <em>(imagesBorel)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Wadge"><td></td><td>
+       <strong>def-Wadge</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-Wadge"><code class="xref">def-Wadge</code></a> <em>(coanalytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-analytical-hierarchy"><td></td><td>
        <strong>def-analytical-hierarchy</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="projective.html#def-analytical-hierarchy"><code class="xref">def-analytical-hierarchy</code></a> <em>(projective)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-completeness"><td></td><td>
+       <strong>def-completeness</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-completeness"><code class="xref">def-completeness</code></a> <em>(coanalytic)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-effective-Borel"><td></td><td>
@@ -701,6 +756,14 @@
        <td></td>
        <td>
        <a href="trees.html#def-tree"><code class="xref">def-tree</code></a> <em>(trees)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-two-dim-tree"><td></td><td>
+       <strong>def-two-dim-tree</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-two-dim-tree"><code class="xref">def-two-dim-tree</code></a> <em>(coanalytic)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-ultrafilter"><td></td><td>
@@ -813,6 +876,14 @@
        <td></td>
        <td>
        <a href="regularityAnalytic.html#lem-approx-measurable"><code class="xref">lem-approx-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-bounded-rank-Borel"><td></td><td>
+       <strong>lem-bounded-rank-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#lem-bounded-rank-Borel"><code class="xref">lem-bounded-rank-Borel</code></a> <em>(coanalytic)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
@@ -983,6 +1054,14 @@
        <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Wadge-preimages"><td></td><td>
+       <strong>prop-Wadge-preimages</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#prop-Wadge-preimages"><code class="xref">prop-Wadge-preimages</code></a> <em>(coanalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-closure-projective"><td></td><td>
        <strong>prop-closure-projective</strong></td><td></td></tr>
      <tr>
@@ -1053,6 +1132,14 @@
        <td></td>
        <td>
        <a href="structureBorel.html#prop-nonfinite-Borel"><code class="xref">prop-nonfinite-Borel</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-norm-form-coanalytic"><td></td><td>
+       <strong>prop-norm-form-coanalytic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#prop-norm-form-coanalytic"><code class="xref">prop-norm-form-coanalytic</code></a> <em>(coanalytic)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-null-sigmaideal"><td></td><td>
@@ -1285,6 +1372,14 @@
        <td></td>
        <td>
        <a href="choice.html#thm-Vitali-nonmeasurable"><code class="xref">thm-Vitali-nonmeasurable</code></a> <em>(choice)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-WF-Wadge-complete"><td></td><td>
+       <strong>thm-WF-Wadge-complete</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#thm-WF-Wadge-complete"><code class="xref">thm-WF-Wadge-complete</code></a> <em>(coanalytic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Young"><td></td><td>

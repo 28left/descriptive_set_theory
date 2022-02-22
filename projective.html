@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="Co-Analytic sets" href="coanalytic.html" />
     <link rel="prev" title="Regularity Properties of Analytic sets" href="regularityAnalytic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -187,6 +187,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    The Projective Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
   </a>
  </li>
 </ul>
@@ -387,6 +392,7 @@
 \newcommand{\PP}[1][n]{\bPi^1_{#1}}
 \newcommand{\CH}{\mathsf{CH}}
 \newcommand{\AC}{\mathsf{AC}}
+\newcommand{\DC}{\mathsf{DC}}
 \newcommand{\ZF}{\mathsf{ZF}}
 \newcommand{\Op}[1]{\operatorname{#1}}\]</div>
 <p>We saw in the previous chapters that analytic sets are projections of closed sets and hence can be written as</p>
@@ -406,7 +412,7 @@
 	\forall m  \, \exists \alpha \; P(m,\alpha)  &amp; \iff &amp;  \exists \beta  \; \forall m \:  P(m,(\beta)_m)\\
 	\exists m   \, \forall \alpha \; P(m,\alpha) &amp;\iff&amp; \forall \beta  \; \exists m  \;   P(m,(\beta)_m),
 \end{eqnarray*}\]</div>
-<p>we obtain that both the analytic sets and the co-analytic sets are closed under countable unions and intersections.</p>
+<p>we obtain that <em>both</em> the analytic sets and the co-analytic sets are closed under countable unions and intersections.</p>
 <p>We have seen (<a class="reference internal" href="analytic.html#prop-prop-analytic">Proposition 32</a>) that the analytic sets are closed under continuous images. Taking continuous images of co-analytic sets, however, leads out of the co-analytic sets.</p>
 <p>Using continuous images (or rather, the special case of <strong>projections</strong>), we define the <strong>projective hierarchy</strong>. Recall our notation <span class="math notranslate nohighlight">\(\exists^\Nat\)</span> for projection along <span class="math notranslate nohighlight">\(\Nat\)</span>, with <span class="math notranslate nohighlight">\(\forall^\Nat\)</span> its dual. We denote by <span class="math notranslate nohighlight">\(\exists^{\Baire}\)</span> and <span class="math notranslate nohighlight">\(\forall^{\Baire}\)</span> projection along <span class="math notranslate nohighlight">\(\Baire\)</span> and its dual, respectively.</p>
 <div class="amsmath math notranslate nohighlight">
@@ -429,7 +435,7 @@
 <div class="section" id="the-effective-projective-hierarchy">
 <h2>The effective projective hierarchy<a class="headerlink" href="#the-effective-projective-hierarchy" title="Permalink to this headline">¶</a></h2>
 <p>We have seen that the Borel sets of finite order correspond to the sets definable (from parameters) by formulas using only number quantifiers (<strong>arithmetical formulas</strong>). A similar relation holds between projective sets and sets definable by formulas using both number and function quantifiers. In fact, the way we defined the projective hierarchy makes this easy to see.</p>
-<p>Historically, however, the topological approach and the definability approach happened separably, the former devised by the Russian school of Souslin, Lusin, and others, while the effective approach was pursued by Kleene. Kleene named the sets definable over second order arithmetic the <em>analytical</em> sets, which to this day is a source of much confusion.</p>
+<p>Historically, however, the topological approach and the definability approach happened separately, the former devised by the Russian school of Souslin, Lusin, and others, while the effective approach was pursued by Kleene. Kleene named the sets in his effective hierarchy <em>analytical</em> sets, which to this day is a source of much confusion.</p>
 <div class="proof definition admonition" id="def-analytical-hierarchy">
 <p class="admonition-title"><span class="caption-number">Definition 28 </span> (Kleene)</p>
 <div class="definition-content section" id="proof-content">
@@ -470,7 +476,7 @@
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\{f \in \mathcal{C}[0,1]\colon f \text{ differentiable on } [0,1]\}\)</span> is a <span class="math notranslate nohighlight">\(\PP[1]\)</span> subset of <span class="math notranslate nohighlight">\(\mathcal{C}[0,1]\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\{f \in \mathcal{C}[0,1]\colon f \text{ nowhere differentiable on } [0,1]\}\)</span> is a <span class="math notranslate nohighlight">\(\PP[1]\)</span> subset of <span class="math notranslate nohighlight">\(\mathcal{C}[0,1]\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\Op{WF} = \{\alpha \in \Cant \colon \alpha \text{ codes a well-founded tree on} \Nat \}\)</span> is a <span class="math notranslate nohighlight">\(\PP[1]\)</span> subset of the space <span class="math notranslate nohighlight">\(\Op{Tr}\)</span> of trees, which can be seen as a closed subspace of <span class="math notranslate nohighlight">\(2^{\Nstr}\)</span>, and hence is Polish. As we will see, the set <span class="math notranslate nohighlight">\(\Op{WF}\)</span> is a prototypical <span class="math notranslate nohighlight">\(\PP[1]\)</span> set.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Op{WF} = \{\alpha \in \Cant \colon \alpha \text{ codes a well-founded tree on } \Nat \}\)</span> is a <span class="math notranslate nohighlight">\(\PP[1]\)</span> subset of the space <span class="math notranslate nohighlight">\(\Op{Tr}\)</span> of trees, which can be seen as a closed subspace of <span class="math notranslate nohighlight">\(2^{\Nstr}\)</span>, and hence is Polish. As we will see, the set <span class="math notranslate nohighlight">\(\Op{WF}\)</span> is a prototypical <span class="math notranslate nohighlight">\(\PP[1]\)</span> set.</p></li>
 </ul>
 <p><strong>Higher levels:</strong></p>
 <ul class="simple">
@@ -487,7 +493,7 @@
 <ul class="simple">
 <li><p><strong>(i)</strong> The classes <span class="math notranslate nohighlight">\(\PS[n]\)</span> are closed under continuous preimages, countable intersections and unions, and continuous images (in particular, <span class="math notranslate nohighlight">\(\exists^{\Baire}\)</span>).</p></li>
 <li><p><strong>(ii)</strong> The classes <span class="math notranslate nohighlight">\(\PP[n]\)</span> are closed under continuous preimages, countable intersections and unions, and co-projections <span class="math notranslate nohighlight">\(\forall^{\Baire}\)</span>.</p></li>
-<li><p><strong>(iii)</strong> The classes <span class="math notranslate nohighlight">\(\bDelta^1_n\)</span> are closed under continuous preimages, complements, countable intersections and unions. (In particular, they for a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.)</p></li>
+<li><p><strong>(iii)</strong> The classes <span class="math notranslate nohighlight">\(\bDelta^1_n\)</span> are closed under continuous preimages, complements, countable intersections and unions. (In particular, they form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.)</p></li>
 </ul>
 </div>
 </div><p>To show that the hierarchy is proper, we need the existence of universal sets.</p>
@@ -518,27 +524,31 @@
 </div>
 <div class="section" id="regularity-properties-of-projective-sets">
 <h2>Regularity properties of projective sets<a class="headerlink" href="#regularity-properties-of-projective-sets" title="Permalink to this headline">¶</a></h2>
-<p>We have seen (<a class="reference internal" href="regularityAnalytic.html#cor-analytic-measurable">Corollary 10</a> and <a class="reference internal" href="regularityAnalytic.html#prop-Souslin-Baire">Proposition 35</a>) that all analytic sets are Lebesgue measurable and have the Baire property. Since these properties are closed under complements, it follows that the same holds for co-analytic (<span class="math notranslate nohighlight">\(\PP[1]\)</span>) sets. Analytic sets also have the perfect-set property, but if you worked out the exercise, you will see that the proof does not work for the complement. But maybe we just need to find a different proof.</p>
+<p>We have seen (<a class="reference internal" href="regularityAnalytic.html#cor-analytic-measurable">Corollary 10</a> and <a class="reference internal" href="regularityAnalytic.html#prop-Souslin-Baire">Proposition 35</a>) that all analytic sets are Lebesgue measurable and have the Baire property. Since these properties are closed under complements, it follows that the same holds for co-analytic (<span class="math notranslate nohighlight">\(\PP[1]\)</span>) sets. Analytic sets also have the perfect-set property, but if you worked out the exercise, you will see that the proof does not carry over to complements of analytic sets. Can we find a different proof?</p>
 <p>Similarly, it does not seem impossible to extend the regularity properties (LM) and (BP) to higher levels of the projective hierarchy. We will soon see that there are metamathematical limits that prevent us from doing so.</p>
-<p>Without explicitly mentioning it, up to now we have been working in <span class="math notranslate nohighlight">\(\ZF\)</span>, Zermelo-Fraenkel set theory, plus a weak form of Choice (<span class="math notranslate nohighlight">\(\AC_\omega(\Baire)\)</span>). If we add the full Axiom of Choice (<span class="math notranslate nohighlight">\(\AC\)</span>), we saw that the regularity properties do not extend to all sets. Solovay’s model of <span class="math notranslate nohighlight">\(\ZF\)</span> shows that the use of a strong version of Choice is necessary for this.</p>
-<p>On the other hand, the proofs gave us no direct indication how `complex’ the non-regular sets we constructed are.
-In the next section we will start to study a model of <span class="math notranslate nohighlight">\(\ZF\)</span> in which exists a <span class="math notranslate nohighlight">\(\bDelta^1_2\)</span> set which is neither Lebesgue measurable nor does it have the Baire property. Therefore, we cannot settle in <span class="math notranslate nohighlight">\(\ZF\)</span> the question of whether the projective sets are measurable or have the Baire property. We will have to add additional axioms.</p>
+<p>Without explicitly mentioning it, up to now we have been working in <span class="math notranslate nohighlight">\(\ZF\)</span>, Zermelo-Fraenkel set theory, plus a weak form of Choice (<span class="math notranslate nohighlight">\(\AC_\omega(\Baire)\)</span>). If we add the full Axiom of Choice (<span class="math notranslate nohighlight">\(\AC\)</span>), we saw that the regularity properties do not extend to all sets. Solovay’s model of <span class="math notranslate nohighlight">\(\ZF+\DC\)</span> shows that the use of a strong version of Choice is necessary for this.</p>
+<p>On the other hand, the proofs gave us no direct indication how ‘complex’ the non-regular sets we constructed are.
+We will study a model of <span class="math notranslate nohighlight">\(\ZF\)</span> in which exists a <span class="math notranslate nohighlight">\(\bDelta^1_2\)</span> set which neither is Lebesgue measurable nor has the Baire property. This, together with the Solovay model, shows we cannot settle in <span class="math notranslate nohighlight">\(\ZF\)</span> alone the question of whether the projective sets are measurable or have the Baire property. We would have to add additional axioms.</p>
 <p>A key feature in the construction of a non-measurable <span class="math notranslate nohighlight">\(\bDelta^1_2\)</span> set is the use of the well-ordering principle rather than the Axiom of Choice.</p>
 <div class="proof proposition admonition" id="prop-non-meas">
 <p class="admonition-title"><span class="caption-number">Proposition 38 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>Suppose <span class="math notranslate nohighlight">\(&lt;_W \subseteq \Real\times\Real\)</span> is a well-ordering of <span class="math notranslate nohighlight">\(\Real\)</span> of order-type <span class="math notranslate nohighlight">\(\omega_1\)</span> in <span class="math notranslate nohighlight">\(\Gamma\)</span>, then there exists a subset of <span class="math notranslate nohighlight">\(\Real^2\)</span> in <span class="math notranslate nohighlight">\(\Gamma\)</span> that is neither Lebesgue measurable nor has the Baire property.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(&lt;_W \subseteq \Real\times\Real\)</span> is a well-ordering of <span class="math notranslate nohighlight">\(\Real\)</span> of order-type <span class="math notranslate nohighlight">\(\omega_1\)</span>, then the set</p>
+<div class="math notranslate nohighlight">
+\[
+A = \{(x,y) \colon x &lt;_W y\}
+\]</div>
+<p>neither is Lebesgue measurable nor has the Baire property.</p>
 </div>
 </div><p>Lebesgue measure here refers to the product measure <span class="math notranslate nohighlight">\(\lambda \times \lambda\)</span>, which is the unique translation invariant measure defined on the Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra generated by the rectangles <span class="math notranslate nohighlight">\(I \times J\)</span>, where <span class="math notranslate nohighlight">\(I\)</span> and <span class="math notranslate nohighlight">\(J\)</span> are open intervals, and <span class="math notranslate nohighlight">\((\lambda\times \lambda)(I \times J) = \lambda(I)\lambda(J)\)</span>.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. Suppose <span class="math notranslate nohighlight">\(&lt;_W\)</span> is a well-ordering of <span class="math notranslate nohighlight">\(\Real\)</span> in <span class="math notranslate nohighlight">\(\Gamma\)</span>. Let <span class="math notranslate nohighlight">\(A = \{(x,y) \colon x &lt;_W y\}\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(&lt;_W\)</span> is of order type <span class="math notranslate nohighlight">\(\omega_1\)</span>, for every <span class="math notranslate nohighlight">\(y \in \Real\)</span>, the set <span class="math notranslate nohighlight">\(A_y = \{x \colon x &lt;_W y \}\)</span> is countable, and hence of Lebesgue measure zero.</p>
+<p>Proof. Since <span class="math notranslate nohighlight">\(&lt;_W\)</span> is of order type <span class="math notranslate nohighlight">\(\omega_1\)</span>, for every <span class="math notranslate nohighlight">\(y \in \Real\)</span>, the set <span class="math notranslate nohighlight">\(A_y = \{x \colon x &lt;_W y \}\)</span> is countable, and hence of Lebesgue measure zero.</p>
 <p><strong>Fubini’s Theorem</strong> implies that if <span class="math notranslate nohighlight">\(A \subseteq \Real^2\)</span> is measurable, then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 	(\lambda\times\lambda) (A) = \int \lambda(A_y) d\lambda(y) = 0.
 \end{equation*}\]</div>
-<p>So if <span class="math notranslate nohighlight">\(A\)</span> is measurable, then <span class="math notranslate nohighlight">\((\lambda\times\lambda) (A) = 0\)</span>. The complement of <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\( \Co{A} = \{(x,y) \colon x \geq_W y \}\)</span>. As above, for any <span class="math notranslate nohighlight">\(x \in \Real\)</span>, <span class="math notranslate nohighlight">\(\Co{A}_x = \{y \colon x \leq_W y \}\)</span> is countable, and hence <span class="math notranslate nohighlight">\(\lambda(\Co{A}_x) = 0\)</span> for all <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>So if <span class="math notranslate nohighlight">\(A\)</span> is measurable, then <span class="math notranslate nohighlight">\((\lambda\times\lambda) (A) = 0\)</span>. The complement of <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\( \Co{A} = \{(x,y) \colon x \geq_W y \}\)</span>. As above, for any <span class="math notranslate nohighlight">\(x \in \Real\)</span>, <span class="math notranslate nohighlight">\((\Co{A})_x = \{y \colon x \geq_W y \}\)</span> is countable, and hence <span class="math notranslate nohighlight">\(\lambda(\Co{A})_x = 0\)</span> for all <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>Again, by Fubini’s Theorem, <span class="math notranslate nohighlight">\((\lambda\times\lambda) (\Co{A}) = 0\)</span>, and thus <span class="math notranslate nohighlight">\((\lambda\times\lambda) (\Real)  = (\lambda\times\lambda) (A \cup \Co{A}) = (\lambda\times\lambda) (A) + (\lambda\times\lambda) (\Co{A}) = 0\)</span>, a contradiction.</p>
 <p>We can apply a similar reasoning for Baire category, using the Lemma below. The sections <span class="math notranslate nohighlight">\(A_y\)</span> and <span class="math notranslate nohighlight">\(\Co{A}_x\)</span> are countable, and hence meager.</p>
 </div>
@@ -585,10 +595,10 @@ In the next section we will start to study a model of <span class="math notransl
             <p class="prev-next-title">Regularity Properties of Analytic sets</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="coanalytic.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Co-Analytic sets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -27,6 +27,7 @@
 \newcommand{\PP}[1][n]{\bPi^1_{#1}}
 \newcommand{\CH}{\mathsf{CH}}
 \newcommand{\AC}{\mathsf{AC}}
+\newcommand{\DC}{\mathsf{DC}}
 \newcommand{\ZF}{\mathsf{ZF}}
 \newcommand{\Op}[1]{\operatorname{#1}}
 ```
@@ -52,7 +53,7 @@ Using quantifier manipulations that allow to switch number and function quantifi
 	\exists m   \, \forall \alpha \; P(m,\alpha) &\iff& \forall \beta  \; \exists m  \;   P(m,(\beta)_m),
 \end{eqnarray*}
 
-we obtain that both the analytic sets and the co-analytic sets are closed under countable unions and intersections.
+we obtain that *both* the analytic sets and the co-analytic sets are closed under countable unions and intersections.
 
 We have seen ({prf:ref}`prop-prop-analytic`) that the analytic sets are closed under continuous images. Taking continuous images of co-analytic sets, however, leads out of the co-analytic sets.
 
@@ -82,7 +83,7 @@ These characterizations clearly indicate a relation between being projective and
 
 We have seen that the Borel sets of finite order correspond to the sets definable (from parameters) by formulas using only number quantifiers (**arithmetical formulas**). A similar relation holds between projective sets and sets definable by formulas using both number and function quantifiers. In fact, the way we defined the projective hierarchy makes this easy to see.
 
-Historically, however, the topological approach and the definability approach happened separably, the former devised by the Russian school of Souslin, Lusin, and others, while the effective approach was pursued by Kleene. Kleene named the sets definable over second order arithmetic the *analytical* sets, which to this day is a source of much confusion.
+Historically, however, the topological approach and the definability approach happened separately, the former devised by the Russian school of Souslin, Lusin, and others, while the effective approach was pursued by Kleene. Kleene named the sets in his effective hierarchy *analytical* sets, which to this day is a source of much confusion.
 
 ```{prf:definition} Kleene
 :label: def-analytical-hierarchy
@@ -130,7 +131,7 @@ Here are a few examples of projective sets that occur naturally in mathematics.
 
 - $\{f \in \mathcal{C}[0,1]\colon f \text{ nowhere differentiable on } [0,1]\}$ is a $\PP[1]$ subset of $\mathcal{C}[0,1]$.
 
-- $\Op{WF} = \{\alpha \in \Cant \colon \alpha \text{ codes a well-founded tree on} \Nat \}$ is a $\PP[1]$ subset of the space $\Op{Tr}$ of trees, which can be seen as a closed subspace of $2^{\Nstr}$, and hence is Polish. As we will see, the set $\Op{WF}$ is a prototypical $\PP[1]$ set.
+- $\Op{WF} = \{\alpha \in \Cant \colon \alpha \text{ codes a well-founded tree on } \Nat \}$ is a $\PP[1]$ subset of the space $\Op{Tr}$ of trees, which can be seen as a closed subspace of $2^{\Nstr}$, and hence is Polish. As we will see, the set $\Op{WF}$ is a prototypical $\PP[1]$ set.
 	
 **Higher levels:**
 - $\{f \in \mathcal{C}[0,1]\colon f \text{ satisfies the Mean Value Theorem } [0,1]\}$ is a $\PP[2]$ subset of $\mathcal{C}[0,1]$.
@@ -150,7 +151,7 @@ The quantifier manipulations mentioned above yield the following closure propert
 
 - **(ii)** The classes $\PP[n]$ are closed under continuous preimages, countable intersections and unions, and co-projections $\forall^{\Baire}$.
 
-- **(iii)** The classes $\bDelta^1_n$ are closed under continuous preimages, complements, countable intersections and unions. (In particular, they for a $\sigma$-algebra.)
+- **(iii)** The classes $\bDelta^1_n$ are closed under continuous preimages, complements, countable intersections and unions. (In particular, they form a $\sigma$-algebra.)
 ```
 
 To show that the hierarchy is proper, we need the existence of universal sets.
@@ -185,28 +186,32 @@ The proof is similar to the proofs of {prf:ref}`thm-Borel-proper` and {prf:ref}`
 
 ## Regularity properties of projective sets
 
-We have seen ({prf:ref}`cor-analytic-measurable` and {prf:ref}`prop-Souslin-Baire`) that all analytic sets are Lebesgue measurable and have the Baire property. Since these properties are closed under complements, it follows that the same holds for co-analytic ($\PP[1]$) sets. Analytic sets also have the perfect-set property, but if you worked out the exercise, you will see that the proof does not work for the complement. But maybe we just need to find a different proof.
+We have seen ({prf:ref}`cor-analytic-measurable` and {prf:ref}`prop-Souslin-Baire`) that all analytic sets are Lebesgue measurable and have the Baire property. Since these properties are closed under complements, it follows that the same holds for co-analytic ($\PP[1]$) sets. Analytic sets also have the perfect-set property, but if you worked out the exercise, you will see that the proof does not carry over to complements of analytic sets. Can we find a different proof?
 
 Similarly, it does not seem impossible to extend the regularity properties (LM) and (BP) to higher levels of the projective hierarchy. We will soon see that there are metamathematical limits that prevent us from doing so.
 
-Without explicitly mentioning it, up to now we have been working in $\ZF$, Zermelo-Fraenkel set theory, plus a weak form of Choice ($\AC_\omega(\Baire)$). If we add the full Axiom of Choice ($\AC$), we saw that the regularity properties do not extend to all sets. Solovay's model of $\ZF$ shows that the use of a strong version of Choice is necessary for this. 
+Without explicitly mentioning it, up to now we have been working in $\ZF$, Zermelo-Fraenkel set theory, plus a weak form of Choice ($\AC_\omega(\Baire)$). If we add the full Axiom of Choice ($\AC$), we saw that the regularity properties do not extend to all sets. Solovay's model of $\ZF+\DC$ shows that the use of a strong version of Choice is necessary for this. 
 
-On the other hand, the proofs gave us no direct indication how `complex' the non-regular sets we constructed are.
-In the next section we will start to study a model of $\ZF$ in which exists a $\bDelta^1_2$ set which is neither Lebesgue measurable nor does it have the Baire property. Therefore, we cannot settle in $\ZF$ the question of whether the projective sets are measurable or have the Baire property. We will have to add additional axioms.
+On the other hand, the proofs gave us no direct indication how 'complex' the non-regular sets we constructed are.
+We will study a model of $\ZF$ in which exists a $\bDelta^1_2$ set which neither is Lebesgue measurable nor has the Baire property. This, together with the Solovay model, shows we cannot settle in $\ZF$ alone the question of whether the projective sets are measurable or have the Baire property. We would have to add additional axioms.
 
 A key feature in the construction of a non-measurable $\bDelta^1_2$ set is the use of the well-ordering principle rather than the Axiom of Choice. 
 
 ```{prf:proposition} 
 :label: prop-non-meas
 
-Suppose $<_W \subseteq \Real\times\Real$ is a well-ordering of $\Real$ of order-type $\omega_1$ in $\Gamma$, then there exists a subset of $\Real^2$ in $\Gamma$ that is neither Lebesgue measurable nor has the Baire property.
+Suppose $<_W \subseteq \Real\times\Real$ is a well-ordering of $\Real$ of order-type $\omega_1$, then the set
+
+$$
+A = \{(x,y) \colon x <_W y\}
+$$
+
+neither is Lebesgue measurable nor has the Baire property.
 ```
 
 Lebesgue measure here refers to the product measure $\lambda \times \lambda$, which is the unique translation invariant measure defined on the Borel $\sigma$-algebra generated by the rectangles $I \times J$, where $I$ and $J$ are open intervals, and $(\lambda\times \lambda)(I \times J) = \lambda(I)\lambda(J)$.
 
 ```{prf:proof}
-Suppose $<_W$ is a well-ordering of $\Real$ in $\Gamma$. Let $A = \{(x,y) \colon x <_W y\}$.
-
 Since $<_W$ is of order type $\omega_1$, for every $y \in \Real$, the set $A_y = \{x \colon x <_W y \}$ is countable, and hence of Lebesgue measure zero. 
 
 **Fubini's Theorem** implies that if $A \subseteq \Real^2$ is measurable, then 
@@ -214,7 +219,7 @@ Since $<_W$ is of order type $\omega_1$, for every $y \in \Real$, the set $A_y =
 	(\lambda\times\lambda) (A) = \int \lambda(A_y) d\lambda(y) = 0.
 \end{equation*}
 
-So if $A$ is measurable, then $(\lambda\times\lambda) (A) = 0$. The complement of $A$ is $ \Co{A} = \{(x,y) \colon x \geq_W y \}$. As above, for any $x \in \Real$, $\Co{A}_x = \{y \colon x \leq_W y \}$ is countable, and hence $\lambda(\Co{A}_x) = 0$ for all $x$. 
+So if $A$ is measurable, then $(\lambda\times\lambda) (A) = 0$. The complement of $A$ is $ \Co{A} = \{(x,y) \colon x \geq_W y \}$. As above, for any $x \in \Real$, $(\Co{A})_x = \{y \colon x \geq_W y \}$ is countable, and hence $\lambda(\Co{A})_x = 0$ for all $x$. 
 
 Again, by Fubini's Theorem, $(\lambda\times\lambda) (\Co{A}) = 0$, and thus $(\lambda\times\lambda) (\Real)  = (\lambda\times\lambda) (A \cup \Co{A}) = (\lambda\times\lambda) (A) + (\lambda\times\lambda) (\Co{A}) = 0$, a contradiction.
 
