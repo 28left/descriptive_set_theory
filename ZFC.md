@@ -237,7 +237,7 @@ Since by Foundation $\in$ is well-founded on any set, it suffices to require tha
 ```{prf:definition}
 :label: def-ordinal
 
-A set $a$ is an **ordinal** if it is transitive and linearly ordered by $\in$, that is,
+A set $a$ is an **ordinal** if it is transitive and $\in$ is **connex** on $a$, that is,
 
 \begin{equation*} \tag{con}
 \forall x,y \in a \; (x \in y \: \vee \: x=y \: \vee \: y \in x)
