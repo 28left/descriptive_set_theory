@@ -57,7 +57,7 @@ We can try to make this more precise as follows:
 
 This can be formalized in the language of set theory as an **axiom scheme**: For every $\mathcal{L}_\in$-formula $\varphi(x)$,
 
-> **(Comprehension)$_\varphi$** $\exists y \, \forall x \; ( x \in y \leftrightarrow \varphi(x))$
+> (**Comprehension**)$_\varphi$ $\exists y \, \forall x \; ( x \in y \leftrightarrow \varphi(x))$
 
 This axiom, however, is **contradictory**.
 
@@ -84,7 +84,7 @@ We obtain similar contradictions if we choose as $\varphi(x)$ the formula
 These antinomies are, however, not as direct as Russell's and require some further development of the theory in order to derive a contradiction.
 
 Regarding the existence of sets, we have to distinguish between 
-- **classes**, which we will denote by capital letters $A$,B,\dots$ (for some specific, important classes we will also use boldface) and 
+- **classes**, which we will denote by capital letters $A,B,\dots$ (for some specific, important classes we will also use boldface) and 
 - **sets**, denoted in this context by lower case letters $a,b,\ldots,x,y \ldots$.
 
 An arbitrary property $\varphi(x)$ will define a corresponding class
@@ -207,7 +207,7 @@ The final axiom is
 
 > (**Foundation**) $\qquad a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a$.
 
-Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-\relation is **well-founded** on any set. 
+Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
 
 
 ## Ordinals
