@@ -25,6 +25,9 @@ parts:
       - file: regularityAnalytic.md 
       - file: projective.md
       - file: coanalytic.md
+  - caption: Axiomatic set theory
+    chapters:
+      - file: ZFC.md
   - caption: Reference
     chapters:
       - file: bibliography
