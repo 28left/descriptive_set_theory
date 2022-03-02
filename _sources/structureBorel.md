@@ -344,8 +344,8 @@ We can extend the Borel hierarchy to arbitrary ordinals.
 Let $X$ be a Polish space. Given an ordinal $\xi$, we define
 \begin{align*}
     & \bSigma^0_\xi(X) = \{ \bigcup_k A_k \colon A_k \in \bPi^0_{\zeta_k}(X),\; \zeta_k < \xi \}, \\
-    & \bPi^0_\xi(X) = \{ \Co{A} \colon A \in \bSigma^0_\xi(X) \} = \Co{\bSigma^0_n(X)}, \\
-    & \bDelta^0_\xi(X) = \bSigma^0_\xi(X) \cap \bPi^0_\xi. \\
+    & \bPi^0_\xi(X) = \{ \Co{A} \colon A \in \bSigma^0_\xi(X) \} = \Co{\bSigma^0_\xi(X)}, \\
+    & \bDelta^0_\xi(X) = \bSigma^0_\xi(X) \cap \bPi^0_\xi(X). \\
 \end{align*}
 ```
 

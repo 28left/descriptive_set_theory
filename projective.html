@@ -38,20 +38,22 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Co-Analytic sets" href="coanalytic.html" />
@@ -192,6 +194,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="coanalytic.html">
    Co-Analytic sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Axiomatic set theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZFC.html">
+   The Axioms of Set Theory
   </a>
  </li>
 </ul>
@@ -419,14 +433,14 @@
 \[\begin{eqnarray*}
  \PS[1](X) &amp;=&amp; \exists^{\Baire} \, \BP[1](X) \\
  \PP[n](X) &amp;=&amp; \Co{\PS[n]}(X)  \\
- \PS[n+1](X) &amp;=&amp; \exists^{\Baire} \PS[1](X) \\
+ \PS[n+1](X) &amp;=&amp; \exists^{\Baire} \PP[1](X) \\
  \bDelta^1_n(X) &amp;=&amp; \PS[n](X) \cap \PP[n](X) \\
 \end{eqnarray*}\]</div>
 <p>Hence a set <span class="math notranslate nohighlight">\(P\subseteq X\)</span> is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \PS[1]  \quad \text{ iff } \quad &amp; P(x) \Leftrightarrow \exists \alpha \; F(\alpha,x)  \qquad &amp; \text{ for a closed set  } F \subseteq \Baire \times X, \\
-\PP[1] \quad \text{ iff } \quad &amp;  P(x) \Leftrightarrow \forall \alpha \; F(\alpha,x)  \qquad &amp; \text{ for an open set  } G \subseteq \Baire \times X, \\
+\PP[1] \quad \text{ iff } \quad &amp;  P(x) \Leftrightarrow \forall \alpha \; G(\alpha,x)  \qquad &amp; \text{ for an open set  } G \subseteq \Baire \times X, \\
 \PS[2] \quad \text{ iff } \quad &amp;  P(x) \Leftrightarrow \exists \alpha \forall \beta \; G(\alpha,\beta,x)  \qquad &amp; \text{ for an open set  } G \subseteq \Baire \times \Baire \times X, \\
 \PP[2]  \quad \text{ iff } \quad &amp;  P(x) \Leftrightarrow \forall \alpha \exists \beta \; F(\alpha,\beta, x)  \qquad &amp; \text{ for a closed set  } F \subseteq \Baire \times \Baire \times X, \\
 &amp; \vdots
@@ -558,7 +572,7 @@ A = \{(x,y) \colon x &lt;_W y\}
 <div class="lemma-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A \subseteq \Real^2\)</span> have the property of Baire. Then <span class="math notranslate nohighlight">\(A\)</span> is meager if and only if <span class="math notranslate nohighlight">\(A_x = \{y \colon (x,y) \in A\}\)</span> is meager for all <span class="math notranslate nohighlight">\(x\)</span> except a meager set.</p>
 </div>
-</div><p>For a proof see <span id="id1">[<a class="reference internal" href="bibliography.html#id6">Kechris, 1995</a>]</span>.</p>
+</div><p>For a proof see <span id="id1">[<a class="reference internal" href="bibliography.html#id7" title="Alexander S. Kechris. Classical Descriptive Set Theory. Springer, 1995.">Kechris, 1995</a>]</span>.</p>
 <p>Therefore, if the Continuum hypothesis (<span class="math notranslate nohighlight">\(\CH\)</span>) holds in a model and we can well-order <span class="math notranslate nohighlight">\(\Real\)</span> (or <span class="math notranslate nohighlight">\(\Baire\)</span>, <span class="math notranslate nohighlight">\(\Cant\)</span>) within a certain complexity (as a subset of <span class="math notranslate nohighlight">\(\Real^2\)</span>), we can find a non-regular set of the same complexity. The question now becomes how (hard it is) to define a well-ordering of <span class="math notranslate nohighlight">\(\Real\)</span>, and of course if <span class="math notranslate nohighlight">\(\CH\)</span> holds.</p>
 </div>
 </div>

@@ -64,7 +64,7 @@ For every family $\Gamma$ of subsets of a set $X$,
 ```{prf:proof}
 We clearly have  $ \Gamma \subseteq  \mathcal{A} \Gamma$, so that we only need to prove $\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma$.
 
-Suppose $A = \mathcal{A} P$ with $P_\sigma \in \mathcal{A} \Gamma$, that is, $P_\sigma = \mathcal{A} Q_{\sigma,\tau}$ mit $Q_{\sigma,\tau} \in  \Gamma$. Then
+Suppose $A = \mathcal{A} P$ with $P_\sigma \in \mathcal{A} \Gamma$, that is, $P_\sigma = \mathcal{A} Q_{\sigma,\tau}$ with $Q_{\sigma,\tau} \in  \Gamma$. Then
 \begin{eqnarray*}
 z \in A & \iff & \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
     & \iff & \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\

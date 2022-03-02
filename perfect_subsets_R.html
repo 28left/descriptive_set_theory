@@ -38,20 +38,22 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Polish Spaces" href="polish.html" />
@@ -187,6 +189,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="projective.html">
    The Projective Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Axiomatic set theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZFC.html">
+   The Axioms of Set Theory
   </a>
  </li>
 </ul>
@@ -358,7 +377,7 @@ from a given set. Hence every member of a set is a limit point of that set. In p
 \[
 \xi \mapsto \sum_{i \geq 0} \xi_i 2^{-i-1}.
 \]</div>
-<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id5">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
+<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id6" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
 <p>To construct the desired injection, choose <span class="math notranslate nohighlight">\(x \in P\)</span> and let <span class="math notranslate nohighlight">\(\eps_0 = 1 = 2^0\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is perfect,  <span class="math notranslate nohighlight">\(P \cap U_{\eps_0}(x)\)</span> is infinite. Let <span class="math notranslate nohighlight">\(x_0 \neq x_1\)</span> be two points in <span class="math notranslate nohighlight">\(P \cap U_{\eps_0}(x)\)</span>, distinct from <span class="math notranslate nohighlight">\(x\)</span>. Let <span class="math notranslate nohighlight">\(\eps_1\)</span> be such that <span class="math notranslate nohighlight">\(\eps_1 \leq 1/2\)</span>, <span class="math notranslate nohighlight">\(U_{\eps_1}(x_0), U_{\eps_1}(x_1) \subseteq U_{\eps_0}(x)\)</span>, and <span class="math notranslate nohighlight">\(\overline{U_{\eps_1}(x_0)} \cap \overline{U_{\eps_1}(x_1)} = \emptyset\)</span>, where <span class="math notranslate nohighlight">\(\overline{U}\)</span> denotes the closure of <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <p>We can iterate this procedure recursively with smaller and smaller diameters, using the fact that <span class="math notranslate nohighlight">\(P\)</span> is perfect. This gives rise to a so-called <strong>Cantor scheme</strong>, a family of open balls <span class="math notranslate nohighlight">\((U_\sigma)\)</span> satisfying certain <em>nesting conditions</em>. Here the index <span class="math notranslate nohighlight">\(\sigma\)</span> is a finite binary sequence, also called a <em>string</em>. A Cantor scheme is defined by the following properties.</p>
 <ol>

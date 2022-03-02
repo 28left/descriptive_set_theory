@@ -1,4 +1,4 @@
-# Axiomatic Set Theory
+# The Axioms of Set Theory
 ```{math}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
@@ -53,7 +53,7 @@ This can be translated approximately as: *A set is any collection of certain dis
 
 We can try to make this more precise as follows:
 
-> For every property $P(x)$ exists a set $M$ of all objects $x$ having property $P$:  $M =\{x: E(x) \}$.
+> For every property $P(x)$ exists a set $M$ of all objects $x$ having property $P$:  $M =\{x: M(x) \}$.
 
 This can be formalized in the language of set theory as an **axiom scheme**: For every $\mathcal{L}_\in$-formula $\varphi(x)$,
 
@@ -166,6 +166,7 @@ As usual, by identifying **functions** with their graphs, we can introduce funct
 \begin{gather*}
 F: A \to B :\leftrightarrow  \forall x \in A \; \exists ! y \in B \; (x,y) \in F.
 \end{gather*}
+We write $\Op{Fun}(a)$ to denote that fact that $a$ is a function.
 
 Further elementary axioms:
 
@@ -203,11 +204,19 @@ $$
 $$
 
 
-The final axiom is 
+The final axiom of $\ZF$ is 
 
 > (**Foundation**) $\qquad a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a$.
 
 Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
+
+
+We can also formalize the **Axiom of Choice**:
+
+> (**Choice**) $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))
+
+We denote the axiom system $\ZF + \AC$ as $\ZFC$ -- **Zermelo-Fraenkel with Choice**.
+
 
 
 ## Ordinals

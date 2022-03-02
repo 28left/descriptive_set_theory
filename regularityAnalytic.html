@@ -38,20 +38,22 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The Projective Hierarchy" href="projective.html" />
@@ -187,6 +189,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="projective.html">
    The Projective Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Axiomatic set theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZFC.html">
+   The Axioms of Set Theory
   </a>
  </li>
 </ul>
@@ -412,7 +431,7 @@
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We clearly have  <span class="math notranslate nohighlight">\( \Gamma \subseteq  \mathcal{A} \Gamma\)</span>, so that we only need to prove <span class="math notranslate nohighlight">\(\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma\)</span>.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(A = \mathcal{A} P\)</span> with <span class="math notranslate nohighlight">\(P_\sigma \in \mathcal{A} \Gamma\)</span>, that is, <span class="math notranslate nohighlight">\(P_\sigma = \mathcal{A} Q_{\sigma,\tau}\)</span> mit <span class="math notranslate nohighlight">\(Q_{\sigma,\tau} \in  \Gamma\)</span>. Then</p>
+<p>Suppose <span class="math notranslate nohighlight">\(A = \mathcal{A} P\)</span> with <span class="math notranslate nohighlight">\(P_\sigma \in \mathcal{A} \Gamma\)</span>, that is, <span class="math notranslate nohighlight">\(P_\sigma = \mathcal{A} Q_{\sigma,\tau}\)</span> with <span class="math notranslate nohighlight">\(Q_{\sigma,\tau} \in  \Gamma\)</span>. Then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{eqnarray*}
 z \in A &amp; \iff &amp; \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
