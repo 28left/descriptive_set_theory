@@ -63,7 +63,7 @@ Using continuous images (or rather, the special case of **projections**), we def
 \begin{eqnarray*}
  \PS[1](X) &=& \exists^{\Baire} \, \BP[1](X) \\
  \PP[n](X) &=& \Co{\PS[n]}(X)  \\
- \PS[n+1](X) &=& \exists^{\Baire} \PP[1](X) \\
+ \PS[n+1](X) &=& \exists^{\Baire} \PP[n](X) \\
  \bDelta^1_n(X) &=& \PS[n](X) \cap \PP[n](X) \\
 \end{eqnarray*}
  
