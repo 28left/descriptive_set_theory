@@ -117,14 +117,13 @@ If $A \leq_{\W} B$ via $f$, then $A = f^{-1}(B)$.
 ```{prf:definition}
 :label: def-completeness
 
-A set $A \subseteq X$ is **$\Gamma$-complete** is $A \in \Gamma$ and for all $B \in \Gamma$, $B \leq_{\W} A$. 
+A set $A \subseteq X$ is **$\Gamma$-complete** if $A \in \Gamma$ and for all $B \in \Gamma$, $B \leq_{\W} A$. 
 ```
 
-$\Gamma$-complete sets can be seen as the most complicated members of $\Gamma$. For instance, a $\PP[1]$-complete set cannot be Borel, since otherwise every $\PP[1]$ set would be Borel, which we have seen is not true.
-More generally if $\Gamma$ is any class in the Borel or projective hierarchy, and $A$ is $\Gamma$-complete, then $A$ is not in $\Co{\Gamma}$. For suppose $B \in \Gamma \setminus \Co{\Gamma}$. Then $B \leq_{\W} A$. If $A$ were also in $\Co{\Gamma}$, then $B \in \Co{\Gamma}$, a contradiction.
+$\Gamma$-complete sets can be seen as the most complicated members of $\Gamma$. In particular, for the $\bSigma/\bPi$ classes complete sets cannot be members of the dual class. For instance, a $\PP[1]$-complete set cannot be $\PS[1]$, since this would mean it is Borel, and hence every $\PP[1]$ set would be Borel, which we have seen is not true.
 
 
-If $A \subseteq \Baire \times \Baire$ is $\Baire$-universal for come class $\Gamma$ in the Borel or projective hierarchy, then the set
+If $A \subseteq \Baire \times \Baire$ is $\Baire$-universal for some class $\Gamma$ in the Borel or projective hierarchy, then the set
 
 $$
 	\{ \alpha \oplus \beta \colon (\alpha,\beta) \in A \}

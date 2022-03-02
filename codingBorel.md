@@ -152,7 +152,7 @@ Hence any $\bSigma^0_2$ set $B$ with a computable code can be represented in the
 Conversely, if $R(m,\sigma)$ is a (decidable) predicate, let
 
 $$
-F_m = \{ \beta \colon \forall n \: R(m,\beta) \}.
+F_m = \{ \beta \colon \forall n \: R(m,\beta\Rest{n}) \}.
 $$
 
 We claim that $F_m$ is closed: Define a tree $T_m$ by letting

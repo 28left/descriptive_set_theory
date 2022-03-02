@@ -4,6 +4,7 @@
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\Integer}{\mathbb{Z}}
 \newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
 \newcommand{\Pow}{\mathcal{P}}
 \newcommand{\Co}[1]{\neg \,#1}
 \newcommand{\Op}[1]{\operatorname{#1}}

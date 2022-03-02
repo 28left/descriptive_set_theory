@@ -70,7 +70,7 @@ Properties (i)-(iii) ensure that $f$ is continuous and injective.
 To prove the theorem we devise a Lusin scheme on $X$ such that $D$ will be closed, and $f$ will be a surjection, too. This is ensured by the following additional properties.
 
 - **(a)** $F_\emptyset = X$,
-- **(b)** Each $F_\tau$ ist $\BS[2]$,
+- **(b)** Each $F_\tau$ is $\BS[2]$,
 - **(c)** For each $\tau$, $\diam(F_\sigma) \leq 1/2^{|\sigma|}$,
 - **(d)** $F_\tau = \bigcup_{i \in \Nat} F_{\tau\Conc \Tup{i}} =  \bigcup_{i \in \Nat} \Cl{F_{\tau\Conc \Tup{i}}}$.
 

@@ -63,14 +63,14 @@ Using continuous images (or rather, the special case of **projections**), we def
 \begin{eqnarray*}
  \PS[1](X) &=& \exists^{\Baire} \, \BP[1](X) \\
  \PP[n](X) &=& \Co{\PS[n]}(X)  \\
- \PS[n+1](X) &=& \exists^{\Baire} \PS[1](X) \\
+ \PS[n+1](X) &=& \exists^{\Baire} \PP[1](X) \\
  \bDelta^1_n(X) &=& \PS[n](X) \cap \PP[n](X) \\
 \end{eqnarray*}
  
 Hence a set $P\subseteq X$ is
 \begin{align*}
 \PS[1]  \quad \text{ iff } \quad & P(x) \Leftrightarrow \exists \alpha \; F(\alpha,x)  \qquad & \text{ for a closed set  } F \subseteq \Baire \times X, \\
-\PP[1] \quad \text{ iff } \quad &  P(x) \Leftrightarrow \forall \alpha \; F(\alpha,x)  \qquad & \text{ for an open set  } G \subseteq \Baire \times X, \\
+\PP[1] \quad \text{ iff } \quad &  P(x) \Leftrightarrow \forall \alpha \; G(\alpha,x)  \qquad & \text{ for an open set  } G \subseteq \Baire \times X, \\
 \PS[2] \quad \text{ iff } \quad &  P(x) \Leftrightarrow \exists \alpha \forall \beta \; G(\alpha,\beta,x)  \qquad & \text{ for an open set  } G \subseteq \Baire \times \Baire \times X, \\
 \PP[2]  \quad \text{ iff } \quad &  P(x) \Leftrightarrow \forall \alpha \exists \beta \; F(\alpha,\beta, x)  \qquad & \text{ for a closed set  } F \subseteq \Baire \times \Baire \times X, \\
 & \vdots

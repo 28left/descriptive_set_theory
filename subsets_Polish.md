@@ -161,7 +161,7 @@ $$
 
 It is straightforward to check that $d$ is compatible with $\mathcal{O}'$. Furthermore, let $(x_n)$ be Cauchy in $(X,d_\sqcup)$. Then the $x_n$ are completely in $F$ or in $X\setminus F$ from some point on, and hence $(x_n)$ converges.
 
-Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in this topology is a disjoint union of an open set in $X\setminus F$, which also open the original topology $\mathcal{O}$, and an intersection of an open set from $\mathcal{O}$ with $F$. Such sets are are Borel in $(X,\mathcal{O})$, hence $(X,\mathcal{O})$ and $(X,\mathcal{O}')$ have the same Borel sets. 
+Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in this topology is a disjoint union of an open set in $X\setminus F$, which also open the original topology $\mathcal{O}$, and an intersection of an open set from $\mathcal{O}$ with $F$. Such sets are Borel in $(X,\mathcal{O})$, hence $(X,\mathcal{O})$ and $(X,\mathcal{O}')$ have the same Borel sets. 
 ```
 
 ```{prf:theorem}
