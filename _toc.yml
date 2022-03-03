@@ -28,6 +28,7 @@ parts:
   - caption: Axiomatic set theory
     chapters:
       - file: ZFC.md
+      - file: recursion.md
   - caption: Reference
     chapters:
       - file: bibliography
