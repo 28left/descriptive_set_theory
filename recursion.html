@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion and the Von-Neumann Hierarchy &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="The Axioms of Set Theory" href="ZFC.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Polish spaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perfect_subsets_R.html">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urysohn.html">
+   Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Borel hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Borel.html">
+   Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measure.html">
+   Measure and Baire Category
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="choice.html">
+   The Axiom of Choice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="codingBorel.html">
+   Coding Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="structureBorel.html">
+   The Structure of Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imagesBorel.html">
+   Continuous Images of Borel sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projective sets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="analytic.html">
+   Analytic Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regularityAnalytic.html">
+   Regularity Properties of Analytic sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projective.html">
+   The Projective Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Axiomatic set theory
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZFC.html">
+   The Axioms of Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Recursion and the Von-Neumann Hierarchy
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/recursion.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/28left/descriptive_set_theory"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Frecursion.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transfinite-induction">
+   Transfinite induction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordinal-recursion">
+   Ordinal recursion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursion-for-well-founded-relations">
+   Recursion for well-founded relations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-von-neumann-hierarchy">
+   The Von-Neumann hierarchy
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Recursion and the Von-Neumann Hierarchy</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transfinite-induction">
+   Transfinite induction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordinal-recursion">
+   Ordinal recursion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursion-for-well-founded-relations">
+   Recursion for well-founded relations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-von-neumann-hierarchy">
+   The Von-Neumann hierarchy
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="recursion-and-the-von-neumann-hierarchy">
+<h1>Recursion and the Von-Neumann Hierarchy<a class="headerlink" href="#recursion-and-the-von-neumann-hierarchy" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\Ord}{\mathbf{Ord}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<div class="section" id="transfinite-induction">
+<h2>Transfinite induction<a class="headerlink" href="#transfinite-induction" title="Permalink to this headline">¶</a></h2>
+<p>While the class <span class="math notranslate nohighlight">\(\Ord\)</span> of all ordinals is not a set, it is still transitive and well-ordered by <span class="math notranslate nohighlight">\(\in\)</span>. Regarding the associated order <span class="math notranslate nohighlight">\(\leq\)</span>, every <em>set</em> of ordinals <span class="math notranslate nohighlight">\(a\)</span> has a <strong>supremum</strong> <span class="math notranslate nohighlight">\(\bigcup a = \bigcup_{\xi \in a} \xi\)</span> and (if <span class="math notranslate nohighlight">\(a \ne \emptyset\)</span>) an <strong>infimum</strong>
+<span class="math notranslate nohighlight">\(\bigcap a = \bigcap_{\xi \in a} \xi\)</span>, which is the <em>smallest element</em> of <span class="math notranslate nohighlight">\(a\)</span> ist. Such a smallest element exists actually for every (non-empty) <em>class</em> <span class="math notranslate nohighlight">\(A\)</span> (since if <span class="math notranslate nohighlight">\(\xi \in A\)</span>, we only need to find the infimum of the <em>set</em> of ordinals <span class="math notranslate nohighlight">\(\le \alpha\)</span>.)
+This allows us to prove properties about <em>all</em> ordinals by <strong>induction</strong>.</p>
+<div class="proof proposition admonition" id="prop-induction-ord-i">
+<p class="admonition-title"><span class="caption-number">Proposition 41 </span> (Induction for ordinals, I)</p>
+<div class="proposition-content section" id="proof-content">
+<p>For every property <span class="math notranslate nohighlight">\(\varphi\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \forall \alpha \; [ \forall \xi &lt; \alpha \; \varphi(\xi) \to \varphi(\alpha)] \to \forall \alpha \, \varphi(\alpha).
+\end{equation*}\]</div>
+</div>
+</div><p>We have repeatedly used induction already for ordinals <span class="math notranslate nohighlight">\(&lt; \omega_1\)</span>, the first uncountable ordinal.</p>
+<p>To prove this principle simply observe that if <span class="math notranslate nohighlight">\(\forall \alpha \, \varphi(\alpha)\)</span> failed there would have to be a <em>smallest</em>  <span class="math notranslate nohighlight">\(\alpha\)</span> with  <span class="math notranslate nohighlight">\(\neg \varphi(\alpha)\)</span>, contradicting the induction hypothesis.</p>
+<p>Since every ordinal is either <span class="math notranslate nohighlight">\(0\)</span>, a successor, or a limit ordinal, we have the following variant of induction.</p>
+<div class="proof proposition admonition" id="prop-induction-ord-ii">
+<p class="admonition-title"><span class="caption-number">Proposition 42 </span> (Induction for ordinals, II)</p>
+<div class="proposition-content section" id="proof-content">
+<p>For every property <span class="math notranslate nohighlight">\(\varphi\)</span>, if</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\(\varphi(0)\)</span>,</p></li>
+<li><p><strong>(ii)</strong> <span class="math notranslate nohighlight">\(\forall \alpha (\varphi(\alpha) \to \varphi(\alpha+1))\)</span>, and</p></li>
+<li><p><strong>(iii)</strong> <span class="math notranslate nohighlight">\((\forall \xi &lt; \lambda \; \varphi(\xi)) \to \varphi(\lambda)\quad \)</span> for all limit <span class="math notranslate nohighlight">\(\lambda\)</span>,</p></li>
+</ul>
+<p>then <span class="math notranslate nohighlight">\(\quad \forall \alpha \;  \varphi(\alpha)\)</span>.</p>
+</div>
+</div><p>(i) and (ii) coincide with the usual induction scheme for natural numbers. To cover <em>all</em> ordinals we need to add (iii).</p>
+</div>
+<div class="section" id="ordinal-recursion">
+<h2>Ordinal recursion<a class="headerlink" href="#ordinal-recursion" title="Permalink to this headline">¶</a></h2>
+<p>The induction principle can be used to define functions by <strong>recursion</strong>. For example, <strong>addition</strong> on the natural numbers is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    x+0 \quad &amp; = &amp; x\\
+    x+ (y+1) &amp; = &amp; (x + y)+1. 
+\end{eqnarray*}\]</div>
+<p>In the case of ordinals, we have to consider the limit case, too.</p>
+<div class="proof theorem admonition" id="thm-ordinal-recursion">
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span> (Recursion on ordinals)</p>
+<div class="theorem-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(G :\Ord \times \V \longrightarrow  \V\)</span> is a function and <span class="math notranslate nohighlight">\(a\)</span> is a set, then there exists a unique function <span class="math notranslate nohighlight">\(F: \Ord \longrightarrow \V\)</span>  such that for all <span class="math notranslate nohighlight">\(\alpha \in \Ord\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+F(\alpha) = G(\alpha, F\Rest{\alpha})
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The uniqueness of the function <span class="math notranslate nohighlight">\(F\)</span> follows by induction.</p>
+<p>To show the existence of <span class="math notranslate nohighlight">\(F\)</span>, we define the following:</p>
+<ul class="simple">
+<li><p>Call <span class="math notranslate nohighlight">\(h\)</span> <em>tame</em> if</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\exists \alpha \, (h: \alpha \to V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>Say <span class="math notranslate nohighlight">\(h\)</span> is <em>compatible</em> with <span class="math notranslate nohighlight">\(g\)</span> if</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    \forall x \in \Op{Dom}(h) \cap \Op{Dom}(g) \; h(x) = g(x)
+\end{equation*}\]</div>
+<p>It follows by induction that any two tame functions are compatible.</p>
+<p>This lets us define the desired <span class="math notranslate nohighlight">\(F\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+F := \bigcup \{h \colon h\, \text{ tame}\}
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(F\)</span> is a function (otherwise there would be two incompatible tame functions), its domain is transitive, and satisfies the recursion condition (since it is the union of tame functions).</p>
+<p>It remains to show that <span class="math notranslate nohighlight">\(F\)</span> is defined on all of <span class="math notranslate nohighlight">\(\Ord\)</span>.
+If <span class="math notranslate nohighlight">\(D = \Op{Dom}(F) \neq \Ord\)</span>, then we would have <span class="math notranslate nohighlight">\(D = \alpha\)</span> for some ordinal <span class="math notranslate nohighlight">\(\alpha\)</span>. In particular <span class="math notranslate nohighlight">\(B\)</span> is a set therefore <span class="math notranslate nohighlight">\(F = f\)</span> is a set, for some tame <span class="math notranslate nohighlight">\(f\)</span>. This <span class="math notranslate nohighlight">\(f\)</span> could be extended to a tame <span class="math notranslate nohighlight">\(h = f \cup \{(\alpha,G(\alpha,f \Rest{\alpha}))\}\)</span>, contradiction.</p>
+</div>
+<p>Note that we defined <span class="math notranslate nohighlight">\(F\)</span> <strong>explicitly</strong> as a <em>union</em> of all partial solution to the recursion equation.</p>
+<p>As with induction, we have the following variant of the recursion principle.</p>
+<div class="proof proposition admonition" id="prop-ordinal-recursion-ii">
+<p class="admonition-title"><span class="caption-number">Proposition 43 </span> (Recursion on ordinals, variant)</p>
+<div class="proposition-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(G, H: \Ord \times \V \longrightarrow  \V\)</span> are functions and <span class="math notranslate nohighlight">\(a\)</span> is a set, then there exists a unique function <span class="math notranslate nohighlight">\(F: \Ord \longrightarrow \V\)</span>  such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*} 
+    F(0) \quad &amp; = &amp; a\\ 
+    F(\alpha+1) &amp; = &amp; G(\alpha,F(\alpha)) \\    
+    F(\lambda) \quad &amp; = &amp; H(\lambda, \{F(\xi) \colon \xi&lt;\lambda \}) \quad \text{for } \Op{Lim}(\lambda).
+\end{eqnarray*}\]</div>
+</div>
+</div><p>We can establish a similar principle for a well-ordering <span class="math notranslate nohighlight">\(&lt;\)</span> on a class <span class="math notranslate nohighlight">\(A\)</span>. In case of a proper class, though, we have to require that for every <span class="math notranslate nohighlight">\(a \in A\)</span>,  the class of all <strong>predecessors</strong> of <span class="math notranslate nohighlight">\(a\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+S(a,&lt;): = \{x \in A\colon x &lt; a \},
+\end{equation*}\]</div>
+<p>is a set (if <span class="math notranslate nohighlight">\(A\)</span> is a set, this follows automatically by <em>Separation</em>). If this is the case, the recursion principle yields a function <span class="math notranslate nohighlight">\(F: A \to \V\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    F(a) = G(a,F\Rest{S(a,&lt;)}).
+\end{equation*}\]</div>
+</div>
+<div class="section" id="recursion-for-well-founded-relations">
+<h2>Recursion for well-founded relations<a class="headerlink" href="#recursion-for-well-founded-relations" title="Permalink to this headline">¶</a></h2>
+<p>More generally, we can define induction and recursion on <strong>well-founded</strong> relations. We already encountered those in a <a class="reference internal" href="coanalytic.html#sec-well-founded"><span class="std std-ref">previous chapter</span></a>.</p>
+<div class="proof definition admonition" id="def-well-founded">
+<p class="admonition-title"><span class="caption-number">Definition 34 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A relation <span class="math notranslate nohighlight">\(R\)</span> on a class <span class="math notranslate nohighlight">\(A\)</span> is <strong>well-founded</strong> if it satisfies the <strong>minimality condition</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    (\Op{Min}_R) \qquad  \emptyset \neq b \subset A \to \exists x \in b \; \forall y \in b \, (  \neg y R x)
+\end{equation*}\]</div>
+<p>and the <strong>set condition</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    \forall x \in A \; S(a,R):= \{x \colon x R a\} \text{ is a set}
+\end{equation*}\]</div>
+</div>
+</div><p>If <span class="math notranslate nohighlight">\(A\)</span> is a set, the minimality condition is again automatically satisfied by <em>Separation</em>.</p>
+<p>The set condition allows for taking the <strong><span class="math notranslate nohighlight">\(R\)</span>-transitive closure</strong> of a set <span class="math notranslate nohighlight">\(a \in A\)</span>: the smallest superset <span class="math notranslate nohighlight">\(\Op{TC}_R(a)\)</span> of <span class="math notranslate nohighlight">\(a\)</span> that is <em><span class="math notranslate nohighlight">\(R\)</span>-transitive</em>:</p>
+<div class="math notranslate nohighlight">
+\[ \forall x \in \Op{TC}_R(a)\; S(x,R) \subseteq  \Op{TC}_R(a)\]</div>
+<p>This is done by recursion over the natural numbers (see the example of the transitive closure of a set below).</p>
+<p>We can use the existence of <span class="math notranslate nohighlight">\(\Op{TC}_R\)</span> as a set to strengthen the minimality condition to <em>subclasses</em> (<em>exercise!</em>), similar to the case of the well-ordering of <span class="math notranslate nohighlight">\(\Ord\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}  
+    (\Op{Min}_R^*) \qquad \emptyset \neq B \subseteq A \to \exists x \in B \; \forall y \in B \, (  \neg y R x),
+\end{equation*}\]</div>
+<p>and from this obtain a corresponding <strong>induction principle for well-founded relations</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \wedge \varphi(y) \to \varphi(x))] \to \forall x \in A \, \varphi(x)).
+\end{equation*}\]</div>
+<p>This in turn yields the following.</p>
+<div class="proof theorem admonition" id="thm-wf-recursion">
+<p class="admonition-title"><span class="caption-number">Theorem 31 </span> (Recursion principle for well-founded relations)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(R\)</span> be a well-founded relation on a class <span class="math notranslate nohighlight">\(A\)</span>. The for every function <span class="math notranslate nohighlight">\(G : A \times \V \longrightarrow  \V\)</span> exists a unique function <span class="math notranslate nohighlight">\(F: A \to \V\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    F(a) = G(a,F \Rest{\{x \mid xRa\}})  \text{ for all } a \in A.
+\end{equation*}\]</div>
+</div>
+</div><div class="proof example admonition" id="exa-trans-closure">
+<p class="admonition-title"><span class="caption-number">Example 1 </span> (Transitive closure of a set)</p>
+<div class="example-content section" id="proof-content">
+<p>By the axiom of <em>Foundation</em>, <span class="math notranslate nohighlight">\(\in\)</span> is a well-founded relation on <span class="math notranslate nohighlight">\(\V\)</span>. (The set condition is satisfied since <span class="math notranslate nohighlight">\(S(a,\in)=a\)</span>.)</p>
+<p>We can form the <strong>transitive closure</strong>, the smallest transitive superset, of a set <span class="math notranslate nohighlight">\(a\)</span> as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    \Op{TC}(a):&amp;=&amp; a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
+ = \bigcup_{n&lt; \omega} U^n(a), \quad \text{ where} \\ 
+ &amp;&amp;U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
+\end{eqnarray*}\]</div>
+<p>This is an example of definition by recursion along <span class="math notranslate nohighlight">\(\Nat\)</span>.</p>
+</div>
+</div></div>
+<div class="section" id="the-von-neumann-hierarchy">
+<h2>The Von-Neumann hierarchy<a class="headerlink" href="#the-von-neumann-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>Is there a way to systematically build the <span class="math notranslate nohighlight">\(\V\)</span>, the universe of all sets, “from below”?</p>
+<p>We start with the empty set:</p>
+<div class="math notranslate nohighlight">
+\[
+V_0 = \emptyset
+\]</div>
+<p>Given <span class="math notranslate nohighlight">\(V_\alpha\)</span>, the <em>Power Set</em> axiom requires the set of all subsets to exist, so we set</p>
+<div class="math notranslate nohighlight">
+\[ 
+V_{\alpha+1} = \mathcal{P}(V_{\alpha}).
+\]</div>
+<p>Finally, at limit stages we simply collect all sets we have obtained so far:</p>
+<div class="math notranslate nohighlight">
+\[
+V_ \lambda =  \bigcup_{\xi &lt; \lambda} V_\xi \quad \text{for } \Op{Lim}(\lambda)
+\]</div>
+<p>What we really are doing here is to construct a function <span class="math notranslate nohighlight">\(V: \Ord \to \V\)</span> by ordinal recursion. Think <span class="math notranslate nohighlight">\(V_\alpha = V(\alpha)\)</span>.</p>
+<p>Remarkably, if we assume the axiom of <em>Foundation</em>, we reach <em>all</em> sets this way.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Note that the notation <span class="math notranslate nohighlight">\(\bigcup_{\alpha \in \Ord} \dots\)</span> is really just a shortcut for the class obtained as <span class="math notranslate nohighlight">\(\{ x \colon \exists \alpha \in \Ord \dots\}\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thm-von-Neumann">
+<p class="admonition-title"><span class="caption-number">Theorem 32 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>For every set <span class="math notranslate nohighlight">\(x\)</span> there exists an ordinal <span class="math notranslate nohighlight">\(\alpha\)</span> with <span class="math notranslate nohighlight">\(x \in V_\alpha\)</span>, that is,</p>
+<div class="math notranslate nohighlight">
+\[
+    \V = \bigcup_{\alpha \in \Ord} V_\alpha
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(C\)</span> be the class of all sets not in any <span class="math notranslate nohighlight">\(V_\alpha\)</span>. Since <span class="math notranslate nohighlight">\(\in\)</span> is well-founded, if <span class="math notranslate nohighlight">\(C\)</span> is non-empty, it has a <span class="math notranslate nohighlight">\(\in\)</span>-minimal element <span class="math notranslate nohighlight">\(x\)</span>. This implies that for all <span class="math notranslate nohighlight">\(z \in x\)</span>, <span class="math notranslate nohighlight">\(z \in \bigcup_{\alpha \in \Ord} V_\alpha\)</span>. Define a function <span class="math notranslate nohighlight">\(h\)</span> by mapping each <span class="math notranslate nohighlight">\(z\in x\)</span> to the <em>least</em> <span class="math notranslate nohighlight">\(\alpha\)</span> so that <span class="math notranslate nohighlight">\(z \in V_\alpha\)</span>. Since <span class="math notranslate nohighlight">\(x\)</span> is a set, <span class="math notranslate nohighlight">\(h[x]\)</span> is a set of ordinals, by <em>Replacement</em>. This set or ordinals has a supremum, say <span class="math notranslate nohighlight">\(\gamma\)</span>. Then <span class="math notranslate nohighlight">\(x \subseteq V_\gamma\)</span> and therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+x \in \mathcal{P}(V_\gamma) = V_{\gamma+1}.
+\]</div>
+<p>Hence <span class="math notranslate nohighlight">\(C\)</span> must be empty, and the theorem follows.</p>
+</div>
+<p>We can now split the question of “how large” <span class="math notranslate nohighlight">\(\V\)</span> is into two sub-questions:</p>
+<ul class="simple">
+<li><p>How “<strong>long</strong>” is <span class="math notranslate nohighlight">\(\V\)</span>, that is, how many ordinals are there? Axioms for <strong>large cardinals</strong> attempt to extend this “length” as far as possible.</p></li>
+<li><p>How “<strong>wide</strong>” is <span class="math notranslate nohighlight">\(\V\)</span>, that is, how large is the power set of a set? A rather “slim” universe is given by the <strong>constructible sets</strong>, which we will encounter soon.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ZFC.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Axioms of Set Theory</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

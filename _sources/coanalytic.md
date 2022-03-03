@@ -146,7 +146,7 @@ $$
 
 It follows that complete sets exist for all levels of the Borel and projective hierarchy. However, the universal sets they are based on are rather abstract objects. Complete sets are most useful when we can show that a *specific property* implies completeness. We will encounter next an important example for the class of co-analytic sets.
 
-
+(sec-well-founded)=
 ## Well-founded relations and well-orderings
  
 Given a real in $\beta \in \Baire$, we can associate with $\beta$ a binary relation $E_\beta$ on $\Nat$:

@@ -129,6 +129,8 @@ Therefore, it makes sense to define the **hybrid classes**:
 Using induction, we can extend the inclusions in a straightforward way to higher $n$.
 
 ```{prf:theorem} Weak Hierarchy Theorem
+:label: thm-weak-Borel-hierarchy
+
 ![weak Borel hierachy](./images/weak_Borel.png)
 ```
 
