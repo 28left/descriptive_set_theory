@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Models of Set Theory &#8212; Descriptive Set Theory</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Recursion and the Von-Neumann Hierarchy" href="recursion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/PS_VER2_RGB_2C.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Descriptive Set Theory</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Contents
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Polish spaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perfect_subsets_R.html">
+   Perfect Subsets of the Real Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polish.html">
+   Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urysohn.html">
+   Excursion: The Urysohn Space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trees.html">
+   Trees
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Borel hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Borel.html">
+   Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subsets_Polish.html">
+   Subspaces of Polish Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measure.html">
+   Measure and Baire Category
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="choice.html">
+   The Axiom of Choice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="codingBorel.html">
+   Coding Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="structureBorel.html">
+   The Structure of Borel Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imagesBorel.html">
+   Continuous Images of Borel sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projective sets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="analytic.html">
+   Analytic Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regularityAnalytic.html">
+   Regularity Properties of Analytic sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projective.html">
+   The Projective Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coanalytic.html">
+   Co-Analytic sets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Axiomatic set theory
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZFC.html">
+   The Axioms of Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion and the Von-Neumann Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Models of Set Theory
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/models.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/28left/descriptive_set_theory"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fmodels.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mostowski-collapse">
+   Mostowski collapse
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Models of Set Theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mostowski-collapse">
+   Mostowski collapse
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="models-of-set-theory">
+<h1>Models of Set Theory<a class="headerlink" href="#models-of-set-theory" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\Ord}{\mathbf{Ord}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<p>You may have noticed that, when introducing the axioms of <span class="math notranslate nohighlight">\(\ZFC\)</span>, we never <em>really</em> answered the question “<em>What is a set?</em>”. Instead, we developed a formal theory of axioms for a binary relation that somehow describe “<em>how sets work</em>”, that is, how we can obtain sets from given ones using well-known operations like power set and union.</p>
+<p>We have then seen how we can develop a lot of standard mathematical <em>objects</em> (like <span class="math notranslate nohighlight">\(\Nat\)</span>, <span class="math notranslate nohighlight">\(\Real\)</span>) and <em>techniques</em> (like induction and definition by recursion) <strong>inside</strong> this formal system. In fact, most of mathematics can be developed formally inside this system. Almost all proofs you find in any standard math book are proofs that can be formalized in <span class="math notranslate nohighlight">\(\ZFC\)</span>. It is very tedious to do this for us humans, but there is little doubt it can be done, and in fact, looking at the recent work on <strong>proof assistants</strong> (like Coq or Lean), many parts of mathematics have been formalized (albeit not directly in <span class="math notranslate nohighlight">\(\ZFC\)</span>).</p>
+<p>This expressiveness gives <span class="math notranslate nohighlight">\(\ZFC\)</span> is foundational importance, but it also the cause for much confusion for someone who first studies set theory.</p>
+<p>From a pedagogical point of view, in what follows it is helpful to assume a “<strong>Platonist</strong>” perspective of mathematics, and set theory in particular, namely that <em>sets and the relations between exist independently (and outside) of the <span class="math notranslate nohighlight">\(\ZFC\)</span> axioms</em>. The set of real numbers is there, and our development of <span class="math notranslate nohighlight">\(\Real\)</span> inside <span class="math notranslate nohighlight">\(\ZFC\)</span> is just a formal way to describe them. From this perspective, the axioms of <span class="math notranslate nohighlight">\(\ZF\)</span> (<span class="math notranslate nohighlight">\(\AC\)</span> is a little different) are just obvious truths about sets, just like the <strong>Peano axioms</strong> are obvious truths about natural numbers.</p>
+<p>Among other things, this perspective allows us to treat <span class="math notranslate nohighlight">\(\ZF\)</span> just like any other mathematical theory, like <em>group theory</em> or the theory of <em>algebraically closed fields</em>.
+In particular, we can think about <strong>models of set theory</strong> the way we would think about models of group theory, in the sense of model theory.</p>
+<p>A <strong>model</strong> would simply be a set <span class="math notranslate nohighlight">\(M\)</span> together with a binary relation <span class="math notranslate nohighlight">\(E\)</span> on <span class="math notranslate nohighlight">\(S\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    (M,E) \models \ZF,
+\]</div>
+<p>that is, all axioms hold when interpreted in <span class="math notranslate nohighlight">\((M,E)\)</span>. Note that we use “<em>set</em>” in this context not in the formal sense, but in the “meta”-sense (the Platonist world of sets).</p>
+<p>Working in the meta-theory (“<em>that what is mathematically true</em>”), we know by Gödel’s completeness theorem that</p>
+<blockquote>
+<div><p>if <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, then it has a model.</p>
+</div></blockquote>
+<p>This model should be seen as a <strong>set-theoretic universe</strong>: Its elements can be seen as sets, and the interpretation  <span class="math notranslate nohighlight">\(E\)</span> of the <span class="math notranslate nohighlight">\(\in\)</span>-symbol will tell us how these sets are connected via the element-relation.</p>
+<p>Note that <span class="math notranslate nohighlight">\(E\)</span> does not have to be the <em>actual</em> element relation on a set (of sets), but just some binary relation so that the axioms are satisfied.</p>
+<p>In the meta-world, there are, of course, sets other than <span class="math notranslate nohighlight">\(M\)</span>, but that does not matter here, since al we are interested in is giving <em>some</em> universe in which our axioms hold. (Timothy Chow has suggested that set theory should rather be called “<em>universe theory</em>. He is right in the sense that what set theory does is to define such <em>universes of sets</em>, rather than what a set is.)</p>
+<p>In the meta-theory, we can then follow the usual techniques to show provability or non-provability results.</p>
+<p>If we want to prove that <span class="math notranslate nohighlight">\(\CH\)</span> is consistent with <span class="math notranslate nohighlight">\(\ZF\)</span> (assuming <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent), we need to find a model in which both hold.</p>
+<p>One difficulty in working with models of set theory is that they can look very different depending on whether you look at a model “<strong>from the inside</strong>” or “<strong>from the outside</strong>”.</p>
+<p>To illustrate this, assume <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent. Then, by the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem">Löwenheim-Skolem theorem</a></strong>, there exists a <strong>countable model</strong> for <span class="math notranslate nohighlight">\(\ZF\)</span>.
+Yet it is a theorem of <span class="math notranslate nohighlight">\(\ZF\)</span> that <em>there exists an uncountable set</em>. This is often referred to as <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Skolem%27s_paradox">Skolem’s paradox</a></strong>, although it is not really an antinomy.</p>
+<p>If we break this down a bit, we see that the apparent paradox is really just a matter of perspective (<em>inside</em> or <em>outside</em>). Assume <span class="math notranslate nohighlight">\((M,E)\)</span> is a countable model of <span class="math notranslate nohighlight">\(\ZF\)</span>. Then there exists <span class="math notranslate nohighlight">\(x \in M\)</span> such that there is no injection from <span class="math notranslate nohighlight">\(x\)</span> to the natural numbers. Since <span class="math notranslate nohighlight">\(M\)</span> is countable, <span class="math notranslate nohighlight">\(x\)</span> can have at most countably many elements. So why is this <em>not</em> a contradiction? We should really read the statement above as</p>
+<blockquote>
+<div><p>there is no injection <strong>in <span class="math notranslate nohighlight">\(M\)</span></strong> from <span class="math notranslate nohighlight">\(x\)</span> to <strong><span class="math notranslate nohighlight">\(M\)</span>’s version the natural numbers</strong>.</p>
+</div></blockquote>
+<p>In other words, even though <span class="math notranslate nohighlight">\(x\)</span> is countable <em>from the outside</em>, <span class="math notranslate nohighlight">\(x\)</span> appears uncountable <em>inside <span class="math notranslate nohighlight">\(M\)</span></em> since a mapping witnessing its countability does not exist in <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>This is a first warning sign that models of <span class="math notranslate nohighlight">\(\ZF\)</span> can behave in very unexpected ways. Another example, we the axiom of Foundation asserts that the <span class="math notranslate nohighlight">\(\in\)</span>-relation is well-founded. But again, this means only “from the inside”.</p>
+<div class="proof proposition admonition" id="prop-illfounded-ZF-model">
+<p class="admonition-title"><span class="caption-number">Proposition 44 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, than there exists a model <span class="math notranslate nohighlight">\((M,E)\)</span> of <span class="math notranslate nohighlight">\(\ZF\)</span> such that <span class="math notranslate nohighlight">\((M,E)\)</span> is ill-founded.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Introduce new constant symbols <span class="math notranslate nohighlight">\(c_n\)</span> <span class="math notranslate nohighlight">\((n \in \Nat)\)</span> and add the formulas <span class="math notranslate nohighlight">\(\varphi_n \equiv c_{n+1} \in c_n\)</span> to the axioms of <span class="math notranslate nohighlight">\(\ZF\)</span>. It is not hard to show, using the <a class="reference external" href="https://en.wikipedia.org/wiki/Compactness_theorem">compactness theorem</a>, that <span class="math notranslate nohighlight">\(\ZF + \bigcup_n \varphi_n\)</span> has a model <span class="math notranslate nohighlight">\((M^*, E^*)\)</span>, for which the set <span class="math notranslate nohighlight">\(\{c_n \colon n \in \Nat\}\)</span> is ill-founded.</p>
+</div>
+<p>Since, as mentioned above, the model <span class="math notranslate nohighlight">\((M^*,E^*)\)</span> satisfies <em>Foundation</em>, the set <span class="math notranslate nohighlight">\(\{c_n \colon n \in \Nat\}\)</span> is actually <em>not in</em> the model (and neither can be any other set with an infinite descending <span class="math notranslate nohighlight">\(\in\)</span>-chain).</p>
+<div class="section" id="mostowski-collapse">
+<h2>Mostowski collapse<a class="headerlink" href="#mostowski-collapse" title="Permalink to this headline">¶</a></h2>
+<p>If we restrict ourselves to models on which the <span class="math notranslate nohighlight">\(E\)</span>-relation is <em>actually</em> well-founded (i.e. from the outside), then interestingly these models look in way “<em>natural</em>”: They can be assumed to be the <span class="math notranslate nohighlight">\(\in\)</span>-relation on a set.</p>
+<p>Given a set theoretic structure <span class="math notranslate nohighlight">\((M,E)\)</span> (not necessarily a model of <span class="math notranslate nohighlight">\(\ZF\)</span>), for each <span class="math notranslate nohighlight">\(x \in M\)</span> let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\Op{ext}_E(x) = \{ y \in X \colon y\, E \, x \}
+\end{equation*}\]</div>
+<p>If <span class="math notranslate nohighlight">\(E\)</span> behaves ``set-like’’, then it will respect the axiom of <em>Extensionality</em>, i.e. two sets are identical if and only if they have the same elements. Therefore we say that <span class="math notranslate nohighlight">\(E\)</span> is <strong>extensional</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	x,z \in X, \; x\neq z \quad \text{ implies } \quad \Op{ext}_E(x) \neq \Op{ext}_E(z).
+\end{equation*}\]</div>
+<p>Furthermore, as stated above, we want to exclude infinite descending <span class="math notranslate nohighlight">\(E\)</span>-chains. We say that <span class="math notranslate nohighlight">\(E\)</span> is <strong>well-founded</strong> if</p>
+<blockquote>
+<div><p>every non-empty set <span class="math notranslate nohighlight">\(Y \subseteq X\)</span> has an <span class="math notranslate nohighlight">\(E\)</span>-minimal subset.</p>
+</div></blockquote>
+<div class="proof theorem admonition" id="thm-Mostowski-collapse">
+<p class="admonition-title"><span class="caption-number">Theorem 33 </span> (Mostowski collapse)</p>
+<div class="theorem-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(E\)</span> is an extensional and well-founded relation on a set <span class="math notranslate nohighlight">\(X\)</span>, then there exists a transitive set <span class="math notranslate nohighlight">\(S\)</span> and a bijection <span class="math notranslate nohighlight">\(\pi: X \to S\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    x \, E \, y \iff \pi(x) \in \pi(y) \quad \text{ for all$ x,y \in X$}.		
+\end{equation*}\]</div>
+<p>Moreover, <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(\pi\)</span> are unique.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We construct <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(S = \Op{im}(\pi)\)</span> by recursion on <span class="math notranslate nohighlight">\(E\)</span>, which is possible since it is well-founded.</p>
+<p>For each <span class="math notranslate nohighlight">\(x \in X\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \pi(x) = \{\pi(y) \colon y \, E \, x \},
+\end{equation*}\]</div>
+<p>and set <span class="math notranslate nohighlight">\(S = \Op{im}(\pi)\)</span>.</p>
+<p>The injectivity of <span class="math notranslate nohighlight">\(\pi\)</span> follows from the extensionality of <span class="math notranslate nohighlight">\(\pi\)</span> by induction along <span class="math notranslate nohighlight">\(E\)</span>: 	
+Suppose we have shown</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\forall z \; (z E x \to \forall y  \in X (\pi(z) = \pi(y) \to z = y)).
+\end{equation*}\]</div>
+<p>and we have to show that it holds for <span class="math notranslate nohighlight">\(x\)</span>. Assume <span class="math notranslate nohighlight">\(\pi(x) = \pi(y)\)</span> for some <span class="math notranslate nohighlight">\(y \in X\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+cEx &amp;\Rightarrow&amp; \pi(c) \in \pi(x) = \pi(y) &amp;\\
+&amp;\Rightarrow&amp; \pi(c) = \pi(z) &amp; \qquad \text{ for some } zEy\\
+&amp;\Rightarrow&amp; c=z &amp; \qquad  (\text{by ind. hyp., since } cEx)\\
+&amp;\Rightarrow&amp; cEy &amp;.
+\end{align*}\]</div>
+<p>Similarly, we get <span class="math notranslate nohighlight">\(cEy \Rightarrow cEx\)</span>, hence <span class="math notranslate nohighlight">\(x=y\)</span> as desired due to the extensionality of <span class="math notranslate nohighlight">\(E\)</span>. Finally we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\pi(x) \in \pi(y) &amp; \Rightarrow &amp; \pi(x) = \pi(c) &amp; \qquad \text{ for some } cEy \\
+&amp;\Rightarrow&amp; x = c &amp; \qquad \text{ (since $\pi$ is injective)}\\
+&amp;\Rightarrow&amp; xEy &amp;
+\end{align*}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(\pi\)</span> is an isomorphism.</p>
+<p>To see the uniqueness of <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(S\)</span>, assume <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(T\)</span> are such that the statement of the Theorem is satisfied. Then <span class="math notranslate nohighlight">\(\pi \circ \rho^{-1}\)</span> is an isomorphism between <span class="math notranslate nohighlight">\((T, \in)\)</span> and <span class="math notranslate nohighlight">\((S,\in)\)</span>.</p>
+<div class="proof lemma admonition" id="lem-Mostowski-unique">
+<p class="admonition-title"><span class="caption-number">Lemma 17 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(X,Y\)</span> are sets, and <span class="math notranslate nohighlight">\(\theta\)</span> is an isomorphism between <span class="math notranslate nohighlight">\((X,\in)\)</span> and <span class="math notranslate nohighlight">\((Y,\in)\)</span>. Then <span class="math notranslate nohighlight">\(X=Y\)</span> and <span class="math notranslate nohighlight">\(\theta(x) = x\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. By induction on the well-founded relation <span class="math notranslate nohighlight">\(\in\)</span>. Assume that <span class="math notranslate nohighlight">\(\theta(z)=z\)</span> for all <span class="math notranslate nohighlight">\(z \in x\)</span> and let <span class="math notranslate nohighlight">\(y = \theta(x)\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(x \subseteq y\)</span> because if <span class="math notranslate nohighlight">\(z \in x\)</span>, then <span class="math notranslate nohighlight">\(z = \theta(z) \in \theta(x) = y\)</span>.</p>
+<p>We also have <span class="math notranslate nohighlight">\(y \subseteq x\)</span>: Let <span class="math notranslate nohighlight">\(t \in y\)</span>. Since <span class="math notranslate nohighlight">\(y \in Y\)</span>, there is <span class="math notranslate nohighlight">\(z \in X\)</span> with <span class="math notranslate nohighlight">\(\theta(z) = t\)</span>. Since <span class="math notranslate nohighlight">\(\theta(z) \in y\)</span>, we have <span class="math notranslate nohighlight">\(z \in x\)</span>, and thus <span class="math notranslate nohighlight">\(t = \theta(z) = z \in x\)</span>. Hence <span class="math notranslate nohighlight">\(x = y\)</span>, and this also implies <span class="math notranslate nohighlight">\(\theta(x) = x\)</span>.</p>
+</div>
+<p>The lemma, applied to <span class="math notranslate nohighlight">\(\pi \circ \rho^{-1}\)</span>, yields <span class="math notranslate nohighlight">\(S = T\)</span> and <span class="math notranslate nohighlight">\(\pi \circ \rho^{-1} = \Op{id}\)</span>, hence <span class="math notranslate nohighlight">\(\pi = \rho\)</span></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="recursion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Recursion and the Von-Neumann Hierarchy</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jan Reimann<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

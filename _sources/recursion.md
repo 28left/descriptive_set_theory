@@ -27,7 +27,7 @@
 ## Transfinite induction
 
 While the class $\Ord$ of all ordinals is not a set, it is still transitive and well-ordered by $\in$. Regarding the associated order $\leq$, every *set* of ordinals $a$ has a **supremum** $\bigcup a = \bigcup_{\xi \in a} \xi$ and (if $a \ne \emptyset$) an **infimum** 
-$\bigcap a = \bigcap_{\xi \in a} \xi$, which is the *smallest element* of $a$ ist. Such a smallest element exists actually for every (non-empty) *class* $A$ (since if $\xi \in A$, we only need to find the infimum of the *set* of ordinals $\le \alpha$.) 
+$\bigcap a = \bigcap_{\xi \in a} \xi$, which is the *smallest element* of $a$ ist. Such a smallest element exists actually for every (non-empty) *class* $A$ (since if $\xi \in A$, we only need to find the infimum of the *set* of ordinals $\le \xi$.) 
 This allows us to prove properties about *all* ordinals by **induction**.
 
 ```{prf:proposition} Induction for ordinals, I
@@ -158,14 +158,45 @@ The set condition allows for taking the **$R$-transitive closure** of a set $a \
 
 $$ \forall x \in \Op{TC}_R(a)\; S(x,R) \subseteq  \Op{TC}_R(a)$$
 
-This is done by recursion over the natural numbers (see the example of the transitive closure of a set below).
+This is done by recursion over the natural numbers. The following is an important example.
 
-We can use the existence of $\Op{TC}_R$ as a set to strengthen the minimality condition to *subclasses* (*exercise!*), similar to the case of the well-ordering of $\Ord$:
-\begin{equation*}  
-    (\Op{Min}_R^*) \qquad \emptyset \neq B \subseteq A \to \exists x \in B \; \forall y \in B \, (  \neg y R x),
-\end{equation*}
+```{prf:example} Transitive closure of a set
+:label: exa-trans-closure
 
-and from this obtain a corresponding **induction principle for well-founded relations**:
+By the axiom of *Foundation*, $\in$ is a well-founded relation on $\V$. (The set condition is satisfied since $S(a,\in)=a$.)
+
+We can form the **transitive closure**, the smallest transitive superset, of a set $a$ as
+
+\begin{eqnarray*}
+    \Op{TC}(a):&=& a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
+ = \bigcup_{n< \omega} U^n(a), \quad \text{ where} \\ 
+ &&U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
+\end{eqnarray*}
+
+This is an example of definition by recursion along $\Nat$.
+```
+
+We can use the existence of $\Op{TC}_R$ as a set to strengthen the minimality condition to *subclasses*, similar to the case of the well-ordering of $\Ord$:
+
+```{prf:lemma}
+:label: lem-min-wf
+
+For every non-empty class $B \subseteq A$, there exists $x \in B$ such that
+
+$$
+    \forall y \in B \;  \neg y R x
+$$
+```
+
+To prove this lemma, simply pick any $x \in B$, take its transitive $R$-closure, and intersect it with $B$:
+
+$$
+    C = \Op{TC}_R(x) \cap B$.
+$$
+
+$C$ is a set, and by the minimality condition $(\Op{Min}_R)$ has an $R$-minimal element $a$. $a$ has to be minimal for $B$, too, since otherwise there exists $b \in B$ with $b R a$. Since $a \in \Op{TC}_R(x)$, $b \in \Op{TC}_R(x)$, and therefore $b \in C$, contradicting the minimality of $a$.
+
+The lemma implies a corresponding **induction principle for well-founded relations**:
 
 \begin{equation*}
     (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \wedge \varphi(y) \to \varphi(x))] \to \forall x \in A \, \varphi(x)).
@@ -183,21 +214,7 @@ Let $R$ be a well-founded relation on a class $A$. The for every function $G : A
 \end{equation*}
 ```
 
-```{prf:example} Transitive closure of a set
-:label: exa-trans-closure
 
-By the axiom of *Foundation*, $\in$ is a well-founded relation on $\V$. (The set condition is satisfied since $S(a,\in)=a$.)
-
-We can form the **transitive closure**, the smallest transitive superset, of a set $a$ as
-
-\begin{eqnarray*}
-    \Op{TC}(a):&=& a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
- = \bigcup_{n< \omega} U^n(a), \quad \text{ where} \\ 
- &&U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
-\end{eqnarray*}
-
-This is an example of definition by recursion along $\Nat$.
-```
 
 
 

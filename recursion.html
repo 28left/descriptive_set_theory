@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="Models of Set Theory" href="models.html" />
     <link rel="prev" title="The Axioms of Set Theory" href="ZFC.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -211,6 +211,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Recursion and the Von-Neumann Hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="models.html">
+   Models of Set Theory
   </a>
  </li>
 </ul>
@@ -409,7 +414,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="transfinite-induction">
 <h2>Transfinite induction<a class="headerlink" href="#transfinite-induction" title="Permalink to this headline">¶</a></h2>
 <p>While the class <span class="math notranslate nohighlight">\(\Ord\)</span> of all ordinals is not a set, it is still transitive and well-ordered by <span class="math notranslate nohighlight">\(\in\)</span>. Regarding the associated order <span class="math notranslate nohighlight">\(\leq\)</span>, every <em>set</em> of ordinals <span class="math notranslate nohighlight">\(a\)</span> has a <strong>supremum</strong> <span class="math notranslate nohighlight">\(\bigcup a = \bigcup_{\xi \in a} \xi\)</span> and (if <span class="math notranslate nohighlight">\(a \ne \emptyset\)</span>) an <strong>infimum</strong>
-<span class="math notranslate nohighlight">\(\bigcap a = \bigcap_{\xi \in a} \xi\)</span>, which is the <em>smallest element</em> of <span class="math notranslate nohighlight">\(a\)</span> ist. Such a smallest element exists actually for every (non-empty) <em>class</em> <span class="math notranslate nohighlight">\(A\)</span> (since if <span class="math notranslate nohighlight">\(\xi \in A\)</span>, we only need to find the infimum of the <em>set</em> of ordinals <span class="math notranslate nohighlight">\(\le \alpha\)</span>.)
+<span class="math notranslate nohighlight">\(\bigcap a = \bigcap_{\xi \in a} \xi\)</span>, which is the <em>smallest element</em> of <span class="math notranslate nohighlight">\(a\)</span> ist. Such a smallest element exists actually for every (non-empty) <em>class</em> <span class="math notranslate nohighlight">\(A\)</span> (since if <span class="math notranslate nohighlight">\(\xi \in A\)</span>, we only need to find the infimum of the <em>set</em> of ordinals <span class="math notranslate nohighlight">\(\le \xi\)</span>.)
 This allows us to prove properties about <em>all</em> ordinals by <strong>induction</strong>.</p>
 <div class="proof proposition admonition" id="prop-induction-ord-i">
 <p class="admonition-title"><span class="caption-number">Proposition 41 </span> (Induction for ordinals, I)</p>
@@ -526,13 +531,37 @@ S(a,&lt;): = \{x \in A\colon x &lt; a \},
 <p>The set condition allows for taking the <strong><span class="math notranslate nohighlight">\(R\)</span>-transitive closure</strong> of a set <span class="math notranslate nohighlight">\(a \in A\)</span>: the smallest superset <span class="math notranslate nohighlight">\(\Op{TC}_R(a)\)</span> of <span class="math notranslate nohighlight">\(a\)</span> that is <em><span class="math notranslate nohighlight">\(R\)</span>-transitive</em>:</p>
 <div class="math notranslate nohighlight">
 \[ \forall x \in \Op{TC}_R(a)\; S(x,R) \subseteq  \Op{TC}_R(a)\]</div>
-<p>This is done by recursion over the natural numbers (see the example of the transitive closure of a set below).</p>
-<p>We can use the existence of <span class="math notranslate nohighlight">\(\Op{TC}_R\)</span> as a set to strengthen the minimality condition to <em>subclasses</em> (<em>exercise!</em>), similar to the case of the well-ordering of <span class="math notranslate nohighlight">\(\Ord\)</span>:</p>
+<p>This is done by recursion over the natural numbers. The following is an important example.</p>
+<div class="proof example admonition" id="exa-trans-closure">
+<p class="admonition-title"><span class="caption-number">Example 1 </span> (Transitive closure of a set)</p>
+<div class="example-content section" id="proof-content">
+<p>By the axiom of <em>Foundation</em>, <span class="math notranslate nohighlight">\(\in\)</span> is a well-founded relation on <span class="math notranslate nohighlight">\(\V\)</span>. (The set condition is satisfied since <span class="math notranslate nohighlight">\(S(a,\in)=a\)</span>.)</p>
+<p>We can form the <strong>transitive closure</strong>, the smallest transitive superset, of a set <span class="math notranslate nohighlight">\(a\)</span> as</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}  
-    (\Op{Min}_R^*) \qquad \emptyset \neq B \subseteq A \to \exists x \in B \; \forall y \in B \, (  \neg y R x),
-\end{equation*}\]</div>
-<p>and from this obtain a corresponding <strong>induction principle for well-founded relations</strong>:</p>
+\[\begin{eqnarray*}
+    \Op{TC}(a):&amp;=&amp; a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
+ = \bigcup_{n&lt; \omega} U^n(a), \quad \text{ where} \\ 
+ &amp;&amp;U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
+\end{eqnarray*}\]</div>
+<p>This is an example of definition by recursion along <span class="math notranslate nohighlight">\(\Nat\)</span>.</p>
+</div>
+</div><p>We can use the existence of <span class="math notranslate nohighlight">\(\Op{TC}_R\)</span> as a set to strengthen the minimality condition to <em>subclasses</em>, similar to the case of the well-ordering of <span class="math notranslate nohighlight">\(\Ord\)</span>:</p>
+<div class="proof lemma admonition" id="lem-min-wf">
+<p class="admonition-title"><span class="caption-number">Lemma 16 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>For every non-empty class <span class="math notranslate nohighlight">\(B \subseteq A\)</span>, there exists <span class="math notranslate nohighlight">\(x \in B\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall y \in B \;  \neg y R x
+\]</div>
+</div>
+</div><p>To prove this lemma, simply pick any <span class="math notranslate nohighlight">\(x \in B\)</span>, take its transitive <span class="math notranslate nohighlight">\(R\)</span>-closure, and intersect it with <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    C = \Op{TC}_R(x) \cap B$.
+\]</div>
+<p><span class="math notranslate nohighlight">\(C\)</span> is a set, and by the minimality condition <span class="math notranslate nohighlight">\((\Op{Min}_R)\)</span> has an <span class="math notranslate nohighlight">\(R\)</span>-minimal element <span class="math notranslate nohighlight">\(a\)</span>. <span class="math notranslate nohighlight">\(a\)</span> has to be minimal for <span class="math notranslate nohighlight">\(B\)</span>, too, since otherwise there exists <span class="math notranslate nohighlight">\(b \in B\)</span> with <span class="math notranslate nohighlight">\(b R a\)</span>. Since <span class="math notranslate nohighlight">\(a \in \Op{TC}_R(x)\)</span>, <span class="math notranslate nohighlight">\(b \in \Op{TC}_R(x)\)</span>, and therefore <span class="math notranslate nohighlight">\(b \in C\)</span>, contradicting the minimality of <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>The lemma implies a corresponding <strong>induction principle for well-founded relations</strong>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
     (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \wedge \varphi(y) \to \varphi(x))] \to \forall x \in A \, \varphi(x)).
@@ -546,19 +575,6 @@ S(a,&lt;): = \{x \in A\colon x &lt; a \},
 \[\begin{equation*}
     F(a) = G(a,F \Rest{\{x \mid xRa\}})  \text{ for all } a \in A.
 \end{equation*}\]</div>
-</div>
-</div><div class="proof example admonition" id="exa-trans-closure">
-<p class="admonition-title"><span class="caption-number">Example 1 </span> (Transitive closure of a set)</p>
-<div class="example-content section" id="proof-content">
-<p>By the axiom of <em>Foundation</em>, <span class="math notranslate nohighlight">\(\in\)</span> is a well-founded relation on <span class="math notranslate nohighlight">\(\V\)</span>. (The set condition is satisfied since <span class="math notranslate nohighlight">\(S(a,\in)=a\)</span>.)</p>
-<p>We can form the <strong>transitive closure</strong>, the smallest transitive superset, of a set <span class="math notranslate nohighlight">\(a\)</span> as</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
-    \Op{TC}(a):&amp;=&amp; a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
- = \bigcup_{n&lt; \omega} U^n(a), \quad \text{ where} \\ 
- &amp;&amp;U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
-\end{eqnarray*}\]</div>
-<p>This is an example of definition by recursion along <span class="math notranslate nohighlight">\(\Nat\)</span>.</p>
 </div>
 </div></div>
 <div class="section" id="the-von-neumann-hierarchy">
@@ -642,10 +658,10 @@ x \in \mathcal{P}(V_\gamma) = V_{\gamma+1}.
             <p class="prev-next-title">The Axioms of Set Theory</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="models.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Models of Set Theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

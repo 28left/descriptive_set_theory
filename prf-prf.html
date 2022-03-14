@@ -216,6 +216,11 @@ const thebe_selector_output = ".output, .cell_output"
    Recursion and the Von-Neumann Hierarchy
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="models.html">
+   Models of Set Theory
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -374,11 +379,13 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
    <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
    <a href="#cap-lem-Fubini-category"><strong>lem-Fubini-category</strong></a> | 
+   <a href="#cap-lem-Mostowski-unique"><strong>lem-Mostowski-unique</strong></a> | 
    <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
    <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
    <a href="#cap-lem-bounded-rank-Borel"><strong>lem-bounded-rank-Borel</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
+   <a href="#cap-lem-min-wf"><strong>lem-min-wf</strong></a> | 
    <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
    <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
    <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
@@ -401,6 +408,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-prop-Wadge-preimages"><strong>prop-Wadge-preimages</strong></a> | 
    <a href="#cap-prop-closure-projective"><strong>prop-closure-projective</strong></a> | 
    <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
+   <a href="#cap-prop-illfounded-ZF-model"><strong>prop-illfounded-ZF-model</strong></a> | 
    <a href="#cap-prop-induction-ord-i"><strong>prop-induction-ord-i</strong></a> | 
    <a href="#cap-prop-induction-ord-ii"><strong>prop-induction-ord-ii</strong></a> | 
    <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
@@ -437,6 +445,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
    <a href="#cap-thm-Koenigs-lemma"><strong>thm-Koenigs-lemma</strong></a> | 
    <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
+   <a href="#cap-thm-Mostowski-collapse"><strong>thm-Mostowski-collapse</strong></a> | 
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
    <a href="#cap-thm-Souslin-Borel-images"><strong>thm-Souslin-Borel-images</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
@@ -930,6 +939,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="projective.html#lem-Fubini-category"><code class="xref">lem-Fubini-category</code></a> <em>(projective)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Mostowski-unique"><td></td><td>
+       <strong>lem-Mostowski-unique</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#lem-Mostowski-unique"><code class="xref">lem-Mostowski-unique</code></a> <em>(models)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-approx-category"><td></td><td>
        <strong>lem-approx-category</strong></td><td></td></tr>
      <tr>
@@ -968,6 +985,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="imagesBorel.html#lem-closed-retract-Baire"><code class="xref">lem-closed-retract-Baire</code></a> <em>(imagesBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-min-wf"><td></td><td>
+       <strong>lem-min-wf</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#lem-min-wf"><code class="xref">lem-min-wf</code></a> <em>(recursion)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lemma-1"><td></td><td>
@@ -1144,6 +1169,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="codingBorel.html#prop-computable-codes"><code class="xref">prop-computable-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-illfounded-ZF-model"><td></td><td>
+       <strong>prop-illfounded-ZF-model</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#prop-illfounded-ZF-model"><code class="xref">prop-illfounded-ZF-model</code></a> <em>(models)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-induction-ord-i"><td></td><td>
@@ -1432,6 +1465,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="analytic.html#thm-Lusin-separation"><code class="xref">thm-Lusin-separation</code></a> <em>(analytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Mostowski-collapse"><td></td><td>
+       <strong>thm-Mostowski-collapse</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#thm-Mostowski-collapse"><code class="xref">thm-Mostowski-collapse</code></a> <em>(models)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Polish-bijection-Baire"><td></td><td>
