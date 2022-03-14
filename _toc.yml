@@ -29,6 +29,7 @@ parts:
     chapters:
       - file: ZFC.md
       - file: recursion.md
+      - file: models.md
   - caption: Reference
     chapters:
       - file: bibliography
