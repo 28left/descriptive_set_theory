@@ -64,7 +64,7 @@ Yet it is a theorem of $\ZF$ that *there exists an uncountable set*. This is oft
 
 If we break this down a bit, we see that the apparent paradox is really just a matter of perspective (*inside* or *outside*). Assume $(M,E)$ is a countable model of $\ZF$. Then there exists $x \in M$ such that there is no injection from $x$ to the natural numbers. Since $M$ is countable, $x$ can have at most countably many elements. So why is this *not* a contradiction? We should really read the statement above as
 
-> there is no injection **in $M$** from $x$ to **$M$'s version the natural numbers**.
+> there is no injection **in $M$** from $x$ to **$M$'s version** of the natural numbers.
 
 In other words, even though $x$ is countable *from the outside*, $x$ appears uncountable *inside $M$* since a mapping witnessing its countability does not exist in $M$.
 
