@@ -191,7 +191,7 @@ $$
 To prove this lemma, simply pick any $x \in B$, take its transitive $R$-closure, and intersect it with $B$:
 
 $$
-    C = \Op{TC}_R(x) \cap B$.
+    C = \Op{TC}_R(x) \cap B.
 $$
 
 $C$ is a set, and by the minimality condition $(\Op{Min}_R)$ has an $R$-minimal element $a$. $a$ has to be minimal for $B$, too, since otherwise there exists $b \in B$ with $b R a$. Since $a \in \Op{TC}_R(x)$, $b \in \Op{TC}_R(x)$, and therefore $b \in C$, contradicting the minimality of $a$.
@@ -199,7 +199,7 @@ $C$ is a set, and by the minimality condition $(\Op{Min}_R)$ has an $R$-minimal 
 The lemma implies a corresponding **induction principle for well-founded relations**:
 
 \begin{equation*}
-    (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \wedge \varphi(y) \to \varphi(x))] \to \forall x \in A \, \varphi(x)).
+    (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \to \varphi(y)) \to \varphi(x)] \to \forall x \in A \, \varphi(x)).
 \end{equation*}
 
 This in turn yields the following.
@@ -237,7 +237,7 @@ $$
 Finally, at limit stages we simply collect all sets we have obtained so far:
 
 $$
-V_ \lambda =  \bigcup_{\xi < \lambda} V_\xi \quad \text{for } \Op{Lim}(\lambda)
+V_ \lambda =  \bigcup_{\xi < \lambda} V_\xi \quad \text{for limit } \lambda
 $$
 
 What we really are doing here is to construct a function $V: \Ord \to \V$ by ordinal recursion. Think $V_\alpha = V(\alpha)$.

@@ -558,13 +558,13 @@ S(a,&lt;): = \{x \in A\colon x &lt; a \},
 </div><p>To prove this lemma, simply pick any <span class="math notranslate nohighlight">\(x \in B\)</span>, take its transitive <span class="math notranslate nohighlight">\(R\)</span>-closure, and intersect it with <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-    C = \Op{TC}_R(x) \cap B$.
+    C = \Op{TC}_R(x) \cap B.
 \]</div>
 <p><span class="math notranslate nohighlight">\(C\)</span> is a set, and by the minimality condition <span class="math notranslate nohighlight">\((\Op{Min}_R)\)</span> has an <span class="math notranslate nohighlight">\(R\)</span>-minimal element <span class="math notranslate nohighlight">\(a\)</span>. <span class="math notranslate nohighlight">\(a\)</span> has to be minimal for <span class="math notranslate nohighlight">\(B\)</span>, too, since otherwise there exists <span class="math notranslate nohighlight">\(b \in B\)</span> with <span class="math notranslate nohighlight">\(b R a\)</span>. Since <span class="math notranslate nohighlight">\(a \in \Op{TC}_R(x)\)</span>, <span class="math notranslate nohighlight">\(b \in \Op{TC}_R(x)\)</span>, and therefore <span class="math notranslate nohighlight">\(b \in C\)</span>, contradicting the minimality of <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <p>The lemma implies a corresponding <strong>induction principle for well-founded relations</strong>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-    (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \wedge \varphi(y) \to \varphi(x))] \to \forall x \in A \, \varphi(x)).
+    (\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \to \varphi(y)) \to \varphi(x)] \to \forall x \in A \, \varphi(x)).
 \end{equation*}\]</div>
 <p>This in turn yields the following.</p>
 <div class="proof theorem admonition" id="thm-wf-recursion">
@@ -593,7 +593,7 @@ V_{\alpha+1} = \mathcal{P}(V_{\alpha}).
 <p>Finally, at limit stages we simply collect all sets we have obtained so far:</p>
 <div class="math notranslate nohighlight">
 \[
-V_ \lambda =  \bigcup_{\xi &lt; \lambda} V_\xi \quad \text{for } \Op{Lim}(\lambda)
+V_ \lambda =  \bigcup_{\xi &lt; \lambda} V_\xi \quad \text{for limit } \lambda
 \]</div>
 <p>What we really are doing here is to construct a function <span class="math notranslate nohighlight">\(V: \Ord \to \V\)</span> by ordinal recursion. Think <span class="math notranslate nohighlight">\(V_\alpha = V(\alpha)\)</span>.</p>
 <p>Remarkably, if we assume the axiom of <em>Foundation</em>, we reach <em>all</em> sets this way.</p>
