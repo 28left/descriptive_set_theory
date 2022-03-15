@@ -99,7 +99,7 @@ If $E$ behaves ``set-like'', then it will respect the axiom of *Extensionality*,
 
 Furthermore, as stated above, we want to exclude infinite descending $E$-chains. We say that $E$ is **well-founded** if
 
->  every non-empty set $Y \subseteq X$ has an $E$-minimal subset.
+>  every non-empty set $Y \subseteq X$ has an $E$-minimal element.
 
 ```{prf:theorem} Mostowski collapse
 :label: thm-Mostowski-collapse
