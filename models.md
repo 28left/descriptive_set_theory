@@ -28,9 +28,9 @@ You may have noticed that, when introducing the axioms of $\ZFC$, we never *real
 
 We have then seen how we can develop a lot of standard mathematical *objects* (like $\Nat$, $\Real$) and *techniques* (like induction and definition by recursion) **inside** this formal system. In fact, most of mathematics can be developed formally inside this system. Almost all proofs you find in any standard math book are proofs that can be formalized in $\ZFC$. It is very tedious to do this for us humans, but there is little doubt it can be done, and in fact, looking at the recent work on **proof assistants** (like Coq or Lean), many parts of mathematics have been formalized (albeit not directly in $\ZFC$).
 
-This expressiveness gives $\ZFC$ is foundational importance, but it also the cause for much confusion for someone who first studies set theory.
+This expressiveness gives $\ZFC$ its foundational importance, but it is also the cause for much confusion for someone who first studies set theory.
 
-From a pedagogical point of view, in what follows it is helpful to assume a "**Platonist**" perspective of mathematics, and set theory in particular, namely that *sets and the relations between exist independently (and outside) of the $\ZFC$ axioms*. The set of real numbers is there, and our development of $\Real$ inside $\ZFC$ is just a formal way to describe them. From this perspective, the axioms of $\ZF$ ($\AC$ is a little different) are just obvious truths about sets, just like the **Peano axioms** are obvious truths about natural numbers.
+From a pedagogical point of view, in what follows it is helpful to assume a "**Platonist**" perspective of mathematics, and set theory in particular, namely that *sets and the relations between exist independently (and outside) of the $\ZFC$ axioms*. The set of real numbers exists, and our development of $\Real$ inside $\ZFC$ is just a formal way to describe them. From this perspective, the axioms of $\ZF$ ($\AC$ is a little different) are just obvious truths about sets, just like the **Peano axioms** are obvious truths about natural numbers.
 
 Among other things, this perspective allows us to treat $\ZF$ just like any other mathematical theory, like *group theory* or the theory of *algebraically closed fields*.
 In particular, we can think about **models of set theory** the way we would think about models of group theory, in the sense of model theory.
@@ -51,7 +51,7 @@ This model should be seen as a **set-theoretic universe**: Its elements can be s
 
 Note that $E$ does not have to be the *actual* element relation on a set (of sets), but just some binary relation so that the axioms are satisfied.
 
-In the meta-world, there are, of course, sets other than $M$, but that does not matter here, since al we are interested in is giving *some* universe in which our axioms hold. (Timothy Chow has suggested that set theory should rather be called "*universe theory*. He is right in the sense that what set theory does is to define such *universes of sets*, rather than what a set is.)
+In the meta-world, there are, of course, sets other than $M$, but that does not matter here, since al we are interested in is giving *some* universe in which our axioms hold. (Timothy Chow has suggested that set theory should rather be called "*universe theory*. He is right in the sense that what axiomatic set theory does is to define such *universes of sets*, rather than what a set is.)
 
 In the meta-theory, we can then follow the usual techniques to show provability or non-provability results.
 
@@ -68,7 +68,7 @@ If we break this down a bit, we see that the apparent paradox is really just a m
 
 In other words, even though $x$ is countable *from the outside*, $x$ appears uncountable *inside $M$* since a mapping witnessing its countability does not exist in $M$.
 
-This is a first warning sign that models of $\ZF$ can behave in very unexpected ways. Another example, we the axiom of Foundation asserts that the $\in$-relation is well-founded. But again, this means only "from the inside".
+This is a first warning sign that models of $\ZF$ can behave in very unexpected ways. For another example, recall the axiom of *Foundation* asserts that the $\in$-relation is well-founded. But again, this means only "from the inside".
 
 ```{prf:proposition}
 :label: prop-illfounded-ZF-model
@@ -85,14 +85,14 @@ Since, as mentioned above, the model $(M^*,E^*)$ satisfies *Foundation*, the set
 
 
 ## Mostowski collapse
-If we restrict ourselves to models on which the $E$-relation is *actually* well-founded (i.e. from the outside), then interestingly these models look in way "*natural*": They can be assumed to be the $\in$-relation on a set.
+If we restrict ourselves to models on which the $E$-relation is *actually* well-founded (i.e. from the outside), then interestingly these models look in way "*natural*": They can be assumed to be the $\in$-relation on a set. Such models are also called **standard**.
 
 Given a set theoretic structure $(M,E)$ (not necessarily a model of $\ZF$), for each $x \in M$ let
 \begin{equation*}
 	\Op{ext}_E(x) = \{ y \in X \colon y\, E \, x \}
 \end{equation*}
 
-If $E$ behaves ``set-like'', then it will respect the axiom of *Extensionality*, i.e. two sets are identical if and only if they have the same elements. Therefore we say that $E$ is **extensional** if
+If $E$ behaves "set-like", then it will respect the axiom of *Extensionality*, i.e. two sets are identical if and only if they have the same elements. Therefore we say that $E$ is **extensional** if
 \begin{equation*}
 	x,z \in X, \; x\neq z \quad \text{ implies } \quad \Op{ext}_E(x) \neq \Op{ext}_E(z).
 \end{equation*}
@@ -111,7 +111,7 @@ If $E$ is an extensional and well-founded relation on a set $X$, then there exis
 Moreover, $S$ and $\pi$ are unique.
 ```
 
-````{prf:proof}
+```{prf:proof}
 We construct $\pi$ and $S = \Op{im}(\pi)$ by recursion on $E$, which is possible since it is well-founded. 
 
 For each $x \in X$, let
@@ -140,7 +140,8 @@ Similarly, we get $cEy \Rightarrow cEx$, hence $x=y$ as desired due to the exten
 \end{align*}
 Thus $\pi$ is an isomorphism.
 
-To see the uniqueness of $\pi$ and $S$, assume $\rho$, $T$ are such that the statement of the Theorem is satisfied. Then $\pi \circ \rho^{-1}$ is an isomorphism between $(T, \in)$ and $(S,\in)$.
+To see the uniqueness of $\pi$ and $S$, assume $\rho$, $T$ are such that the statement of the theorem is satisfied. Then $\pi \circ \rho^{-1}$ is an isomorphism between $(T, \in)$ and $(S,\in)$. Now apply the following lemma.
+```
 
 ```{prf:lemma}    
 :label: lem-Mostowski-unique
@@ -152,11 +153,10 @@ By induction on the well-founded relation $\in$. Assume that $\theta(z)=z$ for a
     
 We have $x \subseteq y$ because if $z \in x$, then $z = \theta(z) \in \theta(x) = y$.
 
-We also have $y \subseteq x$: Let $t \in y$. Since $y \in Y$, there is $z \in X$ with $\theta(z) = t$. Since $\theta(z) \in y$, we have $z \in x$, and thus $t = \theta(z) = z \in x$. Hence $x = y$, and this also implies $\theta(x) = x$.
-```
+We also have $y \subseteq x$: Let $t \in y$. Since $y \in Y$, there is $z \in X$ with $\theta(z) = t$. Since $\theta(z) \in y$ and $y = \theta(x)$, we have $z \in x$, and thus $t = \theta(z) = z \in x$. 
 
-The lemma, applied to $\pi \circ \rho^{-1}$, yields $S = T$ and $\pi \circ \rho^{-1} = \Op{id}$, hence $\pi = \rho$
-````
+Hence $x = y$, and this also implies $\theta(x) = x$.
+```
 
 
 
