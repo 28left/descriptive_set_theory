@@ -576,12 +576,12 @@ It also implies the existence of the set <span class="math notranslate nohighlig
 \]</div>
 <p>The final axiom of <span class="math notranslate nohighlight">\(\ZF\)</span> is</p>
 <blockquote>
-<div><p>(<strong>Foundation</strong>) <span class="math notranslate nohighlight">\(\qquad a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a\)</span>.</p>
+<div><p>(<strong>Foundation</strong>) <span class="math notranslate nohighlight">\(\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)\)</span>.</p>
 </div></blockquote>
 <p>Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that <span class="math notranslate nohighlight">\(\in\)</span>-relation is <strong>well-founded</strong> on any set.</p>
 <p>We can also formalize the <strong>Axiom of Choice</strong>:</p>
 <blockquote>
-<div><p>(<strong>Choice</strong>) $\qquad \forall a ( \forall x \in a ; x \neq \emptyset ;;; \to ;;; \exists f (\Op{Fun}(f) :\wedge: \Op{dom}(f) = a :\wedge: \forall x \in a : f(x) \in x))</p>
+<div><p>(<strong>Choice</strong>) <span class="math notranslate nohighlight">\(\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))\)</span></p>
 </div></blockquote>
 <p>We denote the axiom system <span class="math notranslate nohighlight">\(\ZF + \AC\)</span> as <span class="math notranslate nohighlight">\(\ZFC\)</span> – <strong>Zermelo-Fraenkel with Choice</strong>.</p>
 </div>

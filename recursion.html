@@ -414,7 +414,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="transfinite-induction">
 <h2>Transfinite induction<a class="headerlink" href="#transfinite-induction" title="Permalink to this headline">¶</a></h2>
 <p>While the class <span class="math notranslate nohighlight">\(\Ord\)</span> of all ordinals is not a set, it is still transitive and well-ordered by <span class="math notranslate nohighlight">\(\in\)</span>. Regarding the associated order <span class="math notranslate nohighlight">\(\leq\)</span>, every <em>set</em> of ordinals <span class="math notranslate nohighlight">\(a\)</span> has a <strong>supremum</strong> <span class="math notranslate nohighlight">\(\bigcup a = \bigcup_{\xi \in a} \xi\)</span> and (if <span class="math notranslate nohighlight">\(a \ne \emptyset\)</span>) an <strong>infimum</strong>
-<span class="math notranslate nohighlight">\(\bigcap a = \bigcap_{\xi \in a} \xi\)</span>, which is the <em>smallest element</em> of <span class="math notranslate nohighlight">\(a\)</span> ist. Such a smallest element exists actually for every (non-empty) <em>class</em> <span class="math notranslate nohighlight">\(A\)</span> (since if <span class="math notranslate nohighlight">\(\xi \in A\)</span>, we only need to find the infimum of the <em>set</em> of ordinals <span class="math notranslate nohighlight">\(\le \xi\)</span>.)
+<span class="math notranslate nohighlight">\(\bigcap a = \bigcap_{\xi \in a} \xi\)</span>, which is the <em>smallest element</em> of <span class="math notranslate nohighlight">\(a\)</span>. Such a smallest element exists actually for every (non-empty) <em>class</em> <span class="math notranslate nohighlight">\(A\)</span> (since if <span class="math notranslate nohighlight">\(\xi \in A\)</span>, we only need to find the infimum of the <em>set</em> of ordinals <span class="math notranslate nohighlight">\(\le \xi\)</span>.)
 This allows us to prove properties about <em>all</em> ordinals by <strong>induction</strong>.</p>
 <div class="proof proposition admonition" id="prop-induction-ord-i">
 <p class="admonition-title"><span class="caption-number">Proposition 41 </span> (Induction for ordinals, I)</p>
@@ -467,7 +467,7 @@ F(\alpha) = G(\alpha, F\Rest{\alpha})
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\exists \alpha \, (h: \alpha \to V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
+\exists \alpha \, (h: \alpha \to \V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
 \end{equation*}\]</div>
 <ul class="simple">
 <li><p>Say <span class="math notranslate nohighlight">\(h\)</span> is <em>compatible</em> with <span class="math notranslate nohighlight">\(g\)</span> if</p></li>

@@ -27,7 +27,7 @@
 ## Transfinite induction
 
 While the class $\Ord$ of all ordinals is not a set, it is still transitive and well-ordered by $\in$. Regarding the associated order $\leq$, every *set* of ordinals $a$ has a **supremum** $\bigcup a = \bigcup_{\xi \in a} \xi$ and (if $a \ne \emptyset$) an **infimum** 
-$\bigcap a = \bigcap_{\xi \in a} \xi$, which is the *smallest element* of $a$ ist. Such a smallest element exists actually for every (non-empty) *class* $A$ (since if $\xi \in A$, we only need to find the infimum of the *set* of ordinals $\le \xi$.) 
+$\bigcap a = \bigcap_{\xi \in a} \xi$, which is the *smallest element* of $a$. Such a smallest element exists actually for every (non-empty) *class* $A$ (since if $\xi \in A$, we only need to find the infimum of the *set* of ordinals $\le \xi$.) 
 This allows us to prove properties about *all* ordinals by **induction**.
 
 ```{prf:proposition} Induction for ordinals, I
@@ -88,7 +88,7 @@ To show the existence of $F$, we define the following:
 
 - Call $h$ *tame* if 
 \begin{equation*}
-\exists \alpha \, (h: \alpha \to V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
+\exists \alpha \, (h: \alpha \to \V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
 \end{equation*}
 
 - Say $h$ is *compatible* with $g$ if 

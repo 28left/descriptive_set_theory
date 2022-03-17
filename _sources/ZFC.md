@@ -206,14 +206,14 @@ $$
 
 The final axiom of $\ZF$ is 
 
-> (**Foundation**) $\qquad a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a$.
+> (**Foundation**) $\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)$.
 
 Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
 
 
 We can also formalize the **Axiom of Choice**:
 
-> (**Choice**) $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))
+> (**Choice**) $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))$
 
 We denote the axiom system $\ZF + \AC$ as $\ZFC$ -- **Zermelo-Fraenkel with Choice**.
 
