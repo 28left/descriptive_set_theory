@@ -221,6 +221,11 @@ const thebe_selector_output = ".output, .cell_output"
    Models of Set Theory
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="large_cardinals.html">
+   Large Cardinals
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -353,8 +358,10 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
    <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
    <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
+   <a href="#cap-def-inaccessible"><strong>def-inaccessible</strong></a> | 
    <a href="#cap-def-meager"><strong>def-meager</strong></a> | 
    <a href="#cap-def-measurable"><strong>def-measurable</strong></a> | 
+   <a href="#cap-def-measurable-cardinal"><strong>def-measurable-cardinal</strong></a> | 
    <a href="#cap-def-measure"><strong>def-measure</strong></a> | 
    <a href="#cap-def-nowhere-dense"><strong>def-nowhere-dense</strong></a> | 
    <a href="#cap-def-ordinal"><strong>def-ordinal</strong></a> | 
@@ -383,6 +390,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
    <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
    <a href="#cap-lem-bounded-rank-Borel"><strong>lem-bounded-rank-Borel</strong></a> | 
+   <a href="#cap-lem-cardinality-kappa-ultrafilter"><strong>lem-cardinality-kappa-ultrafilter</strong></a> | 
    <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
    <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
    <a href="#cap-lem-min-wf"><strong>lem-min-wf</strong></a> | 
@@ -406,16 +414,20 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
    <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
    <a href="#cap-prop-Wadge-preimages"><strong>prop-Wadge-preimages</strong></a> | 
+   <a href="#cap-prop-cardinality-Vkappa"><strong>prop-cardinality-Vkappa</strong></a> | 
    <a href="#cap-prop-closure-projective"><strong>prop-closure-projective</strong></a> | 
    <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
    <a href="#cap-prop-illfounded-ZF-model"><strong>prop-illfounded-ZF-model</strong></a> | 
+   <a href="#cap-prop-inaccessible-cardinality"><strong>prop-inaccessible-cardinality</strong></a> | 
    <a href="#cap-prop-induction-ord-i"><strong>prop-induction-ord-i</strong></a> | 
    <a href="#cap-prop-induction-ord-ii"><strong>prop-induction-ord-ii</strong></a> | 
    <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
    <a href="#cap-prop-interval-measurable"><strong>prop-interval-measurable</strong></a> | 
    <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
+   <a href="#cap-prop-measurable-regular"><strong>prop-measurable-regular</strong></a> | 
    <a href="#cap-prop-measurable-sets"><strong>prop-measurable-sets</strong></a> | 
    <a href="#cap-prop-measurable-sigma-algebra"><strong>prop-measurable-sigma-algebra</strong></a> | 
+   <a href="#cap-prop-measurable-vs-real-valued"><strong>prop-measurable-vs-real-valued</strong></a> | 
    <a href="#cap-prop-non-meas"><strong>prop-non-meas</strong></a> | 
    <a href="#cap-prop-nonfinite-Borel"><strong>prop-nonfinite-Borel</strong></a> | 
    <a href="#cap-prop-norm-form-coanalytic"><strong>prop-norm-form-coanalytic</strong></a> | 
@@ -456,6 +468,9 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
    <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
    <a href="#cap-thm-idempotent-Souslin"><strong>thm-idempotent-Souslin</strong></a> | 
+   <a href="#cap-thm-inaccessible-ZFC"><strong>thm-inaccessible-ZFC</strong></a> | 
+   <a href="#cap-thm-kappa-additivity"><strong>thm-kappa-additivity</strong></a> | 
+   <a href="#cap-thm-measurable-inaccessible"><strong>thm-measurable-inaccessible</strong></a> | 
    <a href="#cap-thm-ordinal-recursion"><strong>thm-ordinal-recursion</strong></a> | 
    <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
    <a href="#cap-thm-projective-definable"><strong>thm-projective-definable</strong></a> | 
@@ -731,6 +746,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="measure.html#def-ideal"><code class="xref">def-ideal</code></a> <em>(measure)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-inaccessible"><td></td><td>
+       <strong>def-inaccessible</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#def-inaccessible"><code class="xref">def-inaccessible</code></a> <em>(large_cardinals)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-meager"><td></td><td>
        <strong>def-meager</strong></td><td></td></tr>
      <tr>
@@ -745,6 +768,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="measure.html#def-measurable"><code class="xref">def-measurable</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-measurable-cardinal"><td></td><td>
+       <strong>def-measurable-cardinal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#def-measurable-cardinal"><code class="xref">def-measurable-cardinal</code></a> <em>(large_cardinals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-measure"><td></td><td>
@@ -971,6 +1002,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="coanalytic.html#lem-bounded-rank-Borel"><code class="xref">lem-bounded-rank-Borel</code></a> <em>(coanalytic)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-cardinality-kappa-ultrafilter"><td></td><td>
+       <strong>lem-cardinality-kappa-ultrafilter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#lem-cardinality-kappa-ultrafilter"><code class="xref">lem-cardinality-kappa-ultrafilter</code></a> <em>(large_cardinals)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
        <strong>lem-closed-clopen</strong></td><td></td></tr>
      <tr>
@@ -1155,6 +1194,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="coanalytic.html#prop-Wadge-preimages"><code class="xref">prop-Wadge-preimages</code></a> <em>(coanalytic)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-cardinality-Vkappa"><td></td><td>
+       <strong>prop-cardinality-Vkappa</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-cardinality-Vkappa"><code class="xref">prop-cardinality-Vkappa</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-closure-projective"><td></td><td>
        <strong>prop-closure-projective</strong></td><td></td></tr>
      <tr>
@@ -1177,6 +1224,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="models.html#prop-illfounded-ZF-model"><code class="xref">prop-illfounded-ZF-model</code></a> <em>(models)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-inaccessible-cardinality"><td></td><td>
+       <strong>prop-inaccessible-cardinality</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-inaccessible-cardinality"><code class="xref">prop-inaccessible-cardinality</code></a> <em>(large_cardinals)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-induction-ord-i"><td></td><td>
@@ -1219,6 +1274,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="trees.html#prop-leftmost-branch"><code class="xref">prop-leftmost-branch</code></a> <em>(trees)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-regular"><td></td><td>
+       <strong>prop-measurable-regular</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-measurable-regular"><code class="xref">prop-measurable-regular</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-measurable-sets"><td></td><td>
        <strong>prop-measurable-sets</strong></td><td></td></tr>
      <tr>
@@ -1233,6 +1296,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="measure.html#prop-measurable-sigma-algebra"><code class="xref">prop-measurable-sigma-algebra</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-vs-real-valued"><td></td><td>
+       <strong>prop-measurable-vs-real-valued</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-measurable-vs-real-valued"><code class="xref">prop-measurable-vs-real-valued</code></a> <em>(large_cardinals)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-non-meas"><td></td><td>
@@ -1553,6 +1624,30 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="regularityAnalytic.html#thm-idempotent-Souslin"><code class="xref">thm-idempotent-Souslin</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-inaccessible-ZFC"><td></td><td>
+       <strong>thm-inaccessible-ZFC</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-inaccessible-ZFC"><code class="xref">thm-inaccessible-ZFC</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-kappa-additivity"><td></td><td>
+       <strong>thm-kappa-additivity</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-kappa-additivity"><code class="xref">thm-kappa-additivity</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-measurable-inaccessible"><td></td><td>
+       <strong>thm-measurable-inaccessible</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-measurable-inaccessible"><code class="xref">thm-measurable-inaccessible</code></a> <em>(large_cardinals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-ordinal-recursion"><td></td><td>
