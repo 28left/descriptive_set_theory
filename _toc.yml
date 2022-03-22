@@ -30,6 +30,7 @@ parts:
       - file: ZFC.md
       - file: recursion.md
       - file: models.md
+      - file: large_cardinals.md
   - caption: Reference
     chapters:
       - file: bibliography
