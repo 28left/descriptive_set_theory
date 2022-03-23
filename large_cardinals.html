@@ -339,6 +339,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partition-properties">
+   Partition properties
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -375,6 +380,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partition-properties">
+   Partition properties
+  </a>
  </li>
 </ul>
 
@@ -523,7 +533,7 @@ Suppose <span class="math notranslate nohighlight">\(x \in V_\kappa\)</span> and
 It is not hard to verify that</p>
 <div class="math notranslate nohighlight">
 \[
-V_\kappa \models \ZFC + \text{ &quot;there does not exist an inaccessible cardinal&quot;}.
+V_\kappa \models \ZFC + \text{''there does not exist an inaccessible cardinal''}.
 \]</div>
 <p>(You verify that being a inaccessible cardinal is absolute for <span class="math notranslate nohighlight">\(V_\kappa\)</span>.) Therefore, the existence of an inaccessible cardinal is not provable from <span class="math notranslate nohighlight">\(\ZFC\)</span>. This fact also follows from Gödel’s second incompleteness theorem.</p>
 </div>
@@ -547,8 +557,8 @@ m: \mathcal{P}(M) \to [0,\infty),
 \end{gather*}\]</div>
 <p>so that the following conditions are met:</p>
 <ul class="simple">
-<li><p>(<strong>M1</strong>) <span class="math notranslate nohighlight">\(\quad  m(M) =1\)</span></p></li>
-<li><p>(<strong>M2</strong>) <span class="math notranslate nohighlight">\(\quad \forall x \in M \; m(\{x\})=0\)</span></p></li>
+<li><p>(<strong>M1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(m(M) =1\)</span></p></li>
+<li><p>(<strong>M2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\forall x \in M \; m(\{x\})=0\)</span></p></li>
 <li><p>(<strong>M3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> if <span class="math notranslate nohighlight">\((A_i)_{i &lt; \omega}\)</span> is a countable sequence of disjoint sets <span class="math notranslate nohighlight">\(\subseteq M\)</span>, then</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
@@ -557,7 +567,7 @@ m\left(\bigcup_{i&lt;\omega} A_i\right ) =  \sum_{i&lt;\omega} m(A_i)
 \end{equation*}\]</div>
 <p>The structure of the set <span class="math notranslate nohighlight">\(M\)</span> does not play any role here, so we can replace it by a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> outright. One can also consider strengthening <span class="math notranslate nohighlight">\(\sigma\)</span>-additivity to <strong><span class="math notranslate nohighlight">\(\kappa\)</span>-additivity</strong>:</p>
 <blockquote>
-<div><p>If <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> und  <span class="math notranslate nohighlight">\((A_\xi)_{\xi&lt; \lambda}\)</span> is a sequence of disjoint subsets of <span class="math notranslate nohighlight">\(\kappa\)</span>, then</p>
+<div><p>If <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> and  <span class="math notranslate nohighlight">\((A_\xi)_{\xi&lt; \lambda}\)</span> is a sequence of disjoint subsets of <span class="math notranslate nohighlight">\(\kappa\)</span>, then</p>
 </div></blockquote>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -566,7 +576,7 @@ m(\bigcup_{\xi&lt;\gamma} A_\xi) =  \sum_{\xi&lt;\gamma} m(A_\xi).
 <p>A transfinite sum <span class="math notranslate nohighlight">\(\sum_{\xi&lt;\gamma}\)</span> is given as the supremum of all sums over finite subsequences:</p>
 <div class="math notranslate nohighlight">
 \[
-\sum_{\xi&lt;\gamma} m(A_\xi) = \sup \left \{ \sum_{i \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
+\sum_{\xi&lt;\gamma} m(A_\xi) = \sup \left \{ \sum_{\xi \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
 \]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(\omega_1\)</span>-additive is the same as <span class="math notranslate nohighlight">\(\sigma\)</span>-additive.</p>
 <div class="proof theorem admonition" id="thm-kappa-additivity">
@@ -631,7 +641,7 @@ m(x) =
 <div class="proof lemma admonition" id="lem-cardinality-kappa-ultrafilter">
 <p class="admonition-title"><span class="caption-number">Lemma 18 </span></p>
 <div class="lemma-content section" id="proof-content">
-<p>If there <span class="math notranslate nohighlight">\(U\)</span> is a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>, then every <span class="math notranslate nohighlight">\(X \in U\)</span> has cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(U\)</span> is a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>, then every <span class="math notranslate nohighlight">\(X \in U\)</span> has cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Since <span class="math notranslate nohighlight">\(U\)</span> is non-principal, no <em>singleton</em> set <span class="math notranslate nohighlight">\(\{x\}\)</span> can be in <span class="math notranslate nohighlight">\(U\)</span> (for this would imply <span class="math notranslate nohighlight">\(\kappa\setminus \{x\} \notin U\)</span> and therefore no subset of it would be in <span class="math notranslate nohighlight">\(U\)</span> either, contradicting the non-principality of <span class="math notranslate nohighlight">\(U\)</span>).</p>
@@ -675,11 +685,62 @@ m(x) =
 <p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is real-valued measurable, then <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable or <span class="math notranslate nohighlight">\(\kappa \le 2^{\aleph_0}\)</span>.</p>
 </div>
 </div><p>Thus, if <span class="math notranslate nohighlight">\(\kappa\)</span> is real-valued measurable but not measurable, then the continuum <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span> has to be very large.</p>
-<!-- The existence of a real-valued measurable cardinal also has consequence
-```{prf:proposition}
-If $\kappa$ is real-valued measurable -->
 </div>
 </div>
+<div class="section" id="partition-properties">
+<h2>Partition properties<a class="headerlink" href="#partition-properties" title="Permalink to this headline">¶</a></h2>
+<p>Another concept of largeness is related to the existence of large <strong>homogeneous sets</strong> for partitions.</p>
+<p>For given set <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	[S]^n := \{ X \subseteq S \colon \: |X| = n \} 
+\end{equation*}\]</div>
+<p>be the set of all <span class="math notranslate nohighlight">\(n\)</span>-element subsets of <span class="math notranslate nohighlight">\(S\)</span>. For cardinals <span class="math notranslate nohighlight">\(\kappa, \lambda\)</span>, we define</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\kappa \to (\lambda)^n_k 
+\end{equation*}\]</div>
+<p>to mean that any partition <span class="math notranslate nohighlight">\(F: [S]^n \to \{1, \dots, k\}\)</span> mit <span class="math notranslate nohighlight">\(|S| = \kappa\)</span> has an <strong><span class="math notranslate nohighlight">\(F\)</span>-homogeneous subset</strong>  of cardinality <span class="math notranslate nohighlight">\(\lambda\)</span>, that is, a set <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(|H| = \lambda\)</span>, such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant}. 
+\end{equation*}\]</div>
+<p><strong>Ramsey’s theorem</strong> (1929/39) says that for any <span class="math notranslate nohighlight">\(n,k \in \Nat\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\aleph_0 \to (\aleph_0)^n_k. 
+\end{equation*}\]</div>
+<p>Do there exist uncountable cardinals with similar properties?</p>
+<p>A cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>weakly compact</strong> is it is uncountable and <span class="math notranslate nohighlight">\(\kappa \to (\kappa)^2_2\)</span> holds.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that for any cardinal <span class="math notranslate nohighlight">\(\kappa\)</span>, $2^\kappa \nrightarrow (\kappa^+)^2_2, and use this to infer that any weakly compact cardinal is inaccessible.</p>
+<p>(Thus the existence of weakly compact cardinals cannot be established in <span class="math notranslate nohighlight">\(\ZFC\)</span>.)</p>
+</div>
+<p>Measurable cardinals have even stronger homogeneity properties. Let <span class="math notranslate nohighlight">\([S]^{&lt;\omega}\)</span> be the set of all finite subsets of <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(F: [S]^{&lt;\omega} \to I\)</span> is a partition, then <span class="math notranslate nohighlight">\(H \subseteq S\)</span> is <strong><span class="math notranslate nohighlight">\(F\)</span>-homogenenous</strong> is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant} 
+\end{equation*}\]</div>
+<p>for all <span class="math notranslate nohighlight">\(n \in \Nat\)</span>.</p>
+<div class="proof theorem admonition" id="thm-measurable-Ramsey">
+<p class="admonition-title"><span class="caption-number">Theorem 37 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\kappa\)</span> be a measurable cardinal and let <span class="math notranslate nohighlight">\(F: [\kappa]^{&lt;\omega} \to \lambda\)</span> a partition of <span class="math notranslate nohighlight">\([\kappa]^{&lt;\omega}\)</span> into <span class="math notranslate nohighlight">\(\lambda &lt; \kappa\)</span> pieces. Then there exists an <span class="math notranslate nohighlight">\(F\)</span>-homogeneous set <span class="math notranslate nohighlight">\(H \subseteq \kappa\)</span> with <span class="math notranslate nohighlight">\(|H| = \kappa\)</span>.</p>
+</div>
+</div><p>In general, any cardinal that satisfies the statement of the theorem is called <strong>Ramsey</strong>.</p>
+<p>To prove <a class="reference internal" href="#thm-measurable-Ramsey">Theorem 37</a>, we introduce <strong>normal ultrafilters</strong>.</p>
+<div class="proof definition admonition" id="def-normal-filter">
+<p class="admonition-title"><span class="caption-number">Definition 37 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Given a sequence of sets <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \gamma}\)</span>, the <strong>diagonal intersection</strong> is given as</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta_{\xi &lt; \gamma} A_\xi = \{ \alpha &lt; \gamma \colon  \alpha \in \bigcup_{\xi &lt; \alpha} A_\xi \}.
+\]</div>
+<p>A filter <span class="math notranslate nohighlight">\(F\)</span> on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>normal</strong> if for any <span class="math notranslate nohighlight">\(\kappa\)</span>-sequence <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \kappa}\)</span>, <span class="math notranslate nohighlight">\(A_\xi \in F\)</span>, the diagonal intersection <span class="math notranslate nohighlight">\(\Delta_{\xi &lt; \kappa} A_\xi\)</span> is in <span class="math notranslate nohighlight">\(F\)</span>.</p>
+</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
