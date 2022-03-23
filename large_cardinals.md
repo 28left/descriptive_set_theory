@@ -151,7 +151,7 @@ Suppose an inaccessible cardinal exists, and let $\kappa$ be the least inaccessi
 It is not hard to verify that 
 
 $$
-V_\kappa \models \ZFC + \text{ "there does not exist an inaccessible cardinal"}.
+V_\kappa \models \ZFC + \text{''there does not exist an inaccessible cardinal''}.
 $$
 
 (You verify that being a inaccessible cardinal is absolute for $V_\kappa$.) Therefore, the existence of an inaccessible cardinal is not provable from $\ZFC$. This fact also follows from Gödel's second incompleteness theorem.
@@ -178,8 +178,8 @@ m: \mathcal{P}(M) \to [0,\infty),
 \end{gather*}
 so that the following conditions are met:
 
-- (**M1**) $\quad  m(M) =1$ 
-- (**M2**) $\quad \forall x \in M \; m(\{x\})=0$ 
+- (**M1**) $\quad$ $m(M) =1$ 
+- (**M2**) $\quad$ $\forall x \in M \; m(\{x\})=0$ 
 - (**M3**) $\quad$ if $(A_i)_{i < \omega}$ is a countable sequence of disjoint sets $\subseteq M$, then 
 \begin{equation*}
 m\left(\bigcup_{i<\omega} A_i\right ) =  \sum_{i<\omega} m(A_i)
@@ -187,7 +187,7 @@ m\left(\bigcup_{i<\omega} A_i\right ) =  \sum_{i<\omega} m(A_i)
 
 The structure of the set $M$ does not play any role here, so we can replace it by a cardinal $\kappa$ outright. One can also consider strengthening $\sigma$-additivity to **$\kappa$-additivity**:
 
-> If $\gamma < \kappa$ und  $(A_\xi)_{\xi< \lambda}$ is a sequence of disjoint subsets of $\kappa$, then
+> If $\gamma < \kappa$ and  $(A_\xi)_{\xi< \lambda}$ is a sequence of disjoint subsets of $\kappa$, then
 \begin{equation*}
 m(\bigcup_{\xi<\gamma} A_\xi) =  \sum_{\xi<\gamma} m(A_\xi).
 \end{equation*}
@@ -195,7 +195,7 @@ m(\bigcup_{\xi<\gamma} A_\xi) =  \sum_{\xi<\gamma} m(A_\xi).
 A transfinite sum $\sum_{\xi<\gamma}$ is given as the supremum of all sums over finite subsequences:
 
 $$
-\sum_{\xi<\gamma} m(A_\xi) = \sup \left \{ \sum_{i \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
+\sum_{\xi<\gamma} m(A_\xi) = \sup \left \{ \sum_{\xi \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
 $$
 
 Hence, $\omega_1$-additive is the same as $\sigma$-additive.
@@ -336,9 +336,67 @@ If $\kappa$ is real-valued measurable, then $\kappa$ is measurable or $\kappa \l
 
 Thus, if $\kappa$ is real-valued measurable but not measurable, then the continuum $2^{\aleph_0}$ has to be very large.
 
-<!-- The existence of a real-valued measurable cardinal also has consequence
-```{prf:proposition}
-If $\kappa$ is real-valued measurable -->
 
 
+## Partition properties
+
+Another concept of largeness is related to the existence of large **homogeneous sets** for partitions. 
+
+For given set $S$ and $n \in \Nat$, let
+\begin{equation*}
+	[S]^n := \{ X \subseteq S \colon \: |X| = n \} 
+\end{equation*}
+be the set of all $n$-element subsets of $S$. For cardinals $\kappa, \lambda$, we define 
+\begin{equation*}
+	\kappa \to (\lambda)^n_k 
+\end{equation*}
+to mean that any partition $F: [S]^n \to \{1, \dots, k\}$ mit $|S| = \kappa$ has an **$F$-homogeneous subset**  of cardinality $\lambda$, that is, a set $H$, $|H| = \lambda$, such that
+\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant}. 
+\end{equation*}
+
+**Ramsey's theorem** (1929/39) says that for any $n,k \in \Nat$, 
+\begin{equation*}
+	\aleph_0 \to (\aleph_0)^n_k. 
+\end{equation*}
+
+Do there exist uncountable cardinals with similar properties?
+
+A cardinal $\kappa$ is **weakly compact** is it is uncountable and $\kappa \to (\kappa)^2_2$ holds. 
+
+```{admonition} Exercise
+:class: tip
+
+Show that for any cardinal $\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2, and use this to infer that any weakly compact cardinal is inaccessible.
+
+(Thus the existence of weakly compact cardinals cannot be established in $\ZFC$.)
+```
+
+Measurable cardinals have even stronger homogeneity properties. Let $[S]^{<\omega}$ be the set of all finite subsets of $S$. If $F: [S]^{<\omega} \to I$ is a partition, then $H \subseteq S$ is **$F$-homogenenous** is 
+\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant} 
+\end{equation*}
+for all $n \in \Nat$.
+
+```{prf:theorem}
+:label: thm-measurable-Ramsey
+
+Let $\kappa$ be a measurable cardinal and let $F: [\kappa]^{<\omega} \to \lambda$ a partition of $[\kappa]^{<\omega}$ into $\lambda < \kappa$ pieces. Then there exists an $F$-homogeneous set $H \subseteq \kappa$ with $|H| = \kappa$.
+```
+
+In general, any cardinal that satisfies the statement of the theorem is called **Ramsey**.
+
+To prove {prf:ref}`thm-measurable-Ramsey`, we introduce **normal ultrafilters**.
+
+```{prf:definition}
+:label: def-normal-filter
+
+Given a sequence of sets $(A_\xi)_{\xi < \gamma}$, the **diagonal intersection** is given as
+
+$$
+    \Delta_{\xi < \gamma} A_\xi = \{ \alpha < \gamma \colon  \alpha \in \bigcup_{\xi < \alpha} A_\xi \}.
+$$
+
+A filter $F$ on a cardinal $\kappa$ is **normal** if for any $\kappa$-sequence $(A_\xi)_{\xi < \kappa}$, $A_\xi \in F$, the diagonal intersection $\Delta_{\xi < \kappa} A_\xi$ is in $F$.
+```
 
