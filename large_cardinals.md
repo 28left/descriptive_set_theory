@@ -315,7 +315,7 @@ and let $g(\alpha) = i$ if and only if $X_{\alpha,i} \in U$. Since $U$ is an ult
 Since $\gamma < \kappa$ and $U$ is $\kappa$-complete, 
 
 $$
-    X = \bigcup_{\alpha < \gamma} X_{\alpha, g(\alpha)} 
+    X = \bigcap_{\alpha < \gamma} X_{\alpha, g(\alpha)} 
 $$ 
 
 is in $U$. But $|X| \leq 1$, since the only function possibly in $X$ is $g$. This contradicts {prf:ref}`lem-cardinality-kappa-ultrafilter`.
@@ -362,12 +362,12 @@ to mean that any partition $F: [S]^n \to \{1, \dots, k\}$ mit $|S| = \kappa$ has
 
 Do there exist uncountable cardinals with similar properties?
 
-A cardinal $\kappa$ is **weakly compact** is it is uncountable and $\kappa \to (\kappa)^2_2$ holds. 
+A cardinal $\kappa$ is **weakly compact** if it is uncountable and $\kappa \to (\kappa)^2_2$ holds. 
 
 ```{admonition} Exercise
 :class: tip
 
-Show that for any cardinal $\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2, and use this to infer that any weakly compact cardinal is inaccessible.
+Show that for any cardinal $\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2$, and use this to infer that any weakly compact cardinal is inaccessible.
 
 (Thus the existence of weakly compact cardinals cannot be established in $\ZFC$.)
 ```
@@ -394,7 +394,7 @@ To prove {prf:ref}`thm-measurable-Ramsey`, we introduce **normal ultrafilters**.
 Given a sequence of sets $(A_\xi)_{\xi < \gamma}$, the **diagonal intersection** is given as
 
 $$
-    \Delta_{\xi < \gamma} A_\xi = \{ \alpha < \gamma \colon  \alpha \in \bigcup_{\xi < \alpha} A_\xi \}.
+    \Delta_{\xi < \gamma} A_\xi = \{ \alpha < \gamma \colon  \alpha \in \bigcap_{\xi < \alpha} A_\xi \}.
 $$
 
 A filter $F$ on a cardinal $\kappa$ is **normal** if for any $\kappa$-sequence $(A_\xi)_{\xi < \kappa}$, $A_\xi \in F$, the diagonal intersection $\Delta_{\xi < \kappa} A_\xi$ is in $F$.
@@ -420,11 +420,11 @@ Show that if there is a normal filter over $\kappa$, then $\kappa$ is uncountabl
 Show that if $\kappa$ is measurable, then there is a normal ultrafilter on $\kappa$.
 ```
 
-<!-- ```{prf:proof} 
-(Proof of {{prf:ref}`thm-measurable-Ramsey`}) 
+```{prf:proof} 
+(Proof of {prf:ref}`thm-measurable-Ramsey`) 
 
 Let $U$ be a normal filter over $\kappa$.
-We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
+We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H_n]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
 
 We proceed by induction. The case $n=1$ follows from the $\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
 
@@ -440,10 +440,8 @@ $$
 By $\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
 
 $$
-    g_S\Rest{Y_S} \equiv c_S < \gamma.
+    g_S\Rest{Y_S} \equiv \delta_S < \gamma.
 $$
-
-By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $Y_S$ has cardinality $\kappa$.
 
 We now define a function $h: [\kappa]^n \to \gamma$ 
 by letting
@@ -461,14 +459,23 @@ $$
     Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
 $$
 
-By $\kappa$-completeness, $Y_\alpha in U$, and by normality
+By $\kappa$-completeness, $Y_\alpha \in U$, and by normality
 
 $$
     H = Z \cap \Delta_{\alpha < \kappa} Y_\alpha \in U
 $$
 
-We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then
+By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $H$ has cardinality $\kappa$.
 
+We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then 
 
+\begin{align*}
+    \alpha \in H & \Rightarrow  & \alpha \in \Delta_{\gamma < \kappa} Y_\gamma \\
+                 & \Rightarrow  & \alpha \in \bigcap_{\beta < \alpha} Y_\beta \\
+                 & \Rightarrow  & \alpha \in Y_{\max S} \\
+                 & \Rightarrow  & \alpha \in Y_S \\
+                 & \Rightarrow  & g_S(\alpha) = \delta_S
+\end{align*}
 
-``` -->
+On the other hand, $S \subseteq H$ implies $S \subseteq Z$ and hence by definition of $Z$, $h(S) = \delta_S = \delta$, so $g(T) = g_S(\alpha) = \delta_S = \delta$.
+```

@@ -34,13 +34,13 @@ $$
 The constructible universe is built as a cumulative hierarchy of sets along the ordinals. In each successor step, instead of adding all subsets of the current set, only the **definable** ones are added. Formally, $L$ is defined as follows. Given a set $Y$, let 
 
 $$
-	\Op{Pow}_{\Op{Def}}(Y) = \{X \subseteq Y \colon X \text{ is definable in $Y$ from parameters}\},
+	\mathcal{P}_{\Op{Def}}(Y) = \{X \subseteq Y \colon X \text{ is definable in $Y$ from parameters}\},
 $$
 
 where the underlying language is the language of set theory. Now put
 \begin{align*}
 	L_0 & = \emptyset \\
-	L_{\xi+1} & = \Op{Pow}_{\Op{Def}}(L_\xi)  \\
+	L_{\xi+1} & = \mathcal{P}_{\Op{Def}}(L_\xi)  \\
 	L_{\xi} & = \bigcup_{\alpha < \xi} L_\xi \quad  \text{($\xi$ limit ordinal)} \\
 \end{align*}
 Finally, let
@@ -81,7 +81,7 @@ By induction hypothesis, $L_\alpha$ is transitive, and hence $a \in x$ implies $
 
 For the third statement, note that the formula $\varphi(x_0) \equiv x_0 = x_0$ defines $L_\alpha$ in $L_\alpha$, and hence $L_\alpha \in L_{\alpha + 1}$.
 
-For (4), notice that there at only countably many formulas.
+For (4), notice that there are only countably many formulas.
 ```
 
 Next, we show that $L$ contains all ordinals and that $\xi$ "shows up" exactly after $\xi$ steps.
@@ -98,7 +98,7 @@ Clearly, $(1)$ follows from $(2)$.
 
 To show $(2)$, one again proceeds by induction. Again, the statement is clear for $0$ and limit ordinals, so assume $\xi = \alpha +1$ and $L_\alpha \cap \Ord = \alpha$. 
 
-We need to show $L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}$. Since $L_\alpha \subseteq L_{\alpha + 1}$, we have $\alpha \subseteq L_{\alpha+1} \cap \Ord$. On the other hand, since $L_{\alpha+1} \subseteq \Op{Pow}(L_\alpha)$, we have $L_{\alpha+1} \cap \Ord \subseteq \alpha + 1$. It thus remains to show that $\alpha \in L_{\alpha+1}$. 
+We need to show $L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}$. Since $L_\alpha \subseteq L_{\alpha + 1}$, we have $\alpha \subseteq L_{\alpha+1} \cap \Ord$. On the other hand, since $L_{\alpha+1} \subseteq \mathcal{P}(L_\alpha)$, we have $L_{\alpha+1} \cap \Ord \subseteq \alpha + 1$. It thus remains to show that $\alpha \in L_{\alpha+1}$. 
 
 We observed before that the statement
 
@@ -107,8 +107,8 @@ We observed before that the statement
 can be formalized by a $\Delta_0$ formula, which are absolute for transitive classes.
 
 Thus,
-\begin{equation} \tag{$*$}
+\begin{equation*}
 	\alpha = \{ a \in L_\alpha \colon L_\alpha \models \varphi_{\Ord}[a] \},
-\end{equation} 
+\end{equation*} 
 and hence we can conclude $\alpha \in L_{\alpha+1}$. 
 ```
