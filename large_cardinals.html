@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="The Constructible Universe" href="constructible.html" />
     <link rel="prev" title="Models of Set Theory" href="models.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -221,6 +221,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Large Cardinals
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Constructibility
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="constructible.html">
+   The Constructible Universe
   </a>
  </li>
 </ul>
@@ -717,14 +729,14 @@ m(x) =
 <p>Show that for any cardinal <span class="math notranslate nohighlight">\(\kappa\)</span>, $2^\kappa \nrightarrow (\kappa^+)^2_2, and use this to infer that any weakly compact cardinal is inaccessible.</p>
 <p>(Thus the existence of weakly compact cardinals cannot be established in <span class="math notranslate nohighlight">\(\ZFC\)</span>.)</p>
 </div>
-<p>Measurable cardinals have even stronger homogeneity properties. Let <span class="math notranslate nohighlight">\([S]^{&lt;\omega}\)</span> be the set of all finite subsets of <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(F: [S]^{&lt;\omega} \to I\)</span> is a partition, then <span class="math notranslate nohighlight">\(H \subseteq S\)</span> is <strong><span class="math notranslate nohighlight">\(F\)</span>-homogenenous</strong> is</p>
+<p>Measurable cardinals have even stronger homogeneity properties. Let <span class="math notranslate nohighlight">\([S]^{&lt;\omega}\)</span> be the set of all finite subsets of <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(F: [S]^{&lt;\omega} \to I\)</span> is a partition, then <span class="math notranslate nohighlight">\(H \subseteq S\)</span> is <strong><span class="math notranslate nohighlight">\(F\)</span>-homogenenous</strong> if</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 	F|_{[H]^n} \equiv \text{ constant} 
 \end{equation*}\]</div>
 <p>for all <span class="math notranslate nohighlight">\(n \in \Nat\)</span>.</p>
 <div class="proof theorem admonition" id="thm-measurable-Ramsey">
-<p class="admonition-title"><span class="caption-number">Theorem 37 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 37 </span> (Rowbottom)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\kappa\)</span> be a measurable cardinal and let <span class="math notranslate nohighlight">\(F: [\kappa]^{&lt;\omega} \to \lambda\)</span> a partition of <span class="math notranslate nohighlight">\([\kappa]^{&lt;\omega}\)</span> into <span class="math notranslate nohighlight">\(\lambda &lt; \kappa\)</span> pieces. Then there exists an <span class="math notranslate nohighlight">\(F\)</span>-homogeneous set <span class="math notranslate nohighlight">\(H \subseteq \kappa\)</span> with <span class="math notranslate nohighlight">\(|H| = \kappa\)</span>.</p>
 </div>
@@ -740,7 +752,71 @@ m(x) =
 \]</div>
 <p>A filter <span class="math notranslate nohighlight">\(F\)</span> on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>normal</strong> if for any <span class="math notranslate nohighlight">\(\kappa\)</span>-sequence <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \kappa}\)</span>, <span class="math notranslate nohighlight">\(A_\xi \in F\)</span>, the diagonal intersection <span class="math notranslate nohighlight">\(\Delta_{\xi &lt; \kappa} A_\xi\)</span> is in <span class="math notranslate nohighlight">\(F\)</span>.</p>
 </div>
-</div></div>
+</div><p>Let us assume as a convention that a filter on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> always contains the end-segments <span class="math notranslate nohighlight">\(\{\xi \colon \alpha \leq \xi &lt; \kappa\}\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that a normal filter on <span class="math notranslate nohighlight">\(\kappa\)</span> is <span class="math notranslate nohighlight">\(\kappa\)</span>-complete.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that if there is a normal filter over <span class="math notranslate nohighlight">\(\kappa\)</span>, then <span class="math notranslate nohighlight">\(\kappa\)</span> is uncountable and regular.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that if <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable, then there is a normal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</div>
+<!-- ```{prf:proof} 
+(Proof of {{prf:ref}`thm-measurable-Ramsey`}) 
+
+Let $U$ be a normal filter over $\kappa$.
+We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
+
+We proceed by induction. The case $n=1$ follows from the $\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
+
+For each $S \in [\kappa]^n$, define $g_s : \kappa \to \gamma$ by 
+
+$$
+    g_S(\alpha) = \begin{cases}
+        g(S \cup \{\alpha\}) & \text{ if } \max S < \alpha \\
+        0 & \text{otherwise}
+    \end{cases}
+$$
+
+By $\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
+
+$$
+    g_S\Rest{Y_S} \equiv c_S < \gamma.
+$$
+
+By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $Y_S$ has cardinality $\kappa$.
+
+We now define a function $h: [\kappa]^n \to \gamma$ 
+by letting
+
+$$
+    h(S) = \delta_S.
+$$
+
+By induction hypothesis, $h$ is constant on a set $Z \subseteq \kappa$
+in $U$ (and hence of size $\kappa$), say $h\Rest{[Z]^n} \equiv \delta < \kappa$.
+
+For each $\alpha < \kappa$, let
+
+$$
+    Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
+$$
+
+By $\kappa$-completeness, $Y_\alpha in U$, and by normality
+
+$$
+    H = Z \cap \Delta_{\alpha < \kappa} Y_\alpha \in U
+$$
+
+We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then
+
+
+
+``` --></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -775,10 +851,10 @@ m(x) =
             <p class="prev-next-title">Models of Set Theory</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="constructible.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">The Constructible Universe</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
