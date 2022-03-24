@@ -31,6 +31,9 @@ parts:
       - file: recursion.md
       - file: models.md
       - file: large_cardinals.md
+  - caption: Constructibility
+    chapters:
+      - file: constructible.md
   - caption: Reference
     chapters:
       - file: bibliography

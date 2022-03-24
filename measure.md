@@ -93,7 +93,7 @@ If we want the measure $\mu$ to reflect also some other basic intuition about ge
 
 To have some control over what the $\sigma$-algebra of measurable sets should be, one can construct a measure more carefully, start with a measure on basic objects such as intervals or balls, and then extend it to larger classes of sets by approximation.
 
-An essential component in this extension process is the concept of an \emph{outer measure}.
+An essential component in this extension process is the concept of an **outer measure**.
 
 ```{prf:definition}
 :label: def-outer-measure
@@ -121,7 +121,7 @@ $$
 $$ 
 ```
 
-This definition is justified rather by its consequences than by its intuitive appeal. Regarding the latter, suffice it to say here that outer measures may be rather far from being even \emph{finitely} additive. The definition singles out those sets that split all other sets correctly, with regard to measure.
+This definition is justified rather by its consequences than by its intuitive appeal. Regarding the latter, suffice it to say here that outer measures may be rather far from being even *finitely* additive. The definition singles out those sets that split all other sets correctly, with regard to measure.
 
 ```{prf:proposition}
 :label: prop-measurable-sets

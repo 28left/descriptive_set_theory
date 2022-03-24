@@ -372,13 +372,13 @@ Show that for any cardinal $\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2, and 
 (Thus the existence of weakly compact cardinals cannot be established in $\ZFC$.)
 ```
 
-Measurable cardinals have even stronger homogeneity properties. Let $[S]^{<\omega}$ be the set of all finite subsets of $S$. If $F: [S]^{<\omega} \to I$ is a partition, then $H \subseteq S$ is **$F$-homogenenous** is 
+Measurable cardinals have even stronger homogeneity properties. Let $[S]^{<\omega}$ be the set of all finite subsets of $S$. If $F: [S]^{<\omega} \to I$ is a partition, then $H \subseteq S$ is **$F$-homogenenous** if
 \begin{equation*}
 	F|_{[H]^n} \equiv \text{ constant} 
 \end{equation*}
 for all $n \in \Nat$.
 
-```{prf:theorem}
+```{prf:theorem} Rowbottom
 :label: thm-measurable-Ramsey
 
 Let $\kappa$ be a measurable cardinal and let $F: [\kappa]^{<\omega} \to \lambda$ a partition of $[\kappa]^{<\omega}$ into $\lambda < \kappa$ pieces. Then there exists an $F$-homogeneous set $H \subseteq \kappa$ with $|H| = \kappa$.
@@ -400,3 +400,75 @@ $$
 A filter $F$ on a cardinal $\kappa$ is **normal** if for any $\kappa$-sequence $(A_\xi)_{\xi < \kappa}$, $A_\xi \in F$, the diagonal intersection $\Delta_{\xi < \kappa} A_\xi$ is in $F$.
 ```
 
+Let us assume as a convention that a filter on a cardinal $\kappa$ always contains the end-segments $\{\xi \colon \alpha \leq \xi < \kappa\}$.
+
+```{admonition} Exercise
+:class: tip
+
+Show that a normal filter on $\kappa$ is $\kappa$-complete. 
+```
+
+```{admonition} Exercise
+:class: tip
+
+Show that if there is a normal filter over $\kappa$, then $\kappa$ is uncountable and regular.
+```
+
+```{admonition} Exercise
+:class: tip
+
+Show that if $\kappa$ is measurable, then there is a normal ultrafilter on $\kappa$.
+```
+
+<!-- ```{prf:proof} 
+(Proof of {{prf:ref}`thm-measurable-Ramsey`}) 
+
+Let $U$ be a normal filter over $\kappa$.
+We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
+
+We proceed by induction. The case $n=1$ follows from the $\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
+
+For each $S \in [\kappa]^n$, define $g_s : \kappa \to \gamma$ by 
+
+$$
+    g_S(\alpha) = \begin{cases}
+        g(S \cup \{\alpha\}) & \text{ if } \max S < \alpha \\
+        0 & \text{otherwise}
+    \end{cases}
+$$
+
+By $\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
+
+$$
+    g_S\Rest{Y_S} \equiv c_S < \gamma.
+$$
+
+By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $Y_S$ has cardinality $\kappa$.
+
+We now define a function $h: [\kappa]^n \to \gamma$ 
+by letting
+
+$$
+    h(S) = \delta_S.
+$$
+
+By induction hypothesis, $h$ is constant on a set $Z \subseteq \kappa$
+in $U$ (and hence of size $\kappa$), say $h\Rest{[Z]^n} \equiv \delta < \kappa$.
+
+For each $\alpha < \kappa$, let
+
+$$
+    Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
+$$
+
+By $\kappa$-completeness, $Y_\alpha in U$, and by normality
+
+$$
+    H = Z \cap \Delta_{\alpha < \kappa} Y_\alpha \in U
+$$
+
+We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then
+
+
+
+``` -->
