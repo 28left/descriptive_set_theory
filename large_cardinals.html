@@ -683,7 +683,7 @@ m(x) =
 <p>Since <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> and <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\kappa\)</span>-complete,</p>
 <div class="math notranslate nohighlight">
 \[
-    X = \bigcup_{\alpha &lt; \gamma} X_{\alpha, g(\alpha)} 
+    X = \bigcap_{\alpha &lt; \gamma} X_{\alpha, g(\alpha)} 
 \]</div>
 <p>is in <span class="math notranslate nohighlight">\(U\)</span>. But <span class="math notranslate nohighlight">\(|X| \leq 1\)</span>, since the only function possibly in <span class="math notranslate nohighlight">\(X\)</span> is <span class="math notranslate nohighlight">\(g\)</span>. This contradicts <a class="reference internal" href="#lem-cardinality-kappa-ultrafilter">Lemma 18</a>.</p>
 </div>
@@ -723,10 +723,10 @@ m(x) =
 	\aleph_0 \to (\aleph_0)^n_k. 
 \end{equation*}\]</div>
 <p>Do there exist uncountable cardinals with similar properties?</p>
-<p>A cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>weakly compact</strong> is it is uncountable and <span class="math notranslate nohighlight">\(\kappa \to (\kappa)^2_2\)</span> holds.</p>
+<p>A cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>weakly compact</strong> if it is uncountable and <span class="math notranslate nohighlight">\(\kappa \to (\kappa)^2_2\)</span> holds.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise</p>
-<p>Show that for any cardinal <span class="math notranslate nohighlight">\(\kappa\)</span>, $2^\kappa \nrightarrow (\kappa^+)^2_2, and use this to infer that any weakly compact cardinal is inaccessible.</p>
+<p>Show that for any cardinal <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa \nrightarrow (\kappa^+)^2_2\)</span>, and use this to infer that any weakly compact cardinal is inaccessible.</p>
 <p>(Thus the existence of weakly compact cardinals cannot be established in <span class="math notranslate nohighlight">\(\ZFC\)</span>.)</p>
 </div>
 <p>Measurable cardinals have even stronger homogeneity properties. Let <span class="math notranslate nohighlight">\([S]^{&lt;\omega}\)</span> be the set of all finite subsets of <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(F: [S]^{&lt;\omega} \to I\)</span> is a partition, then <span class="math notranslate nohighlight">\(H \subseteq S\)</span> is <strong><span class="math notranslate nohighlight">\(F\)</span>-homogenenous</strong> if</p>
@@ -748,7 +748,7 @@ m(x) =
 <p>Given a sequence of sets <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \gamma}\)</span>, the <strong>diagonal intersection</strong> is given as</p>
 <div class="math notranslate nohighlight">
 \[
-    \Delta_{\xi &lt; \gamma} A_\xi = \{ \alpha &lt; \gamma \colon  \alpha \in \bigcup_{\xi &lt; \alpha} A_\xi \}.
+    \Delta_{\xi &lt; \gamma} A_\xi = \{ \alpha &lt; \gamma \colon  \alpha \in \bigcap_{\xi &lt; \alpha} A_\xi \}.
 \]</div>
 <p>A filter <span class="math notranslate nohighlight">\(F\)</span> on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>normal</strong> if for any <span class="math notranslate nohighlight">\(\kappa\)</span>-sequence <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \kappa}\)</span>, <span class="math notranslate nohighlight">\(A_\xi \in F\)</span>, the diagonal intersection <span class="math notranslate nohighlight">\(\Delta_{\xi &lt; \kappa} A_\xi\)</span> is in <span class="math notranslate nohighlight">\(F\)</span>.</p>
 </div>
@@ -765,58 +765,55 @@ m(x) =
 <p class="admonition-title">Exercise</p>
 <p>Show that if <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable, then there is a normal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
 </div>
-<!-- ```{prf:proof} 
-(Proof of {{prf:ref}`thm-measurable-Ramsey`}) 
-
-Let $U$ be a normal filter over $\kappa$.
-We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
-
-We proceed by induction. The case $n=1$ follows from the $\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
-
-For each $S \in [\kappa]^n$, define $g_s : \kappa \to \gamma$ by 
-
-$$
+<div class="proof admonition" id="proof">
+<p>Proof. (Proof of <a class="reference internal" href="#thm-measurable-Ramsey">Theorem 37</a>)</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a normal filter over <span class="math notranslate nohighlight">\(\kappa\)</span>.
+We show that for every <span class="math notranslate nohighlight">\(n\)</span>, for any <span class="math notranslate nohighlight">\(g: [\kappa]^n \to \gamma\)</span> with <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>, there is a set <span class="math notranslate nohighlight">\(H_n \in U\)</span> such that <span class="math notranslate nohighlight">\(g_n \Rest{[H_n]^n} \equiv \text{const}\)</span>. The intersection of the <span class="math notranslate nohighlight">\(H_n\)</span> is again in <span class="math notranslate nohighlight">\(U\)</span> and satisfies the statement of the the theorem.</p>
+<p>We proceed by induction. The case <span class="math notranslate nohighlight">\(n=1\)</span> follows from the <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness of <span class="math notranslate nohighlight">\(U\)</span>. Now assume <span class="math notranslate nohighlight">\(g:[\kappa]^{n+1} \to \gamma\)</span>, with <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>.</p>
+<p>For each <span class="math notranslate nohighlight">\(S \in [\kappa]^n\)</span>, define <span class="math notranslate nohighlight">\(g_s : \kappa \to \gamma\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
     g_S(\alpha) = \begin{cases}
-        g(S \cup \{\alpha\}) & \text{ if } \max S < \alpha \\
-        0 & \text{otherwise}
+        g(S \cup \{\alpha\}) &amp; \text{ if } \max S &lt; \alpha \\
+        0 &amp; \text{otherwise}
     \end{cases}
-$$
-
-By $\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
-
-$$
-    g_S\Rest{Y_S} \equiv c_S < \gamma.
-$$
-
-By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $Y_S$ has cardinality $\kappa$.
-
-We now define a function $h: [\kappa]^n \to \gamma$ 
-by letting
-
-$$
+\end{split}\]</div>
+<p>By <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness of <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(g_S\)</span> is constant on a set <span class="math notranslate nohighlight">\(Y_S \in U\)</span>, say</p>
+<div class="math notranslate nohighlight">
+\[
+    g_S\Rest{Y_S} \equiv \delta_S &lt; \gamma.
+\]</div>
+<p>We now define a function <span class="math notranslate nohighlight">\(h: [\kappa]^n \to \gamma\)</span>
+by letting</p>
+<div class="math notranslate nohighlight">
+\[
     h(S) = \delta_S.
-$$
-
-By induction hypothesis, $h$ is constant on a set $Z \subseteq \kappa$
-in $U$ (and hence of size $\kappa$), say $h\Rest{[Z]^n} \equiv \delta < \kappa$.
-
-For each $\alpha < \kappa$, let
-
-$$
+\]</div>
+<p>By induction hypothesis, <span class="math notranslate nohighlight">\(h\)</span> is constant on a set <span class="math notranslate nohighlight">\(Z \subseteq \kappa\)</span>
+in <span class="math notranslate nohighlight">\(U\)</span> (and hence of size <span class="math notranslate nohighlight">\(\kappa\)</span>), say <span class="math notranslate nohighlight">\(h\Rest{[Z]^n} \equiv \delta &lt; \kappa\)</span>.</p>
+<p>For each <span class="math notranslate nohighlight">\(\alpha &lt; \kappa\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[
     Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
-$$
-
-By $\kappa$-completeness, $Y_\alpha in U$, and by normality
-
-$$
-    H = Z \cap \Delta_{\alpha < \kappa} Y_\alpha \in U
-$$
-
-We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then
-
-
-
-``` --></div>
+\]</div>
+<p>By <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness, <span class="math notranslate nohighlight">\(Y_\alpha \in U\)</span>, and by normality</p>
+<div class="math notranslate nohighlight">
+\[
+    H = Z \cap \Delta_{\alpha &lt; \kappa} Y_\alpha \in U
+\]</div>
+<p>By <a class="reference internal" href="#lem-cardinality-kappa-ultrafilter">Lemma 18</a>, <span class="math notranslate nohighlight">\(H\)</span> has cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+<p>We claim that <span class="math notranslate nohighlight">\(g\)</span> is constant on <span class="math notranslate nohighlight">\([H]^{n+1}\)</span>: Let <span class="math notranslate nohighlight">\(T \in [H]^{n+1}\)</span>. Write <span class="math notranslate nohighlight">\(T\)</span> as <span class="math notranslate nohighlight">\(S \cup \{\alpha\}\)</span> with <span class="math notranslate nohighlight">\(\max S &lt; \alpha\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \alpha \in H &amp; \Rightarrow  &amp; \alpha \in \Delta_{\gamma &lt; \kappa} Y_\gamma \\
+                 &amp; \Rightarrow  &amp; \alpha \in \bigcap_{\beta &lt; \alpha} Y_\beta \\
+                 &amp; \Rightarrow  &amp; \alpha \in Y_{\max S} \\
+                 &amp; \Rightarrow  &amp; \alpha \in Y_S \\
+                 &amp; \Rightarrow  &amp; g_S(\alpha) = \delta_S
+\end{align*}\]</div>
+<p>On the other hand, <span class="math notranslate nohighlight">\(S \subseteq H\)</span> implies <span class="math notranslate nohighlight">\(S \subseteq Z\)</span> and hence by definition of <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(h(S) = \delta_S = \delta\)</span>, so <span class="math notranslate nohighlight">\(g(T) = g_S(\alpha) = \delta_S = \delta\)</span>.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

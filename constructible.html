@@ -412,13 +412,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The constructible universe is built as a cumulative hierarchy of sets along the ordinals. In each successor step, instead of adding all subsets of the current set, only the <strong>definable</strong> ones are added. Formally, <span class="math notranslate nohighlight">\(L\)</span> is defined as follows. Given a set <span class="math notranslate nohighlight">\(Y\)</span>, let</p>
 <div class="math notranslate nohighlight">
 \[
-	\Op{Pow}_{\Op{Def}}(Y) = \{X \subseteq Y \colon X \text{ is definable in $Y$ from parameters}\},
+	\mathcal{P}_{\Op{Def}}(Y) = \{X \subseteq Y \colon X \text{ is definable in $Y$ from parameters}\},
 \]</div>
 <p>where the underlying language is the language of set theory. Now put</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 	L_0 &amp; = \emptyset \\
-	L_{\xi+1} &amp; = \Op{Pow}_{\Op{Def}}(L_\xi)  \\
+	L_{\xi+1} &amp; = \mathcal{P}_{\Op{Def}}(L_\xi)  \\
 	L_{\xi} &amp; = \bigcup_{\alpha &lt; \xi} L_\xi \quad  \text{($\xi$ limit ordinal)} \\
 \end{align*}\]</div>
 <p>Finally, let</p>
@@ -450,7 +450,7 @@ const thebe_selector_output = ".output, .cell_output"
 \]</div>
 <p>By induction hypothesis, <span class="math notranslate nohighlight">\(L_\alpha\)</span> is transitive, and hence <span class="math notranslate nohighlight">\(a \in x\)</span> implies <span class="math notranslate nohighlight">\(a \in L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(x' = x\)</span>, so <span class="math notranslate nohighlight">\(x \in L_{\alpha+1}\)</span>. This yields <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_\xi\)</span>. Now if <span class="math notranslate nohighlight">\(x \in L_\xi\)</span>, then <span class="math notranslate nohighlight">\(x \subseteq L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(x \subseteq L_\xi\)</span>. Thus <span class="math notranslate nohighlight">\(L_\xi\)</span> is transitive.</p>
 <p>For the third statement, note that the formula <span class="math notranslate nohighlight">\(\varphi(x_0) \equiv x_0 = x_0\)</span> defines <span class="math notranslate nohighlight">\(L_\alpha\)</span> in <span class="math notranslate nohighlight">\(L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(L_\alpha \in L_{\alpha + 1}\)</span>.</p>
-<p>For (4), notice that there at only countably many formulas.</p>
+<p>For (4), notice that there are only countably many formulas.</p>
 </div>
 <p>Next, we show that <span class="math notranslate nohighlight">\(L\)</span> contains all ordinals and that <span class="math notranslate nohighlight">\(\xi\)</span> “shows up” exactly after <span class="math notranslate nohighlight">\(\xi\)</span> steps.</p>
 <div class="proof proposition admonition" id="proposition-1">
@@ -465,17 +465,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div><div class="proof admonition" id="proof">
 <p>Proof. Clearly, <span class="math notranslate nohighlight">\((1)\)</span> follows from <span class="math notranslate nohighlight">\((2)\)</span>.</p>
 <p>To show <span class="math notranslate nohighlight">\((2)\)</span>, one again proceeds by induction. Again, the statement is clear for <span class="math notranslate nohighlight">\(0\)</span> and limit ordinals, so assume <span class="math notranslate nohighlight">\(\xi = \alpha +1\)</span> and <span class="math notranslate nohighlight">\(L_\alpha \cap \Ord = \alpha\)</span>.</p>
-<p>We need to show <span class="math notranslate nohighlight">\(L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}\)</span>. Since <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_{\alpha + 1}\)</span>, we have <span class="math notranslate nohighlight">\(\alpha \subseteq L_{\alpha+1} \cap \Ord\)</span>. On the other hand, since <span class="math notranslate nohighlight">\(L_{\alpha+1} \subseteq \Op{Pow}(L_\alpha)\)</span>, we have <span class="math notranslate nohighlight">\(L_{\alpha+1} \cap \Ord \subseteq \alpha + 1\)</span>. It thus remains to show that <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
+<p>We need to show <span class="math notranslate nohighlight">\(L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}\)</span>. Since <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_{\alpha + 1}\)</span>, we have <span class="math notranslate nohighlight">\(\alpha \subseteq L_{\alpha+1} \cap \Ord\)</span>. On the other hand, since <span class="math notranslate nohighlight">\(L_{\alpha+1} \subseteq \mathcal{P}(L_\alpha)\)</span>, we have <span class="math notranslate nohighlight">\(L_{\alpha+1} \cap \Ord \subseteq \alpha + 1\)</span>. It thus remains to show that <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
 <p>We observed before that the statement</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(\varphi_{\Ord}(x)\)</span>: <em><span class="math notranslate nohighlight">\(x\)</span> is transitive and linearly ordered by <span class="math notranslate nohighlight">\(\in\)</span></em></p>
 </div></blockquote>
 <p>can be formalized by a <span class="math notranslate nohighlight">\(\Delta_0\)</span> formula, which are absolute for transitive classes.</p>
 <p>Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4e64e0e6-454d-4c91-bf87-70383a778a95">
-<span class="eqno">(1)<a class="headerlink" href="#equation-4e64e0e6-454d-4c91-bf87-70383a778a95" title="Permalink to this equation">¶</a></span>\[\begin{equation} \tag{$*$}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
 	\alpha = \{ a \in L_\alpha \colon L_\alpha \models \varphi_{\Ord}[a] \},
-\end{equation}\]</div>
+\end{equation*}\]</div>
 <p>and hence we can conclude <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
 </div>
 </div>
