@@ -231,3 +231,172 @@ $$
 $$
 ```
 
+
+## Cumulative hierarchies
+
+Many facts about $L$ hold more generally for **cumulative hierarchies**.
+
+```{prf:definition}
+:label: def-cumulative
+
+A sequence $(M_\alpha)_{\alpha \in \Ord}$ of sets is a **cumulative hierarchy** if
+
+- (**H1**) $\quad$ each $M_\alpha$ is transitive,
+- (**H2**) $\quad$ $\alpha < \beta$ implies $M_\alpha \subseteq M_\beta$,
+- (**H3**) $\quad$ For limit $\lambda$, 
+\begin{equation*}
+	M_\lambda = \bigcup_{\alpha \in \Ord} M_\alpha
+\end{equation*}
+```
+
+The von-Neumann universe $V$ ($M_\alpha = V_\alpha$) and Gödel's $L$ ($M_\alpha = L_\alpha$) are the most important examples of cumulative hierarchies.
+
+```{prf:definition}
+:label: def-normal-function
+
+A function $F: \Ord \to \Ord$ is **normal** if
+
+\begin{gather*}
+\alpha < \beta \; \Rightarrow \; F(\alpha) < F(\beta) \qquad \text{(strictly increasing)} \\
+\lambda \text{ limit } \Rightarrow F(\lambda) = \bigcup_{\alpha < \lambda} F(\alpha) \qquad \text{(continuous)}
+\end{gather*}
+```
+
+The images of normal functions are called **clubs** (short for **closed, unbounded**).
+
+```{admonition} Exercise
+:class: tip
+
+Show that a normal function has arbitrarily large fixed points, that is,
+
+$$
+\forall \alpha \exists \beta \; (\beta > \alpha \: \wedge \: \beta = F(\beta))
+$$
+```
+
+```{prf:theorem} Reflection for cumulative hierarchies
+:label: thm-reflection
+
+Let $(M_\alpha)_{\alpha \in \Ord}$ be a cumulative hierarchy and let $M = \bigcup_\alpha M_\alpha$.
+
+For every set theoretic formula $\varphi(v_0, \dots, v_{n-1})$ there exists a normal function $F$ such that 
+
+$$
+	F(\alpha) = \alpha \; \; \rightarrow \;\;  \forall a_0, \dots, a_{n-1} \in M_\alpha \: (\varphi^{M_\alpha}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+$$
+```
+
+```{prf:proof}
+Proceed by induction on the formula structure. We focus on the case $\varphi \equiv \exists y \psi$. The other cases are straightforward due to the definition of relativization.
+
+By induction hypothesis, there exists a normal function $G$ such that
+
+$$
+G(\alpha) = \alpha \; \; \rightarrow \;\;  \forall \vec{a},b \in M_\alpha \: (\psi^{M_\alpha}(\vec{a},b) \leftrightarrow \psi^{M}(\vec{a},b))
+$$
+
+We define a function $H$ by
+
+$$
+H(\alpha) = \text{ least } \beta > \alpha \text{ with } \forall \vec{a} \in M_\alpha \: ( \exists b \in M \: \psi^M(\vec{a},b) \; \rightarrow \; \exists b \in M_\beta \: \psi^M(\vec{a},b))
+$$
+
+We use $H$ to define, via transfinite recursion, another normal function $F$:
+\begin{align*}
+	F(0) & = 0 \\
+	F(\alpha+1) & = H(F(\alpha)) \\
+	F(\lambda) & = \bigcup_{\alpha < \lambda} F(\alpha) \quad \text{ for $\lambda$ limit}
+\end{align*}
+
+The composition $F^* = F\circ G$ is again normal, and its fixed points are simultaneously fixed points of $F$ and $G$. It is now straightforward to check  that $F^*$ has the desired property.
+```
+
+```{prf:corollary} Scott-Scarpellini Theorem
+:label: cor-Scott-Scarpellini
+
+If $(M_\alpha)_{\alpha \in \Ord}$ is a cumulative hierarchy, $M = \bigcup_\alpha M_\alpha$, and $\varphi(\vec{x})$ is a set-theoretic formula, then
+
+$$
+\forall \alpha \exists \beta > \alpha \; \forall a_0, \dots, a_{n-1} \in M_\beta \: (\varphi^{M_\beta}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+$$
+```
+
+By taking conjunctions, it is possible to generalize the reflection theorem to **finite sets of formulas**. Again, it is not possible (unless $\ZF$ is inconsistent) to extend this to arbitrary sets of formulas (or we could produce, in $\ZF$, a *set model* of $\ZF$, contradicting the *second incompleteness theorem*).
+
+```{prf:corollary}
+:label: cor-ZF-axiomatizable
+
+$\ZF$ is not finitely axiomatizable.
+```
+
+
+
+## Inner models
+
+```{prf:definition}
+:label: def-inner-model
+
+A class $M$ is an **inner model of $\ZF$** if 
+
+- $M$ is transitive,
+- $M$ contains all ordinals,
+- $\sigma^M$ holds for all axioms $\sigma$ of $\ZF$.
+```
+
+```{prf:theorem} Characterization of inner models
+:label: thm-inner-models
+
+A class $M$ is an inner model of $\ZF$ if and only if there exists a sequence $(M_\alpha)_{\alpha \in \Ord}$ such that for all $\alpha, \beta, \lambda \in \Ord$,
+
+- (**I1**) $\quad$ $M = \bigcup_{\alpha \in \Ord} M_\alpha$ is a cumulative hierarchy,
+- (**I2**) $\quad$ $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1} \subseteq \mathcal{P}(M_\alpha)$
+```
+
+```{prf:proof}
+($\Rightarrow$) Suppose $M$ is an inner model of $\ZF$. Let 
+
+$$
+M_\alpha = V_\alpha^M = V_\alpha \cap M.
+$$
+
+This defines a cumulative hierarchy, so (I1) is satisfied.
+For (I2), note that $(\text{Power Set})^M$ if and only if $\forall x \in M (\mathcal{P}(x) \cap M \in M)$.
+
+($\Leftarrow$) 
+*Extensionality* and *Foundation* hold in all transitive classes. *Set Existence* is satisfied in any cumulative hierarchy (since $\emptyset \in M$).
+
+*Union*: By absoluteness, $(\text{Union})^M$ if and only if $\forall x \in M \; \bigcup x \in M$. The latter holds in $M$ by (I2) and the fact that $y = \bigcup x$ is definable.
+
+*Pairing*: Similar to *Union*.
+
+*Separation*: Suppose $a, b_1, \dots, b_n \in M$ and $\varphi(v_0, v_1, \dots, v_n)$ is a formula. We have to argue that the set 
+\begin{equation*}
+	z = \{ x \in a \colon \varphi^M(x, b_1, \dots, b_n) \}
+\end{equation*}
+is in $M$. By the reflection theorem for cumulative hierarchies, there exists $\alpha$ such that $a, b_1, \dots, b_n \in M_\alpha$ and for all $x \in M_\alpha$,
+\begin{equation*}
+	\varphi^M(x, b_1, \dots, b_n) \; \leftrightarrow \; \varphi^{M_\alpha}(x, b_1, \dots, b_n).
+\end{equation*}
+This implies $z \in \mathcal{P}_{\Op{Def}}(M_\alpha)$ and hence by (I2), $z \in M_{\alpha+1}$. By (I1), $z \in M$.
+
+*Power Set*: Suppose $a \in M$, say $a \in M_\alpha$. The set $z = \mathcal{P}(a)\cap M$ has a $\Delta_0$-definition over $M_\alpha$: the formula "$x \subseteq a$". Therefore, by (I2), $z \in M_{\alpha+1}$ and hence $z \in M$. $z$ is the power set of $a$ relative to $M$ since, by absoluteness of $\subseteq$,
+\begin{equation*}
+	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
+\end{equation*}
+
+*Replacement*: Exercise
+
+*Infinity*: "$x = \omega$" is $\Delta_0$, and since by (I2), $L_\omega \subseteq M_\omega$, we have that $\omega \in M_{\omega+1}$ and that this witnesses the axiom of *Infinity*.
+```
+
+We see that $V$ and $L$ lie at the extreme ends of the spectrum of inner models.
+
+```{prf:corollary}
+:label: cor-L-inner-model
+
+$L$ is an inner model of $\ZF$.
+```
+
+
+
+

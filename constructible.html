@@ -369,6 +369,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cumulative-hierarchies">
+   Cumulative hierarchies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inner-models">
+   Inner models
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -423,6 +433,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cumulative-hierarchies">
+   Cumulative hierarchies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inner-models">
+   Inner models
+  </a>
  </li>
 </ul>
 
@@ -639,6 +659,149 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 </div>
 </div>
 </div>
+<div class="section" id="cumulative-hierarchies">
+<h2>Cumulative hierarchies<a class="headerlink" href="#cumulative-hierarchies" title="Permalink to this headline">¶</a></h2>
+<p>Many facts about <span class="math notranslate nohighlight">\(L\)</span> hold more generally for <strong>cumulative hierarchies</strong>.</p>
+<div class="proof definition admonition" id="def-cumulative">
+<p class="admonition-title"><span class="caption-number">Definition 38 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A sequence <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> of sets is a <strong>cumulative hierarchy</strong> if</p>
+<ul class="simple">
+<li><p>(<strong>H1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> each <span class="math notranslate nohighlight">\(M_\alpha\)</span> is transitive,</p></li>
+<li><p>(<strong>H2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\alpha &lt; \beta\)</span> implies <span class="math notranslate nohighlight">\(M_\alpha \subseteq M_\beta\)</span>,</p></li>
+<li><p>(<strong>H3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> For limit <span class="math notranslate nohighlight">\(\lambda\)</span>,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	M_\lambda = \bigcup_{\alpha \in \Ord} M_\alpha
+\end{equation*}\]</div>
+</div>
+</div><p>The von-Neumann universe <span class="math notranslate nohighlight">\(V\)</span> (<span class="math notranslate nohighlight">\(M_\alpha = V_\alpha\)</span>) and Gödel’s <span class="math notranslate nohighlight">\(L\)</span> (<span class="math notranslate nohighlight">\(M_\alpha = L_\alpha\)</span>) are the most important examples of cumulative hierarchies.</p>
+<div class="proof definition admonition" id="def-normal-function">
+<p class="admonition-title"><span class="caption-number">Definition 39 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A function <span class="math notranslate nohighlight">\(F: \Ord \to \Ord\)</span> is <strong>normal</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+\alpha &lt; \beta \; \Rightarrow \; F(\alpha) &lt; F(\beta) \qquad \text{(strictly increasing)} \\
+\lambda \text{ limit } \Rightarrow F(\lambda) = \bigcup_{\alpha &lt; \lambda} F(\alpha) \qquad \text{(continuous)}
+\end{gather*}\]</div>
+</div>
+</div><p>The images of normal functions are called <strong>clubs</strong> (short for <strong>closed, unbounded</strong>).</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that a normal function has arbitrarily large fixed points, that is,</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \alpha \exists \beta \; (\beta &gt; \alpha \: \wedge \: \beta = F(\beta))
+\]</div>
+</div>
+<div class="proof theorem admonition" id="thm-reflection">
+<p class="admonition-title"><span class="caption-number">Theorem 40 </span> (Reflection for cumulative hierarchies)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> be a cumulative hierarchy and let <span class="math notranslate nohighlight">\(M = \bigcup_\alpha M_\alpha\)</span>.</p>
+<p>For every set theoretic formula <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> there exists a normal function <span class="math notranslate nohighlight">\(F\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	F(\alpha) = \alpha \; \; \rightarrow \;\;  \forall a_0, \dots, a_{n-1} \in M_\alpha \: (\varphi^{M_\alpha}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Proceed by induction on the formula structure. We focus on the case <span class="math notranslate nohighlight">\(\varphi \equiv \exists y \psi\)</span>. The other cases are straightforward due to the definition of relativization.</p>
+<p>By induction hypothesis, there exists a normal function <span class="math notranslate nohighlight">\(G\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+G(\alpha) = \alpha \; \; \rightarrow \;\;  \forall \vec{a},b \in M_\alpha \: (\psi^{M_\alpha}(\vec{a},b) \leftrightarrow \psi^{M}(\vec{a},b))
+\]</div>
+<p>We define a function <span class="math notranslate nohighlight">\(H\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+H(\alpha) = \text{ least } \beta &gt; \alpha \text{ with } \forall \vec{a} \in M_\alpha \: ( \exists b \in M \: \psi^M(\vec{a},b) \; \rightarrow \; \exists b \in M_\beta \: \psi^M(\vec{a},b))
+\]</div>
+<p>We use <span class="math notranslate nohighlight">\(H\)</span> to define, via transfinite recursion, another normal function <span class="math notranslate nohighlight">\(F\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	F(0) &amp; = 0 \\
+	F(\alpha+1) &amp; = H(F(\alpha)) \\
+	F(\lambda) &amp; = \bigcup_{\alpha &lt; \lambda} F(\alpha) \quad \text{ for $\lambda$ limit}
+\end{align*}\]</div>
+<p>The composition <span class="math notranslate nohighlight">\(F^* = F\circ G\)</span> is again normal, and its fixed points are simultaneously fixed points of <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. It is now straightforward to check  that <span class="math notranslate nohighlight">\(F^*\)</span> has the desired property.</p>
+</div>
+<div class="proof corollary admonition" id="cor-Scott-Scarpellini">
+<p class="admonition-title"><span class="caption-number">Corollary 15 </span> (Scott-Scarpellini Theorem)</p>
+<div class="corollary-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> is a cumulative hierarchy, <span class="math notranslate nohighlight">\(M = \bigcup_\alpha M_\alpha\)</span>, and <span class="math notranslate nohighlight">\(\varphi(\vec{x})\)</span> is a set-theoretic formula, then</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \alpha \exists \beta &gt; \alpha \; \forall a_0, \dots, a_{n-1} \in M_\beta \: (\varphi^{M_\beta}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+\]</div>
+</div>
+</div><p>By taking conjunctions, it is possible to generalize the reflection theorem to <strong>finite sets of formulas</strong>. Again, it is not possible (unless <span class="math notranslate nohighlight">\(\ZF\)</span> is inconsistent) to extend this to arbitrary sets of formulas (or we could produce, in <span class="math notranslate nohighlight">\(\ZF\)</span>, a <em>set model</em> of <span class="math notranslate nohighlight">\(\ZF\)</span>, contradicting the <em>second incompleteness theorem</em>).</p>
+<div class="proof corollary admonition" id="cor-ZF-axiomatizable">
+<p class="admonition-title"><span class="caption-number">Corollary 16 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\ZF\)</span> is not finitely axiomatizable.</p>
+</div>
+</div></div>
+<div class="section" id="inner-models">
+<h2>Inner models<a class="headerlink" href="#inner-models" title="Permalink to this headline">¶</a></h2>
+<div class="proof definition admonition" id="def-inner-model">
+<p class="admonition-title"><span class="caption-number">Definition 40 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>A class <span class="math notranslate nohighlight">\(M\)</span> is an <strong>inner model of <span class="math notranslate nohighlight">\(\ZF\)</span></strong> if</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> is transitive,</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> contains all ordinals,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma^M\)</span> holds for all axioms <span class="math notranslate nohighlight">\(\sigma\)</span> of <span class="math notranslate nohighlight">\(\ZF\)</span>.</p></li>
+</ul>
+</div>
+</div><div class="proof theorem admonition" id="thm-inner-models">
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Characterization of inner models)</p>
+<div class="theorem-content section" id="proof-content">
+<p>A class <span class="math notranslate nohighlight">\(M\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span> if and only if there exists a sequence <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> such that for all <span class="math notranslate nohighlight">\(\alpha, \beta, \lambda \in \Ord\)</span>,</p>
+<ul class="simple">
+<li><p>(<strong>I1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(M = \bigcup_{\alpha \in \Ord} M_\alpha\)</span> is a cumulative hierarchy,</p></li>
+<li><p>(<strong>I2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1} \subseteq \mathcal{P}(M_\alpha)\)</span></p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (<span class="math notranslate nohighlight">\(\Rightarrow\)</span>) Suppose <span class="math notranslate nohighlight">\(M\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span>. Let</p>
+<div class="math notranslate nohighlight">
+\[
+M_\alpha = V_\alpha^M = V_\alpha \cap M.
+\]</div>
+<p>This defines a cumulative hierarchy, so (I1) is satisfied.
+For (I2), note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>.</p>
+<p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>)
+<em>Extensionality</em> and <em>Foundation</em> hold in all transitive classes. <em>Set Existence</em> is satisfied in any cumulative hierarchy (since <span class="math notranslate nohighlight">\(\emptyset \in M\)</span>).</p>
+<p><em>Union</em>: By absoluteness, <span class="math notranslate nohighlight">\((\text{Union})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M \; \bigcup x \in M\)</span>. The latter holds in <span class="math notranslate nohighlight">\(M\)</span> by (I2) and the fact that <span class="math notranslate nohighlight">\(y = \bigcup x\)</span> is definable.</p>
+<p><em>Pairing</em>: Similar to <em>Union</em>.</p>
+<p><em>Separation</em>: Suppose <span class="math notranslate nohighlight">\(a, b_1, \dots, b_n \in M\)</span> and <span class="math notranslate nohighlight">\(\varphi(v_0, v_1, \dots, v_n)\)</span> is a formula. We have to argue that the set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	z = \{ x \in a \colon \varphi^M(x, b_1, \dots, b_n) \}
+\end{equation*}\]</div>
+<p>is in <span class="math notranslate nohighlight">\(M\)</span>. By the reflection theorem for cumulative hierarchies, there exists <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(a, b_1, \dots, b_n \in M_\alpha\)</span> and for all <span class="math notranslate nohighlight">\(x \in M_\alpha\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\varphi^M(x, b_1, \dots, b_n) \; \leftrightarrow \; \varphi^{M_\alpha}(x, b_1, \dots, b_n).
+\end{equation*}\]</div>
+<p>This implies <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(M_\alpha)\)</span> and hence by (I2), <span class="math notranslate nohighlight">\(z \in M_{\alpha+1}\)</span>. By (I1), <span class="math notranslate nohighlight">\(z \in M\)</span>.</p>
+<p><em>Power Set</em>: Suppose <span class="math notranslate nohighlight">\(a \in M\)</span>, say <span class="math notranslate nohighlight">\(a \in M_\alpha\)</span>. The set <span class="math notranslate nohighlight">\(z = \mathcal{P}(a)\cap M\)</span> has a <span class="math notranslate nohighlight">\(\Delta_0\)</span>-definition over <span class="math notranslate nohighlight">\(M_\alpha\)</span>: the formula “<span class="math notranslate nohighlight">\(x \subseteq a\)</span>”. Therefore, by (I2), <span class="math notranslate nohighlight">\(z \in M_{\alpha+1}\)</span> and hence <span class="math notranslate nohighlight">\(z \in M\)</span>. <span class="math notranslate nohighlight">\(z\)</span> is the power set of <span class="math notranslate nohighlight">\(a\)</span> relative to <span class="math notranslate nohighlight">\(M\)</span> since, by absoluteness of <span class="math notranslate nohighlight">\(\subseteq\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
+\end{equation*}\]</div>
+<p><em>Replacement</em>: Exercise</p>
+<p><em>Infinity</em>: “<span class="math notranslate nohighlight">\(x = \omega\)</span>” is <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and since by (I2), <span class="math notranslate nohighlight">\(L_\omega \subseteq M_\omega\)</span>, we have that <span class="math notranslate nohighlight">\(\omega \in M_{\omega+1}\)</span> and that this witnesses the axiom of <em>Infinity</em>.</p>
+</div>
+<p>We see that <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(L\)</span> lie at the extreme ends of the spectrum of inner models.</p>
+<div class="proof corollary admonition" id="cor-L-inner-model">
+<p class="admonition-title"><span class="caption-number">Corollary 17 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(L\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span>.</p>
+</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
