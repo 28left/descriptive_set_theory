@@ -624,7 +624,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 <h3>Definability of definability<a class="headerlink" href="#definability-of-definability" title="Permalink to this headline">¶</a></h3>
 <p>We can now formalize the notion of definability we used informally above in the definition of <span class="math notranslate nohighlight">\(L\)</span>:</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}\)</span></p>
+<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}\)</span></p>
 </div></blockquote>
 <p>Here, <span class="math notranslate nohighlight">\(e(z)\)</span> is defined so that for a formula <span class="math notranslate nohighlight">\(\varphi(v_0)\)</span> with code <span class="math notranslate nohighlight">\(e\)</span>,</p>
 <blockquote>
@@ -640,17 +640,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 <p>The mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable. The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (<em>Sketch</em>) One first verifies that the mapping</p>
-<div class="math notranslate nohighlight">
-\[
-	a \mapsto \Op{Fml}^1_a := \{ e \colon \Op{Fml}^1_a(e)\}
-\]</div>
-<p>is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable. Then compose this with the surjection</p>
-<div class="math notranslate nohighlight">
-\[
-	\Op{Fml}^1_a \mapsto \mathcal{P}_{\Op{Def}}(a),
-\]</div>
-<p>which, by the above definition of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a)\)</span>, is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>, too.</p>
+<p>Proof. (<em>Sketch</em>) The complexity of <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> can be read off the definition above, taking into account the complexity of the various sub-formulas.</p>
 <p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is then <span class="math notranslate nohighlight">\(\Delta_1\)</span> by the usual argument for functions:</p>
 <div class="math notranslate nohighlight">
 \[
