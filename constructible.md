@@ -42,13 +42,13 @@ $$
 where the underlying language is the language of set theory. Now put
 \begin{align*}
 	L_0 & = \emptyset \\
-	L_{\xi+1} & = \mathcal{P}_{\Op{Def}}(L_\xi)  \\
-	L_{\xi} & = \bigcup_{\alpha < \xi} L_\xi \quad  \text{($\xi$ limit ordinal)} \\
+	L_{\alpha+1} & = \mathcal{P}_{\Op{Def}}(L_\alpha)  \\
+	L_{\lambda} & = \bigcup_{\alpha < \lambda} L_\alpha \quad  \text{($\lambda$ limit ordinal)} \\
 \end{align*}
 Finally, let
 
 $$
-	L = \bigcup_{\xi \in\Ord} L_\xi.
+	L = \bigcup_{\alpha \in\Ord} L_\alpha.
 $$
 
 
@@ -194,7 +194,7 @@ The Theorem is proved via induction over the structure of $\varphi$. For atomic 
 
 We can now formalize the notion of definability we used informally above in the definition of $L$:
 
-> $\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}$
+> $\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}$
 
 Here, $e(z)$ is defined so that for a formula $\varphi(v_0)$ with code $e$,
 
@@ -210,19 +210,7 @@ The mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$-definable. The r
 ```
 
 ```{prf:proof}
-(*Sketch*) One first verifies that the mapping
-
-$$
-	a \mapsto \Op{Fml}^1_a := \{ e \colon \Op{Fml}^1_a(e)\}
-$$
-
-is $\Sigma_1$-definable. Then compose this with the surjection
-
-$$
-	\Op{Fml}^1_a \mapsto \mathcal{P}_{\Op{Def}}(a),
-$$
-
-which, by the above definition of $\mathcal{P}_{\Op{Def}}(a)$, is $\Sigma_1$, too. 
+(*Sketch*) The complexity of $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ can be read off the definition above, taking into account the complexity of the various sub-formulas.
 
 The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is then $\Delta_1$ by the usual argument for functions:
 
