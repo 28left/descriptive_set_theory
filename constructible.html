@@ -342,6 +342,33 @@ const thebe_selector_output = ".output, .cell_output"
    </span>
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-definability">
+   Defining definability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-set-theoretic-formulas">
+     Coding set theoretic formulas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-syntactic-notions">
+     Definability of syntactic notions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-the-satisfaction-relation">
+     Definability of the satisfaction relation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-definability">
+     Definability of definability
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -369,6 +396,33 @@ const thebe_selector_output = ".output, .cell_output"
     \(L\)
    </span>
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-definability">
+   Defining definability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-set-theoretic-formulas">
+     Coding set theoretic formulas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-syntactic-notions">
+     Definability of syntactic notions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-the-satisfaction-relation">
+     Definability of the satisfaction relation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definability-of-definability">
+     Definability of definability
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -398,13 +452,15 @@ const thebe_selector_output = ".output, .cell_output"
 \newcommand{\AC}{\mathsf{AC}}
 \newcommand{\ZF}{\mathsf{ZF}}
 \newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\Const}[1]{\underline{#1}}
 \newcommand{\V}{\mathbf{V}}
 \newcommand{\Ord}{\mathbf{Ord}}
 \DeclareMathOperator{\W}{W}
 \DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}\]</div>
-<p>A set <span class="math notranslate nohighlight">\(X\)</span> is <strong>(first-order) definable</strong> in a set <span class="math notranslate nohighlight">\(Y\)</span> (from parameters) if there exists a first-order formula <span class="math notranslate nohighlight">\(\varphi(x_0, x_1, \dots, x_n)\)</span> in the language of set theory (i.e.\ only using the binary relation symbol <span class="math notranslate nohighlight">\(\in\)</span>) such that for some <span class="math notranslate nohighlight">\(a_1, \dots, a_n \in Y\)</span>,</p>
+\DeclareMathOperator{\WOrd}{WOrd}
+\]</div>
+<p>A set <span class="math notranslate nohighlight">\(X\)</span> is <strong>(first-order) definable</strong> in a set <span class="math notranslate nohighlight">\(Y\)</span> (from parameters) if there exists a first-order formula <span class="math notranslate nohighlight">\(\varphi(x_0, x_1, \dots, x_n)\)</span> in the language of set theory (i.e. only using the binary relation symbol <span class="math notranslate nohighlight">\(\in\)</span>) such that for some <span class="math notranslate nohighlight">\(a_1, \dots, a_n \in Y\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 	X = \{ y \in Y \colon (Y,\in) \models \varphi[y, a_1, \dots, a_n] \}.
@@ -477,6 +533,110 @@ const thebe_selector_output = ".output, .cell_output"
 	\alpha = \{ a \in L_\alpha \colon L_\alpha \models \varphi_{\Ord}[a] \},
 \end{equation*}\]</div>
 <p>and hence we can conclude <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="defining-definability">
+<h2>Defining definability<a class="headerlink" href="#defining-definability" title="Permalink to this headline">¶</a></h2>
+<p>We want to study <span class="math notranslate nohighlight">\(L\)</span> as a model of <span class="math notranslate nohighlight">\(\ZF\)</span>. In order to do that, we need a better understanding of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span>. Our definition, so far, is “from the outside” (i.e. in the meta-theory). This will make it hard to understand how formulas behave relative to <span class="math notranslate nohighlight">\(L\)</span>, in particular, whether we can apply any of the absoluteness results we obtained. We will therefore have to develop (or at least, convince ourselves how we can develop) definability  <strong>inside</strong> <span class="math notranslate nohighlight">\(\ZF\)</span>. We can then combine this with some powerful results about <strong>cumulative hierarchies</strong> (such as <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(L\)</span>) to prove that <span class="math notranslate nohighlight">\(L\)</span> is a model not only of <span class="math notranslate nohighlight">\(\ZF\)</span>, but also of <span class="math notranslate nohighlight">\(\CH\)</span> and <span class="math notranslate nohighlight">\(\AC\)</span>.</p>
+<div class="section" id="coding-set-theoretic-formulas">
+<h3>Coding set theoretic formulas<a class="headerlink" href="#coding-set-theoretic-formulas" title="Permalink to this headline">¶</a></h3>
+<p>We follow the standard procedure of <strong>Gödelization</strong> and assign every set theoretic formula <span class="math notranslate nohighlight">\(\varphi\)</span> a <strong>Gödel number</strong> <span class="math notranslate nohighlight">\(\GN{\varphi}\)</span>.</p>
+<p>We fix the set of variables as <span class="math notranslate nohighlight">\(\{v_n: n \in \omega\}\)</span> and put</p>
+<div class="math notranslate nohighlight">
+\[
+\GN{v_n} = (1,n).
+\]</div>
+<p>It will be helpful to extend the language by adding, for each set <span class="math notranslate nohighlight">\(x\)</span>, a formal constant, which we will denote by <span class="math notranslate nohighlight">\(\Const{x}\)</span>. We code this constant by</p>
+<div class="math notranslate nohighlight">
+\[
+\GN{\Const{x}} = (2,x)
+\]</div>
+<p>This allows us, for a given structure <span class="math notranslate nohighlight">\((a,\in)\)</span>, to express statements about the elements of <span class="math notranslate nohighlight">\(a\)</span> by formulas using the corresponding constants <span class="math notranslate nohighlight">\(\Const{x}\)</span> for <span class="math notranslate nohighlight">\(x \in a\)</span>. If <span class="math notranslate nohighlight">\(\Const{x} \in a\)</span> is interpreted in <span class="math notranslate nohighlight">\((a,\in)\)</span> by itself, we call this the <strong>canonical interpretation</strong>.</p>
+<p>The Gödelization of formulas now follows the usual, recursion pattern:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\GN{x=y} &amp; = (3, (\GN{x}, \GN{y})) \\
+\GN{x\in y} &amp; = (4, (\GN{x}, \GN{y})) \\
+\GN{\neg \varphi} &amp; = (5, \GN{\varphi}) \\
+\GN{\varphi \vee \psi} &amp; = (6, (\GN{\varphi}, \GN{\psi})) \\
+\GN{\exists v_n \varphi} &amp; = (7, (n, \GN{\varphi})) \\
+\end{align*}\]</div>
+</div>
+<div class="section" id="definability-of-syntactic-notions">
+<h3>Definability of syntactic notions<a class="headerlink" href="#definability-of-syntactic-notions" title="Permalink to this headline">¶</a></h3>
+<p>We can now express various syntactic statements about formulas, such as “<span class="math notranslate nohighlight">\(v\)</span> is a variable”, as a set theoretic formula via the corresponding codes:</p>
+<div class="math notranslate nohighlight">
+\[
+\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \in \omega)
+\]</div>
+<p>where of course we substitute a suitable <span class="math notranslate nohighlight">\(\Delta_0\)</span> formula for “<span class="math notranslate nohighlight">\(x \in \omega\)</span>”.</p>
+<div class="proof proposition admonition" id="prop-defble-formula">
+<p class="admonition-title"><span class="caption-number">Proposition 51 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>The following relations are <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable over <span class="math notranslate nohighlight">\(\ZF\)</span>.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\Op{Fml}^n(e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi\)</span> whose free variables are among <span class="math notranslate nohighlight">\(v_0, \dots, v_{n-1}\)</span>;<br />
+<span class="math notranslate nohighlight">\(\Op{Fml}^n_a(e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi\)</span> whose free variables are among <span class="math notranslate nohighlight">\(v_0, \dots, v_{n-1}\)</span>, and whose constants are of the form <span class="math notranslate nohighlight">\(\Const{a_i}\)</span> with <span class="math notranslate nohighlight">\(a_i \in a\)</span></p>
+</div></blockquote>
+</div>
+</div></div>
+<div class="section" id="definability-of-the-satisfaction-relation">
+<h3>Definability of the satisfaction relation<a class="headerlink" href="#definability-of-the-satisfaction-relation" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(a\)</span> be a set. If we replace a formula <span class="math notranslate nohighlight">\(\varphi\)</span> by its code <span class="math notranslate nohighlight">\(\GN{\varphi}\)</span>, we have to express the fact that <span class="math notranslate nohighlight">\(\varphi^a\)</span> holds now as a statement about validity in the structure <span class="math notranslate nohighlight">\((a,\in)\)</span>, using the code. That is, we have to <strong>formalize</strong> the notion of truth. This can be done using the recursive definition of truth.
+This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable predicate <span class="math notranslate nohighlight">\(\Op{Sat}(a,e)\)</span> expressing</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\Op{Sat}(a,e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi(\Const{a_0}, \dots, \Const{a_n})\)</span> that does not contain any free variables, and <span class="math notranslate nohighlight">\(\varphi\)</span> is true in <span class="math notranslate nohighlight">\((a,\in)\)</span> under the canonical interpretation.</p>
+</div></blockquote>
+<p>In place of  <span class="math notranslate nohighlight">\(\Op{Sat}(a,e)\)</span>, we will also write <span class="math notranslate nohighlight">\((a,\in) \models e\)</span>. For any single formula, this formalization of truth then agrees with the validity of the corresponding relativization:</p>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span class="caption-number">Theorem 38 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> be a set theoretic formula, and assume <span class="math notranslate nohighlight">\(a_0, \dots, a_{n-1} \in a\)</span>. Then it is provable in ZF that</p>
+<div class="math notranslate nohighlight">
+\[
+	\varphi^a(a_0, \dots, a_{n-1}) \; \leftrightarrow \; \Op{Sat}(a,\GN{\varphi(\Const{a_0}, \dots, \Const{a_{n-1}})}).
+\]</div>
+</div>
+</div><p>(Keep in mind, however, that the general satisfaction relation, over all formulas, is not formalizable in <span class="math notranslate nohighlight">\(\ZF\)</span>.)</p>
+<p>The Theorem is proved via induction over the structure of <span class="math notranslate nohighlight">\(\varphi\)</span>. For atomic <span class="math notranslate nohighlight">\(\varphi\)</span>, both sides express the same fact, since we use the canonical interpretation of constants. The definition of relativization ensures that for the inductive cases, both sides behave identically wit respect to the corresponding subformulas.</p>
+</div>
+<div class="section" id="definability-of-definability">
+<h3>Definability of definability<a class="headerlink" href="#definability-of-definability" title="Permalink to this headline">¶</a></h3>
+<p>We can now formalize the notion of definability we used informally above in the definition of <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}\)</span></p>
+</div></blockquote>
+<p>Here, <span class="math notranslate nohighlight">\(e(z)\)</span> is defined so that for a formula <span class="math notranslate nohighlight">\(\varphi(v_0)\)</span> with code <span class="math notranslate nohighlight">\(e\)</span>,</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(e(z)\)</span> is the code of the formula we obtain when we substitute <span class="math notranslate nohighlight">\(\Const{z}\)</span> for <span class="math notranslate nohighlight">\(v_0\)</span> in <span class="math notranslate nohighlight">\(\varphi\)</span>:</p>
+</div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\GN{\varphi(v_0)}(z) = \GN{\varphi(\Const{z})}
+\end{equation*}\]</div>
+<div class="proof theorem admonition" id="thm-definability-Pdef">
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>The mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable. The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (<em>Sketch</em>) One first verifies that the mapping</p>
+<div class="math notranslate nohighlight">
+\[
+	a \mapsto \Op{Fml}^1_a := \{ e \colon \Op{Fml}^1_a(e)\}
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable. Then compose this with the surjection</p>
+<div class="math notranslate nohighlight">
+\[
+	\Op{Fml}^1_a \mapsto \mathcal{P}_{\Op{Def}}(a),
+\]</div>
+<p>which, by the above definition of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a)\)</span>, is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>, too.</p>
+<p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is then <span class="math notranslate nohighlight">\(\Delta_1\)</span> by the usual argument for functions:</p>
+<div class="math notranslate nohighlight">
+\[
+	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z)
+\]</div>
+</div>
 </div>
 </div>
 </div>
