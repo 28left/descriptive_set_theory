@@ -494,13 +494,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 	L_0 &amp; = \emptyset \\
-	L_{\xi+1} &amp; = \mathcal{P}_{\Op{Def}}(L_\xi)  \\
-	L_{\xi} &amp; = \bigcup_{\alpha &lt; \xi} L_\xi \quad  \text{($\xi$ limit ordinal)} \\
+	L_{\alpha+1} &amp; = \mathcal{P}_{\Op{Def}}(L_\alpha)  \\
+	L_{\lambda} &amp; = \bigcup_{\alpha &lt; \lambda} L_\alpha \quad  \text{($\lambda$ limit ordinal)} \\
 \end{align*}\]</div>
 <p>Finally, let</p>
 <div class="math notranslate nohighlight">
 \[
-	L = \bigcup_{\xi \in\Ord} L_\xi.
+	L = \bigcup_{\alpha \in\Ord} L_\alpha.
 \]</div>
 <div class="section" id="basic-properties-of-l">
 <h2>Basic properties of <span class="math notranslate nohighlight">\(L\)</span><a class="headerlink" href="#basic-properties-of-l" title="Permalink to this headline">¶</a></h2>
@@ -782,7 +782,28 @@ For (I2), note that <span class="math notranslate nohighlight">\((\text{Power Se
 \[\begin{equation*}
 	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
 \end{equation*}\]</div>
-<p><em>Replacement</em>: Exercise</p>
+<p><em>Replacement</em>: Assume a function <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(M\)</span> is defined by a formula <span class="math notranslate nohighlight">\(\varphi(x,y,\vec{a})\)</span> (<span class="math notranslate nohighlight">\(\vec{a} \in M\)</span> being parameters), that is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\forall x,y \in M \; (\varphi^M(x,y,\vec{a}) \wedge \varphi^M(x,z,\vec{a}) \; \to \; y=z )
+\end{equation*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(b \)</span> be a set. By reflection, there exists an <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(\vec{a}, b \in M_\alpha\)</span> and the following two formulas hold:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
+	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))
+\end{gather*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(b \subseteq M_{\alpha}\)</span> (transitivity), this implies</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\forall x \in b \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^M(x,y,\vec{a}))
+\end{equation*}\]</div>
+<p>and therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\{ y : \exists x \in b \, \varphi^{M}(x,y,\vec{a}) \} = \{ y : \exists x \in b \, \varphi^{M_\alpha}(x,y,\vec{a}) \}
+\end{equation*}\]</div>
+<p>The left side defines the image of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(M\)</span>, which, by the right side, is in <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha)\)</span>, and thus, by (I2), in <span class="math notranslate nohighlight">\(M_{\alpha+1}\)</span>.</p>
 <p><em>Infinity</em>: “<span class="math notranslate nohighlight">\(x = \omega\)</span>” is <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and since by (I2), <span class="math notranslate nohighlight">\(L_\omega \subseteq M_\omega\)</span>, we have that <span class="math notranslate nohighlight">\(\omega \in M_{\omega+1}\)</span> and that this witnesses the axiom of <em>Infinity</em>.</p>
 </div>
 <p>We see that <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(L\)</span> lie at the extreme ends of the spectrum of inner models.</p>

@@ -42,13 +42,13 @@ $$
 where the underlying language is the language of set theory. Now put
 \begin{align*}
 	L_0 & = \emptyset \\
-	L_{\xi+1} & = \mathcal{P}_{\Op{Def}}(L_\xi)  \\
-	L_{\xi} & = \bigcup_{\alpha < \xi} L_\xi \quad  \text{($\xi$ limit ordinal)} \\
+	L_{\alpha+1} & = \mathcal{P}_{\Op{Def}}(L_\alpha)  \\
+	L_{\lambda} & = \bigcup_{\alpha < \lambda} L_\alpha \quad  \text{($\lambda$ limit ordinal)} \\
 \end{align*}
 Finally, let
 
 $$
-	L = \bigcup_{\xi \in\Ord} L_\xi.
+	L = \bigcup_{\alpha \in\Ord} L_\alpha.
 $$
 
 
@@ -372,7 +372,24 @@ This implies $z \in \mathcal{P}_{\Op{Def}}(M_\alpha)$ and hence by (I2), $z \in 
 	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
 \end{equation*}
 
-*Replacement*: Exercise
+*Replacement*: Assume a function $F$ on $M$ is defined by a formula $\varphi(x,y,\vec{a})$ ($\vec{a} \in M$ being parameters), that is
+\begin{equation*}
+	\forall x,y \in M \; (\varphi^M(x,y,\vec{a}) \wedge \varphi^M(x,z,\vec{a}) \; \to \; y=z )
+\end{equation*}
+Let $b $ be a set. By reflection, there exists an $\alpha$ such that $\vec{a}, b \in M_\alpha$ and the following two formulas hold:
+\begin{gather*}
+	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
+	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))
+\end{gather*}
+Since $b \subseteq M_{\alpha}$ (transitivity), this implies
+\begin{equation*}
+	\forall x \in b \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^M(x,y,\vec{a}))
+\end{equation*}
+and therefore
+\begin{equation*}
+	\{ y : \exists x \in b \, \varphi^{M}(x,y,\vec{a}) \} = \{ y : \exists x \in b \, \varphi^{M_\alpha}(x,y,\vec{a}) \}
+\end{equation*}
+The left side defines the image of $F$ in $M$, which, by the right side, is in $\mathcal{P}_{\Op{Def}}(M_\alpha)$, and thus, by (I2), in $M_{\alpha+1}$.
 
 *Infinity*: "$x = \omega$" is $\Delta_0$, and since by (I2), $L_\omega \subseteq M_\omega$, we have that $\omega \in M_{\omega+1}$ and that this witnesses the axiom of *Infinity*.
 ```
