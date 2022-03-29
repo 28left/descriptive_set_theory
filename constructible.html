@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="The Axiom of Constructibility" href="V%3DL.html" />
     <link rel="prev" title="Large Cardinals" href="large_cardinals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -233,6 +233,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    The Constructible Universe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="V%3DL.html">
+   The Axiom of Constructibility
   </a>
  </li>
 </ul>
@@ -634,19 +639,22 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 \[\begin{equation*}
 	\GN{\varphi(v_0)}(z) = \GN{\varphi(\Const{z})}
 \end{equation*}\]</div>
+<p>With little effort, one can read off the complexity of the mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span>.</p>
 <div class="proof theorem admonition" id="thm-definability-Pdef">
 <p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>The mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable. The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
+<p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (<em>Sketch</em>) The complexity of <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> can be read off the definition above, taking into account the complexity of the various sub-formulas.</p>
-<p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is then <span class="math notranslate nohighlight">\(\Delta_1\)</span> by the usual argument for functions:</p>
+<p>Proof. (<em>Sketch</em>) Taking into account the complexity of the various sub-formulas, we see that the mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable.</p>
+<p>The graph of a <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable function <span class="math notranslate nohighlight">\(f\)</span> (with domain <span class="math notranslate nohighlight">\(\V\)</span>) is <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since the complement is given as</p>
 <div class="math notranslate nohighlight">
 \[
-	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z)
+	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z).
 \]</div>
+<p>Thus,  <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>.</p>
 </div>
+<p>This <em>complexity bound is of central importance</em> to the applications of <span class="math notranslate nohighlight">\(L\)</span>, and we will return to it soon (<a class="reference internal" href="V%3DL.html#prop-map-Lalpha">Proposition 52</a>).</p>
 </div>
 </div>
 <div class="section" id="cumulative-hierarchies">
@@ -761,7 +769,7 @@ H(\alpha) = \text{ least } \beta &gt; \alpha \text{ with } \forall \vec{a} \in M
 M_\alpha = V_\alpha^M = V_\alpha \cap M.
 \]</div>
 <p>This defines a cumulative hierarchy, so (I1) is satisfied.
-For (I2), note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>.</p>
+For (I2), first note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>. Now we can use the absoluteness of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> (<a class="reference internal" href="#thm-definability-Pdef">Theorem 39</a>) and the fact that <span class="math notranslate nohighlight">\(M\)</span> satisfies the axiom of <em>Separation</em> to conclude <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}\)</span>.</p>
 <p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>)
 <em>Extensionality</em> and <em>Foundation</em> hold in all transitive classes. <em>Set Existence</em> is satisfied in any cumulative hierarchy (since <span class="math notranslate nohighlight">\(\emptyset \in M\)</span>).</p>
 <p><em>Union</em>: By absoluteness, <span class="math notranslate nohighlight">\((\text{Union})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M \; \bigcup x \in M\)</span>. The latter holds in <span class="math notranslate nohighlight">\(M\)</span> by (I2) and the fact that <span class="math notranslate nohighlight">\(y = \bigcup x\)</span> is definable.</p>
@@ -847,10 +855,10 @@ For (I2), note that <span class="math notranslate nohighlight">\((\text{Power Se
             <p class="prev-next-title">Large Cardinals</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="V%3DL.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">The Axiom of Constructibility</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
