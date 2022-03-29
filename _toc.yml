@@ -34,6 +34,7 @@ parts:
   - caption: Constructibility
     chapters:
       - file: constructible.md
+      - file: V=L.md
   - caption: Reference
     chapters:
       - file: bibliography

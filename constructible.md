@@ -203,21 +203,27 @@ Here, $e(z)$ is defined so that for a formula $\varphi(v_0)$ with code $e$,
 	\GN{\varphi(v_0)}(z) = \GN{\varphi(\Const{z})}
 \end{equation*}
 
+With little effort, one can read off the complexity of the mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$.
+
 ```{prf:theorem}
 :label: thm-definability-Pdef
 
-The mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$-definable. The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is $\Delta_1$-definable.
+The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is $\Delta_1$-definable.
 ```
 
 ```{prf:proof}
-(*Sketch*) The complexity of $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ can be read off the definition above, taking into account the complexity of the various sub-formulas.
+(*Sketch*) Taking into account the complexity of the various sub-formulas, we see that the mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$-definable.
 
-The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is then $\Delta_1$ by the usual argument for functions:
+The graph of a $\Sigma_1$-definable function $f$ (with domain $\V$) is $\Delta_1$, since the complement is given as
 
 $$
-	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z)
+	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z).
 $$
+
+Thus,  $b = \mathcal{P}_{\Op{Def}}(a)$ is $\Delta_1$.
 ```
+
+This *complexity bound is of central importance* to the applications of $L$, and we will return to it soon ({prf:ref}`prop-map-Lalpha`).
 
 
 ## Cumulative hierarchies
@@ -348,7 +354,7 @@ M_\alpha = V_\alpha^M = V_\alpha \cap M.
 $$
 
 This defines a cumulative hierarchy, so (I1) is satisfied.
-For (I2), note that $(\text{Power Set})^M$ if and only if $\forall x \in M (\mathcal{P}(x) \cap M \in M)$.
+For (I2), first note that $(\text{Power Set})^M$ if and only if $\forall x \in M (\mathcal{P}(x) \cap M \in M)$. Now we can use the absoluteness of $\mathcal{P}_{\Op{Def}}$ ({prf:ref}`thm-definability-Pdef`) and the fact that $M$ satisfies the axiom of *Separation* to conclude $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}$.
 
 ($\Leftarrow$) 
 *Extensionality* and *Foundation* hold in all transitive classes. *Set Existence* is satisfied in any cumulative hierarchy (since $\emptyset \in M$).
@@ -372,7 +378,24 @@ This implies $z \in \mathcal{P}_{\Op{Def}}(M_\alpha)$ and hence by (I2), $z \in 
 	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
 \end{equation*}
 
-*Replacement*: Exercise
+*Replacement*: Assume a function $F$ on $M$ is defined by a formula $\varphi(x,y,\vec{a})$ ($\vec{a} \in M$ being parameters), that is
+\begin{equation*}
+	\forall x,y \in M \; (\varphi^M(x,y,\vec{a}) \wedge \varphi^M(x,z,\vec{a}) \; \to \; y=z )
+\end{equation*}
+Let $b $ be a set. By reflection, there exists an $\alpha$ such that $\vec{a}, b \in M_\alpha$ and the following two formulas hold:
+\begin{gather*}
+	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
+	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))
+\end{gather*}
+Since $b \subseteq M_{\alpha}$ (transitivity), this implies
+\begin{equation*}
+	\forall x \in b \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^M(x,y,\vec{a}))
+\end{equation*}
+and therefore
+\begin{equation*}
+	\{ y : \exists x \in b \, \varphi^{M}(x,y,\vec{a}) \} = \{ y : \exists x \in b \, \varphi^{M_\alpha}(x,y,\vec{a}) \}
+\end{equation*}
+The left side defines the image of $F$ in $M$, which, by the right side, is in $\mathcal{P}_{\Op{Def}}(M_\alpha)$, and thus, by (I2), in $M_{\alpha+1}$.
 
 *Infinity*: "$x = \omega$" is $\Delta_0$, and since by (I2), $L_\omega \subseteq M_\omega$, we have that $\omega \in M_{\omega+1}$ and that this witnesses the axiom of *Infinity*.
 ```
