@@ -108,4 +108,41 @@ The last statement is true since $L = \bigcup_{\alpha} L_\alpha$.
 ```
 
 
+## Constructibility and the Axiom of Choice 
+
+Every well-ordering on a transitive set $X$ can be extended to a well-ordering of $\mathcal{P}_{\Op{Def}}(X)$. 
+
+Note that every element of $\mathcal{P}_{\Op{Def}}(X)$ is determined by a pair $(\psi, \vec{a})$, where $\psi$ is a set-theoretic formula, and $\vec{a} = (a_1, \dots, a_n) \in X^{<\omega}$ is a finite sequence of parameters.
+
+For each $z \in \mathcal{P}_{\Op{Def}}(X)$ there may exist more than one such pair (i.e.\ $z$ can have more than one definition), but by well-ordering the pairs $(\psi, \vec{a})$, we can assign each $z \in \mathcal{P}_{\Op{Def}}(X)$ its \emph{least} definition, and subsequently order $\mathcal{P}_{\Op{Def}}(X)$ by comparing least definitions. Elements already in $X$ will form an initial segment. 
+
+Such an order on the pairs $(\psi, \vec{a})$ can be obtained in a **definable way**: First use the order on $X$ to order $X^{<\omega}$ length-lexicographically, order the formulas through their Gödel numbers, and finally put 
+
+$$
+	(\psi,\vec{a}) < (\varphi, \vec{b}) \quad \text{ iff } \quad \psi < \varphi \text { or } (\psi < \varphi \text { and } \vec{a} < \vec{b}).
+$$
+
+Based on this, we can order all levels of $L$ so that the following hold:
+
+- (**1**) $\quad$   $<_L \Rest{V_\omega}$ is a standard well-ordering of $V_\omega$   (as for example given by a canonical isomorphism $(V_\omega, \in) \leftrightarrow (\Nat, E)$, see {cite}`Ackermann:1937a`)
+- (**2**) $\quad$   $<_L\Rest{L_{\alpha+1}}$ is the order on $\mathcal{P}_{\Op{Def}}(L_\alpha)$ induced by $<_L|L_\alpha$.
+- (**3**) $\quad$   $<_L\Rest{L_\lambda} = \bigcup_{\alpha < \lambda} <_L \Rest{L_\alpha}$ for a limit ordinal $\lambda > \omega$.
+
+It is straightforward to verify that this is indeed a well-ordering on $L$. Moreover, the relation $<_L$ is $\Delta_1$. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to {cite}`jech2003a`.)
+
+```{prf:theorem}
+:label: thm-L-AC
+
+$\VL$ implies $\AC$
+```
+
+Since $L$ is a model of $\ZF+\VL$, we obtain
+
+```{prf:corollary}
+:label: cor-Con(AC)
+
+If $\ZF$ is consistent, then $\ZF+\AC (= \ZFC)$ is consistent, too.
+```
+
+
 
