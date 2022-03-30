@@ -24,7 +24,6 @@
 \DeclareMathOperator{\W}{W}
 \DeclareMathOperator{\WF}{WF}
 \DeclareMathOperator{\WOrd}{WOrd}
-
 ```
 
 
@@ -89,7 +88,7 @@ $$
 ```{prf:theorem}
 :label: thm-L-absolute
 
-- (**1**) $\quad$   If $M$ is any transitive proper class model of $\ZF$, then $L = L^M \s M$.
+- (**1**) $\quad$   If $M$ is any transitive proper class model of $\ZF$, then $L = L^M \susbeteq  M$.
 - (**2**) $\quad$   $L$ is a model of $\ZF + \VL$.
 ```
 
@@ -145,4 +144,73 @@ If $\ZF$ is consistent, then $\ZF+\AC (= \ZFC)$ is consistent, too.
 ```
 
 
+## Condensation and the Continuum Hypothesis
+
+
+
+```{prf:proposition}
+:label: prop-card-Lalpha
+
+For all $\alpha \geq \omega$, $|L_{\alpha}| = |\alpha|$.
+```	
+
+```{prf:proof}
+We know that $\alpha \subseteq L_\alpha$. Hence $|\alpha| \leq |L_\alpha|$. To show $|\alpha| \geq |L_\alpha|$, we work by induction on $\alpha$.
+
+If $\alpha = \beta +1$, then by {prf:ref}`prop-basics-L`(4), $|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|$. 
+
+If $\alpha$ is limit, then $L_\alpha$ is a union of $|\alpha|$ many sets of cardinality $\leq |\alpha|$ (by inductive hypothesis), hence of cardinality $\leq |\alpha|$.
+```
+
+```{prf:lemma} 
+:label: lemma-L-GCH
+
+Suppose $V=L$. If $\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in L_{\kappa^+}$.
+```
+
+```{prf:proof} 
+Since we assume $\VL$, there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models T + \VL$, where $T$ is as in the **condensation lemma**. Such a $\lambda$ exists by the **reflection theorem** ({prf:ref}`thm-reflection`).  Let $X = \kappa \cup \{x\}$. By choice of $\lambda$, $X \subseteq L_\lambda$. 
+
+By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
+
+\begin{equation*} \tag{$*$}
+    X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
+\end{equation*}
+
+$N$ is not necessarily transitive, but since it is well-founded we can take its **Mostowski collapse** ({prf:ref}`thm-Mostowski-collapse`) and obtain a **transitive** set $M$
+together with an **isomorphism** $\pi: (N,\in) \to (M,\in)$. 
+
+Since $\kappa$ is contained in both $M$ and $N$ and is already transitive, it is straightforward to show via induction that $\pi(\alpha) = \alpha$ for all $\alpha \in \kappa$. Since $x \subseteq \kappa$, this also yields $\pi(x) = x$. This implies in turn that $x \in M$.
+
+As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies the same sentences as $(L_\lambda, \in)$. In particular, $M \models T + \VL$. By the **condensation lemma**, $M = L_\beta$ for some $\beta$. 
+
+This implies, by {prf:ref}`prop-card-Lalpha`,
+
+$$  
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa < \lambda.
+$$
+
+Since $x \in L_\beta$ and $\beta < \kappa^+$, it follows that $x \in L_{\kappa^+}$, as desired.
+```
+
+ 
+```{prf:theorem} Gödel
+:label: thm-L-GCH
+
+If $\VL$, then for all cardinals $\kappa$, $2^\kappa = \kappa^+$.
+```
+
+```{prf:proof}
+If $\VL$, then by {prf:ref}`lemma-L-GCH`, $\mathcal{P}(\kappa) \subseteq L_{\kappa^+}$. With {prf:ref}`prop-card-Lalpha`, we obtain
+
+$$
+    2^\kappa = |\mathcal{P}(\kappa)| \leq |L_{\kappa^+}| = \kappa^+.
+$$
+```
+
+```{prf:corollary} 
+:label: cor-Con(ZFC+GCH)
+
+If $\ZF$ is consistent, so is $\ZF + \AC + \mathsf{GCH}$.
+```
 
