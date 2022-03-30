@@ -441,7 +441,7 @@ const thebe_selector_output = ".output, .cell_output"
         \wedge \forall \beta &lt; \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
 \end{multline*}\]</div>
 <p>Applying some of the various prefix transformations for <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all <span class="math notranslate nohighlight">\(\Delta_0\)</span> properties, the above formula can be shown to be <span class="math notranslate nohighlight">\(\Sigma_1\)</span>, too.</p>
-<p>In our case, <span class="math notranslate nohighlight">\(G\)</span> is a function that applies either <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> or <span class="math notranslate nohighlight">\(\bigcup\)</span> (both at most <span class="math notranslate nohighlight">\(\Delta_1\)</span>), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and hence we obtain that <span class="math notranslate nohighlight">\(G: \)</span>\alpha \mapsto L_\alpha<span class="math notranslate nohighlight">\( is \)</span>\Sigma_1$.</p>
+<p>In our case, <span class="math notranslate nohighlight">\(G\)</span> is a function that applies either <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> or <span class="math notranslate nohighlight">\(\bigcup\)</span> (both at most <span class="math notranslate nohighlight">\(\Delta_1\)</span>), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and hence we obtain that <span class="math notranslate nohighlight">\(G: \alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
 <p>Finally, as in <a class="reference internal" href="constructible.html#thm-definability-Pdef">Theorem 39</a>, observe that if <span class="math notranslate nohighlight">\(G\)</span> is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span> function with a <span class="math notranslate nohighlight">\(\Delta_1\)</span> domain (<span class="math notranslate nohighlight">\(\Ord\)</span>), then <span class="math notranslate nohighlight">\(G\)</span> is actually <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -467,7 +467,7 @@ L_\alpha^M = L_\alpha.
 <p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
 <div class="theorem-content section" id="proof-content">
 <ul class="simple">
-<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \susbeteq  M\)</span>.</p></li>
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \subseteq  M\)</span>.</p></li>
 <li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(L\)</span> is a model of <span class="math notranslate nohighlight">\(\ZF + \VL\)</span>.</p></li>
 </ul>
 </div>
@@ -486,7 +486,7 @@ L_\alpha^M = L_\alpha.
 <h2>Constructibility and the Axiom of Choice<a class="headerlink" href="#constructibility-and-the-axiom-of-choice" title="Permalink to this headline">¶</a></h2>
 <p>Every well-ordering on a transitive set <span class="math notranslate nohighlight">\(X\)</span> can be extended to a well-ordering of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span>.</p>
 <p>Note that every element of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> is determined by a pair <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is a set-theoretic formula, and <span class="math notranslate nohighlight">\(\vec{a} = (a_1, \dots, a_n) \in X^{&lt;\omega}\)</span> is a finite sequence of parameters.</p>
-<p>For each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> there may exist more than one such pair (i.e.\ <span class="math notranslate nohighlight">\(z\)</span> can have more than one definition), but by well-ordering the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, we can assign each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> its \emph{least} definition, and subsequently order <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> by comparing least definitions. Elements already in <span class="math notranslate nohighlight">\(X\)</span> will form an initial segment.</p>
+<p>For each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> there may exist more than one such pair (i.e.\ <span class="math notranslate nohighlight">\(z\)</span> can have more than one definition), but by well-ordering the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, we can assign each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> its <strong>least</strong> definition, and subsequently order <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> by comparing least definitions. Elements already in <span class="math notranslate nohighlight">\(X\)</span> will form an initial segment.</p>
 <p>Such an order on the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span> can be obtained in a <strong>definable way</strong>: First use the order on <span class="math notranslate nohighlight">\(X\)</span> to order <span class="math notranslate nohighlight">\(X^{&lt;\omega}\)</span> length-lexicographically, order the formulas through their Gödel numbers, and finally put</p>
 <div class="math notranslate nohighlight">
 \[
@@ -498,7 +498,7 @@ L_\alpha^M = L_\alpha.
 <li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_{\alpha+1}}\)</span> is the order on <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(L_\alpha)\)</span> induced by <span class="math notranslate nohighlight">\(&lt;_L|L_\alpha\)</span>.</p></li>
 <li><p>(<strong>3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_\lambda} = \bigcup_{\alpha &lt; \lambda} &lt;_L \Rest{L_\alpha}\)</span> for a limit ordinal <span class="math notranslate nohighlight">\(\lambda &gt; \omega\)</span>.</p></li>
 </ul>
-<p>It is straightforward to verify that this is indeed a well-ordering on <span class="math notranslate nohighlight">\(L\)</span>. Moreover, the relation <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to <span id="id2">[<a class="reference internal" href="bibliography.html#id7" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>.)</p>
+<p>It is straightforward to verify that this is indeed a well-ordering on <span class="math notranslate nohighlight">\(L\)</span>. Moreover, the relation <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to <span id="id2">[<a class="reference internal" href="bibliography.html#id8" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>.)</p>
 <div class="proof theorem admonition" id="thm-L-AC">
 <p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
 <div class="theorem-content section" id="proof-content">
@@ -513,6 +513,7 @@ L_\alpha^M = L_\alpha.
 </div></div>
 <div class="section" id="condensation-and-the-continuum-hypothesis">
 <h2>Condensation and the Continuum Hypothesis<a class="headerlink" href="#condensation-and-the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
+<p>We now show that <span class="math notranslate nohighlight">\(\VL\)</span> implies the Continuum Hypothesis. The proof works by showing that under <span class="math notranslate nohighlight">\(\VL\)</span>, every subset of a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> will be constructed by stage <span class="math notranslate nohighlight">\(\kappa^+\)</span>. This is made possible by a “<strong>condensation</strong>” argument: If any subset <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(\kappa\)</span> is in <span class="math notranslate nohighlight">\(L\)</span>, then it must show up at some stage <span class="math notranslate nohighlight">\(L_\lambda\)</span>. <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(x\)</span> generate an elementary substructure <span class="math notranslate nohighlight">\(M\)</span> of <span class="math notranslate nohighlight">\(L_\lambda\)</span> or cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>. If we could show that this <strong><span class="math notranslate nohighlight">\(M\)</span> itself must be an <span class="math notranslate nohighlight">\(L_\beta\)</span></strong>, we can use the fact that the cardinality of the <span class="math notranslate nohighlight">\(L_\alpha\)</span> behaves “tamely” along the ordinals, as evidenced by the following.</p>
 <div class="proof proposition admonition" id="prop-card-Lalpha">
 <p class="admonition-title"><span class="caption-number">Proposition 53 </span></p>
 <div class="proposition-content section" id="proof-content">
@@ -523,8 +524,45 @@ L_\alpha^M = L_\alpha.
 <p>If <span class="math notranslate nohighlight">\(\alpha = \beta +1\)</span>, then by <a class="reference internal" href="constructible.html#prop-basics-L">Proposition 49</a>(4), <span class="math notranslate nohighlight">\(|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(\alpha\)</span> is limit, then <span class="math notranslate nohighlight">\(L_\alpha\)</span> is a union of <span class="math notranslate nohighlight">\(|\alpha|\)</span> many sets of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span> (by inductive hypothesis), hence of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span>.</p>
 </div>
+<p>But why would an elementary substructure of an <span class="math notranslate nohighlight">\(L_\lambda\)</span> have to be itself an <span class="math notranslate nohighlight">\(L_\beta\)</span>? This is where the absoluteness of the construction of <span class="math notranslate nohighlight">\(L\)</span> strikes yet again!</p>
+<div class="proof lemma admonition" id="lem-condensation">
+<p class="admonition-title"><span class="caption-number">Lemma 19 </span> (Condensation lemma)</p>
+<div class="lemma-content section" id="proof-content">
+<p>There is a finite set <span class="math notranslate nohighlight">\(T\)</span> of axioms of <span class="math notranslate nohighlight">\(\ZF - \text{Power Set}\)</span> so that if <span class="math notranslate nohighlight">\(M\)</span> is a transitive set with <span class="math notranslate nohighlight">\(M\models T + \VL\)</span>, then <span class="math notranslate nohighlight">\(M = L_\lambda\)</span> for some limit ordinal <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+</div>
+</div><div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>If we choose our finite axiom set more carefully, it is actually possible to show something stronger – namely that there exists a <span class="math notranslate nohighlight">\(\Pi_2\)</span>-formula <span class="math notranslate nohighlight">\(\sigma\)</span> such that for transitive <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(M \models \sigma\)</span> <strong>if and only if</strong> <span class="math notranslate nohighlight">\(M = L_\lambda\)</span> for some limit <span class="math notranslate nohighlight">\(\lambda\)</span>, see for example <span id="id3">[<a class="reference internal" href="bibliography.html#id5" title="Keith J. Devlin. Constructibility. Perspectives in Mathematical Logic. Springer-Verlag, Berlin, 1984.">Devlin, 1984</a>]</span> (and <span id="id4">[<a class="reference internal" href="bibliography.html#id12" title="Adrian RD Mathias. Weak systems of gandy, jensen and devlin. In Set Theory, pages 149–224. Springer, 2006.">Mathias, 2006</a>]</span> for necessary additions to Devlin’s axiom system <span class="math notranslate nohighlight">\(BS\)</span>).</p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. Let the axioms of <span class="math notranslate nohighlight">\(T\)</span> be <em>Pairing</em>, <em>Union</em>, <em>Set Existence</em>, together with all (instances of) axioms of <span class="math notranslate nohighlight">\(\ZF\)</span> used to prove that all the theorems leading up to the fact that for all <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(L_\alpha\)</span>  exists and that <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span> (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)</p>
+<p>Suppose for a transitive set <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(M\models T + \VL\)</span>. Let <span class="math notranslate nohighlight">\(\lambda\)</span> be the least ordinal not in <span class="math notranslate nohighlight">\(M\)</span>.
+We must have that <span class="math notranslate nohighlight">\(\Ord^M = \lambda\)</span>, by absoluteness of
+ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</span> must be a limit ordinal since for each <span class="math notranslate nohighlight">\(\alpha \in M\)</span>, <span class="math notranslate nohighlight">\(\alpha \cup \{\alpha\}\)</span> is in <span class="math notranslate nohighlight">\(M\)</span> since <span class="math notranslate nohighlight">\(M\)</span> satisfies <em>Pairing</em> and <em>Union</em>.</p>
+<p>We have that</p>
+<div class="math notranslate nohighlight">
+\[
+    M\models \forall x \exists \alpha\in \Ord (x \in L_\alpha),
+\]</div>
+<p>thus</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall x \in M  \exists \alpha &lt; \lambda (x \in L^M_\alpha).
+\]</div>
+<p>By absoluteness of <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span>, we have <span class="math notranslate nohighlight">\(L^M_\alpha = L_\alpha\)</span> and therefore</p>
+<div class="math notranslate nohighlight">
+\[
+    M \subseteq \bigcup_{\alpha \in M} L_\alpha =  \bigcup_{\alpha &lt; \lambda} L_\alpha = L_\lambda.
+\]</div>
+<p>On the other hand, for each <span class="math notranslate nohighlight">\(\alpha &lt; \lambda\)</span>, <span class="math notranslate nohighlight">\(L_\alpha^M\)</span> exists in <span class="math notranslate nohighlight">\(M\)</span> (since <span class="math notranslate nohighlight">\(T\)</span> is strong enough to prove this), and by absoluteness</p>
+<div class="math notranslate nohighlight">
+\[
+  L_\lambda =  \subseteq \bigcup_{\alpha &lt; \lambda} L_\alpha =  \bigcup_{\alpha \in M} L^M_\alpha \subseteq M.
+\]</div>
+</div>
+<p>We now put condensation to use as described above.</p>
 <div class="proof lemma admonition" id="lemma-L-GCH">
-<p class="admonition-title"><span class="caption-number">Lemma 19 </span></p>
+<p class="admonition-title"><span class="caption-number">Lemma 20 </span></p>
 <div class="lemma-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(V=L\)</span>. If <span class="math notranslate nohighlight">\(\kappa\)</span> is a cardinal and <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, then <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>.</p>
 </div>
@@ -537,7 +575,7 @@ L_\alpha^M = L_\alpha.
 \end{equation*}\]</div>
 <p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 33</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
 together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span> and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
 <p>As <span class="math notranslate nohighlight">\((M,\in)\)</span> is isomorphic to <span class="math notranslate nohighlight">\((N,\in)\)</span> and <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span>, <span class="math notranslate nohighlight">\(M\)</span> satisfies the same sentences as <span class="math notranslate nohighlight">\((L_\lambda, \in)\)</span>. In particular, <span class="math notranslate nohighlight">\(M \models T + \VL\)</span>. By the <strong>condensation lemma</strong>, <span class="math notranslate nohighlight">\(M = L_\beta\)</span> for some <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
 <p>This implies, by <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>,</p>
 <div class="math notranslate nohighlight">
@@ -552,7 +590,7 @@ together with an <strong>isomorphism</strong> <span class="math notranslate nohi
 <p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then for all cardinals <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa = \kappa^+\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. If <span class="math notranslate nohighlight">\(\VL\)</span>, then by <a class="reference internal" href="#lemma-L-GCH">Lemma 19</a>, <span class="math notranslate nohighlight">\(\mathcal{P}(\kappa) \subseteq L_{\kappa^+}\)</span>. With <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>, we obtain</p>
+<p>Proof. If <span class="math notranslate nohighlight">\(\VL\)</span>, then by <a class="reference internal" href="#lemma-L-GCH">Lemma 20</a>, <span class="math notranslate nohighlight">\(\mathcal{P}(\kappa) \subseteq L_{\kappa^+}\)</span>. With <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[
     2^\kappa = |\mathcal{P}(\kappa)| \leq |L_{\kappa^+}| = \kappa^+.

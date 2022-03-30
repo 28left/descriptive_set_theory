@@ -155,7 +155,7 @@ The Gödelization of formulas now follows the usual, recursion pattern:
 We can now express various syntactic statements about formulas, such as "$v$ is a variable", as a set theoretic formula via the corresponding codes:
 
 $$
-\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \in \omega)
+\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \omega)
 $$
 
 where of course we substitute a suitable $\Delta_0$ formula for "$x \in \omega$".
@@ -194,7 +194,7 @@ The Theorem is proved via induction over the structure of $\varphi$. For atomic 
 
 We can now formalize the notion of definability we used informally above in the definition of $L$:
 
-> $\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}$
+> $\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,\in) \models e(z)\})\}$
 
 Here, $e(z)$ is defined so that for a formula $\varphi(v_0)$ with code $e$,
 

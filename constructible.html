@@ -592,7 +592,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can now express various syntactic statements about formulas, such as “<span class="math notranslate nohighlight">\(v\)</span> is a variable”, as a set theoretic formula via the corresponding codes:</p>
 <div class="math notranslate nohighlight">
 \[
-\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \in \omega)
+\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \omega)
 \]</div>
 <p>where of course we substitute a suitable <span class="math notranslate nohighlight">\(\Delta_0\)</span> formula for “<span class="math notranslate nohighlight">\(x \in \omega\)</span>”.</p>
 <div class="proof proposition admonition" id="prop-defble-formula">
@@ -629,7 +629,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 <h3>Definability of definability<a class="headerlink" href="#definability-of-definability" title="Permalink to this headline">¶</a></h3>
 <p>We can now formalize the notion of definability we used informally above in the definition of <span class="math notranslate nohighlight">\(L\)</span>:</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,e) \models e(z)\})\}\)</span></p>
+<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,\in) \models e(z)\})\}\)</span></p>
 </div></blockquote>
 <p>Here, <span class="math notranslate nohighlight">\(e(z)\)</span> is defined so that for a formula <span class="math notranslate nohighlight">\(\varphi(v_0)\)</span> with code <span class="math notranslate nohighlight">\(e\)</span>,</p>
 <blockquote>
