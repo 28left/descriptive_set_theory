@@ -239,7 +239,7 @@ A sequence $(M_\alpha)_{\alpha \in \Ord}$ of sets is a **cumulative hierarchy** 
 - (**H2**) $\quad$ $\alpha < \beta$ implies $M_\alpha \subseteq M_\beta$,
 - (**H3**) $\quad$ For limit $\lambda$, 
 \begin{equation*}
-	M_\lambda = \bigcup_{\alpha \in \Ord} M_\alpha
+	M_\lambda = \bigcup_{\alpha < \lambda} M_\alpha
 \end{equation*}
 ```
 
