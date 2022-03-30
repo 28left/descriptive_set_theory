@@ -344,6 +344,11 @@ const thebe_selector_output = ".output, .cell_output"
    Constructibility and the Axiom of Choice
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condensation-and-the-continuum-hypothesis">
+   Condensation and the Continuum Hypothesis
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -367,6 +372,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructibility-and-the-axiom-of-choice">
    Constructibility and the Axiom of Choice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condensation-and-the-continuum-hypothesis">
+   Condensation and the Continuum Hypothesis
   </a>
  </li>
 </ul>
@@ -404,8 +414,7 @@ const thebe_selector_output = ".output, .cell_output"
 \newcommand{\Ord}{\mathbf{Ord}}
 \DeclareMathOperator{\W}{W}
 \DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-\]</div>
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
 <p>We can add to <span class="math notranslate nohighlight">\(\ZF\)</span> the axiom that all sets are constructible, i.e.</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\((\VL) \qquad \forall x \exists y \: (y \text{ is an ordinal } \wedge \; x \in L_y).\)</span></p>
@@ -458,7 +467,7 @@ L_\alpha^M = L_\alpha.
 <p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
 <div class="theorem-content section" id="proof-content">
 <ul class="simple">
-<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \s M\)</span>.</p></li>
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \susbeteq  M\)</span>.</p></li>
 <li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(L\)</span> is a model of <span class="math notranslate nohighlight">\(\ZF + \VL\)</span>.</p></li>
 </ul>
 </div>
@@ -478,7 +487,7 @@ L_\alpha^M = L_\alpha.
 <p>Every well-ordering on a transitive set <span class="math notranslate nohighlight">\(X\)</span> can be extended to a well-ordering of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span>.</p>
 <p>Note that every element of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> is determined by a pair <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is a set-theoretic formula, and <span class="math notranslate nohighlight">\(\vec{a} = (a_1, \dots, a_n) \in X^{&lt;\omega}\)</span> is a finite sequence of parameters.</p>
 <p>For each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> there may exist more than one such pair (i.e.\ <span class="math notranslate nohighlight">\(z\)</span> can have more than one definition), but by well-ordering the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, we can assign each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> its \emph{least} definition, and subsequently order <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> by comparing least definitions. Elements already in <span class="math notranslate nohighlight">\(X\)</span> will form an initial segment.</p>
-<p>Such an order on the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span> can be obtained in a <strong>definable way</strong>: First use the order on <span class="math notranslate nohighlight">\(X\)</span> to order <span class="math notranslate nohighlight">\(X^{&lt;\omega}\)</span> length-lexicographically, order the formulas through their G”odel numbers, and finally put</p>
+<p>Such an order on the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span> can be obtained in a <strong>definable way</strong>: First use the order on <span class="math notranslate nohighlight">\(X\)</span> to order <span class="math notranslate nohighlight">\(X^{&lt;\omega}\)</span> length-lexicographically, order the formulas through their Gödel numbers, and finally put</p>
 <div class="math notranslate nohighlight">
 \[
 	(\psi,\vec{a}) &lt; (\varphi, \vec{b}) \quad \text{ iff } \quad \psi &lt; \varphi \text { or } (\psi &lt; \varphi \text { and } \vec{a} &lt; \vec{b}).
@@ -500,6 +509,59 @@ L_\alpha^M = L_\alpha.
 <p class="admonition-title"><span class="caption-number">Corollary 19 </span></p>
 <div class="corollary-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, then <span class="math notranslate nohighlight">\(\ZF+\AC (= \ZFC)\)</span> is consistent, too.</p>
+</div>
+</div></div>
+<div class="section" id="condensation-and-the-continuum-hypothesis">
+<h2>Condensation and the Continuum Hypothesis<a class="headerlink" href="#condensation-and-the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
+<div class="proof proposition admonition" id="prop-card-Lalpha">
+<p class="admonition-title"><span class="caption-number">Proposition 53 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(\alpha \geq \omega\)</span>, <span class="math notranslate nohighlight">\(|L_{\alpha}| = |\alpha|\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We know that <span class="math notranslate nohighlight">\(\alpha \subseteq L_\alpha\)</span>. Hence <span class="math notranslate nohighlight">\(|\alpha| \leq |L_\alpha|\)</span>. To show <span class="math notranslate nohighlight">\(|\alpha| \geq |L_\alpha|\)</span>, we work by induction on <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\alpha = \beta +1\)</span>, then by <a class="reference internal" href="constructible.html#prop-basics-L">Proposition 49</a>(4), <span class="math notranslate nohighlight">\(|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\alpha\)</span> is limit, then <span class="math notranslate nohighlight">\(L_\alpha\)</span> is a union of <span class="math notranslate nohighlight">\(|\alpha|\)</span> many sets of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span> (by inductive hypothesis), hence of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span>.</p>
+</div>
+<div class="proof lemma admonition" id="lemma-L-GCH">
+<p class="admonition-title"><span class="caption-number">Lemma 19 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(V=L\)</span>. If <span class="math notranslate nohighlight">\(\kappa\)</span> is a cardinal and <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, then <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 40</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
+<p>By the <a class="reference external" href="https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem">Löwenheim-Skolem Theorem</a>, there exists an <strong>elementary substructure</strong> <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
+    X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
+\end{equation*}\]</div>
+<p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 33</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
+together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span> and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
+<p>As <span class="math notranslate nohighlight">\((M,\in)\)</span> is isomorphic to <span class="math notranslate nohighlight">\((N,\in)\)</span> and <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span>, <span class="math notranslate nohighlight">\(M\)</span> satisfies the same sentences as <span class="math notranslate nohighlight">\((L_\lambda, \in)\)</span>. In particular, <span class="math notranslate nohighlight">\(M \models T + \VL\)</span>. By the <strong>condensation lemma</strong>, <span class="math notranslate nohighlight">\(M = L_\beta\)</span> for some <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>This implies, by <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>,</p>
+<div class="math notranslate nohighlight">
+\[  
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa &lt; \lambda.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(x \in L_\beta\)</span> and <span class="math notranslate nohighlight">\(\beta &lt; \kappa^+\)</span>, it follows that <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>, as desired.</p>
+</div>
+<div class="proof theorem admonition" id="thm-L-GCH">
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span> (Gödel)</p>
+<div class="theorem-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then for all cardinals <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa = \kappa^+\)</span>.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(\VL\)</span>, then by <a class="reference internal" href="#lemma-L-GCH">Lemma 19</a>, <span class="math notranslate nohighlight">\(\mathcal{P}(\kappa) \subseteq L_{\kappa^+}\)</span>. With <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+    2^\kappa = |\mathcal{P}(\kappa)| \leq |L_{\kappa^+}| = \kappa^+.
+\]</div>
+</div>
+<div class="proof corollary admonition" id="cor-Con(ZFC+GCH)">
+<p class="admonition-title"><span class="caption-number">Corollary 20 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, so is <span class="math notranslate nohighlight">\(\ZF + \AC + \mathsf{GCH}\)</span>.</p>
 </div>
 </div></div>
 </div>
