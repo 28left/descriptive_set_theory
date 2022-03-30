@@ -334,6 +334,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#constructibility-and-the-axiom-of-choice">
+   Constructibility and the Axiom of Choice
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -346,6 +359,19 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#constructibility-and-the-axiom-of-choice">
+   Constructibility and the Axiom of Choice
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -447,6 +473,35 @@ L_\alpha^M = L_\alpha.
 \end{align*}\]</div>
 <p>The last statement is true since <span class="math notranslate nohighlight">\(L = \bigcup_{\alpha} L_\alpha\)</span>.</p>
 </div>
+<div class="section" id="constructibility-and-the-axiom-of-choice">
+<h2>Constructibility and the Axiom of Choice<a class="headerlink" href="#constructibility-and-the-axiom-of-choice" title="Permalink to this headline">¶</a></h2>
+<p>Every well-ordering on a transitive set <span class="math notranslate nohighlight">\(X\)</span> can be extended to a well-ordering of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span>.</p>
+<p>Note that every element of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> is determined by a pair <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is a set-theoretic formula, and <span class="math notranslate nohighlight">\(\vec{a} = (a_1, \dots, a_n) \in X^{&lt;\omega}\)</span> is a finite sequence of parameters.</p>
+<p>For each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> there may exist more than one such pair (i.e.\ <span class="math notranslate nohighlight">\(z\)</span> can have more than one definition), but by well-ordering the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, we can assign each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> its \emph{least} definition, and subsequently order <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> by comparing least definitions. Elements already in <span class="math notranslate nohighlight">\(X\)</span> will form an initial segment.</p>
+<p>Such an order on the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span> can be obtained in a <strong>definable way</strong>: First use the order on <span class="math notranslate nohighlight">\(X\)</span> to order <span class="math notranslate nohighlight">\(X^{&lt;\omega}\)</span> length-lexicographically, order the formulas through their G”odel numbers, and finally put</p>
+<div class="math notranslate nohighlight">
+\[
+	(\psi,\vec{a}) &lt; (\varphi, \vec{b}) \quad \text{ iff } \quad \psi &lt; \varphi \text { or } (\psi &lt; \varphi \text { and } \vec{a} &lt; \vec{b}).
+\]</div>
+<p>Based on this, we can order all levels of <span class="math notranslate nohighlight">\(L\)</span> so that the following hold:</p>
+<ul class="simple">
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L \Rest{V_\omega}\)</span> is a standard well-ordering of <span class="math notranslate nohighlight">\(V_\omega\)</span>   (as for example given by a canonical isomorphism <span class="math notranslate nohighlight">\((V_\omega, \in) \leftrightarrow (\Nat, E)\)</span>, see <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Wilhelm Ackermann. Die widerspruchsfreiheit der allgemeinen mengenlehre. Mathematische Annalen, 114(1):305-315, 1937.">Ackermann, 1937</a>]</span>)</p></li>
+<li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_{\alpha+1}}\)</span> is the order on <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(L_\alpha)\)</span> induced by <span class="math notranslate nohighlight">\(&lt;_L|L_\alpha\)</span>.</p></li>
+<li><p>(<strong>3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_\lambda} = \bigcup_{\alpha &lt; \lambda} &lt;_L \Rest{L_\alpha}\)</span> for a limit ordinal <span class="math notranslate nohighlight">\(\lambda &gt; \omega\)</span>.</p></li>
+</ul>
+<p>It is straightforward to verify that this is indeed a well-ordering on <span class="math notranslate nohighlight">\(L\)</span>. Moreover, the relation <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to <span id="id2">[<a class="reference internal" href="bibliography.html#id7" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>.)</p>
+<div class="proof theorem admonition" id="thm-L-AC">
+<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\VL\)</span> implies <span class="math notranslate nohighlight">\(\AC\)</span></p>
+</div>
+</div><p>Since <span class="math notranslate nohighlight">\(L\)</span> is a model of <span class="math notranslate nohighlight">\(\ZF+\VL\)</span>, we obtain</p>
+<div class="proof corollary admonition" id="cor-Con(AC)">
+<p class="admonition-title"><span class="caption-number">Corollary 19 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, then <span class="math notranslate nohighlight">\(\ZF+\AC (= \ZFC)\)</span> is consistent, too.</p>
+</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
