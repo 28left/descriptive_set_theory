@@ -60,7 +60,7 @@ In general, if a function $G: \V \to \V$ is $\Sigma_1$ and $F: \Ord \to \V$ is o
 
 Applying some of the various prefix transformations for $\Sigma_1$-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all $\Delta_0$ properties, the above formula can be shown to be $\Sigma_1$, too.
 
-In our case, $G$ is a function that applies either $\mathcal{P}_{\Op{Def}}$ or $\bigcup$ (both at most $\Delta_1$), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also $\Delta_0$, and hence we obtain that $G: $\alpha \mapsto L_\alpha$ is $\Sigma_1$.
+In our case, $G$ is a function that applies either $\mathcal{P}_{\Op{Def}}$ or $\bigcup$ (both at most $\Delta_1$), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also $\Delta_0$, and hence we obtain that $G: \alpha \mapsto L_\alpha$ is $\Sigma_1$.
 
 Finally, as in {prf:ref}`thm-definability-Pdef`, observe that if $G$ is a $\Sigma_1$ function with a $\Delta_1$ domain ($\Ord$), then $G$ is actually $\Delta_1$, since we have 
 
@@ -88,7 +88,7 @@ $$
 ```{prf:theorem}
 :label: thm-L-absolute
 
-- (**1**) $\quad$   If $M$ is any transitive proper class model of $\ZF$, then $L = L^M \susbeteq  M$.
+- (**1**) $\quad$   If $M$ is any transitive proper class model of $\ZF$, then $L = L^M \subseteq  M$.
 - (**2**) $\quad$   $L$ is a model of $\ZF + \VL$.
 ```
 
@@ -113,7 +113,7 @@ Every well-ordering on a transitive set $X$ can be extended to a well-ordering o
 
 Note that every element of $\mathcal{P}_{\Op{Def}}(X)$ is determined by a pair $(\psi, \vec{a})$, where $\psi$ is a set-theoretic formula, and $\vec{a} = (a_1, \dots, a_n) \in X^{<\omega}$ is a finite sequence of parameters.
 
-For each $z \in \mathcal{P}_{\Op{Def}}(X)$ there may exist more than one such pair (i.e.\ $z$ can have more than one definition), but by well-ordering the pairs $(\psi, \vec{a})$, we can assign each $z \in \mathcal{P}_{\Op{Def}}(X)$ its \emph{least} definition, and subsequently order $\mathcal{P}_{\Op{Def}}(X)$ by comparing least definitions. Elements already in $X$ will form an initial segment. 
+For each $z \in \mathcal{P}_{\Op{Def}}(X)$ there may exist more than one such pair (i.e.\ $z$ can have more than one definition), but by well-ordering the pairs $(\psi, \vec{a})$, we can assign each $z \in \mathcal{P}_{\Op{Def}}(X)$ its **least** definition, and subsequently order $\mathcal{P}_{\Op{Def}}(X)$ by comparing least definitions. Elements already in $X$ will form an initial segment. 
 
 Such an order on the pairs $(\psi, \vec{a})$ can be obtained in a **definable way**: First use the order on $X$ to order $X^{<\omega}$ length-lexicographically, order the formulas through their Gödel numbers, and finally put 
 
@@ -146,7 +146,7 @@ If $\ZF$ is consistent, then $\ZF+\AC (= \ZFC)$ is consistent, too.
 
 ## Condensation and the Continuum Hypothesis
 
-
+We now show that $\VL$ implies the Continuum Hypothesis. The proof works by showing that under $\VL$, every subset of a cardinal $\kappa$ will be constructed by stage $\kappa^+$. This is made possible by a "**condensation**" argument: If any subset $x$ of $\kappa$ is in $L$, then it must show up at some stage $L_\lambda$. $\kappa$ and $x$ generate an elementary substructure $M$ of $L_\lambda$ or cardinality $\kappa$. If we could show that this **$M$ itself must be an $L_\beta$**, we can use the fact that the cardinality of the $L_\alpha$ behaves "tamely" along the ordinals, as evidenced by the following.
 
 ```{prf:proposition}
 :label: prop-card-Lalpha
@@ -161,6 +161,53 @@ If $\alpha = \beta +1$, then by {prf:ref}`prop-basics-L`(4), $|L_\alpha| = |L_\b
 
 If $\alpha$ is limit, then $L_\alpha$ is a union of $|\alpha|$ many sets of cardinality $\leq |\alpha|$ (by inductive hypothesis), hence of cardinality $\leq |\alpha|$.
 ```
+
+But why would an elementary substructure of an $L_\lambda$ have to be itself an $L_\beta$? This is where the absoluteness of the construction of $L$ strikes yet again!
+
+```{prf:lemma} Condensation lemma
+:label: lem-condensation
+
+There is a finite set $T$ of axioms of $\ZF - \text{Power Set}$ so that if $M$ is a transitive set with $M\models T + \VL$, then $M = L_\lambda$ for some limit ordinal $\lambda$.
+```
+
+```{margin}
+If we choose our finite axiom set more carefully, it is actually possible to show something stronger -- namely that there exists a $\Pi_2$-formula $\sigma$ such that for transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit $\lambda$, see for example {cite}`Devlin:1984a` (and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).
+```
+
+```{prf:proof}
+Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with all (instances of) axioms of $\ZF$ used to prove that all the theorems leading up to the fact that for all $\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
+
+Suppose for a transitive set $M$, $M\models T + \VL$. Let $\lambda$ be the least ordinal not in $M$. 
+We must have that $\Ord^M = \lambda$, by absoluteness of
+ordinal.  Moreover, $\lambda$ must be a limit ordinal since for each $\alpha \in M$, $\alpha \cup \{\alpha\}$ is in $M$ since $M$ satisfies *Pairing* and *Union*.
+
+We have that 
+
+$$
+    M\models \forall x \exists \alpha\in \Ord (x \in L_\alpha),
+$$ 
+
+thus 
+
+$$
+    \forall x \in M  \exists \alpha < \lambda (x \in L^M_\alpha).
+$$ 
+
+By absoluteness of $\alpha \mapsto L_\alpha$, we have $L^M_\alpha = L_\alpha$ and therefore 
+
+$$
+    M \subseteq \bigcup_{\alpha \in M} L_\alpha =  \bigcup_{\alpha < \lambda} L_\alpha = L_\lambda.
+$$
+
+On the other hand, for each $\alpha < \lambda$, $L_\alpha^M$ exists in $M$ (since $T$ is strong enough to prove this), and by absoluteness 
+
+$$
+  L_\lambda =  \subseteq \bigcup_{\alpha < \lambda} L_\alpha =  \bigcup_{\alpha \in M} L^M_\alpha \subseteq M.
+$$
+```
+
+We now put condensation to use as described above.
+
 
 ```{prf:lemma} 
 :label: lemma-L-GCH
@@ -180,7 +227,7 @@ By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%
 $N$ is not necessarily transitive, but since it is well-founded we can take its **Mostowski collapse** ({prf:ref}`thm-Mostowski-collapse`) and obtain a **transitive** set $M$
 together with an **isomorphism** $\pi: (N,\in) \to (M,\in)$. 
 
-Since $\kappa$ is contained in both $M$ and $N$ and is already transitive, it is straightforward to show via induction that $\pi(\alpha) = \alpha$ for all $\alpha \in \kappa$. Since $x \subseteq \kappa$, this also yields $\pi(x) = x$. This implies in turn that $x \in M$.
+Since $\kappa$ is contained in both $M$ and $N$, and is already transitive, it is straightforward to show via induction that $\pi(\alpha) = \alpha$ for all $\alpha \in \kappa$. Since $x \subseteq \kappa$, this also yields $\pi(x) = x$. This implies in turn that $x \in M$.
 
 As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies the same sentences as $(L_\lambda, \in)$. In particular, $M \models T + \VL$. By the **condensation lemma**, $M = L_\beta$ for some $\beta$. 
 
