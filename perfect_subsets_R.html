@@ -240,6 +240,11 @@ const thebe_selector_output = ".output, .cell_output"
    The Axiom of Constructibility
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="constructible-reals.html">
+   Constructible Reals
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -409,7 +414,7 @@ from a given set. Hence every member of a set is a limit point of that set. In p
 \[
 \xi \mapsto \sum_{i \geq 0} \xi_i 2^{-i-1}.
 \]</div>
-<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id6" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
+<p>Note that this mapping is onto. It follows that the cardinality of <span class="math notranslate nohighlight">\(P\)</span> is at least as large as the cardinality of <span class="math notranslate nohighlight">\([0,1]\)</span>. The <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Cantor-Schröder-Bernstein Theorem</a> (for a proof see e.g. <span id="id1">[<a class="reference internal" href="bibliography.html#id8" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>)   implies that <span class="math notranslate nohighlight">\(|P| = |\R|\)</span>.</p>
 <p>To construct the desired injection, choose <span class="math notranslate nohighlight">\(x \in P\)</span> and let <span class="math notranslate nohighlight">\(\eps_0 = 1 = 2^0\)</span>. Since <span class="math notranslate nohighlight">\(P\)</span> is perfect,  <span class="math notranslate nohighlight">\(P \cap U_{\eps_0}(x)\)</span> is infinite. Let <span class="math notranslate nohighlight">\(x_0 \neq x_1\)</span> be two points in <span class="math notranslate nohighlight">\(P \cap U_{\eps_0}(x)\)</span>, distinct from <span class="math notranslate nohighlight">\(x\)</span>. Let <span class="math notranslate nohighlight">\(\eps_1\)</span> be such that <span class="math notranslate nohighlight">\(\eps_1 \leq 1/2\)</span>, <span class="math notranslate nohighlight">\(U_{\eps_1}(x_0), U_{\eps_1}(x_1) \subseteq U_{\eps_0}(x)\)</span>, and <span class="math notranslate nohighlight">\(\overline{U_{\eps_1}(x_0)} \cap \overline{U_{\eps_1}(x_1)} = \emptyset\)</span>, where <span class="math notranslate nohighlight">\(\overline{U}\)</span> denotes the closure of <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <p>We can iterate this procedure recursively with smaller and smaller diameters, using the fact that <span class="math notranslate nohighlight">\(P\)</span> is perfect. This gives rise to a so-called <strong>Cantor scheme</strong>, a family of open balls <span class="math notranslate nohighlight">\((U_\sigma)\)</span> satisfying certain <em>nesting conditions</em>. Here the index <span class="math notranslate nohighlight">\(\sigma\)</span> is a finite binary sequence, also called a <em>string</em>. A Cantor scheme is defined by the following properties.</p>
 <ol>

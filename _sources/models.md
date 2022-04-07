@@ -106,7 +106,7 @@ Furthermore, as stated above, we want to exclude infinite descending $E$-chains.
 
 If $E$ is an extensional and well-founded relation on a set $X$, then there exists a transitive set $S$ and a bijection $\pi: X \to S$ such that
 \begin{equation*}
-    x \, E \, y \iff \pi(x) \in \pi(y) \quad \text{ for all$ x,y \in X$}.		
+    x \, E \, y \iff \pi(x) \in \pi(y) \quad \text{ for all $ x,y \in X$}.		
 \end{equation*}
 Moreover, $S$ and $\pi$ are unique.
 ```

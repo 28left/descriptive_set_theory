@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="next" title="Constructible Reals" href="constructible-reals.html" />
     <link rel="prev" title="The Constructible Universe" href="constructible.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -238,6 +238,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    The Axiom of Constructibility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="constructible-reals.html">
+   Constructible Reals
   </a>
  </li>
 </ul>
@@ -568,11 +573,13 @@ ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</sp
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 40</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
-<p>By the <a class="reference external" href="https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem">Löwenheim-Skolem Theorem</a>, there exists an <strong>elementary substructure</strong> <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*} \tag{$*$}
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
+
+\begin{equation*} \tag{$*$}
     X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
-\end{equation*}\]</div>
+\end{equation*}
+</pre></div>
+</div>
 <p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 33</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
 together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
@@ -580,7 +587,7 @@ together with an <strong>isomorphism</strong> <span class="math notranslate nohi
 <p>This implies, by <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>,</p>
 <div class="math notranslate nohighlight">
 \[  
-    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa &lt; \lambda.
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa &lt; \kappa^+ \leq \lambda.
 \]</div>
 <p>Since <span class="math notranslate nohighlight">\(x \in L_\beta\)</span> and <span class="math notranslate nohighlight">\(\beta &lt; \kappa^+\)</span>, it follows that <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>, as desired.</p>
 </div>
@@ -636,10 +643,10 @@ together with an <strong>isomorphism</strong> <span class="math notranslate nohi
             <p class="prev-next-title">The Constructible Universe</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="constructible-reals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Constructible Reals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

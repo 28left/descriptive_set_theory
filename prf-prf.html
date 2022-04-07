@@ -243,6 +243,11 @@ const thebe_selector_output = ".output, .cell_output"
    The Axiom of Constructibility
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="constructible-reals.html">
+   Constructible Reals
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -353,6 +358,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-cor-Con(AC)"><strong>cor-Con(AC)</strong></a> | 
    <a href="#cap-cor-Con(ZFC+GCH)"><strong>cor-Con(ZFC+GCH)</strong></a> | 
    <a href="#cap-cor-L-inner-model"><strong>cor-L-inner-model</strong></a> | 
+   <a href="#cap-cor-L-reals"><strong>cor-L-reals</strong></a> | 
    <a href="#cap-cor-Scott-Scarpellini"><strong>cor-Scott-Scarpellini</strong></a> | 
    <a href="#cap-cor-ZF-axiomatizable"><strong>cor-ZF-axiomatizable</strong></a> | 
    <a href="#cap-cor-aleph-union-intersect"><strong>cor-aleph-union-intersect</strong></a> | 
@@ -472,6 +478,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-prop-product-continuous"><strong>prop-product-continuous</strong></a> | 
    <a href="#cap-prop-prop-analytic"><strong>prop-prop-analytic</strong></a> | 
    <a href="#cap-prop-relative-codes"><strong>prop-relative-codes</strong></a> | 
+   <a href="#cap-prop-satisfaction-arithmetic"><strong>prop-satisfaction-arithmetic</strong></a> | 
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
    <a href="#cap-prop-universal-general"><strong>prop-universal-general</strong></a> | 
@@ -481,7 +488,6 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-proposition-1"><strong>proposition-1</strong></a> | 
    <a href="#cap-proposition-23"><strong>proposition-23</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
-   <a href="#cap-theorem-3"><strong>theorem-3</strong></a> | 
    <a href="#cap-theorem-7"><strong>theorem-7</strong></a> | 
    <a href="#cap-thm-Baire-category"><strong>thm-Baire-category</strong></a> | 
    <a href="#cap-thm-Bernstein"><strong>thm-Bernstein</strong></a> | 
@@ -493,7 +499,9 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-Koenigs-lemma"><strong>thm-Koenigs-lemma</strong></a> | 
    <a href="#cap-thm-L-AC"><strong>thm-L-AC</strong></a> | 
    <a href="#cap-thm-L-GCH"><strong>thm-L-GCH</strong></a> | 
+   <a href="#cap-thm-L-WO-reals"><strong>thm-L-WO-reals</strong></a> | 
    <a href="#cap-thm-L-absolute"><strong>thm-L-absolute</strong></a> | 
+   <a href="#cap-thm-L-reals"><strong>thm-L-reals</strong></a> | 
    <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
    <a href="#cap-thm-Mostowski-collapse"><strong>thm-Mostowski-collapse</strong></a> | 
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
@@ -516,6 +524,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
    <a href="#cap-thm-projective-definable"><strong>thm-projective-definable</strong></a> | 
    <a href="#cap-thm-reflection"><strong>thm-reflection</strong></a> | 
+   <a href="#cap-thm-sat-predicate"><strong>thm-sat-predicate</strong></a> | 
    <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a> | 
    <a href="#cap-thm-von-Neumann"><strong>thm-von-Neumann</strong></a> | 
    <a href="#cap-thm-weak-Borel-hierarchy"><strong>thm-weak-Borel-hierarchy</strong></a> | 
@@ -610,6 +619,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="constructible.html#cor-L-inner-model"><code class="xref">cor-L-inner-model</code></a> <em>(constructible)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-L-reals"><td></td><td>
+       <strong>cor-L-reals</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#cor-L-reals"><code class="xref">cor-L-reals</code></a> <em>(constructible-reals)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-Scott-Scarpellini"><td></td><td>
@@ -1564,6 +1581,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="codingBorel.html#prop-relative-codes"><code class="xref">prop-relative-codes</code></a> <em>(codingBorel)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-satisfaction-arithmetic"><td></td><td>
+       <strong>prop-satisfaction-arithmetic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#prop-satisfaction-arithmetic"><code class="xref">prop-satisfaction-arithmetic</code></a> <em>(constructible-reals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-topological-product"><td></td><td>
        <strong>prop-topological-product</strong></td><td></td></tr>
      <tr>
@@ -1634,14 +1659,6 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="Urysohn.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Urysohn)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-3"><td></td><td>
-       <strong>theorem-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="constructible.html#theorem-3"><code class="xref">theorem-3</code></a> <em>(constructible)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-7"><td></td><td>
@@ -1732,12 +1749,28 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="V%3DL.html#thm-L-GCH"><code class="xref">thm-L-GCH</code></a> <em>(V=L)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-WO-reals"><td></td><td>
+       <strong>thm-L-WO-reals</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-L-WO-reals"><code class="xref">thm-L-WO-reals</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-L-absolute"><td></td><td>
        <strong>thm-L-absolute</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="V%3DL.html#thm-L-absolute"><code class="xref">thm-L-absolute</code></a> <em>(V=L)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-reals"><td></td><td>
+       <strong>thm-L-reals</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-L-reals"><code class="xref">thm-L-reals</code></a> <em>(constructible-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Lusin-separation"><td></td><td>
@@ -1914,6 +1947,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="constructible.html#thm-reflection"><code class="xref">thm-reflection</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sat-predicate"><td></td><td>
+       <strong>thm-sat-predicate</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#thm-sat-predicate"><code class="xref">thm-sat-predicate</code></a> <em>(constructible)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-subsets-Polish"><td></td><td>

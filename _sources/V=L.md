@@ -218,11 +218,11 @@ Suppose $V=L$. If $\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in L
 ```{prf:proof} 
 Since we assume $\VL$, there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models T + \VL$, where $T$ is as in the **condensation lemma**. Such a $\lambda$ exists by the **reflection theorem** ({prf:ref}`thm-reflection`).  Let $X = \kappa \cup \{x\}$. By choice of $\lambda$, $X \subseteq L_\lambda$. 
 
-By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
+    By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
 
-\begin{equation*} \tag{$*$}
-    X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
-\end{equation*}
+    \begin{equation*} \tag{$*$}
+        X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
+    \end{equation*}
 
 $N$ is not necessarily transitive, but since it is well-founded we can take its **Mostowski collapse** ({prf:ref}`thm-Mostowski-collapse`) and obtain a **transitive** set $M$
 together with an **isomorphism** $\pi: (N,\in) \to (M,\in)$. 
@@ -234,7 +234,7 @@ As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies
 This implies, by {prf:ref}`prop-card-Lalpha`,
 
 $$  
-    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa < \lambda.
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa < \kappa^+ \leq \lambda.
 $$
 
 Since $x \in L_\beta$ and $\beta < \kappa^+$, it follows that $x \in L_{\kappa^+}$, as desired.
