@@ -67,9 +67,9 @@ It remains to show that the notions occurring inside the square brackets are def
 ```{prf:proposition}
 :label: prop-satisfaction-arithmetic
 
-- (**a**) $\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_1$:
+- (**a**) $\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_n$:
 \begin{equation*}
-    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\varphi} \: \wedge \: \varphi \text{ is } \Sigma_1 \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \} 
+    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\phi} \: \wedge \: \phi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \phi[\sigma] \}
 \end{equation*}
 
 - (**b**) $\quad$  If $\alpha \in \Baire$ and $E_\alpha$ is well-founded and extensional, then the following set is arithmetic in $\alpha$:
@@ -79,7 +79,7 @@ It remains to show that the notions occurring inside the square brackets are def
 ```
 
 ```{prf:proof}
-(a) can be established similar to showing that $\Op{Sat}$-predicate of {prf:ref}`thm-sat-predicate` is $\Delta_1$-definable. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation. 
+(a) can be established similar to showing that $\Op{Sat}$-predicate of {prf:ref}`thm-sat-predicate` is $\Delta_1$-definable. One does this first for $\Sigma_1$ formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation. 
 
 Since we work with relations over $\Nat$ now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of $\models$ for $\Sigma_1$-formulas, this helps us bound the overall complexity at $\Sigma^0_1$
 

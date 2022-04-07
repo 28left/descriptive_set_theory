@@ -40,11 +40,7 @@ Suppose $V=L$. If $\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in L
 
 +++
 
-<!-- Basic idea of the proof:
 
-Since $\mathsf{VL}$, $x$ has to enter $L$ at some stage, say $x \in L_\lambda$. We can assume  $L_\lambda$ satisfies a "suffiently large" fragment of $\mathsf{ZF} + \mathsf{VL}$, in particular  -->
-
-+++
 
 Guide to proof: *Verify each of following steps.*
 
@@ -57,14 +53,14 @@ Guide to proof: *Verify each of following steps.*
 <br> 
 
 - Let $X = \kappa \cup \{x\}$.  
-    *What do we know about $X$ at this stage?*
+    *Quick check: What do we know about $X$ at this stage?*
 <br> 
 <br> 
 <br> 
 
 
 - There exists an **elementary substructure** $N \preceq L_\lambda$ such that
-    $X \subseteq N \subseteq L_\lambda$ and  $|N| = |X|$.
+    $X \subseteq N \subseteq L_\lambda$ and  $|N| = |X|$.  
   *Use a famous theorem from logic.* 
 <br> 
 <br> 
@@ -90,7 +86,7 @@ Guide to proof: *Verify each of following steps.*
 <br> 
 
 - Now we can apply condensation. This yields $M = L_\beta$ for some $\beta$.  
-*Where does this put $x$ now?*  
+*Quick check: Where does this put $x$ now?*  
 <br> 
 <br> 
 <br> 
@@ -215,9 +211,9 @@ where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
 **Ingredient 1:**
 
-$\quad$  For any $n \in \mathbb{N}$, the following set is $\Sigma^0_1$:
+$\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_n$:
 \begin{equation*}
-    \{(m,\sigma,\gamma) \in \mathbb{N}\times \mathbb{N}^{<\mathbb{N}}\times \mathbb{N}^{\mathbb{N}} \colon m = \ulcorner\varphi\urcorner \: \wedge \: \varphi \text{ is } \Sigma_1 \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \} 
+    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\phi} \: \wedge \: \phi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \phi[\sigma] \}
 \end{equation*}
 
 <br> 
