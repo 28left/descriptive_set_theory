@@ -179,6 +179,8 @@ This way we obtain a $\Delta_1$-definable predicate $\Op{Sat}(a,e)$ expressing
 In place of  $\Op{Sat}(a,e)$, we will also write $(a,\in) \models e$. For any single formula, this formalization of truth then agrees with the validity of the corresponding relativization:
 
 ```{prf:theorem}
+:label: thm-sat-predicate
+
 Let $\varphi(v_0, \dots, v_{n-1})$ be a set theoretic formula, and assume $a_0, \dots, a_{n-1} \in a$. Then it is provable in ZF that
 
 $$

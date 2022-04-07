@@ -35,6 +35,7 @@ parts:
     chapters:
       - file: constructible.md
       - file: V=L.md
+      - file: constructible-reals.md
   - caption: Reference
     chapters:
       - file: bibliography
