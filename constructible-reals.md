@@ -139,3 +139,35 @@ Finally, since $\VL$ implies $\CH$, we can use {prf:ref}`prop-non-meas` to show 
 
 If $\VL$, then there exists a $\Delta^1_2$ set that is not Lebesgue-measurable and does not have the Baire property.
 ```
+
+
+## An uncountable $\Pi^1_1$ set without a perfect subset
+
+We now show that under the assumption $\VL$, the **perfect set property** fails at level $\Pi^1_1$.
+
+We start with constructing an example at the $\Sigma^1_2$ level.
+
+[Recall](sec-well-founded) that if $\alpha \in \Baire$ codes a well-ordering on $\Nat$, then
+\begin{equation*}
+	\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+\end{equation*}
+
+
+
+```{prf:proposition}
+:label: prop-sigma12-perfect
+
+If $\VL$, there exists an uncountable $\Sigma^1_2$ set in $\Baire$ without a perfect subset.
+```
+
+```{prf:proof}
+Let $A \subseteq \Baire$ be given by
+\begin{equation*}
+    x \in A \iff x \in \WOrd \, \wedge \, \forall y <_L x \,  ( \parallel y \parallel \ne \parallel x \parallel).
+\end{equation*}
+
+In other words, $A$ collects the $<_L$-least code for every ordinal $< \omega_1$.
+
+Clearly $A$ is uncountable, since it has a representative for every countable ordinal and hence of cardinality $\omega_1$.
+
+Moreover, $A$ is $\Sigma^1_2$: 
