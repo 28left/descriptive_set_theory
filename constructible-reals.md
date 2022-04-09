@@ -2,11 +2,7 @@
 ```{math}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
 \newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
 \newcommand{\Nstr}{\Nat^{<\Nat}}
 \newcommand{\Tup}[1]{\langle #1 \rangle}
 \newcommand{\Co}[1]{\neg \,#1}
@@ -18,12 +14,12 @@
 \newcommand{\ZFC}{\mathsf{ZFC}}
 \newcommand{\VL}{\mathsf{V=L}}
 \newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
 \DeclareMathOperator{\W}{W}
 \DeclareMathOperator{\WF}{WF}
 \DeclareMathOperator{\WOrd}{WOrd}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
 ```
 
 In this lecture we transfer the results about $L$ to the projective hierarchy. The main idea is to relate sets of reals that are defined by set theoretic formulas to sets defined in second order arithmetic.
@@ -118,12 +114,20 @@ Now we know the complexity of all parts of ($*$) and can put everything together
 The set $L \cap \Baire$ is $\Sigma^1_2$.
 ```
 
-In a similar way we can show
+In a similar way we can show that the relation $\alpha <_L \beta$ over $(L\cap\Baire)^2$ is $\Sigma^1_2$ (using that $<_L$ is $\Delta_1$-definable). 
 
-```{prf:theorem}	
-:label: thm-L-WO-reals
+```{admonition} Exercise	
+:class: tip
 
-The set $\{(\alpha,\beta) \in (L\cap\Baire)^2 \colon \alpha <_L \beta\}$ is $\Sigma^1_2$.
+Recall that given $\alpha \in \Baire, n \in \Nat$, $(\alpha)_n$ denotes the $n$-th column of $\alpha$.
+
+Show that the following relation $R$ over $(L\cap\Baire)^2$ is $\Sigma^1_2$.
+
+$$
+(\alpha, \beta) \in R :\iff \{(\alpha)_n\colon n \in \Nat \} = \{\gamma \colon \gamma <_L \beta \}
+$$
+
+In other words, $\alpha$ codes the (countable) $<_L$-initial segment restricted to $\Baire$.
 ```
 
 If $\VL$, then the set is actually $\Delta^1_2$, since then 
@@ -170,4 +174,47 @@ In other words, $A$ collects the $<_L$-least code for every ordinal $< \omega_1$
 
 Clearly $A$ is uncountable, since it has a representative for every countable ordinal and hence of cardinality $\omega_1$.
 
-Moreover, $A$ is $\Sigma^1_2$: 
+Moreover, $A$ is $\Sigma^1_2$: Let $R$ be the $\Sigma^1_2$-relation of the exercise above. Then
+\begin{equation*}
+x \in A \iff x \in \WOrd \, \wedge \, \exists z \;(R(z,x) \, \wedge \; \forall n \,  ( \Norm {(z)_n} \neq \Norm{x}).
+\end{equation*}
+
+The relation $\Norm{(z)_n} \neq  \Norm{x}$ $\Pi^1_1$, hence $A$ is $\Sigma^1_2$.
+
+Finally, we see that **$A$ does not have an uncountable $\bSigma^1_1$ subset** (hence, since all perfect sets are closed, no perfect subset): By $\bSigma^1_1$-boundedness ({prf:ref}`thm-sigma11-bounding`), for any $\bSigma^1_1$ subset $X \subseteq A$ the set $\{ \Norm{x} \colon x \in X\}$ bounded by an ordinal $\gamma < \omega_1$, hence countable.
+```
+
+It is possible to get this example down to $\Pi^1_1$ using the powerful technique of **uniformization**. 
+
+```{prf:definition}
+:label: def-uniformization
+
+Suppose $A \subseteq \Baire \times \Baire$. We say $A^* \subseteq A$ **uniformizes** $A$ if 
+
+$$
+\forall x  \; [ \exists y \; A(x,y) \to  \exists ! y \; A^*(x,y)]
+$$
+
+A pointclass $\Gamma$ has the **uniformization property** if 
+\begin{equation*}
+A \subseteq \Baire  \times \Baire \, \wedge \, A \in \Gamma \quad \Rightarrow \quad \exists A^* \in  \Gamma \; (A^*  \text{ uniformizes } A).
+\end{equation*}
+```
+
+```{prf:theorem} Kondo
+:label: thm-Kondo
+
+$\bPi^1_1$ has the uniformization property.
+```
+
+```{prf:theorem} 
+:label: thm-prefect-set-L
+
+If $\VL$, then there exists an uncountable $\bPi^1_1$ set without a perfect subset.
+```
+
+```{prf:proof}
+Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}` $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
+
+$B^*$ is uncountable, but does contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of a) function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
+```

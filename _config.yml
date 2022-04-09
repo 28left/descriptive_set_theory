@@ -48,11 +48,13 @@ parse:
 
 sphinx:
   config:
+    # myst_override_mathjax: false
     bibtex_reference_style: author_year
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js
     mathjax3_config:
       TeX:
         Macros:
+          'NN': "\\mathbb{N}^\\mathbb{N}"
           'N': "\\mathbb{N}"
           'R': "\\mathbb{R}"
           'Real': "\\mathbb{R}"
