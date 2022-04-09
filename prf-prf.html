@@ -406,6 +406,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-def-tree"><strong>def-tree</strong></a> | 
    <a href="#cap-def-two-dim-tree"><strong>def-two-dim-tree</strong></a> | 
    <a href="#cap-def-ultrafilter"><strong>def-ultrafilter</strong></a> | 
+   <a href="#cap-def-uniformization"><strong>def-uniformization</strong></a> | 
    <a href="#cap-def-universal"><strong>def-universal</strong></a> | 
    <a href="#cap-def-well-founded"><strong>def-well-founded</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
@@ -479,6 +480,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-prop-prop-analytic"><strong>prop-prop-analytic</strong></a> | 
    <a href="#cap-prop-relative-codes"><strong>prop-relative-codes</strong></a> | 
    <a href="#cap-prop-satisfaction-arithmetic"><strong>prop-satisfaction-arithmetic</strong></a> | 
+   <a href="#cap-prop-sigma12-perfect"><strong>prop-sigma12-perfect</strong></a> | 
    <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
    <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
    <a href="#cap-prop-universal-general"><strong>prop-universal-general</strong></a> | 
@@ -497,9 +499,9 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-Borel-proper"><strong>thm-Borel-proper</strong></a> | 
    <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
    <a href="#cap-thm-Koenigs-lemma"><strong>thm-Koenigs-lemma</strong></a> | 
+   <a href="#cap-thm-Kondo"><strong>thm-Kondo</strong></a> | 
    <a href="#cap-thm-L-AC"><strong>thm-L-AC</strong></a> | 
    <a href="#cap-thm-L-GCH"><strong>thm-L-GCH</strong></a> | 
-   <a href="#cap-thm-L-WO-reals"><strong>thm-L-WO-reals</strong></a> | 
    <a href="#cap-thm-L-absolute"><strong>thm-L-absolute</strong></a> | 
    <a href="#cap-thm-L-reals"><strong>thm-L-reals</strong></a> | 
    <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
@@ -522,9 +524,11 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-measurable-inaccessible"><strong>thm-measurable-inaccessible</strong></a> | 
    <a href="#cap-thm-ordinal-recursion"><strong>thm-ordinal-recursion</strong></a> | 
    <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
+   <a href="#cap-thm-prefect-set-L"><strong>thm-prefect-set-L</strong></a> | 
    <a href="#cap-thm-projective-definable"><strong>thm-projective-definable</strong></a> | 
    <a href="#cap-thm-reflection"><strong>thm-reflection</strong></a> | 
    <a href="#cap-thm-sat-predicate"><strong>thm-sat-predicate</strong></a> | 
+   <a href="#cap-thm-sigma11-bounding"><strong>thm-sigma11-bounding</strong></a> | 
    <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a> | 
    <a href="#cap-thm-von-Neumann"><strong>thm-von-Neumann</strong></a> | 
    <a href="#cap-thm-weak-Borel-hierarchy"><strong>thm-weak-Borel-hierarchy</strong></a> | 
@@ -1003,6 +1007,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="measure.html#def-ultrafilter"><code class="xref">def-ultrafilter</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-uniformization"><td></td><td>
+       <strong>def-uniformization</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#def-uniformization"><code class="xref">def-uniformization</code></a> <em>(constructible-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-universal"><td></td><td>
@@ -1589,6 +1601,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="constructible-reals.html#prop-satisfaction-arithmetic"><code class="xref">prop-satisfaction-arithmetic</code></a> <em>(constructible-reals)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-sigma12-perfect"><td></td><td>
+       <strong>prop-sigma12-perfect</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#prop-sigma12-perfect"><code class="xref">prop-sigma12-perfect</code></a> <em>(constructible-reals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-prop-topological-product"><td></td><td>
        <strong>prop-topological-product</strong></td><td></td></tr>
      <tr>
@@ -1733,6 +1753,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="trees.html#thm-Koenigs-lemma"><code class="xref">thm-Koenigs-lemma</code></a> <em>(trees)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Kondo"><td></td><td>
+       <strong>thm-Kondo</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-Kondo"><code class="xref">thm-Kondo</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-L-AC"><td></td><td>
        <strong>thm-L-AC</strong></td><td></td></tr>
      <tr>
@@ -1747,14 +1775,6 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="V%3DL.html#thm-L-GCH"><code class="xref">thm-L-GCH</code></a> <em>(V=L)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm-L-WO-reals"><td></td><td>
-       <strong>thm-L-WO-reals</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="constructible-reals.html#thm-L-WO-reals"><code class="xref">thm-L-WO-reals</code></a> <em>(constructible-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-L-absolute"><td></td><td>
@@ -1933,6 +1953,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="polish.html#thm-polish-cont-image-Baire"><code class="xref">thm-polish-cont-image-Baire</code></a> <em>(polish)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-prefect-set-L"><td></td><td>
+       <strong>thm-prefect-set-L</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-prefect-set-L"><code class="xref">thm-prefect-set-L</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-projective-definable"><td></td><td>
        <strong>thm-projective-definable</strong></td><td></td></tr>
      <tr>
@@ -1955,6 +1983,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="constructible.html#thm-sat-predicate"><code class="xref">thm-sat-predicate</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sigma11-bounding"><td></td><td>
+       <strong>thm-sigma11-bounding</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#thm-sigma11-bounding"><code class="xref">thm-sigma11-bounding</code></a> <em>(coanalytic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-subsets-Polish"><td></td><td>

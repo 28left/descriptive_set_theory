@@ -236,6 +236,7 @@ and from this it follows that $B_\xi$ is Borel. Finally, note that
 which implies that $\WOrd_\xi$ is Borel.
 ```
 
+
 ```{prf:corollary} 
 :label: cor-coanal-union-Borel
 
@@ -266,10 +267,43 @@ then we get that $\WOrd = \bigcap_{\xi < \omega_1} C_\xi$, and hence
 Every $\PP[1]$ set can be obtained as a union or intersection of $\aleph_1$-many Borel sets. Consequently, the same holds for every $\PS[1]$ set.
 ```
 
-Finally, the previous results allow us to solve the cardinality problem of co-analytic sets at least partially.
+The previous results allow us to solve the cardinality problem of co-analytic sets at least partially.
 
 ```{prf:corollary}
 :label: cor-coanalytic-cardinality
 
 Every $\PP[1]$ set is either countable, of cardinality $\aleph_1$, or of cardinality $2^{\aleph_0}$.
 ```
+
+
+We conclude the chapter with another application of  {prf:ref}`lem-bounded-rank-Borel` – a useful tool for analyzing $\bSigma^1_1$ sets:
+
+```{prf:theorem} $\bSigma^1_1$-bounding
+:label: thm-sigma11-bounding
+
+For every analytic $A \subseteq \WOrd$ there exists an ordinal $\nu < \omega_1$ such that
+
+$$
+	\forall x \in A \;\; \Norm{x} < \nu.
+$$
+```
+
+```{prf:proof}
+If such a $\nu$ did not exist, then
+
+$$
+	\alpha \in \WOrd \iff \exists \nu \: [\alpha \in A \; \wedge \; \WOrd_\nu].
+$$
+
+The right-hand side is $\bSigma^1_1$, and hence $\WOrd$ would be $\bSigma^1_1$, contradiction.
+```
+
+An analogous statement holds for $\WF$, with respect to the rank function $\rho$ of a well-founded relation.
+
+
+
+<!-- ## Uniformization
+
+Two important structural properties of pointclasses are **separation** and **uniformization**.
+
+We have seen an instance of separation in  -->

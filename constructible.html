@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -619,7 +619,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 </div></blockquote>
 <p>In place of  <span class="math notranslate nohighlight">\(\Op{Sat}(a,e)\)</span>, we will also write <span class="math notranslate nohighlight">\((a,\in) \models e\)</span>. For any single formula, this formalization of truth then agrees with the validity of the corresponding relativization:</p>
 <div class="proof theorem admonition" id="thm-sat-predicate">
-<p class="admonition-title"><span class="caption-number">Theorem 38 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> be a set theoretic formula, and assume <span class="math notranslate nohighlight">\(a_0, \dots, a_{n-1} \in a\)</span>. Then it is provable in ZF that</p>
 <div class="math notranslate nohighlight">
@@ -646,7 +646,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 \end{equation*}\]</div>
 <p>With little effort, one can read off the complexity of the mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span>.</p>
 <div class="proof theorem admonition" id="thm-definability-Pdef">
-<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 40 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
 </div>
@@ -700,7 +700,7 @@ This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</sp
 \]</div>
 </div>
 <div class="proof theorem admonition" id="thm-reflection">
-<p class="admonition-title"><span class="caption-number">Theorem 40 </span> (Reflection for cumulative hierarchies)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Reflection for cumulative hierarchies)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> be a cumulative hierarchy and let <span class="math notranslate nohighlight">\(M = \bigcup_\alpha M_\alpha\)</span>.</p>
 <p>For every set theoretic formula <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> there exists a normal function <span class="math notranslate nohighlight">\(F\)</span> such that</p>
@@ -759,7 +759,7 @@ H(\alpha) = \text{ least } \beta &gt; \alpha \text{ with } \forall \vec{a} \in M
 </ul>
 </div>
 </div><div class="proof theorem admonition" id="thm-inner-models">
-<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Characterization of inner models)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 42 </span> (Characterization of inner models)</p>
 <div class="theorem-content section" id="proof-content">
 <p>A class <span class="math notranslate nohighlight">\(M\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span> if and only if there exists a sequence <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> such that for all <span class="math notranslate nohighlight">\(\alpha, \beta, \lambda \in \Ord\)</span>,</p>
 <ul class="simple">
@@ -774,7 +774,7 @@ H(\alpha) = \text{ least } \beta &gt; \alpha \text{ with } \forall \vec{a} \in M
 M_\alpha = V_\alpha^M = V_\alpha \cap M.
 \]</div>
 <p>This defines a cumulative hierarchy, so (I1) is satisfied.
-For (I2), first note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>. Now we can use the absoluteness of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> (<a class="reference internal" href="#thm-definability-Pdef">Theorem 39</a>) and the fact that <span class="math notranslate nohighlight">\(M\)</span> satisfies the axiom of <em>Separation</em> to conclude <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}\)</span>.</p>
+For (I2), first note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>. Now we can use the absoluteness of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> (<a class="reference internal" href="#thm-definability-Pdef">Theorem 40</a>) and the fact that <span class="math notranslate nohighlight">\(M\)</span> satisfies the axiom of <em>Separation</em> to conclude <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}\)</span>.</p>
 <p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>)
 <em>Extensionality</em> and <em>Foundation</em> hold in all transitive classes. <em>Set Existence</em> is satisfied in any cumulative hierarchy (since <span class="math notranslate nohighlight">\(\emptyset \in M\)</span>).</p>
 <p><em>Union</em>: By absoluteness, <span class="math notranslate nohighlight">\((\text{Union})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M \; \bigcup x \in M\)</span>. The latter holds in <span class="math notranslate nohighlight">\(M\)</span> by (I2) and the fact that <span class="math notranslate nohighlight">\(y = \bigcup x\)</span> is definable.</p>

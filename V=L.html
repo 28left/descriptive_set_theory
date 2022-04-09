@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -447,7 +447,7 @@ const thebe_selector_output = ".output, .cell_output"
 \end{multline*}\]</div>
 <p>Applying some of the various prefix transformations for <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all <span class="math notranslate nohighlight">\(\Delta_0\)</span> properties, the above formula can be shown to be <span class="math notranslate nohighlight">\(\Sigma_1\)</span>, too.</p>
 <p>In our case, <span class="math notranslate nohighlight">\(G\)</span> is a function that applies either <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> or <span class="math notranslate nohighlight">\(\bigcup\)</span> (both at most <span class="math notranslate nohighlight">\(\Delta_1\)</span>), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and hence we obtain that <span class="math notranslate nohighlight">\(G: \alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
-<p>Finally, as in <a class="reference internal" href="constructible.html#thm-definability-Pdef">Theorem 39</a>, observe that if <span class="math notranslate nohighlight">\(G\)</span> is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span> function with a <span class="math notranslate nohighlight">\(\Delta_1\)</span> domain (<span class="math notranslate nohighlight">\(\Ord\)</span>), then <span class="math notranslate nohighlight">\(G\)</span> is actually <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since we have</p>
+<p>Finally, as in <a class="reference internal" href="constructible.html#thm-definability-Pdef">Theorem 40</a>, observe that if <span class="math notranslate nohighlight">\(G\)</span> is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span> function with a <span class="math notranslate nohighlight">\(\Delta_1\)</span> domain (<span class="math notranslate nohighlight">\(\Ord\)</span>), then <span class="math notranslate nohighlight">\(G\)</span> is actually <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since we have</p>
 <div class="math notranslate nohighlight">
 \[
 	G(x) \neq y \; \Leftrightarrow \; \exists z (G(x)=z \: \wedge \: y \neq z)
@@ -469,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
 L_\alpha^M = L_\alpha.
 \]</div>
 <div class="proof theorem admonition" id="thm-L-absolute">
-<p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
 <div class="theorem-content section" id="proof-content">
 <ul class="simple">
 <li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \subseteq  M\)</span>.</p></li>
@@ -505,7 +505,7 @@ L_\alpha^M = L_\alpha.
 </ul>
 <p>It is straightforward to verify that this is indeed a well-ordering on <span class="math notranslate nohighlight">\(L\)</span>. Moreover, the relation <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to <span id="id2">[<a class="reference internal" href="bibliography.html#id8" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>.)</p>
 <div class="proof theorem admonition" id="thm-L-AC">
-<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p><span class="math notranslate nohighlight">\(\VL\)</span> implies <span class="math notranslate nohighlight">\(\AC\)</span></p>
 </div>
@@ -572,7 +572,7 @@ ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</sp
 <p>Suppose <span class="math notranslate nohighlight">\(V=L\)</span>. If <span class="math notranslate nohighlight">\(\kappa\)</span> is a cardinal and <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, then <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 40</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
+<p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 41</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
 
 \begin{equation*} \tag{$*$}
@@ -580,7 +580,7 @@ ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</sp
 \end{equation*}
 </pre></div>
 </div>
-<p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 33</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
+<p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 34</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
 together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
 <p>As <span class="math notranslate nohighlight">\((M,\in)\)</span> is isomorphic to <span class="math notranslate nohighlight">\((N,\in)\)</span> and <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span>, <span class="math notranslate nohighlight">\(M\)</span> satisfies the same sentences as <span class="math notranslate nohighlight">\((L_\lambda, \in)\)</span>. In particular, <span class="math notranslate nohighlight">\(M \models T + \VL\)</span>. By the <strong>condensation lemma</strong>, <span class="math notranslate nohighlight">\(M = L_\beta\)</span> for some <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
@@ -592,7 +592,7 @@ together with an <strong>isomorphism</strong> <span class="math notranslate nohi
 <p>Since <span class="math notranslate nohighlight">\(x \in L_\beta\)</span> and <span class="math notranslate nohighlight">\(\beta &lt; \kappa^+\)</span>, it follows that <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>, as desired.</p>
 </div>
 <div class="proof theorem admonition" id="thm-L-GCH">
-<p class="admonition-title"><span class="caption-number">Theorem 44 </span> (Gödel)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span> (Gödel)</p>
 <div class="theorem-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then for all cardinals <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa = \kappa^+\)</span>.</p>
 </div>

@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -349,6 +349,15 @@ const thebe_selector_output = ".output, .cell_output"
    The set of constructible reals
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset">
+   An uncountable
+   <span class="math notranslate nohighlight">
+    \(\Pi^1_1\)
+   </span>
+   set without a perfect subset
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -374,6 +383,15 @@ const thebe_selector_output = ".output, .cell_output"
    The set of constructible reals
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset">
+   An uncountable
+   <span class="math notranslate nohighlight">
+    \(\Pi^1_1\)
+   </span>
+   set without a perfect subset
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -388,11 +406,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="math notranslate nohighlight">
 \[\newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
 \newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
 \newcommand{\Nstr}{\Nat^{&lt;\Nat}}
 \newcommand{\Tup}[1]{\langle #1 \rangle}
 \newcommand{\Co}[1]{\neg \,#1}
@@ -404,12 +418,12 @@ const thebe_selector_output = ".output, .cell_output"
 \newcommand{\ZFC}{\mathsf{ZFC}}
 \newcommand{\VL}{\mathsf{V=L}}
 \newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
 \DeclareMathOperator{\W}{W}
 \DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+\DeclareMathOperator{\WOrd}{WOrd}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}\]</div>
 <p>In this lecture we transfer the results about <span class="math notranslate nohighlight">\(L\)</span> to the projective hierarchy. The main idea is to relate sets of reals that are defined by set theoretic formulas to sets defined in second order arithmetic.</p>
 <div class="section" id="the-set-of-constructible-reals">
 <h2>The set of constructible reals<a class="headerlink" href="#the-set-of-constructible-reals" title="Permalink to this headline">¶</a></h2>
@@ -428,7 +442,7 @@ Let <span class="math notranslate nohighlight">\(\varphi_{\VL}\)</span> be the c
 \[\begin{equation*}
 	(\omega, E_\alpha) \qquad \text{ where } E_\alpha = \{ \Tup{m,n} \colon \alpha(\Tup{m,n}) =  0 \}.
 \end{equation*}\]</div>
-<p>Unfortunately, the condensation lemma only holds for <strong>transitive sets</strong> (and <span class="math notranslate nohighlight">\((\omega, E_\alpha)\)</span> may look very different from a transitive set model), so simply requiring <span class="math notranslate nohighlight">\((\omega,E_\beta) \models \varphi_{\VL}\)</span> is not enough. But we know from <a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 33</a> (<strong>Mostowski collapse</strong>) that if <span class="math notranslate nohighlight">\(E_\beta\)</span> is well-founded and extensional, we can map it isomorphically to a transitive set <span class="math notranslate nohighlight">\(S\)</span> on which we interpret <span class="math notranslate nohighlight">\(E_\beta\)</span> as <span class="math notranslate nohighlight">\(\in\)</span>. By the condensation lemma, this <span class="math notranslate nohighlight">\(S\)</span> must then be an <span class="math notranslate nohighlight">\(L_\xi\)</span>.</p>
+<p>Unfortunately, the condensation lemma only holds for <strong>transitive sets</strong> (and <span class="math notranslate nohighlight">\((\omega, E_\alpha)\)</span> may look very different from a transitive set model), so simply requiring <span class="math notranslate nohighlight">\((\omega,E_\beta) \models \varphi_{\VL}\)</span> is not enough. But we know from <a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 34</a> (<strong>Mostowski collapse</strong>) that if <span class="math notranslate nohighlight">\(E_\beta\)</span> is well-founded and extensional, we can map it isomorphically to a transitive set <span class="math notranslate nohighlight">\(S\)</span> on which we interpret <span class="math notranslate nohighlight">\(E_\beta\)</span> as <span class="math notranslate nohighlight">\(\in\)</span>. By the condensation lemma, this <span class="math notranslate nohighlight">\(S\)</span> must then be an <span class="math notranslate nohighlight">\(L_\xi\)</span>.</p>
 <p>So, for reals, we can formulate membership in <span class="math notranslate nohighlight">\(L\)</span> now as follows:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*} \tag{$*$}
@@ -455,7 +469,7 @@ Let <span class="math notranslate nohighlight">\(\varphi_{\VL}\)</span> be the c
 \end{equation*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (a) can be established similar to showing that <span class="math notranslate nohighlight">\(\Op{Sat}\)</span>-predicate of <a class="reference internal" href="constructible.html#thm-sat-predicate">Theorem 38</a> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable. One does this first for <span class="math notranslate nohighlight">\(\Sigma_1\)</span> formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation.</p>
+<p>Proof. (a) can be established similar to showing that <span class="math notranslate nohighlight">\(\Op{Sat}\)</span>-predicate of <a class="reference internal" href="constructible.html#thm-sat-predicate">Theorem 39</a> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable. One does this first for <span class="math notranslate nohighlight">\(\Sigma_1\)</span> formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation.</p>
 <p>Since we work with relations over <span class="math notranslate nohighlight">\(\Nat\)</span> now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of <span class="math notranslate nohighlight">\(\models\)</span> for <span class="math notranslate nohighlight">\(\Sigma_n\)</span>-formulas, this helps us bound the overall complexity at <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span></p>
 <p>(c) By analyzing the recursive definition and using the definition of <span class="math notranslate nohighlight">\(\Nat\)</span> in <span class="math notranslate nohighlight">\(\ZF\)</span>, one first shows that the set</p>
 <div class="math notranslate nohighlight">
@@ -479,17 +493,22 @@ Let <span class="math notranslate nohighlight">\(\varphi_{\VL}\)</span> be the c
 <p>Hence this is arithmetical. And we have already seen that coding a well-founded relation over <span class="math notranslate nohighlight">\(\Nat\)</span> is <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>.</p>
 <p>Now we know the complexity of all parts of (<span class="math notranslate nohighlight">\(*\)</span>) and can put everything together.</p>
 <div class="proof theorem admonition" id="thm-L-reals">
-<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>The set <span class="math notranslate nohighlight">\(L \cap \Baire\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
 </div>
-</div><p>In a similar way we can show</p>
-<div class="proof theorem admonition" id="thm-L-WO-reals">
-<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
-<div class="theorem-content section" id="proof-content">
-<p>The set <span class="math notranslate nohighlight">\(\{(\alpha,\beta) \in (L\cap\Baire)^2 \colon \alpha &lt;_L \beta\}\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+</div><p>In a similar way we can show that the relation <span class="math notranslate nohighlight">\(\alpha &lt;_L \beta\)</span> over <span class="math notranslate nohighlight">\((L\cap\Baire)^2\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> (using that <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable).</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Recall that given <span class="math notranslate nohighlight">\(\alpha \in \Baire, n \in \Nat\)</span>, <span class="math notranslate nohighlight">\((\alpha)_n\)</span> denotes the <span class="math notranslate nohighlight">\(n\)</span>-th column of <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Show that the following relation <span class="math notranslate nohighlight">\(R\)</span> over <span class="math notranslate nohighlight">\((L\cap\Baire)^2\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+(\alpha, \beta) \in R :\iff \{(\alpha)_n\colon n \in \Nat \} = \{\gamma \colon \gamma &lt;_L \beta \}
+\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(\alpha\)</span> codes the (countable) <span class="math notranslate nohighlight">\(&lt;_L\)</span>-initial segment restricted to <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
 </div>
-</div><p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then the set is actually <span class="math notranslate nohighlight">\(\Delta^1_2\)</span>, since then</p>
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then the set is actually <span class="math notranslate nohighlight">\(\Delta^1_2\)</span>, since then</p>
 <div class="math notranslate nohighlight">
 \[
 	\alpha &lt;_L \beta \iff \alpha \neq \beta \: \wedge \: \neg(\beta &lt;_L \alpha).
@@ -501,6 +520,66 @@ Let <span class="math notranslate nohighlight">\(\varphi_{\VL}\)</span> be the c
 <p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then there exists a <span class="math notranslate nohighlight">\(\Delta^1_2\)</span> set that is not Lebesgue-measurable and does not have the Baire property.</p>
 </div>
 </div></div>
+<div class="section" id="an-uncountable-pi-1-1-set-without-a-perfect-subset">
+<h2>An uncountable <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set without a perfect subset<a class="headerlink" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset" title="Permalink to this headline">¶</a></h2>
+<p>We now show that under the assumption <span class="math notranslate nohighlight">\(\VL\)</span>, the <strong>perfect set property</strong> fails at level <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>.</p>
+<p>We start with constructing an example at the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> level.</p>
+<p><a class="reference internal" href="coanalytic.html#sec-well-founded"><span class="std std-ref">Recall</span></a> that if <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> codes a well-ordering on <span class="math notranslate nohighlight">\(\Nat\)</span>, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+\end{equation*}\]</div>
+<div class="proof proposition admonition" id="prop-sigma12-perfect">
+<p class="admonition-title"><span class="caption-number">Proposition 55 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, there exists an uncountable <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> set in <span class="math notranslate nohighlight">\(\Baire\)</span> without a perfect subset.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> be given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    x \in A \iff x \in \WOrd \, \wedge \, \forall y &lt;_L x \,  ( \parallel y \parallel \ne \parallel x \parallel).
+\end{equation*}\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(A\)</span> collects the <span class="math notranslate nohighlight">\(&lt;_L\)</span>-least code for every ordinal <span class="math notranslate nohighlight">\(&lt; \omega_1\)</span>.</p>
+<p>Clearly <span class="math notranslate nohighlight">\(A\)</span> is uncountable, since it has a representative for every countable ordinal and hence of cardinality <span class="math notranslate nohighlight">\(\omega_1\)</span>.</p>
+<p>Moreover, <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>: Let <span class="math notranslate nohighlight">\(R\)</span> be the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>-relation of the exercise above. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x \in A \iff x \in \WOrd \, \wedge \, \exists z \;(R(z,x) \, \wedge \; \forall n \,  ( \Norm {(z)_n} \neq \Norm{x}).
+\end{equation*}\]</div>
+<p>The relation <span class="math notranslate nohighlight">\(\Norm{(z)_n} \neq  \Norm{x}\)</span> <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>, hence <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+<p>Finally, we see that <strong><span class="math notranslate nohighlight">\(A\)</span> does not have an uncountable <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset</strong> (hence, since all perfect sets are closed, no perfect subset): By <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>-boundedness (<a class="reference internal" href="coanalytic.html#thm-sigma11-bounding">Theorem 30</a>), for any <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset <span class="math notranslate nohighlight">\(X \subseteq A\)</span> the set <span class="math notranslate nohighlight">\(\{ \Norm{x} \colon x \in X\}\)</span> bounded by an ordinal <span class="math notranslate nohighlight">\(\gamma &lt; \omega_1\)</span>, hence countable.</p>
+</div>
+<p>It is possible to get this example down to <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> using the powerful technique of <strong>uniformization</strong>.</p>
+<div class="proof definition admonition" id="def-uniformization">
+<p class="admonition-title"><span class="caption-number">Definition 41 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(A \subseteq \Baire \times \Baire\)</span>. We say <span class="math notranslate nohighlight">\(A^* \subseteq A\)</span> <strong>uniformizes</strong> <span class="math notranslate nohighlight">\(A\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x  \; [ \exists y \; A(x,y) \to  \exists ! y \; A^*(x,y)]
+\]</div>
+<p>A pointclass <span class="math notranslate nohighlight">\(\Gamma\)</span> has the <strong>uniformization property</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A \subseteq \Baire  \times \Baire \, \wedge \, A \in \Gamma \quad \Rightarrow \quad \exists A^* \in  \Gamma \; (A^*  \text{ uniformizes } A).
+\end{equation*}\]</div>
+</div>
+</div><div class="proof theorem admonition" id="thm-Kondo">
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Kondo)</p>
+<div class="theorem-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\bPi^1_1\)</span> has the uniformization property.</p>
+</div>
+</div><div class="proof theorem admonition" id="thm-prefect-set-L">
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then there exists an uncountable <span class="math notranslate nohighlight">\(\bPi^1_1\)</span> set without a perfect subset.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A\)</span> be the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> set from the proof of {prf:ref}` <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is the projection of a <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set <span class="math notranslate nohighlight">\(B \subseteq \Baire \times \Baire\)</span>. If we apply uniformization to <span class="math notranslate nohighlight">\(B\)</span>, we obtain a uniformizing set <span class="math notranslate nohighlight">\(B^*\)</span> whose projection is still <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(B^*\)</span> is uncountable, but does contain a perfect subset: If <span class="math notranslate nohighlight">\(P \subset B^*\)</span> were such a subset, then <span class="math notranslate nohighlight">\(P\)</span> would be (the graph of a) function and uncountable, and the projection <span class="math notranslate nohighlight">\(\exists^{\Baire} \; P\)</span> would be an uncountable  <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset of <span class="math notranslate nohighlight">\(A\)</span>, contradiction.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

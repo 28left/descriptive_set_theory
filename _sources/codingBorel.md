@@ -66,7 +66,7 @@ $$
 
 Finally, let us define the following operation on elements of Baire (or Cantor) space: Given $\beta\in \Baire$, 
 - let $\beta'$ be the real defined by $\beta'(n) = \beta(n+1)$. (*We cut the first entry.*)
-- for $m \geq 0$, let $\beta_m$ be the *$m$-th column* of $\beta$, $\beta_m(n) = \beta(\Tup{m,n})$.
+- for $m \geq 0$, let $(\beta)_m$ be the **$m$-th column** of $\beta$, $(\beta)_m(n) = \beta(\Tup{m,n})$.
 
 
 ## Borel codes of finite order
@@ -85,7 +85,7 @@ Let $\gamma \in \Baire$.
 
 - If $\gamma$ is such that $\gamma(0)=2$ and $\gamma'$ is a $\bSigma^0_n$ code for $A \subseteq \Baire$, we say $\gamma$ **is a $\bPi^0_n$ code** for $\Co{A}$.
 
-- If $\gamma$ is such that $\gamma(0)=3$ and for each $m$, $\gamma'_m$ is a $\bPi^0_n$ code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
+- If $\gamma$ is such that $\gamma(0)=3$ and for each $m$, $(\gamma')_m$ is a $\bPi^0_n$ code of a set $A_m$, we say $\gamma$ **is a $\bSigma^0_{n+1}$ code** for $\bigcup_n A_n$.
 ```
 
 The first position in each code indicates the kind of set it codes -- an open set, a complement, or a union. 
@@ -124,20 +124,20 @@ The tree structure of a code also lets us assign levels to a Borel code similar 
 
 ## Computing with Borel codes
 
-Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(3,\gamma')$, with each column $\gamma'_m$ being of the form $(2,1,\alpha_m)$, coding a closed set $F_m$.
+Suppose $\gamma$ is a **computable** code for an $F_\sigma$ set $B$. We may assume $\gamma$ is of the form $(3,\gamma')$, with each column $(\gamma')_m$ being of the form $(2,1,(\alpha)_m)$, coding a closed set $F_m$.
 
 With this, we can express membership in $B$ as follows:
 
 \begin{align*}
-    \beta \in B \quad & \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $\gamma'_m$}] \\
-        & \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } \alpha_m]. \\
-        & \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) \neq 0 ].
+    \beta \in B \quad & \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $(\gamma')_m$}] \\
+        & \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } (\alpha)_m]. \\
+        & \Leftrightarrow \quad \exists m \forall n \: [(\alpha)_m(\beta\Rest{n}) \neq 0 ].
 \end{align*}
 
 Note that, since we assume $\gamma$ to be computable, the **inner predicate** $R(m,\sigma)$ given by
 
 $$
-R(m,\sigma) :\iff \alpha_m(\sigma) \neq 0
+R(m,\sigma) :\iff (\alpha)_m(\sigma) \neq 0
 $$
 
 is **decidable**, that is, it can be decided by a Turing machine.
@@ -272,7 +272,7 @@ witnesses that $U$ is $\Pi^0_1$.
 
 If $\gamma = (2, \alpha)$ is a $\bPi^0_n$ code, then $\alpha$ is a $\bSigma^0_n$ code. By inductive hypothesis, the set coded by $\alpha$ is $\Sigma^0_n$, so by definition of the effective hierarchy and the Borel codes, $\gamma$ codes a $\Pi^0_n$ set.
 
-Finally, assume $\gamma = (3,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $\alpha_m$ is a $\bPi^0_n$ code for a set $A_m$.
+Finally, assume $\gamma = (3,\alpha)$ is a $\bSigma^0_{n+1}$ code for a set $B$. Then each $(\alpha)_m$ is a $\bPi^0_n$ code for a set $A_m$.
 
 ```{prf:lemma}
 :label: lem-Borel-codes-inverse-shift

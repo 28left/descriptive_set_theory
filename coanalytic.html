@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -644,13 +644,36 @@ E_\beta(m,n) :\iff \beta(\Tup{m,n}) = 0.
 <div class="corollary-content section" id="proof-content">
 <p>Every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set can be obtained as a union or intersection of <span class="math notranslate nohighlight">\(\aleph_1\)</span>-many Borel sets. Consequently, the same holds for every <span class="math notranslate nohighlight">\(\PS[1]\)</span> set.</p>
 </div>
-</div><p>Finally, the previous results allow us to solve the cardinality problem of co-analytic sets at least partially.</p>
+</div><p>The previous results allow us to solve the cardinality problem of co-analytic sets at least partially.</p>
 <div class="proof corollary admonition" id="cor-coanalytic-cardinality">
 <p class="admonition-title"><span class="caption-number">Corollary 14 </span></p>
 <div class="corollary-content section" id="proof-content">
 <p>Every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set is either countable, of cardinality <span class="math notranslate nohighlight">\(\aleph_1\)</span>, or of cardinality <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>.</p>
 </div>
-</div></div>
+</div><p>We conclude the chapter with another application of  <a class="reference internal" href="#lem-bounded-rank-Borel">Lemma 15</a> – a useful tool for analyzing <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> sets:</p>
+<div class="proof theorem admonition" id="thm-sigma11-bounding">
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span> (<span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>-bounding)</p>
+<div class="theorem-content section" id="proof-content">
+<p>For every analytic <span class="math notranslate nohighlight">\(A \subseteq \WOrd\)</span> there exists an ordinal <span class="math notranslate nohighlight">\(\nu &lt; \omega_1\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	\forall x \in A \;\; \Norm{x} &lt; \nu.
+\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If such a <span class="math notranslate nohighlight">\(\nu\)</span> did not exist, then</p>
+<div class="math notranslate nohighlight">
+\[
+	\alpha \in \WOrd \iff \exists \nu \: [\alpha \in A \; \wedge \; \WOrd_\nu].
+\]</div>
+<p>The right-hand side is <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>, and hence <span class="math notranslate nohighlight">\(\WOrd\)</span> would be <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>, contradiction.</p>
+</div>
+<p>An analogous statement holds for <span class="math notranslate nohighlight">\(\WF\)</span>, with respect to the rank function <span class="math notranslate nohighlight">\(\rho\)</span> of a well-founded relation.</p>
+<!-- ## Uniformization
+
+Two important structural properties of pointclasses are **separation** and **uniformization**.
+
+We have seen an instance of separation in  --></div>
 </div>
 
     <script type="text/x-thebe-config">

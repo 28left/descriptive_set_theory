@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -499,7 +499,7 @@ We will also freely identify infinite binary sequences with the set of natural n
 <p>Finally, let us define the following operation on elements of Baire (or Cantor) space: Given <span class="math notranslate nohighlight">\(\beta\in \Baire\)</span>,</p>
 <ul class="simple">
 <li><p>let <span class="math notranslate nohighlight">\(\beta'\)</span> be the real defined by <span class="math notranslate nohighlight">\(\beta'(n) = \beta(n+1)\)</span>. (<em>We cut the first entry.</em>)</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(m \geq 0\)</span>, let <span class="math notranslate nohighlight">\(\beta_m\)</span> be the <em><span class="math notranslate nohighlight">\(m\)</span>-th column</em> of <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(\beta_m(n) = \beta(\Tup{m,n})\)</span>.</p></li>
+<li><p>for <span class="math notranslate nohighlight">\(m \geq 0\)</span>, let <span class="math notranslate nohighlight">\((\beta)_m\)</span> be the <strong><span class="math notranslate nohighlight">\(m\)</span>-th column</strong> of <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\((\beta)_m(n) = \beta(\Tup{m,n})\)</span>.</p></li>
 </ul>
 </div>
 <div class="section" id="borel-codes-of-finite-order">
@@ -518,7 +518,7 @@ We will also freely identify infinite binary sequences with the set of natural n
 \end{equation*}\]</div>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=2\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> code for <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code</strong> for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma'_m\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code</strong> for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\((\gamma')_m\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> <strong>is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code</strong> for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span>.</p></li>
 </ul>
 </div>
 </div><p>The first position in each code indicates the kind of set it codes – an open set, a complement, or a union.</p>
@@ -549,18 +549,18 @@ The tree structure of a code also lets us assign levels to a Borel code similar 
 </div>
 <div class="section" id="computing-with-borel-codes">
 <h2>Computing with Borel codes<a class="headerlink" href="#computing-with-borel-codes" title="Permalink to this headline">¶</a></h2>
-<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a <strong>computable</strong> code for an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set <span class="math notranslate nohighlight">\(B\)</span>. We may assume <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((3,\gamma')\)</span>, with each column <span class="math notranslate nohighlight">\(\gamma'_m\)</span> being of the form <span class="math notranslate nohighlight">\((2,1,\alpha_m)\)</span>, coding a closed set <span class="math notranslate nohighlight">\(F_m\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\gamma\)</span> is a <strong>computable</strong> code for an <span class="math notranslate nohighlight">\(F_\sigma\)</span> set <span class="math notranslate nohighlight">\(B\)</span>. We may assume <span class="math notranslate nohighlight">\(\gamma\)</span> is of the form <span class="math notranslate nohighlight">\((3,\gamma')\)</span>, with each column <span class="math notranslate nohighlight">\((\gamma')_m\)</span> being of the form <span class="math notranslate nohighlight">\((2,1,(\alpha)_m)\)</span>, coding a closed set <span class="math notranslate nohighlight">\(F_m\)</span>.</p>
 <p>With this, we can express membership in <span class="math notranslate nohighlight">\(B\)</span> as follows:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \beta \in B \quad &amp; \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $\gamma'_m$}] \\
-        &amp; \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } \alpha_m]. \\
-        &amp; \Leftrightarrow \quad \exists m \forall n \: [\alpha_m(\beta\Rest{n}) \neq 0 ].
+    \beta \in B \quad &amp; \Leftrightarrow \quad \exists m \: [\text{$\beta$ is in the set coded by $(\gamma')_m$}] \\
+        &amp; \Leftrightarrow \quad \exists m \forall n \: [\beta\Rest{n} \text{ is not in the set coded by } (\alpha)_m]. \\
+        &amp; \Leftrightarrow \quad \exists m \forall n \: [(\alpha)_m(\beta\Rest{n}) \neq 0 ].
 \end{align*}\]</div>
 <p>Note that, since we assume <span class="math notranslate nohighlight">\(\gamma\)</span> to be computable, the <strong>inner predicate</strong> <span class="math notranslate nohighlight">\(R(m,\sigma)\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[
-R(m,\sigma) :\iff \alpha_m(\sigma) \neq 0
+R(m,\sigma) :\iff (\alpha)_m(\sigma) \neq 0
 \]</div>
 <p>is <strong>decidable</strong>, that is, it can be decided by a Turing machine.</p>
 <p>Hence any <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set <span class="math notranslate nohighlight">\(B\)</span> with a computable code can be represented in the following form:</p>
@@ -678,7 +678,7 @@ R(\sigma) :\iff \alpha(\sigma) = 0
 \]</div>
 <p>witnesses that <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\Pi^0_1\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(\gamma = (2, \alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code, then <span class="math notranslate nohighlight">\(\alpha\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> code. By inductive hypothesis, the set coded by <span class="math notranslate nohighlight">\(\alpha\)</span> is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>, so by definition of the effective hierarchy and the Borel codes, <span class="math notranslate nohighlight">\(\gamma\)</span> codes a <span class="math notranslate nohighlight">\(\Pi^0_n\)</span> set.</p>
-<p>Finally, assume <span class="math notranslate nohighlight">\(\gamma = (3,\alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code for a set <span class="math notranslate nohighlight">\(B\)</span>. Then each <span class="math notranslate nohighlight">\(\alpha_m\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for a set <span class="math notranslate nohighlight">\(A_m\)</span>.</p>
+<p>Finally, assume <span class="math notranslate nohighlight">\(\gamma = (3,\alpha)\)</span> is a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code for a set <span class="math notranslate nohighlight">\(B\)</span>. Then each <span class="math notranslate nohighlight">\((\alpha)_m\)</span> is a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> code for a set <span class="math notranslate nohighlight">\(A_m\)</span>.</p>
 <div class="proof lemma admonition" id="lem-Borel-codes-inverse-shift">
 <p class="admonition-title"><span class="caption-number">Lemma 10 </span></p>
 <div class="lemma-content section" id="proof-content">
