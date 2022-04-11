@@ -36,6 +36,7 @@ parts:
       - file: constructible.md
       - file: V=L.md
       - file: constructible-reals.md
+      - file: shoenfield.md
   - caption: Reference
     chapters:
       - file: bibliography
