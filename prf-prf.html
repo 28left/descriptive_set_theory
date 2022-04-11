@@ -248,6 +248,11 @@ const thebe_selector_output = ".output, .cell_output"
    Constructible Reals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="shoenfield.html">
+   Shoenfield Absoluteness
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -364,6 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-cor-aleph-union-intersect"><strong>cor-aleph-union-intersect</strong></a> | 
    <a href="#cap-cor-analytic-Souslin-closed"><strong>cor-analytic-Souslin-closed</strong></a> | 
    <a href="#cap-cor-analytic-measurable"><strong>cor-analytic-measurable</strong></a> | 
+   <a href="#cap-cor-cardinality-sigma12"><strong>cor-cardinality-sigma12</strong></a> | 
    <a href="#cap-cor-coanal-union-Borel"><strong>cor-coanal-union-Borel</strong></a> | 
    <a href="#cap-cor-coanalytic-cardinality"><strong>cor-coanalytic-cardinality</strong></a> | 
    <a href="#cap-cor-complexity-L"><strong>cor-complexity-L</strong></a> | 
@@ -507,6 +513,7 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
    <a href="#cap-thm-Mostowski-collapse"><strong>thm-Mostowski-collapse</strong></a> | 
    <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
+   <a href="#cap-thm-Shoenfild-absoluteness"><strong>thm-Shoenfild-absoluteness</strong></a> | 
    <a href="#cap-thm-Souslin-Borel-images"><strong>thm-Souslin-Borel-images</strong></a> | 
    <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
    <a href="#cap-thm-WF-Wadge-complete"><strong>thm-WF-Wadge-complete</strong></a> | 
@@ -529,7 +536,9 @@ const thebe_selector_output = ".output, .cell_output"
    <a href="#cap-thm-reflection"><strong>thm-reflection</strong></a> | 
    <a href="#cap-thm-sat-predicate"><strong>thm-sat-predicate</strong></a> | 
    <a href="#cap-thm-sigma11-bounding"><strong>thm-sigma11-bounding</strong></a> | 
+   <a href="#cap-thm-sigma12-union-Borel"><strong>thm-sigma12-union-Borel</strong></a> | 
    <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a> | 
+   <a href="#cap-thm-tree-repr-sig12"><strong>thm-tree-repr-sig12</strong></a> | 
    <a href="#cap-thm-von-Neumann"><strong>thm-von-Neumann</strong></a> | 
    <a href="#cap-thm-weak-Borel-hierarchy"><strong>thm-weak-Borel-hierarchy</strong></a> | 
    <a href="#cap-thm-wf-recursion"><strong>thm-wf-recursion</strong></a>
@@ -671,6 +680,14 @@ const thebe_selector_output = ".output, .cell_output"
        <td></td>
        <td>
        <a href="regularityAnalytic.html#cor-analytic-measurable"><code class="xref">cor-analytic-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-cardinality-sigma12"><td></td><td>
+       <strong>cor-cardinality-sigma12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#cor-cardinality-sigma12"><code class="xref">cor-cardinality-sigma12</code></a> <em>(shoenfield)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-coanal-union-Borel"><td></td><td>
@@ -1817,6 +1834,14 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="imagesBorel.html#thm-Polish-bijection-Baire"><code class="xref">thm-Polish-bijection-Baire</code></a> <em>(imagesBorel)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Shoenfild-absoluteness"><td></td><td>
+       <strong>thm-Shoenfild-absoluteness</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-Shoenfild-absoluteness"><code class="xref">thm-Shoenfild-absoluteness</code></a> <em>(shoenfield)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-Souslin-Borel-images"><td></td><td>
        <strong>thm-Souslin-Borel-images</strong></td><td></td></tr>
      <tr>
@@ -1993,12 +2018,28 @@ const thebe_selector_output = ".output, .cell_output"
        <a href="coanalytic.html#thm-sigma11-bounding"><code class="xref">thm-sigma11-bounding</code></a> <em>(coanalytic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sigma12-union-Borel"><td></td><td>
+       <strong>thm-sigma12-union-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-sigma12-union-Borel"><code class="xref">thm-sigma12-union-Borel</code></a> <em>(shoenfield)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-subsets-Polish"><td></td><td>
        <strong>thm-subsets-Polish</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="subsets_Polish.html#thm-subsets-Polish"><code class="xref">thm-subsets-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-tree-repr-sig12"><td></td><td>
+       <strong>thm-tree-repr-sig12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-tree-repr-sig12"><code class="xref">thm-tree-repr-sig12</code></a> <em>(shoenfield)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm-von-Neumann"><td></td><td>
