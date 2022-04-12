@@ -41,7 +41,7 @@ In particular, if $A$ is $\Sigma^1_2$ then there is a tree $T \in L$ on $\Nat \t
 ```
 
 ```{prf:proof}
-Assume first $A$ is $\Pi^1_1$. There is a recursive tree $T$ on $\Nat \times \Nat$ (and hence, in $L$, since `being recursive' is definable) such that 
+Assume first $A$ is $\Pi^1_1$. There is a recursive tree $T$ on $\Nat \times \Nat$ (and hence, in $L$, since "*being recursive*" is definable) such that 
 
 $$
     \alpha \in A \iff T(\alpha) \text{ is well-founded}.
@@ -55,9 +55,9 @@ $$
     \widetilde{T} = \{ (\sigma,\tau) : \: \forall i,j < |\sigma| \: [\sigma_i \supset \sigma_j \: \wedge \: (\sigma\Rest{|\sigma_i|}, \sigma_i) \in T \: \to \: \tau(i) < \tau(j)] \}.
 $$
 
-It is easy to see that $\widetilde{T}$ is in $L$, since it is definable from $T$ and $\omega_1$. Furthermore, if $\alpha \in A$, then the existence of an order-preserving map $\pi: T(\alpha) \to \omega_1$ implies that there is an infinite path $(\alpha,\eta)$ through $\widetilde{T}$. 
+The tree $\widetilde{T}$ is in $L$, since it is definable from $T$ and $\omega_1$. Furthermore, if $\alpha \in A$, then the existence of an order-preserving map $\pi: T(\alpha) \to \omega_1$ implies that there is an infinite path $(\alpha,\eta)$ through $\widetilde{T}$. 
 
-Conversely, if such a path $(\alpha,\eta)$ exists, then it is easy to see that there is an order preserving map $\pi: T(\alpha) \to \omega_1$. Hence we have
+Conversely, if such a path $(\alpha,\eta)$ exists, then there is an order preserving map $\pi: T(\alpha) \to \omega_1$. Hence we have
 
 $$
     \alpha \in A \: \leftrightarrow \: \exists \eta \in (\omega_1)^{\Nat} \: (\alpha,\eta) \in [\widetilde{T}] \: \leftrightarrow \: \alpha \in \exists^{(\omega_1)^\Nat}[\widetilde{T}],
@@ -114,7 +114,7 @@ Every $\bSigma^1_2$ set has cardinality at most $\aleph_1$ or has a perfect subs
 
 ## Absoluteness of $\Sigma^1_2$ relations
                             
-Shoenfield used the tree representation of $\mathbf{Sigma}^1_2$ sets to establish an important absoluteness result for $\Sigma^1_2$ sets of reals. 
+Shoenfield used the tree representation of $\mathbf{\Sigma}^1_2$ sets to establish an important absoluteness result for $\Sigma^1_2$ sets of reals. 
 
 Suppose $A \subseteq \Baire$ is $\Sigma^1_2$. Then, by the Kleene Normal Form there exists a bounded formula $\phi(\alpha,\beta_0,\beta_1,m)$ such that 
 
@@ -145,7 +145,7 @@ Every $\Sigma^1_2(\gamma)$ predicate and every $\Pi^1_2(\gamma)$ predicate is ab
 ```
 
 ```{prf:proof}
-We show the theorem for $\Sigma^1_2$ predicates. For the relativized version, one uses the \emph{relative constructible universe} $L[\gamma]$, see {cite}`jech2003a` or {cite}`Kanamori:2003a`.
+We show the theorem for $\Sigma^1_2$ predicates. For the relativized version, one uses the **relative constructible universe** $L[\gamma]$, see {cite}`jech2003a` or {cite}`Kanamori:2003a`.
 
 Let $A$ be a $\Sigma^1_2$ relation. For simplicity, we assume that $A$ is unary. Fix a tree representation of $A$ as a projection of a $\Pi^1_1$ set. So, let $T$ be a recursive tree on $\Nat \times \Nat \times \Nat$ such that 
 
@@ -180,5 +180,5 @@ $$
 
 is $\Sigma^1_3$, but cannot be absolute for $M = L$.
 
-Shoenfield's absoluteness theorem also holds for sentences rather than formulae, with a similar proof. This means a $\Sigma^1_2$ statement is true in $L$ if and only if it holds in $V$. This 
+Shoenfield's absoluteness theorem also holds for sentences rather than predicates, with a similar proof. This means a $\Sigma^1_2$ statement is true in $L$ if and only if it holds in $V$. This 
 has an important consequence regarding the significance of principles like $\CH$ for analysis. Many results of classical analysis are $\Sigma^1_2$ statements. The Absoluteness Theorem says that if they can be established under $\VL$, they can be established in $\ZF$ alone.

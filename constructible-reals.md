@@ -214,7 +214,7 @@ If $\VL$, then there exists an uncountable $\bPi^1_1$ set without a perfect subs
 ```
 
 ```{prf:proof}
-Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}` $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
+Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}`prop-sigma12-perfect`. $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
 
-$B^*$ is uncountable, but does contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of a) function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
+$B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of) a function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
 ```
