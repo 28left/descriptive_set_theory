@@ -567,7 +567,7 @@ ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</sp
 <p>On the other hand, for each <span class="math notranslate nohighlight">\(\alpha &lt; \lambda\)</span>, <span class="math notranslate nohighlight">\(L_\alpha^M\)</span> exists in <span class="math notranslate nohighlight">\(M\)</span> (since <span class="math notranslate nohighlight">\(T\)</span> is strong enough to prove this), and by absoluteness</p>
 <div class="math notranslate nohighlight">
 \[
-  L_\lambda =  \subseteq \bigcup_{\alpha &lt; \lambda} L_\alpha =  \bigcup_{\alpha \in M} L^M_\alpha \subseteq M.
+  L_\lambda =   \bigcup_{\alpha &lt; \lambda} L_\alpha =  \bigcup_{\alpha \in M} L^M_\alpha \subseteq M.
 \]</div>
 </div>
 <p>We now put condensation to use as described above.</p>
@@ -578,13 +578,11 @@ ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</sp
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 41</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
-
-\begin{equation*} \tag{$*$}
+<p>By the <a class="reference external" href="https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem">Löwenheim-Skolem Theorem</a>, there exists an <strong>elementary substructure</strong> <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
     X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
-\end{equation*}
-</pre></div>
-</div>
+\end{equation*}\]</div>
 <p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 34</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
 together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
