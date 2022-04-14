@@ -153,22 +153,31 @@ We show the theorem for $\Sigma^1_2$ predicates. For the relativized version, on
 Let $A$ be a $\Sigma^1_2$ relation. For simplicity, we assume that $A$ is unary. Fix a tree representation of $A$ as a projection of a $\Pi^1_1$ set. So, let $T$ be a recursive tree on $\Nat \times \Nat \times \Nat$ such that 
 
 $$
-    \alpha \in A \iff \exists \beta \;  T(\alpha,\beta) \text{ is well-founded}. 
+     A(\alpha) \iff \exists \beta \;  T(\alpha,\beta) \text{ is well-founded}. 
 $$
 
-Note that $T$ is in $M$.
+Note that $T$ is in $M$ (since it is recursive and hence definable).
 
-Now assume $\alpha \in M$ and $\alpha \in A^M$. So there is a $\beta \in M$ such that $T(\alpha,\beta)$ is well-founded in $M$. This is equivalent to the fact that in $M$ there exists an order preserving mapping $\pi: T(\alpha,\beta) \to \mathbf{Ord}$. 
+Now assume $\alpha \in M$ and $A^M(\alpha)$. Hence there is a $\beta \in M$ such that $T(\alpha,\beta)$ is well-founded in $M$. This is equivalent to the fact that in $M$ there exists an order preserving mapping $\pi: T(\alpha,\beta) \to \mathbf{Ord}$. 
 
-Since $M$ is an inner model and $T$ is the same in $V$ and $M$, such a mapping exists also in $V$. Hence $T(\alpha,\beta)$ is well-founded in $V$ and thus $\alpha \in A$.
+Since $M$ is an inner model and $T$ is absolute, the mapping exists also in $V$. Hence $T(\alpha,\beta)$ is well-founded in $V$ and thus $A(\alpha)$.
 
-For the converse assume that $\alpha \in A \cap M$. Now we use the tree representation of $A$ given by {prf:ref}`thm-tree-repr-sig12`. Let $U \in L \subseteq M$ be a tree on $\Nat \times \omega_1$ such that $A = \exists^{(\omega_1)^\Nat} U$. This means that for any $\alpha \in \Baire$,
+For the converse assume that $\alpha \in M$ and $A(\alpha)$. Now we use the alternative tree representation of $A$ given by {prf:ref}`thm-tree-repr-sig12`. Let $U \in L \subseteq M$ be a tree on $\Nat \times \omega_1$ such that $A = \exists^{(\omega_1)^\Nat} U$. 
+
+As before, let 
 
 $$
-	\alpha \in A    \iff    U(\alpha) \text{ is not well-founded}.
+	U(\alpha) = \{ (\alpha\Rest{n}, \tau)\in U \colon n \in \Nat, \tau \in (\omega_1)^n,  \}
 $$
+ 
+Then, for any $\alpha \in \Baire$,
 
-So $\alpha \in A \cap M$ implies that there exists no order preserving map $U(\alpha) \to \omega_1$. But then such a map cannot exist in $M$ either. So, $U(\alpha)$ is a tree in $M$ which is ill-founded in the sense of $M$. Thus, by Shoenfield's Representation Theorem relativized to $M$, $\alpha \in A^M$.
+\begin{align*}
+	A(\alpha)     & \iff    \exists \lambda \in (\omega_1)^\Nat \: (\alpha,\lambda) \text{ infinite path through $U$}. \\
+     & \iff    U(\alpha) \text{ not well-founded}. \\
+\end{align*}
+
+This means that there exists no order preserving map $U(\alpha) \to \omega_1$. But then such a map cannot exist in $M$ either. Thus, $U(\alpha)$ is a tree in $M$ which is ill-founded in the sense of $M$. Thus, by Shoenfield's Representation Theorem relativized to $M$, $A^M(\alpha)$.
 
 Absoluteness for $\Pi^1_2$ follows by employing the same reasoning, using that the complement is $\Sigma^1_2$.
 ```
@@ -183,5 +192,6 @@ $$
 
 is $\Sigma^1_3$, but cannot be absolute for $M = L$.
 
-Shoenfield's absoluteness theorem also holds for sentences rather than predicates, with a similar proof. This means a $\Sigma^1_2$ statement is true in $L$ if and only if it holds in $V$. This 
-has an important consequence regarding the significance of principles like $\CH$ for analysis. Many results of classical analysis are $\Sigma^1_2$ statements. The Absoluteness Theorem says that if they can be established under $\VL$, they can be established in $\ZF$ alone.
+Shoenfield's absoluteness theorem also holds for sentences rather than predicates, with a similar proof. This means a $\Sigma^1_2$ statement is true in $L$ if and only if it holds in $V$. Many results of classical analysis are $\Sigma^1_2$ statements. The Shoenfield absoluteness theorem says that if they can be established under $\VL$, they can be established in $\ZF$ alone.
+
+On the negative side, as we will soon see, Shoenfield absoluteness also puts strong limits on the use of forcing to establish independence results in analysis. 
