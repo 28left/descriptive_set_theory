@@ -116,29 +116,32 @@ Every $\bSigma^1_2$ set has cardinality at most $\aleph_1$ or has a perfect subs
                             
 Shoenfield used the tree representation of $\mathbf{\Sigma}^1_2$ sets to establish an important absoluteness result for $\Sigma^1_2$ sets of reals. 
 
-Suppose $A \subseteq \Baire$ is $\Sigma^1_2$. Then, by the Kleene Normal Form there exists a bounded formula $\phi(\alpha,\beta_0,\beta_1,m)$ such that 
+Suppose $A \subseteq \Baire$ is $\Sigma^1_2$. Then, by the Kleene Normal Form there exists a bounded formula of second order arithmetic $\varphi(v_0,v_1,v_2)$ such that 
 
 $$
-	\alpha \in A \iff \exists \beta_0 \, \forall \beta_1 \, \exists m \; \phi(\alpha,\beta_0,\beta_1,m).
+	\alpha \in A \iff \exists \beta_0 \, \forall \beta_1 \, \exists m \; \varphi(\alpha\Rest{m},\beta_0\Rest{m},\beta_1\Rest{m}).
 $$
 
-Let $M$ be in inner model of $\ZF$, i.e.\ $M$ is transitive and contains all ordinals. Since arithmetical formulas can be interpreted in $\ZF$, $M$ contains all recursive predicates over $\Nat$. In particular, since the truth of the bounded formula $\phi$ depends only on finite initial segments of $\alpha,\beta_0,\beta_1$, it defines a recursive predicate $R_\phi(\alpha,\beta_0,\beta_1,m) = R_\phi(\sigma,\tau_0,\tau_1,m)$, which in turns defines a subset of $\Nat^4$ that is contained in $M$. Hence we can define the \emph{relativization} of $A$ to $M$ as
+Let $M$ be an inner model of $\ZF$. Arithmetical formulas can be interpreted in $\ZF$ and we can also relativize them. This allows us to introduce a relativized version of $A$ by identifying, as usual, a set with the predicate that defines it:
 
 $$
-	A^M(\alpha) \iff \exists \beta_0 \in M \, \forall \beta_1 \in M \, \exists m \; R(\alpha,\beta_0,\beta_1,m).
+	A^M(\alpha) :\iff (\exists \beta_0 \in M\cap \Baire) \, (\forall \beta_1\in M \cap \Baire)  \, (\exists m) \: \varphi(\alpha\Rest{m},\beta_0\Rest{m},\beta_1\Rest{m})
 $$
 
-We say that $A$ is \defemph{absolute for} $M$ if for any $\alpha\in M$,
+Note that we do not have to relativize the inner natural number quantifier, since $\Nat$ is absolute for inner models, and also not the formula $\varphi$, since a bounded arithmetic formula translates into a bounded set-theoretic formula (with only natural number quantifiers) and is therefore absolute for $M$. 
+
+We can then say that $A$ is **absolute for** $M$ if for any $\alpha\in M$,
 
 $$
 	A^M(\alpha) \iff A(\alpha).
 $$
 
-Absoluteness itself can be extended and relativized in a straightforward manner to predicates analytical in some $\gamma \in \Baire \cap M$.
+Absoluteness can be extended and relativized in a straightforward manner to predicates analytical in some $\gamma \in \Baire \cap M$.
+
+All arithmetic predicates are absolute, since all quantifiers are natural number quantifiers. Shoenfield absoluteness extends this absoluteness to $\Sigma^1_2$ and $\Pi^1_2$ predicates.
 
 
-
-```{prf:theorem} Shoenfield Absoluteness
+```{prf:theorem} Shoenfield absoluteness
 :label: thm-Shoenfild-absoluteness
 
 Every $\Sigma^1_2(\gamma)$ predicate and every $\Pi^1_2(\gamma)$ predicate is absolute for all inner models $M$ of $\ZFC$ such that $\gamma \in M$. In particular, all $\Sigma^1_2$ and $\Pi^1_2$ relations are absolute for $L$.
@@ -155,7 +158,7 @@ $$
 
 Note that $T$ is in $M$.
 
-Now assume $\alpha \in M$ and $\alpha \in A^M$. So there is a $\beta \in M$ such that $T(\alpha,\beta)$ is well-founded in $M$. This is equivalent to the fact that in $M$ there exists an order preserving mapping $\pi: T(\alpha,\beta) \to \mathbf{Ord}^M$. 
+Now assume $\alpha \in M$ and $\alpha \in A^M$. So there is a $\beta \in M$ such that $T(\alpha,\beta)$ is well-founded in $M$. This is equivalent to the fact that in $M$ there exists an order preserving mapping $\pi: T(\alpha,\beta) \to \mathbf{Ord}$. 
 
 Since $M$ is an inner model and $T$ is the same in $V$ and $M$, such a mapping exists also in $V$. Hence $T(\alpha,\beta)$ is well-founded in $V$ and thus $\alpha \in A$.
 

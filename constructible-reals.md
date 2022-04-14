@@ -52,7 +52,7 @@ Unfortunately, the condensation lemma only holds for **transitive sets** (and $(
 So, for reals, we can formulate membership in $L$ now as follows:
 
 \begin{multline*} \tag{$*$}
-	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: [E_\beta \text{ is  extensional and well-founded} \\ \: \wedge \: (\omega,E_\beta) \models \phi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: [E_\beta \text{ is  extensional and well-founded} \\ \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
 \end{multline*}
 where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
@@ -65,7 +65,7 @@ It remains to show that the notions occurring inside the square brackets are def
 
 - (**a**) $\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_n$:
 \begin{equation*}
-    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\phi} \: \wedge \: \phi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \phi[\sigma] \}
+    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\varphi} \: \wedge \: \varphi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \}
 \end{equation*}
 
 - (**b**) $\quad$  If $\alpha \in \Baire$ and $E_\alpha$ is well-founded and extensional, then the following set is arithmetic in $\alpha$:
