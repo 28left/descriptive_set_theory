@@ -43,11 +43,10 @@ Then determining whether $\alpha \in F$ is **co-r.e.** in (the code of) $T_F$. I
 
 These simple observations suggest the following general approach to Borel sets.
 
-````{panels}
-:column: col-lg-12 p-2
+````{card}
 
 - Borel sets can be coded by a single infinite sequence in $\Baire$ (or $\Cant$).
-- Given the code, we can describe the Borel set effectively, by means of oracle computations.
+- Given the code, we can recover the Borel set effectively, by means of oracle computations.
 - The connection between degrees of unsolvability and definability results in a close correspondence between arithmetical sets ($\Sigma^0_n$) and Borel sets of finite order ($\bSigma^0_n$). 
 ````
 

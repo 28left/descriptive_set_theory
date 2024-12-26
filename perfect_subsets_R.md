@@ -134,6 +134,7 @@ Every closed subset of $\Real$ is either countable or of the cardinality of the 
 
 The results of this lecture give us a blueprint on how to verify the Continuum Hypothesis for a given family $\mathcal{F}$ of sets (of reals):
 
-> Show that every set in $\mathcal{F}$ is either countable or has a perfect subset.
+> **Exercise:** 
+Show that every set in $\mathcal{F}$ is either countable or has a perfect subset.
 
 Over the next few lectures we will see for which families we can verify this **perfect set property**.
