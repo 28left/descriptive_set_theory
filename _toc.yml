@@ -4,6 +4,9 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Ordinals and cardinals
+    chapters:
+      - file: ordinals.md
   - caption: Polish spaces
     chapters:
       - file: perfect_subsets_R
