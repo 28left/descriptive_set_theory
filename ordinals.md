@@ -336,7 +336,12 @@ This shows immediately that $\omega$ is limit.
 \begin{gather*}
 \omega, \omega+1, \omega+2, \ldots \omega+\omega, \omega+\omega+1, \omega + \omega+2, \ldots \omega+\omega+ \omega, \qquad \quad \\ \omega + \omega+ \omega+1, \omega + \omega+ \omega+2, \ldots  \omega \cdot \omega,  \omega \cdot \omega +1,\ldots, \omega^{\omega} \ldots \omega^{\omega^{\omega}} \ldots
 \end{gather*}
-All of the ordinals listed here are still countable (as sets). The supremum of all countable ordinals is denoted by $\omega_1$, the **first uncountable ordinal**. After $\omega_1$, we have again successors, limits, and so on. 
+All of the ordinals listed here are still countable (as sets). The supremum of the set of all countable ordinals is denoted by $\omega_1$, the **first uncountable ordinal**. After $\omega_1$, we have again successors, limits, and so on. 
+
+
+## Metamathematical issues
+
+Is there a *set* of all ordinals? If so, it would be 
 
 
 
