@@ -266,13 +266,47 @@ If $a \subset \beta$, $a$ is linearly ordered by $\in$ (as a subset of $\beta$).
 
 It remains to show $a \in \beta$. Since $a$ is a proper subset of $\beta$, by well-foundedness there exists a $\in$-minimal element of $\gamma \in \beta \setminus a$. We claim $a = \gamma$. By $\in$-minimality of $\gamma$, every element of $\gamma$ cannot be in $\beta\setminus a$ and therefore has to be in $a$. Hence $\gamma \subseteq a$. On the other hand, if $x \in a$, then, by assumption $x \in \beta$, and since $\in$ linearly orders $\beta$, 
 $$
-x \in \gamma \; \vee \; x = \gamma \; vee \; \gamma \in x.
+x \in \gamma \; \vee \; x = \gamma \; \vee \; \gamma \in x.
 $$
 The latter two are impossible due to $\gamma \notin a$. Hence $x \in \gamma$ and therefore $a \subseteq \gamma$, yielding $a =\gamma$.
 ```
 
+```{danger} Theorem (well-ordering of ordinals)
+:nonumber: true
+:icon: false
+
+The ordinal numbers are well-ordered by $<$.
+```
+
+```{hint} Hint
+:class: dropdown
+:nonumber: true
+
+Most properties follow directly from well-foundedness and the fact that ordinals are transitive as sets. 
+
+To show that ordinals are linearly ordered by $<$, look at the intersection of two ordinals and try to apply @pro-order-ordinals.
+```
+
+
+```{prf:proof}
+:nonumber: true
+:class: dropdown
+
+We first show $<$ is a linear order. Irreflexivity follows from well-foundedness of $\in$. Transitivity of $<$ follow from the transitivity of ordinals as sets. To show
+$$
+\alpha < \beta \; \vee \; \alpha = \beta \; \vee \; \beta < \alpha,
+$$
+observe that the intersection of two ordinals is an ordinal, the *minimum* of the two ordinals. Let $\gamma = \alpha \cap \beta$. Then $\gamma \subseteq \alpha$, so by @pro-order-ordinals, $\gamma \in \alpha$ or $\gamma = \alpha$ and similarly $\gamma \in \beta$ or $\gamma = \beta$. But in the case $\gamma \in \alpha, \gamma \in \beta$ we would have $\gamma \in \alpha \cap \beta = \gamma$, contradicting well-foundedness.
+
+Finally, if $A$ is a non-empty set of ordinals, the well-ordering condition on $<$ spells out as
+$$
+\exists \alpha \in A \forall \beta \in A \; & \beta \notin \alpha.
+$$
+But this holds since we assume all sets are well-founded.
+```
+
 ## Basic properties of ordinals
-We can now deduce some basic facts about the structure of ordinals:
+Using the results obtained so far. we can now deduce some basic facts about the structure of ordinals:
 
 - $0 = \emptyset$ is the *smallest ordinal*.
 
@@ -294,12 +328,19 @@ $$
 $$
 \lambda \neq 0 \: \wedge \: \forall \alpha < \lambda \; (\alpha+1 < \lambda).
 $$
-This shows immediately that $\omega$ is limit.
+This shows immediately that $\omega$ is limit. 
 
-- Every *set* of ordinals $a$ has a **supremum** $\sup a = \bigcup_{\alpha \in a} \alpha$ that is itself an ordinal, the least ordinal at least as large as all ordinals in $a$.
+- More generally, if $A$ is a set of ordinals, $\sup A = \bigcup_{\alpha \in A} \alpha$ is an ordinal and is the least upper bound for $A$.
+
+- The first limit ordinal $\omega$ is followed by a number of successor ordinals as well as their limits as limit ordinals:
+\begin{gather*}
+\omega, \omega+1, \omega+2, \ldots \omega+\omega, \omega+\omega+1, \omega + \omega+2, \ldots \omega+\omega+ \omega, \qquad \quad \\ \omega + \omega+ \omega+1, \omega + \omega+ \omega+2, \ldots  \omega \cdot \omega,  \omega \cdot \omega +1,\ldots, \omega^{\omega} \ldots \omega^{\omega^{\omega}} \ldots
+\end{gather*}
+All of the ordinals listed here are still countable (as sets). The supremum of all countable ordinals is denoted by $\omega_1$, the **first uncountable ordinal**. After $\omega_1$, we have again successors, limits, and so on. 
+
+
+
 
 - Every well-ordering $(b,<)$ on a set is order-isomorphic to a unique ordinal, the **well-order type** of $(b,<)$
-
-- The $\in$-relation is a well-ordering on the class of all ordinals.
 
 - The ordinals $\mathbf{Ord}$ form a proper class (Burali-Forti antinomy).
