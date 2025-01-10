@@ -1,35 +1,6 @@
 # Regularity Properties of Analytic sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-```
 
-
-In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of **co-analytic sets** $\PP[1]$.
+In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of **co-analytic sets** $\PP{1}$.
 
 The analytic sets also have the perfect subset property (PS). 
 
@@ -68,11 +39,11 @@ For every family $\Gamma$ of subsets of a set $X$,
 We clearly have  $ \Gamma \subseteq  \mathcal{A} \Gamma$, so that we only need to prove $\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma$.
 
 Suppose $A = \mathcal{A} P$ with $P_\sigma \in \mathcal{A} \Gamma$, that is, $P_\sigma = \mathcal{A} Q_{\sigma,\tau}$ with $Q_{\sigma,\tau} \in  \Gamma$. Then
-\begin{eqnarray*}
-z \in A & \iff & \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
-    & \iff & \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\
-    &\iff & \exists \alpha \,  \exists \beta \, \forall m \, \forall n \, (z \in Q_{\alpha\Rest{m},(\beta)_m\Rest{n}}),
-\end{eqnarray*}
+\begin{align*}
+z \in A & \iff  \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
+    & \iff  \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\
+    &\iff  \exists \alpha \,  \exists \beta \, \forall m \, \forall n \, (z \in Q_{\alpha\Rest{m},(\beta)_m\Rest{n}}),
+\end{align*}
 where $(\beta)_m$ denotes the $m$-th column of $\beta$.
 
 Now we contract the two function quantifiers to a single one, using a (computable) homeomorphism $\Baire \times \Baire$, and the two universal number quantifiers into a single one using the paring function $\Tup{.,.}$. Then $A$ can be characterized as 
@@ -87,7 +58,7 @@ where $R_\sigma = Q_{\varphi(\sigma), \psi(\sigma)} \in \Gamma$ for suitable cod
 :label: cor-analytic-Souslin-closed
 
 $$
-	\mathcal{A}\PS[1] = \PS[1].
+	\mathcal{A}\PS{1} = \PS{1}.
 $$
 ```
 
@@ -187,10 +158,10 @@ Every analytic set is Lebesgue measurable.
 :class: dropdown
 :nonumber: true
 
-By the idempotence of ${\cal A}$, ${\cal A}\PS[1] = {\cal A}{\cal
-  A}\BP[1] = {\cal A}\BP[1] = \PS[1]$. On the other hand, we have ${\cal A}\BP[1] \subseteq
+By the idempotence of ${\cal A}$, ${\cal A}\PS{1} = {\cal A}{\cal
+  A}\BP{1} = {\cal A}\BP{1} = \PS{1}$. On the other hand, we have ${\cal A}\BP{1} \subseteq
 {\cal A}\mathbf{LM} = \mathbf{LM}$, since the Souslin operation is monotone on
-classes. This yields $\PS[1] \subseteq \mathbf{LM}$.
+classes. This yields $\PS{1} \subseteq \mathbf{LM}$.
 ```
 
 

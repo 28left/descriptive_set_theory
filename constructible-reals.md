@@ -1,26 +1,4 @@
 # Constructible Reals
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-```
 
 In this lecture we transfer the results about $L$ to the projective hierarchy. The main idea is to relate sets of reals that are defined by set theoretic formulas to sets defined in second order arithmetic.
 
@@ -51,9 +29,9 @@ Unfortunately, the condensation lemma only holds for **transitive sets** (and $(
 
 So, for reals, we can formulate membership in $L$ now as follows:
 
-\begin{multline*} \tag{$*$}
-	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: [E_\beta \text{ is  extensional and well-founded} \\ \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
-\end{multline*}
+\begin{align*} \tag{$*$}
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \quad \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
+\end{align*}
 where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
 
@@ -92,10 +70,10 @@ is arithmetic in $\alpha$.
 
 Let $\psi(v_0, v_1, v_2)$ be the formula $\Tup{v_0, v_1} \in v_2$. Then 
 
-\begin{multline*}
-    \pi_\alpha(m) = \gamma \iff \\ 
-    \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
-\end{multline*}
+\begin{align*}
+    & \pi_\alpha(m) = \gamma \iff \\ 
+    & \qquad \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
+\end{align*}
 
 Now apply the previous observation and (a).
 ```

@@ -1,28 +1,4 @@
 # Large Cardinals
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
 
 ## Inaccessible cardinals
 

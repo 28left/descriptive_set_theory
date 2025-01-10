@@ -1,30 +1,4 @@
 # The Constructible Universe
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-
-```
 
 
 A set $X$ is **(first-order) definable** in a set $Y$ (from parameters) if there exists a first-order formula $\varphi(x_0, x_1, \dots, x_n)$ in the language of set theory (i.e. only using the binary relation symbol $\in$) such that for some $a_1, \dots, a_n \in Y$,

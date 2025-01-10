@@ -1,27 +1,4 @@
 # Shoenfield Absoluteness
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-```
-
 
 ## Tree representations of $\mathbf{\Sigma}^1_2$ sets
 

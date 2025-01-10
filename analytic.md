@@ -16,7 +16,7 @@ $$
 Here are some simple properties of analytic sets.
 
 ```{prf:proposition}
- :label: prop-prop-analytic
+:label: prop-prop-analytic
 
 - **(i)** Every Borel set is analytic.
 - **(ii)** A continuous image of analytic set is analytic.
@@ -50,7 +50,7 @@ For a subset $A$ of a Polish space $X$, the following are equivalent.
 - **(ii)** $A$ is empty or there exists a Polish space $Y$ and a continuous $f:Y \to X$ such that $f(Y) = A$,
 - **(iii)** $A$ is empty or there exists a Polish space $Y$, a Borel set $B \subseteq Y$ and a continuous $f:Y \to X$ such that $f(B) = A$. 
 - **(iv)** $A$ is the **projection** of a closed set $F \subseteq \Baire \times X$ along $\Baire$,
-- **(v)** $A$ is the projection of a $\BP[2]$ set $G \subseteq  \Cant \times   X  $ along $\Cant$,
+- **(v)** $A$ is the projection of a $\BP{2}$ set $G \subseteq  \Cant \times   X  $ along $\Cant$,
 - **(vi)** $A$ is the projection of a Borel set $B \subseteq X\times Y$ along $Y$, for some Polish space $Y$.
 ```
 
@@ -72,7 +72,7 @@ hence $A$ is the projection of the closed set $\Op{Graph}(f)$ along $\Baire$.
 
 (iv) $\Rightarrow$ (iii): Clear, since projections are continuous.
 
-(iv) $\Rightarrow$ (v): $\Baire$ is homeomorphic to a $\BP[2]$ subset of $\Cant$. (Exercise!)
+(iv) $\Rightarrow$ (v): $\Baire$ is homeomorphic to a $\BP{2}$ subset of $\Cant$. (Exercise!)
 
 (v) $\Rightarrow$ (vi), (vi) $\Rightarrow$ (iii): Obvious.
 ```
@@ -136,13 +136,13 @@ It follows from {prf:ref}`thm-Souslin-Borel-images` and the {prf:ref}`Lusin sepa
 Sets whose complement is analytic are called **co-analytic**. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space $X$ are denoted by
 
 $$
-	\PP[1](X).
+	\PP{1}(X).
 $$
 
 If we define, again analogy to the Borel hierarchy,
 
 $$
-	\bDelta^1_1(X) = \PS[1](X) \cap \PP[1](X),
+	\bDelta^1_1(X) = \PS{(1)}(X) \cap \PP{1}(X),
 $$
 
 then Souslin's Theorem states that
@@ -183,7 +183,7 @@ $$
 :label: analytic-Souslin-op
 
 $$
-	\PS[1](X)\; = \; \mathcal{A}\,\BP[1](X).
+	\PS{1}(X)\; = \; \mathcal{A}\,\BP{1}(X).
 $$
 ```
 
@@ -202,7 +202,7 @@ A =  \mathcal{A} \,P,
 \end{equation*}
 for the Souslin scheme $P = (P_\sigma)$.
 
-To see that any set $A$ in $\mathcal{A}\,\BP[1](X)$ is analytic, consider ($**$). If the $P_\sigma$ are closed, the condition
+To see that any set $A$ in $\mathcal{A}\,\BP{1}(X)$ is analytic, consider ($**$). If the $P_\sigma$ are closed, the condition
 
 $$
     (\alpha,x) \in F \iff \forall n \in \Nat \; x \in P_{\alpha\Rest{n}}

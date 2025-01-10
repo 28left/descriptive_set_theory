@@ -125,7 +125,6 @@ Let $(A,<)$ be a well-order and assume $f:A \to A$ is a self-embedding. Then for
 ```
 ```{prf:proof}
 :class: dropdown
-:class: dropdown
 :nonumber: true
 
 If the set $\{x \in A \colon f(x) < x\}$ is non-empty, it has a minimal element $z$. But since $f$ is increasing, this would imply $f(f(z)) < f(z)$, contradicting the minimality of $z$. 
@@ -148,7 +147,6 @@ No well-order is isomorphic to an initial segment of itself.
 ```
 
 ```{prf:proof}
-:class: dropdown
 :class: dropdown
 :nonumber: true
 
@@ -226,7 +224,6 @@ Any element of an ordinal is an ordinal.
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
-:class: dropdown
 
 Any subset of a linear order is again a linear order under the induced order relation. It remains to show that $(b, \in_b)$ is transitive. Let $\alpha$ be an ordinal, and assume $b \in \alpha$. Let $x \in c \in b$. We claim $x \in b$. Since $\alpha$ is transitive, $b \subseteq \alpha$ and hence $c \in \alpha$. By transitivity of $\alpha$ again, $c \in \alpha$. Thus $x,b \in \alpha$, and since $\in_\alpha$ linearly orders $\alpha$, we must have
 $$
@@ -258,7 +255,6 @@ $$
 $$
 ```
 ```{prf:proof}
-:class: dropdown
 :nonumber: true
 :class: dropdown
 
@@ -277,7 +273,6 @@ The latter two are impossible due to $\gamma \notin a$. Hence $x \in \gamma$ and
 ```
 
 ```{danger} Theorem (well-ordering of ordinals)
-:nonumber: true
 :icon: false
 
 The ordinal numbers are well-ordered by $<$.
@@ -285,7 +280,6 @@ The ordinal numbers are well-ordered by $<$.
 
 ```{hint} Hint
 :class: dropdown
-:nonumber: true
 
 Most properties follow directly from well-foundedness and the fact that ordinals are transitive as sets. 
 
@@ -294,7 +288,6 @@ To show that ordinals are linearly ordered by $<$, look at the intersection of t
 
 
 ```{prf:proof}
-:class: dropdown
 :nonumber: true
 :class: dropdown
 
@@ -359,7 +352,6 @@ Later on we will develop an axiomatic approach to sets which aims to exclude ant
 We introduced ordinals with the goal to have a specific representation for any well-order. 
 
 ```{danger} Theorem (representation theorem for well-orders)
-:nonumber: true
 :icon: false
 
 Any well-ordered set $(A,<)$ is order-isomorphic to a unique ordinal $\alpha$. The isomorphism is unique.

@@ -1,31 +1,4 @@
 # The Axiom of Constructibility
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
-
 
 We can add to $\ZF$ the axiom that all sets are constructible, i.e.
 
@@ -56,10 +29,10 @@ We first show that the mapping is $\Sigma_1$. The mapping is obtained by ordinal
 
 In general, if a function $G: \V \to \V$ is $\Sigma_1$ and $F: \Ord \to \V$ is obtained by recursion from $G$, i.e. $F(\alpha) = G(F\Rest{\alpha})$, then $F$ is also $\Sigma_1$. This is because
 
-\begin{multline*}
-    y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
-        \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
-\end{multline*}
+\begin{align*}
+    y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: & ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
+        & \quad \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
+\end{align*}
 
 Applying some of the various prefix transformations for $\Sigma_1$-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all $\Delta_0$ properties, the above formula can be shown to be $\Sigma_1$, too.
 
