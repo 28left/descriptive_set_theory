@@ -293,7 +293,7 @@ For any $n \geq 1$,
 :class: dropdown
 :nonumber: true
 
-Since $\BS{n} \nsubseteq \BP{n}$ and $\BP{n} \nsubseteq \BS{n}$, $\bDelta^0_n \subsetneq \BS{n},\BP{n}$. On the other hand if $\BS{n} = \bDelta^0_{n+1}$, then $\BS{n}$ would be closed under complements, and hence $\BS{n} = \BP{n}$, contradicting {prf:ref}`thm-Borel-proper`.
+Since $\BS \nsubseteq \BP$ and $\BP \nsubseteq \BS$, $\bDelta^0_n \subsetneq \BS,\BP$. On the other hand if $\BS = \bDelta^0_{n+1}$, then $\BS$ would be closed under complements, and hence $\BS = \BP$, contradicting {prf:ref}`thm-Borel-proper`.
 ```
 
 

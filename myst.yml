@@ -18,10 +18,14 @@ project:
       macro: \mathbb{Z}
     \Rat:
       macro: \mathbb{Q}
+    \Q:
+      macro: \mathbb{Q}
     \Real:
       macro: \mathbb{R}
     \R:
       macro: \mathbb{R}
+    \C:
+      macro: \mathbb{C}
     \CH:
       macro: \mathsf{CH}
     \ZF:
@@ -45,7 +49,7 @@ project:
     \diam:
       macro: \mathrm{diam}
     \Ci:
-      macro: \mathbb{T}}
+      macro: \mathbb{T}
     '\Str': '2^{<\Nat}'
     '\Nstr': '\Nat^{<\Nat}'
     '\Sle': '\subset'
@@ -80,6 +84,7 @@ project:
     '\Qu': '\mathsf{Q}'
     '\GN': '\ulcorner #1 \urcorner'
     '\Const': '\underline{#1}'
+    '\Ap': '\Op{Ap}'
 
 
 

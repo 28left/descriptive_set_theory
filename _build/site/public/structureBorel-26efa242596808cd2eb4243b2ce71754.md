@@ -154,10 +154,10 @@ For all $n \geq 1$, $\bSigma^0_n$, $\bPi^0_n$, and $\bDelta^0_n$ are closed unde
 In this case we use the computable coding function $\pi: \Nat \to \Nstr$. 
 We have the following equivalence, which immediately implies the closure properties for $\bSigma^0_n$ and $\bPi^0_n$, respectively, and hence also for $\bDelta^0_n$.
 
-\begin{align*}
-    \forall m \le n \, \exists k \; P(m,k) &\iff \exists k  \, \forall m \le n \:  P(m,\pi(k)_m)\\
-    \exists m \le n  \, \forall k \; P(m,k) &\iff \forall k  \, \exists m \le n \;   P(m,\pi(k)_m)
-\end{align*}
+\begin{eqnarray*}
+    \forall m \le n \, \exists k \; P(m,k) &\iff& \exists k  \, \forall m \le n \:  P(m,\pi(k)_m)\\
+    \exists m \le n  \, \forall k \; P(m,k) &\iff& \forall k  \, \exists m \le n \;   P(m,\pi(k)_m)
+\end{eqnarray*}
 ```
 
 Finally, the levels of the Borel hierarchy are closed under continuous preimages.
@@ -226,7 +226,7 @@ For any $n \geq 1$, there exists a set $U \subseteq \Baire \times \Baire$ that i
 
 We can use the Borel codes defined in the previous lecture.
 
-First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP{n}$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
+First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
 
 For fixed $n$, we let
 
@@ -293,7 +293,7 @@ For any $n \geq 1$,
 :class: dropdown
 :nonumber: true
 
-Since $\BS{n} \nsubseteq \BP{n}$ and $\BP{n} \nsubseteq \BS{n}$, $\bDelta^0_n \subsetneq \BS{n},\BP{n}$. On the other hand if $\BS{n} = \bDelta^0_{n+1}$, then $\BS{n}$ would be closed under complements, and hence $\BS{n} = \BP{n}$, contradicting {prf:ref}`thm-Borel-proper`.
+Since $\BS \nsubseteq \BP$ and $\BP \nsubseteq \BS$, $\bDelta^0_n \subsetneq \BS,\BP$. On the other hand if $\BS = \bDelta^0_{n+1}$, then $\BS$ would be closed under complements, and hence $\BS = \BP$, contradicting {prf:ref}`thm-Borel-proper`.
 ```
 
 

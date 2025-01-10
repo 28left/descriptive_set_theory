@@ -226,7 +226,7 @@ For any $n \geq 1$, there exists a set $U \subseteq \Baire \times \Baire$ that i
 
 We can use the Borel codes defined in the previous lecture.
 
-First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP{n}$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
+First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
 
 For fixed $n$, we let
 
@@ -293,7 +293,7 @@ For any $n \geq 1$,
 :class: dropdown
 :nonumber: true
 
-Since $\BS{n} \nsubseteq \BP{n}$ and $\BP{n} \nsubseteq \BS{n}$, $\bDelta^0_n \subsetneq \BS{n},\BP{n}$. On the other hand if $\BS{n} = \bDelta^0_{n+1}$, then $\BS{n}$ would be closed under complements, and hence $\BS{n} = \BP{n}$, contradicting {prf:ref}`thm-Borel-proper`.
+Since $\BS \nsubseteq \BP$ and $\BP \nsubseteq \BS$, $\bDelta^0_n \subsetneq \BS,\BP$. On the other hand if $\BS = \bDelta^0_{n+1}$, then $\BS$ would be closed under complements, and hence $\BS = \BP$, contradicting {prf:ref}`thm-Borel-proper`.
 ```
 
 
