@@ -1,32 +1,4 @@
 # The Structure of Borel Sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Pow}{\mathcal{P}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Qu}{\mathsf{Q}}
-\newcommand{\Conc}{\mbox{}^\frown}
-\DeclareMathOperator{\Ap}{ap}
-```
 
 In this chapter, we further investigate the structure of Borel sets. We will use the results of the previous lecture to derive various closure properties and other structural results. As an application, we see that the Borel hierarchy is indeed proper.
 
@@ -70,7 +42,7 @@ $$
 
 where $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ is bounded, and $\Qu$ is ``$\forall$'' if $n$ is odd, and "$\exists$" if $n$ is even.
 
-What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form $\alpha(t_1) = t_2$. This implies that the truth of an atomic formula is determined by \emph{finitely many positions} in $\alpha$. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of $\Baire$. 
+What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form $\alpha(t_1) = t_2$. This implies that the truth of an atomic formula is determined by *finitely many positions* in $\alpha$. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of $\Baire$. 
 
 On the other hand, the reals for which a bounded formula does not hold are definable by a bounded formula, too, since the negation of a bounded formula is again a bounded formula. We conclude that **bounded formulas define clopen subsets of $\Baire$**. On the other hand, if we have $\bSigma^0_1$-code for a set $A$ and its complement, we can decide the relation $A(\alpha\Rest{n})$ computably in the code. 
 
@@ -106,6 +78,9 @@ For each $n \geq 1$, $\bSigma^0_n$ is closed under $\exists^\Nat$, and $\bPi^0_n
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We prove the result for $\Sigma^0_n$ (lightface). The boldface case follows by relativization, and the proof for $\bPi^0_n$ is completely dual.
 
 Let $\phi(x_1, \dots, x_n, z, \alpha)$ be a bounded formula such that 
@@ -142,6 +117,9 @@ For all $n \geq 1$,
 ```
 	
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 One can prove this by induction along the hierarchy. To obtain the closure under finite unions and intersections, one can use the following logical equivalences.
 \begin{eqnarray*}
     \exists x \, P(x) \, \wedge \,  \exists y \, R(y) &\iff& \exists x  \exists y \, (P(x) \, \wedge \,  R(y)) \\
@@ -170,6 +148,9 @@ For all $n \geq 1$, $\bSigma^0_n$, $\bPi^0_n$, and $\bDelta^0_n$ are closed unde
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 In this case we use the computable coding function $\pi: \Nat \to \Nstr$. 
 We have the following equivalence, which immediately implies the closure properties for $\bSigma^0_n$ and $\bPi^0_n$, respectively, and hence also for $\bDelta^0_n$.
 
@@ -188,6 +169,9 @@ For all $n \geq 1$, for any $A \subseteq \Baire$, and for any continuous $f: \Ba
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 This follows easily by induction on $n$, since open and closed sets are closed under continuous preimages.
 
 However, we can also argue via definability, since by {prf:ref}`prop-product-continuous` one can represent a continuous function through a monotone mapping $\psi$ from finite strings to finite strings.  We have
@@ -237,6 +221,9 @@ For any $n \geq 1$, there exists a set $U \subseteq \Baire \times \Baire$ that i
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We can use the Borel codes defined in the previous lecture.
 
 First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\BP$)-codes is homeomorphic to $\Baire$. This follows easily from the definition of the Borel codes. Hence, if we fix $n$, every $\gamma\in \Baire$ represents a $\bSigma^0_n$ ($\bPi^0_n$)-code of a $\bSigma^0_n$ ($\bPi^0_n$) set, and every such set in turn has a code $\gamma \in \Baire$. 
@@ -267,6 +254,9 @@ For any $n \geq 1$, $\bSigma^0_n \neq \bPi^0_n$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $U$ be an $\Baire$-universal set for $\bSigma^0_n$. Put
 
 $$
@@ -300,6 +290,9 @@ For any $n \geq 1$,
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Since $\BS \nsubseteq \BP$ and $\BP \nsubseteq \BS$, $\bDelta^0_n \subsetneq \BS,\BP$. On the other hand if $\BS = \bDelta^0_{n+1}$, then $\BS$ would be closed under complements, and hence $\BS = \BP$, contradicting {prf:ref}`thm-Borel-proper`.
 ```
 
@@ -309,7 +302,7 @@ Since $\BS \nsubseteq \BP$ and $\BP \nsubseteq \BS$, $\bDelta^0_n \subsetneq \BS
 We saw that the **Borel sets of finite order**
 
 $$
-	\operatorname{Borel}_\omega = \bigcup_{n < \omega} \BS[n]
+	\operatorname{Borel}_\omega = \bigcup_{n < \omega} \BS{n}
 $$
 
 form a proper hierarchy. This fact also implies that $\Op{Borel}_\omega$ does not exhaust all Borel sets.
@@ -317,23 +310,26 @@ form a proper hierarchy. This fact also implies that $\Op{Borel}_\omega$ does no
 ```{prf:proposition}
 :label: prop-nonfinite-Borel
 
-There exists a Borel set $B$ that is not $\BS$ for any $n \in \Nat$.
+There exists a Borel set $B$ that is not $\BS{n}$ for any $n \in \Nat$.
 ```
 
 ```{prf:proof}
-For every $n \in \Nat$, pick a set $B_n$ in $\BP \setminus \BS$. Put
+:class: dropdown
+:nonumber: true
+
+For every $n \in \Nat$, pick a set $B_n$ in $\BP{n} \setminus \BS{n}$. Put
 
 $$
     B = \bigcup_{n \in \Nat} \{(n,\alpha) \colon \alpha \in B_n \}.
 $$
 
-Each of the sets in the union is Borel and hence $B$ is Borel. If $B$ were of finite order, it would be $\BS[k]$ for some $k \geq 1$. Since each $\BS$ is closed under finite intersections, it follows that for all $m \geq 1$, 
+Each of the sets in the union is Borel and hence $B$ is Borel. If $B$ were of finite order, it would be $\BS{k}$ for some $k \geq 1$. Since each $\BS{n}$ is closed under finite intersections, it follows that for all $m \geq 1$, 
 
 $$
     B \cap \Cyl{\Tup{m}} 
 $$
 
-is $\BS[k]$. But $B \cap \Cyl{\Tup{m}}$ is homeomorphic to $B_m$, hence $B_m$ in $\BS[k]$ for all $m \geq 1$, contradiction.
+is $\BS{k}$. But $B \cap \Cyl{\Tup{m}}$ is homeomorphic to $B_m$, hence $B_m$ in $\BS{k}$ for all $m \geq 1$, contradiction.
 ```
 
 We can extend the Borel hierarchy to arbitrary ordinals.
@@ -354,10 +350,13 @@ It actually suffices to consider ordinals up to $\omega_1$, the first uncountabl
 ```{prf:proposition}
 :label: prop-Borel-omega1
 
-For every Borel set $B$ there exists $\xi < \omega_1$ such that $B \in \BS[\xi]$.
+For every Borel set $B$ there exists $\xi < \omega_1$ such that $B \in \BS{\xi}$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $B$ is open, this is clear. It is also clear if $B$ is the complement of a Borel for which the statement has been verified.
 
 Assume finally that 
@@ -369,28 +368,31 @@ $$
 and assume the statement holds for each $B_n$. For each $n$, let $\xi_n$ be a countable ordinal such that 
 
 $$
-    B_n \in \BP[{\xi_n}].
+    B_n \in \BP{\xi_n}.
 $$
 
 Then 
 
 $$
-    B \in \BS[\xi], \; \text{ where $\xi = \sup \{\xi_n +1 \colon n \in \Nat\}$}.
+    B \in \BS{\xi}, \; \text{ where $\xi = \sup \{\xi_n +1 \colon n \in \Nat\}$}.
 $$
 
 Since each $\xi_n$ is countable, $\xi$ is countable.
 ```
 
-Borel sets of infinite order have the **same closure properties as their counterparts of finite order**. The proofs, however have to proceed by induction using the topological properties of $\BS[\xi]$ and $\BP[\xi]$, since the characterization via definability in arithmetic is no longer available -- the arithmetical hierarchy reaches only to $\omega$.
+Borel sets of infinite order have the **same closure properties as their counterparts of finite order**. The proofs, however have to proceed by induction using the topological properties of $\BS{\xi}$ and $\BP{\xi}$, since the characterization via definability in arithmetic is no longer available -- the arithmetical hierarchy reaches only to $\omega$.
 
 Similarly, the Hierarchy Theorem ({prf:ref}`thm-Borel-proper`) extends to the transfinite levels. As the finite levels, this follows from the existence of universal sets for each level, which we now prove for the full hierarchy.
 
 ```{prf:proposition} 
 :label: prop-universal-general
-For each $\xi < \omega_1$, there exists a $\Baire$-universal set for $\BS[\xi]$ $(\BP[\xi])$.
+For each $\xi < \omega_1$, there exists a $\Baire$-universal set for $\BS{\xi}$ $(\BP{\xi})$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $U$ is $\Baire$-universal for $\bSigma^0_\xi$, then 
 
 $$
@@ -409,7 +411,7 @@ $$
     A = \{ \alpha \colon (\alpha,\gamma) \not\in U \}. 
 $$
 
-It remains to show that each $\BS[\xi]$ has an $\Baire$-universal set. By induction hypothesis, for every $\eta < \xi$ exists a $\Baire$-universal set $U_\eta$ for $\BP[\eta]$. Since $\xi$ is countable, we can pick a monotone  sequence of ordinals $(\xi_n)$ such that $\xi = \sup \{\xi_n + 1 \colon n < \omega \}$. Define
+It remains to show that each $\BS{\xi}$ has an $\Baire$-universal set. By induction hypothesis, for every $\eta < \xi$ exists a $\Baire$-universal set $U_\eta$ for $\BP{\eta}$. Since $\xi$ is countable, we can pick a monotone  sequence of ordinals $(\xi_n)$ such that $\xi = \sup \{\xi_n + 1 \colon n < \omega \}$. Define
 
 $$
     U_\xi =  \{ (\alpha, \gamma) \colon \exists n (\alpha, (\gamma)_n) \in U_{\xi_n} \},
@@ -417,10 +419,10 @@ $$
 
 where $(\gamma)_n$ denotes the $n$th column of $\gamma$.
 
-It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS[\xi]$. (Note that any set $A$ in $\BS[\xi]$ can be represented as $\bigcup_n A_n$ with $A_n \in \BP[\xi_n]$, since $(\xi_n+1)$ is cofinal in $\xi$.)
+It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS{\xi}$. (Note that any set $A$ in $\BS{\xi}$ can be represented as $\bigcup_n A_n$ with $A_n \in \BP{\xi_n}$, since $(\xi_n+1)$ is cofinal in $\xi$.)
 ```
 
-The construction of the universal $\BS[\xi]$ set bears some resemblance to the construction of a $\bSigma^0_{n+1}$ code. It is indeed possible to formally define Borel codes for *all* Borel sets.
+The construction of the universal $\BS{\xi}$ set bears some resemblance to the construction of a $\bSigma^0_{n+1}$ code. It is indeed possible to formally define Borel codes for *all* Borel sets.
 
 ```{prf:definition}
 :label: def-Borel-codes-transfinite

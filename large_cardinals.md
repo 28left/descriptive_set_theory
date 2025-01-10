@@ -107,6 +107,9 @@ If $\kappa$ is strongly inaccessible, $|V_\kappa| = \kappa$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 It suffices to show that $|V_\alpha| < \kappa$ for all $\alpha < \kappa$. This follows by a straightforward induction, using the fact that $\kappa$ is strongly inaccessible. 
 ```
 
@@ -123,6 +126,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 ($\Rightarrow$) $x \in V_\kappa$ implies $|x| < |V_\kappa|$. Apply {prf:ref}`prop-cardinality-Vkappa`.
 
 ($\Leftarrow$) Since $x \subseteq V_\kappa$, each $y \in x$ has rank $< \kappa$. Since $|x| < \kappa$, by regularity of $\kappa$, 
@@ -143,6 +149,9 @@ If $\kappa$ is strongly inaccessible, then $V_\kappa \models \ZFC$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We verify that $V_\kappa$ satisfies the axiom of *Replacement*.
 Suppose $x \in V_\kappa$ and $f:x \to V_\kappa$ is a function. Then $f[x] \subseteq V_\kappa$, and by {prf:ref}`prop-inaccessible-cardinality`, $|f[x]| \leq |x| < \kappa$. Applying the other direction of {prf:ref}`prop-inaccessible-cardinality` to $f[x]$, we obtain $f[x] \in V_\kappa$, as desired.
 ```
@@ -207,6 +216,9 @@ If $\kappa$ is the least cardinal for which a measure satisfying (M1)-(M3) exist
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose $m$ is a measure on $\kappa$ that is not $\kappa$-additive. 
 Then, for some $\gamma < \kappa$, there exists a sequence $(A_\xi)_{ \xi< \gamma}$ of disjoint subsets of $\kappa$ so that 
 
@@ -280,6 +292,9 @@ If $U$ is a $\kappa$-complete, non-principal ultrafilter on $\kappa$, then every
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Since $U$ is non-principal, no *singleton* set $\{x\}$ can be in $U$ (for this would imply $\kappa\setminus \{x\} \notin U$ and therefore no subset of it would be in $U$ either, contradicting the non-principality of $U$).
 
 If $X \in U$ and $|X| < \kappa$, then $X$ is the union of $< \kappa$ many singletons. Since $\neg U$ is a $\kappa$-complete prime ideal, this implies $X \in \neg U$, contradiction.
@@ -292,6 +307,9 @@ If $\kappa$ is measurable, then it is regular.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $\kappa$ were singular, it would be the union of $<\kappa$-many sets of cardinality $<\kappa$. Applying {prf:ref}`lem-cardinality-kappa-ultrafilter` leads to a contradiction.
 ```
 
@@ -302,6 +320,9 @@ A measurable cardinal is (strongly) inaccessible.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 By {prf:ref}`prop-measurable-regular`, any measurable cardinal is regular. Assume for a contradiction there exists $\gamma < \kappa$ with $2^\gamma > \kappa$. As $2^\gamma > \kappa$, there exists a set $S$ of functions $f: \gamma \to \{0,1\}$ with $|S| = \kappa$. Let $U$ be a $\kappa$-complete, non-principal ultrafilter on $S$. 
 
 For $\alpha < \gamma, i \in \{0,1\}$, let
@@ -420,7 +441,10 @@ Show that if there is a normal filter over $\kappa$, then $\kappa$ is uncountabl
 Show that if $\kappa$ is measurable, then there is a normal ultrafilter on $\kappa$.
 ```
 
-```{prf:proof} 
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+ 
 (Proof of {prf:ref}`thm-measurable-Ramsey`) 
 
 Let $U$ be a normal filter over $\kappa$.

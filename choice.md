@@ -1,11 +1,4 @@
 # The Axiom of Choice
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Pow}{\mathcal{P}}
-```
 
 In the previous lectures, a number of **regularity principles** for sets of real numbers emerged:
 - **(PS)** &nbsp;&nbsp;&nbsp; the **perfect subset property**,
@@ -27,6 +20,9 @@ There exists a set $A \subseteq \Real$ that is not Lebesgue measurable.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Put
 \begin{equation*}
     x \sim y \; \text{ if and only if }\;  x-y \in \Rat.
@@ -67,6 +63,9 @@ There exists a Bernstein set.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $\mathcal{P}$ be the set of perfect subsets of $\Real$. We can well-order this set, say
 \begin{equation*}
     \mathcal{P} = \{P_\xi \colon \xi < 2^{\aleph_0} \}.
@@ -95,6 +94,9 @@ A Bernstein set does not have the Baire property.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Assume for a contradiction a Bernstein set $B$ has the Baire property. By [an exercise](exercise-BP-gdelta-plus) in the previous chapter, we can write $B = M \cup G$, where $M$ is meager and $G$ is $G_\delta$.
 
 At least one of $B$, $\Real\setminus B$ is not meager. Wlog assume $B$ is not meager. (If not, obtain the representation "meager $\cup$ $G_\delta$" above for $\Real\setminus B$ and proceed analogously.) Then $G \subseteq B$ must be non-meager, too, and hence is an uncountable $G_\delta$ set. By {prf:ref}`thm-subsets-Polish`, $G$ is Polish and hence must contain a perfect subset, contradiction.

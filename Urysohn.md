@@ -1,23 +1,5 @@
 # Excursion: The Urysohn Space
 
-```{math}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Ury}{\mathbb{U}}
-\newcommand{\Cl}[1]{\overline{#1}}
-
-\DeclareMathOperator{\diam}{diam}
-\DeclareMathOperator{\Lip}{Lip}
-```
-
 Recall that a mapping $f: X \to Y$ between two metric spaces $(X,d_X)$ and $(Y,d_Y)$ is an **isometry** if
 
 $$
@@ -60,6 +42,9 @@ If $Y$ is Polish, then any isometric embedding $e$ of $D$ into $Y$ extends to an
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Given $z \in X$, let $(x_{i_n})$ be a sequence in $D$ converging to $z$. Since $(x_{i_n})$ converges, it is Cauchy. 
 
 $e$ is an isometry, and thus $y_n := e(x_{i_n})$ is Cauchy, and since $Y$ is Polish, $(y_n)$ converges to some $y \in Y$. Put $e^*(z) = y$. 
@@ -191,6 +176,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 For each $a \in A$ define $f_a: X \to \Real$ as
 
 $$
@@ -228,6 +216,9 @@ If a complete metric space $(Y,d)$ admits a dense Urysohn universal subspace $\m
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We follow {cite}`Gromov:1999a`. Let $F = \{x_1, \dots, x_n\} \subset Y$ and assume $F^* = F \sqcup \{x^*\}$ is an extension with metric $d^*$.
 
 We first note that $Y$ is **approximately universal**. This means that for any $\eps > 0$, there exists a point $y^* \in Y$ such that 

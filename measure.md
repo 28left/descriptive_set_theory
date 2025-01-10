@@ -1,17 +1,4 @@
 # Measure and Baire Category
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Pow}{\mathcal{P}}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\Cl}[1]{\overline{#1}}
-```
 
 At the end of the previous section, we saw that Borel sets are well-behaved in the sense that they possess the **perfect subset property**. Two other important regularity properties are **measurability** and the **Baire property**, which we will introduce in this section.
 
@@ -175,6 +162,9 @@ Any Borel set in $\Real$ is Lebesgue measurable
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 This follows from {prf:ref}`prop-measurable-sets`, {prf:ref}`prop-interval-measurable` and the fact that any open set in $\Real$ is a countable union of intervals.
 ```
 
@@ -194,6 +184,9 @@ Any $\mu^*$-nullset is $\mu^*$-measurable.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose $\mu^*(A)=0$. Let $B \subseteq X$. Then, since $\mu^*$ is subadditive and monotone,
 
 $$
@@ -212,6 +205,9 @@ The $\mu^*$-nullsets form a $\sigma$-ideal.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (I1) follows directly from monotonicity (O2). Countable additivity follows immediately from subadditivity (O3).
 ```
 
@@ -224,6 +220,9 @@ A set $A \subseteq \Real$ is Lebesgue measurable if and only if it is the differ
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We first assume $\lambda^*(A) < \infty$.  Let $G_n \subseteq \Real$ be an open set such that $G_n \supseteq A$ and  $\lambda^*(G_n) \leq \lambda^*(A) + 1/n$. The existence of such a $G_n$ follows from the definition of $\lambda^*$, and the fact that every open set is the disjoint union of open intervals.  Then $G = \bigcap_n G_n$ is $\bPi^0_2$, $A \subseteq G$, and for all $n$,
 
 $$
@@ -305,6 +304,9 @@ For any Polish space $X$, the following statements hold.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (a) Assume  $M = \bigcup_n N_n$, where each $N_n$ is nowhere dense. Then $\Co{M} = \bigcap D_n$, where each $D_n$ contains a dense, open set. Let $U \subseteq X$ be open. 
 
 We construct a point $x \in U \cap \Co{M}$ by induction. We can find an open ball $B_1$ of radius $<1$ such that $\Cl{B_1} \subseteq U \cap D_1$, since $D_1$ contains a dense open set. In the next step, we use the same property of $D_2$ to find an open ball $B_2$ of radius $<1/2$ whose closure is completely contained in $B_1 \cap D_2$. 
@@ -330,6 +332,9 @@ $\Rat$ is not a $\bPi^0_2$ set, hence a true $\bSigma^0_2$ set.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Note that $\Real$ cannot be meager, by (b). Since $\Rat$ is meager, $\Real \setminus \Rat$ cannot be meager either. 
 If $\Rat$ were a $\bPi^0_2$ set, it would be the intersection of open, dense sets and hence its complement $\Real \setminus \Rat$ would be meager.
 ```
@@ -371,6 +376,9 @@ A set $B$ has the Baire property if and only if it can be represented in the for
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose $B = G \bigtriangleup M$, $G$ open and $M$ meager.
 
 Then $N = \Cl{G} \setminus G$ is nowhere dense and closed. Furthermore, $Q = M \bigtriangleup N$ is meager (it is the union of two meager sets). We easily verify that $G = \Cl{G} \bigtriangleup N$, and therefore
@@ -390,6 +398,9 @@ The sets having the Baire property form a $\sigma$-algebra.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 To show closure under complement, note that $\Co{(A \bigtriangleup B)} = \Co{A} \bigtriangleup B$. Therefore,
 if $B = G \bigtriangleup M$ with $G$ open and $M$ meager, we have $\Co{B} = \Co{G} \bigtriangleup M$, and we can use {prf:ref}`lem-BP-closed`.
 
@@ -439,6 +450,9 @@ The real numbers can be partitioned into two subsets, one a Lebesgue nullset and
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $(G_n)$  be a sequence of open sets witnessing that $\Rat$ is a nullset, i.e. each $G_n$ is a union of disjoint open intervals that covers $\Rat$ and whose total length does not exceed $2^{-n}$. Then $G = \bigcap_n G_n$ is a nullset, but at the same time it is an intersection of open dense sets, thus comeager, hence its complement is meager.
 ``` 
 

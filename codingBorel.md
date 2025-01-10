@@ -1,26 +1,4 @@
 # Coding Borel Sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Pow}{\mathcal{P}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\DeclareMathOperator{\Ap}{ap}
-```
 
 In this chapter, we take a further look at Borel subsets of $\Baire$. As is common in this setting, we call the elements of $\Baire$ **reals**. This is motivated by the fact that, via the continued fration expansion, $\Baire$ [is homeomorphic to the set of irrational real numbers](fact-paths-as-reals). Suppose $U \subseteq \Baire$ is open. Then there exists a set $W \subseteq \Nstr$ such that
 
@@ -223,6 +201,9 @@ Let $A \subseteq \Baire$. Then
 ```
 
 ````{prf:proof}
+:class: dropdown
+:nonumber: true
+
 ($\Rightarrow$) We proceed by induction on the Borel complexity. 
 
 Suppose $A$ is $\Sigma^0_1$. Let $R$ be computable such that $A = \{ \alpha \colon \exists n \: R(\alpha\Rest{n})\}$. Let
@@ -283,6 +264,9 @@ $$
 $$
 ```
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Similar to {prf:ref}`lem-Borel-codes-shift`
 ```
 
@@ -331,6 +315,9 @@ A set $A \subseteq \Baire$ is $\bSigma^0_n$ ($\bPi^0_n$) if and only if it is $\
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $A$ is $\bSigma^0_n$, then by {prf:ref}`prop-Borel-codes` it has a $\bSigma^0_n$-code $\gamma$, and by {prf:ref}`prop-relative-codes`, $A$ is $\Sigma^0_n(\gamma)$. The other direction follows immediately from {prf:ref}`prop-relative-codes`.
 
 The argument for $\bPi^0_n$ is completely analogous. 

@@ -41,6 +41,9 @@ In particular, if $A$ is $\Sigma^1_2$ then there is a tree $T \in L$ on $\Nat \t
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Assume first $A$ is $\Pi^1_1$. There is a recursive tree $T$ on $\Nat \times \Nat$ (and hence, in $L$, since "*being recursive*" is definable) such that 
 
 $$
@@ -88,6 +91,9 @@ Every $\Sigma^1_2$ set is a union of $\aleph_1$-many Borel sets.
 Sierpinski's original proof used $\AC$. The following proof does not make use of choice.
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A \subseteq \Baire$ be $\Sigma^1_2$. By {prf:ref}`thm-tree-repr-sig12` there exists a tree $T$ on $\Nat \times \omega_1$ such that $A = \exists^{(\omega_1)^\Nat}[T]$. For any $\xi < \omega_1$ let 
 
 $$
@@ -148,6 +154,9 @@ Every $\Sigma^1_2(\gamma)$ predicate and every $\Pi^1_2(\gamma)$ predicate is ab
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We show the theorem for $\Sigma^1_2$ predicates. For the relativized version, one uses the **relative constructible universe** $L[\gamma]$, see {cite}`jech2003a` or {cite}`Kanamori:2003a`.
 
 Let $A$ be a $\Sigma^1_2$ relation. For simplicity, we assume that $A$ is unary. Fix a tree representation of $A$ as a projection of a $\Pi^1_1$ set. So, let $T$ be a recursive tree on $\Nat \times \Nat \times \Nat$ such that 

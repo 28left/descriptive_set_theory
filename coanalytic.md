@@ -111,6 +111,9 @@ Let $\Gamma$ be a family of subsets in Polish spaces (such as the classes of the
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $A \leq_{\W} B$ via $f$, then $A = f^{-1}(B)$.
 ```
 
@@ -193,6 +196,9 @@ The sets $\WF$ and $\WOrd$ are $\PP[1]$-complete.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We have seen in the chapter on {ref}`chap-trees` that a tree has an infinite path  if and only if the inverse prefix ordering is ill-founded. Trees can be coded as reals, and hence {prf:ref}`prop-norm-form-coanalytic` yields immediately that $\WF$ is $\PP[1]$-complete.
 
 For $\WOrd$ we use the Kleene-Brouwer ordering and refer to {prf:ref}`prop-KB-wellorder`.
@@ -215,6 +221,9 @@ For any $\xi < \omega_1$, the set $\WOrd_\xi$ is Borel.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $\alpha \in \Baire$. We say $m \in \Nat$ is in the **domain** of $E_\alpha$, $m \in \Op{dom}(E_\alpha)$, if
 \begin{equation*}
 	\exists n \: [ m E_\alpha n \; \vee \; n E_\alpha m].
@@ -243,7 +252,10 @@ which implies that $\WOrd_\xi$ is Borel.
 Every $\PP[1]$ set is a union of $\aleph_1$ many Borel sets.
 ```
 
-```{prf:proof}	
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+	
 Since $\WOrd$ is $\PP[1]$-complete, every co-analytic set $A$ is the preimage of $\WOrd$ for some continuous function $f$. We have
 \begin{equation*}
 	\WOrd = \bigcup_{\xi < \omega_1} \WOrd_\xi,
@@ -289,6 +301,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If such a $\nu$ did not exist, then
 
 $$

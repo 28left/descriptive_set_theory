@@ -1,17 +1,5 @@
 (chap-subspace-Polish)=
 # Subspaces of Polish Spaces
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\eps}{\varepsilon}
-```
 
 Closed subsets of Polish spaces (with the subspace topology) are Polish ({prf:ref}`properties-polish`).
 
@@ -31,6 +19,9 @@ d(x,A) = \inf \{ d(x,a) \colon a \in A\}
 $$
 ```
 ````{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $U \subset X$ be open, where we assume that $U \neq X$.  Consider the set 
 
 $$
@@ -73,6 +64,9 @@ Let $X$ be a Polish space, and suppose $(Y_n)$ is a sequence of Polish subspaces
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Consider the mapping $f: X \to X^\Nat$ given by $x \mapsto (x, x, x, \dots)$. The restriction of $f$ to $\bigcap_n Y_n$ is a homeomorphism between $\bigcap_n Y_n$ and the diagonal $\Delta \subseteq \prod_n Y_n$,
 
 $$
@@ -101,7 +95,10 @@ Suppose $X, Y$ are Polish spaces, $A \subseteq X$, and $f: A \to Y$ continuous. 
 
 Compare this with the last lecture, where we showed that the points of continuity of a function is always a $G_\delta$ set ({prf:ref}`thm-Young`).
 
-```{prf:proof} 
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+ 
 We can adapt the *$\eps$-oscillation set* $C_\eps$ used in the proof of {prf:ref}`thm-Young` to the domain $A$:
 
 \begin{equation*} \tag{$*$}
@@ -146,6 +143,9 @@ If $X$ is a Polish space with topology $\mathcal{O}$, and $F \subseteq X$ is clo
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 By {prf:ref}`properties-polish` and {prf:ref}`prop-open-subset-Polish`, respectively, $F$ and $X \setminus F$ are Polish spaces with compatible metrics $d_F$ and $d_{X\setminus F}$,  respectively. Wlog $d_F, d_{X\setminus F} < 1$. We form the *disjoint union of the spaces $F$ and $X \setminus F$*: This is the set $X = F \,\sqcup\, X \setminus F$ with the following topology, $\mathcal{O}'$. $U \subseteq F \,\sqcup\, X \setminus F$ is in $\mathcal{O}'$ if and only if $U \cap F$ is open (in $F$) and  $U \cap X\setminus F$ is open (in $X\setminus F$).
 
 The disjoint union is Polish, as witnessed by the following metric.
@@ -172,6 +172,9 @@ a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
 
 We will show that $\mathcal{S}$ is a $\sigma$-algebra, which by the previous Lemma contains the closed sets. Hence $\mathcal{S}$ must contain all Borel sets, and we are done.
@@ -211,6 +214,9 @@ In a Polish space, every uncountable Borel set has a perfect subset.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $(X,\mathcal{O})$ be Polish, and assume $B \subseteq X$ is Borel. We can choose a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ so that $B$ becomes clopen, but the Borel sets stay the same. By {prf:ref}`thm-subsets-Polish`, $B$ is Polish with respect to the subspace topology $\mathcal{O}'|_B$
 
 Suppose $B$ is uncountable. By {prf:ref}`thm-Cantor-embedding` there exists a continuous injection $f$ from $\Cant$ (with respect to the standard topology) into $(B,\mathcal{O}'|_B)$. 	

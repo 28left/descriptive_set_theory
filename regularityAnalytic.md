@@ -62,6 +62,9 @@ For every family $\Gamma$ of subsets of a set $X$,
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We clearly have  $ \Gamma \subseteq  \mathcal{A} \Gamma$, so that we only need to prove $\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma$.
 
 Suppose $A = \mathcal{A} P$ with $P_\sigma \in \mathcal{A} \Gamma$, that is, $P_\sigma = \mathcal{A} Q_{\sigma,\tau}$ with $Q_{\sigma,\tau} \in  \Gamma$. Then
@@ -105,6 +108,9 @@ For every set $A \subseteq \Real$ there exists a set $B \subseteq \Real$ so that
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose first that $\lambda^*(A) < \infty$. For every $n \geq 0$, there exists an open set $O_n \supseteq A$ with $\lambda^*(O_n) = \lambda(O_n) < \lambda^*(A) + 1/n$. Then $B = \bigcap_n O_n$ is measurable, and $\lambda(B) = \lambda^*(A)$. Furthermore, if $A \subseteq B' \subseteq B $, then $\lambda^*(A) \leq  \lambda^*(B') \leq \lambda^*(B)$. 
 
 If $B'$ is also measurable, then 
@@ -140,6 +146,9 @@ $$
 
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $ A = (A_\sigma)$ be a Souslin scheme with each $A_\sigma$ measurable. We can assume that $(A_\sigma)$ is regular. For each $\sigma \in \Nstr$ we let
 \begin{equation*}
     A^\sigma = \bigcup_{\alpha \supset \sigma} \bigcap_{n \in \Nat} A_{\alpha\Rest{n}} \subseteq A_\sigma.
@@ -175,6 +184,9 @@ Every analytic set is Lebesgue measurable.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 By the idempotence of ${\cal A}$, ${\cal A}\PS[1] = {\cal A}{\cal
   A}\BP[1] = {\cal A}\BP[1] = \PS[1]$. On the other hand, we have ${\cal A}\BP[1] \subseteq
 {\cal A}\mathbf{LM} = \mathbf{LM}$, since the Souslin operation is monotone on
@@ -221,6 +233,9 @@ Let $X$ be a Polish space. For every set $A \subseteq X$ there exists a set $B \
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let  $U_1, U_2, \ldots$ be an enumeration of countable base of the
 topology for $X$.
 Given $A \subseteq \Real$ set

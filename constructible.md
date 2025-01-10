@@ -69,6 +69,9 @@ For each ordinal $\xi$:
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We show the first two statements statements simultaneously by induction. 
 
 They are clear for $\xi = 0$ and $\xi$ limit, so assume $\xi = \alpha +1$.  
@@ -96,6 +99,9 @@ For any $\xi$,
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Clearly, $(1)$ follows from $(2)$. 
 
 To show $(2)$, one again proceeds by induction. Again, the statement is clear for $0$ and limit ordinals, so assume $\xi = \alpha +1$ and $L_\alpha \cap \Ord = \alpha$. 
@@ -214,6 +220,9 @@ The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is $\Delta_1$-definable.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (*Sketch*) Taking into account the complexity of the various sub-formulas, we see that the mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$-definable.
 
 The graph of a $\Sigma_1$-definable function $f$ (with domain $\V$) is $\Delta_1$, since the complement is given as
@@ -283,6 +292,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Proceed by induction on the formula structure. We focus on the case $\varphi \equiv \exists y \psi$. The other cases are straightforward due to the definition of relativization.
 
 By induction hypothesis, there exists a normal function $G$ such that
@@ -349,6 +361,9 @@ A class $M$ is an inner model of $\ZF$ if and only if there exists a sequence $(
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 ($\Rightarrow$) Suppose $M$ is an inner model of $\ZF$. Let 
 
 $$

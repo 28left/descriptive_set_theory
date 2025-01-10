@@ -75,6 +75,9 @@ It remains to show that the notions occurring inside the square brackets are def
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (a) can be established similar to showing that $\Op{Sat}$-predicate of {prf:ref}`thm-sat-predicate` is $\Delta_1$-definable. One does this first for $\Sigma_1$ formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation. 
 
 Since we work with relations over $\Nat$ now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of $\models$ for $\Sigma_n$-formulas, this helps us bound the overall complexity at $\Sigma^0_n$
@@ -165,6 +168,9 @@ If $\VL$, there exists an uncountable $\Sigma^1_2$ set in $\Baire$ without a per
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A \subseteq \Baire$ be given by
 \begin{equation*}
     x \in A \iff x \in \WOrd \, \wedge \, \forall y <_L x \,  ( \parallel y \parallel \ne \parallel x \parallel).
@@ -214,6 +220,9 @@ If $\VL$, then there exists an uncountable $\bPi^1_1$ set without a perfect subs
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}`prop-sigma12-perfect`. $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
 
 $B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of) a function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.

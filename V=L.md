@@ -49,6 +49,9 @@ The map $\alpha \mapsto L_\alpha$ is $\Delta_1$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We first show that the mapping is $\Sigma_1$. The mapping is obtained by ordinal recursion over the function $a \mapsto \mathcal{P}_{\Op{Def}}(a)$. 
 
 In general, if a function $G: \V \to \V$ is $\Sigma_1$ and $F: \Ord \to \V$ is obtained by recursion from $G$, i.e. $F(\alpha) = G(F\Rest{\alpha})$, then $F$ is also $\Sigma_1$. This is because
@@ -93,6 +96,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (1) follows immediately from the fact that for such $M$, $L_\alpha^M = L_\alpha$.
 
 (2) We have
@@ -155,6 +161,9 @@ For all $\alpha \geq \omega$, $|L_{\alpha}| = |\alpha|$.
 ```	
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We know that $\alpha \subseteq L_\alpha$. Hence $|\alpha| \leq |L_\alpha|$. To show $|\alpha| \geq |L_\alpha|$, we work by induction on $\alpha$.
 
 If $\alpha = \beta +1$, then by {prf:ref}`prop-basics-L`(4), $|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|$. 
@@ -175,6 +184,9 @@ If we choose our finite axiom set more carefully, it is actually possible to sho
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with all (instances of) axioms of $\ZF$ used to prove that all the theorems leading up to the fact that for all $\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
 
 Suppose for a transitive set $M$, $M\models T + \VL$. Let $\lambda$ be the least ordinal not in $M$. 
@@ -215,7 +227,10 @@ We now put condensation to use as described above.
 Suppose $V=L$. If $\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in L_{\kappa^+}$.
 ```
 
-```{prf:proof} 
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+ 
 Since we assume $\VL$, there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models T + \VL$, where $T$ is as in the **condensation lemma**. Such a $\lambda$ exists by the **reflection theorem** ({prf:ref}`thm-reflection`).  Let $X = \kappa \cup \{x\}$. By choice of $\lambda$, $X \subseteq L_\lambda$. 
 
 By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
@@ -248,6 +263,9 @@ If $\VL$, then for all cardinals $\kappa$, $2^\kappa = \kappa^+$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $\VL$, then by {prf:ref}`lemma-L-GCH`, $\mathcal{P}(\kappa) \subseteq L_{\kappa^+}$. With {prf:ref}`prop-card-Lalpha`, we obtain
 
 $$

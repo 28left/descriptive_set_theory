@@ -1,31 +1,4 @@
 # Continuous Images of Borel sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\DeclareMathOperator{\diam}{diam}
-```
-
 
 In 1916, Nikolai Lusin asked his student Mikhail Souslin to study a paper by Henri Lebesgue. Souslin found a number of errors, including a lemma that asserted that the projection of a Borel is again Borel. In this lecture we will study the behavior of Borel sets under continuous functions. We will see that on the one hand every Borel set is the continuous image of a closed set, but that on the other hand continuous images of Borel sets are not always Borel.
 
@@ -100,6 +73,9 @@ Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $C \subseteq \Baire$ be closed, and let $T$ be a pruned tree such that $[T] = C$. We define a monotone mapping $\phi:\Nstr \to T$ such that $\phi(\sigma) = \sigma$ for all $\sigma \in T$. Then the induced (continuous) mapping $\phi^*: \Baire \to C$ is the desired retract.
 
 Define $\phi$ by induction. Let $\phi(\Estr) = \Estr$. Given $\phi(\tau)$, let
@@ -125,7 +101,10 @@ Refining the topology as in {prf:ref}`thm-Borel-clopen`, we can extend the resul
 For every Borel subset $B$ of a Polish space $X$ there exists a closed set $F \subseteq \Baire$ and a continuous bijection $f:F \to B$. Furthermore, $f$ can be extended to a continuous surjection $g:\Baire \to B$.
 ```
 
-```{prf:proof}	
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+	
 Enlarge the topology $\mathcal{O}$ of $X$ to a topology $\mathcal{O}_B$ for which $B$ is clopen. 
 By {prf:ref}`thm-subsets-Polish`, $(B,\mathcal{O}_B\Rest{B})$ is a Polish space. By the previous theorem, there exists a closed set $F \subset \Baire$ and a continuous bijection $f:\Baire \to (B,\mathcal{O}_B\Rest{B})$. Since $\mathcal{O} \subseteq \mathcal{O}_B$, $f:F \to B$ is continuous for $\mathcal{O}$, too. 
 ```  
@@ -152,6 +131,9 @@ The Borel sets are not closed under continuous images.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $U \subseteq \Baire \times \Baire \times \Baire$ be $\Baire$-universal for $\BP[1](\Baire \times \Baire)$.
 Define
 

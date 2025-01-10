@@ -110,6 +110,7 @@ Orders themselves can be compared using *embeddings*.
 An **embedding** of a partial order $(A,<_A)$ into another partial order $(B,<_B)$ is a mapping $f:A \to B$ such that for all $x,y \in A$
 $$
 x <_A y \quad \iff \quad f(x) <_B f(y).
+$$
 
 Two orders are **isomorphic** if there exists a bijective embedding of one into the other.
 ```
@@ -123,6 +124,7 @@ We start with a simple observation.
 Let $(A,<)$ be a well-order and assume $f:A \to A$ is a self-embedding. Then for all $x \in A$, $x \leq f(x)$.
 ```
 ```{prf:proof}
+:class: dropdown
 :class: dropdown
 :nonumber: true
 
@@ -146,6 +148,7 @@ No well-order is isomorphic to an initial segment of itself.
 ```
 
 ```{prf:proof}
+:class: dropdown
 :class: dropdown
 :nonumber: true
 
@@ -221,6 +224,7 @@ Any element of an ordinal is an ordinal.
 ```
 
 ```{prf:proof}
+:class: dropdown
 :nonumber: true
 :class: dropdown
 
@@ -254,6 +258,7 @@ $$
 $$
 ```
 ```{prf:proof}
+:class: dropdown
 :nonumber: true
 :class: dropdown
 
@@ -289,6 +294,7 @@ To show that ordinals are linearly ordered by $<$, look at the intersection of t
 
 
 ```{prf:proof}
+:class: dropdown
 :nonumber: true
 :class: dropdown
 
@@ -341,11 +347,23 @@ All of the ordinals listed here are still countable (as sets). The supremum of t
 
 ## Metamathematical issues
 
-Is there a *set* of all ordinals? If so, it would be 
+Is there a *set* $\Ord$ of *all* ordinals? If so, it would be well-ordered by $\in$ and also transitive (since, by @pro-ordinal-elements-are-ordinals, every element of an ordinal is an ordinal) and therefore an ordinal. But then $\Ord+1$ would be an ordinal not contained in $\Ord$ (by well-foundedness), contradiction.
+
+This is know as the **Anomaly of Burali-Forti**. It tells us that somehow the collection of all ordinals is *too big* to form a set. It also warns us that if we handle the intuitive concept of a set too carelessly, it might lead to contradictions and inconsistencies. 
+
+Later on we will develop an axiomatic approach to sets which aims to exclude antinomies like this. In this framework, we will be able to formally show that $\Ord$ is not a set. It forms what we will call a **proper class**.
 
 
+## Representing well-orders as ordinals
 
+We introduced ordinals with the goal to have a specific representation for any well-order. 
 
-- Every well-ordering $(b,<)$ on a set is order-isomorphic to a unique ordinal, the **well-order type** of $(b,<)$
+```{danger} Theorem (representation theorem for well-orders)
+:nonumber: true
+:icon: false
 
-- The ordinals $\mathbf{Ord}$ form a proper class (Burali-Forti antinomy).
+Any well-ordered set $(A,<)$ is order-isomorphic to a unique ordinal $\alpha$. The isomorphism is unique.
+```
+
+The ordinal $\alpha$ is called the **order type** of $(A,<)$.
+We will delay the proof of this theorem for a while, until we learn how to extend *induction* and *recursion* into the transfinite. 

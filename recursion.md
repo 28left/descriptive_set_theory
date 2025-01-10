@@ -82,6 +82,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 The uniqueness of the function $F$ follows by induction. 
 
 To show the existence of $F$, we define the following:
@@ -259,6 +262,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $C$ be the class of all sets not in any $V_\alpha$. Since $\in$ is well-founded, if $C$ is non-empty, it has a $\in$-minimal element $x$. This implies that for all $z \in x$, $z \in \bigcup_{\alpha \in \Ord} V_\alpha$. Define a function $h$ by mapping each $z\in x$ to the *least* $\alpha$ so that $z \in V_\alpha$. Since $x$ is a set, $h[x]$ is a set of ordinals, by *Replacement*. This set or ordinals has a supremum, say $\gamma$. Then $x \subseteq V_\gamma$ and therefore, 
 
 $$

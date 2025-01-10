@@ -1,33 +1,5 @@
 # Analytic Sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\DeclareMathOperator{\diam}{diam}
-```
+
 
 ```{prf:definition}
 A subset $A$ of a Polish space $X$ is **analytic** if it is empty or there exists a continuous function $f:\Baire \to X$ such that $f(\Baire) = A$.
@@ -38,7 +10,7 @@ We will later see that the analytic sets correspond to the sets definable by mea
 Therefore, we will denote the analytic subsets of $X$ also by
 
 $$
-	\PS[1](X).
+	\PS{1}(X).
 $$ 
 
 Here are some simple properties of analytic sets.
@@ -52,6 +24,9 @@ Here are some simple properties of analytic sets.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (i): This follows directly from {prf:ref}`cor-Borel-image-closed`.
 
 (ii): The composition of continuous mappings is continuous.
@@ -80,6 +55,9 @@ For a subset $A$ of a Polish space $X$, the following are equivalent.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (i) $\Leftrightarrow$ (ii): Follows from {prf:ref}`thm-polish-cont-image-Baire` and {prf:ref}`prop-prop-analytic` (ii).
 
 (ii) $\Leftrightarrow$ (iii): Follows from Corollary {prf:ref}`cor-Borel-image-closed` and {prf:ref}`prop-prop-analytic` (ii).
@@ -117,6 +95,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $f:\Baire \to A$ and $g:\Baire \to B$ be continuous surjections.
 
 We argue by contradiction. The key idea is: if $A$ and $B$ are Borel inseparable, then, for some $i,j \in \Nat$, $A_{\Tup{i}} = f(\Cyl{\Tup{i}})$ and $B_{\Tup{j}} = g(\Cyl{\Tup{j}})$ are Borel inseparable. 
@@ -144,6 +125,9 @@ If a set $A$ and its complement $\Co{A}$ are both analytic, then $A$ is Borel.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 In {prf:ref}`thm-Lusin-separation`, chose $A = A$ and $B = \Co{A}$.
 ```
 
@@ -204,6 +188,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose $f: \Baire \to X$ is continuous with $f(\Baire) = A$. Then 
 \begin{equation*}
 x \in A \iff \exists \alpha  \in \Baire \; \forall n \in \Nat \; x \in \Cl{f(\Cyl{\alpha\Rest{n}})}.
