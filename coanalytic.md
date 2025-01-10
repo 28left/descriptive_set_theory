@@ -1,41 +1,6 @@
 # Co-Analytic sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
 
-We will see that, in many ways, $\PP[1]$ sets form the frontier between classical descriptive set theory and metamathematics. This chapter can be seen as the start of our transition to metamathematics. We will detail the distinguished role well-founded relations play in the analysis of $\PP[1]$ sets.
+We will see that, in many ways, $\PP{1}$ sets form the frontier between classical descriptive set theory and metamathematics. This chapter can be seen as the start of our transition to metamathematics. We will detail the distinguished role well-founded relations play in the analysis of $\PP{1}$ sets.
 
 
 ## Normal forms
@@ -56,10 +21,10 @@ An **infinite branch** of $T$ is a pair $(\alpha,\beta) \in \Baire\times \Baire$
 ```
 
 As in the one-dimensional case, we use $[T]$ to denote the set of all infinite paths through $T$. It follows that $A \subseteq \Baire$ is analytic if and only if there exists a two-dimensional tree $T$ on $\Nat \times \Nat$ such that
-\begin{eqnarray*}
-	\alpha \in A & \iff & \exists \beta \: (\alpha,\beta) \in [T]\\
-	             & \iff & \exists \beta \, \forall n \: (\alpha\Rest{n},\beta\Rest{n}) \in T.
-\end{eqnarray*}
+\begin{align*}
+	\alpha \in A & \iff  \exists \beta \: (\alpha,\beta) \in [T]\\
+	             & \iff  \exists \beta \, \forall n \: (\alpha\Rest{n},\beta\Rest{n}) \in T.
+\end{align*}
 
 Another way to write this is to put, for given $T$ and $\alpha \in \Baire$,
 
@@ -77,7 +42,7 @@ We obtain the following normal form for co-analytic sets.
 
 ```{prf:proposition} Normal form for co-analytic sets  
 :label: prop-norm-form-coanalytic
-A set $A \subseteq \Baire$ is $\PP[1]$ if and only if there exists a two-dimensional tree $T$ such that
+A set $A \subseteq \Baire$ is $\PP{1}$ if and only if there exists a two-dimensional tree $T$ such that
 
 $$
     \alpha \in A \iff T(\alpha) \text{ is well-founded}.
@@ -111,6 +76,9 @@ Let $\Gamma$ be a family of subsets in Polish spaces (such as the classes of the
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $A \leq_{\W} B$ via $f$, then $A = f^{-1}(B)$.
 ```
 
@@ -120,7 +88,7 @@ If $A \leq_{\W} B$ via $f$, then $A = f^{-1}(B)$.
 A set $A \subseteq X$ is **$\Gamma$-complete** if $A \in \Gamma$ and for all $B \in \Gamma$, $B \leq_{\W} A$. 
 ```
 
-$\Gamma$-complete sets can be seen as the most complicated members of $\Gamma$. In particular, for the $\bSigma/\bPi$ classes complete sets cannot be members of the dual class. For instance, a $\PP[1]$-complete set cannot be $\PS[1]$, since this would mean it is Borel, and hence every $\PP[1]$ set would be Borel, which we have seen is not true.
+$\Gamma$-complete sets can be seen as the most complicated members of $\Gamma$. In particular, for the $\bSigma/\bPi$ classes complete sets cannot be members of the dual class. For instance, a $\PP{1}$-complete set cannot be $\PS{1}$, since this would mean it is Borel, and hence every $\PP{1}$ set would be Borel, which we have seen is not true.
 
 
 If $A \subseteq \Baire \times \Baire$ is $\Baire$-universal for some class $\Gamma$ in the Borel or projective hierarchy, then the set
@@ -189,11 +157,14 @@ Coding a linear order is easily seen to be $\Pi^0_1$, hence $\WOrd$ is $\Pi^1_1$
 ```{prf:theorem} 
 :label: thm-WF-Wadge-complete
 
-The sets $\WF$ and $\WOrd$ are $\PP[1]$-complete.
+The sets $\WF$ and $\WOrd$ are $\PP{1}$-complete.
 ```
 
 ```{prf:proof}
-We have seen in the chapter on {ref}`chap-trees` that a tree has an infinite path  if and only if the inverse prefix ordering is ill-founded. Trees can be coded as reals, and hence {prf:ref}`prop-norm-form-coanalytic` yields immediately that $\WF$ is $\PP[1]$-complete.
+:class: dropdown
+:nonumber: true
+
+We have seen in the chapter on {ref}`chap-trees` that a tree has an infinite path  if and only if the inverse prefix ordering is ill-founded. Trees can be coded as reals, and hence {prf:ref}`prop-norm-form-coanalytic` yields immediately that $\WF$ is $\PP{1}$-complete.
 
 For $\WOrd$ we use the Kleene-Brouwer ordering and refer to {prf:ref}`prop-KB-wellorder`.
 ```
@@ -215,6 +186,9 @@ For any $\xi < \omega_1$, the set $\WOrd_\xi$ is Borel.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $\alpha \in \Baire$. We say $m \in \Nat$ is in the **domain** of $E_\alpha$, $m \in \Op{dom}(E_\alpha)$, if
 \begin{equation*}
 	\exists n \: [ m E_\alpha n \; \vee \; n E_\alpha m].
@@ -240,11 +214,14 @@ which implies that $\WOrd_\xi$ is Borel.
 ```{prf:corollary} 
 :label: cor-coanal-union-Borel
 
-Every $\PP[1]$ set is a union of $\aleph_1$ many Borel sets.
+Every $\PP{1}$ set is a union of $\aleph_1$ many Borel sets.
 ```
 
-```{prf:proof}	
-Since $\WOrd$ is $\PP[1]$-complete, every co-analytic set $A$ is the preimage of $\WOrd$ for some continuous function $f$. We have
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+	
+Since $\WOrd$ is $\PP{1}$-complete, every co-analytic set $A$ is the preimage of $\WOrd$ for some continuous function $f$. We have
 \begin{equation*}
 	\WOrd = \bigcup_{\xi < \omega_1} \WOrd_\xi,
 \end{equation*}
@@ -264,7 +241,7 @@ then we get that $\WOrd = \bigcap_{\xi < \omega_1} C_\xi$, and hence
 ```{prf:corollary} 
 :label: cor-aleph-union-intersect
 
-Every $\PP[1]$ set can be obtained as a union or intersection of $\aleph_1$-many Borel sets. Consequently, the same holds for every $\PS[1]$ set.
+Every $\PP{1}$ set can be obtained as a union or intersection of $\aleph_1$-many Borel sets. Consequently, the same holds for every $\PS{1}$ set.
 ```
 
 The previous results allow us to solve the cardinality problem of co-analytic sets at least partially.
@@ -272,7 +249,7 @@ The previous results allow us to solve the cardinality problem of co-analytic se
 ```{prf:corollary}
 :label: cor-coanalytic-cardinality
 
-Every $\PP[1]$ set is either countable, of cardinality $\aleph_1$, or of cardinality $2^{\aleph_0}$.
+Every $\PP{1}$ set is either countable, of cardinality $\aleph_1$, or of cardinality $2^{\aleph_0}$.
 ```
 
 
@@ -289,6 +266,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If such a $\nu$ did not exist, then
 
 $$

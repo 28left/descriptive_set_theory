@@ -1,27 +1,4 @@
 # Shoenfield Absoluteness
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-```
-
 
 ## Tree representations of $\mathbf{\Sigma}^1_2$ sets
 
@@ -41,6 +18,9 @@ In particular, if $A$ is $\Sigma^1_2$ then there is a tree $T \in L$ on $\Nat \t
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Assume first $A$ is $\Pi^1_1$. There is a recursive tree $T$ on $\Nat \times \Nat$ (and hence, in $L$, since "*being recursive*" is definable) such that 
 
 $$
@@ -88,6 +68,9 @@ Every $\Sigma^1_2$ set is a union of $\aleph_1$-many Borel sets.
 Sierpinski's original proof used $\AC$. The following proof does not make use of choice.
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A \subseteq \Baire$ be $\Sigma^1_2$. By {prf:ref}`thm-tree-repr-sig12` there exists a tree $T$ on $\Nat \times \omega_1$ such that $A = \exists^{(\omega_1)^\Nat}[T]$. For any $\xi < \omega_1$ let 
 
 $$
@@ -148,6 +131,9 @@ Every $\Sigma^1_2(\gamma)$ predicate and every $\Pi^1_2(\gamma)$ predicate is ab
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We show the theorem for $\Sigma^1_2$ predicates. For the relativized version, one uses the **relative constructible universe** $L[\gamma]$, see {cite}`jech2003a` or {cite}`Kanamori:2003a`.
 
 Let $A$ be a $\Sigma^1_2$ relation. For simplicity, we assume that $A$ is unary. Fix a tree representation of $A$ as a projection of a $\Pi^1_1$ set. So, let $T$ be a recursive tree on $\Nat \times \Nat \times \Nat$ such that 

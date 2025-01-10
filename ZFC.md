@@ -1,40 +1,4 @@
 # The Axioms of Set Theory
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
 
 In the previous chapters, we have repeatedly brought up a metamathematical context, such as the use of the Axiom of Choice, or Solovay's model in which every set of reals is measurable. But we have not really distinguished between results in a formal theory and in the metatheory, mostly because we did not really establish a formal theory to begin with. We have treated descriptive set theory like most other mathematical theories in that we defined our basic objects (Polish spaces, Borel sets, etc.) and then started proving facts about them "the usual way", as we would prove facts about commutative rings or locally compact topological spaces. But in order to make better sense of the metamathematical issues, we have to "pause" and talk a bit about the axioms of set theory.
 
@@ -76,11 +40,11 @@ contradiction!
 ```
 
 We obtain similar contradictions if we choose as $\varphi(x)$ the formula
-\begin{eqnarray*}
-     x = x  & & \text{antinomy of the set of all sets (Cantor)} \\
-     x\;\text{is a cardinal} & &\text{Cantor, around 1899, published 1932}\\
-     x \; \text{is an ordinal} & \qquad  & \text{antinomy of Burali-Forti}
-\end{eqnarray*}
+\begin{align*}
+     x = x  \qquad &  \text{antinomy of the set of all sets (Cantor)} \\
+     x\;\text{is a cardinal} \qquad & \text{Cantor, around 1899, published 1932}\\
+     x \; \text{is an ordinal} \qquad &   \text{antinomy of Burali-Forti}
+\end{align*}
 These antinomies are, however, not as direct as Russell's and require some further development of the theory in order to derive a contradiction.
 
 Regarding the existence of sets, we have to distinguish between 
@@ -216,75 +180,3 @@ We can also formalize the **Axiom of Choice**:
 > (**Choice**) $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))$
 
 We denote the axiom system $\ZF + \AC$ as $\ZFC$ -- **Zermelo-Fraenkel with Choice**.
-
-
-
-## Ordinals
-
-The axiom of Foundation facilitates the introduction of **ordinal numbers**. 
-An ordinal is defined as
-
-> a transitive set that is well-ordered by $\in$.
-
-```{margin}
-**Caution!**
-Being transitive does *not* mean the $\in$ relation is transitive on the set. (Counterexample?)
-```
-```{prf:definition}
-:label: def-transitive
-A set $x$ is **transitive** if 
-
-$$
-    \forall y \in x \forall z ( z \in y \to z \in x)
-$$
-```
-
-In other words, transitive sets cannot "hide" elements in subsets. All elements of subsets have to be present in the set itself.
-
-Since by Foundation $\in$ is well-founded on any set, it suffices to require that an ordinal is **linearly ordered** by $\in$.
-
-```{prf:definition}
-:label: def-ordinal
-
-A set $a$ is an **ordinal** if it is transitive and $\in$ is **connex** on $a$, that is,
-
-\begin{equation*} \tag{con}
-\forall x,y \in a \; (x \in y \: \vee \: x=y \: \vee \: y \in x)
-\end{equation*}
-```
-
-```{admonition} Exercise
-:class: tip
-
-Show that the above condition is indeed sufficient to linearly order $a$ by $\in$, i.e. if $a$ is transitive and satisfies ($\Op{con}$), then $\in\Rest{a}$ is a linear order (in particular, it is also *irreflexive* and *transitive*).
-```
-
-If we write out the formulas in full, we see {prf:ref}`def-ordinal` is much simpler than the original one. Most notably, in {prf:ref}`def-ordinal` we only use only **bounded quantifiers** (of the form $\forall y \in a$), whereas in the original form we have to quantify over arbitrary subsets of $a$. This is an important difference whose impact will become clear later on.
-
-We can now develop the theory of ordinals based on this definition. We will not do this here (assuming already basic familiarity with this theory -- formal or informal). Here are some of the basic facts:
-
-- *Any element of an ordinal is an ordinal*: $\Op{Ord}(a) \wedge b \in a \to \Op{Ord}(b)$.
-
-- $0 = \emptyset$ is the *smallest ordinal*.
-
-- Every ordinal $\xi$ has an **immediate successor** $\xi' =  \xi+1 = \xi \cup \{\xi\}$
-
-- The *finite ordinals* are exactly the natural numbers:
-
-$$
-0 = \emptyset, \quad 1 = 0 + 1 = \emptyset \cup \{\emptyset\} = \{\emptyset\}, \quad 2 = 1+1 = \{\emptyset, \{\emptyset\} \}, \dots
-$$   
-
-- By the **axiom of Infinity**, the **set of all finite ordinals** exists. It is transitive, linearly ordered by $\in$ and thus an ordinal itself: $\omega$ the first infinite ordinal and the first **limit ordinal**:
-
-$$
-    \omega \neq 0 \: \wedge \: \forall \xi < \omega \; (\xi+1 < \omega).
-$$
-
-- Every *set* of ordinals $a$ has a **supremum** $\sup a = \bigcup_{\xi \in a} \xi$ that is itself an ordinal, the least ordinal at least as large as all ordinals in $a$.
-
-- Every well-ordering $(b,<)$ on a set is order-isomorphic to a unique ordinal, the **well-order type** of $(b,<)$
-
-- The $\in$-relation is a well-ordering on the class of all ordinals.
-
-- The ordinals $\mathbf{Ord}$ form a proper class (Burali-Forti antinomy).

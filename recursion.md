@@ -1,28 +1,4 @@
 # Recursion and the Von-Neumann Hierarchy
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
 
 ## Transfinite induction
 
@@ -64,10 +40,10 @@ then $\quad \forall \alpha \;  \varphi(\alpha)$.
 
 The induction principle can be used to define functions by **recursion**. For example, **addition** on the natural numbers is given by
 
-\begin{eqnarray*}
-    x+0 \quad & = & x\\
-    x+ (y+1) & = & (x + y)+1. 
-\end{eqnarray*}
+\begin{align*}
+    x+0 \quad & =  x\\
+    x+ (y+1) & =  (x + y)+1. 
+\end{align*}
 
 In the case of ordinals, we have to consider the limit case, too.
 
@@ -82,6 +58,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 The uniqueness of the function $F$ follows by induction. 
 
 To show the existence of $F$, we define the following:
@@ -119,11 +98,11 @@ As with induction, we have the following variant of the recursion principle.
 :label: prop-ordinal-recursion-ii
 
 If $G, H: \Ord \times \V \longrightarrow  \V$ are functions and $a$ is a set, then there exists a unique function $F: \Ord \longrightarrow \V$  such that 
-\begin{eqnarray*} 
-    F(0) \quad & = & a\\ 
-    F(\alpha+1) & = & G(\alpha,F(\alpha)) \\    
-    F(\lambda) \quad & = & H(\lambda, \{F(\xi) \colon \xi<\lambda \}) \quad \text{for } \Op{Lim}(\lambda).
-\end{eqnarray*}
+\begin{align*} 
+    F(0) \quad & =  a\\ 
+    F(\alpha+1) & =  G(\alpha,F(\alpha)) \\    
+    F(\lambda) \quad & =  H(\lambda, \{F(\xi) \colon \xi<\lambda \}) \quad \text{for } \Op{Lim}(\lambda).
+\end{align*}
 ```
 
 We can establish a similar principle for a well-ordering $<$ on a class $A$. In case of a proper class, though, we have to require that for every $a \in A$,  the class of all **predecessors** of $a$
@@ -167,11 +146,11 @@ By the axiom of *Foundation*, $\in$ is a well-founded relation on $\V$. (The set
 
 We can form the **transitive closure**, the smallest transitive superset, of a set $a$ as
 
-\begin{eqnarray*}
-    \Op{TC}(a):&=& a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
+\begin{align*}
+    \Op{TC}(a):&= a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
  = \bigcup_{n< \omega} U^n(a), \quad \text{ where} \\ 
- &&U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
-\end{eqnarray*}
+ &U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
+\end{align*}
 
 This is an example of definition by recursion along $\Nat$.
 ```
@@ -259,6 +238,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $C$ be the class of all sets not in any $V_\alpha$. Since $\in$ is well-founded, if $C$ is non-empty, it has a $\in$-minimal element $x$. This implies that for all $z \in x$, $z \in \bigcup_{\alpha \in \Ord} V_\alpha$. Define a function $h$ by mapping each $z\in x$ to the *least* $\alpha$ so that $z \in V_\alpha$. Since $x$ is a set, $h[x]$ is a set of ordinals, by *Replacement*. This set or ordinals has a supremum, say $\gamma$. Then $x \subseteq V_\gamma$ and therefore, 
 
 $$

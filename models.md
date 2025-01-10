@@ -1,28 +1,4 @@
 # Models of Set Theory
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
 
 You may have noticed that, when introducing the axioms of $\ZFC$, we never *really* answered the question "*What is a set?*". Instead, we developed a formal theory of axioms for a binary relation that somehow describe "*how sets work*", that is, how we can obtain sets from given ones using well-known operations like power set and union.
 
@@ -77,6 +53,9 @@ If $\ZF$ is consistent, than there exists a model $(M,E)$ of $\ZF$ such that $(M
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Introduce new constant symbols $c_n$ $(n \in \Nat)$ and add the formulas $\varphi_n \equiv c_{n+1} \in c_n$ to the axioms of $\ZF$. It is not hard to show, using the [compactness theorem](https://en.wikipedia.org/wiki/Compactness_theorem), that $\ZF + \bigcup_n \varphi_n$ has a model $(M^*, E^*)$, for which the set $\{c_n \colon n \in \Nat\}$ is ill-founded.
 ```
 
@@ -112,6 +91,9 @@ Moreover, $S$ and $\pi$ are unique.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We construct $\pi$ and $S = \Op{im}(\pi)$ by recursion on $E$, which is possible since it is well-founded. 
 
 For each $x \in X$, let
@@ -148,7 +130,10 @@ To see the uniqueness of $\pi$ and $S$, assume $\rho$, $T$ are such that the sta
 Suppose $X,Y$ are sets, and $\theta$ is an isomorphism between $(X,\in)$ and $(Y,\in)$. Then $X=Y$ and $\theta(x) = x$ for all $x \in X$.
 ```
 
-```{prf:proof}    
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+    
 By induction on the well-founded relation $\in$. Assume that $\theta(z)=z$ for all $z \in x$ and let $y = \theta(x)$. 
     
 We have $x \subseteq y$ because if $z \in x$, then $z = \theta(z) \in \theta(x) = y$.

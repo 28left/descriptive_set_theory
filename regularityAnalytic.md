@@ -1,35 +1,6 @@
 # Regularity Properties of Analytic sets
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\bDelta}{\pmb{\Delta}}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
-\newcommand{\BP}[1][n]{\bPi^0_{#1}}
-\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
-\newcommand{\PP}[1][n]{\bPi^1_{#1}}
-\newcommand{\Op}[1]{\operatorname{#1}}
-```
 
-
-In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of **co-analytic sets** $\PP[1]$.
+In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of **co-analytic sets** $\PP{1}$.
 
 The analytic sets also have the perfect subset property (PS). 
 
@@ -62,14 +33,17 @@ For every family $\Gamma$ of subsets of a set $X$,
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We clearly have  $ \Gamma \subseteq  \mathcal{A} \Gamma$, so that we only need to prove $\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma$.
 
 Suppose $A = \mathcal{A} P$ with $P_\sigma \in \mathcal{A} \Gamma$, that is, $P_\sigma = \mathcal{A} Q_{\sigma,\tau}$ with $Q_{\sigma,\tau} \in  \Gamma$. Then
-\begin{eqnarray*}
-z \in A & \iff & \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
-    & \iff & \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\
-    &\iff & \exists \alpha \,  \exists \beta \, \forall m \, \forall n \, (z \in Q_{\alpha\Rest{m},(\beta)_m\Rest{n}}),
-\end{eqnarray*}
+\begin{align*}
+z \in A & \iff  \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
+    & \iff  \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\
+    &\iff  \exists \alpha \,  \exists \beta \, \forall m \, \forall n \, (z \in Q_{\alpha\Rest{m},(\beta)_m\Rest{n}}),
+\end{align*}
 where $(\beta)_m$ denotes the $m$-th column of $\beta$.
 
 Now we contract the two function quantifiers to a single one, using a (computable) homeomorphism $\Baire \times \Baire$, and the two universal number quantifiers into a single one using the paring function $\Tup{.,.}$. Then $A$ can be characterized as 
@@ -84,7 +58,7 @@ where $R_\sigma = Q_{\varphi(\sigma), \psi(\sigma)} \in \Gamma$ for suitable cod
 :label: cor-analytic-Souslin-closed
 
 $$
-	\mathcal{A}\PS[1] = \PS[1].
+	\mathcal{A}\PS{1} = \PS{1}.
 $$
 ```
 
@@ -105,6 +79,9 @@ For every set $A \subseteq \Real$ there exists a set $B \subseteq \Real$ so that
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Suppose first that $\lambda^*(A) < \infty$. For every $n \geq 0$, there exists an open set $O_n \supseteq A$ with $\lambda^*(O_n) = \lambda(O_n) < \lambda^*(A) + 1/n$. Then $B = \bigcap_n O_n$ is measurable, and $\lambda(B) = \lambda^*(A)$. Furthermore, if $A \subseteq B' \subseteq B $, then $\lambda^*(A) \leq  \lambda^*(B') \leq \lambda^*(B)$. 
 
 If $B'$ is also measurable, then 
@@ -140,6 +117,9 @@ $$
 
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $ A = (A_\sigma)$ be a Souslin scheme with each $A_\sigma$ measurable. We can assume that $(A_\sigma)$ is regular. For each $\sigma \in \Nstr$ we let
 \begin{equation*}
     A^\sigma = \bigcup_{\alpha \supset \sigma} \bigcap_{n \in \Nat} A_{\alpha\Rest{n}} \subseteq A_\sigma.
@@ -175,10 +155,13 @@ Every analytic set is Lebesgue measurable.
 ```
 
 ```{prf:proof}
-By the idempotence of ${\cal A}$, ${\cal A}\PS[1] = {\cal A}{\cal
-  A}\BP[1] = {\cal A}\BP[1] = \PS[1]$. On the other hand, we have ${\cal A}\BP[1] \subseteq
+:class: dropdown
+:nonumber: true
+
+By the idempotence of ${\cal A}$, ${\cal A}\PS{1} = {\cal A}{\cal
+  A}\BP{1} = {\cal A}\BP{1} = \PS{1}$. On the other hand, we have ${\cal A}\BP{1} \subseteq
 {\cal A}\mathbf{LM} = \mathbf{LM}$, since the Souslin operation is monotone on
-classes. This yields $\PS[1] \subseteq \mathbf{LM}$.
+classes. This yields $\PS{1} \subseteq \mathbf{LM}$.
 ```
 
 
@@ -221,6 +204,9 @@ Let $X$ be a Polish space. For every set $A \subseteq X$ there exists a set $B \
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let  $U_1, U_2, \ldots$ be an enumeration of countable base of the
 topology for $X$.
 Given $A \subseteq \Real$ set

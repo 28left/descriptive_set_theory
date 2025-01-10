@@ -1,30 +1,6 @@
 (chap-trees)=
 # Trees
 
-```{math}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\Cl}[1]{\overline{#1}}
-\newcommand{\Str}[1][2]{{#1}^{<\Nat}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Sgr}{\supset}
-\newcommand{\Sgeq}{\supseteq}
-\newcommand{\Conc}{\mbox{}^\frown}
-\newcommand{\Estr}{\varnothing}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-
-\DeclareMathOperator{\KB}{KB}
-\DeclareMathOperator{\lex}{lex}
-```
-
 Let $A$ be a set. Recall that the set of all finite sequences over $A$ is denoted by $\Str[A]$, while $A^\Nat$ denotes the set of all infinite sequences over $A$. Given $\alpha \in A^\N$, $n \in \N$, $\alpha\Rest{n}$ denotes the initial segment of $\alpha$ of length $n$.
 
 ```{prf:definition}
@@ -50,6 +26,8 @@ Any tree $T$ with infinitely many nodes that is **finite branching** (i.e. each 
 ```
 
 ```{prf:proof}
+:nonumber: true
+
 We construct an infinite path inductively. 
 
 Let $T_\sigma$ denote the tree "above" $\sigma$, i.e. $T_\sigma = \{ \tau \in \Str[A] \colon \sigma\Conc\tau \in T\}$. If $T$ is finite branching,  by the **pigeonhole principle**, at least one of the sets $T_\sigma$ for $|\sigma| = 1$ must be infinite. Pick such a $\sigma$ and let $\alpha\Rest{1} = \sigma$. 
@@ -94,6 +72,8 @@ If $\leq_A$ is a well-ordering of $A$ and $T$ is a tree on $A$ with $[T] \neq \e
 ```
 
 ```{prf:proof}
+:nonumber: true
+
 We **prune** the tree $T$ by deleting any node that is not on an infinite branch. This yields a subtree $T' \subseteq T$ with $[T'] = [T]$. 
 
 Let $T'_n = \{\sigma \in T' \colon |\sigma| = n \}$. Since $\leq_A$ is a well-ordering on $A$, $T'_1$ must have a $\leq_{\lex}$-least element. Denote it by $\alpha\Rest{1}$. Since $T'$ is pruned, $\alpha\Rest{1}$ must have an extension in $T$, and we can repeat the argument to obtain $\alpha\Rest{2}$. 
@@ -123,6 +103,8 @@ $\qquad$ $T$ is well-founded $\quad \Leftrightarrow \quad$  $\leq_{\KB}$ restric
 ```
 
 ```{prf:proof}
+:nonumber: true
+
 Suppose $T$ is not well-founded. Let $\alpha \in [T]$. Then $\alpha\Rest{0}, \alpha\Rest{1}, \dots$ is an infinite descending sequence with respect to $\leq_{\KB}$.
 
 Conversely, suppose $\sigma_0 >_{\KB} \sigma_1 >_{\KB} \dots$ is an infinite descending sequence in $T$. By the definition of $>_{\KB}$, this implies $\sigma_1(0) \geq_A \sigma_2(0) \geq_A \dots$ as a sequence in $A$. Since $A$ is well-ordered, this sequence must eventually be constant, say $\sigma_n(0) = a_0$ for all $n \geq n_0$. 
@@ -165,6 +147,8 @@ A set $F \subseteq A^\Nat$ is closed if and only if there exists a tree $T$ on $
 ```
 
 ```{prf:proof}
+:nonumber: true
+
 Suppose $F$ is closed. Let 
 \begin{equation*}
 	T_F = \{\sigma \in \Str[A] \colon \sigma \Sle \alpha \text{ for some }\alpha \in F\}.

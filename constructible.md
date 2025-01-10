@@ -1,30 +1,4 @@
 # The Constructible Universe
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-
-```
 
 
 A set $X$ is **(first-order) definable** in a set $Y$ (from parameters) if there exists a first-order formula $\varphi(x_0, x_1, \dots, x_n)$ in the language of set theory (i.e. only using the binary relation symbol $\in$) such that for some $a_1, \dots, a_n \in Y$,
@@ -69,6 +43,9 @@ For each ordinal $\xi$:
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We show the first two statements statements simultaneously by induction. 
 
 They are clear for $\xi = 0$ and $\xi$ limit, so assume $\xi = \alpha +1$.  
@@ -96,6 +73,9 @@ For any $\xi$,
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Clearly, $(1)$ follows from $(2)$. 
 
 To show $(2)$, one again proceeds by induction. Again, the statement is clear for $0$ and limit ordinals, so assume $\xi = \alpha +1$ and $L_\alpha \cap \Ord = \alpha$. 
@@ -214,6 +194,9 @@ The relation $b = \mathcal{P}_{\Op{Def}}(a)$ is $\Delta_1$-definable.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (*Sketch*) Taking into account the complexity of the various sub-formulas, we see that the mapping $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$-definable.
 
 The graph of a $\Sigma_1$-definable function $f$ (with domain $\V$) is $\Delta_1$, since the complement is given as
@@ -283,6 +266,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Proceed by induction on the formula structure. We focus on the case $\varphi \equiv \exists y \psi$. The other cases are straightforward due to the definition of relativization.
 
 By induction hypothesis, there exists a normal function $G$ such that
@@ -349,6 +335,9 @@ A class $M$ is an inner model of $\ZF$ if and only if there exists a sequence $(
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 ($\Rightarrow$) Suppose $M$ is an inner model of $\ZF$. Let 
 
 $$

@@ -1,28 +1,6 @@
 # Polish Spaces
 
-```{math}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Rest}[1]{\mid_{#1}}
-\newcommand{\Ci}{\mathbb{T}}
-\newcommand{\Str}[1][2]{{#1}^{<\Nat}}
-\newcommand{\Sle}{\subset}
-\newcommand{\Sleq}{\subseteq}
-\newcommand{\Cyl}[1]{N_{#1}}
-
-
-\DeclareMathOperator{\diam}{diam}
-```
-
-The proofs in the [previous lecture](ch_perfect) are quite general, that is, they make little use of specific properties of $\Real$. If we scan the arguments carefully, we see that we can replace $\Real$ by any metric space that is **complete and contains a countable basis of the topology**.
+The proofs in the [introduction section](#perfect) are quite general, that is, they make little use of specific properties of $\Real$. If we scan the arguments carefully, we see that we can replace $\Real$ by any metric space that is **complete and contains a countable basis of the topology**.
 
 ## Review of some concepts from topology
 
@@ -177,6 +155,9 @@ Every Polish space $X$ is the continuous image of $\Baire$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $d$ be a compatible metric on $X$, and let $D = \{x_i \colon i \in \Nat\}$ be a countable dense subset of $X$. Every point in $X$ is the limit of a sequence in $D$. Define a mapping $g:\Baire \to X$ by putting
 
 $$

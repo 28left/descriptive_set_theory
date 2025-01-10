@@ -1,31 +1,4 @@
 # The Axiom of Constructibility
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Integer}{\mathbb{Z}}
-\newcommand{\Rat}{\mathbb{Q}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Cyl}[1]{N_{#1}}
-\newcommand{\Cant}{2^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\Const}[1]{\underline{#1}}
-\newcommand{\V}{\mathbf{V}}
-\newcommand{\Ord}{\mathbf{Ord}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-```
-
 
 We can add to $\ZF$ the axiom that all sets are constructible, i.e.
 
@@ -49,14 +22,17 @@ The map $\alpha \mapsto L_\alpha$ is $\Delta_1$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We first show that the mapping is $\Sigma_1$. The mapping is obtained by ordinal recursion over the function $a \mapsto \mathcal{P}_{\Op{Def}}(a)$. 
 
 In general, if a function $G: \V \to \V$ is $\Sigma_1$ and $F: \Ord \to \V$ is obtained by recursion from $G$, i.e. $F(\alpha) = G(F\Rest{\alpha})$, then $F$ is also $\Sigma_1$. This is because
 
-\begin{multline*}
-    y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
-        \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
-\end{multline*}
+\begin{align*}
+    y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: & ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
+        & \quad \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
+\end{align*}
 
 Applying some of the various prefix transformations for $\Sigma_1$-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all $\Delta_0$ properties, the above formula can be shown to be $\Sigma_1$, too.
 
@@ -93,6 +69,9 @@ $$
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (1) follows immediately from the fact that for such $M$, $L_\alpha^M = L_\alpha$.
 
 (2) We have
@@ -155,6 +134,9 @@ For all $\alpha \geq \omega$, $|L_{\alpha}| = |\alpha|$.
 ```	
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 We know that $\alpha \subseteq L_\alpha$. Hence $|\alpha| \leq |L_\alpha|$. To show $|\alpha| \geq |L_\alpha|$, we work by induction on $\alpha$.
 
 If $\alpha = \beta +1$, then by {prf:ref}`prop-basics-L`(4), $|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|$. 
@@ -175,6 +157,9 @@ If we choose our finite axiom set more carefully, it is actually possible to sho
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with all (instances of) axioms of $\ZF$ used to prove that all the theorems leading up to the fact that for all $\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
 
 Suppose for a transitive set $M$, $M\models T + \VL$. Let $\lambda$ be the least ordinal not in $M$. 
@@ -215,7 +200,10 @@ We now put condensation to use as described above.
 Suppose $V=L$. If $\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in L_{\kappa^+}$.
 ```
 
-```{prf:proof} 
+```{prf:proof}
+:class: dropdown
+:nonumber: true
+ 
 Since we assume $\VL$, there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models T + \VL$, where $T$ is as in the **condensation lemma**. Such a $\lambda$ exists by the **reflection theorem** ({prf:ref}`thm-reflection`).  Let $X = \kappa \cup \{x\}$. By choice of $\lambda$, $X \subseteq L_\lambda$. 
 
 By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
@@ -248,6 +236,9 @@ If $\VL$, then for all cardinals $\kappa$, $2^\kappa = \kappa^+$.
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 If $\VL$, then by {prf:ref}`lemma-L-GCH`, $\mathcal{P}(\kappa) \subseteq L_{\kappa^+}$. With {prf:ref}`prop-card-Lalpha`, we obtain
 
 $$

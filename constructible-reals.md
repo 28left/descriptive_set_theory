@@ -1,26 +1,4 @@
 # Constructible Reals
-```{math}
-\newcommand{\Nat}{\mathbb{N}}
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Baire}{\Nat^{\Nat}}
-\newcommand{\Nstr}{\Nat^{<\Nat}}
-\newcommand{\Tup}[1]{\langle #1 \rangle}
-\newcommand{\Co}[1]{\neg \,#1}
-\newcommand{\Op}[1]{\operatorname{#1}}
-\newcommand{\Rest}[1]{|_{#1}}
-\newcommand{\CH}{\mathsf{CH}}
-\newcommand{\AC}{\mathsf{AC}}
-\newcommand{\ZF}{\mathsf{ZF}}
-\newcommand{\ZFC}{\mathsf{ZFC}}
-\newcommand{\VL}{\mathsf{V=L}}
-\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
-\newcommand{\bPi}{\pmb{\Pi}}
-\newcommand{\bSigma}{\pmb{\Sigma}}
-\DeclareMathOperator{\W}{W}
-\DeclareMathOperator{\WF}{WF}
-\DeclareMathOperator{\WOrd}{WOrd}
-\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
-```
 
 In this lecture we transfer the results about $L$ to the projective hierarchy. The main idea is to relate sets of reals that are defined by set theoretic formulas to sets defined in second order arithmetic.
 
@@ -51,9 +29,9 @@ Unfortunately, the condensation lemma only holds for **transitive sets** (and $(
 
 So, for reals, we can formulate membership in $L$ now as follows:
 
-\begin{multline*} \tag{$*$}
-	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: [E_\beta \text{ is  extensional and well-founded} \\ \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
-\end{multline*}
+\begin{align*} \tag{$*$}
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \quad \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
+\end{align*}
 where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
 
@@ -75,6 +53,9 @@ It remains to show that the notions occurring inside the square brackets are def
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 (a) can be established similar to showing that $\Op{Sat}$-predicate of {prf:ref}`thm-sat-predicate` is $\Delta_1$-definable. One does this first for $\Sigma_1$ formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation. 
 
 Since we work with relations over $\Nat$ now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of $\models$ for $\Sigma_n$-formulas, this helps us bound the overall complexity at $\Sigma^0_n$
@@ -89,10 +70,10 @@ is arithmetic in $\alpha$.
 
 Let $\psi(v_0, v_1, v_2)$ be the formula $\Tup{v_0, v_1} \in v_2$. Then 
 
-\begin{multline*}
-    \pi_\alpha(m) = \gamma \iff \\ 
-    \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
-\end{multline*}
+\begin{align*}
+    & \pi_\alpha(m) = \gamma \iff \\ 
+    & \qquad \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
+\end{align*}
 
 Now apply the previous observation and (a).
 ```
@@ -165,6 +146,9 @@ If $\VL$, there exists an uncountable $\Sigma^1_2$ set in $\Baire$ without a per
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A \subseteq \Baire$ be given by
 \begin{equation*}
     x \in A \iff x \in \WOrd \, \wedge \, \forall y <_L x \,  ( \parallel y \parallel \ne \parallel x \parallel).
@@ -214,6 +198,9 @@ If $\VL$, then there exists an uncountable $\bPi^1_1$ set without a perfect subs
 ```
 
 ```{prf:proof}
+:class: dropdown
+:nonumber: true
+
 Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}`prop-sigma12-perfect`. $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
 
 $B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of) a function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
