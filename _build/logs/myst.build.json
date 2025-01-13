@@ -1,9 +1,11 @@
 {
   "input": {
-    "files": [],
+    "files": [
+      "ordinals.md"
+    ],
     "opts": {
       "execute": false,
-      "pdf": false,
+      "pdf": true,
       "tex": false,
       "typst": false,
       "docx": false,
@@ -21,9 +23,20 @@
       "strict": false,
       "ci": false,
       "maxSizeWebp": 1572864
-    },
-    "performSiteBuild": true
+    }
   },
-  "exports": [],
-  "buildSite": true
+  "exports": [
+    {
+      "format": "pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/ordinals.pdf",
+      "articles": [
+        {
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/ordinals.md",
+          "level": 0
+        }
+      ],
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/ordinals.md",
+      "$project": "/Users/janreimann/GIT/descriptive_set_theory"
+    }
+  ]
 }

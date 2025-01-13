@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Co-Analytic sets &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'coanalytic';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Axioms of Set Theory" href="ZFC.html" />
+    <link rel="prev" title="The Projective Hierarchy" href="projective.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fcoanalytic.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/coanalytic.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Co-Analytic sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-forms">Normal forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathbf-pi-1-1-complete-sets"><span class="math notranslate nohighlight">\(\mathbf{\Pi}^1_1\)</span>-complete sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#well-founded-relations-and-well-orderings">Well-founded relations and well-orderings</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="co-analytic-sets">
+<h1>Co-Analytic sets<a class="headerlink" href="#co-analytic-sets" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
+\newcommand{\PP}[1][n]{\bPi^1_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<p>We will see that, in many ways, <span class="math notranslate nohighlight">\(\PP[1]\)</span> sets form the frontier between classical descriptive set theory and metamathematics. This chapter can be seen as the start of our transition to metamathematics. We will detail the distinguished role well-founded relations play in the analysis of <span class="math notranslate nohighlight">\(\PP[1]\)</span> sets.</p>
+<section id="normal-forms">
+<h2>Normal forms<a class="headerlink" href="#normal-forms" title="Permalink to this heading">#</a></h2>
+<p>Analytic sets are projections of closed sets. Closed sets are in <span class="math notranslate nohighlight">\(\Baire\times \Baire\)</span> are infinite paths through <strong>trees on <span class="math notranslate nohighlight">\(\Nat \times \Nat\)</span></strong>, i.e. two-dimensional trees.</p>
+<div class="proof definition admonition" id="def-two-dim-tree">
+<p class="admonition-title"><span class="caption-number">Definition 29 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(T \subseteq \Nstr \times \Nstr\)</span>  is a <strong>two-dimensional tree</strong> if</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\((\sigma,\tau) \in T\)</span> implies <span class="math notranslate nohighlight">\(|\sigma|=|\tau|\)</span> and</p></li>
+<li><p><strong>(ii)</strong> <span class="math notranslate nohighlight">\((\sigma,\tau) \in T\)</span> implies <span class="math notranslate nohighlight">\((\sigma\Rest{n},\tau\Rest{n}) \in T\)</span> for all <span class="math notranslate nohighlight">\(n \leq |\sigma|\)</span>.</p></li>
+</ul>
+<p>An <strong>infinite branch</strong> of <span class="math notranslate nohighlight">\(T\)</span> is a pair <span class="math notranslate nohighlight">\((\alpha,\beta) \in \Baire\times \Baire\)</span> so that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \forall n\in \Nat \; (\alpha\Rest{n},\beta\Rest{n}) \in T.
+\end{equation*}\]</div>
+</section>
+</div><p>As in the one-dimensional case, we use <span class="math notranslate nohighlight">\([T]\)</span> to denote the set of all infinite paths through <span class="math notranslate nohighlight">\(T\)</span>. It follows that <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is analytic if and only if there exists a two-dimensional tree <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(\Nat \times \Nat\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+	\alpha \in A &amp; \iff &amp; \exists \beta \: (\alpha,\beta) \in [T]\\
+	             &amp; \iff &amp; \exists \beta \, \forall n \: (\alpha\Rest{n},\beta\Rest{n}) \in T.
+\end{eqnarray*}\]</div>
+<p>Another way to write this is to put, for given <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+	T(\alpha) = \{ \tau \colon (\alpha\Rest{|\tau|}, \tau) \in T \}.
+\]</div>
+<p>Then we have, with <span class="math notranslate nohighlight">\(T\)</span> witnessing that <span class="math notranslate nohighlight">\(A\)</span> is analytic,</p>
+<div class="math notranslate nohighlight">
+\[
+	\alpha \in A \iff T(\alpha) \text{ has an infinite path } \iff T(\alpha) \text{ is not well-founded}.
+\]</div>
+<p>We obtain the following normal form for co-analytic sets.</p>
+<div class="proof proposition admonition" id="prop-norm-form-coanalytic">
+<p class="admonition-title"><span class="caption-number">Proposition 39 </span> (Normal form for co-analytic sets  )</p>
+<section class="proposition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\PP[1]\)</span> if and only if there exists a two-dimensional tree <span class="math notranslate nohighlight">\(T\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    \alpha \in A \iff T(\alpha) \text{ is well-founded}.
+\]</div>
+</section>
+</div><p>If <span class="math notranslate nohighlight">\(A\)</span> is (lightface) <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>, then there exists a computable such <span class="math notranslate nohighlight">\(T\)</span>, and the mapping <span class="math notranslate nohighlight">\(\alpha \mapsto T(\alpha)\)</span> is computable, as a mapping between reals and trees (which can be coded by reals). This relativizes, i.e. for a <span class="math notranslate nohighlight">\(\Pi^1_1(\gamma)\)</span> set, the mapping <span class="math notranslate nohighlight">\(\alpha \mapsto T(\alpha)\)</span> is computable in <span class="math notranslate nohighlight">\(\gamma\)</span>. Since computable mappings are continuous, we obtain that the in the above proposition, the mapping <span class="math notranslate nohighlight">\(\alpha \mapsto T(\alpha)\)</span> is continuous.</p>
+</section>
+<section id="mathbf-pi-1-1-complete-sets">
+<h2><span class="math notranslate nohighlight">\(\mathbf{\Pi}^1_1\)</span>-complete sets<a class="headerlink" href="#mathbf-pi-1-1-complete-sets" title="Permalink to this heading">#</a></h2>
+<p>How does one show that a specific set is <em>not</em> Borel? A related question is: Given a definition of a set in second order arithmetic, how can we tell that there is not an easier definition (in the sense that it uses less quantifier changes, no function quantifiers etc.)? The notion of <strong>completeness</strong> for classes in Polish spaces provides a general method to answer such questions.</p>
+<div class="proof definition admonition" id="def-Wadge">
+<p class="admonition-title"><span class="caption-number">Definition 30 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X,Y\)</span> be Polish spaces. We say a set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>Wadge reducible</strong> to <span class="math notranslate nohighlight">\(B \subseteq Y\)</span>, written <span class="math notranslate nohighlight">\(A \leq_{\W} B\)</span>, if there exists a continuous function <span class="math notranslate nohighlight">\(f: X \to Y\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	x \in A \iff f(x) \in B.
+\]</div>
+</section>
+</div><p>The important fact about Wadge reducibility is that it preserves classes closed under continuous preimages.</p>
+<div class="proof proposition admonition" id="prop-Wadge-preimages">
+<p class="admonition-title"><span class="caption-number">Proposition 40 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\Gamma\)</span> be a family of subsets in Polish spaces (such as the classes of the Borel or projective hierarchy). If <span class="math notranslate nohighlight">\(\Gamma\)</span> is closed under continuous preimages, then <span class="math notranslate nohighlight">\(A \leq_{\W} B\)</span> and <span class="math notranslate nohighlight">\(B \in \Gamma\)</span> implies <span class="math notranslate nohighlight">\(A \in \Gamma\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(A \leq_{\W} B\)</span> via <span class="math notranslate nohighlight">\(f\)</span>, then <span class="math notranslate nohighlight">\(A = f^{-1}(B)\)</span>.</p>
+</div>
+<div class="proof definition admonition" id="def-completeness">
+<p class="admonition-title"><span class="caption-number">Definition 31 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong><span class="math notranslate nohighlight">\(\Gamma\)</span>-complete</strong> if <span class="math notranslate nohighlight">\(A \in \Gamma\)</span> and for all <span class="math notranslate nohighlight">\(B \in \Gamma\)</span>, <span class="math notranslate nohighlight">\(B \leq_{\W} A\)</span>.</p>
+</section>
+</div><p><span class="math notranslate nohighlight">\(\Gamma\)</span>-complete sets can be seen as the most complicated members of <span class="math notranslate nohighlight">\(\Gamma\)</span>. In particular, for the <span class="math notranslate nohighlight">\(\bSigma/\bPi\)</span> classes complete sets cannot be members of the dual class. For instance, a <span class="math notranslate nohighlight">\(\PP[1]\)</span>-complete set cannot be <span class="math notranslate nohighlight">\(\PS[1]\)</span>, since this would mean it is Borel, and hence every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set would be Borel, which we have seen is not true.</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq \Baire \times \Baire\)</span> is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for some class <span class="math notranslate nohighlight">\(\Gamma\)</span> in the Borel or projective hierarchy, then the set</p>
+<div class="math notranslate nohighlight">
+\[
+	\{ \alpha \oplus \beta \colon (\alpha,\beta) \in A \}
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(\Gamma\)</span>-complete, where <span class="math notranslate nohighlight">\(\oplus\)</span> here denotes the pairing function for reals</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	\alpha\oplus\beta(n) = \begin{cases}
+	 	\alpha(k) &amp; n = 2k, \\
+		\beta(k) &amp; n = 2k+1.
+	\end{cases}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\oplus\)</span> is continuous, and <span class="math notranslate nohighlight">\(B \in \Gamma\)</span> if and only if <span class="math notranslate nohighlight">\(B = A_{\gamma}\)</span> for some <span class="math notranslate nohighlight">\(\gamma\in \Baire\)</span>, we have in that case that <span class="math notranslate nohighlight">\(B \leq_{\W} A\)</span> via the mapping</p>
+<div class="math notranslate nohighlight">
+\[
+	f(\beta) = \gamma\oplus\beta.
+\]</div>
+<p>It follows that complete sets exist for all levels of the Borel and projective hierarchy. However, the universal sets they are based on are rather abstract objects. Complete sets are most useful when we can show that a <em>specific property</em> implies completeness. We will encounter next an important example for the class of co-analytic sets.</p>
+</section>
+<section id="well-founded-relations-and-well-orderings">
+<span id="sec-well-founded"></span><h2>Well-founded relations and well-orderings<a class="headerlink" href="#well-founded-relations-and-well-orderings" title="Permalink to this heading">#</a></h2>
+<p>Given a real in <span class="math notranslate nohighlight">\(\beta \in \Baire\)</span>, we can associate with <span class="math notranslate nohighlight">\(\beta\)</span> a binary relation <span class="math notranslate nohighlight">\(E_\beta\)</span> on <span class="math notranslate nohighlight">\(\Nat\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+E_\beta(m,n) :\iff \beta(\Tup{m,n}) = 0.
+\]</div>
+<p>A binary relation <span class="math notranslate nohighlight">\(E\)</span> on a set <span class="math notranslate nohighlight">\(X\)</span> is <strong>well-founded</strong> if every non-empty <span class="math notranslate nohighlight">\(Y \subseteq X\)</span> has an <span class="math notranslate nohighlight">\(E\)</span>-minimal element <span class="math notranslate nohighlight">\(y_0\)</span>, that is, there is no <span class="math notranslate nohighlight">\(z \in Y\)</span> with <span class="math notranslate nohighlight">\(E(z,y)\)</span>.</p>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[
+	\WF = \{\beta \in \Baire \colon \text{$E_\beta$ is well-founded} \}.
+\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[
+	 \beta \in \WF \iff \forall \gamma \in \Baire \: \exists n \: \forall m \; [ \gamma(n) E_\beta \gamma(m) ],
+\]</div>
+<p>and hence <span class="math notranslate nohighlight">\(\WF\)</span> is <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>.</p>
+<p>A closely related set is</p>
+<div class="math notranslate nohighlight">
+\[
+	\WOrd = \{\beta \in \Baire \colon \text{$E_\beta$ is a well-ordering} \}.
+\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[
+	\beta \in \WOrd \iff \beta \in \WF  \text{ and $E_\beta$ is a linear ordering}.
+\]</div>
+<p>Coding a linear order is easily seen to be <span class="math notranslate nohighlight">\(\Pi^0_1\)</span>, hence <span class="math notranslate nohighlight">\(\WOrd\)</span> is <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>, too.</p>
+<div class="proof theorem admonition" id="thm-WF-Wadge-complete">
+<p class="admonition-title"><span class="caption-number">Theorem 29 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>The sets <span class="math notranslate nohighlight">\(\WF\)</span> and <span class="math notranslate nohighlight">\(\WOrd\)</span> are <span class="math notranslate nohighlight">\(\PP[1]\)</span>-complete.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We have seen in the chapter on <a class="reference internal" href="trees.html#chap-trees"><span class="std std-ref">Trees</span></a> that a tree has an infinite path  if and only if the inverse prefix ordering is ill-founded. Trees can be coded as reals, and hence <a class="reference internal" href="#prop-norm-form-coanalytic">Proposition 39</a> yields immediately that <span class="math notranslate nohighlight">\(\WF\)</span> is <span class="math notranslate nohighlight">\(\PP[1]\)</span>-complete.</p>
+<p>For <span class="math notranslate nohighlight">\(\WOrd\)</span> we use the Kleene-Brouwer ordering and refer to <a class="reference internal" href="trees.html#prop-KB-wellorder">Proposition 6</a>.</p>
+</div>
+<p>The theorem lets us gain further insights in the structure of co-analytic sets. If <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> codes a well-ordering on <span class="math notranslate nohighlight">\(\Nat\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+\end{equation*}\]</div>
+<p>It is clear that <span class="math notranslate nohighlight">\(\Norm{\alpha} &lt; \omega_1\)</span>. For a fixed ordinal <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>, we let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\WOrd_\xi = \{ \alpha \in \WOrd \colon \Norm{\alpha} \leq \xi \}.
+\end{equation*}\]</div>
+<div class="proof lemma admonition" id="lem-bounded-rank-Borel">
+<p class="admonition-title"><span class="caption-number">Lemma 15 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>For any <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>, the set <span class="math notranslate nohighlight">\(\WOrd_\xi\)</span> is Borel.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span>. We say <span class="math notranslate nohighlight">\(m \in \Nat\)</span> is in the <strong>domain</strong> of <span class="math notranslate nohighlight">\(E_\alpha\)</span>, <span class="math notranslate nohighlight">\(m \in \Op{dom}(E_\alpha)\)</span>, if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\exists n \: [ m E_\alpha n \; \vee \; n E_\alpha m].
+\end{equation*}\]</div>
+<p>It is clear from the definition of <span class="math notranslate nohighlight">\(E_\alpha\)</span> that <span class="math notranslate nohighlight">\(\Op{dom}(E_\alpha)\)</span> is Borel. For <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	B_\xi = \{ (\alpha,n) \colon E_\alpha \Rest{\{m \colon m E_\alpha n\}} \text{ is a well-ordering of order type $\leq \xi$} \}
+\end{equation*}\]</div>
+<p>We show by transfinite induction that every <span class="math notranslate nohighlight">\(B_\xi\)</span> is Borel. Suppose <span class="math notranslate nohighlight">\(B_\zeta\)</span> is Borel for all <span class="math notranslate nohighlight">\(\zeta &lt; \xi\)</span>. Then, since <span class="math notranslate nohighlight">\(\xi\)</span> is countable, <span class="math notranslate nohighlight">\(\bigcup_{\zeta &lt; \xi} B_\zeta\)</span> is Borel, too. But</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	(\alpha,n) \in B_\xi \iff \forall m \: [m E_\alpha n \: \Rightarrow \: (\alpha,m) \in \bigcup_{\zeta &lt; \xi} B_\zeta],
+\end{equation*}\]</div>
+<p>and from this it follows that <span class="math notranslate nohighlight">\(B_\xi\)</span> is Borel. Finally, note that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\alpha \in \WOrd_\xi \iff \forall n \; [n \in \Op{dom}(E_\alpha) \: \Rightarrow \: (\alpha,n) \in B_\xi],
+\end{equation*}\]</div>
+<p>which implies that <span class="math notranslate nohighlight">\(\WOrd_\xi\)</span> is Borel.</p>
+</div>
+<div class="proof corollary admonition" id="cor-coanal-union-Borel">
+<p class="admonition-title"><span class="caption-number">Corollary 12 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set is a union of <span class="math notranslate nohighlight">\(\aleph_1\)</span> many Borel sets.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since <span class="math notranslate nohighlight">\(\WOrd\)</span> is <span class="math notranslate nohighlight">\(\PP[1]\)</span>-complete, every co-analytic set <span class="math notranslate nohighlight">\(A\)</span> is the preimage of <span class="math notranslate nohighlight">\(\WOrd\)</span> for some continuous function <span class="math notranslate nohighlight">\(f\)</span>. We have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\WOrd = \bigcup_{\xi &lt; \omega_1} \WOrd_\xi,
+\end{equation*}\]</div>
+<p>and hence</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	A = \bigcup_{\xi &lt; \omega_1}  f^{-1}(\WOrd_\xi).
+\end{equation*}\]</div>
+<p>Since continuous preimages of Borel sets are Borel, the result follows.</p>
+</div>
+<p>If we work instead with the set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	C_\xi = \{ \alpha \colon \alpha \in \WOrd_\xi \text{ or } \exists n\in \Op{dom}(E_\alpha) \\ [E_\alpha \Rest{\{m \colon m E_\alpha n\}} \text{ is a well-ordering of order type $\xi$}] \},	
+\end{equation*}\]</div>
+<p>then we get that <span class="math notranslate nohighlight">\(\WOrd = \bigcap_{\xi &lt; \omega_1} C_\xi\)</span>, and hence</p>
+<div class="proof corollary admonition" id="cor-aleph-union-intersect">
+<p class="admonition-title"><span class="caption-number">Corollary 13 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set can be obtained as a union or intersection of <span class="math notranslate nohighlight">\(\aleph_1\)</span>-many Borel sets. Consequently, the same holds for every <span class="math notranslate nohighlight">\(\PS[1]\)</span> set.</p>
+</section>
+</div><p>The previous results allow us to solve the cardinality problem of co-analytic sets at least partially.</p>
+<div class="proof corollary admonition" id="cor-coanalytic-cardinality">
+<p class="admonition-title"><span class="caption-number">Corollary 14 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\PP[1]\)</span> set is either countable, of cardinality <span class="math notranslate nohighlight">\(\aleph_1\)</span>, or of cardinality <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>.</p>
+</section>
+</div><p>We conclude the chapter with another application of  <a class="reference internal" href="#lem-bounded-rank-Borel">Lemma 15</a> – a useful tool for analyzing <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> sets:</p>
+<div class="proof theorem admonition" id="thm-sigma11-bounding">
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span> (<span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>-bounding)</p>
+<section class="theorem-content" id="proof-content">
+<p>For every analytic <span class="math notranslate nohighlight">\(A \subseteq \WOrd\)</span> there exists an ordinal <span class="math notranslate nohighlight">\(\nu &lt; \omega_1\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	\forall x \in A \;\; \Norm{x} &lt; \nu.
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If such a <span class="math notranslate nohighlight">\(\nu\)</span> did not exist, then</p>
+<div class="math notranslate nohighlight">
+\[
+	\alpha \in \WOrd \iff \exists \nu \: [\alpha \in A \; \wedge \; \WOrd_\nu].
+\]</div>
+<p>The right-hand side is <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>, and hence <span class="math notranslate nohighlight">\(\WOrd\)</span> would be <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>, contradiction.</p>
+</div>
+<p>An analogous statement holds for <span class="math notranslate nohighlight">\(\WF\)</span>, with respect to the rank function <span class="math notranslate nohighlight">\(\rho\)</span> of a well-founded relation.</p>
+<!-- ## Uniformization
+
+Two important structural properties of pointclasses are **separation** and **uniformization**.
+
+We have seen an instance of separation in  --></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="projective.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Projective Hierarchy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ZFC.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Axioms of Set Theory</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-forms">Normal forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathbf-pi-1-1-complete-sets"><span class="math notranslate nohighlight">\(\mathbf{\Pi}^1_1\)</span>-complete sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#well-founded-relations-and-well-orderings">Well-founded relations and well-orderings</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

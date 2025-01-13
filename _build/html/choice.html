@@ -1,0 +1,608 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Axiom of Choice &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'choice';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Coding Borel Sets" href="codingBorel.html" />
+    <link rel="prev" title="Measure and Baire Category" href="measure.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fchoice.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/choice.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Axiom of Choice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-axiom-of-choice">
+<h1>The Axiom of Choice<a class="headerlink" href="#the-axiom-of-choice" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Pow}{\mathcal{P}}\]</div>
+<p>In the previous lectures, a number of <strong>regularity principles</strong> for sets of real numbers emerged:</p>
+<ul class="simple">
+<li><p><strong>(PS)</strong>     the <strong>perfect subset property</strong>,</p></li>
+<li><p><strong>(LM)</strong>     <strong>Lebesgue measurability</strong>,</p></li>
+<li><p><strong>(BP)</strong>      the <strong>Baire property</strong>.</p></li>
+</ul>
+<p>We have seen that the Borel sets in <span class="math notranslate nohighlight">\(\Real\)</span> have all these properties. In this lecture we will show how to construct counterexamples for each of these principles. The proofs make essential use if the <strong>Axiom of Choice</strong>:</p>
+<blockquote>
+<div><p><strong>(AC)</strong>     Every set <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> of non-empty sets has a choice-function.</p>
+</div></blockquote>
+<p>A <strong>choice function</strong> for <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> is a function <span class="math notranslate nohighlight">\(f\)</span> that assigns every set <span class="math notranslate nohighlight">\(Y \in \mathcal{X}\)</span> an element <span class="math notranslate nohighlight">\(y \in Y\)</span>.</p>
+<p>One of the most famous applications of the Axiom of Choice is Vitali’s construction of a non-Lebesgue measurable set.</p>
+<div class="proof theorem admonition" id="thm-Vitali-nonmeasurable">
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Vitali)</p>
+<section class="theorem-content" id="proof-content">
+<p>There exists a set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> that is not Lebesgue measurable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Put</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    x \sim y \; \text{ if and only if }\;  x-y \in \Rat.
+\end{equation*}\]</div>
+<p>It is straightforward to check that this is an equivalence relation on <span class="math notranslate nohighlight">\(\Real\)</span>.
+Using a choice function on the equivalence classes of <span class="math notranslate nohighlight">\(\sim\)</span> intersected with the unit interval <span class="math notranslate nohighlight">\([0,1]\)</span>, we pick from each equivalence class a representative from <span class="math notranslate nohighlight">\([0,1]\)</span>, and collect them in a set <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>If we let, for <span class="math notranslate nohighlight">\(r \in \Rat\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    S_r = \{s+r \colon s \in S \},
+\end{equation*}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[S_r \cap S_t \quad \text{ for $r \neq t$}.\]</div>
+<p>Suppose <span class="math notranslate nohighlight">\(S\)</span> is measurable. Then so is each <span class="math notranslate nohighlight">\(S_r\)</span>, and <span class="math notranslate nohighlight">\(\lambda(S_r) = \lambda(S)\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\lambda(S) = 0\)</span>, then <span class="math notranslate nohighlight">\(\lambda(\Real) = 0\)</span>, which is impossible.
+On the other hand, if <span class="math notranslate nohighlight">\(\lambda(S) &gt; 0\)</span>, then, by countable additivity,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    2 = \lambda([0,2]) \geq \lambda\left(\bigcup_{r\in \Rat\cap[0,1]} S_r\right) = \sum_{r\in \Rat\cap[0,1]} \lambda(S) = \infty,
+\end{equation*}\]</div>
+<p>contradiction.</p>
+</div>
+<p>The Axiom of Choice is equivalent to a number of other principles. We will use the <strong>Well-ordering Principle</strong>:</p>
+<blockquote>
+<div><p><strong>(WO)</strong>     Every set <span class="math notranslate nohighlight">\(X\)</span> can be well-ordered.</p>
+</div></blockquote>
+<p>This means that one can define a binary relation <span class="math notranslate nohighlight">\(&lt;\)</span> on <span class="math notranslate nohighlight">\(X\)</span> so that every non-empty subset of <span class="math notranslate nohighlight">\(X\)</span> has a <span class="math notranslate nohighlight">\(&lt;\)</span>-minimal element.</p>
+<p>We use (WO) to construct a set <span class="math notranslate nohighlight">\(B\subseteq \Real\)</span> such neither <span class="math notranslate nohighlight">\(B\)</span> nor <span class="math notranslate nohighlight">\(\Real\setminus B\)</span> contains a perfect subset. Such sets are called <strong>Bernstein sets</strong>.</p>
+<div class="proof theorem admonition" id="thm-Bernstein">
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>There exists a Bernstein set.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\mathcal{P}\)</span> be the set of perfect subsets of <span class="math notranslate nohighlight">\(\Real\)</span>. We can well-order this set, say</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \mathcal{P} = \{P_\xi \colon \xi &lt; 2^{\aleph_0} \}.
+\end{equation*}\]</div>
+<p>Note that every perfect subset corresponds to Cantor-Scheme, which can be coded by a real number (see <a class="reference internal" href="perfect_subsets_R.html#ch-perfect"><span class="std std-ref">Perfect Subsets of the Real Line</span></a>). Therefore, there are at most <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>-many perfect subsets of <span class="math notranslate nohighlight">\(\Real\)</span>, and it is not hard to see that there are exactly <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>-many.</p>
+<p>Furthermore, we assume each <span class="math notranslate nohighlight">\(P_\xi\)</span> is well-ordered.</p>
+<p>Pick <span class="math notranslate nohighlight">\(a_0 \neq b_0\)</span> from <span class="math notranslate nohighlight">\(P_0\)</span>. Assume we have chosen <span class="math notranslate nohighlight">\(\xi &lt; 2^{\aleph_0}\)</span>, and <span class="math notranslate nohighlight">\(\{a_\beta\colon \beta &lt; \xi \}\)</span> and <span class="math notranslate nohighlight">\(\{b_\beta\colon \beta &lt; \xi \}\)</span> so that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    a_\beta, b_\beta \in P_\beta \quad \text{ and } \quad \text{all $a_\beta, b_\gamma$ pairwise distinct},
+\end{equation*}\]</div>
+<p>we can choose <span class="math notranslate nohighlight">\(a_\xi, b_\xi \in P_\xi\)</span> to be the first two elements of <span class="math notranslate nohighlight">\(P_\xi \setminus \bigcup_{\gamma &lt; \xi} \{a_\gamma, b_\gamma\}\)</span>. This is possible since a perfect subset of <span class="math notranslate nohighlight">\(\Real\)</span> has cardinality <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>, and <span class="math notranslate nohighlight">\(\xi&lt; 2^{\aleph_0}\)</span>.</p>
+<p>Put</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+        A = \{a_\xi \colon \xi &lt; 2^{\aleph_0} \} \qquad B = \{b_\xi \colon \xi &lt; 2^{\aleph_0} \}.
+\end{equation*}\]</div>
+<p>Neither <span class="math notranslate nohighlight">\(A\)</span> nor <span class="math notranslate nohighlight">\(B\)</span> has a perfect subset by construction, and since <span class="math notranslate nohighlight">\(A \subseteq \Real\setminus B\)</span>, <span class="math notranslate nohighlight">\(B\)</span> is a Bernstein set.</p>
+</div>
+<div class="proof proposition admonition" id="prop-Bernstein-BP">
+<p class="admonition-title"><span class="caption-number">Proposition 20 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>A Bernstein set does not have the Baire property.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Assume for a contradiction a Bernstein set <span class="math notranslate nohighlight">\(B\)</span> has the Baire property. By <a class="reference internal" href="measure.html#exercise-bp-gdelta-plus"><span class="std std-ref">an exercise</span></a> in the previous chapter, we can write <span class="math notranslate nohighlight">\(B = M \cup G\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> is meager and <span class="math notranslate nohighlight">\(G\)</span> is <span class="math notranslate nohighlight">\(G_\delta\)</span>.</p>
+<p>At least one of <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(\Real\setminus B\)</span> is not meager. Wlog assume <span class="math notranslate nohighlight">\(B\)</span> is not meager. (If not, obtain the representation “meager <span class="math notranslate nohighlight">\(\cup\)</span> <span class="math notranslate nohighlight">\(G_\delta\)</span>” above for <span class="math notranslate nohighlight">\(\Real\setminus B\)</span> and proceed analogously.) Then <span class="math notranslate nohighlight">\(G \subseteq B\)</span> must be non-meager, too, and hence is an uncountable <span class="math notranslate nohighlight">\(G_\delta\)</span> set. By <a class="reference internal" href="subsets_Polish.html#thm-subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\(G\)</span> is Polish and hence must contain a perfect subset, contradiction.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that a Bernstein set is not Lebesgue measurable.</p>
+</div>
+<p>The existence of arbitrary choice functions appears to be a rather strong assumption. It has consequences that seem paradoxical in the sense that they conflict with basic intuitions we have about objects and they behavior with respect to size or other characteristics. Arguably the most famous example is the <strong>Banach-Tarski Paradox</strong>, which uses the Axiom of Choice to partition a ball in <span class="math notranslate nohighlight">\(\Real^3\)</span> into finitely many pieces, and then, using rigid transformations (i.e.\ rotations and translations), to assemble them into two balls of the original size.</p>
+<p>On the other hand, the Axiom of Choice implies or is even equivalent to many principles that are applied throughout many areas of mathematics, such as the existence of bases of vector spaces, Zorn’s Lemma, Tychonoff’s Theorem on the compactness of product spaces, the Hahn-Banach Theorem, or the Prime Ideal Theorem.</p>
+<p>For some applications, however, a weaker form of the Axiom of Choice is sufficient.</p>
+<p>The <strong>Axiom of Countable Choice</strong>:</p>
+<blockquote>
+<div><p><strong>(AC<span class="math notranslate nohighlight">\(_\omega\)</span>)</strong>     Every <em>countable</em> family <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> of non-empty sets has a choice-function.</p>
+</div></blockquote>
+<p>Stronger than Countable Choice, but still weaker than the full Axiom of Choice is  <strong>Axiom of Dependent Choice</strong>:</p>
+<blockquote>
+<div><p><strong>(DC)</strong>     If <span class="math notranslate nohighlight">\(E\)</span> is a binary relation on a non-empty set <span class="math notranslate nohighlight">\(A\)</span>, and if for every <span class="math notranslate nohighlight">\(a \in A\)</span> there exists <span class="math notranslate nohighlight">\(b \in A\)</span> such that <span class="math notranslate nohighlight">\(a \: E\: b\)</span>, then there exists a function <span class="math notranslate nohighlight">\(f:\Nat \to A\)</span> such that for all <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, <span class="math notranslate nohighlight">\(f(n) \: E \: f(n+1)\)</span>.</p>
+</div></blockquote>
+<p>A seminal result by <span id="id1">Solovay [<a class="reference internal" href="bibliography.html#id15" title="RM Solovay. A model of set-theory in which every set of reals is Lebesgue measurable. The Annals of Mathematics, 1970.">1970</a>]</span> showed that DC is no longer sufficient to prove the existence of non-regular sets in the above sense. He constructed (though under a large cardinal assumption) a model of ZF+DC in which every set of real numbers is Lebesgue measurable, has the Baire property, and has the perfect subset property.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="measure.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Measure and Baire Category</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="codingBorel.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Coding Borel Sets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

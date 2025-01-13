@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Subspaces of Polish Spaces &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'subsets_Polish';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Measure and Baire Category" href="measure.html" />
+    <link rel="prev" title="Borel Sets" href="Borel.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fsubsets_Polish.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/subsets_Polish.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Subspaces of Polish Spaces</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-set-as-clopen-sets">Borel set as clopen sets</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="subspaces-of-polish-spaces">
+<span id="chap-subspace-polish"></span><h1>Subspaces of Polish Spaces<a class="headerlink" href="#subspaces-of-polish-spaces" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\eps}{\varepsilon}\]</div>
+<p>Closed subsets of Polish spaces (with the subspace topology) are Polish (<a class="reference internal" href="polish.html#properties-polish">Proposition 1</a>).</p>
+<p>What about open subsets like <span class="math notranslate nohighlight">\((0,1) \subset \Real\)</span>? It is clear from this example that we have to find a different compatible metric.</p>
+<div class="proof proposition admonition" id="prop-open-subset-Polish">
+<p class="admonition-title"><span class="caption-number">Proposition 9 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Any open subset of a Polish space <span class="math notranslate nohighlight">\(X\)</span> is Polish.</p>
+</section>
+</div><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Recall that for a set <span class="math notranslate nohighlight">\(A \subseteq X\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+d(x,A) = \inf \{ d(x,a) \colon a \in A\}
+\]</div>
+</aside>
+<div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(U \subset X\)</span> be open, where we assume that <span class="math notranslate nohighlight">\(U \neq X\)</span>.  Consider the set</p>
+<div class="math notranslate nohighlight">
+\[
+F = \{(t,x) \in \Real \times X \colon \; t \cdot d(x,X\setminus U) =1 \}.
+\]</div>
+<p>The mapping <span class="math notranslate nohighlight">\(x \mapsto d(x,X\setminus U)\)</span> from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(\Real\)</span> is continuous. Therefore, <span class="math notranslate nohighlight">\(F\)</span> is closed and thus Polish.</p>
+<p>If we restrict the projection <span class="math notranslate nohighlight">\(\pi_2: \Real \times X \to X\)</span> to <span class="math notranslate nohighlight">\(F\)</span>, we obtain a homeomorphism between <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(U\)</span>. As homeomorphic images of Polish spaces are Polish (<a class="reference internal" href="polish.html#properties-polish">Proposition 1</a>), <span class="math notranslate nohighlight">\(U\)</span> is Polish.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Give an alternative proof of the preceding result by considering the following:</p>
+<p>Let <span class="math notranslate nohighlight">\(d\)</span> be a compatible metric on <span class="math notranslate nohighlight">\(X\)</span> and define</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{d}(x,y) = \frac{d(x,y)}{1+d(x,y)}.
+\]</div>
+<p>Show that this is a metric that induces the same topology.</p>
+<p>Now let</p>
+<div class="math notranslate nohighlight">
+\[
+d_U(x,y) = \overline{d}(x,y) + \left | \frac{1}{\overline{d}(x,X\setminus U)} - \frac{1}{\overline{d}(y,X\setminus U)} \right|.
+\]</div>
+<p>Verfiy that this is a metric on <span class="math notranslate nohighlight">\(U\)</span> compatible with the subspace topology
+with respect to which <span class="math notranslate nohighlight">\(U\)</span> is complete.</p>
+</div>
+<div class="proof proposition admonition" id="prop-intersection-Polish">
+<p class="admonition-title"><span class="caption-number">Proposition 10 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space, and suppose <span class="math notranslate nohighlight">\((Y_n)\)</span> is a sequence of Polish subspaces of <span class="math notranslate nohighlight">\(X\)</span>. Then <span class="math notranslate nohighlight">\(\bigcap_n Y_n\)</span> is a Polish subspace of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Consider the mapping <span class="math notranslate nohighlight">\(f: X \to X^\Nat\)</span> given by <span class="math notranslate nohighlight">\(x \mapsto (x, x, x, \dots)\)</span>. The restriction of <span class="math notranslate nohighlight">\(f\)</span> to <span class="math notranslate nohighlight">\(\bigcap_n Y_n\)</span> is a homeomorphism between <span class="math notranslate nohighlight">\(\bigcap_n Y_n\)</span> and the diagonal <span class="math notranslate nohighlight">\(\Delta \subseteq \prod_n Y_n\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta = \{(x,x,x, \dots) \colon \: x \in Y_n \text{ for all } n \in \Nat \}.
+\]</div>
+<p><span class="math notranslate nohighlight">\(\Delta\)</span> is closed in the product space <span class="math notranslate nohighlight">\(\prod_n Y_n\)</span> and hence Polish, and this property pushes over to <span class="math notranslate nohighlight">\(\bigcap_n Y_n\)</span> (see <a class="reference internal" href="polish.html#properties-polish">Proposition 1</a>).</p>
+</div>
+<p>Hence every <span class="math notranslate nohighlight">\(G_\delta\)</span> subset of a Polish space is Polish. This is as far as we can get.</p>
+<div class="proof theorem admonition" id="thm-subsets-Polish">
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Mazurkiewicz)</p>
+<section class="theorem-content" id="proof-content">
+<p>A subset of a Polish space is Polish if and only if it is <span class="math notranslate nohighlight">\(G_\delta\)</span>.</p>
+</section>
+</div><p>We have already established the “if” direction of this result.
+For the other direction, we need a lemma that is interesting in its own right.</p>
+<div class="proof lemma admonition" id="lemma-Kuratowski-extension">
+<p class="admonition-title"><span class="caption-number">Lemma 5 </span> (Kuratowski extension lemma)</p>
+<section class="lemma-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(X, Y\)</span> are Polish spaces, <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, and <span class="math notranslate nohighlight">\(f: A \to Y\)</span> continuous. Then there exists a <span class="math notranslate nohighlight">\(G_\delta\)</span> set <span class="math notranslate nohighlight">\(G\)</span> with <span class="math notranslate nohighlight">\(A \subseteq G \subseteq \Cl{A}\)</span> and a continuous extension <span class="math notranslate nohighlight">\(g : G \to Y\)</span> of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</section>
+</div><p>Compare this with the last lecture, where we showed that the points of continuity of a function is always a <span class="math notranslate nohighlight">\(G_\delta\)</span> set (<a class="reference internal" href="Borel.html#thm-Young">Theorem 9</a>).</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We can adapt the <em><span class="math notranslate nohighlight">\(\eps\)</span>-oscillation set</em> <span class="math notranslate nohighlight">\(C_\eps\)</span> used in the proof of <a class="reference internal" href="Borel.html#thm-Young">Theorem 9</a> to the domain <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
+    C^A_\eps = \left \{ x \in X \colon \exists \delta &gt; 0 \: \forall a,b \in A \; [ a,b \in U_\delta(x) \: \Rightarrow \: d(f(a),f(b)) &lt; \eps  ] \right \}.
+\end{equation*}\]</div>
+<p>As before, <span class="math notranslate nohighlight">\(C^A_\eps\)</span> is open and hence</p>
+<div class="math notranslate nohighlight">
+\[
+G = \Cl{A} \cap \bigcap_n C^A_{1/n}
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(G_\delta\)</span> and since <span class="math notranslate nohighlight">\(f\)</span> is continuous, <span class="math notranslate nohighlight">\(A \subseteq G \subseteq \Cl{A}\)</span>.</p>
+<p>To extend <span class="math notranslate nohighlight">\(f\)</span> to <span class="math notranslate nohighlight">\(G\)</span>, let <span class="math notranslate nohighlight">\(x \in G\)</span>. Since <span class="math notranslate nohighlight">\(x \in \Cl{A}\)</span>, there exists <span class="math notranslate nohighlight">\((a_n)\)</span> in <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(x = \lim_n a_n\)</span>. As <span class="math notranslate nohighlight">\(x \in \bigcap_n C^A_{1/n}\)</span>, <span class="math notranslate nohighlight">\((f(a_n))\)</span> is Cauchy. <span class="math notranslate nohighlight">\(Y\)</span> is complete, so there exists <span class="math notranslate nohighlight">\(y = \lim_n f(a_n) \in Y\)</span>. It is straightforward to verify that <span class="math notranslate nohighlight">\(y\)</span> is independent of the choice of <span class="math notranslate nohighlight">\((a_n)\)</span> and agrees with <span class="math notranslate nohighlight">\(f(x)\)</span> for <span class="math notranslate nohighlight">\(x \in A\)</span>. Hence we can put</p>
+<div class="math notranslate nohighlight">
+\[
+g(x) = y,
+\]</div>
+<p>which yields the desired continuous extension.</p>
+</div>
+<p>Now assume <span class="math notranslate nohighlight">\(Y \subset X\)</span> is Polish but not <span class="math notranslate nohighlight">\(G_\delta\)</span>. Then, by the previous lemma, the identity mapping <span class="math notranslate nohighlight">\(\operatorname{id}: Y \to Y\)</span> has a proper continuous extension <span class="math notranslate nohighlight">\(g: G \to Y\)</span> to a <span class="math notranslate nohighlight">\(G_\delta\)</span> set <span class="math notranslate nohighlight">\(G\)</span> with <span class="math notranslate nohighlight">\(Y \subsetneq G \subseteq \Cl{Y}\)</span>. Let <span class="math notranslate nohighlight">\(x \in G\setminus Y\)</span>. <span class="math notranslate nohighlight">\(Y\)</span> is dense in <span class="math notranslate nohighlight">\(G\)</span>, so there exists <span class="math notranslate nohighlight">\((y_n)\)</span> in <span class="math notranslate nohighlight">\(Y\)</span> with <span class="math notranslate nohighlight">\(x = \lim_n y_n\)</span>. By continuity</p>
+<div class="math notranslate nohighlight">
+\[
+x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y,
+\]</div>
+<p>contradiction. This completes the proof of <a class="reference internal" href="#thm-subsets-Polish">Theorem 11</a>.</p>
+<section id="borel-set-as-clopen-sets">
+<h2>Borel set as clopen sets<a class="headerlink" href="#borel-set-as-clopen-sets" title="Permalink to this heading">#</a></h2>
+<p>More complicated Borel sets in Polish spaces are not Polish anymore in the subspace topology, as we just saw. But what if we are allowed to change the topology? In the process, we would like to “preserve” as much as possible of the original space. It turns out we can change the topology so that a given Borel set becomes clopen while inducing the same family of Borel sets overall.</p>
+<p>We start with closed sets.</p>
+<div class="proof lemma admonition" id="lem-closed-clopen">
+<p class="admonition-title"><span class="caption-number">Lemma 6 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(X\)</span> is a Polish space with topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, and <span class="math notranslate nohighlight">\(F \subseteq X\)</span> is closed, then there exists a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> such that <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> give rise to the same class of Borel sets in <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(F\)</span> is clopen with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. By <a class="reference internal" href="polish.html#properties-polish">Proposition 1</a> and <a class="reference internal" href="#prop-open-subset-Polish">Proposition 9</a>, respectively, <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(X \setminus F\)</span> are Polish spaces with compatible metrics <span class="math notranslate nohighlight">\(d_F\)</span> and <span class="math notranslate nohighlight">\(d_{X\setminus F}\)</span>,  respectively. Wlog <span class="math notranslate nohighlight">\(d_F, d_{X\setminus F} &lt; 1\)</span>. We form the <em>disjoint union of the spaces <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(X \setminus F\)</span></em>: This is the set <span class="math notranslate nohighlight">\(X = F \,\sqcup\, X \setminus F\)</span> with the following topology, <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>. <span class="math notranslate nohighlight">\(U \subseteq F \,\sqcup\, X \setminus F\)</span> is in <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> if and only if <span class="math notranslate nohighlight">\(U \cap F\)</span> is open (in <span class="math notranslate nohighlight">\(F\)</span>) and  <span class="math notranslate nohighlight">\(U \cap X\setminus F\)</span> is open (in <span class="math notranslate nohighlight">\(X\setminus F\)</span>).</p>
+<p>The disjoint union is Polish, as witnessed by the following metric.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    d_\sqcup(x,y) =  
+    \begin{cases}
+            d_F(x,y) &amp;\text{if } x,y \in F, \\
+            d_{X\setminus F}(x,y) &amp;\text{if } x,y \in X\setminus F, \\
+            \;  2  &amp;\text{otherwise}.
+    \end{cases}
+\end{split}\]</div>
+<p>It is straightforward to check that <span class="math notranslate nohighlight">\(d\)</span> is compatible with <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>. Furthermore, let <span class="math notranslate nohighlight">\((x_n)\)</span> be Cauchy in <span class="math notranslate nohighlight">\((X,d_\sqcup)\)</span>. Then the <span class="math notranslate nohighlight">\(x_n\)</span> are completely in <span class="math notranslate nohighlight">\(F\)</span> or in <span class="math notranslate nohighlight">\(X\setminus F\)</span> from some point on, and hence <span class="math notranslate nohighlight">\((x_n)\)</span> converges.</p>
+<p>Under the disjoint union topology, <span class="math notranslate nohighlight">\(F\)</span> is is clopen. Moreover, an open set in this topology is a disjoint union of an open set in <span class="math notranslate nohighlight">\(X\setminus F\)</span>, which also open the original topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, and an intersection of an open set from <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> with <span class="math notranslate nohighlight">\(F\)</span>. Such sets are Borel in <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span>, hence <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> and <span class="math notranslate nohighlight">\((X,\mathcal{O}')\)</span> have the same Borel sets.</p>
+</div>
+<div class="proof theorem admonition" id="thm-Borel-clopen">
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space with topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, and suppose <span class="math notranslate nohighlight">\(B \subseteq X\)</span> is Borel. Then there exists
+a finer Polish topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> such that <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> give rise to the same class of Borel sets in <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(B\)</span> is clopen with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> be the family of all subsets <span class="math notranslate nohighlight">\(A\)</span> of <span class="math notranslate nohighlight">\(X\)</span> for which a finer topology exists that has the same Borel sets as <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> and in which <span class="math notranslate nohighlight">\(A\)</span> is clopen.</p>
+<p>We will show that <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra, which by the previous Lemma contains the closed sets. Hence <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> must contain all Borel sets, and we are done.</p>
+<p><span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is clearly closed under complements, since the complement of a clopen set is clopen in any topology.</p>
+<p>So assume now that <span class="math notranslate nohighlight">\(\{A_n\}\)</span> is a countable family of sets in <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>. Let <span class="math notranslate nohighlight">\(\mathcal{O}_n\)</span> be a topology on <span class="math notranslate nohighlight">\(X\)</span> that makes <span class="math notranslate nohighlight">\(A_n\)</span> clopen and does not introduce new Borel sets.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{O}_\infty\)</span> be the topology generated by <span class="math notranslate nohighlight">\(\bigcup_n \mathcal{O}_n\)</span>. Then <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span> is open in <span class="math notranslate nohighlight">\((X, \mathcal{O}_\infty)\)</span>, and we can apply <a class="reference internal" href="#lem-closed-clopen">Lemma 6</a>. For this to work, however, we have to show that <span class="math notranslate nohighlight">\((X, \mathcal{O}_\infty)\)</span> is Polish and does not introduce any new Borel sets.</p>
+<p>We know that the product space <span class="math notranslate nohighlight">\(\prod (X,\mathcal{O}_n)\)</span> is Polish. Consider the mapping <span class="math notranslate nohighlight">\(\phi: X \to \prod_n X\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+    x \mapsto (x,x,x, \dots).
+\]</div>
+<p>Observe that <span class="math notranslate nohighlight">\(\phi\)</span> is a continuous mapping between <span class="math notranslate nohighlight">\((X,\mathcal{O}_{\infty})\)</span> and <span class="math notranslate nohighlight">\(\prod_n X\)</span>.  The preimage of a basic open set <span class="math notranslate nohighlight">\(U_1 \times U_2 \times \cdots \times U_n \times X \times X \times \cdots\)</span> under <span class="math notranslate nohighlight">\(\phi\)</span> is just the intersection of the <span class="math notranslate nohighlight">\(U_i\)</span>. Furthermore, <span class="math notranslate nohighlight">\(\phi\)</span> is clearly one-to-one, and the inverse mapping between <span class="math notranslate nohighlight">\(\phi(X)\)</span> and <span class="math notranslate nohighlight">\(X\)</span> is continuous, too.</p>
+<p>If we can show that <span class="math notranslate nohighlight">\(\phi(X)\)</span> is closed in <span class="math notranslate nohighlight">\(\prod_n X\)</span>, we know it is Polish as a closed subset of a Polish space, and since <span class="math notranslate nohighlight">\((X,\mathcal{O}_\infty)\)</span> is homeomorphic to <span class="math notranslate nohighlight">\(\phi(X)\)</span>, we can conclude it is Polish.</p>
+<p>To see that <span class="math notranslate nohighlight">\(\phi(X)\)</span> is closed in <span class="math notranslate nohighlight">\(\prod_n X\)</span>, let <span class="math notranslate nohighlight">\((y_1,y_2,y_3, \dots) \in \Co{\phi(X)}\)</span>. Then there exist <span class="math notranslate nohighlight">\(i &lt; j\)</span> such that <span class="math notranslate nohighlight">\(y_i \neq y_j\)</span>. Since <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span> is Polish, we can pick <span class="math notranslate nohighlight">\(U,V\)</span> open, disjoint such that <span class="math notranslate nohighlight">\(y_i \in U\)</span>, <span class="math notranslate nohighlight">\(y_j \in V\)</span>. Since each <span class="math notranslate nohighlight">\(\mathcal{O}_n\)</span> refines <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, <span class="math notranslate nohighlight">\(U\)</span> is open in <span class="math notranslate nohighlight">\(\mathcal{O}_i\)</span>, and <span class="math notranslate nohighlight">\(V\)</span> is open in <span class="math notranslate nohighlight">\(\mathcal{O}_j\)</span>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+    X_1 \times X_2 \times \cdots \times  X_{i-1} \times U \times X_{i+1} \times \cdots \times X_{j_1} \times V \times X_{j+1} \times X_{j+2} \times \cdots 
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(X_k = X\)</span> for <span class="math notranslate nohighlight">\(k \neq i,j\)</span>, is an open neighborhood of <span class="math notranslate nohighlight">\((y_1,y_2,y_3, \dots)\)</span> completely contained in <span class="math notranslate nohighlight">\(\Co{\phi(X)}\)</span>.</p>
+<p>Finally, too see that the Borel sets of <span class="math notranslate nohighlight">\((X, \mathcal{O}_\infty)\)</span> are the same as the ones of <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span>, for each <span class="math notranslate nohighlight">\(n\)</span>, let <span class="math notranslate nohighlight">\(\{U^{(n)}_i\}_{i \in \Nat}\)</span> be a basis for <span class="math notranslate nohighlight">\(\mathcal{O}_n\)</span>. By assumption, all sets in <span class="math notranslate nohighlight">\(\mathcal{O}_n\)</span> are Borel sets of <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span>. The set <span class="math notranslate nohighlight">\(\{U^{(n)}_i\}_{i,n \in \Nat}\)</span> is a subbasis for <span class="math notranslate nohighlight">\(\mathcal{O}_\infty\)</span>. This means that any open set in <span class="math notranslate nohighlight">\((X, \mathcal{O}_\infty)\)</span> is a countable union of finite intersections of the <span class="math notranslate nohighlight">\(U^{(n)}_i\)</span>. Since every <span class="math notranslate nohighlight">\(U^{(n)}_i\)</span> is Borel in <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span>, this means that any open set in <span class="math notranslate nohighlight">\(\mathcal{O}_\infty\)</span> is Borel in <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span>. Since the Borel sets are closed under complementation and countable unions, this in turn implies that every Borel set of <span class="math notranslate nohighlight">\((X, \mathcal{O}_\infty)\)</span> is already Borel in <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span>.</p>
+</div>
+<div class="proof corollary admonition" id="cor-perfect-Borel">
+<p class="admonition-title"><span class="caption-number">Corollary 3 </span> (Perfect subset property for Borel sets; Alexandroff, Hausdorff)</p>
+<section class="corollary-content" id="proof-content">
+<p>In a Polish space, every uncountable Borel set has a perfect subset.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> be Polish, and assume <span class="math notranslate nohighlight">\(B \subseteq X\)</span> is Borel. We can choose a finer topology <span class="math notranslate nohighlight">\(\mathcal{O}' \supseteq \mathcal{O}\)</span> so that <span class="math notranslate nohighlight">\(B\)</span> becomes clopen, but the Borel sets stay the same. By <a class="reference internal" href="#thm-subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\(B\)</span> is Polish with respect to the subspace topology <span class="math notranslate nohighlight">\(\mathcal{O}'|_B\)</span></p>
+<p>Suppose <span class="math notranslate nohighlight">\(B\)</span> is uncountable. By <a class="reference internal" href="polish.html#thm-Cantor-embedding">Theorem 3</a> there exists a continuous injection <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(\Cant\)</span> (with respect to the standard topology) into <span class="math notranslate nohighlight">\((B,\mathcal{O}'|_B)\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span> is finer than <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, <span class="math notranslate nohighlight">\(f\)</span> is continuous with respect to <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, too. Since <span class="math notranslate nohighlight">\(\Cant\)</span> is compact, <span class="math notranslate nohighlight">\(f(\Cant)\)</span> is closed with respect to <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>. Finally, <span class="math notranslate nohighlight">\(f(\Cant)\)</span> has no isolated points with respect to <span class="math notranslate nohighlight">\(\mathcal{O}'\)</span>, which then also holds for the coarser topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>.</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(B\)</span> has a perfect subset.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Borel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Borel Sets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="measure.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measure and Baire Category</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-set-as-clopen-sets">Borel set as clopen sets</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

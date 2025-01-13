@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Polish Spaces &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'polish';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Excursion: The Urysohn Space" href="Urysohn.html" />
+    <link rel="prev" title="Perfect Subsets of the Real Line" href="perfect_subsets_R.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fpolish.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/polish.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Polish Spaces</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-some-concepts-from-topology">Review of some concepts from topology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#density">Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#products">Products</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polish-spaces-the-basics">Polish spaces – the basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-spaces">Product spaces</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="polish-spaces">
+<h1>Polish Spaces<a class="headerlink" href="#polish-spaces" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Ci}{\mathbb{T}}
+\newcommand{\Str}[1][2]{{#1}^{&lt;\Nat}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Cyl}[1]{N_{#1}}\\
+\DeclareMathOperator{\diam}{diam}\end{aligned}\end{align} \]</div>
+<p>The proofs in the <a class="reference internal" href="perfect_subsets_R.html#ch-perfect"><span class="std std-ref">previous lecture</span></a> are quite general, that is, they make little use of specific properties of <span class="math notranslate nohighlight">\(\Real\)</span>. If we scan the arguments carefully, we see that we can replace <span class="math notranslate nohighlight">\(\Real\)</span> by any metric space that is <strong>complete and contains a countable basis of the topology</strong>.</p>
+<section id="review-of-some-concepts-from-topology">
+<h2>Review of some concepts from topology<a class="headerlink" href="#review-of-some-concepts-from-topology" title="Permalink to this heading">#</a></h2>
+<section id="basis">
+<h3>Basis<a class="headerlink" href="#basis" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span> be a topological space. A family <span class="math notranslate nohighlight">\(\mathcal{B} \subseteq \mathcal{O}\)</span> of subsets if <span class="math notranslate nohighlight">\(X\)</span> is a <strong>basis</strong> for the topology if every open set from <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> is the union of elements of <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>. For example, the open intervals with rational endpoints form a basis of the standard topology of <span class="math notranslate nohighlight">\(\Real\)</span>. A family <span class="math notranslate nohighlight">\(\mathcal{S} \subseteq \mathcal{O}\)</span> is a <strong>subbasis</strong> if the set of finite intersections of sets in <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is a basis for the topology.</p>
+<p>Finally, if <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is any family of subsets of <span class="math notranslate nohighlight">\(X\)</span>, the <strong>topology generated by <span class="math notranslate nohighlight">\(\mathcal{S}\)</span></strong> is the smallest topology on <span class="math notranslate nohighlight">\(X\)</span> containing <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>. It consists of all unions of finite intersections of sets in <span class="math notranslate nohighlight">\(\mathcal{S} \cup \{X,\emptyset\}\)</span>.</p>
+</section>
+<section id="density">
+<h3>Density<a class="headerlink" href="#density" title="Permalink to this heading">#</a></h3>
+<p>A set <span class="math notranslate nohighlight">\(D \subset X\)</span> is <strong>dense</strong> if for any open <span class="math notranslate nohighlight">\(U \neq \emptyset\)</span> there exists <span class="math notranslate nohighlight">\(z \in D \cap U\)</span>. If a topological space <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span> has a countable dense subset, the space is called <strong>separable</strong>.</p>
+</section>
+<section id="products">
+<h3>Products<a class="headerlink" href="#products" title="Permalink to this heading">#</a></h3>
+<p>If <span class="math notranslate nohighlight">\((X_i)_{i \in I}\)</span> is a family of topological spaces, one defines the <strong>product topology</strong> on <span class="math notranslate nohighlight">\(\Pi_{i \in I} X_i\)</span> to be the topology generated by the sets <span class="math notranslate nohighlight">\(\pi_i^{-1}(U)\)</span>, where <span class="math notranslate nohighlight">\(i \in I\)</span>, <span class="math notranslate nohighlight">\(U \subseteq X_i\)</span> is open, and <span class="math notranslate nohighlight">\(\pi_i: \Pi_{i \in I} X_i \to X_i\)</span> is the <span class="math notranslate nohighlight">\(i\)</span>th projection.</p>
+<hr class="docutils" />
+<p>Now suppose <span class="math notranslate nohighlight">\((X,d)\)</span> is a metric space. With each point <span class="math notranslate nohighlight">\(x \in X\)</span> and every <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span> we associate an <strong><span class="math notranslate nohighlight">\(\eps\)</span>-neighborhood</strong> or <strong><span class="math notranslate nohighlight">\(\eps\)</span>-ball</strong></p>
+<div class="math notranslate nohighlight">
+\[
+U_\eps(x) = \{y \in X \colon d(x,y)&lt;\eps\}.
+\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Note that a compatible metric is not necessarily unique.</p>
+</aside>
+<p>The topology generated by the <span class="math notranslate nohighlight">\(\eps\)</span>-neighborhoods is called the <em>topology of the metric space</em> <span class="math notranslate nohighlight">\((X,d)\)</span>. If this topology agrees with a given topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> on <span class="math notranslate nohighlight">\(X\)</span>, we say the metric <span class="math notranslate nohighlight">\(d\)</span> is <strong>compatible</strong> with the topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>. If for a topological space <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span> there exists a compatible metric, <span class="math notranslate nohighlight">\((X, \mathcal{O})\)</span> is called <strong>metrizable</strong>.</p>
+<p>If a topological space <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> is separable and metrizable, then the balls with center in a countable dense subset <span class="math notranslate nohighlight">\(D\)</span> and rational radius form a <em>countable base of the topology</em>.</p>
+</section>
+</section>
+<section id="polish-spaces-the-basics">
+<h2>Polish spaces – the basics<a class="headerlink" href="#polish-spaces-the-basics" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-polish">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>Polish space</strong> is a separable topological space <span class="math notranslate nohighlight">\(X\)</span> for which exists a compatible metric <span class="math notranslate nohighlight">\(d\)</span> such that <span class="math notranslate nohighlight">\((X,d)\)</span> is a complete metric space.</p>
+</section>
+</div><p>There may be many different compatible metrics that make <span class="math notranslate nohighlight">\(X\)</span> complete. If <span class="math notranslate nohighlight">\(X\)</span> is already given as a complete metric space with countable dense subset, then we call <span class="math notranslate nohighlight">\(X\)</span> a <em>Polish metric space</em>.</p>
+<p>The standard example is, of course, <span class="math notranslate nohighlight">\(\Real\)</span>, the set of real numbers. One can obtain other Polish spaces using the following basic observations. (We leave the proof as an exercise.)</p>
+<div class="proof proposition admonition" id="properties-polish">
+<p class="admonition-title"><span class="caption-number">Proposition 1 </span></p>
+<section class="proposition-content" id="proof-content">
+<ol class="arabic simple">
+<li><p>A closed subset of a Polish space is Polish.</p></li>
+<li><p>The product of a countable (in particular, finite) sequence of Polish spaces is Polish.</p></li>
+<li><p>Any topological space homeomorphic to a Polish space is Polish.</p></li>
+</ol>
+</section>
+</div><p>We conclude that <span class="math notranslate nohighlight">\(\Real^n\)</span>, <span class="math notranslate nohighlight">\(\C\)</span>, <span class="math notranslate nohighlight">\(\C^n\)</span>, the unit interval <span class="math notranslate nohighlight">\([0,1]\)</span>, the unit circle <span class="math notranslate nohighlight">\(\Ci = \{z \in \C \colon |z| = 1\}\)</span>, and the infinite dimensional spaces <span class="math notranslate nohighlight">\(\Real^\Nat\)</span> and <span class="math notranslate nohighlight">\([0,1]^\Nat\)</span> (the <em>Hilbert cube</em>) are Polish spaces.</p>
+<p>Any countable set with the <strong>discrete topology</strong> is Polish, by means of the <strong>discrete metric</strong> <span class="math notranslate nohighlight">\(d(x,y) = 1 \: \Leftrightarrow \: x \neq y\)</span>.</p>
+<p>Some subsets of Polish spaces are Polish but not closed.</p>
+<div class="hint admonition">
+<p class="admonition-title">Exercise</p>
+<p>By choosing a suitable metric, show that <span class="math notranslate nohighlight">\((0,1)\)</span>, the open unit interval, is a Polish space.</p>
+</div>
+<p>We will later characterize all subsets of Polish spaces that are Polish themselves.</p>
+</section>
+<section id="product-spaces">
+<span id="polish-product-spaces"></span><h2>Product spaces<a class="headerlink" href="#product-spaces" title="Permalink to this heading">#</a></h2>
+<p>In a certain sense, the most important Polish spaces are of the form <span class="math notranslate nohighlight">\(A^\Nat\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is a countable set carrying the discrete topology. The standard cases are</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\Cant\)</span>, the Cantor space <span class="math notranslate nohighlight">\(\qquad\)</span> and <span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(\Baire\)</span>, the Baire space.</p>
+</div></blockquote>
+<p>We will, for now, denote elements from <span class="math notranslate nohighlight">\(A^\Nat\)</span> by lower case greek letters from the beginning of the alphabet. The <span class="math notranslate nohighlight">\(n\)</span>-th term of <span class="math notranslate nohighlight">\(\alpha\)</span> we denote by either <span class="math notranslate nohighlight">\(\alpha(n)\)</span> or <span class="math notranslate nohighlight">\(\alpha_n\)</span>, whichever is more convenient.</p>
+<p>We endow <span class="math notranslate nohighlight">\(A\)</span> with the discrete topology.
+The product topology on these spaces has a convenient characterization. Given a set <span class="math notranslate nohighlight">\(A\)</span>, let <span class="math notranslate nohighlight">\(\Str[A]\)</span> be the sets of all finite sequences over <span class="math notranslate nohighlight">\(A\)</span>.
+Given <span class="math notranslate nohighlight">\(\sigma, \tau \in A^{&lt;\Nat}\)</span>, we write <span class="math notranslate nohighlight">\(\sigma \Sleq \tau\)</span> to indicate that <span class="math notranslate nohighlight">\(\sigma\)</span> is an initial segment of <span class="math notranslate nohighlight">\(\tau\)</span>. <span class="math notranslate nohighlight">\(\Sle\)</span> means the initial segment is proper. This notation extends naturally to hold between elements of <span class="math notranslate nohighlight">\(\Str[A]\)</span> and <span class="math notranslate nohighlight">\(A^\Nat\)</span>, <span class="math notranslate nohighlight">\(\sigma \Sle \alpha\)</span> meaning that <span class="math notranslate nohighlight">\(\sigma\)</span> is a finite initial segment of <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>A basis for the product topology on <span class="math notranslate nohighlight">\(A^\Nat\)</span> is given by the <strong>cylinder sets</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\Cyl{\sigma} = \{\alpha \in A^\Nat \colon \sigma \Sle \alpha \},
+\]</div>
+<p>that is, the set of all infinite sequences extending <span class="math notranslate nohighlight">\(\sigma\)</span>. The complement of a cylinder is a union of cylinders and hence open. Therefore, each set <span class="math notranslate nohighlight">\(\Cyl{\sigma}\)</span> is clopen.</p>
+<p>A compatible metric is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d(\alpha,\beta) = \begin{cases}
+    2^{-N} &amp; \text{ where } N \text{ is least such that $\alpha_N \neq \beta_N$ }\\
+    0 &amp; \text{ if $\alpha = \beta$}.
+\end{cases}
+\end{split}\]</div>
+<p>The representation of the topology via cylinders (which are characterized by finite objects) allows for a combinatorial treatment of many questions and will be essential later on.</p>
+<div class="proof proposition admonition" id="prop-topological-product">
+<p class="admonition-title"><span class="caption-number">Proposition 2 </span> (Topological properties of <span class="math notranslate nohighlight">\(A^\Nat\)</span>)</p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a countable set, equipped with the discrete topology. Suppose <span class="math notranslate nohighlight">\(A^\Nat\)</span> is equipped with the product topology. Then the following hold.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(A^\Nat\)</span> is Polish.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A^\Nat\)</span> is <em>zero-dimensional</em>, i.e. it has a basis of <em>clopen</em> sets.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A^\Nat\)</span> is compact if and only if <span class="math notranslate nohighlight">\(A\)</span> is finite.</p></li>
+</ol>
+</section>
+</div><p>Via the mapping</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha \mapsto \sum_{i = 0}^\infty \frac{2\alpha_i}{3^{i+1}},
+\]</div>
+<p id="fact-paths-as-reals"><span class="math notranslate nohighlight">\(\Cant\)</span> is homeomorphic to the middle-third Cantor set in <span class="math notranslate nohighlight">\(\Real\)</span>, whereas the <strong>continued fraction</strong> mapping</p>
+<div class="math notranslate nohighlight">
+\[
+\beta \mapsto \beta_0 + \cfrac{1}
+        {\beta_1 + \cfrac{1}{
+                \beta_2 + \cfrac{1}{
+                        \beta_3 + \ldots}}}
+\]</div>
+<p>provides a homeomorphism between <span class="math notranslate nohighlight">\(\Z \times (\N\setminus\{0\})^\N\)</span> and the irrational real numbers.</p>
+<p>The universal role played by the discrete product spaces is manifested in the following results.</p>
+<div class="proof theorem admonition" id="thm-Cantor-embedding">
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Every uncountable Polish space contains a homeomorphic embedding of Cantor space <span class="math notranslate nohighlight">\(\Cant\)</span>.</p>
+</section>
+</div><p>The proof is similar to the proof of <a class="reference internal" href="perfect_subsets_R.html#thm-card-perfect-sets">Theorem 1</a>. Note that the proof actually constructs an embedding of <span class="math notranslate nohighlight">\(\Cant\)</span>. The continuity of the mapping is straightforward.</p>
+<p>In a similar way we can adapt the proof of <a class="reference internal" href="perfect_subsets_R.html#cantor-bendixson">Theorem 2</a> to show that the <em>perfect subset property</em> holds for closed subsets of Polish spaces.</p>
+<div class="proof theorem admonition" id="thm-cantor_bendixson-polish">
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span> (Cantor-Bendixson Theorem for Polish spaces)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every uncountable closed subset of a Polish space contains a perfect subset.</p>
+</section>
+</div><p>Finally, we can characterize Polish spaces as continuous images of Baire space.</p>
+<div class="proof theorem admonition" id="thm-polish-cont-image-Baire">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Every Polish space <span class="math notranslate nohighlight">\(X\)</span> is the continuous image of <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(d\)</span> be a compatible metric on <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(D = \{x_i \colon i \in \Nat\}\)</span> be a countable dense subset of <span class="math notranslate nohighlight">\(X\)</span>. Every point in <span class="math notranslate nohighlight">\(X\)</span> is the limit of a sequence in <span class="math notranslate nohighlight">\(D\)</span>. Define a mapping <span class="math notranslate nohighlight">\(g:\Baire \to X\)</span> by putting</p>
+<div class="math notranslate nohighlight">
+\[
+    \alpha = \alpha(0)\, \alpha(1)\, \alpha(2)\dots \mapsto \lim_n x_{\alpha(n)}.
+\]</div>
+<p>The problem is, of course, that the limit on the right hand side not necessarily exists. We have to proceed more carefully.
+Given <span class="math notranslate nohighlight">\(\alpha \in \Nat\)</span>, we put <span class="math notranslate nohighlight">\(y^\alpha_0 = x_{\alpha(0)}\)</span> and
+define iteratively</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y^\alpha_{n+1} = \begin{cases}
+    x_{\alpha(n+1)} &amp; \text{ if $d(y^\alpha_n,x_{\alpha(n+1)}) &lt; 2^{-n}$}, \\
+    y^\alpha_n &amp; \text{ otherwise }.
+\end{cases}
+\end{split}\]</div>
+<p>The resulting sequence <span class="math notranslate nohighlight">\((y^\alpha_n)\)</span> is clearly Cauchy in <span class="math notranslate nohighlight">\(X\)</span>, and hence converges to some point <span class="math notranslate nohighlight">\(y^\alpha \in X\)</span>, by completeness. We define</p>
+<div class="math notranslate nohighlight">
+\[
+    f(\alpha) = y^\alpha.
+\]</div>
+<p><span class="math notranslate nohighlight">\(f\)</span> is continuous, since if <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> agree up to length <span class="math notranslate nohighlight">\(N\)</span> (that is, their distance is at most <span class="math notranslate nohighlight">\(2^{-N}\)</span> with respect to the above metric), then the sequences <span class="math notranslate nohighlight">\((y^\alpha_n)\)</span> and <span class="math notranslate nohighlight">\((y^\beta_n)\)</span> will agree up to index <span class="math notranslate nohighlight">\(N\)</span>, and all further terms are within <span class="math notranslate nohighlight">\(2^{-N}\)</span> of <span class="math notranslate nohighlight">\(y^\alpha_N\)</span> and <span class="math notranslate nohighlight">\(y^\beta_N\)</span>, respectively.</p>
+<p>Finally, since <span class="math notranslate nohighlight">\(D\)</span> is dense in <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(f\)</span> is a surjection.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="perfect_subsets_R.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Perfect Subsets of the Real Line</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Urysohn.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Excursion: The Urysohn Space</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-some-concepts-from-topology">Review of some concepts from topology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#density">Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#products">Products</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polish-spaces-the-basics">Polish spaces – the basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-spaces">Product spaces</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

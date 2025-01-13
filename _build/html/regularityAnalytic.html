@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Regularity Properties of Analytic sets &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'regularityAnalytic';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Projective Hierarchy" href="projective.html" />
+    <link rel="prev" title="Analytic Sets" href="analytic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FregularityAnalytic.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/regularityAnalytic.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Regularity Properties of Analytic sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idempotence-of-the-souslin-operation">Idempotence of the Souslin operation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lebesgue-measurability-of-analytic-sets">Lebesgue measurability of analytic sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universally-measurable-sets">Universally measurable sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-property-of-analytic-sets">Baire property of analytic sets</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="regularity-properties-of-analytic-sets">
+<h1>Regularity Properties of Analytic sets<a class="headerlink" href="#regularity-properties-of-analytic-sets" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
+\newcommand{\PP}[1][n]{\bPi^1_{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}\]</div>
+<p>In this lecture we verify that the analytic sets are Lebesgue measurable (LM) and have the Baire property (BP). Since both properties are closed under complements, they also hold for the class of <strong>co-analytic sets</strong> <span class="math notranslate nohighlight">\(\PP[1]\)</span>.</p>
+<p>The analytic sets also have the perfect subset property (PS).</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that if <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is analytic and uncountable, then it contains a perfect subset.</p>
+<p>(<em>Hint: Since <span class="math notranslate nohighlight">\(A\)</span> is analytic, there exists a continuous mapping <span class="math notranslate nohighlight">\(f:\Baire \to \Baire\)</span> such that <span class="math notranslate nohighlight">\(A = f(\Baire)\)</span>. Construct an embedding of <span class="math notranslate nohighlight">\(\Cant\)</span> into <span class="math notranslate nohighlight">\(A\)</span>. Show that we can find two disjoint open sets <span class="math notranslate nohighlight">\(U_0, U_1\)</span> whose intersection with  <span class="math notranslate nohighlight">\(A = f(\Baire)\)</span> is uncountable. The preimages of the <span class="math notranslate nohighlight">\(U_i\)</span> are disjoint open subsets with uncountable images. Show that this process can be continued and defines in the limit an injection of <span class="math notranslate nohighlight">\(\Cant\)</span> into <span class="math notranslate nohighlight">\(A\)</span>.</em>)</p>
+</div>
+<p>For Borel sets, one proves (LM) and (BP) by showing that the class of sets having  (LM) (or (BP), respectively)  forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra and contains the open sets. For the analytic sets, this method is no longer available. We can, however, prove a similar property with respect to the Souslin operation <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, which can be seen as an extension of basic set theoretic operations into the uncountable.</p>
+<p>More specifically, we will show the following.</p>
+<ul class="simple">
+<li><p>The Souslin operation <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is <strong>idempotent</strong>, i.e. <span class="math notranslate nohighlight">\(\mathcal{A}\mathcal{A} \, \Gamma = \mathcal{A}\Gamma\)</span>. This implies that the analytic sets are closed under <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>.</p></li>
+<li><p>The family of sets with (LM) (or (BP), respectively), is closed under the Souslin operation. Since the closed sets have both properties, and the Souslin operator is clearly monotone on classes, this yields the desired regularity results.</p></li>
+</ul>
+<section id="idempotence-of-the-souslin-operation">
+<h2>Idempotence of the Souslin operation<a class="headerlink" href="#idempotence-of-the-souslin-operation" title="Permalink to this heading">#</a></h2>
+<div class="proof theorem admonition" id="thm-idempotent-Souslin">
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>For every family <span class="math notranslate nohighlight">\(\Gamma\)</span> of subsets of a set <span class="math notranslate nohighlight">\(X\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \mathcal{A} \mathcal{A} \Gamma = \mathcal{A} \Gamma.
+\end{equation*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We clearly have  <span class="math notranslate nohighlight">\( \Gamma \subseteq  \mathcal{A} \Gamma\)</span>, so that we only need to prove <span class="math notranslate nohighlight">\(\mathcal{A} \mathcal{A} \Gamma \subseteq \mathcal{A} \Gamma\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(A = \mathcal{A} P\)</span> with <span class="math notranslate nohighlight">\(P_\sigma \in \mathcal{A} \Gamma\)</span>, that is, <span class="math notranslate nohighlight">\(P_\sigma = \mathcal{A} Q_{\sigma,\tau}\)</span> with <span class="math notranslate nohighlight">\(Q_{\sigma,\tau} \in  \Gamma\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+z \in A &amp; \iff &amp; \exists \alpha  \, \forall m \, (z \in P_{\alpha\Rest{m}})\\
+    &amp; \iff &amp; \exists \alpha \, \forall m \, \exists \beta \, \forall n \, (z \in Q_{\alpha\Rest{m},\beta\Rest{n} })\\
+    &amp;\iff &amp; \exists \alpha \,  \exists \beta \, \forall m \, \forall n \, (z \in Q_{\alpha\Rest{m},(\beta)_m\Rest{n}}),
+\end{eqnarray*}\]</div>
+<p>where <span class="math notranslate nohighlight">\((\beta)_m\)</span> denotes the <span class="math notranslate nohighlight">\(m\)</span>-th column of <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>Now we contract the two function quantifiers to a single one, using a (computable) homeomorphism <span class="math notranslate nohighlight">\(\Baire \times \Baire\)</span>, and the two universal number quantifiers into a single one using the paring function <span class="math notranslate nohighlight">\(\Tup{.,.}\)</span>. Then <span class="math notranslate nohighlight">\(A\)</span> can be characterized as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+z \in A \iff \exists \gamma  \; \forall k (z \in R_{\gamma\Rest{k}})
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R_\sigma = Q_{\varphi(\sigma), \psi(\sigma)} \in \Gamma\)</span> for suitable coding functions <span class="math notranslate nohighlight">\(\varphi, \psi\)</span>. We leave an explicit definition of these coding functions as an exercise.</p>
+</div>
+<div class="proof corollary admonition" id="cor-analytic-Souslin-closed">
+<p class="admonition-title"><span class="caption-number">Corollary 9 </span></p>
+<section class="corollary-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[
+	\mathcal{A}\PS[1] = \PS[1].
+\]</div>
+</section>
+</div></section>
+<section id="lebesgue-measurability-of-analytic-sets">
+<h2>Lebesgue measurability of analytic sets<a class="headerlink" href="#lebesgue-measurability-of-analytic-sets" title="Permalink to this heading">#</a></h2>
+<p>We start with a lemma that essentially says that we can envelop any
+set with a smallest (up to measure <span class="math notranslate nohighlight">\(0\)</span>) measurable set.</p>
+<div class="proof lemma admonition" id="lem-approx-measurable">
+<p class="admonition-title"><span class="caption-number">Lemma 12 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>For every set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> there exists a set <span class="math notranslate nohighlight">\(B \subseteq \Real\)</span> so that</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(B\)</span>  is  Lebesgue measurable,</p></li>
+<li><p><strong>(ii)</strong> if <span class="math notranslate nohighlight">\(B'\)</span> is such that <span class="math notranslate nohighlight">\(A \subseteq B' \subseteq B\)</span>  and is Lebesgue measurable, then <span class="math notranslate nohighlight">\(B\setminus B'\)</span> has measure <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose first that <span class="math notranslate nohighlight">\(\lambda^*(A) &lt; \infty\)</span>. For every <span class="math notranslate nohighlight">\(n \geq 0\)</span>, there exists an open set <span class="math notranslate nohighlight">\(O_n \supseteq A\)</span> with <span class="math notranslate nohighlight">\(\lambda^*(O_n) = \lambda(O_n) &lt; \lambda^*(A) + 1/n\)</span>. Then <span class="math notranslate nohighlight">\(B = \bigcap_n O_n\)</span> is measurable, and <span class="math notranslate nohighlight">\(\lambda(B) = \lambda^*(A)\)</span>. Furthermore, if <span class="math notranslate nohighlight">\(A \subseteq B' \subseteq B \)</span>, then <span class="math notranslate nohighlight">\(\lambda^*(A) \leq  \lambda^*(B') \leq \lambda^*(B)\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(B'\)</span> is also measurable, then</p>
+<div class="math notranslate nohighlight">
+\[
+    \lambda^*(B) = \lambda^*(B \cap B') + \lambda^*(B \setminus B') = \lambda^*(B') + \lambda^*(B \setminus B'),  
+\]</div>
+<p>hence <span class="math notranslate nohighlight">\(\lambda^*(B \setminus B') = 0\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\lambda^*(A) = \infty\)</span>, let <span class="math notranslate nohighlight">\(A_n = A \cap [m,m+1)\)</span> for <span class="math notranslate nohighlight">\(m \in \Integer\)</span>. Then <span class="math notranslate nohighlight">\(\lambda^*(A_m) \leq 1\)</span>, and we can choose <span class="math notranslate nohighlight">\(B_m \supseteq A_m\)</span> measurable such that <span class="math notranslate nohighlight">\(\lambda^*(B_m) = \lambda^*(A_m)\)</span>. Then <span class="math notranslate nohighlight">\(B = \bigcup_{m \in \Integer} B_m\)</span> has the desired property.</p>
+</div>
+<p>We now apply the lemma to show that Lebesgue measurability is closed
+under the Souslin operation. The basic idea is to approximate the local
+“branches” of the Souslin operation on a Souslin scheme by measurable
+sets from outside, in the sense of the lemma.
+It turns out that the total error we make by this approximation is
+negligible, and hence the overall result of the Souslin operation
+differs from a measurable set only by a nullset and hence is
+measurable.</p>
+<div class="proof proposition admonition" id="prop-Souslin-Lebesgue">
+<p class="admonition-title"><span class="caption-number">Proposition 34 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The class <span class="math notranslate nohighlight">\(\mathbf{LM}\)</span> of all Lebesgue measurable sets <span class="math notranslate nohighlight">\(\subseteq \Real\)</span> is closed under the Souslin operation, that is,</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathcal{A} \; \mathbf{LM} \subseteq  \mathbf{LM}.
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\( A = (A_\sigma)\)</span> be a Souslin scheme with each <span class="math notranslate nohighlight">\(A_\sigma\)</span> measurable. We can assume that <span class="math notranslate nohighlight">\((A_\sigma)\)</span> is regular. For each <span class="math notranslate nohighlight">\(\sigma \in \Nstr\)</span> we let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    A^\sigma = \bigcup_{\alpha \supset \sigma} \bigcap_{n \in \Nat} A_{\alpha\Rest{n}} \subseteq A_\sigma.
+\end{equation*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(A^\Estr = \mathcal{A}\, A\)</span>.</p>
+<p>By the previous lemma, there exist measurable sets <span class="math notranslate nohighlight">\(B^\sigma \supseteq A^\sigma\)</span> so that for every measurable <span class="math notranslate nohighlight">\(B \supseteq A^\sigma\)</span>, <span class="math notranslate nohighlight">\(B^\sigma \setminus B\)</span> is null.</p>
+<p>By replacing <span class="math notranslate nohighlight">\(B^\sigma\)</span> with <span class="math notranslate nohighlight">\(B^\sigma \cap \, A_\sigma\)</span>, we can further assume <span class="math notranslate nohighlight">\(B^\sigma \subseteq A_\sigma\)</span>, and also that <span class="math notranslate nohighlight">\((B^\sigma)\)</span> is a regular Souslin scheme.</p>
+<p>Now let <span class="math notranslate nohighlight">\(C_\sigma = B^\sigma \setminus \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}\)</span>. Each <span class="math notranslate nohighlight">\(C_\sigma\)</span> is a nullset, by the choice of the <span class="math notranslate nohighlight">\(B^\sigma\)</span> and the fact that  <span class="math notranslate nohighlight">\(A^\sigma = \bigcup_{n \in \Nat} A^{\sigma\Conc\Tup{n}} \subseteq \bigcup_{n \in \Nat} B^{\sigma\Conc\Tup{n}}\)</span> . Hence <span class="math notranslate nohighlight">\(C= \bigcup_{\sigma} C_\sigma\)</span> is a nullset, too.</p>
+<p>It remains to show that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+B^\Estr \setminus C \; \subseteq \;  A^\Estr = \mathcal{A}\, A,
+\end{equation*}\]</div>
+<p>for this implies <span class="math notranslate nohighlight">\(B^\Estr \setminus A^\Estr \subseteq C\)</span> is null, which in turn implies that <span class="math notranslate nohighlight">\(A^\Estr\)</span> is Lebesgue measurable (since it differs from a measurable set by a nullset).</p>
+<p>So let <span class="math notranslate nohighlight">\(x \in B^\Estr \setminus C\)</span>. Since <span class="math notranslate nohighlight">\(x \not \in C_\Estr\)</span>, there is an <span class="math notranslate nohighlight">\(\alpha(0)\)</span> with <span class="math notranslate nohighlight">\(x \in B^{\Tup{\alpha(0)}}\)</span>.</p>
+<p>Given <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span> with <span class="math notranslate nohighlight">\(x \in B^{\alpha\Rest{n}}\)</span>, we can choose <span class="math notranslate nohighlight">\(\alpha(n)\)</span> so that <span class="math notranslate nohighlight">\(x \in B^{\alpha\Rest{n+1}}\)</span>. This is possible because <span class="math notranslate nohighlight">\(x \not \in C_{\alpha\Rest{n}}\)</span>. This way we construct <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> with</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x \in \bigcap_n B^{\alpha\Rest{n}} \subseteq  \bigcap_n A_{\alpha\Rest{n}} \subseteq A^\Estr.
+\end{equation*}\]</div>
+</div>
+<div class="proof corollary admonition" id="cor-analytic-measurable">
+<p class="admonition-title"><span class="caption-number">Corollary 10 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every analytic set is Lebesgue measurable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. By the idempotence of <span class="math notranslate nohighlight">\({\cal A}\)</span>, <span class="math notranslate nohighlight">\({\cal A}\PS[1] = {\cal A}{\cal
+  A}\BP[1] = {\cal A}\BP[1] = \PS[1]\)</span>. On the other hand, we have <span class="math notranslate nohighlight">\({\cal A}\BP[1] \subseteq
+{\cal A}\mathbf{LM} = \mathbf{LM}\)</span>, since the Souslin operation is monotone on
+classes. This yields <span class="math notranslate nohighlight">\(\PS[1] \subseteq \mathbf{LM}\)</span>.</p>
+</div>
+</section>
+<section id="universally-measurable-sets">
+<h2>Universally measurable sets<a class="headerlink" href="#universally-measurable-sets" title="Permalink to this heading">#</a></h2>
+<p>The previous proof is general enough to work for other kinds of
+measures on arbitrary Polish spaces.</p>
+<p>Given a Polish space <span class="math notranslate nohighlight">\(X\)</span>, a <strong>Borel measure</strong> on <span class="math notranslate nohighlight">\(X\)</span> is a
+countably additive set function <span class="math notranslate nohighlight">\(\mu\)</span> defined on a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of the
+Borel sets in <span class="math notranslate nohighlight">\(X\)</span>. A set is <strong><span class="math notranslate nohighlight">\(\mu\)</span>-measurable</strong> if it can be
+represented as a union of a Borel set and a <span class="math notranslate nohighlight">\(\mu\)</span>-nullset. A measure <span class="math notranslate nohighlight">\(\mu\)</span>
+is <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-finite</strong> if <span class="math notranslate nohighlight">\(X = \bigcup_n X_n\)</span>, where <span class="math notranslate nohighlight">\(X_n\)</span> is
+<span class="math notranslate nohighlight">\(\mu\)</span>-measurable with <span class="math notranslate nohighlight">\(\mu(X_n) &lt; \infty\)</span>. Lebesgue
+measure is <span class="math notranslate nohighlight">\(\sigma\)</span>-finite Borel measure on the Polish space <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>universally measurable</strong> if it is
+<span class="math notranslate nohighlight">\(\mu\)</span>-measurable for every <span class="math notranslate nohighlight">\(\sigma\)</span>-finite Borel measure on <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="proof theorem admonition" id="thm-analytic-universally-measurable">
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Lusin)</p>
+<section class="theorem-content" id="proof-content">
+<p>In a Polish space, every analytic is universally measurable.</p>
+</section>
+</div></section>
+<section id="baire-property-of-analytic-sets">
+<h2>Baire property of analytic sets<a class="headerlink" href="#baire-property-of-analytic-sets" title="Permalink to this heading">#</a></h2>
+<p>Inspecting the proof of <a class="reference internal" href="#prop-Souslin-Lebesgue">Proposition 34</a>, we
+see that it works for the Baire property as well (with “measure
+<span class="math notranslate nohighlight">\(0\)</span>” replaced by “meager”, of course), provided we can
+prove a Baire category version of <a class="reference internal" href="#lem-approx-measurable">Lemma 12</a>.</p>
+<div class="proof lemma admonition" id="lem-approx-category">
+<p class="admonition-title"><span class="caption-number">Lemma 13 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space. For every set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> there exists a set <span class="math notranslate nohighlight">\(B \subseteq X\)</span> so that</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(B\)</span>  has the Baire property,</p></li>
+<li><p><strong>(ii)</strong> if <span class="math notranslate nohighlight">\(Z \subseteq B \setminus A\)</span>  and <span class="math notranslate nohighlight">\(Z\)</span> has the Baire
+property, then <span class="math notranslate nohighlight">\(Z\)</span> is meager.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let  <span class="math notranslate nohighlight">\(U_1, U_2, \ldots\)</span> be an enumeration of countable base of the
+topology for <span class="math notranslate nohighlight">\(X\)</span>.
+Given <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	A^*:= \{x \in \Real \colon \forall i \; ( x \in U_i \Rightarrow U_i \cap A \text{ not meager)}\}.
+\end{equation*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(A^*\)</span> is closed: If <span class="math notranslate nohighlight">\(x \not \in A^*\)</span>, then there exists <span class="math notranslate nohighlight">\(i\)</span> with <span class="math notranslate nohighlight">\(x \in U_i \: \&amp; \: U_i \cap A\)</span> null. If <span class="math notranslate nohighlight">\(y \in U_i\)</span>, then <span class="math notranslate nohighlight">\(y \not \in A^*\)</span>, since <span class="math notranslate nohighlight">\(U_i \cap A\)</span> is null.
+Hence <span class="math notranslate nohighlight">\(U_i \subseteq \Co{A^*}\)</span>.</p>
+<p>We have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A \setminus A^* = \bigcup \{A \cap U_i \colon A \cap U_i \text{ meager}\},
+\end{equation*}\]</div>
+<p>which is a countable union of meager sets and hence meager.</p>
+<p>If we let <span class="math notranslate nohighlight">\(B = A \cup A^* = A^* \cup (A \setminus A^*)\)</span>, then <span class="math notranslate nohighlight">\(B\)</span> is a
+union of a meager set and a closed set and hence has the Baire
+property.</p>
+<p>Now assume <span class="math notranslate nohighlight">\(B' \supseteq A\)</span> has the Baire property. Then <span class="math notranslate nohighlight">\(C= B
+\setminus B'\)</span> has the Baire property, too. Suppose <span class="math notranslate nohighlight">\(C\)</span> is not meager,
+then <span class="math notranslate nohighlight">\(U_i \setminus C\)</span> is meager for some <span class="math notranslate nohighlight">\(i\)</span>, and hence also <span class="math notranslate nohighlight">\(U_i
+\cap A \subseteq (U_i \setminus C)\)</span>. Besides, <span class="math notranslate nohighlight">\(U_i \cap C \neq
+\emptyset\)</span>, for otherwise <span class="math notranslate nohighlight">\(U_i \subseteq U_i \setminus C\)</span> would be
+meager. Thus there exists <span class="math notranslate nohighlight">\(x \in U_i\)</span> with <span class="math notranslate nohighlight">\(x \not\in A^*\)</span>, which by
+definition of <span class="math notranslate nohighlight">\(A^*\)</span> implies that <span class="math notranslate nohighlight">\(U_i \cap A\)</span> is not meager, a contradiction.</p>
+</div>
+<p>By adapting the proof of <a class="reference internal" href="#prop-Souslin-Lebesgue">Proposition 34</a>, we
+obtain the Baire category version and hence can deduce that analytic sets
+have the Baire property.</p>
+<div class="proof proposition admonition" id="prop-Souslin-Baire">
+<p class="admonition-title"><span class="caption-number">Proposition 35 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>In any Polish space <span class="math notranslate nohighlight">\(X\)</span>, the class <span class="math notranslate nohighlight">\(\mathbf{BP}\)</span> of all sets <span class="math notranslate nohighlight">\(\subseteq X\)</span>
+with the Baire property is closed under the Souslin operation, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathcal{A} \; \mathbf{BP} \subseteq  \mathbf{BP}.
+\]</div>
+</section>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="analytic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Analytic Sets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="projective.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Projective Hierarchy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idempotence-of-the-souslin-operation">Idempotence of the Souslin operation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lebesgue-measurability-of-analytic-sets">Lebesgue measurability of analytic sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universally-measurable-sets">Universally measurable sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-property-of-analytic-sets">Baire property of analytic sets</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

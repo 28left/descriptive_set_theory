@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: descriptive_set_theory.aux
+The style file: abbrvnat.bst
+A level-1 auxiliary file: descriptive_set_theory-perfect-subsets-r.aux
+A level-1 auxiliary file: descriptive_set_theory-ordinals.aux
+A level-1 auxiliary file: descriptive_set_theory-polish.aux
+A level-1 auxiliary file: descriptive_set_theory-urysohn.aux
+A level-1 auxiliary file: descriptive_set_theory-trees.aux
+A level-1 auxiliary file: descriptive_set_theory-borel.aux
+A level-1 auxiliary file: descriptive_set_theory-subsets-polish.aux
+A level-1 auxiliary file: descriptive_set_theory-measure.aux
+A level-1 auxiliary file: descriptive_set_theory-choice.aux
+A level-1 auxiliary file: descriptive_set_theory-codingborel.aux
+A level-1 auxiliary file: descriptive_set_theory-structureborel.aux
+A level-1 auxiliary file: descriptive_set_theory-imagesborel.aux
+A level-1 auxiliary file: descriptive_set_theory-analytic.aux
+A level-1 auxiliary file: descriptive_set_theory-regularityanalytic.aux
+A level-1 auxiliary file: descriptive_set_theory-projective.aux
+A level-1 auxiliary file: descriptive_set_theory-coanalytic.aux
+A level-1 auxiliary file: descriptive_set_theory-zfc.aux
+A level-1 auxiliary file: descriptive_set_theory-recursion.aux
+A level-1 auxiliary file: descriptive_set_theory-models.aux
+A level-1 auxiliary file: descriptive_set_theory-large-cardinals.aux
+A level-1 auxiliary file: descriptive_set_theory-constructible.aux
+A level-1 auxiliary file: descriptive_set_theory-v-l.aux
+A level-1 auxiliary file: descriptive_set_theory-constructible-reals.aux
+A level-1 auxiliary file: descriptive_set_theory-shoenfield.aux
+A level-1 auxiliary file: descriptive_set_theory-bibliography.aux
+Database file #1: main.bib
+You've used 12 entries,
+            2773 wiz_defined-function locations,
+            702 strings with 7027 characters,
+and the built_in function-call counts, 4277 in all, are:
+= -- 376
+> -- 151
+< -- 13
++ -- 57
+- -- 45
+* -- 292
+:= -- 680
+add.period$ -- 38
+call.type$ -- 12
+change.case$ -- 46
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 241
+empty$ -- 423
+format.name$ -- 59
+if$ -- 890
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 18
+newline$ -- 68
+num.names$ -- 48
+pop$ -- 110
+preamble$ -- 1
+purify$ -- 39
+quote$ -- 0
+skip$ -- 157
+stack$ -- 0
+substring$ -- 146
+swap$ -- 15
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 102
+warning$ -- 0
+while$ -- 46
+width$ -- 0
+write$ -- 164

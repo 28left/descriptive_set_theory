@@ -1,0 +1,2135 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proof Index &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prf-prf';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fprf-prf.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+
+   <h1>Proof Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-Borel-Delta11"><strong>Borel-Delta11</strong></a> | 
+   <a href="#cap-analytic-Souslin-op"><strong>analytic-Souslin-op</strong></a> | 
+   <a href="#cap-cantor-bendixson"><strong>cantor-bendixson</strong></a> | 
+   <a href="#cap-characterization-analytic"><strong>characterization-analytic</strong></a> | 
+   <a href="#cap-closed-is-Gdelta"><strong>closed-is-Gdelta</strong></a> | 
+   <a href="#cap-cor-BP-algebra-small"><strong>cor-BP-algebra-small</strong></a> | 
+   <a href="#cap-cor-Borel-image-closed"><strong>cor-Borel-image-closed</strong></a> | 
+   <a href="#cap-cor-Borel-measurable"><strong>cor-Borel-measurable</strong></a> | 
+   <a href="#cap-cor-Con(AC)"><strong>cor-Con(AC)</strong></a> | 
+   <a href="#cap-cor-Con(ZFC+GCH)"><strong>cor-Con(ZFC+GCH)</strong></a> | 
+   <a href="#cap-cor-L-inner-model"><strong>cor-L-inner-model</strong></a> | 
+   <a href="#cap-cor-L-reals"><strong>cor-L-reals</strong></a> | 
+   <a href="#cap-cor-Scott-Scarpellini"><strong>cor-Scott-Scarpellini</strong></a> | 
+   <a href="#cap-cor-ZF-axiomatizable"><strong>cor-ZF-axiomatizable</strong></a> | 
+   <a href="#cap-cor-aleph-union-intersect"><strong>cor-aleph-union-intersect</strong></a> | 
+   <a href="#cap-cor-analytic-Souslin-closed"><strong>cor-analytic-Souslin-closed</strong></a> | 
+   <a href="#cap-cor-analytic-measurable"><strong>cor-analytic-measurable</strong></a> | 
+   <a href="#cap-cor-cardinality-sigma12"><strong>cor-cardinality-sigma12</strong></a> | 
+   <a href="#cap-cor-coanal-union-Borel"><strong>cor-coanal-union-Borel</strong></a> | 
+   <a href="#cap-cor-coanalytic-cardinality"><strong>cor-coanalytic-cardinality</strong></a> | 
+   <a href="#cap-cor-complexity-L"><strong>cor-complexity-L</strong></a> | 
+   <a href="#cap-cor-hier-proper"><strong>cor-hier-proper</strong></a> | 
+   <a href="#cap-cor-perfect-Borel"><strong>cor-perfect-Borel</strong></a> | 
+   <a href="#cap-cor-projective-proper"><strong>cor-projective-proper</strong></a> | 
+   <a href="#cap-cor-rationals-not-pi2"><strong>cor-rationals-not-pi2</strong></a> | 
+   <a href="#cap-cor-weak-Borel-hierarchy-1"><strong>cor-weak-Borel-hierarchy-1</strong></a> | 
+   <a href="#cap-corollary-3"><strong>corollary-3</strong></a> | 
+   <a href="#cap-def-BP"><strong>def-BP</strong></a> | 
+   <a href="#cap-def-Borel"><strong>def-Borel</strong></a> | 
+   <a href="#cap-def-Borel-codes"><strong>def-Borel-codes</strong></a> | 
+   <a href="#cap-def-Borel-codes-transfinite"><strong>def-Borel-codes-transfinite</strong></a> | 
+   <a href="#cap-def-Borel-finite"><strong>def-Borel-finite</strong></a> | 
+   <a href="#cap-def-Kleene-Brouwer"><strong>def-Kleene-Brouwer</strong></a> | 
+   <a href="#cap-def-Lebesgue"><strong>def-Lebesgue</strong></a> | 
+   <a href="#cap-def-Lusin-scheme"><strong>def-Lusin-scheme</strong></a> | 
+   <a href="#cap-def-Wadge"><strong>def-Wadge</strong></a> | 
+   <a href="#cap-def-analytical-hierarchy"><strong>def-analytical-hierarchy</strong></a> | 
+   <a href="#cap-def-completeness"><strong>def-completeness</strong></a> | 
+   <a href="#cap-def-cumulative"><strong>def-cumulative</strong></a> | 
+   <a href="#cap-def-effective-Borel"><strong>def-effective-Borel</strong></a> | 
+   <a href="#cap-def-filter"><strong>def-filter</strong></a> | 
+   <a href="#cap-def-ideal"><strong>def-ideal</strong></a> | 
+   <a href="#cap-def-inaccessible"><strong>def-inaccessible</strong></a> | 
+   <a href="#cap-def-inner-model"><strong>def-inner-model</strong></a> | 
+   <a href="#cap-def-meager"><strong>def-meager</strong></a> | 
+   <a href="#cap-def-measurable"><strong>def-measurable</strong></a> | 
+   <a href="#cap-def-measurable-cardinal"><strong>def-measurable-cardinal</strong></a> | 
+   <a href="#cap-def-measure"><strong>def-measure</strong></a> | 
+   <a href="#cap-def-normal-filter"><strong>def-normal-filter</strong></a> | 
+   <a href="#cap-def-normal-function"><strong>def-normal-function</strong></a> | 
+   <a href="#cap-def-nowhere-dense"><strong>def-nowhere-dense</strong></a> | 
+   <a href="#cap-def-ordinal"><strong>def-ordinal</strong></a> | 
+   <a href="#cap-def-outer-measure"><strong>def-outer-measure</strong></a> | 
+   <a href="#cap-def-perfect"><strong>def-perfect</strong></a> | 
+   <a href="#cap-def-polish"><strong>def-polish</strong></a> | 
+   <a href="#cap-def-transfinite-Borel"><strong>def-transfinite-Borel</strong></a> | 
+   <a href="#cap-def-transitive"><strong>def-transitive</strong></a> | 
+   <a href="#cap-def-tree"><strong>def-tree</strong></a> | 
+   <a href="#cap-def-two-dim-tree"><strong>def-two-dim-tree</strong></a> | 
+   <a href="#cap-def-ultrafilter"><strong>def-ultrafilter</strong></a> | 
+   <a href="#cap-def-uniformization"><strong>def-uniformization</strong></a> | 
+   <a href="#cap-def-universal"><strong>def-universal</strong></a> | 
+   <a href="#cap-def-well-founded"><strong>def-well-founded</strong></a> | 
+   <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
+   <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
+   <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
+   <a href="#cap-definition-5"><strong>definition-5</strong></a> | 
+   <a href="#cap-definition-7"><strong>definition-7</strong></a> | 
+   <a href="#cap-exa-trans-closure"><strong>exa-trans-closure</strong></a> | 
+   <a href="#cap-lem-BP-closed"><strong>lem-BP-closed</strong></a> | 
+   <a href="#cap-lem-Borel-codes-clopen"><strong>lem-Borel-codes-clopen</strong></a> | 
+   <a href="#cap-lem-Borel-codes-inverse-shift"><strong>lem-Borel-codes-inverse-shift</strong></a> | 
+   <a href="#cap-lem-Borel-codes-shift"><strong>lem-Borel-codes-shift</strong></a> | 
+   <a href="#cap-lem-Fubini-category"><strong>lem-Fubini-category</strong></a> | 
+   <a href="#cap-lem-Mostowski-unique"><strong>lem-Mostowski-unique</strong></a> | 
+   <a href="#cap-lem-approx-category"><strong>lem-approx-category</strong></a> | 
+   <a href="#cap-lem-approx-measurable"><strong>lem-approx-measurable</strong></a> | 
+   <a href="#cap-lem-bounded-rank-Borel"><strong>lem-bounded-rank-Borel</strong></a> | 
+   <a href="#cap-lem-cardinality-kappa-ultrafilter"><strong>lem-cardinality-kappa-ultrafilter</strong></a> | 
+   <a href="#cap-lem-closed-clopen"><strong>lem-closed-clopen</strong></a> | 
+   <a href="#cap-lem-closed-retract-Baire"><strong>lem-closed-retract-Baire</strong></a> | 
+   <a href="#cap-lem-condensation"><strong>lem-condensation</strong></a> | 
+   <a href="#cap-lem-min-wf"><strong>lem-min-wf</strong></a> | 
+   <a href="#cap-lemma-1"><strong>lemma-1</strong></a> | 
+   <a href="#cap-lemma-5"><strong>lemma-5</strong></a> | 
+   <a href="#cap-lemma-6"><strong>lemma-6</strong></a> | 
+   <a href="#cap-lemma-Kuratowski-extension"><strong>lemma-Kuratowski-extension</strong></a> | 
+   <a href="#cap-lemma-L-GCH"><strong>lemma-L-GCH</strong></a> | 
+   <a href="#cap-lightface-definability"><strong>lightface-definability</strong></a> | 
+   <a href="#cap-measurable-diff-Borel"><strong>measurable-diff-Borel</strong></a> | 
+   <a href="#cap-prop-BP-sigma-algebra"><strong>prop-BP-sigma-algebra</strong></a> | 
+   <a href="#cap-prop-Bernstein-BP"><strong>prop-Bernstein-BP</strong></a> | 
+   <a href="#cap-prop-Borel-closure-bounded-projection"><strong>prop-Borel-closure-bounded-projection</strong></a> | 
+   <a href="#cap-prop-Borel-closure-finite"><strong>prop-Borel-closure-finite</strong></a> | 
+   <a href="#cap-prop-Borel-codes"><strong>prop-Borel-codes</strong></a> | 
+   <a href="#cap-prop-Borel-omega1"><strong>prop-Borel-omega1</strong></a> | 
+   <a href="#cap-prop-Borel-universal"><strong>prop-Borel-universal</strong></a> | 
+   <a href="#cap-prop-Borel_closure-preimages"><strong>prop-Borel_closure-preimages</strong></a> | 
+   <a href="#cap-prop-KB-wellorder"><strong>prop-KB-wellorder</strong></a> | 
+   <a href="#cap-prop-Souslin-Baire"><strong>prop-Souslin-Baire</strong></a> | 
+   <a href="#cap-prop-Souslin-Lebesgue"><strong>prop-Souslin-Lebesgue</strong></a> | 
+   <a href="#cap-prop-Urysohn-embedding"><strong>prop-Urysohn-embedding</strong></a> | 
+   <a href="#cap-prop-Urysohn-extension"><strong>prop-Urysohn-extension</strong></a> | 
+   <a href="#cap-prop-Wadge-preimages"><strong>prop-Wadge-preimages</strong></a> | 
+   <a href="#cap-prop-basics-L"><strong>prop-basics-L</strong></a> | 
+   <a href="#cap-prop-card-Lalpha"><strong>prop-card-Lalpha</strong></a> | 
+   <a href="#cap-prop-cardinality-Vkappa"><strong>prop-cardinality-Vkappa</strong></a> | 
+   <a href="#cap-prop-closure-projective"><strong>prop-closure-projective</strong></a> | 
+   <a href="#cap-prop-computable-codes"><strong>prop-computable-codes</strong></a> | 
+   <a href="#cap-prop-defble-formula"><strong>prop-defble-formula</strong></a> | 
+   <a href="#cap-prop-illfounded-ZF-model"><strong>prop-illfounded-ZF-model</strong></a> | 
+   <a href="#cap-prop-inaccessible-cardinality"><strong>prop-inaccessible-cardinality</strong></a> | 
+   <a href="#cap-prop-induction-ord-i"><strong>prop-induction-ord-i</strong></a> | 
+   <a href="#cap-prop-induction-ord-ii"><strong>prop-induction-ord-ii</strong></a> | 
+   <a href="#cap-prop-intersection-Polish"><strong>prop-intersection-Polish</strong></a> | 
+   <a href="#cap-prop-interval-measurable"><strong>prop-interval-measurable</strong></a> | 
+   <a href="#cap-prop-leftmost-branch"><strong>prop-leftmost-branch</strong></a> | 
+   <a href="#cap-prop-map-Lalpha"><strong>prop-map-Lalpha</strong></a> | 
+   <a href="#cap-prop-measurable-regular"><strong>prop-measurable-regular</strong></a> | 
+   <a href="#cap-prop-measurable-sets"><strong>prop-measurable-sets</strong></a> | 
+   <a href="#cap-prop-measurable-sigma-algebra"><strong>prop-measurable-sigma-algebra</strong></a> | 
+   <a href="#cap-prop-measurable-vs-real-valued"><strong>prop-measurable-vs-real-valued</strong></a> | 
+   <a href="#cap-prop-non-meas"><strong>prop-non-meas</strong></a> | 
+   <a href="#cap-prop-nonfinite-Borel"><strong>prop-nonfinite-Borel</strong></a> | 
+   <a href="#cap-prop-norm-form-coanalytic"><strong>prop-norm-form-coanalytic</strong></a> | 
+   <a href="#cap-prop-null-sigmaideal"><strong>prop-null-sigmaideal</strong></a> | 
+   <a href="#cap-prop-nullsets-measurable"><strong>prop-nullsets-measurable</strong></a> | 
+   <a href="#cap-prop-open-subset-Polish"><strong>prop-open-subset-Polish</strong></a> | 
+   <a href="#cap-prop-ordinal-recursion-ii"><strong>prop-ordinal-recursion-ii</strong></a> | 
+   <a href="#cap-prop-outer-meas-interval"><strong>prop-outer-meas-interval</strong></a> | 
+   <a href="#cap-prop-product-continuous"><strong>prop-product-continuous</strong></a> | 
+   <a href="#cap-prop-prop-analytic"><strong>prop-prop-analytic</strong></a> | 
+   <a href="#cap-prop-relative-codes"><strong>prop-relative-codes</strong></a> | 
+   <a href="#cap-prop-satisfaction-arithmetic"><strong>prop-satisfaction-arithmetic</strong></a> | 
+   <a href="#cap-prop-sigma12-perfect"><strong>prop-sigma12-perfect</strong></a> | 
+   <a href="#cap-prop-topological-product"><strong>prop-topological-product</strong></a> | 
+   <a href="#cap-prop-trees-closed"><strong>prop-trees-closed</strong></a> | 
+   <a href="#cap-prop-universal-general"><strong>prop-universal-general</strong></a> | 
+   <a href="#cap-prop-universal-projective"><strong>prop-universal-projective</strong></a> | 
+   <a href="#cap-properties-polish"><strong>properties-polish</strong></a> | 
+   <a href="#cap-proposition-0"><strong>proposition-0</strong></a> | 
+   <a href="#cap-proposition-1"><strong>proposition-1</strong></a> | 
+   <a href="#cap-proposition-23"><strong>proposition-23</strong></a> | 
+   <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
+   <a href="#cap-theorem-7"><strong>theorem-7</strong></a> | 
+   <a href="#cap-thm-Baire-category"><strong>thm-Baire-category</strong></a> | 
+   <a href="#cap-thm-Bernstein"><strong>thm-Bernstein</strong></a> | 
+   <a href="#cap-thm-Borel-arith"><strong>thm-Borel-arith</strong></a> | 
+   <a href="#cap-thm-Borel-clopen"><strong>thm-Borel-clopen</strong></a> | 
+   <a href="#cap-thm-Borel-injective"><strong>thm-Borel-injective</strong></a> | 
+   <a href="#cap-thm-Borel-proper"><strong>thm-Borel-proper</strong></a> | 
+   <a href="#cap-thm-Cantor-embedding"><strong>thm-Cantor-embedding</strong></a> | 
+   <a href="#cap-thm-Koenigs-lemma"><strong>thm-Koenigs-lemma</strong></a> | 
+   <a href="#cap-thm-Kondo"><strong>thm-Kondo</strong></a> | 
+   <a href="#cap-thm-L-AC"><strong>thm-L-AC</strong></a> | 
+   <a href="#cap-thm-L-GCH"><strong>thm-L-GCH</strong></a> | 
+   <a href="#cap-thm-L-absolute"><strong>thm-L-absolute</strong></a> | 
+   <a href="#cap-thm-L-reals"><strong>thm-L-reals</strong></a> | 
+   <a href="#cap-thm-Lusin-separation"><strong>thm-Lusin-separation</strong></a> | 
+   <a href="#cap-thm-Mostowski-collapse"><strong>thm-Mostowski-collapse</strong></a> | 
+   <a href="#cap-thm-Polish-bijection-Baire"><strong>thm-Polish-bijection-Baire</strong></a> | 
+   <a href="#cap-thm-Shoenfild-absoluteness"><strong>thm-Shoenfild-absoluteness</strong></a> | 
+   <a href="#cap-thm-Souslin-Borel-images"><strong>thm-Souslin-Borel-images</strong></a> | 
+   <a href="#cap-thm-Vitali-nonmeasurable"><strong>thm-Vitali-nonmeasurable</strong></a> | 
+   <a href="#cap-thm-WF-Wadge-complete"><strong>thm-WF-Wadge-complete</strong></a> | 
+   <a href="#cap-thm-Young"><strong>thm-Young</strong></a> | 
+   <a href="#cap-thm-analytic-universally-measurable"><strong>thm-analytic-universally-measurable</strong></a> | 
+   <a href="#cap-thm-cantor_bendixson-polish"><strong>thm-cantor_bendixson-polish</strong></a> | 
+   <a href="#cap-thm-card-perfect-sets"><strong>thm-card-perfect-sets</strong></a> | 
+   <a href="#cap-thm-definability-Pdef"><strong>thm-definability-Pdef</strong></a> | 
+   <a href="#cap-thm-fundamental"><strong>thm-fundamental</strong></a> | 
+   <a href="#cap-thm-idempotent-Souslin"><strong>thm-idempotent-Souslin</strong></a> | 
+   <a href="#cap-thm-inaccessible-ZFC"><strong>thm-inaccessible-ZFC</strong></a> | 
+   <a href="#cap-thm-inner-models"><strong>thm-inner-models</strong></a> | 
+   <a href="#cap-thm-kappa-additivity"><strong>thm-kappa-additivity</strong></a> | 
+   <a href="#cap-thm-measurable-Ramsey"><strong>thm-measurable-Ramsey</strong></a> | 
+   <a href="#cap-thm-measurable-inaccessible"><strong>thm-measurable-inaccessible</strong></a> | 
+   <a href="#cap-thm-ordinal-recursion"><strong>thm-ordinal-recursion</strong></a> | 
+   <a href="#cap-thm-polish-cont-image-Baire"><strong>thm-polish-cont-image-Baire</strong></a> | 
+   <a href="#cap-thm-prefect-set-L"><strong>thm-prefect-set-L</strong></a> | 
+   <a href="#cap-thm-projective-definable"><strong>thm-projective-definable</strong></a> | 
+   <a href="#cap-thm-reflection"><strong>thm-reflection</strong></a> | 
+   <a href="#cap-thm-sat-predicate"><strong>thm-sat-predicate</strong></a> | 
+   <a href="#cap-thm-sigma11-bounding"><strong>thm-sigma11-bounding</strong></a> | 
+   <a href="#cap-thm-sigma12-union-Borel"><strong>thm-sigma12-union-Borel</strong></a> | 
+   <a href="#cap-thm-subsets-Polish"><strong>thm-subsets-Polish</strong></a> | 
+   <a href="#cap-thm-tree-repr-sig12"><strong>thm-tree-repr-sig12</strong></a> | 
+   <a href="#cap-thm-von-Neumann"><strong>thm-von-Neumann</strong></a> | 
+   <a href="#cap-thm-weak-Borel-hierarchy"><strong>thm-weak-Borel-hierarchy</strong></a> | 
+   <a href="#cap-thm-wf-recursion"><strong>thm-wf-recursion</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Borel-Delta11"><td></td><td>
+       <strong>Borel-Delta11</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#Borel-Delta11"><code class="xref">Borel-Delta11</code></a> <em>(analytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-analytic-Souslin-op"><td></td><td>
+       <strong>analytic-Souslin-op</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#analytic-Souslin-op"><code class="xref">analytic-Souslin-op</code></a> <em>(analytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cantor-bendixson"><td></td><td>
+       <strong>cantor-bendixson</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="perfect_subsets_R.html#cantor-bendixson"><code class="xref">cantor-bendixson</code></a> <em>(perfect_subsets_R)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-characterization-analytic"><td></td><td>
+       <strong>characterization-analytic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#characterization-analytic"><code class="xref">characterization-analytic</code></a> <em>(analytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-closed-is-Gdelta"><td></td><td>
+       <strong>closed-is-Gdelta</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#closed-is-Gdelta"><code class="xref">closed-is-Gdelta</code></a> <em>(Borel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-BP-algebra-small"><td></td><td>
+       <strong>cor-BP-algebra-small</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#cor-BP-algebra-small"><code class="xref">cor-BP-algebra-small</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Borel-image-closed"><td></td><td>
+       <strong>cor-Borel-image-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#cor-Borel-image-closed"><code class="xref">cor-Borel-image-closed</code></a> <em>(imagesBorel)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Borel-measurable"><td></td><td>
+       <strong>cor-Borel-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#cor-Borel-measurable"><code class="xref">cor-Borel-measurable</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Con(AC)"><td></td><td>
+       <strong>cor-Con(AC)</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#cor-Con(AC)"><code class="xref">cor-Con(AC)</code></a> <em>(V=L)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Con(ZFC+GCH)"><td></td><td>
+       <strong>cor-Con(ZFC+GCH)</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#cor-Con(ZFC+GCH)"><code class="xref">cor-Con(ZFC+GCH)</code></a> <em>(V=L)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-L-inner-model"><td></td><td>
+       <strong>cor-L-inner-model</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#cor-L-inner-model"><code class="xref">cor-L-inner-model</code></a> <em>(constructible)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-L-reals"><td></td><td>
+       <strong>cor-L-reals</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#cor-L-reals"><code class="xref">cor-L-reals</code></a> <em>(constructible-reals)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-Scott-Scarpellini"><td></td><td>
+       <strong>cor-Scott-Scarpellini</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#cor-Scott-Scarpellini"><code class="xref">cor-Scott-Scarpellini</code></a> <em>(constructible)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-ZF-axiomatizable"><td></td><td>
+       <strong>cor-ZF-axiomatizable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#cor-ZF-axiomatizable"><code class="xref">cor-ZF-axiomatizable</code></a> <em>(constructible)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-aleph-union-intersect"><td></td><td>
+       <strong>cor-aleph-union-intersect</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-aleph-union-intersect"><code class="xref">cor-aleph-union-intersect</code></a> <em>(coanalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-analytic-Souslin-closed"><td></td><td>
+       <strong>cor-analytic-Souslin-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#cor-analytic-Souslin-closed"><code class="xref">cor-analytic-Souslin-closed</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-analytic-measurable"><td></td><td>
+       <strong>cor-analytic-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#cor-analytic-measurable"><code class="xref">cor-analytic-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-cardinality-sigma12"><td></td><td>
+       <strong>cor-cardinality-sigma12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#cor-cardinality-sigma12"><code class="xref">cor-cardinality-sigma12</code></a> <em>(shoenfield)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-coanal-union-Borel"><td></td><td>
+       <strong>cor-coanal-union-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-coanal-union-Borel"><code class="xref">cor-coanal-union-Borel</code></a> <em>(coanalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-coanalytic-cardinality"><td></td><td>
+       <strong>cor-coanalytic-cardinality</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#cor-coanalytic-cardinality"><code class="xref">cor-coanalytic-cardinality</code></a> <em>(coanalytic)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-complexity-L"><td></td><td>
+       <strong>cor-complexity-L</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#cor-complexity-L"><code class="xref">cor-complexity-L</code></a> <em>(V=L)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-hier-proper"><td></td><td>
+       <strong>cor-hier-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#cor-hier-proper"><code class="xref">cor-hier-proper</code></a> <em>(structureBorel)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-perfect-Borel"><td></td><td>
+       <strong>cor-perfect-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#cor-perfect-Borel"><code class="xref">cor-perfect-Borel</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-projective-proper"><td></td><td>
+       <strong>cor-projective-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#cor-projective-proper"><code class="xref">cor-projective-proper</code></a> <em>(projective)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-rationals-not-pi2"><td></td><td>
+       <strong>cor-rationals-not-pi2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#cor-rationals-not-pi2"><code class="xref">cor-rationals-not-pi2</code></a> <em>(measure)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cor-weak-Borel-hierarchy-1"><td></td><td>
+       <strong>cor-weak-Borel-hierarchy-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#cor-weak-Borel-hierarchy-1"><code class="xref">cor-weak-Borel-hierarchy-1</code></a> <em>(Borel)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-corollary-3"><td></td><td>
+       <strong>corollary-3</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="perfect_subsets_R.html#corollary-3"><code class="xref">corollary-3</code></a> <em>(perfect_subsets_R)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-BP"><td></td><td>
+       <strong>def-BP</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-BP"><code class="xref">def-BP</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Borel"><td></td><td>
+       <strong>def-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#def-Borel"><code class="xref">def-Borel</code></a> <em>(Borel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Borel-codes"><td></td><td>
+       <strong>def-Borel-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#def-Borel-codes"><code class="xref">def-Borel-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Borel-codes-transfinite"><td></td><td>
+       <strong>def-Borel-codes-transfinite</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#def-Borel-codes-transfinite"><code class="xref">def-Borel-codes-transfinite</code></a> <em>(structureBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Borel-finite"><td></td><td>
+       <strong>def-Borel-finite</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#def-Borel-finite"><code class="xref">def-Borel-finite</code></a> <em>(Borel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Kleene-Brouwer"><td></td><td>
+       <strong>def-Kleene-Brouwer</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#def-Kleene-Brouwer"><code class="xref">def-Kleene-Brouwer</code></a> <em>(trees)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Lebesgue"><td></td><td>
+       <strong>def-Lebesgue</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-Lebesgue"><code class="xref">def-Lebesgue</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Lusin-scheme"><td></td><td>
+       <strong>def-Lusin-scheme</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#def-Lusin-scheme"><code class="xref">def-Lusin-scheme</code></a> <em>(imagesBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-Wadge"><td></td><td>
+       <strong>def-Wadge</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-Wadge"><code class="xref">def-Wadge</code></a> <em>(coanalytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-analytical-hierarchy"><td></td><td>
+       <strong>def-analytical-hierarchy</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#def-analytical-hierarchy"><code class="xref">def-analytical-hierarchy</code></a> <em>(projective)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-completeness"><td></td><td>
+       <strong>def-completeness</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-completeness"><code class="xref">def-completeness</code></a> <em>(coanalytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-cumulative"><td></td><td>
+       <strong>def-cumulative</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#def-cumulative"><code class="xref">def-cumulative</code></a> <em>(constructible)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-effective-Borel"><td></td><td>
+       <strong>def-effective-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#def-effective-Borel"><code class="xref">def-effective-Borel</code></a> <em>(codingBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-filter"><td></td><td>
+       <strong>def-filter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-filter"><code class="xref">def-filter</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-ideal"><td></td><td>
+       <strong>def-ideal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-ideal"><code class="xref">def-ideal</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-inaccessible"><td></td><td>
+       <strong>def-inaccessible</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#def-inaccessible"><code class="xref">def-inaccessible</code></a> <em>(large_cardinals)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-inner-model"><td></td><td>
+       <strong>def-inner-model</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#def-inner-model"><code class="xref">def-inner-model</code></a> <em>(constructible)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-meager"><td></td><td>
+       <strong>def-meager</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-meager"><code class="xref">def-meager</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-measurable"><td></td><td>
+       <strong>def-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-measurable"><code class="xref">def-measurable</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-measurable-cardinal"><td></td><td>
+       <strong>def-measurable-cardinal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#def-measurable-cardinal"><code class="xref">def-measurable-cardinal</code></a> <em>(large_cardinals)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-measure"><td></td><td>
+       <strong>def-measure</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-measure"><code class="xref">def-measure</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-normal-filter"><td></td><td>
+       <strong>def-normal-filter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#def-normal-filter"><code class="xref">def-normal-filter</code></a> <em>(large_cardinals)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-normal-function"><td></td><td>
+       <strong>def-normal-function</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#def-normal-function"><code class="xref">def-normal-function</code></a> <em>(constructible)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-nowhere-dense"><td></td><td>
+       <strong>def-nowhere-dense</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-nowhere-dense"><code class="xref">def-nowhere-dense</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-ordinal"><td></td><td>
+       <strong>def-ordinal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ZFC.html#def-ordinal"><code class="xref">def-ordinal</code></a> <em>(ZFC)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-outer-measure"><td></td><td>
+       <strong>def-outer-measure</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-outer-measure"><code class="xref">def-outer-measure</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-perfect"><td></td><td>
+       <strong>def-perfect</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="perfect_subsets_R.html#def-perfect"><code class="xref">def-perfect</code></a> <em>(perfect_subsets_R)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-polish"><td></td><td>
+       <strong>def-polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#def-polish"><code class="xref">def-polish</code></a> <em>(polish)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-transfinite-Borel"><td></td><td>
+       <strong>def-transfinite-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#def-transfinite-Borel"><code class="xref">def-transfinite-Borel</code></a> <em>(structureBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-transitive"><td></td><td>
+       <strong>def-transitive</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ZFC.html#def-transitive"><code class="xref">def-transitive</code></a> <em>(ZFC)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-tree"><td></td><td>
+       <strong>def-tree</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#def-tree"><code class="xref">def-tree</code></a> <em>(trees)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-two-dim-tree"><td></td><td>
+       <strong>def-two-dim-tree</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#def-two-dim-tree"><code class="xref">def-two-dim-tree</code></a> <em>(coanalytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-ultrafilter"><td></td><td>
+       <strong>def-ultrafilter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#def-ultrafilter"><code class="xref">def-ultrafilter</code></a> <em>(measure)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-uniformization"><td></td><td>
+       <strong>def-uniformization</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#def-uniformization"><code class="xref">def-uniformization</code></a> <em>(constructible-reals)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-universal"><td></td><td>
+       <strong>def-universal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#def-universal"><code class="xref">def-universal</code></a> <em>(structureBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-well-founded"><td></td><td>
+       <strong>def-well-founded</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#def-well-founded"><code class="xref">def-well-founded</code></a> <em>(recursion)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-0"><td></td><td>
+       <strong>definition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#definition-0"><code class="xref">definition-0</code></a> <em>(analytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-1"><td></td><td>
+       <strong>definition-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#definition-1"><code class="xref">definition-1</code></a> <em>(Borel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-2"><td></td><td>
+       <strong>definition-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#definition-2"><code class="xref">definition-2</code></a> <em>(Urysohn)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-5"><td></td><td>
+       <strong>definition-5</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#definition-5"><code class="xref">definition-5</code></a> <em>(analytic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-7"><td></td><td>
+       <strong>definition-7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#definition-7"><code class="xref">definition-7</code></a> <em>(codingBorel)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-exa-trans-closure"><td></td><td>
+       <strong>exa-trans-closure</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#exa-trans-closure"><code class="xref">exa-trans-closure</code></a> <em>(recursion)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-BP-closed"><td></td><td>
+       <strong>lem-BP-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#lem-BP-closed"><code class="xref">lem-BP-closed</code></a> <em>(measure)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Borel-codes-clopen"><td></td><td>
+       <strong>lem-Borel-codes-clopen</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lem-Borel-codes-clopen"><code class="xref">lem-Borel-codes-clopen</code></a> <em>(codingBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Borel-codes-inverse-shift"><td></td><td>
+       <strong>lem-Borel-codes-inverse-shift</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lem-Borel-codes-inverse-shift"><code class="xref">lem-Borel-codes-inverse-shift</code></a> <em>(codingBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Borel-codes-shift"><td></td><td>
+       <strong>lem-Borel-codes-shift</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lem-Borel-codes-shift"><code class="xref">lem-Borel-codes-shift</code></a> <em>(codingBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Fubini-category"><td></td><td>
+       <strong>lem-Fubini-category</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#lem-Fubini-category"><code class="xref">lem-Fubini-category</code></a> <em>(projective)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-Mostowski-unique"><td></td><td>
+       <strong>lem-Mostowski-unique</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#lem-Mostowski-unique"><code class="xref">lem-Mostowski-unique</code></a> <em>(models)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-approx-category"><td></td><td>
+       <strong>lem-approx-category</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#lem-approx-category"><code class="xref">lem-approx-category</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-approx-measurable"><td></td><td>
+       <strong>lem-approx-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#lem-approx-measurable"><code class="xref">lem-approx-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-bounded-rank-Borel"><td></td><td>
+       <strong>lem-bounded-rank-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#lem-bounded-rank-Borel"><code class="xref">lem-bounded-rank-Borel</code></a> <em>(coanalytic)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-cardinality-kappa-ultrafilter"><td></td><td>
+       <strong>lem-cardinality-kappa-ultrafilter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#lem-cardinality-kappa-ultrafilter"><code class="xref">lem-cardinality-kappa-ultrafilter</code></a> <em>(large_cardinals)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-closed-clopen"><td></td><td>
+       <strong>lem-closed-clopen</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#lem-closed-clopen"><code class="xref">lem-closed-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-closed-retract-Baire"><td></td><td>
+       <strong>lem-closed-retract-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#lem-closed-retract-Baire"><code class="xref">lem-closed-retract-Baire</code></a> <em>(imagesBorel)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-condensation"><td></td><td>
+       <strong>lem-condensation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#lem-condensation"><code class="xref">lem-condensation</code></a> <em>(V=L)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-min-wf"><td></td><td>
+       <strong>lem-min-wf</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#lem-min-wf"><code class="xref">lem-min-wf</code></a> <em>(recursion)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-1"><td></td><td>
+       <strong>lemma-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#lemma-1"><code class="xref">lemma-1</code></a> <em>(Urysohn)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-5"><td></td><td>
+       <strong>lemma-5</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#lemma-5"><code class="xref">lemma-5</code></a> <em>(Urysohn)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-6"><td></td><td>
+       <strong>lemma-6</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#lemma-6"><code class="xref">lemma-6</code></a> <em>(Urysohn)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-Kuratowski-extension"><td></td><td>
+       <strong>lemma-Kuratowski-extension</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#lemma-Kuratowski-extension"><code class="xref">lemma-Kuratowski-extension</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-L-GCH"><td></td><td>
+       <strong>lemma-L-GCH</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#lemma-L-GCH"><code class="xref">lemma-L-GCH</code></a> <em>(V=L)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lightface-definability"><td></td><td>
+       <strong>lightface-definability</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#lightface-definability"><code class="xref">lightface-definability</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-measurable-diff-Borel"><td></td><td>
+       <strong>measurable-diff-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#measurable-diff-Borel"><code class="xref">measurable-diff-Borel</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-BP-sigma-algebra"><td></td><td>
+       <strong>prop-BP-sigma-algebra</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-BP-sigma-algebra"><code class="xref">prop-BP-sigma-algebra</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Bernstein-BP"><td></td><td>
+       <strong>prop-Bernstein-BP</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="choice.html#prop-Bernstein-BP"><code class="xref">prop-Bernstein-BP</code></a> <em>(choice)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-closure-bounded-projection"><td></td><td>
+       <strong>prop-Borel-closure-bounded-projection</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-closure-bounded-projection"><code class="xref">prop-Borel-closure-bounded-projection</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-closure-finite"><td></td><td>
+       <strong>prop-Borel-closure-finite</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-closure-finite"><code class="xref">prop-Borel-closure-finite</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-codes"><td></td><td>
+       <strong>prop-Borel-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-Borel-codes"><code class="xref">prop-Borel-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-omega1"><td></td><td>
+       <strong>prop-Borel-omega1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-omega1"><code class="xref">prop-Borel-omega1</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel-universal"><td></td><td>
+       <strong>prop-Borel-universal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel-universal"><code class="xref">prop-Borel-universal</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Borel_closure-preimages"><td></td><td>
+       <strong>prop-Borel_closure-preimages</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-Borel_closure-preimages"><code class="xref">prop-Borel_closure-preimages</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-KB-wellorder"><td></td><td>
+       <strong>prop-KB-wellorder</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-KB-wellorder"><code class="xref">prop-KB-wellorder</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Souslin-Baire"><td></td><td>
+       <strong>prop-Souslin-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#prop-Souslin-Baire"><code class="xref">prop-Souslin-Baire</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Souslin-Lebesgue"><td></td><td>
+       <strong>prop-Souslin-Lebesgue</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#prop-Souslin-Lebesgue"><code class="xref">prop-Souslin-Lebesgue</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Urysohn-embedding"><td></td><td>
+       <strong>prop-Urysohn-embedding</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#prop-Urysohn-embedding"><code class="xref">prop-Urysohn-embedding</code></a> <em>(Urysohn)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Urysohn-extension"><td></td><td>
+       <strong>prop-Urysohn-extension</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#prop-Urysohn-extension"><code class="xref">prop-Urysohn-extension</code></a> <em>(Urysohn)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-Wadge-preimages"><td></td><td>
+       <strong>prop-Wadge-preimages</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#prop-Wadge-preimages"><code class="xref">prop-Wadge-preimages</code></a> <em>(coanalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-basics-L"><td></td><td>
+       <strong>prop-basics-L</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#prop-basics-L"><code class="xref">prop-basics-L</code></a> <em>(constructible)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-card-Lalpha"><td></td><td>
+       <strong>prop-card-Lalpha</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#prop-card-Lalpha"><code class="xref">prop-card-Lalpha</code></a> <em>(V=L)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-cardinality-Vkappa"><td></td><td>
+       <strong>prop-cardinality-Vkappa</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-cardinality-Vkappa"><code class="xref">prop-cardinality-Vkappa</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-closure-projective"><td></td><td>
+       <strong>prop-closure-projective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-closure-projective"><code class="xref">prop-closure-projective</code></a> <em>(projective)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-computable-codes"><td></td><td>
+       <strong>prop-computable-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-computable-codes"><code class="xref">prop-computable-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-defble-formula"><td></td><td>
+       <strong>prop-defble-formula</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#prop-defble-formula"><code class="xref">prop-defble-formula</code></a> <em>(constructible)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-illfounded-ZF-model"><td></td><td>
+       <strong>prop-illfounded-ZF-model</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#prop-illfounded-ZF-model"><code class="xref">prop-illfounded-ZF-model</code></a> <em>(models)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-inaccessible-cardinality"><td></td><td>
+       <strong>prop-inaccessible-cardinality</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-inaccessible-cardinality"><code class="xref">prop-inaccessible-cardinality</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-induction-ord-i"><td></td><td>
+       <strong>prop-induction-ord-i</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#prop-induction-ord-i"><code class="xref">prop-induction-ord-i</code></a> <em>(recursion)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-induction-ord-ii"><td></td><td>
+       <strong>prop-induction-ord-ii</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#prop-induction-ord-ii"><code class="xref">prop-induction-ord-ii</code></a> <em>(recursion)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-intersection-Polish"><td></td><td>
+       <strong>prop-intersection-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#prop-intersection-Polish"><code class="xref">prop-intersection-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-interval-measurable"><td></td><td>
+       <strong>prop-interval-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-interval-measurable"><code class="xref">prop-interval-measurable</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-leftmost-branch"><td></td><td>
+       <strong>prop-leftmost-branch</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-leftmost-branch"><code class="xref">prop-leftmost-branch</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-map-Lalpha"><td></td><td>
+       <strong>prop-map-Lalpha</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#prop-map-Lalpha"><code class="xref">prop-map-Lalpha</code></a> <em>(V=L)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-regular"><td></td><td>
+       <strong>prop-measurable-regular</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-measurable-regular"><code class="xref">prop-measurable-regular</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-sets"><td></td><td>
+       <strong>prop-measurable-sets</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-measurable-sets"><code class="xref">prop-measurable-sets</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-sigma-algebra"><td></td><td>
+       <strong>prop-measurable-sigma-algebra</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-measurable-sigma-algebra"><code class="xref">prop-measurable-sigma-algebra</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-measurable-vs-real-valued"><td></td><td>
+       <strong>prop-measurable-vs-real-valued</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#prop-measurable-vs-real-valued"><code class="xref">prop-measurable-vs-real-valued</code></a> <em>(large_cardinals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-non-meas"><td></td><td>
+       <strong>prop-non-meas</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-non-meas"><code class="xref">prop-non-meas</code></a> <em>(projective)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-nonfinite-Borel"><td></td><td>
+       <strong>prop-nonfinite-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-nonfinite-Borel"><code class="xref">prop-nonfinite-Borel</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-norm-form-coanalytic"><td></td><td>
+       <strong>prop-norm-form-coanalytic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#prop-norm-form-coanalytic"><code class="xref">prop-norm-form-coanalytic</code></a> <em>(coanalytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-null-sigmaideal"><td></td><td>
+       <strong>prop-null-sigmaideal</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-null-sigmaideal"><code class="xref">prop-null-sigmaideal</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-nullsets-measurable"><td></td><td>
+       <strong>prop-nullsets-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-nullsets-measurable"><code class="xref">prop-nullsets-measurable</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-open-subset-Polish"><td></td><td>
+       <strong>prop-open-subset-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#prop-open-subset-Polish"><code class="xref">prop-open-subset-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-ordinal-recursion-ii"><td></td><td>
+       <strong>prop-ordinal-recursion-ii</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#prop-ordinal-recursion-ii"><code class="xref">prop-ordinal-recursion-ii</code></a> <em>(recursion)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-outer-meas-interval"><td></td><td>
+       <strong>prop-outer-meas-interval</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#prop-outer-meas-interval"><code class="xref">prop-outer-meas-interval</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-product-continuous"><td></td><td>
+       <strong>prop-product-continuous</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-product-continuous"><code class="xref">prop-product-continuous</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-prop-analytic"><td></td><td>
+       <strong>prop-prop-analytic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#prop-prop-analytic"><code class="xref">prop-prop-analytic</code></a> <em>(analytic)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-relative-codes"><td></td><td>
+       <strong>prop-relative-codes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#prop-relative-codes"><code class="xref">prop-relative-codes</code></a> <em>(codingBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-satisfaction-arithmetic"><td></td><td>
+       <strong>prop-satisfaction-arithmetic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#prop-satisfaction-arithmetic"><code class="xref">prop-satisfaction-arithmetic</code></a> <em>(constructible-reals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-sigma12-perfect"><td></td><td>
+       <strong>prop-sigma12-perfect</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#prop-sigma12-perfect"><code class="xref">prop-sigma12-perfect</code></a> <em>(constructible-reals)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-topological-product"><td></td><td>
+       <strong>prop-topological-product</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#prop-topological-product"><code class="xref">prop-topological-product</code></a> <em>(polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-trees-closed"><td></td><td>
+       <strong>prop-trees-closed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#prop-trees-closed"><code class="xref">prop-trees-closed</code></a> <em>(trees)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-universal-general"><td></td><td>
+       <strong>prop-universal-general</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#prop-universal-general"><code class="xref">prop-universal-general</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop-universal-projective"><td></td><td>
+       <strong>prop-universal-projective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#prop-universal-projective"><code class="xref">prop-universal-projective</code></a> <em>(projective)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-polish"><td></td><td>
+       <strong>properties-polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#properties-polish"><code class="xref">properties-polish</code></a> <em>(polish)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-0"><td></td><td>
+       <strong>proposition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#proposition-0"><code class="xref">proposition-0</code></a> <em>(structureBorel)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-1"><td></td><td>
+       <strong>proposition-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#proposition-1"><code class="xref">proposition-1</code></a> <em>(constructible)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-23"><td></td><td>
+       <strong>proposition-23</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#proposition-23"><code class="xref">proposition-23</code></a> <em>(measure)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-0"><td></td><td>
+       <strong>theorem-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Urysohn.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Urysohn)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-7"><td></td><td>
+       <strong>theorem-7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#theorem-7"><code class="xref">theorem-7</code></a> <em>(Borel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Baire-category"><td></td><td>
+       <strong>thm-Baire-category</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="measure.html#thm-Baire-category"><code class="xref">thm-Baire-category</code></a> <em>(measure)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Bernstein"><td></td><td>
+       <strong>thm-Bernstein</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="choice.html#thm-Bernstein"><code class="xref">thm-Bernstein</code></a> <em>(choice)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-arith"><td></td><td>
+       <strong>thm-Borel-arith</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#thm-Borel-arith"><code class="xref">thm-Borel-arith</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-clopen"><td></td><td>
+       <strong>thm-Borel-clopen</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#thm-Borel-clopen"><code class="xref">thm-Borel-clopen</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-injective"><td></td><td>
+       <strong>thm-Borel-injective</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Borel-injective"><code class="xref">thm-Borel-injective</code></a> <em>(imagesBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Borel-proper"><td></td><td>
+       <strong>thm-Borel-proper</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="structureBorel.html#thm-Borel-proper"><code class="xref">thm-Borel-proper</code></a> <em>(structureBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Cantor-embedding"><td></td><td>
+       <strong>thm-Cantor-embedding</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#thm-Cantor-embedding"><code class="xref">thm-Cantor-embedding</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Koenigs-lemma"><td></td><td>
+       <strong>thm-Koenigs-lemma</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="trees.html#thm-Koenigs-lemma"><code class="xref">thm-Koenigs-lemma</code></a> <em>(trees)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Kondo"><td></td><td>
+       <strong>thm-Kondo</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-Kondo"><code class="xref">thm-Kondo</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-AC"><td></td><td>
+       <strong>thm-L-AC</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#thm-L-AC"><code class="xref">thm-L-AC</code></a> <em>(V=L)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-GCH"><td></td><td>
+       <strong>thm-L-GCH</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#thm-L-GCH"><code class="xref">thm-L-GCH</code></a> <em>(V=L)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-absolute"><td></td><td>
+       <strong>thm-L-absolute</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="V%3DL.html#thm-L-absolute"><code class="xref">thm-L-absolute</code></a> <em>(V=L)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-L-reals"><td></td><td>
+       <strong>thm-L-reals</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-L-reals"><code class="xref">thm-L-reals</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Lusin-separation"><td></td><td>
+       <strong>thm-Lusin-separation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="analytic.html#thm-Lusin-separation"><code class="xref">thm-Lusin-separation</code></a> <em>(analytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Mostowski-collapse"><td></td><td>
+       <strong>thm-Mostowski-collapse</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="models.html#thm-Mostowski-collapse"><code class="xref">thm-Mostowski-collapse</code></a> <em>(models)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Polish-bijection-Baire"><td></td><td>
+       <strong>thm-Polish-bijection-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Polish-bijection-Baire"><code class="xref">thm-Polish-bijection-Baire</code></a> <em>(imagesBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Shoenfild-absoluteness"><td></td><td>
+       <strong>thm-Shoenfild-absoluteness</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-Shoenfild-absoluteness"><code class="xref">thm-Shoenfild-absoluteness</code></a> <em>(shoenfield)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Souslin-Borel-images"><td></td><td>
+       <strong>thm-Souslin-Borel-images</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="imagesBorel.html#thm-Souslin-Borel-images"><code class="xref">thm-Souslin-Borel-images</code></a> <em>(imagesBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Vitali-nonmeasurable"><td></td><td>
+       <strong>thm-Vitali-nonmeasurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="choice.html#thm-Vitali-nonmeasurable"><code class="xref">thm-Vitali-nonmeasurable</code></a> <em>(choice)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-WF-Wadge-complete"><td></td><td>
+       <strong>thm-WF-Wadge-complete</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#thm-WF-Wadge-complete"><code class="xref">thm-WF-Wadge-complete</code></a> <em>(coanalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-Young"><td></td><td>
+       <strong>thm-Young</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#thm-Young"><code class="xref">thm-Young</code></a> <em>(Borel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-analytic-universally-measurable"><td></td><td>
+       <strong>thm-analytic-universally-measurable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#thm-analytic-universally-measurable"><code class="xref">thm-analytic-universally-measurable</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-cantor_bendixson-polish"><td></td><td>
+       <strong>thm-cantor_bendixson-polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#thm-cantor_bendixson-polish"><code class="xref">thm-cantor_bendixson-polish</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-card-perfect-sets"><td></td><td>
+       <strong>thm-card-perfect-sets</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="perfect_subsets_R.html#thm-card-perfect-sets"><code class="xref">thm-card-perfect-sets</code></a> <em>(perfect_subsets_R)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-definability-Pdef"><td></td><td>
+       <strong>thm-definability-Pdef</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#thm-definability-Pdef"><code class="xref">thm-definability-Pdef</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-fundamental"><td></td><td>
+       <strong>thm-fundamental</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="codingBorel.html#thm-fundamental"><code class="xref">thm-fundamental</code></a> <em>(codingBorel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-idempotent-Souslin"><td></td><td>
+       <strong>thm-idempotent-Souslin</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="regularityAnalytic.html#thm-idempotent-Souslin"><code class="xref">thm-idempotent-Souslin</code></a> <em>(regularityAnalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-inaccessible-ZFC"><td></td><td>
+       <strong>thm-inaccessible-ZFC</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-inaccessible-ZFC"><code class="xref">thm-inaccessible-ZFC</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-inner-models"><td></td><td>
+       <strong>thm-inner-models</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#thm-inner-models"><code class="xref">thm-inner-models</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-kappa-additivity"><td></td><td>
+       <strong>thm-kappa-additivity</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-kappa-additivity"><code class="xref">thm-kappa-additivity</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-measurable-Ramsey"><td></td><td>
+       <strong>thm-measurable-Ramsey</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-measurable-Ramsey"><code class="xref">thm-measurable-Ramsey</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-measurable-inaccessible"><td></td><td>
+       <strong>thm-measurable-inaccessible</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="large_cardinals.html#thm-measurable-inaccessible"><code class="xref">thm-measurable-inaccessible</code></a> <em>(large_cardinals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-ordinal-recursion"><td></td><td>
+       <strong>thm-ordinal-recursion</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#thm-ordinal-recursion"><code class="xref">thm-ordinal-recursion</code></a> <em>(recursion)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-polish-cont-image-Baire"><td></td><td>
+       <strong>thm-polish-cont-image-Baire</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polish.html#thm-polish-cont-image-Baire"><code class="xref">thm-polish-cont-image-Baire</code></a> <em>(polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-prefect-set-L"><td></td><td>
+       <strong>thm-prefect-set-L</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible-reals.html#thm-prefect-set-L"><code class="xref">thm-prefect-set-L</code></a> <em>(constructible-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-projective-definable"><td></td><td>
+       <strong>thm-projective-definable</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="projective.html#thm-projective-definable"><code class="xref">thm-projective-definable</code></a> <em>(projective)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-reflection"><td></td><td>
+       <strong>thm-reflection</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#thm-reflection"><code class="xref">thm-reflection</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sat-predicate"><td></td><td>
+       <strong>thm-sat-predicate</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="constructible.html#thm-sat-predicate"><code class="xref">thm-sat-predicate</code></a> <em>(constructible)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sigma11-bounding"><td></td><td>
+       <strong>thm-sigma11-bounding</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="coanalytic.html#thm-sigma11-bounding"><code class="xref">thm-sigma11-bounding</code></a> <em>(coanalytic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-sigma12-union-Borel"><td></td><td>
+       <strong>thm-sigma12-union-Borel</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-sigma12-union-Borel"><code class="xref">thm-sigma12-union-Borel</code></a> <em>(shoenfield)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-subsets-Polish"><td></td><td>
+       <strong>thm-subsets-Polish</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="subsets_Polish.html#thm-subsets-Polish"><code class="xref">thm-subsets-Polish</code></a> <em>(subsets_Polish)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-tree-repr-sig12"><td></td><td>
+       <strong>thm-tree-repr-sig12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="shoenfield.html#thm-tree-repr-sig12"><code class="xref">thm-tree-repr-sig12</code></a> <em>(shoenfield)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-von-Neumann"><td></td><td>
+       <strong>thm-von-Neumann</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#thm-von-Neumann"><code class="xref">thm-von-Neumann</code></a> <em>(recursion)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-weak-Borel-hierarchy"><td></td><td>
+       <strong>thm-weak-Borel-hierarchy</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Borel.html#thm-weak-Borel-hierarchy"><code class="xref">thm-weak-Borel-hierarchy</code></a> <em>(Borel)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm-wf-recursion"><td></td><td>
+       <strong>thm-wf-recursion</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recursion.html#thm-wf-recursion"><code class="xref">thm-wf-recursion</code></a> <em>(recursion)</em></td><td>
+       <em>theorem</em></td></tr>
+   </table>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

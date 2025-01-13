@@ -1,0 +1,214 @@
+\subsection{Co-Analytic sets}
+
+We will see that, in many ways, $\PP{1}$ sets form the frontier between classical descriptive set theory and metamathematics. This chapter can be seen as the start of our transition to metamathematics. We will detail the distinguished role well-founded relations play in the analysis of $\PP{1}$ sets.
+
+\subsubsection{Normal forms}
+
+Analytic sets are projections of closed sets. Closed sets are in $\Baire\times \Baire$ are infinite paths through \textbf{trees on $\Nat \times \Nat$}, i.e. two-dimensional trees.
+
+\begin{definition}\label{def-two-dim-tree}A set $T \subseteq \Nstr \times \Nstr$  is a \textbf{two-dimensional tree} if
+
+\begin{itemize}
+\item \textbf{(i)} $(\sigma,\tau) \in T$ implies $|\sigma|=|\tau|$ and
+\item \textbf{(ii)} $(\sigma,\tau) \in T$ implies $(\sigma\Rest{n},\tau\Rest{n}) \in T$ for all $n \leq |\sigma|$.
+\end{itemize}
+
+An \textbf{infinite branch} of $T$ is a pair $(\alpha,\beta) \in \Baire\times \Baire$ so that
+\begin{equation*}
+\forall n\in \Nat \; (\alpha\Rest{n},\beta\Rest{n}) \in T.
+\end{equation*}
+\end{definition}As in the one-dimensional case, we use $[T]$ to denote the set of all infinite paths through $T$. It follows that $A \subseteq \Baire$ is analytic if and only if there exists a two-dimensional tree $T$ on $\Nat \times \Nat$ such that
+\begin{align*}
+	\alpha \in A & \iff  \exists \beta \: (\alpha,\beta) \in [T]\\
+	             & \iff  \exists \beta \, \forall n \: (\alpha\Rest{n},\beta\Rest{n}) \in T.
+\end{align*}
+
+Another way to write this is to put, for given $T$ and $\alpha \in \Baire$,
+
+\begin{equation}
+T(\alpha) = \{ \tau \colon (\alpha\Rest{|\tau|}, \tau) \in T \}.
+\end{equation}
+
+Then we have, with $T$ witnessing that $A$ is analytic,
+
+\begin{equation}
+\alpha \in A \iff T(\alpha) \text{ has an infinite path } \iff T(\alpha) \text{ is not well-founded}.
+\end{equation}
+
+We obtain the following normal form for co-analytic sets.
+
+\begin{proposition}[Normal form for co-analytic sets]\label{prop-norm-form-coanalytic}A set $A \subseteq \Baire$ is $\PP{1}$ if and only if there exists a two-dimensional tree $T$ such that
+
+\begin{equation}
+\alpha \in A \iff T(\alpha) \text{ is well-founded}.
+\end{equation}
+
+\end{proposition}If $A$ is (lightface) $\Pi^1_1$, then there exists a computable such $T$, and the mapping $\alpha \mapsto T(\alpha)$ is computable, as a mapping between reals and trees (which can be coded by reals). This relativizes, i.e. for a $\Pi^1_1(\gamma)$ set, the mapping $\alpha \mapsto T(\alpha)$ is computable in $\gamma$. Since computable mappings are continuous, we obtain that the in the above proposition, the mapping $\alpha \mapsto T(\alpha)$ is continuous.
+
+\subsubsection{$\mathbf{\Pi}^1_1$-complete sets}
+
+How does one show that a specific set is \textit{not} Borel? A related question is: Given a definition of a set in second order arithmetic, how can we tell that there is not an easier definition (in the sense that it uses less quantifier changes, no function quantifiers etc.)? The notion of \textbf{completeness} for classes in Polish spaces provides a general method to answer such questions.
+
+\begin{definition}\label{def-wadge}Let $X,Y$ be Polish spaces. We say a set $A \subseteq X$ is \textbf{Wadge reducible} to $B \subseteq Y$, written $A \leq_{\W} B$, if there exists a continuous function $f: X \to Y$ such that
+
+\begin{equation}
+x \in A \iff f(x) \in B.
+\end{equation}
+
+\end{definition}The important fact about Wadge reducibility is that it preserves classes closed under continuous preimages.
+
+\begin{proposition}\label{prop-wadge-preimages}Let $\Gamma$ be a family of subsets in Polish spaces (such as the classes of the Borel or projective hierarchy). If $\Gamma$ is closed under continuous preimages, then $A \leq_{\W} B$ and $B \in \Gamma$ implies $A \in \Gamma$.
+
+\end{proposition}\begin{proof}If $A \leq_{\W} B$ via $f$, then $A = f^{ -1}(B)$.
+
+\end{proof}\begin{definition}\label{def-completeness}A set $A \subseteq X$ is \textbf{$\Gamma$-complete} if $A \in \Gamma$ and for all $B \in \Gamma$, $B \leq_{\W} A$.
+
+\end{definition}$\Gamma$-complete sets can be seen as the most complicated members of $\Gamma$. In particular, for the $\bSigma/\bPi$ classes complete sets cannot be members of the dual class. For instance, a $\PP{1}$-complete set cannot be $\PS{1}$, since this would mean it is Borel, and hence every $\PP{1}$ set would be Borel, which we have seen is not true.
+
+If $A \subseteq \Baire \times \Baire$ is $\Baire$-universal for some class $\Gamma$ in the Borel or projective hierarchy, then the set
+
+\begin{equation}
+\{ \alpha \oplus \beta \colon (\alpha,\beta) \in A \}
+\end{equation}
+
+is $\Gamma$-complete, where $\oplus$ here denotes the pairing function for reals
+
+\begin{equation}
+\alpha\oplus\beta(n) = \begin{cases}
+	 	\alpha(k) & n = 2k, \\
+		\beta(k) & n = 2k+1.
+	\end{cases}
+\end{equation}
+
+Since $\oplus$ is continuous, and $B \in \Gamma$ if and only if $B = A_{\gamma}$ for some $\gamma\in \Baire$, we have in that case that $B \leq_{\W} A$ via the mapping
+
+\begin{equation}
+f(\beta) = \gamma\oplus\beta.
+\end{equation}
+
+It follows that complete sets exist for all levels of the Borel and projective hierarchy. However, the universal sets they are based on are rather abstract objects. Complete sets are most useful when we can show that a \textit{specific property} implies completeness. We will encounter next an important example for the class of co-analytic sets.
+
+\subsubsection{Well-founded relations and well-orderings}\label{sec-well-founded}
+
+Given a real in $\beta \in \Baire$, we can associate with $\beta$ a binary relation $E_\beta$ on $\Nat$:
+
+\begin{equation}
+E_\beta(m,n) :\iff \beta(\Tup{m,n}) = 0.
+\end{equation}
+
+A binary relation $E$ on a set $X$ is \textbf{well-founded} if every non-empty $Y \subseteq X$ has an $E$-minimal element $y_0$, that is, there is no $z \in Y$ with $E(z,y)$.
+
+Let
+
+\begin{equation}
+\WF = \{\beta \in \Baire \colon \text{$E_\beta$ is well-founded} \}.
+\end{equation}
+
+Then
+
+\begin{equation}
+\beta \in \WF \iff \forall \gamma \in \Baire \: \exists n \: \forall m \; [ \gamma(n) E_\beta \gamma(m) ],
+\end{equation}
+
+and hence $\WF$ is $\Pi^1_1$.
+
+A closely related set is
+
+\begin{equation}
+\WOrd = \{\beta \in \Baire \colon \text{$E_\beta$ is a well-ordering} \}.
+\end{equation}
+
+Then
+
+\begin{equation}
+\beta \in \WOrd \iff \beta \in \WF  \text{ and $E_\beta$ is a linear ordering}.
+\end{equation}
+
+Coding a linear order is easily seen to be $\Pi^0_1$, hence $\WOrd$ is $\Pi^1_1$, too.
+
+\begin{theorem}\label{thm-wf-wadge-complete}The sets $\WF$ and $\WOrd$ are $\PP{1}$-complete.
+
+\end{theorem}\begin{proof}We have seen in the chapter on \href{/trees}{Trees} that a tree has an infinite path  if and only if the inverse prefix ordering is ill-founded. Trees can be coded as reals, and hence Proposition~\ref{prop-norm-form-coanalytic} yields immediately that $\WF$ is $\PP{1}$-complete.
+
+For $\WOrd$ we use the Kleene-Brouwer ordering and refer to Proposition~\ref{prop-KB-wellorder}.
+
+\end{proof}The theorem lets us gain further insights in the structure of co-analytic sets. If $\alpha \in \Baire$ codes a well-ordering on $\Nat$, let
+\begin{equation*}
+\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+\end{equation*}
+
+It is clear that $\Norm{\alpha} < \omega_1$. For a fixed ordinal $\xi < \omega_1$, we let
+\begin{equation*}
+\WOrd_\xi = \{ \alpha \in \WOrd \colon \Norm{\alpha} \leq \xi \}.
+\end{equation*}
+
+\begin{lemma}\label{lem-bounded-rank-borel}For any $\xi < \omega_1$, the set $\WOrd_\xi$ is Borel.
+
+\end{lemma}\begin{proof}Let $\alpha \in \Baire$. We say $m \in \Nat$ is in the \textbf{domain} of $E_\alpha$, $m \in \Op{dom}(E_\alpha)$, if
+\begin{equation*}
+\exists n \: [ m E_\alpha n \; \vee \; n E_\alpha m].
+\end{equation*}
+
+It is clear from the definition of $E_\alpha$ that $\Op{dom}(E_\alpha)$ is Borel. For $\xi < \omega_1$, let
+\begin{equation*}
+B_\xi = \{ (\alpha,n) \colon E_\alpha \Rest{\{m \colon m E_\alpha n\}} \text{ is a well-ordering of order type $\leq \xi$} \}
+\end{equation*}
+
+We show by transfinite induction that every $B_\xi$ is Borel. Suppose $B_\zeta$ is Borel for all $\zeta < \xi$. Then, since $\xi$ is countable, $\bigcup_{\zeta < \xi} B_\zeta$ is Borel, too. But
+\begin{equation*}
+(\alpha,n) \in B_\xi \iff \forall m \: [m E_\alpha n \: \Rightarrow \: (\alpha,m) \in \bigcup_{\zeta < \xi} B_\zeta],
+\end{equation*}
+and from this it follows that $B_\xi$ is Borel. Finally, note that
+\begin{equation*}
+\alpha \in \WOrd_\xi \iff \forall n \; [n \in \Op{dom}(E_\alpha) \: \Rightarrow \: (\alpha,n) \in B_\xi],
+\end{equation*}
+which implies that $\WOrd_\xi$ is Borel.
+
+\end{proof}\begin{corollary}\label{cor-coanal-union-borel}Every $\PP{1}$ set is a union of $\aleph_1$ many Borel sets.
+
+\end{corollary}\begin{proof}Since $\WOrd$ is $\PP{1}$-complete, every co-analytic set $A$ is the preimage of $\WOrd$ for some continuous function $f$. We have
+\begin{equation*}
+\WOrd = \bigcup_{\xi < \omega_1} \WOrd_\xi,
+\end{equation*}
+and hence
+\begin{equation*}
+A = \bigcup_{\xi < \omega_1}  f^{-1}(\WOrd_\xi).
+\end{equation*}
+Since continuous preimages of Borel sets are Borel, the result follows.
+
+\end{proof}If we work instead with the set
+\begin{equation*}
+C_\xi = \{ \alpha \colon \alpha \in \WOrd_\xi \text{ or } \exists n\in \Op{dom}(E_\alpha) \\ [E_\alpha \Rest{\{m \colon m E_\alpha n\}} \text{ is a well-ordering of order type $\xi$}] \},
+\end{equation*}
+then we get that $\WOrd = \bigcap_{\xi < \omega_1} C_\xi$, and hence
+
+\begin{corollary}\label{cor-aleph-union-intersect}Every $\PP{1}$ set can be obtained as a union or intersection of $\aleph_1$-many Borel sets. Consequently, the same holds for every $\PS{1}$ set.
+
+\end{corollary}The previous results allow us to solve the cardinality problem of co-analytic sets at least partially.
+
+\begin{corollary}\label{cor-coanalytic-cardinality}Every $\PP{1}$ set is either countable, of cardinality $\aleph_1$, or of cardinality $2^{\aleph_0}$.
+
+\end{corollary}We conclude the chapter with another application of  Lemma~\ref{lem-bounded-rank-Borel} -- a useful tool for analyzing $\bSigma^1_1$ sets:
+
+\begin{theorem}[-bounding]\label{thm-sigma11-bounding}\textbf{$\bSigma^1_1$}\\
+For every analytic $A \subseteq \WOrd$ there exists an ordinal $\nu < \omega_1$ such that
+
+\begin{equation}
+\forall x \in A \;\; \Norm{x} < \nu.
+\end{equation}
+
+\end{theorem}\begin{proof}If such a $\nu$ did not exist, then
+
+\begin{equation}
+\alpha \in \WOrd \iff \exists \nu \: [\alpha \in A \; \wedge \; \WOrd_\nu].
+\end{equation}
+
+The right-hand side is $\bSigma^1_1$, and hence $\WOrd$ would be $\bSigma^1_1$, contradiction.
+
+\end{proof}An analogous statement holds for $\WF$, with respect to the rank function $\rho$ of a well-founded relation.
+
+%  ## Uniformization
+% 
+% Two important structural properties of pointclasses are **separation** and **uniformization**.
+% 
+% We have seen an instance of separation in

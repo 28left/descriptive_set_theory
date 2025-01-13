@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Shoenfield Absoluteness &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'shoenfield';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Constructible Reals" href="constructible-reals.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fshoenfield.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/shoenfield.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Shoenfield Absoluteness</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-representations-of-mathbf-sigma-1-2-sets">Tree representations of <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathbf-sigma-1-2-sets-as-unions-of-borel-sets"><span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets as unions of Borel sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absoluteness-of-sigma-1-2-relations">Absoluteness of <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> relations</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="shoenfield-absoluteness">
+<h1>Shoenfield Absoluteness<a class="headerlink" href="#shoenfield-absoluteness" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\VL}{\mathsf{V=L}}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}\]</div>
+<section id="tree-representations-of-mathbf-sigma-1-2-sets">
+<h2>Tree representations of <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets<a class="headerlink" href="#tree-representations-of-mathbf-sigma-1-2-sets" title="Permalink to this heading">#</a></h2>
+<p>Analytic sets are projections of closed sets. Closed sets are in <span class="math notranslate nohighlight">\(\Baire\)</span> are infinite paths through trees on <span class="math notranslate nohighlight">\(\Nat\)</span>.</p>
+<p>We call a set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> <strong><span class="math notranslate nohighlight">\(Y\)</span>-Souslin</strong> if <span class="math notranslate nohighlight">\(A\)</span> is the projection <span class="math notranslate nohighlight">\(\exists^{Y^{\Nat}}[T]\)</span> of some <span class="math notranslate nohighlight">\([T]\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is a tree on <span class="math notranslate nohighlight">\(\Nat \times Y\)</span>, that is</p>
+<div class="math notranslate nohighlight">
+\[
+A = \exists^{Y^\Nat}[T] = \{\alpha \colon \exists y \in Y^\Nat \: (\alpha,y) \in [T] \}.
+\]</div>
+<div class="proof theorem admonition" id="thm-tree-repr-sig12">
+<p class="admonition-title"><span class="caption-number">Theorem 49 </span> (Shoenfield, 1961 )</p>
+<section class="theorem-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\bSigma^1_2\)</span> set is <span class="math notranslate nohighlight">\(\omega_1\)</span>-Souslin.
+In particular, if <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> then there is a tree <span class="math notranslate nohighlight">\(T \in L\)</span> on <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(A = \exists^{(\omega_1)^\Nat}[T]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Assume first <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>. There is a recursive tree <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(\Nat \times \Nat\)</span> (and hence, in <span class="math notranslate nohighlight">\(L\)</span>, since “<em>being recursive</em>” is definable) such that</p>
+<div class="math notranslate nohighlight">
+\[
+    \alpha \in A \iff T(\alpha) \text{ is well-founded}.
+\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(\alpha \in A\)</span> if and only if there exists an order preserving map <span class="math notranslate nohighlight">\(\pi: T(\alpha) \to \omega_1\)</span>. We recast this now in terms of getting an infinite branch through a tree.</p>
+<p>Let <span class="math notranslate nohighlight">\(\{\sigma_i \colon i \in \Nat\}\)</span> be a recursive enumeration of <span class="math notranslate nohighlight">\(\Nstr\)</span>. We may assume for this enumeration that <span class="math notranslate nohighlight">\(|\sigma_i| \leq i\)</span>. We define a tree <span class="math notranslate nohighlight">\(\widetilde{T}\)</span> on <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+    \widetilde{T} = \{ (\sigma,\tau) : \: \forall i,j &lt; |\sigma| \: [\sigma_i \supset \sigma_j \: \wedge \: (\sigma\Rest{|\sigma_i|}, \sigma_i) \in T \: \to \: \tau(i) &lt; \tau(j)] \}.
+\]</div>
+<p>The tree <span class="math notranslate nohighlight">\(\widetilde{T}\)</span> is in <span class="math notranslate nohighlight">\(L\)</span>, since it is definable from <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\omega_1\)</span>. Furthermore, if <span class="math notranslate nohighlight">\(\alpha \in A\)</span>, then the existence of an order-preserving map <span class="math notranslate nohighlight">\(\pi: T(\alpha) \to \omega_1\)</span> implies that there is an infinite path <span class="math notranslate nohighlight">\((\alpha,\eta)\)</span> through <span class="math notranslate nohighlight">\(\widetilde{T}\)</span>.</p>
+<p>Conversely, if such a path <span class="math notranslate nohighlight">\((\alpha,\eta)\)</span> exists, then there is an order preserving map <span class="math notranslate nohighlight">\(\pi: T(\alpha) \to \omega_1\)</span>. Hence we have</p>
+<div class="math notranslate nohighlight">
+\[
+    \alpha \in A \: \leftrightarrow \: \exists \eta \in (\omega_1)^{\Nat} \: (\alpha,\eta) \in [\widetilde{T}] \: \leftrightarrow \: \alpha \in \exists^{(\omega_1)^\Nat}[\widetilde{T}],
+\]</div>
+<p>so <span class="math notranslate nohighlight">\(A\)</span> is of the desired form.</p>
+<p>Next, we extend the representation to <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>, then there is a <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set <span class="math notranslate nohighlight">\(B \subseteq \Baire\times\Baire\)</span>  such that <span class="math notranslate nohighlight">\(A = \exists^{\Baire} B\)</span>. Since <span class="math notranslate nohighlight">\(B \in \Pi^1_1\)</span>, we can employ the tree representation of <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> to obtain a tree <span class="math notranslate nohighlight">\(T\)</span> over <span class="math notranslate nohighlight">\(\Nat \times \Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(B = \exists^{(\omega_1)^\Nat} [T]\)</span>.</p>
+<p>Now we recast <span class="math notranslate nohighlight">\(T\)</span> as a tree <span class="math notranslate nohighlight">\(T'\)</span> over <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(\exists^{(\omega_1)^\Nat}[T'] = \exists^{(\omega_1)^\Nat} B\)</span>. This is done by using a bijection between <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> and <span class="math notranslate nohighlight">\(\omega_1\)</span>.</p>
+<p>This way we can cast the <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> component of <span class="math notranslate nohighlight">\(T\)</span> into a single <span class="math notranslate nohighlight">\(\omega_1\)</span> component, and thus transform the tree <span class="math notranslate nohighlight">\(T\)</span> into a tree <span class="math notranslate nohighlight">\(T'\)</span> over <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(\exists^{(\omega_1)^\Nat}[T'] = \exists^{(\omega_1)^\Nat}[B]\)</span>.</p>
+</div>
+</section>
+<section id="mathbf-sigma-1-2-sets-as-unions-of-borel-sets">
+<h2><span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets as unions of Borel sets<a class="headerlink" href="#mathbf-sigma-1-2-sets-as-unions-of-borel-sets" title="Permalink to this heading">#</a></h2>
+<p>We can use Shoenfield’s tree representation to extend <a class="reference internal" href="coanalytic.html#cor-coanal-union-Borel">Corollary 12</a> to <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> sets.</p>
+<div class="proof theorem admonition" id="thm-sigma12-union-Borel">
+<p class="admonition-title"><span class="caption-number">Theorem 50 </span> (Sierpinski, 1925)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> set is a union of <span class="math notranslate nohighlight">\(\aleph_1\)</span>-many Borel sets.</p>
+</section>
+</div><p>Sierpinski’s original proof used <span class="math notranslate nohighlight">\(\AC\)</span>. The following proof does not make use of choice.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> be <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>. By <a class="reference internal" href="#thm-tree-repr-sig12">Theorem 49</a> there exists a tree <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(A = \exists^{(\omega_1)^\Nat}[T]\)</span>. For any <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span> let</p>
+<div class="math notranslate nohighlight">
+\[
+    T^\xi = \{ (\sigma,\eta) \in T\colon \forall i \leq |\eta|\:  \eta(i) &lt; \xi \}.
+\]</div>
+<p>Since the cofinality of <span class="math notranslate nohighlight">\(\omega_1\)</span> is greater than <span class="math notranslate nohighlight">\(\omega\)</span> (this can be proved without using <span class="math notranslate nohighlight">\(\AC\)</span>), every <span class="math notranslate nohighlight">\(d: \omega \to \omega_1\)</span> has its range included in some <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+	A = \bigcup_{\xi &lt; \omega_1} \exists^{(\omega_1)^\Nat}[T^\xi].
+\]</div>
+<p>For all <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>, the set <span class="math notranslate nohighlight">\(\exists^{(\omega_1)^\Nat}[T^\xi]\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_1\)</span>, because the tree <span class="math notranslate nohighlight">\(T^\xi\)</span> is a tree on a product of countable sets and hence is isomorphic to a tree on <span class="math notranslate nohighlight">\(\Nat \times \Nat\)</span>. By <a class="reference internal" href="coanalytic.html#cor-aleph-union-intersect">Corollary 13</a>, each <span class="math notranslate nohighlight">\(\Sigma^1_1\)</span> set is the union of <span class="math notranslate nohighlight">\(\aleph_1\)</span> many Borel sets, from which the result follows.</p>
+</div>
+<p>As for co-analytic sets, an immediate consequence of this theorem is (using the perfect set property of Borel sets):</p>
+<div class="proof corollary admonition" id="cor-cardinality-sigma12">
+<p class="admonition-title"><span class="caption-number">Corollary 22 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\bSigma^1_2\)</span> set has cardinality at most <span class="math notranslate nohighlight">\(\aleph_1\)</span> or has a perfect subset and hence cardinality <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span>.</p>
+</section>
+</div></section>
+<section id="absoluteness-of-sigma-1-2-relations">
+<h2>Absoluteness of <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> relations<a class="headerlink" href="#absoluteness-of-sigma-1-2-relations" title="Permalink to this heading">#</a></h2>
+<p>Shoenfield used the tree representation of <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets to establish an important absoluteness result for <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> sets of reals.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>. Then, by the Kleene Normal Form there exists a bounded formula of second order arithmetic <span class="math notranslate nohighlight">\(\varphi(v_0,v_1,v_2)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	\alpha \in A \iff \exists \beta_0 \, \forall \beta_1 \, \exists m \; \varphi(\alpha\Rest{m},\beta_0\Rest{m},\beta_1\Rest{m}).
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(M\)</span> be an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span>. Arithmetical formulas can be interpreted in <span class="math notranslate nohighlight">\(\ZF\)</span> and we can also relativize them. This allows us to introduce a relativized version of <span class="math notranslate nohighlight">\(A\)</span> by identifying, as usual, a set with the predicate that defines it:</p>
+<div class="math notranslate nohighlight">
+\[
+	A^M(\alpha) :\iff (\exists \beta_0 \in M\cap \Baire) \, (\forall \beta_1\in M \cap \Baire)  \, (\exists m) \: \varphi(\alpha\Rest{m},\beta_0\Rest{m},\beta_1\Rest{m})
+\]</div>
+<p>Note that we do not have to relativize the inner natural number quantifier, since <span class="math notranslate nohighlight">\(\Nat\)</span> is absolute for inner models, and also not the formula <span class="math notranslate nohighlight">\(\varphi\)</span>, since a bounded arithmetic formula translates into a bounded set-theoretic formula (with only natural number quantifiers) and is therefore absolute for <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>We can then say that <span class="math notranslate nohighlight">\(A\)</span> is <strong>absolute for</strong> <span class="math notranslate nohighlight">\(M\)</span> if for any <span class="math notranslate nohighlight">\(\alpha\in M\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+	A^M(\alpha) \iff A(\alpha).
+\]</div>
+<p>Absoluteness can be extended and relativized in a straightforward manner to predicates analytical in some <span class="math notranslate nohighlight">\(\gamma \in \Baire \cap M\)</span>.</p>
+<p>All arithmetic predicates are absolute, since all quantifiers are natural number quantifiers. Shoenfield absoluteness extends this absoluteness to <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> and <span class="math notranslate nohighlight">\(\Pi^1_2\)</span> predicates.</p>
+<div class="proof theorem admonition" id="thm-Shoenfild-absoluteness">
+<p class="admonition-title"><span class="caption-number">Theorem 51 </span> (Shoenfield absoluteness)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every <span class="math notranslate nohighlight">\(\Sigma^1_2(\gamma)\)</span> predicate and every <span class="math notranslate nohighlight">\(\Pi^1_2(\gamma)\)</span> predicate is absolute for all inner models <span class="math notranslate nohighlight">\(M\)</span> of <span class="math notranslate nohighlight">\(\ZFC\)</span> such that <span class="math notranslate nohighlight">\(\gamma \in M\)</span>. In particular, all <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> and <span class="math notranslate nohighlight">\(\Pi^1_2\)</span> relations are absolute for <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We show the theorem for <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> predicates. For the relativized version, one uses the <strong>relative constructible universe</strong> <span class="math notranslate nohighlight">\(L[\gamma]\)</span>, see <span id="id1">[<a class="reference internal" href="bibliography.html#id8" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span> or <span id="id2">[<a class="reference internal" href="bibliography.html#id9" title="Akihiro Kanamori. The Higher Infinite. Springer Monographs in Mathematics. Springer-Verlag, Berlin, second edition, 2003.">Kanamori, 2003</a>]</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> relation. For simplicity, we assume that <span class="math notranslate nohighlight">\(A\)</span> is unary. Fix a tree representation of <span class="math notranslate nohighlight">\(A\)</span> as a projection of a <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set. So, let <span class="math notranslate nohighlight">\(T\)</span> be a recursive tree on <span class="math notranslate nohighlight">\(\Nat \times \Nat \times \Nat\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+     A(\alpha) \iff \exists \beta \;  T(\alpha,\beta) \text{ is well-founded}. 
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(T\)</span> is in <span class="math notranslate nohighlight">\(M\)</span> (since it is recursive and hence definable).</p>
+<p>Now assume <span class="math notranslate nohighlight">\(\alpha \in M\)</span> and <span class="math notranslate nohighlight">\(A^M(\alpha)\)</span>. Hence there is a <span class="math notranslate nohighlight">\(\beta \in M\)</span> such that <span class="math notranslate nohighlight">\(T(\alpha,\beta)\)</span> is well-founded in <span class="math notranslate nohighlight">\(M\)</span>. This is equivalent to the fact that in <span class="math notranslate nohighlight">\(M\)</span> there exists an order preserving mapping <span class="math notranslate nohighlight">\(\pi: T(\alpha,\beta) \to \mathbf{Ord}\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(M\)</span> is an inner model and <span class="math notranslate nohighlight">\(T\)</span> is absolute, the mapping exists also in <span class="math notranslate nohighlight">\(V\)</span>. Hence <span class="math notranslate nohighlight">\(T(\alpha,\beta)\)</span> is well-founded in <span class="math notranslate nohighlight">\(V\)</span> and thus <span class="math notranslate nohighlight">\(A(\alpha)\)</span>.</p>
+<p>For the converse assume that <span class="math notranslate nohighlight">\(\alpha \in M\)</span> and <span class="math notranslate nohighlight">\(A(\alpha)\)</span>. Now we use the alternative tree representation of <span class="math notranslate nohighlight">\(A\)</span> given by <a class="reference internal" href="#thm-tree-repr-sig12">Theorem 49</a>. Let <span class="math notranslate nohighlight">\(U \in L \subseteq M\)</span> be a tree on <span class="math notranslate nohighlight">\(\Nat \times \omega_1\)</span> such that <span class="math notranslate nohighlight">\(A = \exists^{(\omega_1)^\Nat} U\)</span>.</p>
+<p>As before, let</p>
+<div class="math notranslate nohighlight">
+\[
+	U(\alpha) = \{ (\alpha\Rest{n}, \tau)\in U \colon n \in \Nat, \tau \in (\omega_1)^n,  \}
+\]</div>
+<p>Then, for any <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	A(\alpha)     &amp; \iff    \exists \lambda \in (\omega_1)^\Nat \: (\alpha,\lambda) \text{ infinite path through $U$}. \\
+     &amp; \iff    U(\alpha) \text{ not well-founded}. \\
+\end{align*}\]</div>
+<p>This means that there exists no order preserving map <span class="math notranslate nohighlight">\(U(\alpha) \to \omega_1\)</span>. But then such a map cannot exist in <span class="math notranslate nohighlight">\(M\)</span> either. Thus, <span class="math notranslate nohighlight">\(U(\alpha)\)</span> is a tree in <span class="math notranslate nohighlight">\(M\)</span> which is ill-founded in the sense of <span class="math notranslate nohighlight">\(M\)</span>. Thus, by Shoenfield’s Representation Theorem relativized to <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(A^M(\alpha)\)</span>.</p>
+<p>Absoluteness for <span class="math notranslate nohighlight">\(\Pi^1_2\)</span> follows by employing the same reasoning, using that the complement is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+</div>
+<p>By analyzing the proof one sees that it actually suffices that <span class="math notranslate nohighlight">\(M\)</span> is a transitive <span class="math notranslate nohighlight">\(\in\)</span>-model of a certain finite collection of axioms <span class="math notranslate nohighlight">\(\ZF\)</span> such that <span class="math notranslate nohighlight">\(\omega_1 \subseteq M\)</span>.</p>
+<p>The result is the best possible with respect to the analytical hierarchy, since the statement</p>
+<div class="math notranslate nohighlight">
+\[
+	\exists \alpha \; [\alpha \not\in L]
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(\Sigma^1_3\)</span>, but cannot be absolute for <span class="math notranslate nohighlight">\(M = L\)</span>.</p>
+<p>Shoenfield’s absoluteness theorem also holds for sentences rather than predicates, with a similar proof. This means a <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> statement is true in <span class="math notranslate nohighlight">\(L\)</span> if and only if it holds in <span class="math notranslate nohighlight">\(V\)</span>. Many results of classical analysis are <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> statements. The Shoenfield absoluteness theorem says that if they can be established under <span class="math notranslate nohighlight">\(\VL\)</span>, they can be established in <span class="math notranslate nohighlight">\(\ZF\)</span> alone.</p>
+<p>On the negative side, as we will soon see, Shoenfield absoluteness also puts strong limits on the use of forcing to establish independence results in analysis.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="constructible-reals.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Constructible Reals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bibliography.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-representations-of-mathbf-sigma-1-2-sets">Tree representations of <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathbf-sigma-1-2-sets-as-unions-of-borel-sets"><span class="math notranslate nohighlight">\(\mathbf{\Sigma}^1_2\)</span> sets as unions of Borel sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absoluteness-of-sigma-1-2-relations">Absoluteness of <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> relations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

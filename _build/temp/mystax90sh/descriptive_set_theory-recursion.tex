@@ -1,0 +1,206 @@
+\subsection{Recursion and the Von-Neumann Hierarchy}
+
+\subsubsection{Transfinite induction}
+
+While the class $\Ord$ of all ordinals is not a set, it is still transitive and well-ordered by $\in$. Regarding the associated order $\leq$, every \textit{set} of ordinals $a$ has a \textbf{supremum} $\bigcup a = \bigcup_{\xi \in a} \xi$ and (if $a \ne \emptyset$) an \textbf{infimum}
+$\bigcap a = \bigcap_{\xi \in a} \xi$, which is the \textit{smallest element} of $a$. Such a smallest element exists actually for every (non-empty) \textit{class} $A$ (since if $\xi \in A$, we only need to find the infimum of the \textit{set} of ordinals $\le \xi$.)
+This allows us to prove properties about \textit{all} ordinals by \textbf{induction}.
+
+\begin{proposition}[Induction for ordinals, I]\label{prop-induction-ord-i}For every property $\varphi$,
+\begin{equation*}
+\forall \alpha \; [ \forall \xi < \alpha \; \varphi(\xi) \to \varphi(\alpha)] \to \forall \alpha \, \varphi(\alpha).
+\end{equation*}
+\end{proposition}We have repeatedly used induction already for ordinals $< \omega_1$, the first uncountable ordinal.
+
+To prove this principle simply observe that if $\forall \alpha \, \varphi(\alpha)$ failed there would have to be a \textit{smallest}  $\alpha$ with  $\neg \varphi(\alpha)$, contradicting the induction hypothesis.
+
+Since every ordinal is either 0, a successor, or a limit ordinal, we have the following variant of induction.
+
+\begin{proposition}[Induction for ordinals, II]\label{prop-induction-ord-ii}For every property $\varphi$, if
+
+\begin{itemize}
+\item \textbf{(i)} $\varphi(0)$,
+\item \textbf{(ii)} $\forall \alpha (\varphi(\alpha) \to \varphi(\alpha+1))$, and
+\item \textbf{(iii)} $(\forall \xi < \lambda \; \varphi(\xi)) \to \varphi(\lambda)\quad$ for all limit $\lambda$,
+\end{itemize}
+
+then $\quad \forall \alpha \;  \varphi(\alpha)$.
+
+\end{proposition}(i) and (ii) coincide with the usual induction scheme for natural numbers. To cover \textit{all} ordinals we need to add (iii).
+
+\subsubsection{Ordinal recursion}
+
+The induction principle can be used to define functions by \textbf{recursion}. For example, \textbf{addition} on the natural numbers is given by
+
+\begin{align*}
+    x+0 \quad & =  x\\
+    x+ (y+1) & =  (x + y)+1. 
+\end{align*}
+
+In the case of ordinals, we have to consider the limit case, too.
+
+\begin{theorem}[Recursion on ordinals]\label{thm-ordinal-recursion}If $G :\Ord \times \V \longrightarrow  \V$ is a function and $a$ is a set, then there exists a unique function $F: \Ord \longrightarrow \V$  such that for all $\alpha \in \Ord$,
+
+\begin{equation}
+F(\alpha) = G(\alpha, F\Rest{\alpha})
+\end{equation}
+
+\end{theorem}\begin{proof}The uniqueness of the function $F$ follows by induction.
+
+To show the existence of $F$, we define the following:
+
+\begin{itemize}
+\item Call $h$ \textit{tame} if
+\end{itemize}
+\begin{equation*}
+\exists \alpha \, (h: \alpha \to \V  \wedge \forall \xi \in \alpha \; h(\xi) = G(\xi, h \Rest{\alpha}))
+\end{equation*}
+
+\begin{itemize}
+\item Say $h$ is \textit{compatible} with $g$ if
+\end{itemize}
+\begin{equation*}
+\forall x \in \Op{Dom}(h) \cap \Op{Dom}(g) \; h(x) = g(x)
+\end{equation*}
+
+It follows by induction that any two tame functions are compatible.
+
+This lets us define the desired $F$ as
+
+\begin{equation}
+F := \bigcup \{h \colon h\, \text{ tame}\}
+\end{equation}
+
+Then $F$ is a function (otherwise there would be two incompatible tame functions), its domain is transitive, and satisfies the recursion condition (since it is the union of tame functions).
+
+It remains to show that $F$ is defined on all of $\Ord$.
+If $D = \Op{Dom}(F) \neq \Ord$, then we would have $D = \alpha$ for some ordinal $\alpha$. In particular $B$ is a set therefore $F = f$ is a set, for some tame $f$. This $f$ could be extended to a tame $h = f \cup \{(\alpha,G(\alpha,f \Rest{\alpha}))\}$, contradiction.
+
+\end{proof}Note that we defined $F$ \textbf{explicitly} as a \textit{union} of all partial solution to the recursion equation.
+
+As with induction, we have the following variant of the recursion principle.
+
+\begin{proposition}[Recursion on ordinals, variant]\label{prop-ordinal-recursion-ii}If $G, H: \Ord \times \V \longrightarrow  \V$ are functions and $a$ is a set, then there exists a unique function $F: \Ord \longrightarrow \V$  such that
+\begin{align*} 
+    F(0) \quad & =  a\\ 
+    F(\alpha+1) & =  G(\alpha,F(\alpha)) \\    
+    F(\lambda) \quad & =  H(\lambda, \{F(\xi) \colon \xi<\lambda \}) \quad \text{for } \Op{Lim}(\lambda).
+\end{align*}
+\end{proposition}We can establish a similar principle for a well-ordering $<$ on a class $A$. In case of a proper class, though, we have to require that for every $a \in A$,  the class of all \textbf{predecessors} of $a$
+\begin{equation*}
+S(a,<): = \{x \in A\colon x < a \},
+\end{equation*}
+is a set (if $A$ is a set, this follows automatically by \textit{Separation}). If this is the case, the recursion principle yields a function $F: A \to \V$ such that
+\begin{equation*}
+F(a) = G(a,F\Rest{S(a,<)}).
+\end{equation*}
+
+\subsubsection{Recursion for well-founded relations}
+
+More generally, we can define induction and recursion on \textbf{well-founded} relations. We already encountered those in a previous~chapter.
+
+\begin{definition}\label{def-well-founded}A relation $R$ on a class $A$ is \textbf{well-founded} if it satisfies the \textbf{minimality condition}
+\begin{equation*}
+(\Op{Min}_R) \qquad  \emptyset \neq b \subset A \to \exists x \in b \; \forall y \in b \, (  \neg y R x)
+\end{equation*}
+and the \textbf{set condition}
+\begin{equation*}
+\forall x \in A \; S(a,R):= \{x \colon x R a\} \text{ is a set}
+\end{equation*}
+\end{definition}If $A$ is a set, the minimality condition is again automatically satisfied by \textit{Separation}.
+
+The set condition allows for taking the \textbf{$R$-transitive closure} of a set $a \in A$: the smallest superset $\Op{TC}_R(a)$ of $a$ that is \textit{$R$-transitive}:
+
+\begin{equation}
+\forall x \in \Op{TC}_R(a)\; S(x,R) \subseteq  \Op{TC}_R(a)
+\end{equation}
+
+This is done by recursion over the natural numbers. The following is an important example.
+
+\begin{example}[Transitive closure of a set]\label{exa-trans-closure}By the axiom of \textit{Foundation}, $\in$ is a well-founded relation on $\V$. (The set condition is satisfied since $S(a,\in)=a$.)
+
+We can form the \textbf{transitive closure}, the smallest transitive superset, of a set $a$ as
+
+\begin{align*}
+    \Op{TC}(a):&= a \cup \bigcup a \cup \bigcup \bigcup a \ldots 
+ = \bigcup_{n< \omega} U^n(a), \quad \text{ where} \\ 
+ &U^0(a) = a, U^{n+1}(a) = \bigcup U^n(a).
+\end{align*}
+
+This is an example of definition by recursion along $\Nat$.
+
+\end{example}We can use the existence of $\Op{TC}_R$ as a set to strengthen the minimality condition to \textit{subclasses}, similar to the case of the well-ordering of $\Ord$:
+
+\begin{lemma}\label{lem-min-wf}For every non-empty class $B \subseteq A$, there exists $x \in B$ such that
+
+\begin{equation}
+\forall y \in B \;  \neg y R x
+\end{equation}
+
+\end{lemma}To prove this lemma, simply pick any $x \in B$, take its transitive $R$-closure, and intersect it with $B$:
+
+\begin{equation}
+C = \Op{TC}_R(x) \cap B.
+\end{equation}
+
+$C$ is a set, and by the minimality condition $(\Op{Min}_R)$ has an $R$-minimal element $a$. $a$ has to be minimal for $B$, too, since otherwise there exists $b \in B$ with $b R a$. Since $a \in \Op{TC}_R(x)$, $b \in \Op{TC}_R(x)$, and therefore $b \in C$, contradicting the minimality of $a$.
+
+The lemma implies a corresponding \textbf{induction principle for well-founded relations}:
+
+\begin{equation*}
+(\Op{Ind}_R) \qquad  \forall x \in A [ \forall y ( yRx \, \to \varphi(y)) \to \varphi(x)] \to \forall x \in A \, \varphi(x)).
+\end{equation*}
+
+This in turn yields the following.
+
+\begin{theorem}[Recursion principle for well-founded relations]\label{thm-wf-recursion}Let $R$ be a well-founded relation on a class $A$. The for every function $G : A \times \V \longrightarrow  \V$ exists a unique function $F: A \to \V$ such that
+
+\begin{equation*}
+F(a) = G(a,F \Rest{\{x \mid xRa\}})  \text{ for all } a \in A.
+\end{equation*}
+\end{theorem}\subsubsection{The Von-Neumann hierarchy}
+
+Is there a way to systematically build the $\V$, the universe of all sets, ``from below''?
+
+We start with the empty set:
+
+\begin{equation}
+V_0 = \emptyset
+\end{equation}
+
+Given $V_\alpha$, the \textit{Power Set} axiom requires the set of all subsets to exist, so we set
+
+\begin{equation}
+V_{\alpha+1} = \mathcal{P}(V_{\alpha}).
+\end{equation}
+
+Finally, at limit stages we simply collect all sets we have obtained so far:
+
+\begin{equation}
+V_ \lambda =  \bigcup_{\xi < \lambda} V_\xi \quad \text{for limit } \lambda
+\end{equation}
+
+What we really are doing here is to construct a function $V: \Ord \to \V$ by ordinal recursion. Think $V_\alpha = V(\alpha)$.
+
+Remarkably, if we assume the axiom of \textit{Foundation}, we reach \textit{all} sets this way.
+
+\begin{theorem}\label{thm-von-neumann}For every set $x$ there exists an ordinal $\alpha$ with $x \in V_\alpha$, that is,
+
+\begin{equation}
+\V = \bigcup_{\alpha \in \Ord} V_\alpha
+\end{equation}
+
+\end{theorem}\begin{proof}Let $C$ be the class of all sets not in any $V_\alpha$. Since $\in$ is well-founded, if $C$ is non-empty, it has a $\in$-minimal element $x$. This implies that for all $z \in x$, $z \in \bigcup_{\alpha \in \Ord} V_\alpha$. Define a function $h$ by mapping each $z\in x$ to the \textit{least} $\alpha$ so that $z \in V_\alpha$. Since $x$ is a set, $h[x]$ is a set of ordinals, by \textit{Replacement}. This set or ordinals has a supremum, say $\gamma$. Then $x \subseteq V_\gamma$ and therefore,
+
+\begin{equation}
+x \in \mathcal{P}(V_\gamma) = V_{\gamma+1}.
+\end{equation}
+
+Hence $C$ must be empty, and the theorem follows.
+
+\end{proof}We can now split the question of ``how large'' $\V$ is into two sub-questions:
+
+\begin{itemize}
+\item How ``\textbf{long}'' is $\V$, that is, how many ordinals are there? Axioms for \textbf{large cardinals} attempt to extend this ``length'' as far as possible.
+\item How ``\textbf{wide}'' is $\V$, that is, how large is the power set of a set? A rather ``slim'' universe is given by the \textbf{constructible sets}, which we will encounter soon.
+\end{itemize}

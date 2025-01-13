@@ -1,0 +1,881 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Measure and Baire Category &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'measure';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Axiom of Choice" href="choice.html" />
+    <link rel="prev" title="Subspaces of Polish Spaces" href="subsets_Polish.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fmeasure.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/measure.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Measure and Baire Category</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-ideals">Filters and Ideals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures">Measures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lebesgue-measure">Lebesgue measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nullsets">Nullsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category">Baire category</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-baire-property">The Baire property</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="measure-and-baire-category">
+<h1>Measure and Baire Category<a class="headerlink" href="#measure-and-baire-category" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\Cl}[1]{\overline{#1}}\]</div>
+<p>At the end of the previous section, we saw that Borel sets are well-behaved in the sense that they possess the <strong>perfect subset property</strong>. Two other important regularity properties are <strong>measurability</strong> and the <strong>Baire property</strong>, which we will introduce in this section.</p>
+<section id="filters-and-ideals">
+<h2>Filters and Ideals<a class="headerlink" href="#filters-and-ideals" title="Permalink to this heading">#</a></h2>
+<p>The most common measure of size is, of course, cardinality. In the presence of uncountable sets (like in a perfect Polish space), the usual division is between countable and uncountable sets. The smallness of the countable sets is reflected, in particular, by two properties: A subset of a countable set is countable, and countable unions of countable set are countable. These characteristics are shared with other notions of smallness, two of which we will encounter in this lecture.</p>
+<div class="proof definition admonition" id="def-ideal">
+<p class="admonition-title"><span class="caption-number">Definition 9 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is an <strong>ideal</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(\Op{I1}) &amp; \qquad A \in \mathcal{I} \text{ and } B \subseteq A \text{ implies } B \in \mathcal{I},\\
+(\Op{I2}) &amp; \qquad A, B \in \mathcal{I}  \text{ implies } A \cup B \in\mathcal{I}.
+\end{align*}\]</div>
+</section>
+</div><p>If we have closure even under <em>countable unions</em>, we speak of a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-ideal</strong>. For example, while the countable sets in <span class="math notranslate nohighlight">\(\Real\)</span> form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, the finite subsets only form an ideal.</p>
+<p>Another example of ideals are the so-called <strong>principal ideals</strong>. These are ideals of the form</p>
+<div class="math notranslate nohighlight">
+\[
+	\langle Z \rangle = \{ A \colon A \subseteq Z\}
+\]</div>
+<p>for a fixed <span class="math notranslate nohighlight">\(Z \subseteq X\)</span>.</p>
+<p>The <strong>dual notion</strong> to an ideal is that of a <strong>filter</strong>. It reflects that the sets in a filter share some <strong>largeness property</strong>.</p>
+<div class="proof definition admonition" id="def-filter">
+<p class="admonition-title"><span class="caption-number">Definition 10 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq \Pow(X)\)</span> of subsets of a given set <span class="math notranslate nohighlight">\(X\)</span> is a <strong>filter</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(\Op{F1}) &amp; \qquad A \in \mathcal{F} \text{ and } B \supseteq A \text{ implies } B \in \mathcal{F},\\
+(\Op{F2}) &amp; \qquad A, B \in \mathcal{F}  \text{ implies } A \cap B \in\mathcal{F}.
+\end{align*}\]</div>
+</section>
+</div><p>Again, closure under countable intersections yields <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-filters</strong>.</p>
+<p>If <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) ideal, then <span class="math notranslate nohighlight">\(\mathcal{F} = \{\Co{A} \colon A \in \mathcal{I}\}\)</span> is a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) filter. Hence the co-finite subsets of <span class="math notranslate nohighlight">\(\Real\)</span> form a filter, and the co-countable subsets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-filter.</p>
+<p>Note that the complement of a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) ideal (in <span class="math notranslate nohighlight">\(\Pow(X)\)</span>) is not necessarily a (<span class="math notranslate nohighlight">\(\sigma\)</span>-) filter. This is true, however, for a special class of ideals/filters.</p>
+<div class="proof definition admonition" id="def-ultrafilter">
+<p class="admonition-title"><span class="caption-number">Definition 11 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A non-empty family <span class="math notranslate nohighlight">\(\mathcal{I} \subseteq \Pow(X)\)</span> is a <strong>prime ideal</strong> if it is an ideal for which</p>
+<blockquote>
+<div><p>for every <span class="math notranslate nohighlight">\(A \in X\)</span>, either <span class="math notranslate nohighlight">\(A\in \mathcal{I}\)</span> or <span class="math notranslate nohighlight">\(\Co{A} \in \mathcal{I}\)</span> (but not both).</p>
+</div></blockquote>
+<p>An <strong>ultrafilter</strong> is a filter whose complement in <span class="math notranslate nohighlight">\(\Pow(X)\)</span> is a prime ideal.</p>
+</section>
+</div><p>In light of the small-/largeness motivation, prime ideals and ultrafilters provide a <em>complete</em> separation of <span class="math notranslate nohighlight">\(X\)</span>: Each set is either small or large.</p>
+</section>
+<section id="measures">
+<h2>Measures<a class="headerlink" href="#measures" title="Permalink to this heading">#</a></h2>
+<p>Coarsely speaking, a measure assigns a size to a set in a way that reflects our basic geometric intuition about sizes: The size of the union of disjoint objects is the sum of their sizes. The question whether this can be done in a consistent way for <em>all</em> subsets of a given space is of fundamental importance and has motivated many questions in set theory.</p>
+<p>The formally, a measure <span class="math notranslate nohighlight">\(\mu\)</span> on <span class="math notranslate nohighlight">\(X\)</span> is a <span class="math notranslate nohighlight">\([0,\infty]\)</span>-valued function defined on subsets of <span class="math notranslate nohighlight">\(X\)</span> that satisfies</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\Op{M1}) &amp; \qquad \mu(\emptyset) = 0 \\
+    (\Op{M2}) &amp; \qquad \mu(\bigcup_n A_n) = \sum_n \mu(A_n), \\
+              &amp; \qquad \qquad \text{whenever the $A_n$ are pairwise disjoint.}
+\end{align*}\]</div>
+<p>The question is, of course, which subsets of <span class="math notranslate nohighlight">\(X\)</span> can be assigned a measure. The condition (M2) suggests that this family is closed under countable unions. Furthermore, if <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, then the equation <span class="math notranslate nohighlight">\(\mu(X) = \mu(A) + \mu(\Co{A})\)</span> suggests that <span class="math notranslate nohighlight">\(\Co{A}\)</span> should be measurable, too. In other words, the sets who are assigned a measure form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
+<div class="proof definition admonition" id="def-measure">
+<p class="admonition-title"><span class="caption-number">Definition 12 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>measurable space</strong> is a pair <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span>, where <span class="math notranslate nohighlight">\(X\)</span> is a set and <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra on <span class="math notranslate nohighlight">\(X\)</span>. A <strong>measure</strong> on a measurable space <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span> is a function <span class="math notranslate nohighlight">\(\mu: \mathcal{S} \to [0,\infty]\)</span> that satisfies (M1) and (M2) for any pairwise disjoint family <span class="math notranslate nohighlight">\(\{A_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>. If <span class="math notranslate nohighlight">\(\mu\)</span> is a measure on <span class="math notranslate nohighlight">\((X, \mathcal{S})\)</span>, then the triple <span class="math notranslate nohighlight">\((X,\mathcal{S}, \mu)\)</span> is called a <strong>measure space</strong>.</p>
+</section>
+</div><p>If we want the measure <span class="math notranslate nohighlight">\(\mu\)</span> to reflect also some other basic intuition about geometric sizes, this often puts restrictions on the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets. For example, in <span class="math notranslate nohighlight">\(\Real\)</span> the measure of an interval should be its <em>length</em>. We will see later that, if we assume the Axiom of Choice, it is impossible to assign every subset of <span class="math notranslate nohighlight">\(\Real\)</span> a measure, so that (M1) and (M2) are satisfied, and the measure of an interval is its length.</p>
+<p>To have some control over what the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets should be, one can construct a measure more carefully, start with a measure on basic objects such as intervals or balls, and then extend it to larger classes of sets by approximation.</p>
+<p>An essential component in this extension process is the concept of an <strong>outer measure</strong>.</p>
+<div class="proof definition admonition" id="def-outer-measure">
+<p class="admonition-title"><span class="caption-number">Definition 13 </span></p>
+<section class="definition-content" id="proof-content">
+<p>An <strong>outer measure</strong> on a set <span class="math notranslate nohighlight">\(X\)</span> is a function <span class="math notranslate nohighlight">\(\mu^*: \Pow(X) \to [0,\infty]\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\Op{O1}) &amp; \qquad  \mu^*(\emptyset) = 0,\\
+    (\Op{O2}) &amp; \qquad  A \subseteq B \text{ implies } \mu^*(A) \leq \mu^*(B), \\
+    (\Op{O3}) &amp; \qquad  \mu^*(\bigcup_n A_n) \leq \sum_n \mu^*(A_n), \\
+         &amp; \qquad  \qquad \text{for any countable family  $\{A_n\}$ in $X$}.
+\end{align*}\]</div>
+</section>
+</div><p>An outer measure hence weakens the conditions of <strong>additivity</strong> (M2) to <strong>subadditivity</strong> (O3). This makes it possible to have non-trivial outer measures that are defined on <em>all</em> subsets of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>The usefulness of outer measures lies in the fact that they can always be restricted to subset of <span class="math notranslate nohighlight">\(\Pow(X)\)</span> on which they behave as measures.</p>
+<div class="proof definition admonition" id="def-measurable">
+<p class="admonition-title"><span class="caption-number">Definition 14 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\mu^*\)</span> be an outer measure on <span class="math notranslate nohighlight">\(X\)</span>. A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong><span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable</strong> if</p>
+<div class="math notranslate nohighlight">
+\[
+\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \setminus A) \quad \text{ for all $B \subseteq X$}.
+\]</div>
+</section>
+</div><p>This definition is justified rather by its consequences than by its intuitive appeal. Regarding the latter, suffice it to say here that outer measures may be rather far from being even <em>finitely</em> additive. The definition singles out those sets that split all other sets correctly, with regard to measure.</p>
+<div class="proof proposition admonition" id="prop-measurable-sets">
+<p class="admonition-title"><span class="caption-number">Proposition 11 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The class of <span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable sets forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and the restriction of <span class="math notranslate nohighlight">\(\mu^*\)</span> to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is a measure.</p>
+</section>
+</div><p>A proof can be found in any standard book on measure theory, for instance <span id="id1">[<a class="reference internal" href="bibliography.html#id7" title="Paul R. Halmos. Measure Theory. Van Nostrand, 1950.">Halmos, 1950</a>]</span> or <span id="id2">[<a class="reference internal" href="bibliography.html#id14" title="Halsey Lawrence Royden and Patrick Fitzpatrick. Real analysis. Volume 32. Macmillan New York, 1988.">Royden and Fitzpatrick, 1988</a>]</span>.</p>
+<p>The size of the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets depends, of course, on the outer measure <span class="math notranslate nohighlight">\(\mu^*\)</span>. If <span class="math notranslate nohighlight">\(\mu^*\)</span> is behaving rather pathetically, we cannot expect <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> to contain many sets.</p>
+</section>
+<section id="lebesgue-measure">
+<h2>Lebesgue measure<a class="headerlink" href="#lebesgue-measure" title="Permalink to this heading">#</a></h2>
+<p>A standard way to obtain “nice” outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of <strong>Lebesgue measure</strong> on <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof definition admonition" id="def-Lebesgue">
+<p class="admonition-title"><span class="caption-number">Definition 15 </span></p>
+<section class="definition-content" id="proof-content">
+<p>The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(\lambda^*\)</span> of a set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^*(A) = \inf \left \{ \sum_n |b_n - a_n| \colon A \subseteq \bigcup_n (a_n,b_n) \right \}. 
+\]</div>
+</section>
+</div><div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(\lambda^*\)</span> indeed defines an outer measure.</p>
+</div>
+<p>We call the <span class="math notranslate nohighlight">\(\lambda^*\)</span>-measurable sets <strong>Lebesgue measurable</strong>.</p>
+<p>The following two facts are also standard <span id="id3">[<a class="reference internal" href="bibliography.html#id14" title="Halsey Lawrence Royden and Patrick Fitzpatrick. Real analysis. Volume 32. Macmillan New York, 1988.">Royden and Fitzpatrick, 1988</a>]</span>.</p>
+<div class="proof proposition admonition" id="prop-outer-meas-interval">
+<p class="admonition-title"><span class="caption-number">Proposition 12 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(I \subseteq \Real\)</span> is an interval, then <span class="math notranslate nohighlight">\(\lambda^*(I)\)</span> is equal to the length of <span class="math notranslate nohighlight">\(I\)</span> (possibly infinite).</p>
+</section>
+</div><div class="proof proposition admonition" id="prop-interval-measurable">
+<p class="admonition-title"><span class="caption-number">Proposition 13 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Any interval <span class="math notranslate nohighlight">\(I \subseteq \Real\)</span> is Lebesgue measurable.</p>
+</section>
+</div><div class="proof corollary admonition" id="cor-Borel-measurable">
+<p class="admonition-title"><span class="caption-number">Corollary 4 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Any Borel set in <span class="math notranslate nohighlight">\(\Real\)</span> is Lebesgue measurable</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. This follows from <a class="reference internal" href="#prop-measurable-sets">Proposition 11</a>, <a class="reference internal" href="#prop-interval-measurable">Proposition 13</a> and the fact that any open set in <span class="math notranslate nohighlight">\(\Real\)</span> is a countable union of intervals.</p>
+</div>
+<p>The construction of Lebesgue measure can be generalized and extended to other metric spaces, for example through the concept of <strong>Hausdorff measures</strong>.</p>
+<p>All these measures are <strong>Borel measures</strong>, in the sense that the Borel sets are measurable. However, there are measurable sets that are not Borel sets. The reason for this lies in the presence of <strong>nullsets</strong>, which are measure theoretically “easy” (since they do not contribute any measure at all), but can be topologically quite complicated.</p>
+</section>
+<section id="nullsets">
+<h2>Nullsets<a class="headerlink" href="#nullsets" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mu^*\)</span> be an outer measure on <span class="math notranslate nohighlight">\(X\)</span>. If <span class="math notranslate nohighlight">\(\mu^*(A) = 0\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> is called a <strong><span class="math notranslate nohighlight">\(\mu^*\)</span>-nullset</strong>.</p>
+<div class="proof proposition admonition" id="prop-nullsets-measurable">
+<p class="admonition-title"><span class="caption-number">Proposition 14 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Any <span class="math notranslate nohighlight">\(\mu^*\)</span>-nullset is <span class="math notranslate nohighlight">\(\mu^*\)</span>-measurable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(\mu^*(A)=0\)</span>. Let <span class="math notranslate nohighlight">\(B \subseteq X\)</span>. Then, since <span class="math notranslate nohighlight">\(\mu^*\)</span> is subadditive and monotone,</p>
+<div class="math notranslate nohighlight">
+\[
+    \mu^*(B) \leq \mu^*(B \cap A) + \mu^*(B \cap \Co{A}) = \mu^*(B \cap \Co{A}) \leq \mu^*(B),
+\]</div>
+<p>and therefore <span class="math notranslate nohighlight">\(\mu^*(B) = \mu^*(B \cap A) + \mu^*(B \cap \Co{A})\)</span>.</p>
+</div>
+<p>The next result confirms the intuition that nullsets are a notion of smallness.</p>
+<div class="proof proposition admonition" id="prop-null-sigmaideal">
+<p class="admonition-title"><span class="caption-number">Proposition 15 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\mu^*\)</span>-nullsets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (I1) follows directly from monotonicity (O2). Countable additivity follows immediately from subadditivity (O3).</p>
+</div>
+<p>In case of Lebesgue measure, we can use Proposition <a class="reference internal" href="#prop-nullsets-measurable">Proposition 14</a> to further describe the Lebesgue measurable subsets of <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof proposition admonition" id="measurable-diff-Borel">
+<p class="admonition-title"><span class="caption-number">Proposition 16 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq \Real\)</span> is Lebesgue measurable if and only if it is the difference of a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set and a Lebesgue nullset.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first assume <span class="math notranslate nohighlight">\(\lambda^*(A) &lt; \infty\)</span>.  Let <span class="math notranslate nohighlight">\(G_n \subseteq \Real\)</span> be an open set such that <span class="math notranslate nohighlight">\(G_n \supseteq A\)</span> and  <span class="math notranslate nohighlight">\(\lambda^*(G_n) \leq \lambda^*(A) + 1/n\)</span>. The existence of such a <span class="math notranslate nohighlight">\(G_n\)</span> follows from the definition of <span class="math notranslate nohighlight">\(\lambda^*\)</span>, and the fact that every open set is the disjoint union of open intervals.  Then <span class="math notranslate nohighlight">\(G = \bigcap_n G_n\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>, <span class="math notranslate nohighlight">\(A \subseteq G\)</span>, and for all <span class="math notranslate nohighlight">\(n\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    \lambda^*(A) \leq \lambda^*(G) \leq \lambda^*(A) + 1/n  
+\]</div>
+<p>hence <span class="math notranslate nohighlight">\(\lambda^*(A) = \lambda^*(G)\)</span>. Hence for <span class="math notranslate nohighlight">\(N = G \setminus A\)</span>, since <span class="math notranslate nohighlight">\(A\)</span> is measurable,</p>
+<div class="math notranslate nohighlight">
+\[
+    \lambda^*(N) = \lambda^*(G) - \lambda^*(A)  = 0 \quad \text{ and } \quad A = G \setminus N.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\lambda^*(A) = \infty\)</span>, we set <span class="math notranslate nohighlight">\(A_m = A \cap [m,m+1)\)</span> for <span class="math notranslate nohighlight">\(m \in \Integer\)</span>. By monotonicity, each <span class="math notranslate nohighlight">\(\lambda^*(A_m)\)</span> is finite. For each <span class="math notranslate nohighlight">\(m \in \Integer\)</span>, <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, pick <span class="math notranslate nohighlight">\(G^{(m)}_n\)</span> open such that <span class="math notranslate nohighlight">\(\lambda^*(G^{(m)}_n) \leq \lambda^*(A) + 1/2^{n+2|m|+1}\)</span>. Then, with</p>
+<div class="math notranslate nohighlight">
+\[
+    \bigcap_{n \in \Nat} \bigcup_{m \in \Integer} G^{(m)}_n,
+\]</div>
+<p><span class="math notranslate nohighlight">\(N = G\setminus A\)</span> is the desired set.</p>
+<p>For the other direction, note that the measurable sets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra which contains both the Borel sets and the nullsets. Hence any set that is the difference of a Borel set and a nullset is measurable, too.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that each Lebesgue measurable set can be written as a disjoint union of a <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set and a nullset.</p>
+</div>
+<p>Hence if a set is measurable, it differs from a (rather simple) Borel set only by a nullset.</p>
+<p>We also obtain the following characterization of the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of Lebesgue measurable sets.</p>
+<div class="proof proposition admonition" id="prop-measurable-sigma-algebra">
+<p class="admonition-title"><span class="caption-number">Proposition 17 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of Lebesgue measurable sets in <span class="math notranslate nohighlight">\(\Real\)</span> is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing the open sets and the nullsets.</p>
+</section>
+</div><p>As mentioned before, there are Lebesgue measurable sets that are not Borel sets. We will eventually encounter such sets. The question which sets exactly are Lebesgue measurable was one of the major questions that drove the development of descriptive set theory, just like the question which uncountable sets have perfect subsets.</p>
+</section>
+<section id="baire-category">
+<h2>Baire category<a class="headerlink" href="#baire-category" title="Permalink to this heading">#</a></h2>
+<p>The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space.</p>
+<div class="proof definition admonition" id="def-nowhere-dense">
+<p class="admonition-title"><span class="caption-number">Definition 16 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>nowhere dense</strong> if its complement contains an open, dense set.</p>
+</section>
+</div><p>Being nowhere dense means for any open set <span class="math notranslate nohighlight">\(U \subseteq X\)</span> we can find a non-empty open subset <span class="math notranslate nohighlight">\(V \subseteq U\)</span> such that <span class="math notranslate nohighlight">\(V \subseteq \Co{A}\)</span>. In other words, a nowhere dense set is “full of holes”.</p>
+<p>Examples of nowhere dense sets are all finite, or more generally, all discrete subsets of a perfect Polish space, i.e. sets all whose points are isolated. There are non-discrete nowhere dense sets, such as <span class="math notranslate nohighlight">\(\{0\} \cup \{1/n \colon n \in \Nat \}\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span>, even uncountable ones, such as the middle-third Cantor set.</p>
+<p>The nowhere dense sets form an ideal, but not a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal: Every singleton set is nowhere dense, but there are countable sets that are not, such as the rationals <span class="math notranslate nohighlight">\(\Rat\)</span> in <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<p>To obtain a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, we close the nowhere dense sets under countable unions.</p>
+<div class="proof definition admonition" id="def-meager">
+<p class="admonition-title"><span class="caption-number">Definition 17 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is <strong>meager</strong> or of <strong>first category</strong> if it is the countable union of nowhere dense sets. Non-meager sets are also called sets of <strong>second category</strong>. Complements of meager sets are called <strong>comeager</strong> or <strong>residual</strong>.</p>
+</section>
+</div><p>The meager subsets of <span class="math notranslate nohighlight">\(X\)</span> form a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal. Examples of meager sets are all countable sets, but there are uncountable ones (Cantor set).</p>
+<p>The concept of Baire category is often used in existence proofs: To show that a set with a certain property exists, one shows that the set of points <em>not having the property</em> is meager. A famous example is Banach’s proof of the existence of continuous, nowhere differentiable functions. For this to work, of course, we have to ensure that the complements of meager sets are non-empty.</p>
+<div class="proof theorem admonition" id="thm-Baire-category">
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Baire Category Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>For any Polish space <span class="math notranslate nohighlight">\(X\)</span>, the following statements hold.</p>
+<ul class="simple">
+<li><p><strong>(a)</strong> For every meager set <span class="math notranslate nohighlight">\(M \subseteq X\)</span>, the complement <span class="math notranslate nohighlight">\(\Co{M}\)</span> is dense in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p><strong>(b)</strong> No non-empty open set is meager.</p></li>
+<li><p><strong>(c)</strong> If <span class="math notranslate nohighlight">\(\{D_n\}\)</span> is a countable family of open, dense sets, then  <span class="math notranslate nohighlight">\(\bigcap_{n} D_n\)</span> is dense.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (a) Assume  <span class="math notranslate nohighlight">\(M = \bigcup_n N_n\)</span>, where each <span class="math notranslate nohighlight">\(N_n\)</span> is nowhere dense. Then <span class="math notranslate nohighlight">\(\Co{M} = \bigcap D_n\)</span>, where each <span class="math notranslate nohighlight">\(D_n\)</span> contains a dense, open set. Let <span class="math notranslate nohighlight">\(U \subseteq X\)</span> be open.</p>
+<p>We construct a point <span class="math notranslate nohighlight">\(x \in U \cap \Co{M}\)</span> by induction. We can find an open ball <span class="math notranslate nohighlight">\(B_1\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1\)</span> such that <span class="math notranslate nohighlight">\(\Cl{B_1} \subseteq U \cap D_1\)</span>, since <span class="math notranslate nohighlight">\(D_1\)</span> contains a dense open set. In the next step, we use the same property of <span class="math notranslate nohighlight">\(D_2\)</span> to find an open ball <span class="math notranslate nohighlight">\(B_2\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1/2\)</span> whose closure is completely contained in <span class="math notranslate nohighlight">\(B_1 \cap D_2\)</span>.
+Continuing inductively, we obtain a  nested sequence of balls <span class="math notranslate nohighlight">\(B_n\)</span> of radius <span class="math notranslate nohighlight">\(&lt;1/n\)</span> such that <span class="math notranslate nohighlight">\(\Cl{B_n} \subseteq B_{n-1} \cap D_n\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x_n\)</span> be the center of <span class="math notranslate nohighlight">\(B_n\)</span>. Then <span class="math notranslate nohighlight">\((x_n)\)</span> is a Cauchy sequence, so <span class="math notranslate nohighlight">\(x = \lim_n x_n\)</span> exists in <span class="math notranslate nohighlight">\(X\)</span>. Since for any <span class="math notranslate nohighlight">\(n\)</span>, all but finitely many <span class="math notranslate nohighlight">\(x_i\)</span> are in <span class="math notranslate nohighlight">\(B_n\)</span>, we have <span class="math notranslate nohighlight">\(x \in \Cl{B_n}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>. Therefore, by construction</p>
+<div class="math notranslate nohighlight">
+\[
+    x \in \bigcap_n \Cl{B_n} = \bigcap_n B_n \subseteq U \cap \bigcap_n D_n \subseteq U.
+\]</div>
+<p>(b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent.</p>
+</div>
+<p>Any topological space that satisfies the three equivalent conditions (a)-(c) is called a <strong>Baire space</strong> (not to be confused with <em>the</em> Baire space <span class="math notranslate nohighlight">\(\Baire\)</span> – the latter is, of course, a Baire space, too).</p>
+<p>As an application, we determine the exact location of <span class="math notranslate nohighlight">\(\Rat\)</span> in the Borel hierarchy of <span class="math notranslate nohighlight">\(\Real\)</span>.</p>
+<div class="proof corollary admonition" id="cor-rationals-not-pi2">
+<p class="admonition-title"><span class="caption-number">Corollary 5 </span></p>
+<section class="corollary-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\Rat\)</span> is not a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set, hence a true <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Note that <span class="math notranslate nohighlight">\(\Real\)</span> cannot be meager, by (b). Since <span class="math notranslate nohighlight">\(\Rat\)</span> is meager, <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> cannot be meager either.
+If <span class="math notranslate nohighlight">\(\Rat\)</span> were a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set, it would be the intersection of open, dense sets and hence its complement <span class="math notranslate nohighlight">\(\Real \setminus \Rat\)</span> would be meager.</p>
+</div>
+</section>
+<section id="the-baire-property">
+<h2>The Baire property<a class="headerlink" href="#the-baire-property" title="Permalink to this heading">#</a></h2>
+<p>We have seen that the measurable sets are precisely the ones that differ from a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> set by a nullset.
+We can introduce a similar concept for Baire category.</p>
+<div class="proof definition admonition" id="def-BP">
+<p class="admonition-title"><span class="caption-number">Definition 18 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(B \subseteq X\)</span> has the <strong>Baire property</strong> if there exists an open set <span class="math notranslate nohighlight">\(G\)</span> and a meager set <span class="math notranslate nohighlight">\(M\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    B \bigtriangleup G = M,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> denotes the <em>symmetric difference</em> between two sets: <span class="math notranslate nohighlight">\(A \bigtriangleup B = (A\setminus B) \cup (B \setminus A)\)</span>.</p>
+</section>
+</div><div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(\bigtriangleup\)</span> is commutative, associative, and satisfies the distributive law</p>
+<div class="math notranslate nohighlight">
+\[
+A \cap (B \bigtriangleup C) = (A \cap B) \bigtriangleup (A \cap C).
+\]</div>
+</div>
+<p>In the above definition, we can replace open sets by closed sets.</p>
+<div class="proof lemma admonition" id="lem-BP-closed">
+<p class="admonition-title"><span class="caption-number">Lemma 7 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(B\)</span> has the Baire property if and only if it can be represented in the form <span class="math notranslate nohighlight">\(B = F \bigtriangleup M\)</span>,  where <span class="math notranslate nohighlight">\(F\)</span> is closed and <span class="math notranslate nohighlight">\(M\)</span> is meager.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(B = G \bigtriangleup M\)</span>, <span class="math notranslate nohighlight">\(G\)</span> open and <span class="math notranslate nohighlight">\(M\)</span> meager.</p>
+<p>Then <span class="math notranslate nohighlight">\(N = \Cl{G} \setminus G\)</span> is nowhere dense and closed. Furthermore, <span class="math notranslate nohighlight">\(Q = M \bigtriangleup N\)</span> is meager (it is the union of two meager sets). We easily verify that <span class="math notranslate nohighlight">\(G = \Cl{G} \bigtriangleup N\)</span>, and therefore</p>
+<div class="math notranslate nohighlight">
+\[
+B = G \bigtriangleup M = (\Cl{G} \bigtriangleup N) \bigtriangleup M = \Cl{G} \bigtriangleup (N \bigtriangleup M) = \Cl{G} \bigtriangleup Q,
+\]</div>
+<p>as desired.</p>
+<p>The converse direction is similar, using the interior instead of the closure.</p>
+</div>
+<div class="proof proposition admonition" id="prop-BP-sigma-algebra">
+<p class="admonition-title"><span class="caption-number">Proposition 18 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The sets having the Baire property form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. To show closure under complement, note that <span class="math notranslate nohighlight">\(\Co{(A \bigtriangleup B)} = \Co{A} \bigtriangleup B\)</span>. Therefore,
+if <span class="math notranslate nohighlight">\(B = G \bigtriangleup M\)</span> with <span class="math notranslate nohighlight">\(G\)</span> open and <span class="math notranslate nohighlight">\(M\)</span> meager, we have <span class="math notranslate nohighlight">\(\Co{B} = \Co{G} \bigtriangleup M\)</span>, and we can use <a class="reference internal" href="#lem-BP-closed">Lemma 7</a>.</p>
+<p>Now assume <span class="math notranslate nohighlight">\(B = \bigcup B_i\)</span>, and for each <span class="math notranslate nohighlight">\(i\)</span> there exist open <span class="math notranslate nohighlight">\(G_i\)</span> and meager <span class="math notranslate nohighlight">\(M_i\)</span> such that <span class="math notranslate nohighlight">\(B_i = G_i \bigtriangleup M_i\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(G = \bigcup G_i\)</span> and <span class="math notranslate nohighlight">\(M = \bigcup M_i\)</span>. Then <span class="math notranslate nohighlight">\(G\)</span> is open and <span class="math notranslate nohighlight">\(M\)</span> is meager (since the meager sets for a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal).</p>
+<p>We easily check that</p>
+<div class="math notranslate nohighlight">
+\[
+G \setminus M  \subseteq B \subseteq G \cup M.
+\]</div>
+<p>This implies <span class="math notranslate nohighlight">\(B \bigtriangleup G \subseteq M\)</span> and hence <span class="math notranslate nohighlight">\(B \bigtriangleup G\)</span> is meager.</p>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[
+B = G \bigtriangleup (B \bigtriangleup G),
+\]</div>
+<p>we conclude that <span class="math notranslate nohighlight">\(B\)</span> has the Baire property.</p>
+</div>
+<div class="proof corollary admonition" id="cor-BP-algebra-small">
+<p class="admonition-title"><span class="caption-number">Corollary 6 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>The <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of sets having the Baire property is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing all open and all meager sets.</p>
+</section>
+</div><div class="tip admonition" id="exercise-bp-gdelta-plus">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(B\)</span> has the Baire property if and only if it can be represented as a <span class="math notranslate nohighlight">\(G_\delta\)</span> set plus a meager set.</p>
+</div>
+<p>As in the case of measure, there exist non-Borel sets with the Baire property, and using the Axiom of Choice one can show that there exists set that do not have the Baire property.</p>
+<p>We conclude this lecture with a note on the relationship between measure and category. From the results so far it seems that they behave quite similarly. This might lead to the conjecture that maybe they more or less coincide. This is not so, in fact, they are quite orthogonal to each other, as the next result shows.</p>
+<div class="proof proposition admonition" id="proposition-23">
+<p class="admonition-title"><span class="caption-number">Proposition 19 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The real numbers can be partitioned into two subsets, one a Lebesgue nullset and the other one meager.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\((G_n)\)</span>  be a sequence of open sets witnessing that <span class="math notranslate nohighlight">\(\Rat\)</span> is a nullset, i.e. each <span class="math notranslate nohighlight">\(G_n\)</span> is a union of disjoint open intervals that covers <span class="math notranslate nohighlight">\(\Rat\)</span> and whose total length does not exceed <span class="math notranslate nohighlight">\(2^{-n}\)</span>. Then <span class="math notranslate nohighlight">\(G = \bigcap_n G_n\)</span> is a nullset, but at the same time it is an intersection of open dense sets, thus comeager, hence its complement is meager.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="subsets_Polish.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Subspaces of Polish Spaces</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="choice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Axiom of Choice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-ideals">Filters and Ideals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures">Measures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lebesgue-measure">Lebesgue measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nullsets">Nullsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category">Baire category</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-baire-property">The Baire property</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

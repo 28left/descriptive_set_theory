@@ -1,0 +1,942 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Large Cardinals &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'large_cardinals';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Constructible Universe" href="constructible.html" />
+    <link rel="prev" title="Models of Set Theory" href="models.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Flarge_cardinals.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/large_cardinals.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Large Cardinals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inaccessible-cardinals">Inaccessible cardinals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurability">Measurability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measurable-cardinals">Measurable cardinals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partition-properties">Partition properties</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="large-cardinals">
+<h1>Large Cardinals<a class="headerlink" href="#large-cardinals" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\Ord}{\mathbf{Ord}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<section id="inaccessible-cardinals">
+<h2>Inaccessible cardinals<a class="headerlink" href="#inaccessible-cardinals" title="Permalink to this heading">#</a></h2>
+<p>The cardinality of <span class="math notranslate nohighlight">\(V_\alpha\)</span> grows rather fast relative to <span class="math notranslate nohighlight">\(\alpha\)</span>. For example,</p>
+<div class="math notranslate nohighlight">
+\[
+    |V_{\omega+\alpha}| = \beth_\alpha
+\]</div>
+<p>where the <strong>beth function</strong> <span class="math notranslate nohighlight">\(\beth_\alpha\)</span> is defined as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+    \beth_0 = \aleph_0 \\
+    \beth_{\alpha+1} = 2^{\beth_\alpha} \\
+    \beth_{\lambda} = \sup \{ \beth_\alpha \colon \alpha &lt; \lambda\} \quad \text{ $\lambda$ limit}
+\end{gather*}\]</div>
+<p>This presents difficulties for the axiom of <em>Replacement</em> to hold in a <span class="math notranslate nohighlight">\(V_\alpha\)</span>, since we could define a function on a set of sufficiently high cardinality that maps to sets in <span class="math notranslate nohighlight">\(V_\alpha\)</span> whose ranks are cofinal in <span class="math notranslate nohighlight">\(\alpha\)</span> (and the image would not be an element of <span class="math notranslate nohighlight">\(V_\alpha\)</span>).</p>
+<p>The existence of <strong>inaccessible cardinals</strong> ensures that the von-Neumann hierarchy is “long enough” for <span class="math notranslate nohighlight">\(\alpha\)</span> to eventually “catch up” with the cardinality of <span class="math notranslate nohighlight">\(V_\alpha\)</span>.</p>
+<p>Recall the enumeration of all cardinals by means of the <strong><span class="math notranslate nohighlight">\(\aleph\)</span>-sequence</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\aleph_0 = \omega, \quad \aleph_{\alpha+1} = \aleph_\alpha^+, \quad  \aleph_\lambda = \sup \{ \aleph_\xi \colon \xi&lt;\lambda\} \; \text{ for limit } \lambda.
+\end{equation*}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\kappa^+\)</span> is the least cardinal <span class="math notranslate nohighlight">\(&gt; \kappa\)</span>. Some cardinals are limits of short sequences of cardinals – for example,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \aleph_\omega = \lim_n \aleph_n
+\end{equation*}\]</div>
+<p>is uncountable, but a limit of a countable sequence of smaller cardinals. Generally, cardinals who are a limit of a sequence of cardinals of length smaller than their cardinality are called <strong>singular</strong>. Non-singular cardinals are called <strong>regular</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\Op{reg}(\kappa): \iff \forall \alpha &lt; \kappa \;  \forall f \;( f: \alpha \to \kappa \;  \to \; \sup_{\xi &lt; \alpha} f(\xi) &lt; \kappa).
+\end{equation*}\]</div>
+<p>In other words, a regular cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> cannot be reached  by less then <span class="math notranslate nohighlight">\(\kappa\)</span>-many steps.  The first example of a regular cardinal is <span class="math notranslate nohighlight">\(\aleph_0\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that all <strong>successor cardinals</strong>, i.e. cardinals of the form <span class="math notranslate nohighlight">\(\aleph_{\alpha+1}\)</span> are regular. (Use the Axiom of Choice.)</p>
+</div>
+<p>On the other hand,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\aleph_\omega,  \aleph_{\omega+\omega}, \aleph_{\aleph_{\omega}}, \aleph_{\aleph_{\aleph_\omega}}, \ldots
+\end{equation*}\]</div>
+<p>are singular and this suggests the question:</p>
+<blockquote>
+<div><p>Are there regular cardinals of the form <span class="math notranslate nohighlight">\(\aleph_\lambda\)</span> with <span class="math notranslate nohighlight">\(\lambda\)</span> limit?</p>
+</div></blockquote>
+<p>This is captured by the notion of <strong>inaccessibility</strong>.</p>
+<div class="proof definition admonition" id="def-inaccessible">
+<p class="admonition-title"><span class="caption-number">Definition 35 </span> (Hausdorff 1908, Tarski, Zermelo 1930)</p>
+<section class="definition-content" id="proof-content">
+<p>An uncountable cardinal <span class="math notranslate nohighlight">\(\kappa &gt; \omega\)</span> is</p>
+<ul class="simple">
+<li><p><strong>weakly inaccessible</strong> if</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \Op{reg}(\kappa) \; &amp;  \wedge \;  \exists \lambda (\Op{lim}(\lambda) \;  \wedge\;  \kappa = \aleph_\lambda)\\
+                        (&amp; \Leftrightarrow \Op{reg}(\kappa) \;  \wedge \;  \forall \alpha &lt; \kappa \; \, \alpha^+ &lt; \kappa)
+\end{align*}\]</div>
+<ul class="simple">
+<li><p><strong>(strongly) inaccessible</strong> if</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \Op{reg}(\kappa) \;  \wedge \;  \forall \alpha &lt; \kappa \;\; 2^{\alpha} &lt; \kappa
+\end{equation*}\]</div>
+</section>
+</div><p>Under the <strong>Generalized Continuum Hypothesis</strong>,</p>
+<blockquote>
+<div><p>(<span class="math notranslate nohighlight">\(\mathsf{GCH}) \quad \forall \alpha \;\;  2^{\aleph_\alpha} = \aleph_{\alpha}^+\)</span></p>
+</div></blockquote>
+<p>weakly and strongly inaccessible cardinals coincide.</p>
+<p>If <span class="math notranslate nohighlight">\(\kappa &gt; \omega\)</span> is inaccessible, then <span class="math notranslate nohighlight">\(\kappa = \aleph_\kappa\)</span>. Moreover, we have</p>
+<div class="proof proposition admonition" id="prop-cardinality-Vkappa">
+<p class="admonition-title"><span class="caption-number">Proposition 45 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is strongly inaccessible, <span class="math notranslate nohighlight">\(|V_\kappa| = \kappa\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. It suffices to show that <span class="math notranslate nohighlight">\(|V_\alpha| &lt; \kappa\)</span> for all <span class="math notranslate nohighlight">\(\alpha &lt; \kappa\)</span>. This follows by a straightforward induction, using the fact that <span class="math notranslate nohighlight">\(\kappa\)</span> is strongly inaccessible.</p>
+</div>
+<p>This in turn implies we can bound the cardinality of elements of <span class="math notranslate nohighlight">\(V_\kappa\)</span>.</p>
+<div class="proof proposition admonition" id="prop-inaccessible-cardinality">
+<p class="admonition-title"><span class="caption-number">Proposition 46 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\kappa\)</span> is strongly inaccessible and <span class="math notranslate nohighlight">\(x\subset V_\kappa\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+    x \in V_\kappa \; \Leftrightarrow \; |x| &lt; \kappa.
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (<span class="math notranslate nohighlight">\(\Rightarrow\)</span>) <span class="math notranslate nohighlight">\(x \in V_\kappa\)</span> implies <span class="math notranslate nohighlight">\(|x| &lt; |V_\kappa|\)</span>. Apply <a class="reference internal" href="#prop-cardinality-Vkappa">Proposition 45</a>.</p>
+<p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) Since <span class="math notranslate nohighlight">\(x \subseteq V_\kappa\)</span>, each <span class="math notranslate nohighlight">\(y \in x\)</span> has rank <span class="math notranslate nohighlight">\(&lt; \kappa\)</span>. Since <span class="math notranslate nohighlight">\(|x| &lt; \kappa\)</span>, by regularity of <span class="math notranslate nohighlight">\(\kappa\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    \Op{rank}(x) = \sup\{\Op{rank}(y)+1 \colon y \in x\} &lt; \kappa
+\]</div>
+<p>which implies <span class="math notranslate nohighlight">\(x \in V_\kappa\)</span>.</p>
+</div>
+<p>We have already seen that for limit <span class="math notranslate nohighlight">\(\alpha &gt; \omega\)</span>, <span class="math notranslate nohighlight">\(V_\alpha\)</span> is a model of all <span class="math notranslate nohighlight">\(\ZFC\)</span> axioms except <em>Replacement</em>.</p>
+<div class="proof theorem admonition" id="thm-inaccessible-ZFC">
+<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is strongly inaccessible, then <span class="math notranslate nohighlight">\(V_\kappa \models \ZFC\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We verify that <span class="math notranslate nohighlight">\(V_\kappa\)</span> satisfies the axiom of <em>Replacement</em>.
+Suppose <span class="math notranslate nohighlight">\(x \in V_\kappa\)</span> and <span class="math notranslate nohighlight">\(f:x \to V_\kappa\)</span> is a function. Then <span class="math notranslate nohighlight">\(f[x] \subseteq V_\kappa\)</span>, and by <a class="reference internal" href="#prop-inaccessible-cardinality">Proposition 46</a>, <span class="math notranslate nohighlight">\(|f[x]| \leq |x| &lt; \kappa\)</span>. Applying the other direction of <a class="reference internal" href="#prop-inaccessible-cardinality">Proposition 46</a> to <span class="math notranslate nohighlight">\(f[x]\)</span>, we obtain <span class="math notranslate nohighlight">\(f[x] \in V_\kappa\)</span>, as desired.</p>
+</div>
+<p>Suppose an inaccessible cardinal exists, and let <span class="math notranslate nohighlight">\(\kappa\)</span> be the least inaccessible.<br />
+It is not hard to verify that</p>
+<div class="math notranslate nohighlight">
+\[
+V_\kappa \models \ZFC + \text{''there does not exist an inaccessible cardinal''}.
+\]</div>
+<p>(You verify that being a inaccessible cardinal is absolute for <span class="math notranslate nohighlight">\(V_\kappa\)</span>.) Therefore, the existence of an inaccessible cardinal is not provable from <span class="math notranslate nohighlight">\(\ZFC\)</span>. This fact also follows from Gödel’s second incompleteness theorem.</p>
+</section>
+<section id="measurability">
+<h2>Measurability<a class="headerlink" href="#measurability" title="Permalink to this heading">#</a></h2>
+<p>We have seen that (assuming the Axiom of Choice) there subsets of <span class="math notranslate nohighlight">\(\Real\)</span> that are not Lebesgue measurable. Inspecting the proof, we see that we only use the following properties of Lebesgue measure:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>-additivity,</p></li>
+<li><p>translation invariance (<span class="math notranslate nohighlight">\(\lambda(A) = \lambda(A+r)\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda(A) &gt; 0\)</span> for some <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+</ul>
+<p>For spaces without an additive structures, instead of translation invariance, we can consider a <strong>non-triviality condition</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+m(\{x\})=0 \quad \text{ for all $x$}
+\]</div>
+<p>The <strong>generalized measure problem</strong> asks whether there exists a set <span class="math notranslate nohighlight">\(M\)</span> together with a measure function</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+m: \mathcal{P}(M) \to [0,\infty),
+\end{gather*}\]</div>
+<p>so that the following conditions are met:</p>
+<ul class="simple">
+<li><p>(<strong>M1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(m(M) =1\)</span></p></li>
+<li><p>(<strong>M2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\forall x \in M \; m(\{x\})=0\)</span></p></li>
+<li><p>(<strong>M3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> if <span class="math notranslate nohighlight">\((A_i)_{i &lt; \omega}\)</span> is a countable sequence of disjoint sets <span class="math notranslate nohighlight">\(\subseteq M\)</span>, then</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+m\left(\bigcup_{i&lt;\omega} A_i\right ) =  \sum_{i&lt;\omega} m(A_i)
+\end{equation*}\]</div>
+<p>The structure of the set <span class="math notranslate nohighlight">\(M\)</span> does not play any role here, so we can replace it by a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> outright. One can also consider strengthening <span class="math notranslate nohighlight">\(\sigma\)</span>-additivity to <strong><span class="math notranslate nohighlight">\(\kappa\)</span>-additivity</strong>:</p>
+<blockquote>
+<div><p>If <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> and  <span class="math notranslate nohighlight">\((A_\xi)_{\xi&lt; \lambda}\)</span> is a sequence of disjoint subsets of <span class="math notranslate nohighlight">\(\kappa\)</span>, then</p>
+</div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+m(\bigcup_{\xi&lt;\gamma} A_\xi) =  \sum_{\xi&lt;\gamma} m(A_\xi).
+\end{equation*}\]</div>
+<p>A transfinite sum <span class="math notranslate nohighlight">\(\sum_{\xi&lt;\gamma}\)</span> is given as the supremum of all sums over finite subsequences:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{\xi&lt;\gamma} m(A_\xi) = \sup \left \{ \sum_{\xi \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
+\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(\omega_1\)</span>-additive is the same as <span class="math notranslate nohighlight">\(\sigma\)</span>-additive.</p>
+<div class="proof theorem admonition" id="thm-kappa-additivity">
+<p class="admonition-title"><span class="caption-number">Theorem 36 </span> (Banach)</p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is the least cardinal for which a measure satisfying (M1)-(M3) exists, then any such measure on <span class="math notranslate nohighlight">\(\kappa\)</span> is already <span class="math notranslate nohighlight">\(\kappa\)</span>-additive.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(m\)</span> is a measure on <span class="math notranslate nohighlight">\(\kappa\)</span> that is not <span class="math notranslate nohighlight">\(\kappa\)</span>-additive.
+Then, for some <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>, there exists a sequence <span class="math notranslate nohighlight">\((A_\xi)_{ \xi&lt; \gamma}\)</span> of disjoint subsets of <span class="math notranslate nohighlight">\(\kappa\)</span> so that</p>
+<div class="math notranslate nohighlight">
+\[
+m(\bigcup_{\xi&lt;\gamma} A_\xi) \ne  \sum_{\xi&lt;\gamma} m(A_\xi).
+\]</div>
+<p>Since a measure is always <span class="math notranslate nohighlight">\(\sigma\)</span>-additive, <span class="math notranslate nohighlight">\(\gamma &gt; \omega\)</span> has to hold, and there can be at most countably many <span class="math notranslate nohighlight">\(A_\xi\)</span> with <span class="math notranslate nohighlight">\(m(A_\xi)&gt;0\)</span>.</p>
+<p>We can drop those <span class="math notranslate nohighlight">\(A_\xi\)</span>, and by the <span class="math notranslate nohighlight">\(\sigma\)</span>-additivity of <span class="math notranslate nohighlight">\(m\)</span> for the remaining <span class="math notranslate nohighlight">\(\xi\)</span> it has to hold that <span class="math notranslate nohighlight">\(m(A_\xi)=0\)</span> while <span class="math notranslate nohighlight">\(m \left(\bigcup_{\xi&lt;\gamma} A_\xi \right) = r &gt;0\)</span>.</p>
+<p>By putting</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\overline{m}(X) = \frac{m(\bigcup_{\xi \in X} A_\xi)}{r}
+\end{equation*}\]</div>
+<p>we obtain a measure on <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>, contradicting the minimality of <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</div>
+<section id="measurable-cardinals">
+<h3>Measurable cardinals<a class="headerlink" href="#measurable-cardinals" title="Permalink to this heading">#</a></h3>
+<p>If <span class="math notranslate nohighlight">\(m\)</span> is a measure on <span class="math notranslate nohighlight">\(\kappa\)</span>, the <strong>associated ideal</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{I}_m = \{x\subseteq \kappa \colon m(x) = 0 \}
+\]</div>
+<p>is a <span class="math notranslate nohighlight">\(\sigma\)</span>-ideal, or, complementing the notion of <span class="math notranslate nohighlight">\(\omega_1\)</span>-additivity, a <strong><span class="math notranslate nohighlight">\(\omega_1\)</span>-complete ideal</strong>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that <span class="math notranslate nohighlight">\(\mathcal{I}_m\)</span> is not principal.</p>
+</div>
+<p>The corresponding filter</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{F}_m = \{x\subseteq \kappa \colon m(x) = 1\}
+\]</div>
+<p>is then <span class="math notranslate nohighlight">\(\omega_1\)</span>-complete, too.</p>
+<p>A measure <span class="math notranslate nohighlight">\(m\)</span> is <strong>two-valued</strong> if it only assumes the values <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>. In this case the corresponding filter <span class="math notranslate nohighlight">\(\mathcal{F}_m\)</span> is an <strong>ultrafilter</strong> (and <span class="math notranslate nohighlight">\(\mathcal{I}_m\)</span> is a <strong>prime ideal</strong>).</p>
+<p>Conversely, if <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\omega_1\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>, we can define a two-valued measure <span class="math notranslate nohighlight">\(m: \mathcal{P}(\kappa) \to \{0,1\}\)</span> on <span class="math notranslate nohighlight">\(\kappa\)</span> by letting</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+m(x) = 
+  \begin{cases}
+   1  &amp; \text{if } x \in U, \\
+   0   &amp; \text{otherwise}.
+\end{cases}
+\end{split}\]</div>
+<div class="proof definition admonition" id="def-measurable-cardinal">
+<p class="admonition-title"><span class="caption-number">Definition 36 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\kappa\)</span> be an uncountable cardinal.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>real-valued measurable</strong> if there exists a <span class="math notranslate nohighlight">\(\kappa\)</span>-additive measure on <span class="math notranslate nohighlight">\(\kappa\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>measurable</strong> if there exists a <span class="math notranslate nohighlight">\(\kappa\)</span>-additive, two-valued measure on <span class="math notranslate nohighlight">\(\kappa\)</span>, or, equivalently, if there exists a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>.</p></li>
+</ul>
+</section>
+</div><p>In the following, we will see that measurability implies inaccessibility.</p>
+<div class="proof lemma admonition" id="lem-cardinality-kappa-ultrafilter">
+<p class="admonition-title"><span class="caption-number">Lemma 18 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(U\)</span> is a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>, then every <span class="math notranslate nohighlight">\(X \in U\)</span> has cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since <span class="math notranslate nohighlight">\(U\)</span> is non-principal, no <em>singleton</em> set <span class="math notranslate nohighlight">\(\{x\}\)</span> can be in <span class="math notranslate nohighlight">\(U\)</span> (for this would imply <span class="math notranslate nohighlight">\(\kappa\setminus \{x\} \notin U\)</span> and therefore no subset of it would be in <span class="math notranslate nohighlight">\(U\)</span> either, contradicting the non-principality of <span class="math notranslate nohighlight">\(U\)</span>).</p>
+<p>If <span class="math notranslate nohighlight">\(X \in U\)</span> and <span class="math notranslate nohighlight">\(|X| &lt; \kappa\)</span>, then <span class="math notranslate nohighlight">\(X\)</span> is the union of <span class="math notranslate nohighlight">\(&lt; \kappa\)</span> many singletons. Since <span class="math notranslate nohighlight">\(\neg U\)</span> is a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete prime ideal, this implies <span class="math notranslate nohighlight">\(X \in \neg U\)</span>, contradiction.</p>
+</div>
+<div class="proof proposition admonition" id="prop-measurable-regular">
+<p class="admonition-title"><span class="caption-number">Proposition 47 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable, then it is regular.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(\kappa\)</span> were singular, it would be the union of <span class="math notranslate nohighlight">\(&lt;\kappa\)</span>-many sets of cardinality <span class="math notranslate nohighlight">\(&lt;\kappa\)</span>. Applying <a class="reference internal" href="#lem-cardinality-kappa-ultrafilter">Lemma 18</a> leads to a contradiction.</p>
+</div>
+<div class="proof theorem admonition" id="thm-measurable-inaccessible">
+<p class="admonition-title"><span class="caption-number">Theorem 37 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>A measurable cardinal is (strongly) inaccessible.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. By <a class="reference internal" href="#prop-measurable-regular">Proposition 47</a>, any measurable cardinal is regular. Assume for a contradiction there exists <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> with <span class="math notranslate nohighlight">\(2^\gamma &gt; \kappa\)</span>. As <span class="math notranslate nohighlight">\(2^\gamma &gt; \kappa\)</span>, there exists a set <span class="math notranslate nohighlight">\(S\)</span> of functions <span class="math notranslate nohighlight">\(f: \gamma \to \{0,1\}\)</span> with <span class="math notranslate nohighlight">\(|S| = \kappa\)</span>. Let <span class="math notranslate nohighlight">\(U\)</span> be a <span class="math notranslate nohighlight">\(\kappa\)</span>-complete, non-principal ultrafilter on <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(\alpha &lt; \gamma, i \in \{0,1\}\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[
+    X_{\alpha,i} = \{ f \in S \colon f(\alpha) = i\}
+\]</div>
+<p>and let <span class="math notranslate nohighlight">\(g(\alpha) = i\)</span> if and only if <span class="math notranslate nohighlight">\(X_{\alpha,i} \in U\)</span>. Since <span class="math notranslate nohighlight">\(U\)</span> is an ultrafilter, <span class="math notranslate nohighlight">\(g\)</span> is well-defined on <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span> and <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\kappa\)</span>-complete,</p>
+<div class="math notranslate nohighlight">
+\[
+    X = \bigcap_{\alpha &lt; \gamma} X_{\alpha, g(\alpha)} 
+\]</div>
+<p>is in <span class="math notranslate nohighlight">\(U\)</span>. But <span class="math notranslate nohighlight">\(|X| \leq 1\)</span>, since the only function possibly in <span class="math notranslate nohighlight">\(X\)</span> is <span class="math notranslate nohighlight">\(g\)</span>. This contradicts <a class="reference internal" href="#lem-cardinality-kappa-ultrafilter">Lemma 18</a>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that every real-valued measurable cardinal is weakly inaccessible.</p>
+</div>
+<div class="proof proposition admonition" id="prop-measurable-vs-real-valued">
+<p class="admonition-title"><span class="caption-number">Proposition 48 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\kappa\)</span> is real-valued measurable, then <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable or <span class="math notranslate nohighlight">\(\kappa \le 2^{\aleph_0}\)</span>.</p>
+</section>
+</div><p>Thus, if <span class="math notranslate nohighlight">\(\kappa\)</span> is real-valued measurable but not measurable, then the continuum <span class="math notranslate nohighlight">\(2^{\aleph_0}\)</span> has to be very large.</p>
+</section>
+</section>
+<section id="partition-properties">
+<h2>Partition properties<a class="headerlink" href="#partition-properties" title="Permalink to this heading">#</a></h2>
+<p>Another concept of largeness is related to the existence of large <strong>homogeneous sets</strong> for partitions.</p>
+<p>For given set <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	[S]^n := \{ X \subseteq S \colon \: |X| = n \} 
+\end{equation*}\]</div>
+<p>be the set of all <span class="math notranslate nohighlight">\(n\)</span>-element subsets of <span class="math notranslate nohighlight">\(S\)</span>. For cardinals <span class="math notranslate nohighlight">\(\kappa, \lambda\)</span>, we define</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\kappa \to (\lambda)^n_k 
+\end{equation*}\]</div>
+<p>to mean that any partition <span class="math notranslate nohighlight">\(F: [S]^n \to \{1, \dots, k\}\)</span> mit <span class="math notranslate nohighlight">\(|S| = \kappa\)</span> has an <strong><span class="math notranslate nohighlight">\(F\)</span>-homogeneous subset</strong>  of cardinality <span class="math notranslate nohighlight">\(\lambda\)</span>, that is, a set <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(|H| = \lambda\)</span>, such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant}. 
+\end{equation*}\]</div>
+<p><strong>Ramsey’s theorem</strong> (1929/39) says that for any <span class="math notranslate nohighlight">\(n,k \in \Nat\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\aleph_0 \to (\aleph_0)^n_k. 
+\end{equation*}\]</div>
+<p>Do there exist uncountable cardinals with similar properties?</p>
+<p>A cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>weakly compact</strong> if it is uncountable and <span class="math notranslate nohighlight">\(\kappa \to (\kappa)^2_2\)</span> holds.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that for any cardinal <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa \nrightarrow (\kappa^+)^2_2\)</span>, and use this to infer that any weakly compact cardinal is inaccessible.</p>
+<p>(Thus the existence of weakly compact cardinals cannot be established in <span class="math notranslate nohighlight">\(\ZFC\)</span>.)</p>
+</div>
+<p>Measurable cardinals have even stronger homogeneity properties. Let <span class="math notranslate nohighlight">\([S]^{&lt;\omega}\)</span> be the set of all finite subsets of <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(F: [S]^{&lt;\omega} \to I\)</span> is a partition, then <span class="math notranslate nohighlight">\(H \subseteq S\)</span> is <strong><span class="math notranslate nohighlight">\(F\)</span>-homogenenous</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	F|_{[H]^n} \equiv \text{ constant} 
+\end{equation*}\]</div>
+<p>for all <span class="math notranslate nohighlight">\(n \in \Nat\)</span>.</p>
+<div class="proof theorem admonition" id="thm-measurable-Ramsey">
+<p class="admonition-title"><span class="caption-number">Theorem 38 </span> (Rowbottom)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\kappa\)</span> be a measurable cardinal and let <span class="math notranslate nohighlight">\(F: [\kappa]^{&lt;\omega} \to \lambda\)</span> a partition of <span class="math notranslate nohighlight">\([\kappa]^{&lt;\omega}\)</span> into <span class="math notranslate nohighlight">\(\lambda &lt; \kappa\)</span> pieces. Then there exists an <span class="math notranslate nohighlight">\(F\)</span>-homogeneous set <span class="math notranslate nohighlight">\(H \subseteq \kappa\)</span> with <span class="math notranslate nohighlight">\(|H| = \kappa\)</span>.</p>
+</section>
+</div><p>In general, any cardinal that satisfies the statement of the theorem is called <strong>Ramsey</strong>.</p>
+<p>To prove <a class="reference internal" href="#thm-measurable-Ramsey">Theorem 38</a>, we introduce <strong>normal ultrafilters</strong>.</p>
+<div class="proof definition admonition" id="def-normal-filter">
+<p class="admonition-title"><span class="caption-number">Definition 37 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Given a sequence of sets <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \gamma}\)</span>, the <strong>diagonal intersection</strong> is given as</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta_{\xi &lt; \gamma} A_\xi = \{ \alpha &lt; \gamma \colon  \alpha \in \bigcap_{\xi &lt; \alpha} A_\xi \}.
+\]</div>
+<p>A filter <span class="math notranslate nohighlight">\(F\)</span> on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> is <strong>normal</strong> if for any <span class="math notranslate nohighlight">\(\kappa\)</span>-sequence <span class="math notranslate nohighlight">\((A_\xi)_{\xi &lt; \kappa}\)</span>, <span class="math notranslate nohighlight">\(A_\xi \in F\)</span>, the diagonal intersection <span class="math notranslate nohighlight">\(\Delta_{\xi &lt; \kappa} A_\xi\)</span> is in <span class="math notranslate nohighlight">\(F\)</span>.</p>
+</section>
+</div><p>Let us assume as a convention that a filter on a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> always contains the end-segments <span class="math notranslate nohighlight">\(\{\xi \colon \alpha \leq \xi &lt; \kappa\}\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that a normal filter on <span class="math notranslate nohighlight">\(\kappa\)</span> is <span class="math notranslate nohighlight">\(\kappa\)</span>-complete.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that if there is a normal filter over <span class="math notranslate nohighlight">\(\kappa\)</span>, then <span class="math notranslate nohighlight">\(\kappa\)</span> is uncountable and regular.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that if <span class="math notranslate nohighlight">\(\kappa\)</span> is measurable, then there is a normal ultrafilter on <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. (Proof of <a class="reference internal" href="#thm-measurable-Ramsey">Theorem 38</a>)</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a normal filter over <span class="math notranslate nohighlight">\(\kappa\)</span>.
+We show that for every <span class="math notranslate nohighlight">\(n\)</span>, for any <span class="math notranslate nohighlight">\(g: [\kappa]^n \to \gamma\)</span> with <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>, there is a set <span class="math notranslate nohighlight">\(H_n \in U\)</span> such that <span class="math notranslate nohighlight">\(g_n \Rest{[H_n]^n} \equiv \text{const}\)</span>. The intersection of the <span class="math notranslate nohighlight">\(H_n\)</span> is again in <span class="math notranslate nohighlight">\(U\)</span> and satisfies the statement of the the theorem.</p>
+<p>We proceed by induction. The case <span class="math notranslate nohighlight">\(n=1\)</span> follows from the <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness of <span class="math notranslate nohighlight">\(U\)</span>. Now assume <span class="math notranslate nohighlight">\(g:[\kappa]^{n+1} \to \gamma\)</span>, with <span class="math notranslate nohighlight">\(\gamma &lt; \kappa\)</span>.</p>
+<p>For each <span class="math notranslate nohighlight">\(S \in [\kappa]^n\)</span>, define <span class="math notranslate nohighlight">\(g_s : \kappa \to \gamma\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    g_S(\alpha) = \begin{cases}
+        g(S \cup \{\alpha\}) &amp; \text{ if } \max S &lt; \alpha \\
+        0 &amp; \text{otherwise}
+    \end{cases}
+\end{split}\]</div>
+<p>By <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness of <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(g_S\)</span> is constant on a set <span class="math notranslate nohighlight">\(Y_S \in U\)</span>, say</p>
+<div class="math notranslate nohighlight">
+\[
+    g_S\Rest{Y_S} \equiv \delta_S &lt; \gamma.
+\]</div>
+<p>We now define a function <span class="math notranslate nohighlight">\(h: [\kappa]^n \to \gamma\)</span>
+by letting</p>
+<div class="math notranslate nohighlight">
+\[
+    h(S) = \delta_S.
+\]</div>
+<p>By induction hypothesis, <span class="math notranslate nohighlight">\(h\)</span> is constant on a set <span class="math notranslate nohighlight">\(Z \subseteq \kappa\)</span>
+in <span class="math notranslate nohighlight">\(U\)</span> (and hence of size <span class="math notranslate nohighlight">\(\kappa\)</span>), say <span class="math notranslate nohighlight">\(h\Rest{[Z]^n} \equiv \delta &lt; \kappa\)</span>.</p>
+<p>For each <span class="math notranslate nohighlight">\(\alpha &lt; \kappa\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[
+    Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
+\]</div>
+<p>By <span class="math notranslate nohighlight">\(\kappa\)</span>-completeness, <span class="math notranslate nohighlight">\(Y_\alpha \in U\)</span>, and by normality</p>
+<div class="math notranslate nohighlight">
+\[
+    H = Z \cap \Delta_{\alpha &lt; \kappa} Y_\alpha \in U
+\]</div>
+<p>By <a class="reference internal" href="#lem-cardinality-kappa-ultrafilter">Lemma 18</a>, <span class="math notranslate nohighlight">\(H\)</span> has cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+<p>We claim that <span class="math notranslate nohighlight">\(g\)</span> is constant on <span class="math notranslate nohighlight">\([H]^{n+1}\)</span>: Let <span class="math notranslate nohighlight">\(T \in [H]^{n+1}\)</span>. Write <span class="math notranslate nohighlight">\(T\)</span> as <span class="math notranslate nohighlight">\(S \cup \{\alpha\}\)</span> with <span class="math notranslate nohighlight">\(\max S &lt; \alpha\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \alpha \in H &amp; \Rightarrow  &amp; \alpha \in \Delta_{\gamma &lt; \kappa} Y_\gamma \\
+                 &amp; \Rightarrow  &amp; \alpha \in \bigcap_{\beta &lt; \alpha} Y_\beta \\
+                 &amp; \Rightarrow  &amp; \alpha \in Y_{\max S} \\
+                 &amp; \Rightarrow  &amp; \alpha \in Y_S \\
+                 &amp; \Rightarrow  &amp; g_S(\alpha) = \delta_S
+\end{align*}\]</div>
+<p>On the other hand, <span class="math notranslate nohighlight">\(S \subseteq H\)</span> implies <span class="math notranslate nohighlight">\(S \subseteq Z\)</span> and hence by definition of <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(h(S) = \delta_S = \delta\)</span>, so <span class="math notranslate nohighlight">\(g(T) = g_S(\alpha) = \delta_S = \delta\)</span>.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Models of Set Theory</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="constructible.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Constructible Universe</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inaccessible-cardinals">Inaccessible cardinals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurability">Measurability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measurable-cardinals">Measurable cardinals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partition-properties">Partition properties</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

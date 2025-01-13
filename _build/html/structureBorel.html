@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Structure of Borel Sets &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'structureBorel';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Continuous Images of Borel sets" href="imagesBorel.html" />
+    <link rel="prev" title="Coding Borel Sets" href="codingBorel.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FstructureBorel.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/structureBorel.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Structure of Borel Sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-forms">Normal forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closure-properties">Closure properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-sets">Universal sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-sets-of-transfinite-order">Borel sets of transfinite order</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-structure-of-borel-sets">
+<h1>The Structure of Borel Sets<a class="headerlink" href="#the-structure-of-borel-sets" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
+\newcommand{\PP}[1][n]{\bPi^1_{#1}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Qu}{\mathsf{Q}}
+\newcommand{\Conc}{\mbox{}^\frown}
+\DeclareMathOperator{\Ap}{ap}\]</div>
+<p>In this chapter, we further investigate the structure of Borel sets. We will use the results of the previous lecture to derive various closure properties and other structural results. As an application, we see that the Borel hierarchy is indeed proper.</p>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Permalink to this heading">#</a></h2>
+<p>Before we go on, we have to address some notational issues. So far we have used notation quite liberally, especially when it came to product sets. We will continue to do so, but we want to put this on a firmer footing.</p>
+<p>Using coding, we can identify any product space <span class="math notranslate nohighlight">\(\Nat^m \times (\Baire)^n\)</span> with <span class="math notranslate nohighlight">\(\Nat^\Nat\)</span>. One way to do this is to fix, for each <span class="math notranslate nohighlight">\(n \geq 1\)</span>, an effective homeomorphism <span class="math notranslate nohighlight">\(\theta_n: (\Baire)^n \to \Baire\)</span> and map</p>
+<div class="math notranslate nohighlight">
+\[
+	(k_1, \dots, k_m, \alpha_1, \dots, \alpha_n) \mapsto (k_1,\dots, k_m, \theta_n(\alpha_1, \dots, \alpha_n)).
+\]</div>
+<p>Here <span class="math notranslate nohighlight">\((k_1,\dots, k_m, \theta_n(\alpha_1, \dots, \alpha_n))\)</span> is just a suggestive way of writing the concatenation</p>
+<div class="math notranslate nohighlight">
+\[
+	\Tup{k_1} \Conc \cdots \Conc \Tup{k_m} \Conc \theta_n(\alpha_1, \dots, \alpha_n).
+\]</div>
+<p>We have already used this notation in the previous lecture. In the following, we will continue to switch freely between product sets and their coded counterparts, as subsets of <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+<p>Another notation identifies sets and relations. We will identify sets <span class="math notranslate nohighlight">\(A \subseteq \Nat^m \times (\Baire)^n\)</span> with the relation they induce and write <span class="math notranslate nohighlight">\(A(k_1, \dots, k_m, \alpha_1, \dots, \alpha_n)\)</span> instead of <span class="math notranslate nohighlight">\((k_1, \dots, k_m, \alpha_1, \dots, \alpha_n) \in A\)</span>. Conversely, we will identify relations with the set they induce.</p>
+</section>
+<section id="normal-forms">
+<h2>Normal forms<a class="headerlink" href="#normal-forms" title="Permalink to this heading">#</a></h2>
+<p>Theorem <a class="reference internal" href="codingBorel.html#thm-Borel-arith">Theorem 18</a> tells us that a set <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> if and only if it is definable by a <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> formulas over <span class="math notranslate nohighlight">\(\mathcal{A}^2\)</span>, relative to some parameter. That means that there exists a <strong>bounded formula</strong> <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> (i.e. all quantifiers are bounded) such that</p>
+<div class="math notranslate nohighlight">
+\[
+A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
+\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\gamma\)</span> is the parameter, and <span class="math notranslate nohighlight">\(\Qu\)</span> is “<span class="math notranslate nohighlight">\(\exists\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is odd, and “<span class="math notranslate nohighlight">\(\forall\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is even.</p>
+<p>Similarly, <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> if and only if it is definable as</p>
+<div class="math notranslate nohighlight">
+\[
+	A(\alpha) \iff \forall x_1 \: \dots \:  \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})\)</span> is bounded, and <span class="math notranslate nohighlight">\(\Qu\)</span> is ``<span class="math notranslate nohighlight">\(\forall\)</span>’’ if <span class="math notranslate nohighlight">\(n\)</span> is odd, and “<span class="math notranslate nohighlight">\(\exists\)</span>” if <span class="math notranslate nohighlight">\(n\)</span> is even.</p>
+<p>What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form <span class="math notranslate nohighlight">\(\alpha(t_1) = t_2\)</span>. This implies that the truth of an atomic formula is determined by \emph{finitely many positions} in <span class="math notranslate nohighlight">\(\alpha\)</span>. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+<p>On the other hand, the reals for which a bounded formula does not hold are definable by a bounded formula, too, since the negation of a bounded formula is again a bounded formula. We conclude that <strong>bounded formulas define clopen subsets of <span class="math notranslate nohighlight">\(\Baire\)</span></strong>. On the other hand, if we have <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>-code for a set <span class="math notranslate nohighlight">\(A\)</span> and its complement, we can decide the relation <span class="math notranslate nohighlight">\(A(\alpha\Rest{n})\)</span> computably in the code.</p>
+<p>Hence we can formulate the Normal Form above as follows.
+<span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> if and only if there exists a clopen set <span class="math notranslate nohighlight">\(R \subseteq \Nat^n\times \Baire\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+	A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; R(x_1, \dots, x_n, \alpha),
+\]</div>
+<p>and similarly for <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> sets.</p>
+</section>
+<section id="closure-properties">
+<h2>Closure properties<a class="headerlink" href="#closure-properties" title="Permalink to this heading">#</a></h2>
+<p>We can use the Normal Form to derive several closure properties of <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>).</p>
+<p>If <span class="math notranslate nohighlight">\(P \subseteq \Nat \times \Baire\)</span>, we define the <strong>projection of <span class="math notranslate nohighlight">\(P\)</span> along <span class="math notranslate nohighlight">\(\Nat\)</span></strong>, <span class="math notranslate nohighlight">\(\exists^\Nat P\)</span>, as</p>
+<div class="math notranslate nohighlight">
+\[
+	\exists^\Nat P = \{ \alpha \colon \exists n \: P(n,\alpha)\}.
+\]</div>
+<p>We already encountered this operation in the definition of the effective Borel hierarchy (<a class="reference internal" href="codingBorel.html#def-effective-Borel">Definition 20</a>). The dual operation is</p>
+<div class="math notranslate nohighlight">
+\[
+	\forall^\Nat P = \{ \alpha \colon \forall n \: P(n,\alpha)\}.
+\]</div>
+<div class="proof proposition admonition" id="proposition-0">
+<p class="admonition-title"><span class="caption-number">Proposition 24 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For each <span class="math notranslate nohighlight">\(n \geq 1\)</span>, <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> is closed under <span class="math notranslate nohighlight">\(\exists^\Nat\)</span>, and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> is closed under <span class="math notranslate nohighlight">\(\forall^\Nat\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We prove the result for <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span> (lightface). The boldface case follows by relativization, and the proof for <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> is completely dual.</p>
+<p>Let <span class="math notranslate nohighlight">\(\phi(x_1, \dots, x_n, z, \alpha)\)</span> be a bounded formula such that</p>
+<div class="math notranslate nohighlight">
+\[
+    A(z,\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; \phi(x_1, \dots, x_n, z, \alpha) \text{ holds}.
+\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[
+    \exists^\Nat A(\alpha) \iff \exists x_0 \exists x_1 \: \dots \: \Qu x_n \; \phi(x_1, \dots, x_n, x_0,\alpha)
+\]</div>
+<p>We can collect two existential number quantifiers into one by using the pairing function <span class="math notranslate nohighlight">\(\Tup{.,.}\)</span>, or rather, its inverses, which we will denote by <span class="math notranslate nohighlight">\((.)_0\)</span> and <span class="math notranslate nohighlight">\((.)_1\)</span>. (Recall that the pairing function is definable by a bounded formula.)
+Then</p>
+<div class="math notranslate nohighlight">
+\[
+    \exists^\Nat A(\alpha) \iff \exists z_1  \: \dots \: \Qu z_n \; \phi((z_1)_1, \dots, z_n, (z_1)_0,\alpha),
+\]</div>
+<p>as desired.</p>
+</div>
+<p>One can use similar applications of coding and quantifier manipulation to prove a number of other closure properties, Often they follow also directly from the topological definitions, but it is good to have several techniques at hand.</p>
+<div class="proof proposition admonition" id="prop-Borel-closure-finite">
+<p class="admonition-title"><span class="caption-number">Proposition 25 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(n \geq 1\)</span>,</p>
+<ul class="simple">
+<li><p><strong>(a)</strong>  <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> is closed under countable unions and finite intersections.</p></li>
+<li><p><strong>(b)</strong> <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> is closed under finite unions and countable intersections.</p></li>
+<li><p><strong>(c)</strong> <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span> is closed under finite unions, finite intersections, and complements.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. One can prove this by induction along the hierarchy. To obtain the closure under finite unions and intersections, one can use the following logical equivalences.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    \exists x \, P(x) \, \wedge \,  \exists y \, R(y) &amp;\iff&amp; \exists x  \exists y \, (P(x) \, \wedge \,  R(y)) \\
+    \forall x \, P(x) \, \vee \,  \forall y \, R(y) &amp;\iff&amp; \forall x  \forall y \, (P(x) \, \vee \,  R(y))
+\end{eqnarray*}\]</div>
+</div>
+<p>Given <span class="math notranslate nohighlight">\(P \subseteq \Nat \times \Baire\)</span>, the <strong>bounded projection</strong> along <span class="math notranslate nohighlight">\(\Nat\)</span>
+is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+	\exists^\leq P = \{ (n,\alpha) \colon \exists m \leq n \: P(m,\alpha)\}.
+\]</div>
+<p>and the dual is</p>
+<div class="math notranslate nohighlight">
+\[
+	\forall^\leq P = \{ (n,\alpha) \colon \forall m \leq n \: P(m,\alpha)\}.
+\]</div>
+<div class="proof proposition admonition" id="prop-Borel-closure-bounded-projection">
+<p class="admonition-title"><span class="caption-number">Proposition 26 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(n \geq 1\)</span>, <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>, <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, and <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span> are closed under <span class="math notranslate nohighlight">\(\exists^\leq\)</span> and <span class="math notranslate nohighlight">\(\forall^\leq\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. In this case we use the computable coding function <span class="math notranslate nohighlight">\(\pi: \Nat \to \Nstr\)</span>.
+We have the following equivalence, which immediately implies the closure properties for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, respectively, and hence also for <span class="math notranslate nohighlight">\(\bDelta^0_n\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    \forall m \le n \, \exists k \; P(m,k) &amp;\iff&amp; \exists k  \, \forall m \le n \:  P(m,\pi(k)_m)\\
+    \exists m \le n  \, \forall k \; P(m,k) &amp;\iff&amp; \forall k  \, \exists m \le n \;   P(m,\pi(k)_m)
+\end{eqnarray*}\]</div>
+</div>
+<p>Finally, the levels of the Borel hierarchy are closed under continuous preimages.</p>
+<div class="proof proposition admonition" id="prop-Borel_closure-preimages">
+<p class="admonition-title"><span class="caption-number">Proposition 27 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(n \geq 1\)</span>, for any <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, and for any continuous <span class="math notranslate nohighlight">\(f: \Baire \to \Baire\)</span>, if <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> <span class="math notranslate nohighlight">\((\bPi^0_n\)</span>, <span class="math notranslate nohighlight">\(\bDelta^0_n)\)</span> then <span class="math notranslate nohighlight">\(f^{-1}(A)\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> <span class="math notranslate nohighlight">\((\bPi^0_n\)</span>, <span class="math notranslate nohighlight">\(\bDelta^0_n)\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. This follows easily by induction on <span class="math notranslate nohighlight">\(n\)</span>, since open and closed sets are closed under continuous preimages.</p>
+<p>However, we can also argue via definability, since by <a class="reference internal" href="trees.html#prop-product-continuous">Proposition 8</a> one can represent a continuous function through a monotone mapping <span class="math notranslate nohighlight">\(\psi\)</span> from finite strings to finite strings.  We have</p>
+<div class="math notranslate nohighlight">
+\[
+    f^{-1}(A) = \{ \alpha \colon A(f(\alpha)) \}.
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(R\)</span> be clopen such that</p>
+<div class="math notranslate nohighlight">
+\[
+    A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; R(x_1, \dots, x_n, \alpha).
+\]</div>
+<p>Since clopen predicates depend only on a finite initial segment of <span class="math notranslate nohighlight">\(\alpha\)</span>, we can substitute <span class="math notranslate nohighlight">\(f(\alpha)\)</span> for <span class="math notranslate nohighlight">\(\alpha\)</span>. The resulting formula defines <span class="math notranslate nohighlight">\(f^{-1}(A)\)</span>, and is equivalent to a <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>-formula relative to a parameter coding the mapping <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
+</div>
+</section>
+<section id="universal-sets">
+<h2>Universal sets<a class="headerlink" href="#universal-sets" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\Gamma\)</span> be a family of subsets defined in various Polish spaces. Of course we have in mind the classes <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> or <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, but the concept of a <strong>universal set</strong> can be defined quite generally.</p>
+<div class="proof definition admonition" id="def-universal">
+<p class="admonition-title"><span class="caption-number">Definition 22 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(Y\)</span> be a set. A set <span class="math notranslate nohighlight">\(U \subseteq X \times Y\)</span> is <strong><span class="math notranslate nohighlight">\(Y\)</span>-universal for <span class="math notranslate nohighlight">\(\Gamma\)</span></strong> if <span class="math notranslate nohighlight">\(U \in \Gamma\)</span>, and for every set <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(\Gamma\)</span>, there exists a <span class="math notranslate nohighlight">\(y \in Y\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    A = \{ x \colon (x,y) \in U \}.
+\]</div>
+</section>
+</div><p>A universal set for <span class="math notranslate nohighlight">\(\Gamma\)</span> can be thought of as a <strong>parametrization</strong> of <span class="math notranslate nohighlight">\(\Gamma\)</span>, the second component providing a <strong>code</strong> or <strong>parameter</strong> for each set in <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
+<p>A well-known example of a universal set is the <strong>generalized halting problem</strong>,</p>
+<div class="math notranslate nohighlight">
+\[
+	K_0 = \{ (x,e) \colon \text{ the $e$-th Turing machine halts on input $x$} \}.
+\]</div>
+<p>In the sense of the above definition, <span class="math notranslate nohighlight">\(K_0\)</span> is <span class="math notranslate nohighlight">\(\Nat\)</span>-universal for the family of recursively enumerable sets.</p>
+<div class="proof proposition admonition" id="prop-Borel-universal">
+<p class="admonition-title"><span class="caption-number">Proposition 28 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, there exists a set <span class="math notranslate nohighlight">\(U \subseteq \Baire \times \Baire\)</span> that is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>).</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We can use the Borel codes defined in the previous lecture.</p>
+<p>First of all, notice that for each <span class="math notranslate nohighlight">\(n \geq 1\)</span>, the set of all <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\BP\)</span>)-codes is homeomorphic to <span class="math notranslate nohighlight">\(\Baire\)</span>. This follows easily from the definition of the Borel codes. Hence, if we fix <span class="math notranslate nohighlight">\(n\)</span>, every <span class="math notranslate nohighlight">\(\gamma\in \Baire\)</span> represents a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>)-code of a <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>) set, and every such set in turn has a code <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
+<p>For fixed <span class="math notranslate nohighlight">\(n\)</span>, we let</p>
+<div class="math notranslate nohighlight">
+\[
+    U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and $\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by $\gamma$}\}.
+\]</div>
+<p>It follows easily from <a class="reference internal" href="codingBorel.html#thm-fundamental">Theorem 16</a> that <span class="math notranslate nohighlight">\(U_n\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>), too, and it is clear from the definition of <span class="math notranslate nohighlight">\(U\)</span> that it parametrizes <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n\)</span>).</p>
+</div>
+<p>The result can be generalized to hold for arbitrary Polish spaces <span class="math notranslate nohighlight">\(X\)</span>, i.e. for any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, there exists a set <span class="math notranslate nohighlight">\(U \subseteq \Baire \times X\)</span> that is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_n(X)\)</span> (<span class="math notranslate nohighlight">\(\bPi^0_n(X)\)</span>). To achieve this, one has to define Borel codes for <span class="math notranslate nohighlight">\(X\)</span>. This can be done by fixing a countable basis <span class="math notranslate nohighlight">\((V_n)\)</span> of the topology of <span class="math notranslate nohighlight">\(X\)</span>, and assign a sequence <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> the open set</p>
+<div class="math notranslate nohighlight">
+\[
+	U_\gamma = \bigcup_{n \in \Nat} V_{\gamma(n)}.
+\]</div>
+<p>The definition of codes for higher levels is then similar to Definition <a class="reference internal" href="codingBorel.html#def-Borel-codes">Definition 19</a>.</p>
+<p>As in the case of the halting problem, we can use the existence of universal sets to show that the levels of the Borel hierarchy are proper. The crucial point is that we can use universal sets to <strong>diagonalize</strong>.</p>
+<div class="proof theorem admonition" id="thm-Borel-proper">
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>For any <span class="math notranslate nohighlight">\(n \geq 1\)</span>, <span class="math notranslate nohighlight">\(\bSigma^0_n \neq \bPi^0_n\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(U\)</span> be an <span class="math notranslate nohighlight">\(\Baire\)</span>-universal set for <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>. Put</p>
+<div class="math notranslate nohighlight">
+\[
+    D = \{ \alpha \colon (\alpha, \alpha) \in U \}.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>, <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>, too. Then <span class="math notranslate nohighlight">\(\Co{D}\)</span> is <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, but cannot be <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>, for then there would exist <span class="math notranslate nohighlight">\(\beta\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    \Co{D} = \{ \alpha \colon (\alpha, \beta) \in U \},
+\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[
+    \beta \in D \iff (\beta, \beta) \in U \iff \beta \in \Co{D}, 
+\]</div>
+<p>a contradiction.</p>
+</div>
+<p>The diagonal set <span class="math notranslate nohighlight">\(D\)</span> can obviously be defined for any universal set <span class="math notranslate nohighlight">\(U\)</span>, and hence the same proof yields a <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> set that is not <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span>.</p>
+<div class="proof corollary admonition" id="cor-hier-proper">
+<p class="admonition-title"><span class="caption-number">Corollary 7 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>For any <span class="math notranslate nohighlight">\(n \geq 1\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+    \bDelta^0_n \subsetneq \bSigma^0_n \subsetneq \bDelta^0_{n+1} \\
+    \bDelta^0_n \subsetneq \bPi^0_n \subsetneq \bDelta^0_{n+1}.
+\end{gather*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since <span class="math notranslate nohighlight">\(\BS \nsubseteq \BP\)</span> and <span class="math notranslate nohighlight">\(\BP \nsubseteq \BS\)</span>, <span class="math notranslate nohighlight">\(\bDelta^0_n \subsetneq \BS,\BP\)</span>. On the other hand if <span class="math notranslate nohighlight">\(\BS = \bDelta^0_{n+1}\)</span>, then <span class="math notranslate nohighlight">\(\BS\)</span> would be closed under complements, and hence <span class="math notranslate nohighlight">\(\BS = \BP\)</span>, contradicting <a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>.</p>
+</div>
+</section>
+<section id="borel-sets-of-transfinite-order">
+<h2>Borel sets of transfinite order<a class="headerlink" href="#borel-sets-of-transfinite-order" title="Permalink to this heading">#</a></h2>
+<p>We saw that the <strong>Borel sets of finite order</strong></p>
+<div class="math notranslate nohighlight">
+\[
+	\operatorname{Borel}_\omega = \bigcup_{n &lt; \omega} \BS[n]
+\]</div>
+<p>form a proper hierarchy. This fact also implies that <span class="math notranslate nohighlight">\(\Op{Borel}_\omega\)</span> does not exhaust all Borel sets.</p>
+<div class="proof proposition admonition" id="prop-nonfinite-Borel">
+<p class="admonition-title"><span class="caption-number">Proposition 29 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>There exists a Borel set <span class="math notranslate nohighlight">\(B\)</span> that is not <span class="math notranslate nohighlight">\(\BS\)</span> for any <span class="math notranslate nohighlight">\(n \in \Nat\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. For every <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, pick a set <span class="math notranslate nohighlight">\(B_n\)</span> in <span class="math notranslate nohighlight">\(\BP \setminus \BS\)</span>. Put</p>
+<div class="math notranslate nohighlight">
+\[
+    B = \bigcup_{n \in \Nat} \{(n,\alpha) \colon \alpha \in B_n \}.
+\]</div>
+<p>Each of the sets in the union is Borel and hence <span class="math notranslate nohighlight">\(B\)</span> is Borel. If <span class="math notranslate nohighlight">\(B\)</span> were of finite order, it would be <span class="math notranslate nohighlight">\(\BS[k]\)</span> for some <span class="math notranslate nohighlight">\(k \geq 1\)</span>. Since each <span class="math notranslate nohighlight">\(\BS\)</span> is closed under finite intersections, it follows that for all <span class="math notranslate nohighlight">\(m \geq 1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    B \cap \Cyl{\Tup{m}} 
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(\BS[k]\)</span>. But <span class="math notranslate nohighlight">\(B \cap \Cyl{\Tup{m}}\)</span> is homeomorphic to <span class="math notranslate nohighlight">\(B_m\)</span>, hence <span class="math notranslate nohighlight">\(B_m\)</span> in <span class="math notranslate nohighlight">\(\BS[k]\)</span> for all <span class="math notranslate nohighlight">\(m \geq 1\)</span>, contradiction.</p>
+</div>
+<p>We can extend the Borel hierarchy to arbitrary ordinals.</p>
+<div class="proof definition admonition" id="def-transfinite-Borel">
+<p class="admonition-title"><span class="caption-number">Definition 23 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space. Given an ordinal <span class="math notranslate nohighlight">\(\xi\)</span>, we define</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    &amp; \bSigma^0_\xi(X) = \{ \bigcup_k A_k \colon A_k \in \bPi^0_{\zeta_k}(X),\; \zeta_k &lt; \xi \}, \\
+    &amp; \bPi^0_\xi(X) = \{ \Co{A} \colon A \in \bSigma^0_\xi(X) \} = \Co{\bSigma^0_\xi(X)}, \\
+    &amp; \bDelta^0_\xi(X) = \bSigma^0_\xi(X) \cap \bPi^0_\xi(X). \\
+\end{align*}\]</div>
+</section>
+</div><p>It actually suffices to consider ordinals up to <span class="math notranslate nohighlight">\(\omega_1\)</span>, the first uncountable ordinal.</p>
+<div class="proof proposition admonition" id="prop-Borel-omega1">
+<p class="admonition-title"><span class="caption-number">Proposition 30 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For every Borel set <span class="math notranslate nohighlight">\(B\)</span> there exists <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span> such that <span class="math notranslate nohighlight">\(B \in \BS[\xi]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(B\)</span> is open, this is clear. It is also clear if <span class="math notranslate nohighlight">\(B\)</span> is the complement of a Borel for which the statement has been verified.</p>
+<p>Assume finally that</p>
+<div class="math notranslate nohighlight">
+\[
+    B = \bigcup_n B_n, \; \text{ where each $B_n$ is Borel},
+\]</div>
+<p>and assume the statement holds for each <span class="math notranslate nohighlight">\(B_n\)</span>. For each <span class="math notranslate nohighlight">\(n\)</span>, let <span class="math notranslate nohighlight">\(\xi_n\)</span> be a countable ordinal such that</p>
+<div class="math notranslate nohighlight">
+\[
+    B_n \in \BP[{\xi_n}].
+\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[
+    B \in \BS[\xi], \; \text{ where $\xi = \sup \{\xi_n +1 \colon n \in \Nat\}$}.
+\]</div>
+<p>Since each <span class="math notranslate nohighlight">\(\xi_n\)</span> is countable, <span class="math notranslate nohighlight">\(\xi\)</span> is countable.</p>
+</div>
+<p>Borel sets of infinite order have the <strong>same closure properties as their counterparts of finite order</strong>. The proofs, however have to proceed by induction using the topological properties of <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> and <span class="math notranslate nohighlight">\(\BP[\xi]\)</span>, since the characterization via definability in arithmetic is no longer available – the arithmetical hierarchy reaches only to <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<p>Similarly, the Hierarchy Theorem (<a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>) extends to the transfinite levels. As the finite levels, this follows from the existence of universal sets for each level, which we now prove for the full hierarchy.</p>
+<div class="proof proposition admonition" id="prop-universal-general">
+<p class="admonition-title"><span class="caption-number">Proposition 31 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For each <span class="math notranslate nohighlight">\(\xi &lt; \omega_1\)</span>, there exists a <span class="math notranslate nohighlight">\(\Baire\)</span>-universal set for <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> <span class="math notranslate nohighlight">\((\BP[\xi])\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bSigma^0_\xi\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+    \neg U = \{ (\alpha,\gamma) \colon (\alpha,\gamma) \not\in U \}
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\bPi^0_\xi\)</span>, since for any <span class="math notranslate nohighlight">\(\bPi^0_\xi\)</span> set <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B = \neg A\)</span> is <span class="math notranslate nohighlight">\(\bSigma^0_\xi\)</span> and hence there exists a <span class="math notranslate nohighlight">\(\gamma\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    B = \{\beta \colon (\beta,\gamma) \in U \}
+\]</div>
+<p>and hence</p>
+<div class="math notranslate nohighlight">
+\[
+    A = \{ \alpha \colon (\alpha,\gamma) \not\in U \}. 
+\]</div>
+<p>It remains to show that each <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> has an <span class="math notranslate nohighlight">\(\Baire\)</span>-universal set. By induction hypothesis, for every <span class="math notranslate nohighlight">\(\eta &lt; \xi\)</span> exists a <span class="math notranslate nohighlight">\(\Baire\)</span>-universal set <span class="math notranslate nohighlight">\(U_\eta\)</span> for <span class="math notranslate nohighlight">\(\BP[\eta]\)</span>. Since <span class="math notranslate nohighlight">\(\xi\)</span> is countable, we can pick a monotone  sequence of ordinals <span class="math notranslate nohighlight">\((\xi_n)\)</span> such that <span class="math notranslate nohighlight">\(\xi = \sup \{\xi_n + 1 \colon n &lt; \omega \}\)</span>. Define</p>
+<div class="math notranslate nohighlight">
+\[
+    U_\xi =  \{ (\alpha, \gamma) \colon \exists n (\alpha, (\gamma)_n) \in U_{\xi_n} \},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\((\gamma)_n\)</span> denotes the <span class="math notranslate nohighlight">\(n\)</span>th column of <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>It is straightforward to check that <span class="math notranslate nohighlight">\(U_\xi\)</span> is <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\BS[\xi]\)</span>. (Note that any set <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> can be represented as <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span> with <span class="math notranslate nohighlight">\(A_n \in \BP[\xi_n]\)</span>, since <span class="math notranslate nohighlight">\((\xi_n+1)\)</span> is cofinal in <span class="math notranslate nohighlight">\(\xi\)</span>.)</p>
+</div>
+<p>The construction of the universal <span class="math notranslate nohighlight">\(\BS[\xi]\)</span> set bears some resemblance to the construction of a <span class="math notranslate nohighlight">\(\bSigma^0_{n+1}\)</span> code. It is indeed possible to formally define Borel codes for <em>all</em> Borel sets.</p>
+<div class="proof definition admonition" id="def-Borel-codes-transfinite">
+<p class="admonition-title"><span class="caption-number">Definition 24 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span>.</p>
+<ul class="simple">
+<li><p>Suppose <span class="math notranslate nohighlight">\(\gamma \in \Baire\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0) = 1\)</span> and <span class="math notranslate nohighlight">\(\gamma' \in \Baire\)</span>. <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for the open set</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    U = \bigcup_{\gamma'(\sigma) = 0} \Cyl{\sigma}
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=2\)</span> and <span class="math notranslate nohighlight">\(\gamma'\)</span> is a Borel code for <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for <span class="math notranslate nohighlight">\(\Co{A}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\gamma\)</span> is such that <span class="math notranslate nohighlight">\(\gamma(0)=3\)</span> and for each <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma'_m\)</span> is a Borel code of a set <span class="math notranslate nohighlight">\(A_m\)</span>, we say <span class="math notranslate nohighlight">\(\gamma\)</span> is a Borel code for <span class="math notranslate nohighlight">\(\bigcup_n A_n\)</span>.</p></li>
+</ul>
+</section>
+</div><p>Any Borel code induces a well-founded tree (given by the coding nodes <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span>,and <span class="math notranslate nohighlight">\(3\)</span>). We can also consider Borel sets with computable codes. But there is no more straightforward connection with effective definability. It is possible to do this, but it requires a careful development of what it means to take effective unions along countable ordinals. We will return to it later.</p>
+<p>Looking further ahead, one can show that <strong>the set of all Borel codes is not Borel</strong> (exercise – use a diagonalization argument as in the proof of <a class="reference internal" href="#thm-Borel-proper">Theorem 19</a>). At the heart of this lies the fact that we cannot, in a Borel way, describe whether an arbitrary tree over <span class="math notranslate nohighlight">\(\Nat\)</span> is well-founded or not. This will soon be a central topic when we turn our investigation to analytic and co-analytic sets.</p>
+<!-- This general proof of existence of universal sets does not use Borel codes, since those were defined only for Borel sets of finite order. The proof of {prf:ref}`prop-universal-general` provides an idea how we could extend the definition of a code to transfinite orders: Take unions of codes along a cofinal sequence. However, we would like to this in an effective way, and it is not clear how to do this for infinite ordinals in general. 
+
+We will later return to this question, when we introduce computable ordinals}.
+ -->
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="codingBorel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Coding Borel Sets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="imagesBorel.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Continuous Images of Borel sets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-forms">Normal forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closure-properties">Closure properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-sets">Universal sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-sets-of-transfinite-order">Borel sets of transfinite order</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

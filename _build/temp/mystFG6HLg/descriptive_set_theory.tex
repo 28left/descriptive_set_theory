@@ -1,0 +1,213 @@
+% Created with jtex v.1.0.20
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\bibliographystyle{abbrvnat}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  imports  %%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%  math commands  %%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Ord}{\operatorname{Ord}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Ci}{\mathbb{T}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Str}{2^{<\Nat}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Ury}{\mathbb{U}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Lip}{\Op{Lip}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\Co}[1]{\neg \, #1}
+\newcommand{\Sgeq}{\supseteq}
+\newcommand{\Sgr}{\supset}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\lex}{\Op{lex}}
+\newcommand{\KB}{\Op{KB}}
+\newcommand{\Nstr}{\Nat^{<\Nat}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Ap}{\Op{Ap}}
+\newcommand{\Qu}{\mathsf{Q}}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\BP}[1]{\bPi^0_{#1}}
+\newcommand{\BS}[1]{\bSigma^0_{#1}}
+\newcommand{\PS}[1]{\bSigma^{1}_{#1}}
+\newcommand{\PP}[1]{\bPi^1_{#1}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\DC}{\mathsf{DC}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\W}{\Op{W}}
+\newcommand{\WF}{\Op{WF}}
+\newcommand{\WOrd}{\Op{WOrd}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\V}{\Op{V}}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\Const}[1]{\underline{#1}}
+\newcommand{\VL}{\mathsf{V=L}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  theorem  %%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{observation}{Observation}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={black}
+}
+
+% Style quotes
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{quoteshade}{rgb}{0.95, 0.95, 1}
+\renewenvironment{quote}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{darkblue}\vrule width 2pt}%
+    {\color{quoteshade}\vrule width 4pt}%
+    \colorbox{quoteshade}%
+  }%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  \noindent\hspace{-8pt}% disable indenting first paragraph
+  \begin{adjustwidth}{0pt}{0pt}% adjust as needed
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\title{\Huge \textbf{Descriptive Set Theory}}
+\author{\textsc{}}
+
+\begin{document}
+\sloppy
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+
+% \include{preface.tex}
+% \include{acknowledgements.tex}
+
+\include{descriptive_set_theory-perfect-subsets-r}
+
+\section{Ordinals and cardinals}
+
+\include{descriptive_set_theory-ordinals}
+
+\section{Polish spaces}
+
+\include{descriptive_set_theory-polish}
+
+\include{descriptive_set_theory-urysohn}
+
+\include{descriptive_set_theory-trees}
+
+\section{The Borel hierarchy}
+
+\include{descriptive_set_theory-borel}
+
+\include{descriptive_set_theory-subsets-polish}
+
+\include{descriptive_set_theory-measure}
+
+\include{descriptive_set_theory-choice}
+
+\include{descriptive_set_theory-codingborel}
+
+\include{descriptive_set_theory-structureborel}
+
+\include{descriptive_set_theory-imagesborel}
+
+\section{Projective sets}
+
+\include{descriptive_set_theory-analytic}
+
+\include{descriptive_set_theory-regularityanalytic}
+
+\include{descriptive_set_theory-projective}
+
+\include{descriptive_set_theory-coanalytic}
+
+\section{Axiomatic set theory}
+
+\include{descriptive_set_theory-zfc}
+
+\include{descriptive_set_theory-recursion}
+
+\include{descriptive_set_theory-models}
+
+\include{descriptive_set_theory-large-cardinals}
+
+\section{Constructibility}
+
+\include{descriptive_set_theory-constructible}
+
+\include{descriptive_set_theory-v-l}
+
+\include{descriptive_set_theory-constructible-reals}
+
+\include{descriptive_set_theory-shoenfield}
+
+\section{Reference}
+
+\include{descriptive_set_theory-bibliography}
+
+
+
+
+\bibliography{main.bib}
+
+\end{document}

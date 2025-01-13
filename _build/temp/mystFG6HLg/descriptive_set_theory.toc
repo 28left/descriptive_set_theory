@@ -1,0 +1,114 @@
+\contentsline {section}{\numberline {0.1}Introduction: Perfect Subsets of the Real Line}{1}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Ordinals and cardinals}{4}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}Ordinals}{5}{subsection.0.2.1}%
+\contentsline {subsubsection}{Orders and well-orders}{5}{section*.4}%
+\contentsline {subsubsection}{Ordinal numbers}{7}{section*.5}%
+\contentsline {subsubsection}{The well-ordering of ordinals}{8}{section*.6}%
+\contentsline {subsubsection}{Basic properties of ordinals}{9}{section*.7}%
+\contentsline {subsubsection}{Metamathematical issues}{9}{section*.8}%
+\contentsline {subsubsection}{Representing well-orders as ordinals}{9}{section*.9}%
+\contentsline {section}{\numberline {0.3}Polish spaces}{10}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Polish Spaces}{11}{subsection.0.3.1}%
+\contentsline {subsubsection}{Review of some concepts from topology}{11}{section*.10}%
+\contentsline {paragraph}{Basis}{11}{section*.11}%
+\contentsline {paragraph}{Density}{11}{section*.12}%
+\contentsline {paragraph}{Products}{11}{section*.13}%
+\contentsline {subsubsection}{Polish spaces -- the basics}{11}{section*.14}%
+\contentsline {subsubsection}{Product spaces}{12}{section*.15}%
+\contentsline {subsection}{\numberline {0.3.2}Excursion: The Urysohn Space}{14}{subsection.0.3.2}%
+\contentsline {subsubsection}{Universal spaces}{14}{section*.16}%
+\contentsline {subsubsection}{Extensions of finite isometries and Urysohn universality}{14}{section*.17}%
+\contentsline {subsubsection}{Constructing the Urysohn space -- a first approximation}{15}{section*.18}%
+\contentsline {subsubsection}{Finishing the construction}{16}{section*.19}%
+\contentsline {subsection}{\numberline {0.3.3}Trees}{19}{subsection.0.3.3}%
+\contentsline {subsubsection}{Orderings on trees}{19}{section*.20}%
+\contentsline {subsubsection}{Coding trees}{20}{section*.21}%
+\contentsline {subsubsection}{Trees and closed sets}{20}{section*.22}%
+\contentsline {subsubsection}{Continuous mappings on product spaces}{21}{section*.23}%
+\contentsline {section}{\numberline {0.4}The Borel hierarchy}{22}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}Borel Sets}{23}{subsection.0.4.1}%
+\contentsline {subsubsection}{The Borel hierarchy}{23}{section*.24}%
+\contentsline {subsubsection}{The Borel sets of finite order}{24}{section*.25}%
+\contentsline {subsubsection}{Examples of Borel sets -- continuity points of functions}{25}{section*.26}%
+\contentsline {subsection}{\numberline {0.4.2}Subspaces of Polish Spaces}{27}{subsection.0.4.2}%
+\contentsline {subsubsection}{Borel set as clopen sets}{28}{section*.27}%
+\contentsline {subsection}{\numberline {0.4.3}Measure and Baire Category}{30}{subsection.0.4.3}%
+\contentsline {subsubsection}{Filters and Ideals}{30}{section*.28}%
+\contentsline {subsubsection}{Measures}{30}{section*.29}%
+\contentsline {subsubsection}{Lebesgue measure}{32}{section*.30}%
+\contentsline {subsubsection}{Nullsets}{32}{section*.31}%
+\contentsline {subsubsection}{Baire category}{33}{section*.32}%
+\contentsline {subsubsection}{The Baire property}{34}{section*.33}%
+\contentsline {subsection}{\numberline {0.4.4}The Axiom of Choice}{36}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {0.4.5}Coding Borel Sets}{38}{subsection.0.4.5}%
+\contentsline {subsubsection}{Some notation for reals, strings, and numbers}{38}{section*.34}%
+\contentsline {subsubsection}{Borel codes of finite order}{38}{section*.35}%
+\contentsline {subsubsection}{Computing with Borel codes}{39}{section*.36}%
+\contentsline {subsubsection}{The effective Borel hierarchy}{40}{section*.37}%
+\contentsline {subsubsection}{Relativization}{41}{section*.38}%
+\contentsline {subsubsection}{Definability in Arithmetic}{41}{section*.39}%
+\contentsline {subsection}{\numberline {0.4.6}The Structure of Borel Sets}{43}{subsection.0.4.6}%
+\contentsline {subsubsection}{Notation}{43}{section*.40}%
+\contentsline {subsubsection}{Normal forms}{43}{section*.41}%
+\contentsline {subsubsection}{Closure properties}{44}{section*.42}%
+\contentsline {subsubsection}{Universal sets}{45}{section*.43}%
+\contentsline {subsubsection}{Borel sets of transfinite order}{46}{section*.44}%
+\contentsline {subsection}{\numberline {0.4.7}Continuous Images of Borel sets}{49}{subsection.0.4.7}%
+\contentsline {subsubsection}{Borel sets as continuous images of closed sets}{49}{section*.45}%
+\contentsline {subsubsection}{Images of Borel sets under arbitrary continuous functions}{50}{section*.46}%
+\contentsline {section}{\numberline {0.5}Projective sets}{52}{section.0.5}%
+\contentsline {subsection}{\numberline {0.5.1}Analytic Sets}{53}{subsection.0.5.1}%
+\contentsline {subsubsection}{The Lusin Separation Theorem}{53}{section*.47}%
+\contentsline {subsubsection}{The Souslin operation}{54}{section*.48}%
+\contentsline {subsection}{\numberline {0.5.2}Regularity Properties of Analytic sets}{56}{subsection.0.5.2}%
+\contentsline {subsubsection}{Idempotence of the Souslin operation}{56}{section*.49}%
+\contentsline {subsubsection}{Lebesgue measurability of analytic sets}{57}{section*.50}%
+\contentsline {subsubsection}{Universally measurable sets}{58}{section*.51}%
+\contentsline {subsubsection}{Baire property of analytic sets}{58}{section*.52}%
+\contentsline {subsection}{\numberline {0.5.3}The Projective Hierarchy}{59}{subsection.0.5.3}%
+\contentsline {subsubsection}{The effective projective hierarchy}{59}{section*.53}%
+\contentsline {subsubsection}{Examples of projective sets}{60}{section*.54}%
+\contentsline {subsubsection}{Some structural properties of the projective hierarchy}{60}{section*.55}%
+\contentsline {subsubsection}{Regularity properties of projective sets}{61}{section*.56}%
+\contentsline {subsection}{\numberline {0.5.4}Co-Analytic sets}{63}{subsection.0.5.4}%
+\contentsline {subsubsection}{Normal forms}{63}{section*.57}%
+\contentsline {subsubsection}{$\mathbf {\Pi }^1_1$-complete sets}{63}{section*.58}%
+\contentsline {subsubsection}{Well-founded relations and well-orderings}{64}{section*.59}%
+\contentsline {section}{\numberline {0.6}Axiomatic set theory}{67}{section.0.6}%
+\contentsline {subsection}{\numberline {0.6.1}The Axioms of Set Theory}{68}{subsection.0.6.1}%
+\contentsline {subsubsection}{Comprehension and Russell Antinomy}{68}{section*.60}%
+\contentsline {subsubsection}{The Axioms of $\mathsf {ZFC}$}{69}{section*.61}%
+\contentsline {subsection}{\numberline {0.6.2}Recursion and the Von-Neumann Hierarchy}{72}{subsection.0.6.2}%
+\contentsline {subsubsection}{Transfinite induction}{72}{section*.62}%
+\contentsline {subsubsection}{Ordinal recursion}{72}{section*.63}%
+\contentsline {subsubsection}{Recursion for well-founded relations}{73}{section*.64}%
+\contentsline {subsubsection}{The Von-Neumann hierarchy}{74}{section*.65}%
+\contentsline {subsection}{\numberline {0.6.3}Models of Set Theory}{76}{subsection.0.6.3}%
+\contentsline {subsubsection}{Mostowski collapse}{77}{section*.66}%
+\contentsline {subsection}{\numberline {0.6.4}Large Cardinals}{79}{subsection.0.6.4}%
+\contentsline {subsubsection}{Inaccessible cardinals}{79}{section*.67}%
+\contentsline {subsubsection}{Measurability}{80}{section*.68}%
+\contentsline {paragraph}{Measurable cardinals}{82}{section*.69}%
+\contentsline {subsubsection}{Partition properties}{83}{section*.70}%
+\contentsline {section}{\numberline {0.7}Constructibility}{85}{section.0.7}%
+\contentsline {subsection}{\numberline {0.7.1}The Constructible Universe}{86}{subsection.0.7.1}%
+\contentsline {subsubsection}{Basic properties of $L$}{86}{section*.71}%
+\contentsline {subsubsection}{Defining definability}{87}{section*.72}%
+\contentsline {paragraph}{Coding set theoretic formulas}{87}{section*.73}%
+\contentsline {paragraph}{Definability of syntactic notions}{88}{section*.74}%
+\contentsline {paragraph}{Definability of the satisfaction relation}{88}{section*.75}%
+\contentsline {paragraph}{Definability of definability}{88}{section*.76}%
+\contentsline {subsubsection}{Cumulative hierarchies}{89}{section*.77}%
+\contentsline {subsubsection}{Inner models}{90}{section*.78}%
+\contentsline {subsection}{\numberline {0.7.2}The Axiom of Constructibility}{92}{subsection.0.7.2}%
+\contentsline {subsubsection}{Constructibility and the Axiom of Choice}{93}{section*.79}%
+\contentsline {subsubsection}{Condensation and the Continuum Hypothesis}{93}{section*.80}%
+\contentsline {subsection}{\numberline {0.7.3}Constructible Reals}{96}{subsection.0.7.3}%
+\contentsline {subsubsection}{The set of constructible reals}{96}{section*.81}%
+\contentsline {subsubsection}{An uncountable $\Pi ^1_1$ set without a perfect subset}{97}{section*.82}%
+\contentsline {subsection}{\numberline {0.7.4}Shoenfield Absoluteness}{99}{subsection.0.7.4}%
+\contentsline {subsubsection}{Tree representations of $\mathbf {\Sigma }^1_2$ sets}{99}{section*.83}%
+\contentsline {subsubsection}{$\mathbf {\Sigma }^1_2$ sets as unions of Borel sets}{99}{section*.84}%
+\contentsline {subsubsection}{Absoluteness of $\Sigma ^1_2$ relations}{100}{section*.85}%
+\contentsline {section}{\numberline {0.8}Reference}{102}{section.0.8}%
+\contentsline {subsection}{\numberline {0.8.1}Bibliography}{103}{subsection.0.8.1}%

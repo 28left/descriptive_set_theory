@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Axioms of Set Theory &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ZFC';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Recursion and the Von-Neumann Hierarchy" href="recursion.html" />
+    <link rel="prev" title="Co-Analytic sets" href="coanalytic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FZFC.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ZFC.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Axioms of Set Theory</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-and-russell-antinomy">Comprehension and Russell Antinomy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axioms-of-mathsf-zfc">The Axioms of <span class="math notranslate nohighlight">\(\mathsf{ZFC}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinals">Ordinals</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-axioms-of-set-theory">
+<h1>The Axioms of Set Theory<a class="headerlink" href="#the-axioms-of-set-theory" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\newcommand{\PS}[1][n]{\bSigma^1_{#1}}
+\newcommand{\PP}[1][n]{\bPi^1_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<p>In the previous chapters, we have repeatedly brought up a metamathematical context, such as the use of the Axiom of Choice, or Solovay’s model in which every set of reals is measurable. But we have not really distinguished between results in a formal theory and in the metatheory, mostly because we did not really establish a formal theory to begin with. We have treated descriptive set theory like most other mathematical theories in that we defined our basic objects (Polish spaces, Borel sets, etc.) and then started proving facts about them “the usual way”, as we would prove facts about commutative rings or locally compact topological spaces. But in order to make better sense of the metamathematical issues, we have to “pause” and talk a bit about the axioms of set theory.</p>
+<section id="comprehension-and-russell-antinomy">
+<h2>Comprehension and Russell Antinomy<a class="headerlink" href="#comprehension-and-russell-antinomy" title="Permalink to this heading">#</a></h2>
+<p>To develop set theory formally as a theory of first order logic, we first need to fix the <strong>language</strong>. We want to consider the notion of a <em>set</em> as foundational (with the intention to develop everything else from it), we provide only <strong>one binary relation symbol</strong>, <span class="math notranslate nohighlight">\(\in\)</span>. We will denote this as the <strong>language of set theory</strong>, <span class="math notranslate nohighlight">\(\mathcal{L}_\in\)</span>.</p>
+<p>How can we axiomatize the concept of set?</p>
+<p>In his famous 1895 paper “<em>Beiträge zu Begründung der transfiniten Mengenlehre</em>” <span id="id1">[<a class="reference internal" href="bibliography.html#id4" title="Georg Cantor. Beiträge zur begründung der transfiniten mengenlehre. Mathematische Annalen, 46(4):481–512, 1895.">Cantor, 1895</a>]</span>, Georg Cantor writes</p>
+<blockquote>
+<div><p>Unter einer “<em>Menge</em>” verstehen wir jede Zusammenfassung <span class="math notranslate nohighlight">\(M\)</span> von bestimmten wohlunterschiedenen Objekten unserer Anschauung oder unseres Denkens (welche die “<em>Elemente</em>” von  <span class="math notranslate nohighlight">\(M\)</span>  genannt werden)  zu einem Ganzen.</p>
+</div></blockquote>
+<p>This can be translated approximately as: <em>A set is any collection of certain distinct objects of our intuition or our thought into a whole</em>.</p>
+<p>We can try to make this more precise as follows:</p>
+<blockquote>
+<div><p>For every property <span class="math notranslate nohighlight">\(P(x)\)</span> exists a set <span class="math notranslate nohighlight">\(M\)</span> of all objects <span class="math notranslate nohighlight">\(x\)</span> having property <span class="math notranslate nohighlight">\(P\)</span>:  <span class="math notranslate nohighlight">\(M =\{x: M(x) \}\)</span>.</p>
+</div></blockquote>
+<p>This can be formalized in the language of set theory as an <strong>axiom scheme</strong>: For every <span class="math notranslate nohighlight">\(\mathcal{L}_\in\)</span>-formula <span class="math notranslate nohighlight">\(\varphi(x)\)</span>,</p>
+<blockquote>
+<div><p>(<strong>Comprehension</strong>)<span class="math notranslate nohighlight">\(_\varphi\)</span> <span class="math notranslate nohighlight">\(\exists y \, \forall x \; ( x \in y \leftrightarrow \varphi(x))\)</span></p>
+</div></blockquote>
+<p>This axiom, however, is <strong>contradictory</strong>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Russell’s antinomy (1903)</p>
+<p>If we choose <span class="math notranslate nohighlight">\(\varphi(x) = \neg x \in x\)</span>, then the Comprehension axiom yields the existence of a set <span class="math notranslate nohighlight">\(r\)</span> with</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\forall x ( x \in  r \leftrightarrow x \not \in x).
+\end{equation*}\]</div>
+<p>In particular, for <span class="math notranslate nohighlight">\(x = r\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+r \in  r \leftrightarrow r \not \in r ,
+\end{equation*}\]</div>
+<p>contradiction!</p>
+</div>
+<p>We obtain similar contradictions if we choose as <span class="math notranslate nohighlight">\(\varphi(x)\)</span> the formula</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+     x = x  &amp; &amp; \text{antinomy of the set of all sets (Cantor)} \\
+     x\;\text{is a cardinal} &amp; &amp;\text{Cantor, around 1899, published 1932}\\
+     x \; \text{is an ordinal} &amp; \qquad  &amp; \text{antinomy of Burali-Forti}
+\end{eqnarray*}\]</div>
+<p>These antinomies are, however, not as direct as Russell’s and require some further development of the theory in order to derive a contradiction.</p>
+<p>Regarding the existence of sets, we have to distinguish between</p>
+<ul class="simple">
+<li><p><strong>classes</strong>, which we will denote by capital letters <span class="math notranslate nohighlight">\(A,B,\dots\)</span> (for some specific, important classes we will also use boldface) and</p></li>
+<li><p><strong>sets</strong>, denoted in this context by lower case letters <span class="math notranslate nohighlight">\(a,b,\ldots,x,y \ldots\)</span>.</p></li>
+</ul>
+<p>An arbitrary property <span class="math notranslate nohighlight">\(\varphi(x)\)</span> will define a corresponding class</p>
+<div class="math notranslate nohighlight">
+\[
+A = \{x \colon \varphi(x)\}
+\]</div>
+<p>As we saw above, classes are not necessarily sets: some are “<em>too large</em>” to be a set, as for example the <strong>class of all sets</strong>,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{V} = \{ x \colon x = x \}
+\]</div>
+<p>Classes that are not sets are called <strong>proper classes</strong>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>So when we write <span class="math notranslate nohighlight">\(A \subseteq B\)</span> for classes <span class="math notranslate nohighlight">\(A,B\)</span> defined by <span class="math notranslate nohighlight">\(\varphi, \psi\)</span>, respectively, the formal expression would be <span class="math notranslate nohighlight">\(\forall x ( \varphi(x) \to \psi(x))\)</span>.</p>
+</aside>
+<p>You should keep in mind that, in the formal theory <span class="math notranslate nohighlight">\(\ZF\)</span>, we do not have variables for classes, so the definition above is <em>informal</em>.  Any class variable, as well as expressions like <span class="math notranslate nohighlight">\(a \in A\)</span>, should be seen as <em>abbreviations</em> for a formal expression using the underlying formula.
+There are formal systems (such as <strong>Bernays-Gödel set theory</strong>) that use classes explicitly, but they are used less frequently.</p>
+</section>
+<section id="the-axioms-of-mathsf-zfc">
+<h2>The Axioms of <span class="math notranslate nohighlight">\(\mathsf{ZFC}\)</span><a class="headerlink" href="#the-axioms-of-mathsf-zfc" title="Permalink to this heading">#</a></h2>
+<p>We begin with the <strong>Axiom of Extensionality</strong>, which is essential for the equality relation between sets.</p>
+<blockquote>
+<div><p>(<strong>Extensionality</strong>)  <span class="math notranslate nohighlight">\(\qquad \forall x (x \in a  \leftrightarrow x \in b)  \to a=b.\)</span></p>
+</div></blockquote>
+<p>Consequently, two sets coincide if they have the same elements.</p>
+<p>The basic idea of the <strong>Zermelo-Fraenkel</strong> axiom system <span class="math notranslate nohighlight">\(\ZF\)</span> is that we avoid introducing sets that are “too large” (and hence would lead to contradictions) by allowing new sets only if they can be <strong>“generated” from a given set</strong> by a number of fixed, well-behaved operations.</p>
+<p>So let us postulate that at least one set exists:</p>
+<blockquote>
+<div><p>(<strong>Set Existence</strong>) <span class="math notranslate nohighlight">\(\qquad \exists x ( x = x )\)</span></p>
+</div></blockquote>
+<p>This axiom is not strictly necessary, as the existence of a set also follows from other axioms in <span class="math notranslate nohighlight">\(\ZF\)</span> (or usually even from the underlying axioms of first-order logic). But it is good to have it as a starting point here for emphasis.</p>
+<p>We have seen we cannot use full comprehension for sets. In its place we introduce the scheme of</p>
+<blockquote>
+<div><p>(<strong>Separation</strong>)<span class="math notranslate nohighlight">\(_{\varphi}\)</span> <span class="math notranslate nohighlight">\(\qquad  \forall a \exists y \forall x (x \in y \leftrightarrow x \in a \wedge \varphi(x,\ldots))\)</span></p>
+</div></blockquote>
+<p>By Extensionality, the set <span class="math notranslate nohighlight">\(y\)</span> is unique.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>In particular, the empty set <span class="math notranslate nohighlight">\(\emptyset\)</span> exists. (Why?)</p>
+</aside>
+<p>Separation allows us to select from any class <span class="math notranslate nohighlight">\(\{x \colon \varphi(x,\ldots)\}\)</span> those elements that are in a given set <span class="math notranslate nohighlight">\(a\)</span> and collect them in a <strong>set</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \{x \in a \colon \varphi(x,\ldots)\}
+\end{equation*}\]</div>
+<p>Next, we have</p>
+<blockquote>
+<div><p>(<strong>Pairing</strong>) <span class="math notranslate nohighlight">\( \qquad \exists y \forall x( x \in y \leftrightarrow  x = a \vee x = b)\)</span>.</p>
+</div></blockquote>
+<p>This axioms allows forming <em>pairs of sets</em>, specifically</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \{a,b\} &amp; : =  \{x\colon x=a \; \vee \; x=b \} &amp;    \\
+    \{a\} &amp;: = \{x\colon x=a  \} &amp;    \text{singleton set}\\
+    (a,b) &amp;: =  \{\{a\},\{a,b\}\} &amp;    \text{ordered pair}
+\end{align*}\]</div>
+<p>While for the <em>pair set</em> <span class="math notranslate nohighlight">\(\{a,b\} = \{b,a\}\)</span> the order is not important, we have for the <em>ordered pair</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+(a,b) = (c,d) \leftrightarrow a = c \wedge b = d.
+\end{equation*}\]</div>
+<p>Hence, we can introduce <strong>binary relations</strong> as classes of ordered pairs</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+    \Op{Rel}(R) :\leftrightarrow  \forall u \in R \; \exists x,y  \; (u =(x,y)).
+\end{gather*}\]</div>
+<p>As usual, by identifying <strong>functions</strong> with their graphs, we can introduce functions as a special kind of relation:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+F: A \to B :\leftrightarrow  \forall x \in A \; \exists ! y \in B \; (x,y) \in F.
+\end{gather*}\]</div>
+<p>We write <span class="math notranslate nohighlight">\(\Op{Fun}(a)\)</span> to denote that fact that <span class="math notranslate nohighlight">\(a\)</span> is a function.</p>
+<p>Further elementary axioms:</p>
+<blockquote>
+<div><p>(<strong>Union</strong>)   <span class="math notranslate nohighlight">\(\qquad \forall a \exists y \forall z (z \in y  \leftrightarrow  \exists x \in a \; z \in x)\)</span></p>
+</div></blockquote>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Note that <em>Replacement</em> is an axiom scheme: For <em>any</em> formula, if that formula defines a function <span class="math notranslate nohighlight">\(F\)</span>, it asserts the existence of a set (the image set).</p>
+</aside>
+<blockquote>
+<div><p>(<strong>Replacement</strong>)<span class="math notranslate nohighlight">\(_F\)</span> <br>
+<span class="math notranslate nohighlight">\(\qquad \forall a  ((F: a \to \mathbf{V}) \: \rightarrow \: \exists u \forall y (y \in u \leftrightarrow \exists x \in a \; y = F(x)))\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p>(<strong>Power Set</strong>) <span class="math notranslate nohighlight">\(\qquad \forall a \exists y \forall z (z \in y \leftrightarrow z \subseteq a)\)</span></p>
+</div></blockquote>
+<p>It follows that, for a given set <span class="math notranslate nohighlight">\(a\)</span>, the following classes are sets:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\bigcup \, a = \bigcup_{x \in a} x &amp; : = \{z \colon \exists x \in a \; z \in x \}  &amp;  \qquad  \text{union}\\
+F[a] = \{F(x)|x \in a\} &amp;: = \{y\colon \exists x \in a \; y = F(x) \}  &amp;  \qquad  \text{image set}\\
+\mathcal{P}(a) &amp;: = \{x\colon x \subseteq a\} &amp; \qquad  \text{power set}
+\end{align*}\]</div>
+<blockquote>
+<div><p>(<strong>Infinity</strong>) <span class="math notranslate nohighlight">\( \qquad \exists x ( \emptyset \in x \wedge \forall y ( y \in x \to y \cup \{y\} \in x))\)</span></p>
+</div></blockquote>
+<p>The axiom of Infinity is a “pure” set existence axiom, that is, it does not depend on another set already existing. It therefore renders the axiom of Set Existence above redundant.
+It also implies the existence of the set <span class="math notranslate nohighlight">\(\Nat\)</span> of natural numbers (along with the operation <span class="math notranslate nohighlight">\(+\)</span>), which we will address in more detail below.</p>
+<p>Using <span class="math notranslate nohighlight">\(\Nat\)</span>, we can introduce the other basic number sets:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Integer = (\Nat\times\Nat)/ \sim_\Integer\)</span>, where <span class="math notranslate nohighlight">\((x,y) \sim_\Integer (u,v) :\Leftrightarrow  x+v = y+u\)</span>. Multiplication on <span class="math notranslate nohighlight">\(\Integer\)</span> can be defined inductively (see below).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Rat = (\Integer\times\Integer)/\sim_\Rat\)</span>, where <span class="math notranslate nohighlight">\((x,y) \sim_\Rat (u,v) :\Leftrightarrow xv = yu\)</span>.</p></li>
+<li><p>We can extend the linear order <span class="math notranslate nohighlight">\(&lt;\)</span> of <span class="math notranslate nohighlight">\(\Nat\)</span> to <span class="math notranslate nohighlight">\(\Integer\)</span> and then to <span class="math notranslate nohighlight">\(\Rat\)</span> in the usual way. Then we can introduce the <strong>real numbers</strong> as the set of <strong>Dedekind cuts</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\Real = \{ x \in \mathcal{P}(\Rat) \colon x \neq \emptyset \: \wedge \: x \neq \Rat \: \wedge \: \forall z \in x \forall y \in \Rat \: y &lt; z \to y \in x \}.
+\]</div>
+<p>The final axiom of <span class="math notranslate nohighlight">\(\ZF\)</span> is</p>
+<blockquote>
+<div><p>(<strong>Foundation</strong>) <span class="math notranslate nohighlight">\(\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)\)</span>.</p>
+</div></blockquote>
+<p>Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that <span class="math notranslate nohighlight">\(\in\)</span>-relation is <strong>well-founded</strong> on any set.</p>
+<p>We can also formalize the <strong>Axiom of Choice</strong>:</p>
+<blockquote>
+<div><p>(<strong>Choice</strong>) <span class="math notranslate nohighlight">\(\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))\)</span></p>
+</div></blockquote>
+<p>We denote the axiom system <span class="math notranslate nohighlight">\(\ZF + \AC\)</span> as <span class="math notranslate nohighlight">\(\ZFC\)</span> – <strong>Zermelo-Fraenkel with Choice</strong>.</p>
+</section>
+<section id="ordinals">
+<h2>Ordinals<a class="headerlink" href="#ordinals" title="Permalink to this heading">#</a></h2>
+<p>The axiom of Foundation facilitates the introduction of <strong>ordinal numbers</strong>.
+An ordinal is defined as</p>
+<blockquote>
+<div><p>a transitive set that is well-ordered by <span class="math notranslate nohighlight">\(\in\)</span>.</p>
+</div></blockquote>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><strong>Caution!</strong>
+Being transitive does <em>not</em> mean the <span class="math notranslate nohighlight">\(\in\)</span> relation is transitive on the set. (Counterexample?)</p>
+</aside>
+<div class="proof definition admonition" id="def-transitive">
+<p class="admonition-title"><span class="caption-number">Definition 32 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(x\)</span> is <strong>transitive</strong> if</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall y \in x \forall z ( z \in y \to z \in x)
+\]</div>
+</section>
+</div><p>In other words, transitive sets cannot “hide” elements in subsets. All elements of subsets have to be present in the set itself.</p>
+<p>Since by Foundation <span class="math notranslate nohighlight">\(\in\)</span> is well-founded on any set, it suffices to require that an ordinal is <strong>linearly ordered</strong> by <span class="math notranslate nohighlight">\(\in\)</span>.</p>
+<div class="proof definition admonition" id="def-ordinal">
+<p class="admonition-title"><span class="caption-number">Definition 33 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(a\)</span> is an <strong>ordinal</strong> if it is transitive and <span class="math notranslate nohighlight">\(\in\)</span> is <strong>connex</strong> on <span class="math notranslate nohighlight">\(a\)</span>, that is,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{con}
+\forall x,y \in a \; (x \in y \: \vee \: x=y \: \vee \: y \in x)
+\end{equation*}\]</div>
+</section>
+</div><div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that the above condition is indeed sufficient to linearly order <span class="math notranslate nohighlight">\(a\)</span> by <span class="math notranslate nohighlight">\(\in\)</span>, i.e. if <span class="math notranslate nohighlight">\(a\)</span> is transitive and satisfies (<span class="math notranslate nohighlight">\(\Op{con}\)</span>), then <span class="math notranslate nohighlight">\(\in\Rest{a}\)</span> is a linear order (in particular, it is also <em>irreflexive</em> and <em>transitive</em>).</p>
+</div>
+<p>If we write out the formulas in full, we see <a class="reference internal" href="#def-ordinal">Definition 33</a> is much simpler than the original one. Most notably, in <a class="reference internal" href="#def-ordinal">Definition 33</a> we only use only <strong>bounded quantifiers</strong> (of the form <span class="math notranslate nohighlight">\(\forall y \in a\)</span>), whereas in the original form we have to quantify over arbitrary subsets of <span class="math notranslate nohighlight">\(a\)</span>. This is an important difference whose impact will become clear later on.</p>
+<p>We can now develop the theory of ordinals based on this definition. We will not do this here (assuming already basic familiarity with this theory – formal or informal). Here are some of the basic facts:</p>
+<ul class="simple">
+<li><p><em>Any element of an ordinal is an ordinal</em>: <span class="math notranslate nohighlight">\(\Op{Ord}(a) \wedge b \in a \to \Op{Ord}(b)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 = \emptyset\)</span> is the <em>smallest ordinal</em>.</p></li>
+<li><p>Every ordinal <span class="math notranslate nohighlight">\(\xi\)</span> has an <strong>immediate successor</strong> <span class="math notranslate nohighlight">\(\xi' =  \xi+1 = \xi \cup \{\xi\}\)</span></p></li>
+<li><p>The <em>finite ordinals</em> are exactly the natural numbers:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+0 = \emptyset, \quad 1 = 0 + 1 = \emptyset \cup \{\emptyset\} = \{\emptyset\}, \quad 2 = 1+1 = \{\emptyset, \{\emptyset\} \}, \dots
+\]</div>
+<ul class="simple">
+<li><p>By the <strong>axiom of Infinity</strong>, the <strong>set of all finite ordinals</strong> exists. It is transitive, linearly ordered by <span class="math notranslate nohighlight">\(\in\)</span> and thus an ordinal itself: <span class="math notranslate nohighlight">\(\omega\)</span> the first infinite ordinal and the first <strong>limit ordinal</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \omega \neq 0 \: \wedge \: \forall \xi &lt; \omega \; (\xi+1 &lt; \omega).
+\]</div>
+<ul class="simple">
+<li><p>Every <em>set</em> of ordinals <span class="math notranslate nohighlight">\(a\)</span> has a <strong>supremum</strong> <span class="math notranslate nohighlight">\(\sup a = \bigcup_{\xi \in a} \xi\)</span> that is itself an ordinal, the least ordinal at least as large as all ordinals in <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p>Every well-ordering <span class="math notranslate nohighlight">\((b,&lt;)\)</span> on a set is order-isomorphic to a unique ordinal, the <strong>well-order type</strong> of <span class="math notranslate nohighlight">\((b,&lt;)\)</span></p></li>
+<li><p>The <span class="math notranslate nohighlight">\(\in\)</span>-relation is a well-ordering on the class of all ordinals.</p></li>
+<li><p>The ordinals <span class="math notranslate nohighlight">\(\mathbf{Ord}\)</span> form a proper class (Burali-Forti antinomy).</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="coanalytic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Co-Analytic sets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="recursion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recursion and the Von-Neumann Hierarchy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-and-russell-antinomy">Comprehension and Russell Antinomy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axioms-of-mathsf-zfc">The Axioms of <span class="math notranslate nohighlight">\(\mathsf{ZFC}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinals">Ordinals</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

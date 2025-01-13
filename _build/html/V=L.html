@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Axiom of Constructibility &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'V=L';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Constructible Reals" href="constructible-reals.html" />
+    <link rel="prev" title="The Constructible Universe" href="constructible.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FV=L.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/V=L.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Axiom of Constructibility</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructibility-and-the-axiom-of-choice">Constructibility and the Axiom of Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condensation-and-the-continuum-hypothesis">Condensation and the Continuum Hypothesis</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-axiom-of-constructibility">
+<h1>The Axiom of Constructibility<a class="headerlink" href="#the-axiom-of-constructibility" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\VL}{\mathsf{V=L}}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\Const}[1]{\underline{#1}}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\Ord}{\mathbf{Ord}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}\]</div>
+<p>We can add to <span class="math notranslate nohighlight">\(\ZF\)</span> the axiom that all sets are constructible, i.e.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((\VL) \qquad \forall x \exists y \: (y \text{ is an ordinal } \wedge \; x \in L_y).\)</span></p>
+</div></blockquote>
+<p>This axiom is usually denoted by <span class="math notranslate nohighlight">\(\VL\)</span>. We may be tempted to think that <span class="math notranslate nohighlight">\(L\)</span> is then trivially a model of <span class="math notranslate nohighlight">\(\ZF + \VL\)</span>. But this is not at all clear, since this has to hold <strong>relative to <span class="math notranslate nohighlight">\(L\)</span></strong>, i.e. <span class="math notranslate nohighlight">\((\VL)^L\)</span>.</p>
+<p>This means that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\forall x \in L \: \exists y \in L \: (y \text{ is an ordinal } \wedge \; (x \in L_y)^L).
+\end{equation*}\]</div>
+<p>To verify this, we need to make sure that <em>inside</em> <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> “means the same as” <span class="math notranslate nohighlight">\(L\)</span>. This is, of course, an absoluteness property, and we therefore revisit the complexity of the formulas defining the constructible universe.</p>
+<p>We have seen that the map <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>. This important implications for the map <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span>.</p>
+<div class="proof proposition admonition" id="prop-map-Lalpha">
+<p class="admonition-title"><span class="caption-number">Proposition 52 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The map <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first show that the mapping is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>. The mapping is obtained by ordinal recursion over the function <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span>.</p>
+<p>In general, if a function <span class="math notranslate nohighlight">\(G: \V \to \V\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span> and <span class="math notranslate nohighlight">\(F: \Ord \to \V\)</span> is obtained by recursion from <span class="math notranslate nohighlight">\(G\)</span>, i.e. <span class="math notranslate nohighlight">\(F(\alpha) = G(F\Rest{\alpha})\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is also <span class="math notranslate nohighlight">\(\Sigma_1\)</span>. This is because</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*}
+    y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
+        \wedge \forall \beta &lt; \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
+\end{multline*}\]</div>
+<p>Applying some of the various prefix transformations for <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all <span class="math notranslate nohighlight">\(\Delta_0\)</span> properties, the above formula can be shown to be <span class="math notranslate nohighlight">\(\Sigma_1\)</span>, too.</p>
+<p>In our case, <span class="math notranslate nohighlight">\(G\)</span> is a function that applies either <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> or <span class="math notranslate nohighlight">\(\bigcup\)</span> (both at most <span class="math notranslate nohighlight">\(\Delta_1\)</span>), depending on whether the input is a function defined on a successor ordinal or a limit ordinal (or applies the identity if neither is the case). Fortunately, this case distinction is also <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and hence we obtain that <span class="math notranslate nohighlight">\(G: \alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
+<p>Finally, as in <a class="reference internal" href="constructible.html#thm-definability-Pdef">Theorem 40</a>, observe that if <span class="math notranslate nohighlight">\(G\)</span> is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span> function with a <span class="math notranslate nohighlight">\(\Delta_1\)</span> domain (<span class="math notranslate nohighlight">\(\Ord\)</span>), then <span class="math notranslate nohighlight">\(G\)</span> is actually <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since we have</p>
+<div class="math notranslate nohighlight">
+\[
+	G(x) \neq y \; \Leftrightarrow \; \exists z (G(x)=z \: \wedge \: y \neq z)
+\]</div>
+<p>so the complement of the graph of <span class="math notranslate nohighlight">\(G\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable, too.</p>
+</div>
+<div class="proof corollary admonition" id="cor-complexity-L">
+<p class="admonition-title"><span class="caption-number">Corollary 18 </span></p>
+<section class="corollary-content" id="proof-content">
+<ul class="simple">
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   The relations <span class="math notranslate nohighlight">\(x = L_\alpha\)</span> and <span class="math notranslate nohighlight">\(x \in L_\alpha\)</span> are <span class="math notranslate nohighlight">\(\Delta_1\)</span>.</p></li>
+<li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   The predicate <span class="math notranslate nohighlight">\(x \in L\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p></li>
+<li><p>(<strong>3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   The axiom <span class="math notranslate nohighlight">\(\VL\)</span> is <span class="math notranslate nohighlight">\(\Pi_2\)</span>.</p></li>
+</ul>
+</section>
+</div><p>We can relativize the definition of <span class="math notranslate nohighlight">\(L\)</span> to other classes <span class="math notranslate nohighlight">\(M\)</span>. If <span class="math notranslate nohighlight">\(M\)</span> is is an inner model, then the development of <span class="math notranslate nohighlight">\(L\)</span> can be done <em>relative to <span class="math notranslate nohighlight">\(M\)</span></em>. Since <span class="math notranslate nohighlight">\(M\)</span> is a <span class="math notranslate nohighlight">\(\ZF\)</span>-model, it has to contain all the sets <span class="math notranslate nohighlight">\(L_\alpha^M\)</span> (as we developed definability and proved facts about it <em>inside</em> <span class="math notranslate nohighlight">\(\ZF\)</span>). As <span class="math notranslate nohighlight">\(M\)</span> is transitive, the mapping <span class="math notranslate nohighlight">\(G: \alpha \to L_\alpha\)</span> is absolute for <span class="math notranslate nohighlight">\(M\)</span> and we obtain, for all <span class="math notranslate nohighlight">\(\alpha\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+L_\alpha^M = L_\alpha.
+\]</div>
+<div class="proof theorem admonition" id="thm-L-absolute">
+<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
+<section class="theorem-content" id="proof-content">
+<ul class="simple">
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   If <span class="math notranslate nohighlight">\(M\)</span> is any transitive proper class model of <span class="math notranslate nohighlight">\(\ZF\)</span>, then <span class="math notranslate nohighlight">\(L = L^M \subseteq  M\)</span>.</p></li>
+<li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(L\)</span> is a model of <span class="math notranslate nohighlight">\(\ZF + \VL\)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (1) follows immediately from the fact that for such <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(L_\alpha^M = L_\alpha\)</span>.</p>
+<p>(2) We have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\VL)^L &amp; \leftrightarrow \: \forall x\in L \exists y \in L \: (y \text{ is an ordinal } \wedge \; x \in L_y)^L &amp; \\
+        &amp; \leftrightarrow \: \forall x\in L \exists \alpha \: (x \in L_\alpha)^L  &amp; \qquad \text{($\Ord \subset L$ and absolute)}\\
+        &amp; \leftrightarrow \: \forall x\in L \exists \alpha \: (x \in L_\alpha)    &amp; \qquad \text{(by (1))} 
+\end{align*}\]</div>
+<p>The last statement is true since <span class="math notranslate nohighlight">\(L = \bigcup_{\alpha} L_\alpha\)</span>.</p>
+</div>
+<section id="constructibility-and-the-axiom-of-choice">
+<h2>Constructibility and the Axiom of Choice<a class="headerlink" href="#constructibility-and-the-axiom-of-choice" title="Permalink to this heading">#</a></h2>
+<p>Every well-ordering on a transitive set <span class="math notranslate nohighlight">\(X\)</span> can be extended to a well-ordering of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span>.</p>
+<p>Note that every element of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> is determined by a pair <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is a set-theoretic formula, and <span class="math notranslate nohighlight">\(\vec{a} = (a_1, \dots, a_n) \in X^{&lt;\omega}\)</span> is a finite sequence of parameters.</p>
+<p>For each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> there may exist more than one such pair (i.e.\ <span class="math notranslate nohighlight">\(z\)</span> can have more than one definition), but by well-ordering the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span>, we can assign each <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(X)\)</span> its <strong>least</strong> definition, and subsequently order <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(X)\)</span> by comparing least definitions. Elements already in <span class="math notranslate nohighlight">\(X\)</span> will form an initial segment.</p>
+<p>Such an order on the pairs <span class="math notranslate nohighlight">\((\psi, \vec{a})\)</span> can be obtained in a <strong>definable way</strong>: First use the order on <span class="math notranslate nohighlight">\(X\)</span> to order <span class="math notranslate nohighlight">\(X^{&lt;\omega}\)</span> length-lexicographically, order the formulas through their Gödel numbers, and finally put</p>
+<div class="math notranslate nohighlight">
+\[
+	(\psi,\vec{a}) &lt; (\varphi, \vec{b}) \quad \text{ iff } \quad \psi &lt; \varphi \text { or } (\psi &lt; \varphi \text { and } \vec{a} &lt; \vec{b}).
+\]</div>
+<p>Based on this, we can order all levels of <span class="math notranslate nohighlight">\(L\)</span> so that the following hold:</p>
+<ul class="simple">
+<li><p>(<strong>1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L \Rest{V_\omega}\)</span> is a standard well-ordering of <span class="math notranslate nohighlight">\(V_\omega\)</span>   (as for example given by a canonical isomorphism <span class="math notranslate nohighlight">\((V_\omega, \in) \leftrightarrow (\Nat, E)\)</span>, see <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Wilhelm Ackermann. Die widerspruchsfreiheit der allgemeinen mengenlehre. Mathematische Annalen, 114(1):305-315, 1937.">Ackermann, 1937</a>]</span>)</p></li>
+<li><p>(<strong>2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_{\alpha+1}}\)</span> is the order on <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(L_\alpha)\)</span> induced by <span class="math notranslate nohighlight">\(&lt;_L|L_\alpha\)</span>.</p></li>
+<li><p>(<strong>3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>   <span class="math notranslate nohighlight">\(&lt;_L\Rest{L_\lambda} = \bigcup_{\alpha &lt; \lambda} &lt;_L \Rest{L_\alpha}\)</span> for a limit ordinal <span class="math notranslate nohighlight">\(\lambda &gt; \omega\)</span>.</p></li>
+</ul>
+<p>It is straightforward to verify that this is indeed a well-ordering on <span class="math notranslate nohighlight">\(L\)</span>. Moreover, the relation <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>. (To verify this, we have to spell out all the details of the above definition. This is a little involved, so we skip this here and refer to <span id="id2">[<a class="reference internal" href="bibliography.html#id8" title="Thomas Jech. Set Theory. Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2003.">Jech, 2003</a>]</span>.)</p>
+<div class="proof theorem admonition" id="thm-L-AC">
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
+<section class="theorem-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\VL\)</span> implies <span class="math notranslate nohighlight">\(\AC\)</span></p>
+</section>
+</div><p>Since <span class="math notranslate nohighlight">\(L\)</span> is a model of <span class="math notranslate nohighlight">\(\ZF+\VL\)</span>, we obtain</p>
+<div class="proof corollary admonition" id="cor-Con(AC)">
+<p class="admonition-title"><span class="caption-number">Corollary 19 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, then <span class="math notranslate nohighlight">\(\ZF+\AC (= \ZFC)\)</span> is consistent, too.</p>
+</section>
+</div></section>
+<section id="condensation-and-the-continuum-hypothesis">
+<h2>Condensation and the Continuum Hypothesis<a class="headerlink" href="#condensation-and-the-continuum-hypothesis" title="Permalink to this heading">#</a></h2>
+<p>We now show that <span class="math notranslate nohighlight">\(\VL\)</span> implies the Continuum Hypothesis. The proof works by showing that under <span class="math notranslate nohighlight">\(\VL\)</span>, every subset of a cardinal <span class="math notranslate nohighlight">\(\kappa\)</span> will be constructed by stage <span class="math notranslate nohighlight">\(\kappa^+\)</span>. This is made possible by a “<strong>condensation</strong>” argument: If any subset <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(\kappa\)</span> is in <span class="math notranslate nohighlight">\(L\)</span>, then it must show up at some stage <span class="math notranslate nohighlight">\(L_\lambda\)</span>. <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(x\)</span> generate an elementary substructure <span class="math notranslate nohighlight">\(M\)</span> of <span class="math notranslate nohighlight">\(L_\lambda\)</span> or cardinality <span class="math notranslate nohighlight">\(\kappa\)</span>. If we could show that this <strong><span class="math notranslate nohighlight">\(M\)</span> itself must be an <span class="math notranslate nohighlight">\(L_\beta\)</span></strong>, we can use the fact that the cardinality of the <span class="math notranslate nohighlight">\(L_\alpha\)</span> behaves “tamely” along the ordinals, as evidenced by the following.</p>
+<div class="proof proposition admonition" id="prop-card-Lalpha">
+<p class="admonition-title"><span class="caption-number">Proposition 53 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(\alpha \geq \omega\)</span>, <span class="math notranslate nohighlight">\(|L_{\alpha}| = |\alpha|\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We know that <span class="math notranslate nohighlight">\(\alpha \subseteq L_\alpha\)</span>. Hence <span class="math notranslate nohighlight">\(|\alpha| \leq |L_\alpha|\)</span>. To show <span class="math notranslate nohighlight">\(|\alpha| \geq |L_\alpha|\)</span>, we work by induction on <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\alpha = \beta +1\)</span>, then by <a class="reference internal" href="constructible.html#prop-basics-L">Proposition 49</a>(4), <span class="math notranslate nohighlight">\(|L_\alpha| = |L_\beta| = |\beta| \leq |\alpha|\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\alpha\)</span> is limit, then <span class="math notranslate nohighlight">\(L_\alpha\)</span> is a union of <span class="math notranslate nohighlight">\(|\alpha|\)</span> many sets of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span> (by inductive hypothesis), hence of cardinality <span class="math notranslate nohighlight">\(\leq |\alpha|\)</span>.</p>
+</div>
+<p>But why would an elementary substructure of an <span class="math notranslate nohighlight">\(L_\lambda\)</span> have to be itself an <span class="math notranslate nohighlight">\(L_\beta\)</span>? This is where the absoluteness of the construction of <span class="math notranslate nohighlight">\(L\)</span> strikes yet again!</p>
+<div class="proof lemma admonition" id="lem-condensation">
+<p class="admonition-title"><span class="caption-number">Lemma 19 </span> (Condensation lemma)</p>
+<section class="lemma-content" id="proof-content">
+<p>There is a finite set <span class="math notranslate nohighlight">\(T\)</span> of axioms of <span class="math notranslate nohighlight">\(\ZF - \text{Power Set}\)</span> so that if <span class="math notranslate nohighlight">\(M\)</span> is a transitive set with <span class="math notranslate nohighlight">\(M\models T + \VL\)</span>, then <span class="math notranslate nohighlight">\(M = L_\lambda\)</span> for some limit ordinal <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+</section>
+</div><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>If we choose our finite axiom set more carefully, it is actually possible to show something stronger – namely that there exists a <span class="math notranslate nohighlight">\(\Pi_2\)</span>-formula <span class="math notranslate nohighlight">\(\sigma\)</span> such that for transitive <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(M \models \sigma\)</span> <strong>if and only if</strong> <span class="math notranslate nohighlight">\(M = L_\lambda\)</span> for some limit <span class="math notranslate nohighlight">\(\lambda\)</span>, see for example <span id="id3">[<a class="reference internal" href="bibliography.html#id5" title="Keith J. Devlin. Constructibility. Perspectives in Mathematical Logic. Springer-Verlag, Berlin, 1984.">Devlin, 1984</a>]</span> (and <span id="id4">[<a class="reference internal" href="bibliography.html#id13" title="Adrian RD Mathias. Weak systems of gandy, jensen and devlin. In Set Theory, pages 149–224. Springer, 2006.">Mathias, 2006</a>]</span> for necessary additions to Devlin’s axiom system <span class="math notranslate nohighlight">\(BS\)</span>).</p>
+</aside>
+<div class="proof admonition" id="proof">
+<p>Proof. Let the axioms of <span class="math notranslate nohighlight">\(T\)</span> be <em>Pairing</em>, <em>Union</em>, <em>Set Existence</em>, together with all (instances of) axioms of <span class="math notranslate nohighlight">\(\ZF\)</span> used to prove that all the theorems leading up to the fact that for all <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(L_\alpha\)</span>  exists and that <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span> (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)</p>
+<p>Suppose for a transitive set <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(M\models T + \VL\)</span>. Let <span class="math notranslate nohighlight">\(\lambda\)</span> be the least ordinal not in <span class="math notranslate nohighlight">\(M\)</span>.
+We must have that <span class="math notranslate nohighlight">\(\Ord^M = \lambda\)</span>, by absoluteness of
+ordinal.  Moreover, <span class="math notranslate nohighlight">\(\lambda\)</span> must be a limit ordinal since for each <span class="math notranslate nohighlight">\(\alpha \in M\)</span>, <span class="math notranslate nohighlight">\(\alpha \cup \{\alpha\}\)</span> is in <span class="math notranslate nohighlight">\(M\)</span> since <span class="math notranslate nohighlight">\(M\)</span> satisfies <em>Pairing</em> and <em>Union</em>.</p>
+<p>We have that</p>
+<div class="math notranslate nohighlight">
+\[
+    M\models \forall x \exists \alpha\in \Ord (x \in L_\alpha),
+\]</div>
+<p>thus</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall x \in M  \exists \alpha &lt; \lambda (x \in L^M_\alpha).
+\]</div>
+<p>By absoluteness of <span class="math notranslate nohighlight">\(\alpha \mapsto L_\alpha\)</span>, we have <span class="math notranslate nohighlight">\(L^M_\alpha = L_\alpha\)</span> and therefore</p>
+<div class="math notranslate nohighlight">
+\[
+    M \subseteq \bigcup_{\alpha \in M} L_\alpha =  \bigcup_{\alpha &lt; \lambda} L_\alpha = L_\lambda.
+\]</div>
+<p>On the other hand, for each <span class="math notranslate nohighlight">\(\alpha &lt; \lambda\)</span>, <span class="math notranslate nohighlight">\(L_\alpha^M\)</span> exists in <span class="math notranslate nohighlight">\(M\)</span> (since <span class="math notranslate nohighlight">\(T\)</span> is strong enough to prove this), and by absoluteness</p>
+<div class="math notranslate nohighlight">
+\[
+  L_\lambda =   \bigcup_{\alpha &lt; \lambda} L_\alpha =  \bigcup_{\alpha \in M} L^M_\alpha \subseteq M.
+\]</div>
+</div>
+<p>We now put condensation to use as described above.</p>
+<div class="proof lemma admonition" id="lemma-L-GCH">
+<p class="admonition-title"><span class="caption-number">Lemma 20 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(V=L\)</span>. If <span class="math notranslate nohighlight">\(\kappa\)</span> is a cardinal and <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, then <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since we assume <span class="math notranslate nohighlight">\(\VL\)</span>, there exists limit <span class="math notranslate nohighlight">\(\lambda &gt; \kappa\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\lambda\)</span> and such that <span class="math notranslate nohighlight">\(L_\lambda \models T + \VL\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is as in the <strong>condensation lemma</strong>. Such a <span class="math notranslate nohighlight">\(\lambda\)</span> exists by the <strong>reflection theorem</strong> (<a class="reference internal" href="constructible.html#thm-reflection">Theorem 41</a>).  Let <span class="math notranslate nohighlight">\(X = \kappa \cup \{x\}\)</span>. By choice of <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(X \subseteq L_\lambda\)</span>.</p>
+<p>By the <a class="reference external" href="https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem">Löwenheim-Skolem Theorem</a>, there exists an <strong>elementary substructure</strong> <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
+    X \subseteq N \subseteq L_\lambda \quad \text{ and } \quad |N| = |X|.
+\end{equation*}\]</div>
+<p><span class="math notranslate nohighlight">\(N\)</span> is not necessarily transitive, but since it is well-founded we can take its <strong>Mostowski collapse</strong> (<a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 34</a>) and obtain a <strong>transitive</strong> set <span class="math notranslate nohighlight">\(M\)</span>
+together with an <strong>isomorphism</strong> <span class="math notranslate nohighlight">\(\pi: (N,\in) \to (M,\in)\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\kappa\)</span> is contained in both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, and is already transitive, it is straightforward to show via induction that <span class="math notranslate nohighlight">\(\pi(\alpha) = \alpha\)</span> for all <span class="math notranslate nohighlight">\(\alpha \in \kappa\)</span>. Since <span class="math notranslate nohighlight">\(x \subseteq \kappa\)</span>, this also yields <span class="math notranslate nohighlight">\(\pi(x) = x\)</span>. This implies in turn that <span class="math notranslate nohighlight">\(x \in M\)</span>.</p>
+<p>As <span class="math notranslate nohighlight">\((M,\in)\)</span> is isomorphic to <span class="math notranslate nohighlight">\((N,\in)\)</span> and <span class="math notranslate nohighlight">\(N \preceq L_\lambda\)</span>, <span class="math notranslate nohighlight">\(M\)</span> satisfies the same sentences as <span class="math notranslate nohighlight">\((L_\lambda, \in)\)</span>. In particular, <span class="math notranslate nohighlight">\(M \models T + \VL\)</span>. By the <strong>condensation lemma</strong>, <span class="math notranslate nohighlight">\(M = L_\beta\)</span> for some <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>This implies, by <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>,</p>
+<div class="math notranslate nohighlight">
+\[  
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa &lt; \kappa^+ \leq \lambda.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(x \in L_\beta\)</span> and <span class="math notranslate nohighlight">\(\beta &lt; \kappa^+\)</span>, it follows that <span class="math notranslate nohighlight">\(x \in L_{\kappa^+}\)</span>, as desired.</p>
+</div>
+<div class="proof theorem admonition" id="thm-L-GCH">
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span> (Gödel)</p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then for all cardinals <span class="math notranslate nohighlight">\(\kappa\)</span>, <span class="math notranslate nohighlight">\(2^\kappa = \kappa^+\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(\VL\)</span>, then by <a class="reference internal" href="#lemma-L-GCH">Lemma 20</a>, <span class="math notranslate nohighlight">\(\mathcal{P}(\kappa) \subseteq L_{\kappa^+}\)</span>. With <a class="reference internal" href="#prop-card-Lalpha">Proposition 53</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+    2^\kappa = |\mathcal{P}(\kappa)| \leq |L_{\kappa^+}| = \kappa^+.
+\]</div>
+</div>
+<div class="proof corollary admonition" id="cor-Con(ZFC+GCH)">
+<p class="admonition-title"><span class="caption-number">Corollary 20 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\ZF\)</span> is consistent, so is <span class="math notranslate nohighlight">\(\ZF + \AC + \mathsf{GCH}\)</span>.</p>
+</section>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="constructible.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Constructible Universe</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="constructible-reals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Constructible Reals</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructibility-and-the-axiom-of-choice">Constructibility and the Axiom of Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condensation-and-the-continuum-hypothesis">Condensation and the Continuum Hypothesis</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

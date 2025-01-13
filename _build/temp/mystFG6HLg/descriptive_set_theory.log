@@ -1,0 +1,2281 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.1)  10 JAN 2025 17:23
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**descriptive_set_theory.tex
+(./descriptive_set_theory.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex
+/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count190
+\Gm@cntv=\count191
+\c@Gm@tempcnt=\count192
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen151
+\captionmargin=\dimen152
+\caption@leftmargin=\dimen153
+\caption@rightmargin=\dimen154
+\caption@width=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count193
+\c@continuedfloat=\count194
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count195
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count196
+\cp@tempcnt=\count197
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip52
+\fb@frw=\dimen159
+\fb@frh=\dimen160
+\FrameRule=\dimen161
+\FrameSep=\dimen162
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count198
+)
+\@linkdim=\dimen163
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count267
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count268
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen164
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count269
+\Field@Width=\dimen165
+\Fld@charsize=\dimen166
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count270
+\c@Item=\count271
+\c@Hfootnote=\count272
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+(/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box51
+\c@Hy@AnnotLevel=\count273
+\HyField@AnnotCount=\count274
+\Fld@listcount=\count275
+\c@bookmark@seq@number=\count276
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip53
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen167
+\enit@toks=\toks21
+\enit@inbox=\box52
+\enit@count@id=\count277
+\enitdp@description=\count278
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip55
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen168
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen169
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count279
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count280
+\leftroot@=\count281
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count282
+\DOTSCASE@=\count283
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen170
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count284
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count285
+\dotsspace@=\muskip17
+\c@parentequation=\count286
+\dspbrk@lvl=\count287
+\tag@help=\toks23
+\row@=\count288
+\column@=\count289
+\maxfields@=\count290
+\andhelp@=\toks24
+\eqnshift@=\dimen171
+\alignsep@=\dimen172
+\tagshift@=\dimen173
+\tagwidth@=\dimen174
+\totwidth@=\dimen175
+\lineht@=\dimen176
+\@envbody=\toks25
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip58
+\thm@postskip=\skip59
+\thm@headsep=\skip60
+\dth@everypar=\toks32
+)
+\c@theorem=\count291
+\c@corollary=\count292
+\c@proposition=\count293
+\c@definition=\count294
+\c@example=\count295
+\c@remark=\count296
+\c@axiom=\count297
+\c@conjecture=\count298
+\c@observation=\count299
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count300
+\l__pdf_internal_box=\box55
+\g__pdf_backend_object_int=\count301
+\g__pdf_backend_annotation_int=\count302
+\g__pdf_backend_link_int=\count303
+) (./descriptive_set_theory.aux (./descriptive_set_theory-perfect-subsets-r.aux
+) (./descriptive_set_theory-ordinals.aux) (./descriptive_set_theory-polish.aux)
+(./descriptive_set_theory-urysohn.aux) (./descriptive_set_theory-trees.aux) (./
+descriptive_set_theory-borel.aux) (./descriptive_set_theory-subsets-polish.aux)
+(./descriptive_set_theory-measure.aux) (./descriptive_set_theory-choice.aux) (.
+/descriptive_set_theory-codingborel.aux) (./descriptive_set_theory-structurebor
+el.aux) (./descriptive_set_theory-imagesborel.aux) (./descriptive_set_theory-an
+alytic.aux) (./descriptive_set_theory-regularityanalytic.aux) (./descriptive_se
+t_theory-projective.aux) (./descriptive_set_theory-coanalytic.aux) (./descripti
+ve_set_theory-zfc.aux) (./descriptive_set_theory-recursion.aux) (./descriptive_
+set_theory-models.aux) (./descriptive_set_theory-large-cardinals.aux) (./descri
+ptive_set_theory-constructible.aux) (./descriptive_set_theory-v-l.aux) (./descr
+iptive_set_theory-constructible-reals.aux) (./descriptive_set_theory-shoenfield
+.aux) (./descriptive_set_theory-bibliography.aux))
+\openout1 = `descriptive_set_theory.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+29.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-47.23828pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=53.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen177
+\caption@adjustwidth@linewidth=\dimen178
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 129.
+(./descriptive_set_theory.out) (./descriptive_set_theory.out)
+\@outlinefile=\write3
+\openout3 = `descriptive_set_theory.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+34.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+34.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+134.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+134.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 134.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 134.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
+.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
+.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+
+] (./descriptive_set_theory.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 1.
+)
+\tf@toc=\write4
+\openout4 = `descriptive_set_theory.toc'.
+
+[1
+
+]
+\openout2 = `descriptive_set_theory-perfect-subsets-r.aux'.
+
+(./descriptive_set_theory-perfect-subsets-r.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+3.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+File: files/Cantor_set-7f15a3eb647d25cf38092c5cd78d7432.png Graphic file (type 
+bmp)
+<files/Cantor_set-7f15a3eb647d25cf38092c5cd78d7432.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Package natbib Warning: Citation `jech2003a' on page 1 undefined on input line 
+53.
+
+[1
+
+
+]
+File: files/Cantor_Scheme-0b52d5260abb5f7f4d0a22abe7957d4c.png Graphic file (ty
+pe bmp)
+<files/Cantor_Scheme-0b52d5260abb5f7f4d0a22abe7957d4c.png>
+[2]) [3] [4
+
+
+]
+\openout2 = `descriptive_set_theory-ordinals.aux'.
+
+(./descriptive_set_theory-ordinals.tex
+./descriptive_set_theory-ordinals.tex:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:5: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.5 
+    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 A' = \{ x \in
+                  A \colon x \text{ is a limit point of } A\}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:7: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.7 \end{equation}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 \end{equation}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:10: Missing $ inserted.
+<inserted text> 
+                $
+l.10 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:10: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.10 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 A^
+       \prime \supseteq  A^{\prime\prime} \supseteq A^{\prime\prime\prime} \...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:12: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.12 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:16: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.16 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 A^
+       {\infty} = \bigcap_n A^{(n)}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:18: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.18 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:23: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.23 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 1,2,3, \dots, \omega
+                         , \omega+1, \omega+2, \dots, \omega + \omega, \omeg...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:25: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.25 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:25: Missing $ inserted.
+<inserted text> 
+                $
+l.25 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no   ("2003) in font ec-lmri10!
+Missing character: There is no   ("2003) in font ec-lmri10!
+Missing character: There is no   ("2003) in font ec-lmri10!
+Missing character: There is no   ("2003) in font ec-lmri10!
+[5
+
+]
+./descriptive_set_theory-ordinals.tex:80: Missing $ inserted.
+<inserted text> 
+                $
+l.80 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:80: Missing } inserted.
+<inserted text> 
+                }
+l.80 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:80: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.80 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:80: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.80 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:81: Missing $ inserted.
+<inserted text> 
+                $
+l.81 f \leq
+            g \quad : \iff \quad \forall x \in \mathbb{R} \;\; f(x) \leq g(x)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:82: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.82 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:82: Missing $ inserted.
+<inserted text> 
+                $
+l.82 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:108: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.108 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:108: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.108 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:109: Missing $ inserted.
+<inserted text> 
+                $
+l.109 \forall
+              Z \; (\emptyset \ne Z \subseteq A \; \Rightarrow \; \exists x ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:110: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.110 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:110: Missing $ inserted.
+<inserted text> 
+                $
+l.110 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:116: Missing $ inserted.
+<inserted text> 
+                $
+l.116 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:116: Missing } inserted.
+<inserted text> 
+                }
+l.116 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:116: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.116 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:116: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.116 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:117: Missing $ inserted.
+<inserted text> 
+                $
+l.117 x <_
+          A y \quad \iff \quad f(x) <_B f(y).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:118: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.118 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[6]
+./descriptive_set_theory-ordinals.tex:144: Missing $ inserted.
+<inserted text> 
+                $
+l.144 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:144: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.144 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:145: Missing $ inserted.
+<inserted text> 
+                $
+l.145 \{ \emptyset
+                  , \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:146: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.146 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:146: Missing $ inserted.
+<inserted text> 
+                $
+l.146 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:151: Missing $ inserted.
+<inserted text> 
+                $
+l.151 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:151: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.151 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:152: Missing $ inserted.
+<inserted text> 
+                $
+l.152 \in
+         _A = \{ (x,y) \colon x,y \in A \; \wedge \; x \in y \}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:153: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.153 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:153: Missing $ inserted.
+<inserted text> 
+                $
+l.153 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:186: Missing $ inserted.
+<inserted text> 
+                $
+l.186 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:186: Missing } inserted.
+<inserted text> 
+                }
+l.186 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:186: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.186 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:186: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.186 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:187: Missing $ inserted.
+<inserted text> 
+                $
+l.187 x \in
+            b \; \vee \; x = b \; \vee \; b \in x.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:188: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.188 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:188: Missing $ inserted.
+<inserted text> 
+                $
+l.188 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:195: Missing $ inserted.
+<inserted text> 
+                $
+l.195 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:195: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.195 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:196: Missing $ inserted.
+<inserted text> 
+                $
+l.196 \alpha
+             < \beta \; :\iff \; \alpha \in \beta.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:197: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.197 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:197: Missing $ inserted.
+<inserted text> 
+                $
+l.197 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:200: Missing $ inserted.
+<inserted text> 
+                $
+l.200 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:200: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.200 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:201: Missing $ inserted.
+<inserted text> 
+                $
+l.201 \alpha
+             = \{ \beta : \beta < \alpha \}.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:202: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.202 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:202: Missing $ inserted.
+<inserted text> 
+                $
+l.202 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[7]
+./descriptive_set_theory-ordinals.tex:209: Missing $ inserted.
+<inserted text> 
+                $
+l.209 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:209: Missing } inserted.
+<inserted text> 
+                }
+l.209 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:209: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.209 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:209: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.209 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:210: Missing $ inserted.
+<inserted text> 
+                $
+l.210 \alpha
+             < \beta \; \iff \; \alpha \subset \beta.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:211: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.211 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:211: Missing $ inserted.
+<inserted text> 
+                $
+l.211 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:216: Missing $ inserted.
+<inserted text> 
+                $
+l.216 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:216: Missing } inserted.
+<inserted text> 
+                }
+l.216 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:216: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.216 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:216: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.216 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:217: Missing $ inserted.
+<inserted text> 
+                $
+l.217 \Op{trans}
+                (a) \; \wedge \; a \subset \beta \quad \Rightarrow \quad \Op...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:218: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.218 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:218: Missing $ inserted.
+<inserted text> 
+                $
+l.218 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:223: Missing $ inserted.
+<inserted text> 
+                $
+l.223 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:223: Missing } inserted.
+<inserted text> 
+                }
+l.223 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:223: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.223 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:223: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.223 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:224: Missing $ inserted.
+<inserted text> 
+                $
+l.224 x \in
+            \gamma \; \vee \; x = \gamma \; \vee \; \gamma \in x.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:225: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.225 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:225: Missing $ inserted.
+<inserted text> 
+                $
+l.225 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:242: Missing $ inserted.
+<inserted text> 
+                $
+l.242 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:242: Missing } inserted.
+<inserted text> 
+                }
+l.242 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:242: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.242 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:242: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.242 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:243: Missing $ inserted.
+<inserted text> 
+                $
+l.243 \alpha
+             < \beta \; \vee \; \alpha = \beta \; \vee \; \beta < \alpha,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:244: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.244 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:244: Missing $ inserted.
+<inserted text> 
+                $
+l.244 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:249: Missing $ inserted.
+<inserted text> 
+                $
+l.249 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:249: Missing } inserted.
+<inserted text> 
+                }
+l.249 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:249: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.249 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:249: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.249 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:250: Missing $ inserted.
+<inserted text> 
+                $
+l.250 \exists
+              \alpha \in A \forall \beta \in A \; & \beta \notin \alpha.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:250: Misplaced alignment tab character &.
+l.250 ...sts \alpha \in A \forall \beta \in A \; &
+                                                   \beta \notin \alpha.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./descriptive_set_theory-ordinals.tex:251: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.251 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:251: Missing $ inserted.
+<inserted text> 
+                $
+l.251 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[8]
+./descriptive_set_theory-ordinals.tex:279: Missing $ inserted.
+<inserted text> 
+                $
+l.279 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:279: Missing } inserted.
+<inserted text> 
+                }
+l.279 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:279: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.279 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:279: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.279 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:280: Missing $ inserted.
+<inserted text> 
+                $
+l.280   \omega
+               = \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}, \...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:281: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.281 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:281: Missing $ inserted.
+<inserted text> 
+                $
+l.281 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:286: Missing $ inserted.
+<inserted text> 
+                $
+l.286 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:286: Missing } inserted.
+<inserted text> 
+                }
+l.286 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./descriptive_set_theory-ordinals.tex:286: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.286 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./descriptive_set_theory-ordinals.tex:286: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.286 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./descriptive_set_theory-ordinals.tex:287: Missing $ inserted.
+<inserted text> 
+                $
+l.287 \lambda
+              \neq 0 \: \wedge \: \forall \alpha < \lambda \; (\alpha+1 < \l...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-ordinals.tex:288: You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.288 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./descriptive_set_theory-ordinals.tex:288: Missing $ inserted.
+<inserted text> 
+                $
+l.288 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+) [9] [10
+
+
+]
+\openout2 = `descriptive_set_theory-polish.aux'.
+
+(./descriptive_set_theory-polish.tex [11
+
+]
+./descriptive_set_theory-polish.tex:120: Undefined control sequence.
+<recently read> \Z 
+                   
+l.120 provides a homeomorphism between $\Z
+                                           \times (\N\setminus\{0\})^\N$ and...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[12]) [13]
+\openout2 = `descriptive_set_theory-urysohn.aux'.
+
+(./descriptive_set_theory-urysohn.tex
+
+Package natbib Warning: Citation `Urysohn:1927a' on page 14 undefined on input 
+line 28.
+
+[14
+
+
+
+]
+
+Package natbib Warning: Citation `Macpherson:2011a' on page 15 undefined on inp
+ut line 85.
+
+
+Package natbib Warning: Citation `Kechris-Pestov-Todorcevic:2005a' on page 15 u
+ndefined on input line 85.
+
+[15] [16]
+
+Package natbib Warning: Citation `Gromov:1999a' on page 17 undefined on input l
+ine 181.
+
+[17]) [18]
+\openout2 = `descriptive_set_theory-trees.aux'.
+
+(./descriptive_set_theory-trees.tex
+Missing character: There is no ’ ("2019) in font ec-lmr10!
+[19
+
+
+
+] [20]) [21] [22
+
+
+]
+\openout2 = `descriptive_set_theory-borel.aux'.
+
+(./descriptive_set_theory-borel.tex [23
+
+]
+File: files/weak_Borel-da4f6eea7acd328a1b820746fd4dbdf5.png Graphic file (type 
+bmp)
+<files/weak_Borel-da4f6eea7acd328a1b820746fd4dbdf5.png>
+
+Overfull \hbox (71.94641pt too wide) in paragraph at lines 106--107
+[][]\T1/lmr/bx/n/10.95 Theorem 0.4.2 \T1/lmr/m/n/10.95 (Weak Hi-er-ar-chy The-o
+-rem)\T1/lmr/bx/n/10.95 . [][] 
+ []
+
+[24] [25]) [26]
+\openout2 = `descriptive_set_theory-subsets-polish.aux'.
+
+(./descriptive_set_theory-subsets-polish.tex
+
+LaTeX Warning: Reference `thm-Young' on page 27 undefined on input line 60.
+
+
+LaTeX Warning: Reference `thm-Young' on page 27 undefined on input line 62.
+
+[27
+
+
+
+]
+
+LaTeX Warning: Reference `thm-subsets-Polish' on page 28 undefined on input lin
+e 91.
+
+
+LaTeX Warning: Reference `prop-open-subset-Polish' on page 28 undefined on inpu
+t line 101.
+
+[28]
+
+LaTeX Warning: Reference `thm-subsets-Polish' on page 29 undefined on input lin
+e 153.
+
+
+LaTeX Warning: Reference `thm-Cantor-embedding' on page 29 undefined on input l
+ine 155.
+
+) [29]
+\openout2 = `descriptive_set_theory-measure.aux'.
+
+(./descriptive_set_theory-measure.tex [30
+
+
+
+]
+
+Package natbib Warning: Citation `Halmos:1950a' on page 31 undefined on input l
+ine 90.
+
+
+Package natbib Warning: Citation `RoydenFitzpatrick_1988n' on page 31 undefined
+ on input line 90.
+
+[31]
+
+Package natbib Warning: Citation `RoydenFitzpatrick_1988n' on page 32 undefined
+ on input line 111.
+
+[32] [33] [34]
+
+LaTeX Warning: Reference `lem-BP-closed' on page 35 undefined on input line 275
+.
+
+) [35]
+\openout2 = `descriptive_set_theory-choice.aux'.
+
+(./descriptive_set_theory-choice.tex
+
+LaTeX Warning: Reference `ch_perfect' on page 36 undefined on input line 65.
+
+[36
+
+
+
+]
+
+LaTeX Warning: Reference `thm-subsets-Polish' on page 37 undefined on input lin
+e 85.
+
+
+Package natbib Warning: Citation `Solovay:1970a' on page 37 undefined on input 
+line 110.
+
+) [37]
+\openout2 = `descriptive_set_theory-codingborel.aux'.
+
+(./descriptive_set_theory-codingborel.tex [38
+
+
+
+] [39]
+
+LaTeX Warning: Reference `lem-Borel-codes-shift' on page 40 undefined on input 
+line 211.
+
+[40]
+
+LaTeX Warning: Reference `lem-Borel-codes-shift' on page 41 undefined on input 
+line 239.
+
+
+LaTeX Warning: Reference `prop-Borel-codes' on page 41 undefined on input line 
+280.
+
+[41]) [42]
+\openout2 = `descriptive_set_theory-structureborel.aux'.
+
+(./descriptive_set_theory-structureborel.tex
+
+LaTeX Warning: Reference `thm-Borel-arith' on page 43 undefined on input line 2
+7.
+
+[43
+
+
+
+]
+
+LaTeX Warning: Reference `def-effective-Borel' on page 44 undefined on input li
+ne 66.
+
+[44] [45]
+
+LaTeX Warning: Reference `def-Borel-codes' on page 46 undefined on input line 1
+94.
+
+
+LaTeX Warning: Reference `thm-Borel-proper' on page 46 undefined on input line 
+227.
+
+[46]
+
+LaTeX Warning: Reference `thm-Borel-proper' on page 47 undefined on input line 
+291.
+
+[47]
+
+LaTeX Warning: Reference `thm-Borel-proper' on page 48 undefined on input line 
+343.
+
+) [48]
+\openout2 = `descriptive_set_theory-imagesborel.aux'.
+
+(./descriptive_set_theory-imagesborel.tex
+
+LaTeX Warning: Reference `thm-polish-cont-image-Baire' on page 49 undefined on 
+input line 9.
+
+
+LaTeX Warning: Reference `thm-Cantor-embedding' on page 49 undefined on input l
+ine 13.
+
+
+LaTeX Warning: Reference `thm-Polish-bijection-Baire' on page 49 undefined on i
+nput line 13.
+
+[49
+
+
+
+]
+
+LaTeX Warning: Reference `thm-Polish-bijection-Baire' on page 50 undefined on i
+nput line 81.
+
+
+LaTeX Warning: Reference `thm-Borel-clopen' on page 50 undefined on input line 
+83.
+
+
+LaTeX Warning: Reference `thm-subsets-Polish' on page 50 undefined on input lin
+e 88.
+
+
+Package natbib Warning: Citation `Kechris:1995a' on page 50 undefined on input 
+line 94.
+
+[50]
+
+LaTeX Warning: Reference `cor-Borel-image-closed' on page 51 undefined on input
+ line 130.
+
+) [51] [52
+
+
+]
+\openout2 = `descriptive_set_theory-analytic.aux'.
+
+(./descriptive_set_theory-analytic.tex
+
+LaTeX Warning: Reference `cor-Borel-image-closed' on page 53 undefined on input
+ line 21.
+
+
+LaTeX Warning: Reference `thm-polish-cont-image-Baire' on page 53 undefined on 
+input line 46.
+
+
+LaTeX Warning: Reference `cor-Borel-image-closed' on page 53 undefined on input
+ line 48.
+
+[53
+
+]
+
+LaTeX Warning: Reference `thm-Lusin-separation' on page 54 undefined on input l
+ine 99.
+
+
+LaTeX Warning: Reference `thm-Souslin-Borel-images' on page 54 undefined on inp
+ut line 101.
+
+
+LaTeX Warning: Reference `thm-Lusin-separation' on page 54 undefined on input l
+ine 101.
+
+[54]) [55]
+\openout2 = `descriptive_set_theory-regularityanalytic.aux'.
+
+(./descriptive_set_theory-regularityanalytic.tex [56
+
+
+
+] [57]
+
+LaTeX Warning: Reference `prop-Souslin-Lebesgue' on page 58 undefined on input 
+line 142.
+
+
+LaTeX Warning: Reference `prop-Souslin-Lebesgue' on page 58 undefined on input 
+line 183.
+
+) [58]
+\openout2 = `descriptive_set_theory-projective.aux'.
+
+(./descriptive_set_theory-projective.tex [59
+
+
+
+]
+
+LaTeX Warning: Reference `thm-Borel-arith' on page 60 undefined on input line 7
+8.
+
+
+LaTeX Warning: Reference `thm-Souslin-Borel-images' on page 60 undefined on inp
+ut line 133.
+
+[60]
+
+LaTeX Warning: Reference `thm-Borel-proper' on page 61 undefined on input line 
+144.
+
+
+LaTeX Warning: Reference `prop-Souslin-Baire' on page 61 undefined on input lin
+e 148.
+
+[61]
+
+Package natbib Warning: Citation `Kechris:1995a' on page 62 undefined on input 
+line 186.
+
+) [62]
+\openout2 = `descriptive_set_theory-coanalytic.aux'.
+
+(./descriptive_set_theory-coanalytic.tex [63
+
+
+
+] [64]
+
+LaTeX Warning: Reference `prop-KB-wellorder' on page 65 undefined on input line
+ 133.
+
+./descriptive_set_theory-coanalytic.tex:181: Missing number, treated as zero.
+<to be read again> 
+                   E
+l.181 ... is a well-ordering of order type $\xi$}]
+                                                   \},
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./descriptive_set_theory-coanalytic.tex:181: Illegal unit of measure (pt insert
+ed).
+<to be read again> 
+                   E
+l.181 ... is a well-ordering of order type $\xi$}]
+                                                   \},
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./descriptive_set_theory-coanalytic.tex:181: Missing $ inserted.
+<inserted text> 
+                $
+l.181 ... is a well-ordering of order type $\xi$}]
+                                                   \},
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./descriptive_set_theory-coanalytic.tex:181: Missing $ inserted.
+<inserted text> 
+                $
+l.181 ... is a well-ordering of order type $\xi$}]
+                                                   \},
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Reference `lem-bounded-rank-Borel' on page 65 undefined on input
+ line 191.
+
+[65]) [66] [67
+
+
+]
+\openout2 = `descriptive_set_theory-zfc.aux'.
+
+(./descriptive_set_theory-zfc.tex
+
+Package natbib Warning: Citation `Cantor_1895s' on page 68 undefined on input l
+ine 11.
+
+[68
+
+] [69]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+[70]) [71]
+\openout2 = `descriptive_set_theory-recursion.aux'.
+
+(./descriptive_set_theory-recursion.tex [72
+
+
+
+] [73] [74]) [75]
+\openout2 = `descriptive_set_theory-models.aux'.
+
+(./descriptive_set_theory-models.tex [76
+
+
+
+] [77]) [78]
+\openout2 = `descriptive_set_theory-large-cardinals.aux'.
+
+(./descriptive_set_theory-large-cardinals.tex [79
+
+
+
+]
+
+LaTeX Warning: Reference `prop-cardinality-Vkappa' on page 80 undefined on inpu
+t line 94.
+
+[80] [81] [82]
+
+LaTeX Warning: Reference `thm-measurable-Ramsey' on page 83 undefined on input 
+line 315.
+
+[83]
+
+LaTeX Warning: Reference `thm-measurable-Ramsey' on page 84 undefined on input 
+line 342.
+
+) [84] [85
+
+
+]
+\openout2 = `descriptive_set_theory-constructible.aux'.
+
+(./descriptive_set_theory-constructible.tex [86
+
+] [87] [88]
+
+LaTeX Warning: Reference `prop-map-Lalpha' on page 89 undefined on input line 1
+86.
+
+[89]
+
+LaTeX Warning: Reference `thm-definability-Pdef' on page 90 undefined on input 
+line 286.
+
+[90]) [91]
+\openout2 = `descriptive_set_theory-v-l.aux'.
+
+(./descriptive_set_theory-v-l.tex
+
+LaTeX Warning: Reference `thm-definability-Pdef' on page 92 undefined on input 
+line 35.
+
+[92
+
+
+
+]
+
+Package natbib Warning: Citation `Ackermann:1937a' on page 93 undefined on inpu
+t line 89.
+
+
+Package natbib Warning: Citation `jech2003a' on page 93 undefined on input line
+ 94.
+
+
+LaTeX Warning: Reference `prop-basics-L' on page 93 undefined on input line 110
+.
+
+[93]
+Missing character: There is no   ("2000) in font ec-lmr10!
+Missing character: There is no   ("2000) in font ec-lmr10!
+
+LaTeX Warning: Reference `thm-Mostowski-collapse' on page 94 undefined on input
+ line 161.
+
+
+LaTeX Warning: Reference `prop-card-Lalpha' on page 94 undefined on input line 
+168.
+
+
+LaTeX Warning: Reference `lemma-L-GCH' on page 94 undefined on input line 178.
+
+
+LaTeX Warning: Reference `prop-card-Lalpha' on page 94 undefined on input line 
+178.
+
+[94]) [95]
+\openout2 = `descriptive_set_theory-constructible-reals.aux'.
+
+(./descriptive_set_theory-constructible-reals.tex
+
+LaTeX Warning: Reference `lemma-L-GCH' on page 96 undefined on input line 16.
+
+
+LaTeX Warning: Reference `thm-Mostowski-collapse' on page 96 undefined on input
+ line 26.
+
+[96
+
+
+
+] [97]) [98]
+\openout2 = `descriptive_set_theory-shoenfield.aux'.
+
+(./descriptive_set_theory-shoenfield.tex
+
+LaTeX Warning: Reference `cor-coanal-union-Borel' on page 99 undefined on input
+ line 50.
+
+[99
+
+
+
+]
+
+Package natbib Warning: Citation `jech2003a' on page 100 undefined on input lin
+e 104.
+
+
+Package natbib Warning: Citation `Kanamori:2003a' on page 100 undefined on inpu
+t line 104.
+
+[100]) [101] [102
+
+
+]
+\openout2 = `descriptive_set_theory-bibliography.aux'.
+
+(./descriptive_set_theory-bibliography.tex) [103
+
+] (./descriptive_set_theory.bbl
+./descriptive_set_theory.bbl:51: Argument of \T1\" has an extra }.
+<inserted text> 
+                \par 
+l.51 \newblock Fra\i{{\" }
+                          }ss{\' e} {Limits}, {Ramsey} {Theory}, and topolog...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./descriptive_set_theory.bbl:51: Paragraph ended before \T1\" was complete.
+<to be read again> 
+                   \par 
+l.51 \newblock Fra\i{{\" }
+                          }ss{\' e} {Limits}, {Ramsey} {Theory}, and topolog...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[104
+
+
+
+] (./descriptive_set_theory.aux (./descriptive_set_theory-perfect-subsets-r.aux
+) (./descriptive_set_theory-ordinals.aux) (./descriptive_set_theory-polish.aux)
+(./descriptive_set_theory-urysohn.aux) (./descriptive_set_theory-trees.aux) (./
+descriptive_set_theory-borel.aux) (./descriptive_set_theory-subsets-polish.aux)
+(./descriptive_set_theory-measure.aux) (./descriptive_set_theory-choice.aux) (.
+/descriptive_set_theory-codingborel.aux) (./descriptive_set_theory-structurebor
+el.aux) (./descriptive_set_theory-imagesborel.aux) (./descriptive_set_theory-an
+alytic.aux) (./descriptive_set_theory-regularityanalytic.aux) (./descriptive_se
+t_theory-projective.aux) (./descriptive_set_theory-coanalytic.aux) (./descripti
+ve_set_theory-zfc.aux) (./descriptive_set_theory-recursion.aux) (./descriptive_
+set_theory-models.aux) (./descriptive_set_theory-large-cardinals.aux) (./descri
+ptive_set_theory-constructible.aux) (./descriptive_set_theory-v-l.aux) (./descr
+iptive_set_theory-constructible-reals.aux) (./descriptive_set_theory-shoenfield
+.aux) (./descriptive_set_theory-bibliography.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `descriptive_set_theory.out' has not changed.
+
+(rerunfilecheck)             Checksum: C8223A2D5AD7C23CE9547E8A0B6DAE25;5382.
+ ) 
+Here is how much of TeX's memory you used:
+ 13827 strings out of 476683
+ 246832 string characters out of 5804047
+ 1861018 words of memory out of 5000000
+ 33693 multiletter control sequences out of 15000+600000
+ 614801 words of font info for 87 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 72i,13n,76p,932b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on descriptive_set_theory.xdv (106 pages, 525100 bytes).

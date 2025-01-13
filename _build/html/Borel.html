@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Borel Sets &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Borel';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Subspaces of Polish Spaces" href="subsets_Polish.html" />
+    <link rel="prev" title="Trees" href="trees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FBorel.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Borel.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Borel Sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-hierarchy">The Borel hierarchy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-sets-of-finite-order">The Borel sets of finite order</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-borel-sets-continuity-points-of-functions">Examples of Borel sets – continuity points of functions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="borel-sets">
+<h1>Borel Sets<a class="headerlink" href="#borel-sets" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\eps}{\varepsilon}\]</div>
+<p>The Borel sets in a topological space are the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra generated by the open sets. That means one can build up the Borel sets from the open sets by iterating the operations of complementation and countable union. This generates sets that are more and more complicated, which is reflected in the <strong>Borel hierarchy</strong>. The complexity is reflected on the logical side by the number of quantifier changes needed to define the set. There is a close connection between the arithmetical hierarchy in computability and the Borel hierarchy.</p>
+<div class="proof definition admonition" id="def-Borel">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a set. A <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> on <span class="math notranslate nohighlight">\(X\)</span> is a collection of subsets of <span class="math notranslate nohighlight">\(X\)</span> such that <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> is closed under complements and countable unions, that is</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(A \in \mathcal{S}\)</span>, then <span class="math notranslate nohighlight">\(X \setminus A \in \mathcal{S}\)</span>, and</p></li>
+<li><p>if <span class="math notranslate nohighlight">\((A_n)_{n \in \Nat}\)</span> is a sequence of sets in <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>, then <span class="math notranslate nohighlight">\(\bigcup_n A_n \in \mathcal{S}\)</span>,</p></li>
+</ul>
+</section>
+</div><p>If the enveloping space <span class="math notranslate nohighlight">\(X\)</span> is clear, we use <span class="math notranslate nohighlight">\(\Co{A}\)</span> to denote the complement of <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>It is easy to derive that a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra is also closed under the following set-theoretic operations:</p>
+<ul class="simple">
+<li><p><em>countable intersections</em> – we have <span class="math notranslate nohighlight">\(\bigcap A_n = \Co{\bigcup_n \Co{A_n}}\)</span>.</p></li>
+<li><p><em>differences</em> – we have <span class="math notranslate nohighlight">\(A \setminus B = A \cap \Co{B}\)</span>.</p></li>
+<li><p><em>Symmetric differences</em> – we have <span class="math notranslate nohighlight">\(A \bigtriangleup B = (A \cap \Co{B}) \cup (\Co{A} \cap B)\)</span>.</p></li>
+</ul>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span class="caption-number">Definition 7 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\((X,\mathcal{O})\)</span> be a topological space. The collection of <strong>Borel sets</strong> in <span class="math notranslate nohighlight">\(X\)</span> is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing the open sets in <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>.</p>
+</section>
+</div><p>Of course, one has to make sure that this collection actually exists. For this, note that the intersection of any collection of <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras is again a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra, so the Borel sets are just the intersection of all <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras containing <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>. (Note the the full power set of <span class="math notranslate nohighlight">\(X\)</span> is such a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras, so we are not taking an empty intersection.)</p>
+<p>The definition of Borel sets is rather <em>“external”</em>. It does not give us much of an idea what Borel sets <em>look like</em>. One can arrive at the family of Borel sets also through a construction from <em>“within”</em>. This reveals more structure and gives rise to the <strong>Borel hierarchy</strong>.</p>
+<section id="the-borel-hierarchy">
+<h2>The Borel hierarchy<a class="headerlink" href="#the-borel-hierarchy" title="Permalink to this heading">#</a></h2>
+<!-- 
+```{admonition} Exercise
+:class: tip
+
+Show that in a Polish space, every closed set is a countable intersection of open sets.
+``` 
+-->
+<p>To generate the Borel sets, we start with the open sets. By closing under complements, we obtain the closed sets. We also have to close under countable unions. The open sets are already closed under this operation, but the closed sets are not.</p>
+<p>Countable unions of closed sets are classically known as <span class="math notranslate nohighlight">\(F_\sigma\)</span> sets. Their complements, i.e. countable intersections of open sets, are the <span class="math notranslate nohighlight">\(G_\delta\)</span> sets.</p>
+<p>We can continue this way and form the <span class="math notranslate nohighlight">\(F_{\sigma\delta}\)</span> sets – countable intersections of <span class="math notranslate nohighlight">\(F_\sigma\)</span> sets – the <span class="math notranslate nohighlight">\(G_{\delta\sigma}\)</span> sets – countable unions of <span class="math notranslate nohighlight">\(G_\delta\)</span> sets – and so on.</p>
+<p>The <span class="math notranslate nohighlight">\(\sigma\delta\)</span>-notation soon becomes rather impractical, and hence we replace it by something more convenient, and much more suggestive, as we will see later.</p>
+<p>To make the hierarchy that we are introducing well-behaved, we focus on <strong>metrizable spaces</strong>.</p>
+<div class="proof definition admonition" id="def-Borel-finite">
+<p class="admonition-title"><span class="caption-number">Definition 8 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a metrizable topological space. We inductively define the following collection of subsets of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    &amp; \bSigma^0_1(X) = \{ U \colon U\subseteq X \text{ open } \} \\
+    &amp; \bPi^0_n(X) = \{ \Co{A} \colon A \in \bSigma^0_n(X) \} = \Co{\bSigma^0_n(X)} \\
+    &amp; \bSigma^0_{n+1}(X) = \{ \bigcup_k A_k \colon A_k \in \bPi^0_n(X) \} 
+\end{align*}\]</div>
+</section>
+</div><p>Hence the open sets are precisely the sets in <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span>, the closed sets are the sets in <span class="math notranslate nohighlight">\(\bPi^0_1\)</span>, the <span class="math notranslate nohighlight">\(F_\sigma\)</span> sets from the class <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> etc. If it is clear what the underlying space <span class="math notranslate nohighlight">\(X\)</span> is, we drop the reference to it and simply write <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>. Besides, we will say that a set <span class="math notranslate nohighlight">\(A \subseteq X\)</span> <em>is</em> (or <em>is not</em>) <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> or <span class="math notranslate nohighlight">\(\bPi^0_n\)</span>, respectively.</p>
+<blockquote>
+<div><p><strong>Question:</strong> Does the collection of all <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_n\)</span> exhaust the Borel sets of <span class="math notranslate nohighlight">\(X\)</span>?</p>
+</div></blockquote>
+<p>We will see that the answer is no. We have to extend our inductive construction into the transfinite and consider classes <span class="math notranslate nohighlight">\(\bSigma^0_\xi\)</span>, where <span class="math notranslate nohighlight">\(\xi\)</span> is a countable infinite ordinal.</p>
+</section>
+<section id="the-borel-sets-of-finite-order">
+<h2>The Borel sets of finite order<a class="headerlink" href="#the-borel-sets-of-finite-order" title="Permalink to this heading">#</a></h2>
+<p>We fix a Polish space <span class="math notranslate nohighlight">\(X\)</span>. We want to establish the basic relationships between the different classes <span class="math notranslate nohighlight">\(\bSigma^0_n\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_m\)</span> for <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>It follows from the definitions that <span class="math notranslate nohighlight">\(\bPi^0_n \subseteq \bSigma^0_{n+1}\)</span> and <span class="math notranslate nohighlight">\(\bSigma^0_n \subseteq \bPi_{n+1}\)</span>.</p>
+<div class="proof lemma admonition" id="closed-is-Gdelta">
+<p class="admonition-title"><span class="caption-number">Lemma 4 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>In any metric space <span class="math notranslate nohighlight">\((X,d)\)</span>, every closed set is a <span class="math notranslate nohighlight">\(G_\delta\)</span> set.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(F \subset X\)</span> be closed. For <span class="math notranslate nohighlight">\(n \geq 0\)</span>, put</p>
+<div class="math notranslate nohighlight">
+\[
+F_n = \bigcup_{x \in F} U_{2^{-n}}(x).
+\]</div>
+<p>Each <span class="math notranslate nohighlight">\(F_n\)</span> is open, and <span class="math notranslate nohighlight">\(F \subseteq \bigcup_{n \in \Nat} F_n\)</span>.</p>
+<p>Moreover, if <span class="math notranslate nohighlight">\(x \in \bigcup_{n \in \Nat} F_n\)</span>, then there exists a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> such that for all <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(x_n \in F\)</span> and <span class="math notranslate nohighlight">\(x \in U_{2^{-n}}(x_n)\)</span>. It follows that <span class="math notranslate nohighlight">\(x_n \to x\)</span>, and since <span class="math notranslate nohighlight">\(F\)</span> is closed, <span class="math notranslate nohighlight">\(x\in F\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[
+F = \bigcup_{n \in \Nat} F_n,
+\]</div>
+<p>which is <span class="math notranslate nohighlight">\(G_\delta\)</span>.</p>
+</div>
+<div class="proof corollary admonition" id="cor-weak-Borel-hierarchy-1">
+<p class="admonition-title"><span class="caption-number">Corollary 2 </span></p>
+<section class="corollary-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\bSigma^0_1 \subseteq \bSigma^0_2\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_1 \subseteq \bPi^0_2\)</span>.</p>
+</section>
+</div><p>The second statement follows by passing to complements: If <span class="math notranslate nohighlight">\(F\)</span> is closed,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	F = \Co{\Co{F}} = \Co{\bigcup F_n} = \bigcup \Co{F_n},
+\end{equation*}\]</div>
+<p>where the <span class="math notranslate nohighlight">\(F_n\)</span> are closed.</p>
+<p>There are also sets that can be both <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>, but neither <span class="math notranslate nohighlight">\(\bSigma^0_1\)</span> nor <span class="math notranslate nohighlight">\(\bPi^0_1\)</span>. For example, consider the half-open interval <span class="math notranslate nohighlight">\([0,1)\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	[0,1) = \bigcup_n [0,1-1/n] = \bigcap_m (-1/n,1).
+\end{equation*}\]</div>
+<p>Therefore, it makes sense to define the <strong>hybrid classes</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\bDelta^0_n = \bSigma^0_n \cap \bPi^0_n.
+\end{equation*}\]</div>
+<p>Using induction, we can extend the inclusions in a straightforward way to higher <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="proof theorem admonition" id="thm-weak-Borel-hierarchy">
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Weak Hierarchy Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p><img alt="weak Borel hierachy" src="_images/weak_Borel.png" /></p>
+</section>
+</div><p>Are the inclusions are proper?</p>
+<p>If the space is discrete, every open set is closed and vice versa, and hence the whole hierarchy collapses.</p>
+<p>Any countable set is <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span>, since a singleton set is closed, and a countable set is a countable union of singletons.
+In a perfect Polish space, we can find countable sets that are neither open nor closed. The complements of such sets then provide examples of <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> sets that are neither open nor closed, showing that the first two levels of the Borel hierarchy are proper for perfect Polish spaces.</p>
+<p>Using the concept of <strong>Baire category</strong>, we will later show that the rationals <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> are <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> but not <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>, thereby separating <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> and <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>.</p>
+<p>It is much harder to find specific examples for the higher levels, e.g. a <span class="math notranslate nohighlight">\(\bSigma^0_5\)</span> set that is not <span class="math notranslate nohighlight">\(\bSigma^0_4\)</span>. This separation will be much facilitated by the introduction of a <strong>definability framework</strong> for the Borel sets. Therefore, we defer the proof of the strong hierarchy theorem for a while.</p>
+</section>
+<section id="examples-of-borel-sets-continuity-points-of-functions">
+<h2>Examples of Borel sets – continuity points of functions<a class="headerlink" href="#examples-of-borel-sets-continuity-points-of-functions" title="Permalink to this heading">#</a></h2>
+<div class="proof theorem admonition" id="thm-Young">
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Young)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f: X \to Y\)</span> be a mapping between metric spaces. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    C_f = \{ x \colon f \text{ is continuous at $x$} \}
+\end{equation*}\]</div>
+<p>is a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> (i.e. <span class="math notranslate nohighlight">\(G_\delta\)</span>) set.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The function <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(a\)</span> if and only if for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
+        \exists \delta &gt; 0 \: \forall x,y \; [ x,y \in U_\delta(a) \: \Rightarrow \: d(f(x),f(y)) &lt; \eps  ].
+\end{equation*}\]</div>
+<p>Given <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    C_\eps = \{ a \colon \text{ ($*$) holds at $a$ for $\eps$} \}. 
+\end{equation*}\]</div>
+<p>We claim that <span class="math notranslate nohighlight">\(C_\eps\)</span> is open. Suppose <span class="math notranslate nohighlight">\(a \in C_\eps\)</span>. Choose a suitable <span class="math notranslate nohighlight">\(\delta\)</span> that witnesses that <span class="math notranslate nohighlight">\(a \in C_\eps\)</span>. We show <span class="math notranslate nohighlight">\(U_\delta(a) \subseteq C_\eps\)</span>. Let <span class="math notranslate nohighlight">\(b \in U_\delta(a)\)</span>. Choose <span class="math notranslate nohighlight">\(\delta^*\)</span> so that <span class="math notranslate nohighlight">\(U_{\delta^*}(b) \subseteq U_\delta(a)\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    x,y \in U_{\delta^*}(b) \: \Rightarrow \: x,y \in U_\delta(a) \: \Rightarrow \: d(f(x),f(y)) &lt; \eps.
+\end{equation*}\]</div>
+<p>Notice further that <span class="math notranslate nohighlight">\(\eps &gt; \eps^*\)</span> implies <span class="math notranslate nohighlight">\(C_\eps \supseteq C_{\eps^*}\)</span>. Hence we can represent <span class="math notranslate nohighlight">\(C_f\)</span> as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    C_f = \bigcap_{n \in\Nat} C_{1/n},
+\end{equation*}\]</div>
+<p>a countable intersection of open sets.</p>
+</div>
+<p>Here is a nice application of Young’s theorem.</p>
+<p>The function <span class="math notranslate nohighlight">\(f: \Real \to \Real\)</span> given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	f(x) = \begin{cases}
+		0 &amp; \text{ $x$ irrational}, \\
+		1 &amp; \text{ $x = 0$}, \\
+		1/q &amp; \text{ $x = p/q$, $p\in \Integer$, $q \in \Integer^{&gt;0} $, $p,q$ relatively prime} 
+	\end{cases}
+\end{equation*}\]</div>
+<p>is a function that is continuous at every irrational, discontinuous at every rational number. How about the other way around – <strong>discontinous at exactly the irrationals?</strong> As noted above, the rationals are a <span class="math notranslate nohighlight">\(\bSigma^0_2\)</span> set that is not <span class="math notranslate nohighlight">\(\bPi^0_2\)</span>. Hence <strong>such a function cannot exist</strong>.</p>
+<p>We finish this lecture by showing that Young’s Theorem can be reversed.</p>
+<div class="proof theorem admonition" id="theorem-7">
+<p class="admonition-title"><span class="caption-number">Theorem 10 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Given a <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> subset <span class="math notranslate nohighlight">\(A\)</span> of a perfect Polish space <span class="math notranslate nohighlight">\(X\)</span>, there exists a mapping <span class="math notranslate nohighlight">\(f: X \to \Real\)</span> such that <span class="math notranslate nohighlight">\(f\)</span> is continuous at every point in <span class="math notranslate nohighlight">\(A\)</span>, and discontinuous at every other point, i.e. <span class="math notranslate nohighlight">\(C_f = A\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Fix a countable dense subset <span class="math notranslate nohighlight">\(D  \subseteq X\)</span>.
+We first deal with the easier case that <span class="math notranslate nohighlight">\(A\)</span> is open. Let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	f(x) = \begin{cases}
+		0 &amp; \text{ $x \in A$ or $x \in \Co{\,\Cl{A}} \cap D$}, \\
+		1 &amp; \text{ otherwise}.
+	\end{cases}
+\end{equation*}\]</div>
+<p>It is clear that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span>. Now assume <span class="math notranslate nohighlight">\(x \not \in A\)</span>. If <span class="math notranslate nohighlight">\(x \not\in \Cl{A}\)</span>, then there exists  <span class="math notranslate nohighlight">\(U_\eps(x) \subseteq \Co{\,\Cl{A}}\)</span>. Any <span class="math notranslate nohighlight">\(U_{\eps^*}(x) \subseteq U_\eps(x)\)</span> contains points from both <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(\Co{D}\)</span>, so it is clear that <span class="math notranslate nohighlight">\(f\)</span> is not continuous at <span class="math notranslate nohighlight">\(x\)</span>. Finally, let <span class="math notranslate nohighlight">\(x \in \Cl{A} \setminus A\)</span>. Then <span class="math notranslate nohighlight">\(f(x) = 1\)</span>, but points of <span class="math notranslate nohighlight">\(A\)</span> are arbitrarily close, where <span class="math notranslate nohighlight">\(f\)</span> takes value <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Now we extend this approach to general <span class="math notranslate nohighlight">\(\bPi^0_2\)</span> sets. Suppose</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	A = \bigcap_n G_n, \quad \text{ $G_n$ open}.
+\end{equation*}\]</div>
+<p>By replacing <span class="math notranslate nohighlight">\(G_n\)</span> with <span class="math notranslate nohighlight">\(G_n^* = G_1 \cap \dots \cap G_n\)</span>, we can assume that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	X = G_0 \supseteq G_1 \supseteq G_2 \supseteq G_3 \supseteq \dots
+\end{equation*}\]</div>
+<p>The idea is to define <span class="math notranslate nohighlight">\(f_n\)</span> as above for each <span class="math notranslate nohighlight">\(G_n\)</span> and then ``amalgamate’’ the <span class="math notranslate nohighlight">\(f_n\)</span> in a suitable way.
+Assume for each <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f_n: X \to \Real\)</span> is defined as above such that <span class="math notranslate nohighlight">\(C_{f_n} = G_n\)</span>.
+Let <span class="math notranslate nohighlight">\((b_n)\)</span> be a sequence of positive real numbers such that for all <span class="math notranslate nohighlight">\(n\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	b_n &gt; \sum_{k &gt; n} b_k,
+\end{equation*}\]</div>
+<p>for example, <span class="math notranslate nohighlight">\(b_n = 1/n!\)</span>. We now form the series</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	f(x) = \sum_n b_n f_n(x).
+\end{equation*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(|f_n(x)| \leq 1\)</span>, <span class="math notranslate nohighlight">\(|f(x)| \leq \sum_n b_n &lt; \infty\)</span>. Furthermore, <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, for</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	|f(x) - f_n(x)| \leq \sum_{k &gt; n} b_k &lt; b_n,
+\end{equation*}\]</div>
+<p>and the last bound is independent of <span class="math notranslate nohighlight">\(x\)</span> and converges to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>It follows by uniform convergence that if each <span class="math notranslate nohighlight">\(f_n\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(x\)</span>, too. Hence <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Now assume <span class="math notranslate nohighlight">\(x \not\in A\)</span>. Then there exist <span class="math notranslate nohighlight">\(n\)</span> such that <span class="math notranslate nohighlight">\(x \in G_n \setminus G_{n+1}\)</span>. Hence</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	f_0(x) = \dots = f_n(x) = 0.
+\end{equation*}\]</div>
+<p>Again, we distinguish two cases.</p>
+<p>First, assume <span class="math notranslate nohighlight">\(x \not\in \Cl{G_{n+1}}\)</span>. Then there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(U_\delta(x) \subseteq \Co{G_{n+1}}\)</span>. This also implies  <span class="math notranslate nohighlight">\(U_\delta(x) \subseteq \Co{G_{k}}\)</span> for any <span class="math notranslate nohighlight">\(k \geq n+1\)</span>. Besides, since <span class="math notranslate nohighlight">\(G_n\)</span> is open, we can chose <span class="math notranslate nohighlight">\(\delta\)</span> sufficiently small so that <span class="math notranslate nohighlight">\(U_\delta(x) \subseteq G_n\)</span>. For <span class="math notranslate nohighlight">\(y \in \Co{D} \cap U_\delta(x)\)</span> we have <span class="math notranslate nohighlight">\(f_k(y) = 1\)</span> for all <span class="math notranslate nohighlight">\(k \geq n+1\)</span>, and hence <span class="math notranslate nohighlight">\(f(y) = \sum_{k &gt; n} b_k f_k(y) &gt; 0\)</span>. On the other hand, if <span class="math notranslate nohighlight">\(y \in D \cap U_\delta(x)\)</span>, then <span class="math notranslate nohighlight">\(f_k(y) = 0\)</span> for all <span class="math notranslate nohighlight">\(k \geq n+1\)</span>, and also <span class="math notranslate nohighlight">\(f_0(y) = \dots = f_n(y) = 0\)</span>, since <span class="math notranslate nohighlight">\(y \in G_n\)</span>, and thus <span class="math notranslate nohighlight">\(f(y) = 0\)</span>. Hence there are points arbitrarily close to <span class="math notranslate nohighlight">\(x\)</span> whose <span class="math notranslate nohighlight">\(f\)</span>-values differ by a constant lower bound, which implies <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Finally, suppose <span class="math notranslate nohighlight">\(x \in \Cl{G_{n+1}}\)</span>. Then <span class="math notranslate nohighlight">\(f_{n+1}(x) = 1\)</span> and hence <span class="math notranslate nohighlight">\(f(x) \geq b_{n+1} &gt; 0\)</span>. On the other hand, for any <span class="math notranslate nohighlight">\(y \in G_{n+1}\)</span>, <span class="math notranslate nohighlight">\(f(y) \leq \sum_{k&gt; n+1} b_k &lt; b_{n+1} = f(x)\)</span>. That is, there are points arbitrarily close to <span class="math notranslate nohighlight">\(x\)</span> whose <span class="math notranslate nohighlight">\(f\)</span>-value differs from <span class="math notranslate nohighlight">\(f(x)\)</span> by a constant lower bound. Hence <span class="math notranslate nohighlight">\(f\)</span> is discontinuous at <span class="math notranslate nohighlight">\(x\)</span> in this case, too.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="trees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Trees</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="subsets_Polish.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Subspaces of Polish Spaces</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-hierarchy">The Borel hierarchy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-sets-of-finite-order">The Borel sets of finite order</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-borel-sets-continuity-points-of-functions">Examples of Borel sets – continuity points of functions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,906 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Constructible Universe &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'constructible';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Axiom of Constructibility" href="V%3DL.html" />
+    <link rel="prev" title="Large Cardinals" href="large_cardinals.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fconstructible.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/constructible.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Constructible Universe</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-of-l">Basic properties of <span class="math notranslate nohighlight">\(L\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-definability">Defining definability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-set-theoretic-formulas">Coding set theoretic formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-syntactic-notions">Definability of syntactic notions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-the-satisfaction-relation">Definability of the satisfaction relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-definability">Definability of definability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-hierarchies">Cumulative hierarchies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-models">Inner models</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-constructible-universe">
+<h1>The Constructible Universe<a class="headerlink" href="#the-constructible-universe" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\Const}[1]{\underline{#1}}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\Ord}{\mathbf{Ord}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}
+\]</div>
+<p>A set <span class="math notranslate nohighlight">\(X\)</span> is <strong>(first-order) definable</strong> in a set <span class="math notranslate nohighlight">\(Y\)</span> (from parameters) if there exists a first-order formula <span class="math notranslate nohighlight">\(\varphi(x_0, x_1, \dots, x_n)\)</span> in the language of set theory (i.e. only using the binary relation symbol <span class="math notranslate nohighlight">\(\in\)</span>) such that for some <span class="math notranslate nohighlight">\(a_1, \dots, a_n \in Y\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+	X = \{ y \in Y \colon (Y,\in) \models \varphi[y, a_1, \dots, a_n] \}.
+\]</div>
+<p>The constructible universe is built as a cumulative hierarchy of sets along the ordinals. In each successor step, instead of adding all subsets of the current set, only the <strong>definable</strong> ones are added. Formally, <span class="math notranslate nohighlight">\(L\)</span> is defined as follows. Given a set <span class="math notranslate nohighlight">\(Y\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[
+	\mathcal{P}_{\Op{Def}}(Y) = \{X \subseteq Y \colon X \text{ is definable in $Y$ from parameters}\},
+\]</div>
+<p>where the underlying language is the language of set theory. Now put</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	L_0 &amp; = \emptyset \\
+	L_{\alpha+1} &amp; = \mathcal{P}_{\Op{Def}}(L_\alpha)  \\
+	L_{\lambda} &amp; = \bigcup_{\alpha &lt; \lambda} L_\alpha \quad  \text{($\lambda$ limit ordinal)} \\
+\end{align*}\]</div>
+<p>Finally, let</p>
+<div class="math notranslate nohighlight">
+\[
+	L = \bigcup_{\alpha \in\Ord} L_\alpha.
+\]</div>
+<section id="basic-properties-of-l">
+<h2>Basic properties of <span class="math notranslate nohighlight">\(L\)</span><a class="headerlink" href="#basic-properties-of-l" title="Permalink to this heading">#</a></h2>
+<p>The first Proposition tells us that the <span class="math notranslate nohighlight">\(L_\xi\)</span> are set-theoretically nice structures and linearly ordered by the <span class="math notranslate nohighlight">\(\subseteq\)</span>-relation.</p>
+<div class="proof proposition admonition" id="prop-basics-L">
+<p class="admonition-title"><span class="caption-number">Proposition 49 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For each ordinal <span class="math notranslate nohighlight">\(\xi\)</span>:</p>
+<ul class="simple">
+<li><p><strong>(1)</strong> <span class="math notranslate nohighlight">\(L_\xi\)</span> is transitive.</p></li>
+<li><p><strong>(2)</strong> For <span class="math notranslate nohighlight">\(\alpha &lt; \xi\)</span>, <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_\xi\)</span>.</p></li>
+<li><p><strong>(3)</strong> For <span class="math notranslate nohighlight">\(\alpha &lt; \xi\)</span>, <span class="math notranslate nohighlight">\(L_\alpha \in L_\xi\)</span>.</p></li>
+<li><p><strong>(4)</strong> If <span class="math notranslate nohighlight">\(\xi \geq \omega\)</span>, then <span class="math notranslate nohighlight">\(|L_{\xi+1}| = |L_\xi|\)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We show the first two statements statements simultaneously by induction.</p>
+<p>They are clear for <span class="math notranslate nohighlight">\(\xi = 0\)</span> and <span class="math notranslate nohighlight">\(\xi\)</span> limit, so assume <span class="math notranslate nohighlight">\(\xi = \alpha +1\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(x \in L_\alpha\)</span>. Consider the formula <span class="math notranslate nohighlight">\(\varphi(x_0) \equiv x_0 \in x\)</span> (here <span class="math notranslate nohighlight">\(x\)</span> is a parameter). <span class="math notranslate nohighlight">\(\varphi\)</span> defines the set</p>
+<div class="math notranslate nohighlight">
+\[
+    x' = \{a \in L_\alpha \colon L_\alpha \models \varphi[a] \} = \{ a \in L_\alpha \colon a \in x \}.  
+\]</div>
+<p>By induction hypothesis, <span class="math notranslate nohighlight">\(L_\alpha\)</span> is transitive, and hence <span class="math notranslate nohighlight">\(a \in x\)</span> implies <span class="math notranslate nohighlight">\(a \in L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(x' = x\)</span>, so <span class="math notranslate nohighlight">\(x \in L_{\alpha+1}\)</span>. This yields <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_\xi\)</span>. Now if <span class="math notranslate nohighlight">\(x \in L_\xi\)</span>, then <span class="math notranslate nohighlight">\(x \subseteq L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(x \subseteq L_\xi\)</span>. Thus <span class="math notranslate nohighlight">\(L_\xi\)</span> is transitive.</p>
+<p>For the third statement, note that the formula <span class="math notranslate nohighlight">\(\varphi(x_0) \equiv x_0 = x_0\)</span> defines <span class="math notranslate nohighlight">\(L_\alpha\)</span> in <span class="math notranslate nohighlight">\(L_\alpha\)</span>, and hence <span class="math notranslate nohighlight">\(L_\alpha \in L_{\alpha + 1}\)</span>.</p>
+<p>For (4), notice that there are only countably many formulas.</p>
+</div>
+<p>Next, we show that <span class="math notranslate nohighlight">\(L\)</span> contains all ordinals and that <span class="math notranslate nohighlight">\(\xi\)</span> “shows up” exactly after <span class="math notranslate nohighlight">\(\xi\)</span> steps.</p>
+<div class="proof proposition admonition" id="proposition-1">
+<p class="admonition-title"><span class="caption-number">Proposition 50 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For any <span class="math notranslate nohighlight">\(\xi\)</span>,</p>
+<ul class="simple">
+<li><p><strong>(1)</strong> <span class="math notranslate nohighlight">\(\xi \subseteq L_\xi\)</span>,</p></li>
+<li><p><strong>(2)</strong> <span class="math notranslate nohighlight">\(L_\xi \cap \Ord = \xi\)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Clearly, <span class="math notranslate nohighlight">\((1)\)</span> follows from <span class="math notranslate nohighlight">\((2)\)</span>.</p>
+<p>To show <span class="math notranslate nohighlight">\((2)\)</span>, one again proceeds by induction. Again, the statement is clear for <span class="math notranslate nohighlight">\(0\)</span> and limit ordinals, so assume <span class="math notranslate nohighlight">\(\xi = \alpha +1\)</span> and <span class="math notranslate nohighlight">\(L_\alpha \cap \Ord = \alpha\)</span>.</p>
+<p>We need to show <span class="math notranslate nohighlight">\(L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}\)</span>. Since <span class="math notranslate nohighlight">\(L_\alpha \subseteq L_{\alpha + 1}\)</span>, we have <span class="math notranslate nohighlight">\(\alpha \subseteq L_{\alpha+1} \cap \Ord\)</span>. On the other hand, since <span class="math notranslate nohighlight">\(L_{\alpha+1} \subseteq \mathcal{P}(L_\alpha)\)</span>, we have <span class="math notranslate nohighlight">\(L_{\alpha+1} \cap \Ord \subseteq \alpha + 1\)</span>. It thus remains to show that <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
+<p>We observed before that the statement</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\varphi_{\Ord}(x)\)</span>: <em><span class="math notranslate nohighlight">\(x\)</span> is transitive and linearly ordered by <span class="math notranslate nohighlight">\(\in\)</span></em></p>
+</div></blockquote>
+<p>can be formalized by a <span class="math notranslate nohighlight">\(\Delta_0\)</span> formula, which are absolute for transitive classes.</p>
+<p>Thus,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\alpha = \{ a \in L_\alpha \colon L_\alpha \models \varphi_{\Ord}[a] \},
+\end{equation*}\]</div>
+<p>and hence we can conclude <span class="math notranslate nohighlight">\(\alpha \in L_{\alpha+1}\)</span>.</p>
+</div>
+</section>
+<section id="defining-definability">
+<h2>Defining definability<a class="headerlink" href="#defining-definability" title="Permalink to this heading">#</a></h2>
+<p>We want to study <span class="math notranslate nohighlight">\(L\)</span> as a model of <span class="math notranslate nohighlight">\(\ZF\)</span>. In order to do that, we need a better understanding of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span>. Our definition, so far, is “from the outside” (i.e. in the meta-theory). This will make it hard to understand how formulas behave relative to <span class="math notranslate nohighlight">\(L\)</span>, in particular, whether we can apply any of the absoluteness results we obtained. We will therefore have to develop (or at least, convince ourselves how we can develop) definability  <strong>inside</strong> <span class="math notranslate nohighlight">\(\ZF\)</span>. We can then combine this with some powerful results about <strong>cumulative hierarchies</strong> (such as <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(L\)</span>) to prove that <span class="math notranslate nohighlight">\(L\)</span> is a model not only of <span class="math notranslate nohighlight">\(\ZF\)</span>, but also of <span class="math notranslate nohighlight">\(\CH\)</span> and <span class="math notranslate nohighlight">\(\AC\)</span>.</p>
+<section id="coding-set-theoretic-formulas">
+<h3>Coding set theoretic formulas<a class="headerlink" href="#coding-set-theoretic-formulas" title="Permalink to this heading">#</a></h3>
+<p>We follow the standard procedure of <strong>Gödelization</strong> and assign every set theoretic formula <span class="math notranslate nohighlight">\(\varphi\)</span> a <strong>Gödel number</strong> <span class="math notranslate nohighlight">\(\GN{\varphi}\)</span>.</p>
+<p>We fix the set of variables as <span class="math notranslate nohighlight">\(\{v_n: n \in \omega\}\)</span> and put</p>
+<div class="math notranslate nohighlight">
+\[
+\GN{v_n} = (1,n).
+\]</div>
+<p>It will be helpful to extend the language by adding, for each set <span class="math notranslate nohighlight">\(x\)</span>, a formal constant, which we will denote by <span class="math notranslate nohighlight">\(\Const{x}\)</span>. We code this constant by</p>
+<div class="math notranslate nohighlight">
+\[
+\GN{\Const{x}} = (2,x)
+\]</div>
+<p>This allows us, for a given structure <span class="math notranslate nohighlight">\((a,\in)\)</span>, to express statements about the elements of <span class="math notranslate nohighlight">\(a\)</span> by formulas using the corresponding constants <span class="math notranslate nohighlight">\(\Const{x}\)</span> for <span class="math notranslate nohighlight">\(x \in a\)</span>. If <span class="math notranslate nohighlight">\(\Const{x} \in a\)</span> is interpreted in <span class="math notranslate nohighlight">\((a,\in)\)</span> by itself, we call this the <strong>canonical interpretation</strong>.</p>
+<p>The Gödelization of formulas now follows the usual, recursion pattern:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\GN{x=y} &amp; = (3, (\GN{x}, \GN{y})) \\
+\GN{x\in y} &amp; = (4, (\GN{x}, \GN{y})) \\
+\GN{\neg \varphi} &amp; = (5, \GN{\varphi}) \\
+\GN{\varphi \vee \psi} &amp; = (6, (\GN{\varphi}, \GN{\psi})) \\
+\GN{\exists v_n \varphi} &amp; = (7, (n, \GN{\varphi})) \\
+\end{align*}\]</div>
+</section>
+<section id="definability-of-syntactic-notions">
+<h3>Definability of syntactic notions<a class="headerlink" href="#definability-of-syntactic-notions" title="Permalink to this heading">#</a></h3>
+<p>We can now express various syntactic statements about formulas, such as “<span class="math notranslate nohighlight">\(v\)</span> is a variable”, as a set theoretic formula via the corresponding codes:</p>
+<div class="math notranslate nohighlight">
+\[
+\Op{Vbl}(a) \; :\Leftrightarrow \; \exists y \in a \exists x \in y \: (a = (1,x) \wedge x = \omega)
+\]</div>
+<p>where of course we substitute a suitable <span class="math notranslate nohighlight">\(\Delta_0\)</span> formula for “<span class="math notranslate nohighlight">\(x \in \omega\)</span>”.</p>
+<div class="proof proposition admonition" id="prop-defble-formula">
+<p class="admonition-title"><span class="caption-number">Proposition 51 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The following relations are <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable over <span class="math notranslate nohighlight">\(\ZF\)</span>.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\Op{Fml}^n(e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi\)</span> whose free variables are among <span class="math notranslate nohighlight">\(v_0, \dots, v_{n-1}\)</span>;<br />
+<span class="math notranslate nohighlight">\(\Op{Fml}^n_a(e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi\)</span> whose free variables are among <span class="math notranslate nohighlight">\(v_0, \dots, v_{n-1}\)</span>, and whose constants are of the form <span class="math notranslate nohighlight">\(\Const{a_i}\)</span> with <span class="math notranslate nohighlight">\(a_i \in a\)</span></p>
+</div></blockquote>
+</section>
+</div></section>
+<section id="definability-of-the-satisfaction-relation">
+<h3>Definability of the satisfaction relation<a class="headerlink" href="#definability-of-the-satisfaction-relation" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(a\)</span> be a set. If we replace a formula <span class="math notranslate nohighlight">\(\varphi\)</span> by its code <span class="math notranslate nohighlight">\(\GN{\varphi}\)</span>, we have to express the fact that <span class="math notranslate nohighlight">\(\varphi^a\)</span> holds now as a statement about validity in the structure <span class="math notranslate nohighlight">\((a,\in)\)</span>, using the code. That is, we have to <strong>formalize</strong> the notion of truth. This can be done using the recursive definition of truth.
+This way we obtain a <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable predicate <span class="math notranslate nohighlight">\(\Op{Sat}(a,e)\)</span> expressing</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\Op{Sat}(a,e): \quad\)</span> <span class="math notranslate nohighlight">\(e\)</span> is the code of a formula <span class="math notranslate nohighlight">\(\varphi(\Const{a_0}, \dots, \Const{a_n})\)</span> that does not contain any free variables, and <span class="math notranslate nohighlight">\(\varphi\)</span> is true in <span class="math notranslate nohighlight">\((a,\in)\)</span> under the canonical interpretation.</p>
+</div></blockquote>
+<p>In place of  <span class="math notranslate nohighlight">\(\Op{Sat}(a,e)\)</span>, we will also write <span class="math notranslate nohighlight">\((a,\in) \models e\)</span>. For any single formula, this formalization of truth then agrees with the validity of the corresponding relativization:</p>
+<div class="proof theorem admonition" id="thm-sat-predicate">
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> be a set theoretic formula, and assume <span class="math notranslate nohighlight">\(a_0, \dots, a_{n-1} \in a\)</span>. Then it is provable in ZF that</p>
+<div class="math notranslate nohighlight">
+\[
+	\varphi^a(a_0, \dots, a_{n-1}) \; \leftrightarrow \; \Op{Sat}(a,\GN{\varphi(\Const{a_0}, \dots, \Const{a_{n-1}})}).
+\]</div>
+</section>
+</div><p>(Keep in mind, however, that the general satisfaction relation, over all formulas, is not formalizable in <span class="math notranslate nohighlight">\(\ZF\)</span>.)</p>
+<p>The Theorem is proved via induction over the structure of <span class="math notranslate nohighlight">\(\varphi\)</span>. For atomic <span class="math notranslate nohighlight">\(\varphi\)</span>, both sides express the same fact, since we use the canonical interpretation of constants. The definition of relativization ensures that for the inductive cases, both sides behave identically wit respect to the corresponding subformulas.</p>
+</section>
+<section id="definability-of-definability">
+<h3>Definability of definability<a class="headerlink" href="#definability-of-definability" title="Permalink to this heading">#</a></h3>
+<p>We can now formalize the notion of definability we used informally above in the definition of <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(a) = \{ x \subseteq a \colon \exists e \: (\Op{Fml}^1_a(e) \: \wedge \: x = \{z \in a\colon (a,\in) \models e(z)\})\}\)</span></p>
+</div></blockquote>
+<p>Here, <span class="math notranslate nohighlight">\(e(z)\)</span> is defined so that for a formula <span class="math notranslate nohighlight">\(\varphi(v_0)\)</span> with code <span class="math notranslate nohighlight">\(e\)</span>,</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(e(z)\)</span> is the code of the formula we obtain when we substitute <span class="math notranslate nohighlight">\(\Const{z}\)</span> for <span class="math notranslate nohighlight">\(v_0\)</span> in <span class="math notranslate nohighlight">\(\varphi\)</span>:</p>
+</div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\GN{\varphi(v_0)}(z) = \GN{\varphi(\Const{z})}
+\end{equation*}\]</div>
+<p>With little effort, one can read off the complexity of the mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span>.</p>
+<div class="proof theorem admonition" id="thm-definability-Pdef">
+<p class="admonition-title"><span class="caption-number">Theorem 40 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>The relation <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (<em>Sketch</em>) Taking into account the complexity of the various sub-formulas, we see that the mapping <span class="math notranslate nohighlight">\(a \mapsto \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable.</p>
+<p>The graph of a <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definable function <span class="math notranslate nohighlight">\(f\)</span> (with domain <span class="math notranslate nohighlight">\(\V\)</span>) is <span class="math notranslate nohighlight">\(\Delta_1\)</span>, since the complement is given as</p>
+<div class="math notranslate nohighlight">
+\[
+	f(x) \neq y \; \Leftrightarrow \; \exists z (f(x)=z \: \wedge \: y \neq z).
+\]</div>
+<p>Thus,  <span class="math notranslate nohighlight">\(b = \mathcal{P}_{\Op{Def}}(a)\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>.</p>
+</div>
+<p>This <em>complexity bound is of central importance</em> to the applications of <span class="math notranslate nohighlight">\(L\)</span>, and we will return to it soon (<a class="reference internal" href="V%3DL.html#prop-map-Lalpha">Proposition 52</a>).</p>
+</section>
+</section>
+<section id="cumulative-hierarchies">
+<h2>Cumulative hierarchies<a class="headerlink" href="#cumulative-hierarchies" title="Permalink to this heading">#</a></h2>
+<p>Many facts about <span class="math notranslate nohighlight">\(L\)</span> hold more generally for <strong>cumulative hierarchies</strong>.</p>
+<div class="proof definition admonition" id="def-cumulative">
+<p class="admonition-title"><span class="caption-number">Definition 38 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A sequence <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> of sets is a <strong>cumulative hierarchy</strong> if</p>
+<ul class="simple">
+<li><p>(<strong>H1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> each <span class="math notranslate nohighlight">\(M_\alpha\)</span> is transitive,</p></li>
+<li><p>(<strong>H2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\alpha &lt; \beta\)</span> implies <span class="math notranslate nohighlight">\(M_\alpha \subseteq M_\beta\)</span>,</p></li>
+<li><p>(<strong>H3</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> For limit <span class="math notranslate nohighlight">\(\lambda\)</span>,</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	M_\lambda = \bigcup_{\alpha &lt; \lambda} M_\alpha
+\end{equation*}\]</div>
+</section>
+</div><p>The von-Neumann universe <span class="math notranslate nohighlight">\(V\)</span> (<span class="math notranslate nohighlight">\(M_\alpha = V_\alpha\)</span>) and Gödel’s <span class="math notranslate nohighlight">\(L\)</span> (<span class="math notranslate nohighlight">\(M_\alpha = L_\alpha\)</span>) are the most important examples of cumulative hierarchies.</p>
+<div class="proof definition admonition" id="def-normal-function">
+<p class="admonition-title"><span class="caption-number">Definition 39 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A function <span class="math notranslate nohighlight">\(F: \Ord \to \Ord\)</span> is <strong>normal</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+\alpha &lt; \beta \; \Rightarrow \; F(\alpha) &lt; F(\beta) \qquad \text{(strictly increasing)} \\
+\lambda \text{ limit } \Rightarrow F(\lambda) = \bigcup_{\alpha &lt; \lambda} F(\alpha) \qquad \text{(continuous)}
+\end{gather*}\]</div>
+</section>
+</div><p>The images of normal functions are called <strong>clubs</strong> (short for <strong>closed, unbounded</strong>).</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that a normal function has arbitrarily large fixed points, that is,</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \alpha \exists \beta \; (\beta &gt; \alpha \: \wedge \: \beta = F(\beta))
+\]</div>
+</div>
+<div class="proof theorem admonition" id="thm-reflection">
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Reflection for cumulative hierarchies)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> be a cumulative hierarchy and let <span class="math notranslate nohighlight">\(M = \bigcup_\alpha M_\alpha\)</span>.</p>
+<p>For every set theoretic formula <span class="math notranslate nohighlight">\(\varphi(v_0, \dots, v_{n-1})\)</span> there exists a normal function <span class="math notranslate nohighlight">\(F\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	F(\alpha) = \alpha \; \; \rightarrow \;\;  \forall a_0, \dots, a_{n-1} \in M_\alpha \: (\varphi^{M_\alpha}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Proceed by induction on the formula structure. We focus on the case <span class="math notranslate nohighlight">\(\varphi \equiv \exists y \psi\)</span>. The other cases are straightforward due to the definition of relativization.</p>
+<p>By induction hypothesis, there exists a normal function <span class="math notranslate nohighlight">\(G\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+G(\alpha) = \alpha \; \; \rightarrow \;\;  \forall \vec{a},b \in M_\alpha \: (\psi^{M_\alpha}(\vec{a},b) \leftrightarrow \psi^{M}(\vec{a},b))
+\]</div>
+<p>We define a function <span class="math notranslate nohighlight">\(H\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+H(\alpha) = \text{ least } \beta &gt; \alpha \text{ with } \forall \vec{a} \in M_\alpha \: ( \exists b \in M \: \psi^M(\vec{a},b) \; \rightarrow \; \exists b \in M_\beta \: \psi^M(\vec{a},b))
+\]</div>
+<p>We use <span class="math notranslate nohighlight">\(H\)</span> to define, via transfinite recursion, another normal function <span class="math notranslate nohighlight">\(F\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	F(0) &amp; = 0 \\
+	F(\alpha+1) &amp; = H(F(\alpha)) \\
+	F(\lambda) &amp; = \bigcup_{\alpha &lt; \lambda} F(\alpha) \quad \text{ for $\lambda$ limit}
+\end{align*}\]</div>
+<p>The composition <span class="math notranslate nohighlight">\(F^* = F\circ G\)</span> is again normal, and its fixed points are simultaneously fixed points of <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. It is now straightforward to check  that <span class="math notranslate nohighlight">\(F^*\)</span> has the desired property.</p>
+</div>
+<div class="proof corollary admonition" id="cor-Scott-Scarpellini">
+<p class="admonition-title"><span class="caption-number">Corollary 15 </span> (Scott-Scarpellini Theorem)</p>
+<section class="corollary-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> is a cumulative hierarchy, <span class="math notranslate nohighlight">\(M = \bigcup_\alpha M_\alpha\)</span>, and <span class="math notranslate nohighlight">\(\varphi(\vec{x})\)</span> is a set-theoretic formula, then</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \alpha \exists \beta &gt; \alpha \; \forall a_0, \dots, a_{n-1} \in M_\beta \: (\varphi^{M_\beta}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
+\]</div>
+</section>
+</div><p>By taking conjunctions, it is possible to generalize the reflection theorem to <strong>finite sets of formulas</strong>. Again, it is not possible (unless <span class="math notranslate nohighlight">\(\ZF\)</span> is inconsistent) to extend this to arbitrary sets of formulas (or we could produce, in <span class="math notranslate nohighlight">\(\ZF\)</span>, a <em>set model</em> of <span class="math notranslate nohighlight">\(\ZF\)</span>, contradicting the <em>second incompleteness theorem</em>).</p>
+<div class="proof corollary admonition" id="cor-ZF-axiomatizable">
+<p class="admonition-title"><span class="caption-number">Corollary 16 </span></p>
+<section class="corollary-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\ZF\)</span> is not finitely axiomatizable.</p>
+</section>
+</div></section>
+<section id="inner-models">
+<h2>Inner models<a class="headerlink" href="#inner-models" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-inner-model">
+<p class="admonition-title"><span class="caption-number">Definition 40 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A class <span class="math notranslate nohighlight">\(M\)</span> is an <strong>inner model of <span class="math notranslate nohighlight">\(\ZF\)</span></strong> if</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> is transitive,</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> contains all ordinals,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma^M\)</span> holds for all axioms <span class="math notranslate nohighlight">\(\sigma\)</span> of <span class="math notranslate nohighlight">\(\ZF\)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof theorem admonition" id="thm-inner-models">
+<p class="admonition-title"><span class="caption-number">Theorem 42 </span> (Characterization of inner models)</p>
+<section class="theorem-content" id="proof-content">
+<p>A class <span class="math notranslate nohighlight">\(M\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span> if and only if there exists a sequence <span class="math notranslate nohighlight">\((M_\alpha)_{\alpha \in \Ord}\)</span> such that for all <span class="math notranslate nohighlight">\(\alpha, \beta, \lambda \in \Ord\)</span>,</p>
+<ul class="simple">
+<li><p>(<strong>I1</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(M = \bigcup_{\alpha \in \Ord} M_\alpha\)</span> is a cumulative hierarchy,</p></li>
+<li><p>(<strong>I2</strong>) <span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1} \subseteq \mathcal{P}(M_\alpha)\)</span></p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (<span class="math notranslate nohighlight">\(\Rightarrow\)</span>) Suppose <span class="math notranslate nohighlight">\(M\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span>. Let</p>
+<div class="math notranslate nohighlight">
+\[
+M_\alpha = V_\alpha^M = V_\alpha \cap M.
+\]</div>
+<p>This defines a cumulative hierarchy, so (I1) is satisfied.
+For (I2), first note that <span class="math notranslate nohighlight">\((\text{Power Set})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M (\mathcal{P}(x) \cap M \in M)\)</span>. Now we can use the absoluteness of <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}\)</span> (<a class="reference internal" href="#thm-definability-Pdef">Theorem 40</a>) and the fact that <span class="math notranslate nohighlight">\(M\)</span> satisfies the axiom of <em>Separation</em> to conclude <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}\)</span>.</p>
+<p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>)
+<em>Extensionality</em> and <em>Foundation</em> hold in all transitive classes. <em>Set Existence</em> is satisfied in any cumulative hierarchy (since <span class="math notranslate nohighlight">\(\emptyset \in M\)</span>).</p>
+<p><em>Union</em>: By absoluteness, <span class="math notranslate nohighlight">\((\text{Union})^M\)</span> if and only if <span class="math notranslate nohighlight">\(\forall x \in M \; \bigcup x \in M\)</span>. The latter holds in <span class="math notranslate nohighlight">\(M\)</span> by (I2) and the fact that <span class="math notranslate nohighlight">\(y = \bigcup x\)</span> is definable.</p>
+<p><em>Pairing</em>: Similar to <em>Union</em>.</p>
+<p><em>Separation</em>: Suppose <span class="math notranslate nohighlight">\(a, b_1, \dots, b_n \in M\)</span> and <span class="math notranslate nohighlight">\(\varphi(v_0, v_1, \dots, v_n)\)</span> is a formula. We have to argue that the set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	z = \{ x \in a \colon \varphi^M(x, b_1, \dots, b_n) \}
+\end{equation*}\]</div>
+<p>is in <span class="math notranslate nohighlight">\(M\)</span>. By the reflection theorem for cumulative hierarchies, there exists <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(a, b_1, \dots, b_n \in M_\alpha\)</span> and for all <span class="math notranslate nohighlight">\(x \in M_\alpha\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\varphi^M(x, b_1, \dots, b_n) \; \leftrightarrow \; \varphi^{M_\alpha}(x, b_1, \dots, b_n).
+\end{equation*}\]</div>
+<p>This implies <span class="math notranslate nohighlight">\(z \in \mathcal{P}_{\Op{Def}}(M_\alpha)\)</span> and hence by (I2), <span class="math notranslate nohighlight">\(z \in M_{\alpha+1}\)</span>. By (I1), <span class="math notranslate nohighlight">\(z \in M\)</span>.</p>
+<p><em>Power Set</em>: Suppose <span class="math notranslate nohighlight">\(a \in M\)</span>, say <span class="math notranslate nohighlight">\(a \in M_\alpha\)</span>. The set <span class="math notranslate nohighlight">\(z = \mathcal{P}(a)\cap M\)</span> has a <span class="math notranslate nohighlight">\(\Delta_0\)</span>-definition over <span class="math notranslate nohighlight">\(M_\alpha\)</span>: the formula “<span class="math notranslate nohighlight">\(x \subseteq a\)</span>”. Therefore, by (I2), <span class="math notranslate nohighlight">\(z \in M_{\alpha+1}\)</span> and hence <span class="math notranslate nohighlight">\(z \in M\)</span>. <span class="math notranslate nohighlight">\(z\)</span> is the power set of <span class="math notranslate nohighlight">\(a\)</span> relative to <span class="math notranslate nohighlight">\(M\)</span> since, by absoluteness of <span class="math notranslate nohighlight">\(\subseteq\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	(z = \mathcal{P}(a))^M \: \iff \: \forall x \in M (x \in z \iff x \subseteq a) \: \iff \: z = \mathcal{P}(a) \cap M
+\end{equation*}\]</div>
+<p><em>Replacement</em>: Assume a function <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(M\)</span> is defined by a formula <span class="math notranslate nohighlight">\(\varphi(x,y,\vec{a})\)</span> (<span class="math notranslate nohighlight">\(\vec{a} \in M\)</span> being parameters), that is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\forall x,y \in M \; (\varphi^M(x,y,\vec{a}) \wedge \varphi^M(x,z,\vec{a}) \; \to \; y=z )
+\end{equation*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(b \)</span> be a set. By reflection, there exists an <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(\vec{a}, b \in M_\alpha\)</span> and the following two formulas hold:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
+	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))
+\end{gather*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(b \subseteq M_{\alpha}\)</span> (transitivity), this implies</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\forall x \in b \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^M(x,y,\vec{a}))
+\end{equation*}\]</div>
+<p>and therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\{ y : \exists x \in b \, \varphi^{M}(x,y,\vec{a}) \} = \{ y : \exists x \in b \, \varphi^{M_\alpha}(x,y,\vec{a}) \}
+\end{equation*}\]</div>
+<p>The left side defines the image of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(M\)</span>, which, by the right side, is in <span class="math notranslate nohighlight">\(\mathcal{P}_{\Op{Def}}(M_\alpha)\)</span>, and thus, by (I2), in <span class="math notranslate nohighlight">\(M_{\alpha+1}\)</span>.</p>
+<p><em>Infinity</em>: “<span class="math notranslate nohighlight">\(x = \omega\)</span>” is <span class="math notranslate nohighlight">\(\Delta_0\)</span>, and since by (I2), <span class="math notranslate nohighlight">\(L_\omega \subseteq M_\omega\)</span>, we have that <span class="math notranslate nohighlight">\(\omega \in M_{\omega+1}\)</span> and that this witnesses the axiom of <em>Infinity</em>.</p>
+</div>
+<p>We see that <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(L\)</span> lie at the extreme ends of the spectrum of inner models.</p>
+<div class="proof corollary admonition" id="cor-L-inner-model">
+<p class="admonition-title"><span class="caption-number">Corollary 17 </span></p>
+<section class="corollary-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(L\)</span> is an inner model of <span class="math notranslate nohighlight">\(\ZF\)</span>.</p>
+</section>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="large_cardinals.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Large Cardinals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="V%3DL.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Axiom of Constructibility</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-of-l">Basic properties of <span class="math notranslate nohighlight">\(L\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-definability">Defining definability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-set-theoretic-formulas">Coding set theoretic formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-syntactic-notions">Definability of syntactic notions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-the-satisfaction-relation">Definability of the satisfaction relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definability-of-definability">Definability of definability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-hierarchies">Cumulative hierarchies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-models">Inner models</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

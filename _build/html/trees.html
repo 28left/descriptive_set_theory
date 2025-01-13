@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Trees &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'trees';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Borel Sets" href="Borel.html" />
+    <link rel="prev" title="Excursion: The Urysohn Space" href="Urysohn.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Ftrees.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/trees.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Trees</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orderings-on-trees">Orderings on trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-trees">Coding trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trees-and-closed-sets">Trees and closed sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-mappings-on-product-spaces">Continuous mappings on product spaces</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="trees">
+<span id="chap-trees"></span><h1>Trees<a class="headerlink" href="#trees" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Str}[1][2]{{#1}^{&lt;\Nat}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Sgr}{\supset}
+\newcommand{\Sgeq}{\supseteq}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}\\\DeclareMathOperator{\KB}{KB}
+\DeclareMathOperator{\lex}{lex}\end{aligned}\end{align} \]</div>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a set. Recall that the set of all finite sequences over <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\Str[A]\)</span>, while <span class="math notranslate nohighlight">\(A^\Nat\)</span> denotes the set of all infinite sequences over <span class="math notranslate nohighlight">\(A\)</span>. Given <span class="math notranslate nohighlight">\(\alpha \in A^\N\)</span>, <span class="math notranslate nohighlight">\(n \in \N\)</span>, <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span> denotes the initial segment of <span class="math notranslate nohighlight">\(\alpha\)</span> of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="proof definition admonition" id="def-tree">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>tree</strong> on <span class="math notranslate nohighlight">\(A\)</span> is a set <span class="math notranslate nohighlight">\(T \subseteq \Str[A]\)</span> that is <strong>closed under prefixes</strong>, that is</p>
+<div class="math notranslate nohighlight">
+\[
+    \forall \sigma, \tau \; [\tau \in T \: \&amp; \: \sigma \Sleq \tau \; \Rightarrow \; \sigma \in T ]
+\]</div>
+</section>
+</div><p>We call the elements of <span class="math notranslate nohighlight">\(T\)</span> <strong>nodes</strong>.</p>
+<p>A sequence <span class="math notranslate nohighlight">\(\alpha \in A^\Nat\)</span> is an <strong>infinite path through</strong> or <strong>infinite branch of</strong> <span class="math notranslate nohighlight">\(T\)</span> if for all <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\alpha\Rest{n} = (\alpha_0, \alpha_1, \dots, \alpha_{n-1}) \in T\)</span>. We denote the set of infinite paths through <span class="math notranslate nohighlight">\(T\)</span> by <span class="math notranslate nohighlight">\([T]\)</span>.</p>
+<p>An important criterion for a tree to have infinite paths is the following.</p>
+<div class="proof theorem admonition" id="thm-Koenigs-lemma">
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (König’s Lemma)</p>
+<section class="theorem-content" id="proof-content">
+<p>Any tree <span class="math notranslate nohighlight">\(T\)</span> with infinitely many nodes that is <strong>finite branching</strong> (i.e. each node has at most finitely many immediate extensions) has an infinite path.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We construct an infinite path inductively.</p>
+<p>Let <span class="math notranslate nohighlight">\(T_\sigma\)</span> denote the tree “above” <span class="math notranslate nohighlight">\(\sigma\)</span>, i.e. <span class="math notranslate nohighlight">\(T_\sigma = \{ \tau \in \Str[A] \colon \sigma\Conc\tau \in T\}\)</span>. If <span class="math notranslate nohighlight">\(T\)</span> is finite branching,  by the <strong>pigeonhole principle</strong>, at least one of the sets <span class="math notranslate nohighlight">\(T_\sigma\)</span> for <span class="math notranslate nohighlight">\(|\sigma| = 1\)</span> must be infinite. Pick such a <span class="math notranslate nohighlight">\(\sigma\)</span> and let <span class="math notranslate nohighlight">\(\alpha\Rest{1} = \sigma\)</span>.</p>
+<p>Repeat the argument for <span class="math notranslate nohighlight">\(T = T_\sigma\)</span> and continue inductively. This yields a sequence <span class="math notranslate nohighlight">\(\alpha \in [T]\)</span>.</p>
+</div>
+<p>If <span class="math notranslate nohighlight">\([T] = \emptyset\)</span>, we call <span class="math notranslate nohighlight">\(T\)</span> <strong>well-founded</strong>. The motivation behind this is that <span class="math notranslate nohighlight">\(T\)</span> is well-founded if and only if the <strong>inverse prefix</strong> relation</p>
+<div class="math notranslate nohighlight">
+\[
+	\sigma \preceq \tau \quad :\Leftrightarrow \quad \sigma \Sgeq \tau
+\]</div>
+<p>is well-founded, i.e. it does not have an infinite descending chain.</p>
+<p>If <span class="math notranslate nohighlight">\(T \neq \emptyset\)</span> is well-founded, we can assign <span class="math notranslate nohighlight">\(T\)</span> an ordinal number, its <strong>rank</strong> <span class="math notranslate nohighlight">\(\rho(T)\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\sigma\)</span> is a <strong>terminal node</strong>, i.e. <span class="math notranslate nohighlight">\(\sigma\)</span> has no extensions in <span class="math notranslate nohighlight">\(T\)</span>, then let <span class="math notranslate nohighlight">\(\rho_T(\sigma) = 0\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\sigma\)</span> is not terminal, and <span class="math notranslate nohighlight">\(\rho_T(\tau)\)</span> has been defined for all <span class="math notranslate nohighlight">\(\tau \Sgr \sigma\)</span>, we set <span class="math notranslate nohighlight">\(\rho_T(\sigma) = \sup \{\rho_T(\tau)+1 \colon \tau \in T, \tau \Sgr \sigma \}\)</span>.</p></li>
+<li><p>Finally, set <span class="math notranslate nohighlight">\(\rho(T) = \sup\{\rho_T(\sigma) + 1 \colon \sigma\in T \} = \rho_T(\Estr)+1\)</span>, where <span class="math notranslate nohighlight">\(\Estr\)</span> denotes the empty string.</p></li>
+</ul>
+<section id="orderings-on-trees">
+<h2>Orderings on trees<a class="headerlink" href="#orderings-on-trees" title="Permalink to this heading">#</a></h2>
+<p>Now suppose <span class="math notranslate nohighlight">\(A\)</span> is linearly ordered by a relation <span class="math notranslate nohighlight">\(\leq_A\)</span>.
+The <strong>lexicographical ordering</strong> <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span> of <span class="math notranslate nohighlight">\(\Str[A]\)</span> is defined as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\sigma \leq_{\lex} \tau \quad :\Leftrightarrow \quad \\
+        \sigma = \tau \; \text{ or } \; \exists i &lt;|\sigma|,|\tau| \: \left( \sigma_i &lt;_A \tau_i \text{ and } \forall j &lt; i \; \sigma_j = \tau_j  \right )  
+\end{equation*}\]</div>
+<p>This ordering extends to <span class="math notranslate nohighlight">\(A^\Nat\)</span> in a natural way.</p>
+<div class="proof proposition admonition" id="prop-leftmost-branch">
+<p class="admonition-title"><span class="caption-number">Proposition 5 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\leq_A\)</span> is a well-ordering of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is a tree on <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\([T] \neq \emptyset\)</span>, then <span class="math notranslate nohighlight">\([T]\)</span> has a <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-minimal element, the <strong>leftmost branch</strong>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We <strong>prune</strong> the tree <span class="math notranslate nohighlight">\(T\)</span> by deleting any node that is not on an infinite branch. This yields a subtree <span class="math notranslate nohighlight">\(T' \subseteq T\)</span> with <span class="math notranslate nohighlight">\([T'] = [T]\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(T'_n = \{\sigma \in T' \colon |\sigma| = n \}\)</span>. Since <span class="math notranslate nohighlight">\(\leq_A\)</span> is a well-ordering on <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(T'_1\)</span> must have a <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-least element. Denote it by <span class="math notranslate nohighlight">\(\alpha\Rest{1}\)</span>. Since <span class="math notranslate nohighlight">\(T'\)</span> is pruned, <span class="math notranslate nohighlight">\(\alpha\Rest{1}\)</span> must have an extension in <span class="math notranslate nohighlight">\(T\)</span>, and we can repeat the argument to obtain <span class="math notranslate nohighlight">\(\alpha\Rest{2}\)</span>.</p>
+<p>Continuing inductively, we define an infinite path <span class="math notranslate nohighlight">\(\alpha\)</span> through <span class="math notranslate nohighlight">\(T'\)</span>, and it is straightforward to check that <span class="math notranslate nohighlight">\(\alpha\)</span> is a  <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-minimal element of <span class="math notranslate nohighlight">\([T']\)</span> and hence of <span class="math notranslate nohighlight">\([T]\)</span>.</p>
+</div>
+<p>We can combine the <span class="math notranslate nohighlight">\(\leq_{\lex}\)</span>-ordering with the inverse prefix order to obtain a linear ordering of <span class="math notranslate nohighlight">\(\Str[A]\)</span>. This ordering has the nice property that if <span class="math notranslate nohighlight">\(A\)</span> is well-ordered and <span class="math notranslate nohighlight">\(T\)</span> is well-founded, then the ordering restricted to <span class="math notranslate nohighlight">\(T\)</span> is a well-ordering.</p>
+<div class="proof definition admonition" id="def-Kleene-Brouwer">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span></p>
+<section class="definition-content" id="proof-content">
+<p>The <strong>Kleene-Brouwer ordering</strong> <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span> of <span class="math notranslate nohighlight">\(\Str[A]\)</span> is defined as follows.</p>
+<p><span class="math notranslate nohighlight">\(\qquad \sigma \leq_{\KB} \tau\)</span> <span class="math notranslate nohighlight">\(\quad :\Leftrightarrow \quad\)</span>  <span class="math notranslate nohighlight">\(\sigma \Sgeq \tau \;\;\)</span>  or <span class="math notranslate nohighlight">\(\; \; \sigma \leq_{\lex} \tau\)</span>.</p>
+</section>
+</div><p>This means <span class="math notranslate nohighlight">\(\sigma\)</span> is smaller than <span class="math notranslate nohighlight">\(\tau\)</span> if it is a proper extension of <span class="math notranslate nohighlight">\(\tau\)</span> or “to the left” of <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>We now have</p>
+<div class="proof proposition admonition" id="prop-KB-wellorder">
+<p class="admonition-title"><span class="caption-number">Proposition 6 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\((A,\leq)\)</span> is a well-ordered set. Then for any tree <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(A\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(T\)</span> is well-founded <span class="math notranslate nohighlight">\(\quad \Leftrightarrow \quad\)</span>  <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span> restricted to <span class="math notranslate nohighlight">\(T\)</span> is a well-ordering.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(T\)</span> is not well-founded. Let <span class="math notranslate nohighlight">\(\alpha \in [T]\)</span>. Then <span class="math notranslate nohighlight">\(\alpha\Rest{0}, \alpha\Rest{1}, \dots\)</span> is an infinite descending sequence with respect to <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span>.</p>
+<p>Conversely, suppose <span class="math notranslate nohighlight">\(\sigma_0 &gt;_{\KB} \sigma_1 &gt;_{\KB} \dots\)</span> is an infinite descending sequence in <span class="math notranslate nohighlight">\(T\)</span>. By the definition of <span class="math notranslate nohighlight">\(&gt;_{\KB}\)</span>, this implies <span class="math notranslate nohighlight">\(\sigma_1(0) \geq_A \sigma_2(0) \geq_A \dots\)</span> as a sequence in <span class="math notranslate nohighlight">\(A\)</span>. Since <span class="math notranslate nohighlight">\(A\)</span> is well-ordered, this sequence must eventually be constant, say <span class="math notranslate nohighlight">\(\sigma_n(0) = a_0\)</span> for all <span class="math notranslate nohighlight">\(n \geq n_0\)</span>.</p>
+<p>Since the <span class="math notranslate nohighlight">\(\sigma_n\)</span> are descending, by the definition of <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span> it follows that <span class="math notranslate nohighlight">\(|\sigma_n| \geq 2\)</span> for <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>. Hence we can consider the sequence <span class="math notranslate nohighlight">\(\sigma_{n_0+1}(1) \geq_A \sigma_{n_0+2}(1) \geq_A  \dots\)</span> in <span class="math notranslate nohighlight">\(A\)</span>. Again, this must be constant <span class="math notranslate nohighlight">\(= a_1\)</span> eventually. Inductively, we obtain a sequence <span class="math notranslate nohighlight">\(\alpha = (a_0, a_1, a_2, \dots) \in [T]\)</span>, that is, <span class="math notranslate nohighlight">\(T\)</span> is not well-founded.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The order type of a well-founded tree under <span class="math notranslate nohighlight">\(\leq_{\KB}\)</span> usually is not equal to its rank <span class="math notranslate nohighlight">\(\rho(T)\)</span>.</p>
+</div>
+</section>
+<section id="coding-trees">
+<h2>Coding trees<a class="headerlink" href="#coding-trees" title="Permalink to this heading">#</a></h2>
+<p>We can also define an ordering on <span class="math notranslate nohighlight">\(\Str[A]\)</span> via an injective mapping from <span class="math notranslate nohighlight">\(\Str[A]\)</span> to some linearly ordered set <span class="math notranslate nohighlight">\(A\)</span>. We will use this repeatedly for the case <span class="math notranslate nohighlight">\(A = \Nat\)</span> and <span class="math notranslate nohighlight">\(A = \{0,1\}\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(A = \Nat\)</span>, we can use the standard coding mapping</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\pi: (a_0, a_1, \dots, a_n) \mapsto p_0^{a_0+1}p_1^{a_1}\cdots p_n^{a_n},
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_k\)</span> is the <span class="math notranslate nohighlight">\(k\)</span>th prime number. This embeds <span class="math notranslate nohighlight">\(\Nstr\)</span> into <span class="math notranslate nohighlight">\(\Nat\)</span>, and we can well-order <span class="math notranslate nohighlight">\(\Nstr\)</span> by letting <span class="math notranslate nohighlight">\(\sigma &lt; \tau\)</span> if and only if <span class="math notranslate nohighlight">\(\pi(\sigma) &lt; \pi(\tau)\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(A = \{0,1\}\)</span> we set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\pi: (b_0,b_1, \dots, b_{n-1}) \mapsto (2^n-1) + \sum_{i=0}^{n-1} b_i 2^i.
+\end{equation*}\]</div>
+<p>These two mappings allows us henceforth to see <strong>trees as subsets of the natural numbers</strong>. This will be an important component in exploring the relation between topological and arithmetical complexity.</p>
+</section>
+<section id="trees-and-closed-sets">
+<h2>Trees and closed sets<a class="headerlink" href="#trees-and-closed-sets" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a set with the discrete topology. Consider <span class="math notranslate nohighlight">\(A^\Nat\)</span> with the product topology (and compatible metric) defined in <a class="reference internal" href="polish.html#polish-product-spaces"><span class="std std-ref">Lecture 2</span></a>.</p>
+<div class="proof proposition admonition" id="prop-trees-closed">
+<p class="admonition-title"><span class="caption-number">Proposition 7 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(F \subseteq A^\Nat\)</span> is closed if and only if there exists a tree <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(A\)</span> such that <span class="math notranslate nohighlight">\(F = [T]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(F\)</span> is closed. Let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	T_F = \{\sigma \in \Str[A] \colon \sigma \Sle \alpha \text{ for some }\alpha \in F\}.
+\end{equation*}\]</div>
+<p>Then clearly <span class="math notranslate nohighlight">\(F \subset [T_F]\)</span>. Suppose <span class="math notranslate nohighlight">\(\alpha \in [T_F]\)</span>. This means for any <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\alpha\Rest{n} \in T_F\)</span>, which implies that there exists <span class="math notranslate nohighlight">\(\beta_n \in F\)</span> such that <span class="math notranslate nohighlight">\(\alpha_n \Sle \beta_n\)</span>. The sequence <span class="math notranslate nohighlight">\((\beta_n)\)</span> converges to <span class="math notranslate nohighlight">\(\alpha\)</span>, and since <span class="math notranslate nohighlight">\(F\)</span> is closed, <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
+<p>For the other direction, suppose <span class="math notranslate nohighlight">\(F = [T]\)</span>. Let <span class="math notranslate nohighlight">\(\alpha \in A^\Nat \setminus F\)</span>. Then there exists an <span class="math notranslate nohighlight">\(n\)</span> such that <span class="math notranslate nohighlight">\(\alpha\Rest{n} \not\in T\)</span>. Since a tree is closed under prefixes, no extension of <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span> can be in <span class="math notranslate nohighlight">\(T\)</span>. This implies <span class="math notranslate nohighlight">\(\Cyl{\alpha\Rest{n}} \subseteq A^\Nat \setminus F\)</span>, and hence <span class="math notranslate nohighlight">\(A^\Nat \setminus F\)</span> is open.</p>
+</div>
+</section>
+<section id="continuous-mappings-on-product-spaces">
+<h2>Continuous mappings on product spaces<a class="headerlink" href="#continuous-mappings-on-product-spaces" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(f: A^\Nat \to A^\Nat\)</span> be continuous. We define a mapping <span class="math notranslate nohighlight">\(\phi: \Str[A] \to \Str[A]\)</span> by setting</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\phi(\sigma) = \text{ the longest $\tau$ with $|\tau| \leq |\sigma|$ such that } \Cyl{\sigma} \subseteq f^{-1}(\Cyl{\tau}).
+\end{equation*}\]</div>
+<p>This mapping has the following properties:</p>
+<ol class="arabic simple">
+<li><p>It is <strong>monotone</strong>, i.e. <span class="math notranslate nohighlight">\(\sigma \Sleq \tau\)</span> implies <span class="math notranslate nohighlight">\(\phi(\sigma) \Sleq \phi(\tau)\)</span>.</p></li>
+<li><p>For any <span class="math notranslate nohighlight">\(\alpha \in A^\Nat\)</span> we have <span class="math notranslate nohighlight">\(\lim_n |\phi(\alpha\Rest{n})| = \infty\)</span>.
+This follows directly from the continuity of <span class="math notranslate nohighlight">\(f\)</span>: For any neighborhood <span class="math notranslate nohighlight">\(\Cyl{\tau}\)</span> of <span class="math notranslate nohighlight">\(f(\alpha)\)</span> there exists a neighborhood <span class="math notranslate nohighlight">\(\Cyl{\sigma}\)</span> of <span class="math notranslate nohighlight">\(\alpha\)</span> such that <span class="math notranslate nohighlight">\(f(\Cyl{\sigma}) \subseteq \Cyl{\tau}\)</span>. But <span class="math notranslate nohighlight">\(\tau\)</span> has to be of the form <span class="math notranslate nohighlight">\(\tau = f(\alpha)\Rest{m}\)</span>, and <span class="math notranslate nohighlight">\(\sigma\)</span> of the form <span class="math notranslate nohighlight">\(\alpha\Rest{n}\)</span>. Hence for any <span class="math notranslate nohighlight">\(m\)</span> there must exist an <span class="math notranslate nohighlight">\(n\)</span> such that <span class="math notranslate nohighlight">\(\phi(\alpha\Rest{n}) \Sgeq f(\alpha)\Rest{m}\)</span>.</p></li>
+</ol>
+<p>On the other hand, if a function <span class="math notranslate nohighlight">\(\phi: \Str[A] \to \Str[A]\)</span> satisfies (1.) and (2.), it induces a function <span class="math notranslate nohighlight">\(\phi^*: A^\Nat \to A^\Nat\)</span> by letting</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\phi^*(\alpha) = \lim_n \phi(\alpha\Rest{n}) = \text{ the unique sequence extending all $\phi(\alpha\Rest{n})$}.
+\end{equation*}\]</div>
+<p>This <span class="math notranslate nohighlight">\(\phi^*\)</span> is indeed continuous: The preimage of <span class="math notranslate nohighlight">\(\Cyl{\tau}\)</span> under <span class="math notranslate nohighlight">\(\phi^*\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	(\phi^*)^{-1}(\Cyl{\tau}) = \bigcup \{\Cyl{\sigma} \colon \phi(\sigma) \Sgeq \tau \},
+\end{equation*}\]</div>
+<p>which is an open set.</p>
+<p>We have shown the following.</p>
+<div class="proof proposition admonition" id="prop-product-continuous">
+<p class="admonition-title"><span class="caption-number">Proposition 8 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>A mapping <span class="math notranslate nohighlight">\(f:A^\Nat \to A^\Nat\)</span> is continuous if and only if there exists a mapping <span class="math notranslate nohighlight">\(\phi\)</span> satisfying (1) and (2) such that <span class="math notranslate nohighlight">\(f = \phi^*\)</span>.</p>
+</section>
+</div><p>Note that we can completely describe a topological concept, continuity, through a relation between finite strings.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Urysohn.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Excursion: The Urysohn Space</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Borel.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Borel Sets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orderings-on-trees">Orderings on trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-trees">Coding trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trees-and-closed-sets">Trees and closed sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-mappings-on-product-spaces">Continuous mappings on product spaces</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

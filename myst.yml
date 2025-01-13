@@ -9,6 +9,11 @@ project:
   open_access: true
   github: https://github.com/28left/descriptive_set_theory
   numbering: false
+  exports:
+  - format: pdf
+    template: plain_latex_book
+    output: exports/descriptive_set_theory.pdf
+  downloads: 
   math:
     \N:
       macro: \mathbb{N}

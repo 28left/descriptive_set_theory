@@ -1,0 +1,62 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 7 Jan. 2023. Version 4.79.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'xelatex' forced or previously required
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "ordinals.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+
+SyncTeX written on ordinals.synctex.gz.Latexmk: Getting log file 'ordinals.log'
+Latexmk: Examining 'ordinals.fls'
+Latexmk: Examining 'ordinals.log'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'ordinals.xdv'
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  ordinals.xdv
+Category 'changed_source_rules':
+  xelatex
+Category 'no_dest':
+  xdvipdfmx
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "ordinals.pdf"  "ordinals.xdv"'
+------------
+ordinals.xdv -> ordinals.pdf
+[1][2][3][4][5][6]
+75438 bytes written
+Latexmk: ====List of undefined refs and citations:
+  Missing character: There is no   (U+2003) in font [lmsans10-oblique]:mapping=tex-text;!
+  Missing character: There is no   (U+2003) in font [lmsans10-oblique]:mapping=tex-text;!
+  Missing character: There is no   (U+2003) in font [lmsans10-oblique]:mapping=tex-text;!
+  Missing character: There is no   (U+2003) in font [lmsans10-oblique]:mapping=tex-text;!
+  Reference `def-ordinal' on page 4 undefined on input line 230
+  Reference `def-ordinal' on page 4 undefined on input line 230
+  Reference `pro-ordinal-elements-are-ordinals' on page 4 undefined on input line 245
+ And 5 more --- see log file.
+Latexmk: Summary of warnings from last run of *latex:
+  Latex failed to resolve 8 reference(s)
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  xelatex: Command for 'xelatex' gave return code 1
+      Refer to 'ordinals.log' and/or above output for details
+

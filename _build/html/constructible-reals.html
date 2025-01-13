@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Constructible Reals &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'constructible-reals';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Shoenfield Absoluteness" href="shoenfield.html" />
+    <link rel="prev" title="The Axiom of Constructibility" href="V%3DL.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2Fconstructible-reals.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/constructible-reals.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Constructible Reals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-of-constructible-reals">The set of constructible reals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset">An uncountable <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set without a perfect subset</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="constructible-reals">
+<h1>Constructible Reals<a class="headerlink" href="#constructible-reals" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{|_{#1}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\VL}{\mathsf{V=L}}
+\newcommand{\GN}[1]{\ulcorner #1 \urcorner}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\DeclareMathOperator{\W}{W}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\WOrd}{WOrd}
+\newcommand{\Norm}[1]{\parallel \! #1 \!\parallel}\]</div>
+<p>In this lecture we transfer the results about <span class="math notranslate nohighlight">\(L\)</span> to the projective hierarchy. The main idea is to relate sets of reals that are defined by set theoretic formulas to sets defined in second order arithmetic.</p>
+<section id="the-set-of-constructible-reals">
+<h2>The set of constructible reals<a class="headerlink" href="#the-set-of-constructible-reals" title="Permalink to this heading">#</a></h2>
+<p>What is the complexity of the set <span class="math notranslate nohighlight">\(\Baire \cap L\)</span>? In particular, is it in the projective hierarchy?
+The set of all constructible reals is defined by a <span class="math notranslate nohighlight">\(\Sigma_1\)</span> formula over set theory:</p>
+<div class="math notranslate nohighlight">
+\[
+   \varphi(x_0)	\; \equiv \; \exists y \; [y \text{ is an ordinal }  \; \wedge \; x_0 \in L_y \; \wedge \; x_0 \text{ is a set of natural numbers }  ].
+\]</div>
+<p>We would like to replace this formula by an “equivalent” one in the language of second order arithmetic. In particular, we would like to replace the quantifier <span class="math notranslate nohighlight">\(\exists y\)</span> by a quantifier over the reals.</p>
+<p>The key for doing this is <a class="reference internal" href="V%3DL.html#lemma-L-GCH">Lemma 20</a>: every constructible real shows up at a countable stage of <span class="math notranslate nohighlight">\(L\)</span>. Hence if <span class="math notranslate nohighlight">\(\alpha \in L \cap \Baire\)</span>, there exists a countable <span class="math notranslate nohighlight">\(\xi\)</span> such that <span class="math notranslate nohighlight">\(x \in L_\xi\)</span>. Since <span class="math notranslate nohighlight">\(|\xi| = |L_\xi|\)</span>, <span class="math notranslate nohighlight">\(L_\xi\)</span> is countable, too. Hence we can hope to replace <span class="math notranslate nohighlight">\(L_\xi\)</span> by something like “<em>there exists a real that codes a model that looks like <span class="math notranslate nohighlight">\(L_\xi\)</span></em>”.</p>
+<p>The <strong>condensation lemma</strong> (<a class="reference internal" href="V%3DL.html#lem-condensation">Lemma 19</a>) allows us to do this.
+Let <span class="math notranslate nohighlight">\(\varphi_{\VL}\)</span> be the conjunction of the axioms in <span class="math notranslate nohighlight">\(T\)</span> and the axiom <span class="math notranslate nohighlight">\(\VL\)</span>.</p>
+<p>Recall that any real <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> codes a set theoretic structure</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	(\omega, E_\alpha) \qquad \text{ where } E_\alpha = \{ \Tup{m,n} \colon \alpha(\Tup{m,n}) =  0 \}.
+\end{equation*}\]</div>
+<p>Unfortunately, the condensation lemma only holds for <strong>transitive sets</strong> (and <span class="math notranslate nohighlight">\((\omega, E_\alpha)\)</span> may look very different from a transitive set model), so simply requiring <span class="math notranslate nohighlight">\((\omega,E_\beta) \models \varphi_{\VL}\)</span> is not enough. But we know from <a class="reference internal" href="models.html#thm-Mostowski-collapse">Theorem 34</a> (<strong>Mostowski collapse</strong>) that if <span class="math notranslate nohighlight">\(E_\beta\)</span> is well-founded and extensional, we can map it isomorphically to a transitive set <span class="math notranslate nohighlight">\(S\)</span> on which we interpret <span class="math notranslate nohighlight">\(E_\beta\)</span> as <span class="math notranslate nohighlight">\(\in\)</span>. By the condensation lemma, this <span class="math notranslate nohighlight">\(S\)</span> must then be an <span class="math notranslate nohighlight">\(L_\xi\)</span>.</p>
+<p>So, for reals, we can formulate membership in <span class="math notranslate nohighlight">\(L\)</span> now as follows:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*} \tag{$*$}
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: [E_\beta \text{ is  extensional and well-founded} \\ \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
+\end{multline*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\pi_\beta\)</span> is the Isomorphism of the Mostowski collapse of <span class="math notranslate nohighlight">\(E_\beta\)</span>.</p>
+<p>It remains to show that the notions occurring inside the square brackets are definable in second order arithmetic.</p>
+<div class="proof proposition admonition" id="prop-satisfaction-arithmetic">
+<p class="admonition-title"><span class="caption-number">Proposition 54 </span></p>
+<section class="proposition-content" id="proof-content">
+<ul class="simple">
+<li><p>(<strong>a</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>  For any <span class="math notranslate nohighlight">\(n \in \Nat\)</span>, the following set is <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span>:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\varphi} \: \wedge \: \varphi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \}
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>(<strong>b</strong>) <span class="math notranslate nohighlight">\(\quad\)</span>  If <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> and <span class="math notranslate nohighlight">\(E_\alpha\)</span> is well-founded and extensional, then the following set is arithmetic in <span class="math notranslate nohighlight">\(\alpha\)</span>:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\{ (m,\gamma) \in \Nat\times \Baire \colon \pi_\alpha(m) = \gamma\}
+\end{equation*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (a) can be established similar to showing that <span class="math notranslate nohighlight">\(\Op{Sat}\)</span>-predicate of <a class="reference internal" href="constructible.html#thm-sat-predicate">Theorem 39</a> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable. One does this first for <span class="math notranslate nohighlight">\(\Sigma_1\)</span> formulas and then uses induction. Using Gödelization, one carefully defines all syntactical notions using arithmetic formulas. Then, one uses the recursive definition of truth to establish the definability of the satisfaction relation.</p>
+<p>Since we work with relations over <span class="math notranslate nohighlight">\(\Nat\)</span> now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of <span class="math notranslate nohighlight">\(\models\)</span> for <span class="math notranslate nohighlight">\(\Sigma_n\)</span>-formulas, this helps us bound the overall complexity at <span class="math notranslate nohighlight">\(\Sigma^0_n\)</span></p>
+<p>(c) By analyzing the recursive definition and using the definition of <span class="math notranslate nohighlight">\(\Nat\)</span> in <span class="math notranslate nohighlight">\(\ZF\)</span>, one first shows that the set</p>
+<div class="math notranslate nohighlight">
+\[
+    \{ (m,p) \in \Nat\times \Nat  \colon \pi_\alpha(m) = p \}
+\]</div>
+<p>is arithmetic in <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\psi(v_0, v_1, v_2)\)</span> be the formula <span class="math notranslate nohighlight">\(\Tup{v_0, v_1} \in v_2\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*}
+    \pi_\alpha(m) = \gamma \iff \\ 
+    \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
+\end{multline*}\]</div>
+<p>Now apply the previous observation and (a).</p>
+</div>
+<p>Finally, note that</p>
+<div class="math notranslate nohighlight">
+\[
+	\text{$E_\beta$ is extensional} \iff \forall m,n \: [\forall k (k E_\beta m \; \leftrightarrow \; k E_\beta n) \; \to \; m=n ].
+\]</div>
+<p>Hence this is arithmetical. And we have already seen that coding a well-founded relation over <span class="math notranslate nohighlight">\(\Nat\)</span> is <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>.</p>
+<p>Now we know the complexity of all parts of (<span class="math notranslate nohighlight">\(*\)</span>) and can put everything together.</p>
+<div class="proof theorem admonition" id="thm-L-reals">
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>The set <span class="math notranslate nohighlight">\(L \cap \Baire\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+</section>
+</div><p>In a similar way we can show that the relation <span class="math notranslate nohighlight">\(\alpha &lt;_L \beta\)</span> over <span class="math notranslate nohighlight">\((L\cap\Baire)^2\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> (using that <span class="math notranslate nohighlight">\(&lt;_L\)</span> is <span class="math notranslate nohighlight">\(\Delta_1\)</span>-definable).</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Recall that given <span class="math notranslate nohighlight">\(\alpha \in \Baire, n \in \Nat\)</span>, <span class="math notranslate nohighlight">\((\alpha)_n\)</span> denotes the <span class="math notranslate nohighlight">\(n\)</span>-th column of <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Show that the following relation <span class="math notranslate nohighlight">\(R\)</span> over <span class="math notranslate nohighlight">\((L\cap\Baire)^2\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+(\alpha, \beta) \in R :\iff \{(\alpha)_n\colon n \in \Nat \} = \{\gamma \colon \gamma &lt;_L \beta \}
+\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(\alpha\)</span> codes the (countable) <span class="math notranslate nohighlight">\(&lt;_L\)</span>-initial segment restricted to <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+</div>
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then the set is actually <span class="math notranslate nohighlight">\(\Delta^1_2\)</span>, since then</p>
+<div class="math notranslate nohighlight">
+\[
+	\alpha &lt;_L \beta \iff \alpha \neq \beta \: \wedge \: \neg(\beta &lt;_L \alpha).
+\]</div>
+<p>Finally, since <span class="math notranslate nohighlight">\(\VL\)</span> implies <span class="math notranslate nohighlight">\(\CH\)</span>, we can use <a class="reference internal" href="projective.html#prop-non-meas">Proposition 38</a> to show the existence of non-measurable sets under <span class="math notranslate nohighlight">\(\VL\)</span>.</p>
+<div class="proof corollary admonition" id="cor-L-reals">
+<p class="admonition-title"><span class="caption-number">Corollary 21 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then there exists a <span class="math notranslate nohighlight">\(\Delta^1_2\)</span> set that is not Lebesgue-measurable and does not have the Baire property.</p>
+</section>
+</div></section>
+<section id="an-uncountable-pi-1-1-set-without-a-perfect-subset">
+<h2>An uncountable <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set without a perfect subset<a class="headerlink" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset" title="Permalink to this heading">#</a></h2>
+<p>We now show that under the assumption <span class="math notranslate nohighlight">\(\VL\)</span>, the <strong>perfect set property</strong> fails at level <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>.</p>
+<p>We start with constructing an example at the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> level.</p>
+<p><a class="reference internal" href="coanalytic.html#sec-well-founded"><span class="std std-ref">Recall</span></a> that if <span class="math notranslate nohighlight">\(\alpha \in \Baire\)</span> codes a well-ordering on <span class="math notranslate nohighlight">\(\Nat\)</span>, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+	\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+\end{equation*}\]</div>
+<div class="proof proposition admonition" id="prop-sigma12-perfect">
+<p class="admonition-title"><span class="caption-number">Proposition 55 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, there exists an uncountable <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> set in <span class="math notranslate nohighlight">\(\Baire\)</span> without a perfect subset.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> be given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    x \in A \iff x \in \WOrd \, \wedge \, \forall y &lt;_L x \,  ( \parallel y \parallel \ne \parallel x \parallel).
+\end{equation*}\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(A\)</span> collects the <span class="math notranslate nohighlight">\(&lt;_L\)</span>-least code for every ordinal <span class="math notranslate nohighlight">\(&lt; \omega_1\)</span>.</p>
+<p>Clearly <span class="math notranslate nohighlight">\(A\)</span> is uncountable, since it has a representative for every countable ordinal and hence of cardinality <span class="math notranslate nohighlight">\(\omega_1\)</span>.</p>
+<p>Moreover, <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>: Let <span class="math notranslate nohighlight">\(R\)</span> be the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>-relation of the exercise above. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x \in A \iff x \in \WOrd \, \wedge \, \exists z \;(R(z,x) \, \wedge \; \forall n \,  ( \Norm {(z)_n} \neq \Norm{x}).
+\end{equation*}\]</div>
+<p>The relation <span class="math notranslate nohighlight">\(\Norm{(z)_n} \neq  \Norm{x}\)</span> <span class="math notranslate nohighlight">\(\Pi^1_1\)</span>, hence <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span>.</p>
+<p>Finally, we see that <strong><span class="math notranslate nohighlight">\(A\)</span> does not have an uncountable <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset</strong> (hence, since all perfect sets are closed, no perfect subset): By <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span>-boundedness (<a class="reference internal" href="coanalytic.html#thm-sigma11-bounding">Theorem 30</a>), for any <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset <span class="math notranslate nohighlight">\(X \subseteq A\)</span> the set <span class="math notranslate nohighlight">\(\{ \Norm{x} \colon x \in X\}\)</span> bounded by an ordinal <span class="math notranslate nohighlight">\(\gamma &lt; \omega_1\)</span>, hence countable.</p>
+</div>
+<p>It is possible to get this example down to <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> using the powerful technique of <strong>uniformization</strong>.</p>
+<div class="proof definition admonition" id="def-uniformization">
+<p class="admonition-title"><span class="caption-number">Definition 41 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(A \subseteq \Baire \times \Baire\)</span>. We say <span class="math notranslate nohighlight">\(A^* \subseteq A\)</span> <strong>uniformizes</strong> <span class="math notranslate nohighlight">\(A\)</span> if</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x  \; [ \exists y \; A(x,y) \to  \exists ! y \; A^*(x,y)]
+\]</div>
+<p>A pointclass <span class="math notranslate nohighlight">\(\Gamma\)</span> has the <strong>uniformization property</strong> if</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A \subseteq \Baire  \times \Baire \, \wedge \, A \in \Gamma \quad \Rightarrow \quad \exists A^* \in  \Gamma \; (A^*  \text{ uniformizes } A).
+\end{equation*}\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thm-Kondo">
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Kondo)</p>
+<section class="theorem-content" id="proof-content">
+<p><span class="math notranslate nohighlight">\(\bPi^1_1\)</span> has the uniformization property.</p>
+</section>
+</div><div class="proof theorem admonition" id="thm-prefect-set-L">
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\VL\)</span>, then there exists an uncountable <span class="math notranslate nohighlight">\(\bPi^1_1\)</span> set without a perfect subset.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A\)</span> be the <span class="math notranslate nohighlight">\(\Sigma^1_2\)</span> set from the proof of <a class="reference internal" href="#prop-sigma12-perfect">Proposition 55</a>. <span class="math notranslate nohighlight">\(A \subseteq \Baire\)</span> is the projection of a <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set <span class="math notranslate nohighlight">\(B \subseteq \Baire \times \Baire\)</span>. If we apply uniformization to <span class="math notranslate nohighlight">\(B\)</span>, we obtain a uniformizing set <span class="math notranslate nohighlight">\(B^*\)</span> whose projection is still <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(B^*\)</span> is uncountable, but does not contain a perfect subset: If <span class="math notranslate nohighlight">\(P \subset B^*\)</span> were such a subset, then <span class="math notranslate nohighlight">\(P\)</span> would be (the graph of) a function and uncountable, and the projection <span class="math notranslate nohighlight">\(\exists^{\Baire} \; P\)</span> would be an uncountable  <span class="math notranslate nohighlight">\(\bSigma^1_1\)</span> subset of <span class="math notranslate nohighlight">\(A\)</span>, contradiction.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="V%3DL.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Axiom of Constructibility</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="shoenfield.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Shoenfield Absoluteness</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-of-constructible-reals">The set of constructible reals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-uncountable-pi-1-1-set-without-a-perfect-subset">An uncountable <span class="math notranslate nohighlight">\(\Pi^1_1\)</span> set without a perfect subset</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

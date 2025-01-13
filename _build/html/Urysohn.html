@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Excursion: The Urysohn Space &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Urysohn';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Trees" href="trees.html" />
+    <link rel="prev" title="Polish Spaces" href="polish.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imagesBorel.html">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FUrysohn.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Urysohn.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Excursion: The Urysohn Space</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-spaces">Universal spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions-of-finite-isometries-and-urysohn-universality">Extensions of finite isometries and Urysohn universality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-the-urysohn-space-a-first-approximation">Constructing the Urysohn space – a first approximation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finishing-the-construction">Finishing the construction</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="excursion-the-urysohn-space">
+<h1>Excursion: The Urysohn Space<a class="headerlink" href="#excursion-the-urysohn-space" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Ury}{\mathbb{U}}
+\newcommand{\Cl}[1]{\overline{#1}}\\\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}\end{aligned}\end{align} \]</div>
+<p>Recall that a mapping <span class="math notranslate nohighlight">\(f: X \to Y\)</span> between two metric spaces <span class="math notranslate nohighlight">\((X,d_X)\)</span> and <span class="math notranslate nohighlight">\((Y,d_Y)\)</span> is an <strong>isometry</strong> if</p>
+<div class="math notranslate nohighlight">
+\[
+d_Y(f(x),f(y)) = d_X(x,y) \quad \text{ for all $x,y \in X$},
+\]</div>
+<p>that is, an isometry is a mapping that preserves distances. The function <span class="math notranslate nohighlight">\(f\)</span> is also called an <em>isometric embedding</em> of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are <em>isometric</em> if there exists a bijective isometry between them.</p>
+<section id="universal-spaces">
+<h2>Universal spaces<a class="headerlink" href="#universal-spaces" title="Permalink to this heading">#</a></h2>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>There exists a Polish metric space <span class="math notranslate nohighlight">\(\Ury\)</span> such that every Polish metric space isometrically embeds into <span class="math notranslate nohighlight">\(\Ury\)</span>.</p>
+</section>
+</div><p>A concrete example of such a space is <span class="math notranslate nohighlight">\(\mathcal{C}[0,1]\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that the set <span class="math notranslate nohighlight">\(\mathcal{C}[0,1]\)</span> of all continuous, real-valued functions on <span class="math notranslate nohighlight">\([0,1]\)</span> with the metric</p>
+<div class="math notranslate nohighlight">
+\[
+	d(f,g) = \sup\{|f(x) - g(x)| \colon x \in [0,1] \}
+\]</div>
+<p>contains an isomorphic copy of any Polish metric space.</p>
+</div>
+<p>But this example is not quite what we have in mind here. There exists another space with a stronger, more “intrinsic” universality property. This space was first constructed by Pavel Urysohn in 1927 <span id="id1">[<a class="reference internal" href="bibliography.html#id16" title="P. Urysohn. Sur un espace métrique universel. I, II. Bull. Sci. Math., 51:1-38, 1927.">Urysohn, 1927</a>]</span>.</p>
+<p>The construction features an <strong>amalgamation principle</strong> that has surfaced in other areas like model theory or graph theory.</p>
+</section>
+<section id="extensions-of-finite-isometries-and-urysohn-universality">
+<h2>Extensions of finite isometries and Urysohn universality<a class="headerlink" href="#extensions-of-finite-isometries-and-urysohn-universality" title="Permalink to this heading">#</a></h2>
+<p>Suppose <span class="math notranslate nohighlight">\(X\)</span> is a Polish metric space. Let <span class="math notranslate nohighlight">\(D = \{x_1, x_2, \dots\}\)</span> be a countable, dense subset. We first observe that, to isometrically embed <span class="math notranslate nohighlight">\(X\)</span> into another Polish space, it is sufficient to embed <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<div class="proof lemma admonition" id="lemma-1">
+<p class="admonition-title"><span class="caption-number">Lemma 1 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(Y\)</span> is Polish, then any isometric embedding <span class="math notranslate nohighlight">\(e\)</span> of <span class="math notranslate nohighlight">\(D\)</span> into <span class="math notranslate nohighlight">\(Y\)</span> extends to an isometric embedding <span class="math notranslate nohighlight">\(e^*\)</span> of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Given <span class="math notranslate nohighlight">\(z \in X\)</span>, let <span class="math notranslate nohighlight">\((x_{i_n})\)</span> be a sequence in <span class="math notranslate nohighlight">\(D\)</span> converging to <span class="math notranslate nohighlight">\(z\)</span>. Since <span class="math notranslate nohighlight">\((x_{i_n})\)</span> converges, it is Cauchy.</p>
+<p><span class="math notranslate nohighlight">\(e\)</span> is an isometry, and thus <span class="math notranslate nohighlight">\(y_n := e(x_{i_n})\)</span> is Cauchy, and since <span class="math notranslate nohighlight">\(Y\)</span> is Polish, <span class="math notranslate nohighlight">\((y_n)\)</span> converges to some <span class="math notranslate nohighlight">\(y \in Y\)</span>. Put <span class="math notranslate nohighlight">\(e^*(z) = y\)</span>.</p>
+<p>To see that this mapping is well-defined, let <span class="math notranslate nohighlight">\((x_{j_n})\)</span> be another sequence with <span class="math notranslate nohighlight">\(x_{j_n} \to z\)</span>. Then <span class="math notranslate nohighlight">\(d(x_{i_n}, x_{j_n}) \to 0\)</span>, and hence <span class="math notranslate nohighlight">\(d(e(x_{i_n}),e(x_{j_n}) = d(y_n, e(x_{j_n}))\to 0\)</span>, implying <span class="math notranslate nohighlight">\(e(x_{j_n}) \to y\)</span>.</p>
+<p>Furthermore, suppose <span class="math notranslate nohighlight">\(w = \lim x_{k_n}\)</span> is another point in <span class="math notranslate nohighlight">\(X\)</span>. Then (since a metric is a continuous mapping from <span class="math notranslate nohighlight">\(Y\times Y \to \Real\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+	d(e^*(z), e^*(w)) = \lim d( e(x_{i_n}),  e(x_{k_n})) = \lim d(  x_{i_n}, x_{k_n}) = d(z,w).
+\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(e^*\)</span> is an isometry.</p>
+</div>
+<p>In order to embed <span class="math notranslate nohighlight">\(D\)</span>, we can now exploit the inductive structure of <span class="math notranslate nohighlight">\(\Nat\)</span> and reduce the task to extending finite isometries.</p>
+<p>Suppose we have constructed an isometry <span class="math notranslate nohighlight">\(e\)</span> between <span class="math notranslate nohighlight">\(F_N = \{x_1, \dots, x_N \} \subset D\)</span> and a space <span class="math notranslate nohighlight">\(Y\)</span>. We would like to extend the isometry to include <span class="math notranslate nohighlight">\(x_{N+1}\)</span>. For this we have to find an element <span class="math notranslate nohighlight">\(y \in Y\)</span> such that for all <span class="math notranslate nohighlight">\(i \leq N\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+	d_Y(y, e(x_i)) = d_X(x_{N+1}, x_i).
+\]</div>
+<p>This extension property gives rise to the following definition.</p>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A Polish metric space <span class="math notranslate nohighlight">\((Y,d_Y)\)</span> is <strong>Urysohn universal</strong> if for every finite subspace <span class="math notranslate nohighlight">\(F \subset Y\)</span> and any extension <span class="math notranslate nohighlight">\(F^* = F \cup \{x^*\}\)</span> with metric a <span class="math notranslate nohighlight">\(d^*\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	d^*|_{F\times F} = d_Y|_{F\times F},
+\]</div>
+<p>there exists a point <span class="math notranslate nohighlight">\(u \in Y\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	d_{Y}(u,x) = d^*(x^*,x) \quad \text{ for all $x \in F$}.
+\]</div>
+</section>
+</div><p>As outlined above, the extension property of Urysohn universal spaces implies the desired isometric embedding property.</p>
+<div class="proof proposition admonition" id="prop-Urysohn-embedding">
+<p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a Urysohn universal Polish metric space. For any Polish metric space <span class="math notranslate nohighlight">\((X,d)\)</span> there exists an isometric embedding from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(U\)</span>.</p>
+</section>
+</div><p>But the extension property also implies a strong intrinsic extension property for the Urysohn space itself.</p>
+<div class="proof proposition admonition" id="prop-Urysohn-extension">
+<p class="admonition-title"><span class="caption-number">Proposition 4 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a Urysohn universal Polish metric space. Every isometry between finite subsets of <span class="math notranslate nohighlight">\(\Ury\)</span> extends to an isometry of <span class="math notranslate nohighlight">\(U\)</span> onto itself.</p>
+</section>
+</div><p>The proof applies the <a class="reference external" href="https://en.wikipedia.org/wiki/Back-and-forth_method">Back-and-forth method</a> that you may know from the rationals: every order-isomorphism between finite subsets of <span class="math notranslate nohighlight">\(\Q\)</span> extends to an automorphism of <span class="math notranslate nohighlight">\((\Q,&lt;)\)</span>.</p>
+<p>This property (which can be formulated for structures in general) is also known as <strong>homogeneity</strong>. It plays an important role, for example, in
+model theory <span id="id2">[<a class="reference internal" href="bibliography.html#id12" title="Dugald Macpherson. A survey of homogeneous structures. Discrete Mathematics, 311(15):1599–1634, 2011.">Macpherson, 2011</a>]</span> and in the topological dynamics of automorphism groups of countable structures <span id="id3">[<a class="reference internal" href="bibliography.html#id11" title="A. S. Kechris, V. G. Pestov, and S. Todorcevic. Fraïssé Limits, Ramsey Theory, and topological dynamics of automorphism groups. Geometric And Functional Analysis, 15(1):106–189, 2005.">Kechris <em>et al.</em>, 2005</a>]</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Show that any two Urysohn universal spaces are isometric.</p>
+</div>
+<p>We will prove the existence of this unique Polish space, which we denote by <span class="math notranslate nohighlight">\(\Ury\)</span>, in the following sections.</p>
+</section>
+<section id="constructing-the-urysohn-space-a-first-approximation">
+<h2>Constructing the Urysohn space – a first approximation<a class="headerlink" href="#constructing-the-urysohn-space-a-first-approximation" title="Permalink to this heading">#</a></h2>
+<p>We first give a construction of a space that has the extension property, but is not Polish. After that we will take additional steps to turn it into a Polish space.</p>
+<p>The crucial idea is to observe that if <span class="math notranslate nohighlight">\(X\)</span> is a metric space and <span class="math notranslate nohighlight">\(x \in X\)</span>, then the mapping <span class="math notranslate nohighlight">\(f_{x}: X \to \Real^{\geq 0}\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[
+	f_{x}(y) = d_X(x,y)
+\]</div>
+<p>is <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz. Recall that a function <span class="math notranslate nohighlight">\(g\)</span> between metric spaces <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>  is <strong><span class="math notranslate nohighlight">\(L\)</span>-Lipschitz</strong>, <span class="math notranslate nohighlight">\(L &gt; 0\)</span> if for every <span class="math notranslate nohighlight">\(x,y \in X\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+	d(g(x),g(y)) \leq L \, d(x,y).
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\Lip_1(X)\)</span> be the set of <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz mappings from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(\Real\)</span>. We endow <span class="math notranslate nohighlight">\(\Lip_1(X)\)</span> with the supremum metric</p>
+<div class="math notranslate nohighlight">
+\[
+	d(f,g) = \sup \{|f(x) - g(x)| \colon x \in X \}.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\diam(X) \leq \mathrm{d}\)</span> and <span class="math notranslate nohighlight">\(f,g\)</span> are <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz, then <span class="math notranslate nohighlight">\(d(f,g)\)</span> is indeed finite.
+However, we will <a class="reference internal" href="#ury-finishing-construction"><span class="std std-ref">later</span></a>  need that the resulting space is also bounded. Let  <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> be the space of all <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz functions from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\([0,\mathrm{d}]\)</span>.</p>
+<p>Clearly, <span class="math notranslate nohighlight">\(\diam(\Lip^{\mathrm{d}}_1(X)) \leq \mathrm{d}\)</span>.</p>
+<p>With this metric, the mapping <span class="math notranslate nohighlight">\(x \mapsto f_{x}(y) = d(x,y) \)</span> becomes an isometry: We have</p>
+<div class="math notranslate nohighlight">
+\[
+	d(f_{x}, f_{z}) = \sup\{ | d(x,y) - d(z,y)| \colon y \in X \}.
+\]</div>
+<p>By the reverse triangle inequality, this is always <span class="math notranslate nohighlight">\(\leq d(x,z)\)</span>. On the other hand, setting <span class="math notranslate nohighlight">\(y=z\)</span> yields <span class="math notranslate nohighlight">\(d(f_x,f_z) \geq d(x,z)\)</span>. This embedding of <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is called the <strong>Kuratowski embedding</strong>.</p>
+<p>We use this fact as follows: If <span class="math notranslate nohighlight">\(X^* = X \sqcup \{x^*\}\)</span> and <span class="math notranslate nohighlight">\(d^*\)</span> is an extension of <span class="math notranslate nohighlight">\(d_X\)</span>, then <span class="math notranslate nohighlight">\(f_{x^*}\)</span> is an element of <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span>, and as above, for any <span class="math notranslate nohighlight">\(x \in X\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+	d(f_{x^*}, f_x) = d^*(x^*,x).
+\]</div>
+<p>Hence <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> has an extension property of the kind we are looking for.</p>
+<blockquote>
+<div><p><em>Iterative construction</em>: Let <span class="math notranslate nohighlight">\(X_0\)</span> be any non-empty Polish space with finite diameter <span class="math notranslate nohighlight">\(\mathrm{d} &gt; 0\)</span>. Given <span class="math notranslate nohighlight">\(X_n\)</span>, let <span class="math notranslate nohighlight">\(\mathrm{d}(n) = \diam(X_n)\)</span> and set <span class="math notranslate nohighlight">\(X_{n+1} = \Lip^{2\mathrm{d}(n)}_1(X_n)\)</span>. Finally, put <span class="math notranslate nohighlight">\(X_\infty = \bigcup_n X_n\)</span>. Note that <span class="math notranslate nohighlight">\(X_\infty\)</span> inherits a well-defined metric <span class="math notranslate nohighlight">\(d\)</span> from the <span class="math notranslate nohighlight">\(X_n\)</span>, which embed isometrically into it.</p>
+</div></blockquote>
+<p>We wan to verify that <span class="math notranslate nohighlight">\(X_\infty\)</span> has the extension property needed to be Urysohn universal. Let <span class="math notranslate nohighlight">\(F\)</span> be a finite subset of <span class="math notranslate nohighlight">\(X_\infty\)</span>. There exists <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(F \subset X_N\)</span>. Suppose <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> and <span class="math notranslate nohighlight">\(d^*\)</span> is an extension of <span class="math notranslate nohighlight">\(d\)</span> to <span class="math notranslate nohighlight">\(F^*\)</span>. Let <span class="math notranslate nohighlight">\(\mathrm{d}^* = \diam(F^*)\)</span>. Note that <span class="math notranslate nohighlight">\(\diam(X_n) = 2^n \mathrm{d}\)</span>. Choose <span class="math notranslate nohighlight">\(M\)</span> so that <span class="math notranslate nohighlight">\(M \geq N\)</span> and <span class="math notranslate nohighlight">\(\diam(X_M) \geq \mathrm{d}^*\)</span>. The next lemma ensures that we can find <span class="math notranslate nohighlight">\(f \in X_{M+1}\)</span> such that <span class="math notranslate nohighlight">\(f(x) = d^*(x^*,x)\)</span> for all <span class="math notranslate nohighlight">\(x \in F\)</span>.</p>
+<div class="proof lemma admonition" id="lemma-5">
+<p class="admonition-title"><span class="caption-number">Lemma 2 </span> (McShane-Whitney)</p>
+<section class="lemma-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a metric space with <span class="math notranslate nohighlight">\(\diam(X) \leq \mathrm d\)</span>, <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, and <span class="math notranslate nohighlight">\(f \in \Lip^{\mathrm{d}}_1(A)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz function <span class="math notranslate nohighlight">\(f^*\)</span> on all of <span class="math notranslate nohighlight">\(X\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	f^*|_A = f \quad \text{ and } \quad f^* \in \Lip^{2\mathrm{d}}_1(X).
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. For each <span class="math notranslate nohighlight">\(a \in A\)</span> define <span class="math notranslate nohighlight">\(f_a: X \to \Real\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+	f_a(x) = f(a) + d(a,x).
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f_a\)</span> is <span class="math notranslate nohighlight">\(1\)</span>-Lipschitz, by the reverse triangle inequality. Let</p>
+<div class="math notranslate nohighlight">
+\[
+	f^*(x) = \inf \{f_a(x) \colon a \in A\}. 
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f^*(a) = f(a)\)</span> for all <span class="math notranslate nohighlight">\(a \in A\)</span>. Let <span class="math notranslate nohighlight">\(x,y \in X\)</span> and <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>. Wlog assume <span class="math notranslate nohighlight">\(f^*(y) \geq f^*(x)\)</span>. Pick <span class="math notranslate nohighlight">\(a \in A\)</span> so that <span class="math notranslate nohighlight">\(f_a(x) \leq f^*(x)   + \eps\)</span>. Then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	|f^*(x) - f^*(y)| = f^*(y) - f^*(x) &amp; \leq f^*(y) - f_a(x) + \eps \\
+		&amp; \leq f_a(y) - f_a(x) + \eps \leq d(x,y) + \eps.
+\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span> was arbitrary, we have <span class="math notranslate nohighlight">\(|f^*(x) - f^*(y)| \leq d(x,y)\)</span>.</p>
+<p>Finally, we have <span class="math notranslate nohighlight">\(f(a) \leq f_a(x) \leq f(a) + \mathrm{d}\)</span> and thus <span class="math notranslate nohighlight">\(0 \leq f^*(x) \leq f_a(x) \leq 2\mathrm{d}\)</span>.</p>
+</div>
+</section>
+<section id="finishing-the-construction">
+<span id="ury-finishing-construction"></span><h2>Finishing the construction<a class="headerlink" href="#finishing-the-construction" title="Permalink to this heading">#</a></h2>
+<p>The set <span class="math notranslate nohighlight">\(X_\infty\)</span> we constructed has two deficiencies with respect to our goal of constructing a Urysohn universal space: <span class="math notranslate nohighlight">\(X_\infty\)</span> is not necessarily separable, and <span class="math notranslate nohighlight">\(X_\infty\)</span> is not necessarily complete.</p>
+<p>To make <span class="math notranslate nohighlight">\(X_\infty\)</span> separable, we observe that if <span class="math notranslate nohighlight">\(X\)</span> is compact, then the set <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is closed in <span class="math notranslate nohighlight">\(\mathcal{C}(X)\)</span> (the set of all real-valued continuous functions on <span class="math notranslate nohighlight">\(X\)</span>), bounded, and equicontinuous. By the <strong>Arzelà-Ascoli Theorem</strong>, <span class="math notranslate nohighlight">\(\Lip^{\mathrm{d}}_1(X)\)</span> is compact.
+Every compact metric space is separable: For every <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a finite covering of the space with sets of <span class="math notranslate nohighlight">\(\diam &lt; \eps\)</span>. Letting <span class="math notranslate nohighlight">\(\eps\)</span> traverse all positive rationals and picking a point from each set in an <span class="math notranslate nohighlight">\(\eps\)</span>-covering yields a countable dense subset. Hence if we start with <span class="math notranslate nohighlight">\(X_0\)</span> compact, each <span class="math notranslate nohighlight">\(X_n\)</span> will be compact, too. A countable union of separable spaces is separable, thus <span class="math notranslate nohighlight">\(X_\infty\)</span> is separable.</p>
+<p>To obtain a complete space, we can pass from <span class="math notranslate nohighlight">\(X_\infty\)</span> to its <em>completion</em> <span class="math notranslate nohighlight">\(\Cl{X_\infty}\)</span>. First note that if a metric space <span class="math notranslate nohighlight">\(X\)</span> is separable, so is its completion <span class="math notranslate nohighlight">\(\Cl{X}\)</span>. However, we also have to ensure that <span class="math notranslate nohighlight">\(\Cl{X_\infty}\)</span> retains the universality property of <span class="math notranslate nohighlight">\(X_\infty\)</span>.</p>
+<div class="proof lemma admonition" id="lemma-6">
+<p class="admonition-title"><span class="caption-number">Lemma 3 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>If a complete metric space <span class="math notranslate nohighlight">\((Y,d)\)</span> admits a dense Urysohn universal subspace <span class="math notranslate nohighlight">\(\mathcal{U}\)</span>, then <span class="math notranslate nohighlight">\(Y\)</span> is Urysohn universal.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We follow <span id="id4">[<a class="reference internal" href="bibliography.html#id6" title="Misha Gromov. Metric structures for Riemannian and non-Riemannian spaces. Volume 152 of Progress in Mathematics. Birkhäuser Boston Inc., Boston, MA, 1999.">Gromov, 1999</a>]</span>. Let <span class="math notranslate nohighlight">\(F = \{x_1, \dots, x_n\} \subset Y\)</span> and assume <span class="math notranslate nohighlight">\(F^* = F \sqcup \{x^*\}\)</span> is an extension with metric <span class="math notranslate nohighlight">\(d^*\)</span>.</p>
+<p>We first note that <span class="math notranslate nohighlight">\(Y\)</span> is <strong>approximately universal</strong>. This means that for any <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists a point <span class="math notranslate nohighlight">\(y^* \in Y\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} \tag{$*$}
+	|d(y*,x) - d^*(x^*,x)| &lt; \eps \quad \text{ for all $x \in F$}.
+\end{equation*}\]</div>
+<p>This can be seen as follows. Since <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is dense in <span class="math notranslate nohighlight">\(Y\)</span>, we can find a finite set <span class="math notranslate nohighlight">\(F_\eps = \{z_1, \dots, z_n\} \subset \mathcal{U}\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	d(x_i, z_i) &lt; \eps \quad \text{ for $1 \leq i \leq n$}.
+\]</div>
+<p>Now use the Urysohn universality of <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> for the set <span class="math notranslate nohighlight">\(G^* = \{z_1, \dots , z_n\} \sqcup \{x^*\}\)</span> with the metric</p>
+<div class="math notranslate nohighlight">
+\[
+	d^{**}(x^*, z_i) = d^*(x^*, x_i) \qquad (i = 1, \dots, n)
+\]</div>
+<p>to find <span class="math notranslate nohighlight">\(z \in \mathcal{U}\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[
+	d(z,z_i) = d^{**}(x^*,z_i) = d^*(x^*,x_i) \qquad (i = 1, \dots, n)
+\]</div>
+<p>Then, by the reverse triangle inequality,</p>
+<div class="math notranslate nohighlight">
+\[
+	\left | d(z,x_i) - d^*(x^*,z_i) \right | = \left | d(z,x_i) - d(z,z_i) \right | \leq d(z_i, x_i) = \eps,
+\]</div>
+<p>as required.</p>
+<!-- 
+To keep the proof technically simple, wlog we assume $\eps$ is much smaller than the individual distances between the $x_i$. Consider the extension $F^*_\eps = F_\eps \sqcup \{x^*\}$ with metric
+
+$$
+	e^*(x^*, z_i) = d^*(x^*,x_i) + d(x_i,z_i).
+$$
+
+Since $\mathcal{U}$ has the finite extension property, we can find $y^* \in \mathcal{U}$ such that
+
+$$
+	d(y^*,z_i) = e^*(x^*,z_i) 
+$$
+
+Hence 
+\begin{align*}
+	|d(y^*,x_i) - d^*(x^*,x_i)| & = | e^*(x^*,z_i) - d^*(x^*,x_i)|  \\
+	 	& = | d^*(x^*,x_i) + d(x_i,z_i) - d^*(x^*,x_i) | <  \eps.
+\end{align*} -->
+<p>We use this approximate universality to construct a Cauchy sequence <span class="math notranslate nohighlight">\((y_k)\)</span> in <span class="math notranslate nohighlight">\(Y\)</span> of ‘approximate’ extension points that satisfy <span class="math notranslate nohighlight">\((*)\)</span> for smaller and smaller <span class="math notranslate nohighlight">\(\eps\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(0 &lt; \delta = \max \{d^*(x^*,x_i) \colon 1 \leq i \leq n \}\)</span>.
+The formal requirements for the sequence <span class="math notranslate nohighlight">\((y_i)\)</span> are as follows.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(|d(y_k,x_i) - d^*(x^*,x_i)| \leq 2^{-k} \delta\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d(y_{k+1},y_k) \leq 2^{-k}\delta\)</span>.</p></li>
+</ol>
+<p>The sequence necessarily converges in <span class="math notranslate nohighlight">\(Y\)</span> and the limit point must be a true extension point, due to (1.)</p>
+<p>Suppose we have already constructed <span class="math notranslate nohighlight">\(y_1, \dots, y_k\)</span> satisfying (1.), (2.). Add an (abstract) point <span class="math notranslate nohighlight">\(y^*_{k+1}\)</span> to <span class="math notranslate nohighlight">\(F_k = F \cup \{y_1, \dots, y_k\}\)</span>. Let <span class="math notranslate nohighlight">\(F^*_{k+1} = F_k \sqcup \{y^*_{k+1}\}\)</span>.</p>
+<p>We want to use approximate universality on <span class="math notranslate nohighlight">\(F^*_{k+1}\)</span>. To this end we have to define a metric <span class="math notranslate nohighlight">\(e^*\)</span> on <span class="math notranslate nohighlight">\(F^*_{k+1}\)</span> that has the following properties</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	(i) 	\qquad	&amp; e^*|_{F_k} = d|_{F_k} \\
+	(ii)  	\qquad &amp; e^*(y^*_{k+1},x_i) = d^*(x^*,x_i) \quad (1 \leq i \leq n) \\
+	(iii)	\qquad 	&amp; e^*(y^*_{k+1}, y_k) = 2^{-k-1}\delta 
+\end{align*}\]</div>
+<p>Indeed such a metric exists: The condition <span class="math notranslate nohighlight">\((i)\)</span> already defines a metric on the set <span class="math notranslate nohighlight">\(F_k\)</span>. The conditions <span class="math notranslate nohighlight">\((i)\)</span>-<span class="math notranslate nohighlight">\((iii)\)</span> also define a metric on <span class="math notranslate nohighlight">\(F \cup \{y_k,y^*_{k+1}\}\)</span> – the only thing to check for this is the triangle inequality for <span class="math notranslate nohighlight">\(y_k, y^*_{k+1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+	|e^*(x_i,y_k) - e^*(y^*_{k+1},x_i)| = |d(x_i,y_k) - d^*(x^*,x_i) | \leq 2^{-k}\delta = e^*(y_k, y^*_{k+1}),
+\]</div>
+<p>by (1.). These metrics agree on the set</p>
+<div class="math notranslate nohighlight">
+\[
+	F_k \cap (F \cup \{y_k,y^*_{k+1}\}) = F \cup \{y_k\}.
+\]</div>
+<p>Therefore, we can “merge” them to a metric on all of <span class="math notranslate nohighlight">\(F^*_{k+1}\)</span> by letting</p>
+<div class="math notranslate nohighlight">
+\[
+	e^*(y^*_{k+1}, y_j) = \inf \{e^*(y^*_{k+1}, z) + e^*(z,y_j) \colon z \in \{y_1, \dots, y_{k-1}\} \}.	
+\]</div>
+<p>Now choose <span class="math notranslate nohighlight">\(\eps &lt; 2^{-k-1}\delta\)</span> and apply approximate universality to <span class="math notranslate nohighlight">\(F^*_{k+1}\)</span>. This yields a point <span class="math notranslate nohighlight">\(y_{k+1} \in Y\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+	|d(y_{k+1}, z)  - e^*(y^*_{k+1}, z) | &lt; 2^{-k-1}\delta
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(z \in F_k\)</span>. By definition of <span class="math notranslate nohighlight">\(e^*\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+	|d(y_{k+1}, x_i)  - d^*(y^*_{k+1}, z) | &lt; 2^{-k-1}\delta 
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, and <span class="math notranslate nohighlight">\((iii)\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[
+	d(y_{k+1}, y_k) &lt; e^*(y^*_{k+1},y_k) + \eps \leq 2^{-k-1}\delta + 2^{-k-1}\delta = 2^{-k}\delta
+\]</div>
+<p>as required.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="polish.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Polish Spaces</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="trees.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Trees</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-spaces">Universal spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions-of-finite-isometries-and-urysohn-universality">Extensions of finite isometries and Urysohn universality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-the-urysohn-space-a-first-approximation">Constructing the Urysohn space – a first approximation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finishing-the-construction">Finishing the construction</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Continuous Images of Borel sets &#8212; Descriptive Set Theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"NN": "\\mathbb{N}^\\mathbb{N}", "N": "\\mathbb{N}", "R": "\\mathbb{R}", "Real": "\\mathbb{R}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'imagesBorel';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Analytic Sets" href="analytic.html" />
+    <link rel="prev" title="The Structure of Borel Sets" href="structureBorel.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/PS_VER2_RGB_2C.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Contents
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Polish spaces</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="perfect_subsets_R.html">Perfect Subsets of the Real Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polish.html">Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urysohn.html">Excursion: The Urysohn Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trees.html">Trees</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Borel hierarchy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Borel.html">Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsets_Polish.html">Subspaces of Polish Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure.html">Measure and Baire Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice.html">The Axiom of Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codingBorel.html">Coding Borel Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structureBorel.html">The Structure of Borel Sets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Continuous Images of Borel sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projective sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analytic.html">Analytic Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regularityAnalytic.html">Regularity Properties of Analytic sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projective.html">The Projective Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coanalytic.html">Co-Analytic sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Axiomatic set theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ZFC.html">The Axioms of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">Recursion and the Von-Neumann Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models of Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_cardinals.html">Large Cardinals</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Constructibility</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="constructible.html">The Constructible Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V%3DL.html">The Axiom of Constructibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructible-reals.html">Constructible Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoenfield.html">Shoenfield Absoluteness</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/28left/descriptive_set_theory/issues/new?title=Issue%20on%20page%20%2FimagesBorel.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/imagesBorel.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Continuous Images of Borel sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-sets-as-continuous-images-of-closed-sets">Borel sets as continuous images of closed sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images-of-borel-sets-under-arbitrary-continuous-functions">Images of Borel sets under arbitrary continuous functions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="continuous-images-of-borel-sets">
+<h1>Continuous Images of Borel sets<a class="headerlink" href="#continuous-images-of-borel-sets" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Baire}{\Nat^{\Nat}}
+\newcommand{\Cyl}[1]{N_{#1}}
+\newcommand{\Cant}{2^{\Nat}}
+\newcommand{\Nstr}{\Nat^{&lt;\Nat}}
+\newcommand{\Tup}[1]{\langle #1 \rangle}
+\newcommand{\Co}[1]{\neg \,#1}
+\newcommand{\Cl}[1]{\overline{#1}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+\newcommand{\Rest}[1]{\mid_{#1}}
+\newcommand{\Sle}{\subset}
+\newcommand{\Sleq}{\subseteq}
+\newcommand{\Estr}{\varnothing}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Conc}{\mbox{}^\frown}
+\newcommand{\bDelta}{\pmb{\Delta}}
+\newcommand{\bPi}{\pmb{\Pi}}
+\newcommand{\bSigma}{\pmb{\Sigma}}
+\newcommand{\BS}[1][n]{\bSigma^0_{#1}}
+\newcommand{\BP}[1][n]{\bPi^0_{#1}}
+\DeclareMathOperator{\diam}{diam}\]</div>
+<p>In 1916, Nikolai Lusin asked his student Mikhail Souslin to study a paper by Henri Lebesgue. Souslin found a number of errors, including a lemma that asserted that the projection of a Borel is again Borel. In this lecture we will study the behavior of Borel sets under continuous functions. We will see that on the one hand every Borel set is the continuous image of a closed set, but that on the other hand continuous images of Borel sets are not always Borel.</p>
+<p>This gives rise to a new family of sets, the <strong>analytic</strong> sets, which form a proper superclass of the Borel sets with interesting properties.</p>
+<section id="borel-sets-as-continuous-images-of-closed-sets">
+<h2>Borel sets as continuous images of closed sets<a class="headerlink" href="#borel-sets-as-continuous-images-of-closed-sets" title="Permalink to this heading">#</a></h2>
+<p>We have seen in <a class="reference internal" href="polish.html#thm-polish-cont-image-Baire">Theorem 5</a> that every Polish space is the continuous image of Baire space <span class="math notranslate nohighlight">\(\Baire\)</span>. As we will see now, we can strengthen this result.</p>
+<div class="proof theorem admonition" id="thm-Polish-bijection-Baire">
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Lusin and Souslin  )</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a Polish space. Then there exists a closed subset <span class="math notranslate nohighlight">\(F \subseteq \Baire\)</span> and a continuous bijection <span class="math notranslate nohighlight">\(f: F \to X\)</span> that can be extended to a continuous surjection <span class="math notranslate nohighlight">\(g: \Baire \to X\)</span>.</p>
+</section>
+</div><p>We have seen (<a class="reference internal" href="polish.html#thm-Cantor-embedding">Theorem 3</a>) that every uncountable Polish space contains a homeomorphic embedding of Cantor space. This was achieved by means of a <strong>Cantor scheme</strong>. To prove <a class="reference internal" href="#thm-Polish-bijection-Baire">Theorem 20</a>, we take up this idea again and adapt it to the Baire space.</p>
+<div class="proof definition admonition" id="def-Lusin-scheme">
+<p class="admonition-title"><span class="caption-number">Definition 25 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>Lusin scheme</strong> on a set <span class="math notranslate nohighlight">\(X\)</span> is a family <span class="math notranslate nohighlight">\((F_\sigma)_{\sigma \in \Nstr}\)</span> of subsets of <span class="math notranslate nohighlight">\(X\)</span> such that</p>
+<ul class="simple">
+<li><p><strong>(i)</strong> <span class="math notranslate nohighlight">\(\sigma \Sleq \tau\)</span> implies <span class="math notranslate nohighlight">\(F_\sigma \supseteq F_\tau\)</span>,</p></li>
+<li><p><strong>(ii)</strong> for all <span class="math notranslate nohighlight">\(\tau \in \Nstr\)</span>, <span class="math notranslate nohighlight">\(i \neq j \in \Nat\)</span>, <span class="math notranslate nohighlight">\(F_{\tau\Conc \Tup{i}} \cap F_{\tau\Conc \Tup{j}} = \emptyset\)</span>.</p></li>
+</ul>
+<p>If it has the additional property that</p>
+<ul class="simple">
+<li><p><strong>(iii)</strong> <span class="math notranslate nohighlight">\(\diam(F_{\alpha \Rest{n}}) \to 0\)</span>  for <span class="math notranslate nohighlight">\(n \to \infty\)</span>,</p></li>
+</ul>
+<p>then we can, similarly to a Cantor scheme, define the set</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    D = \{\alpha \in \Baire \colon \bigcap_{n \in \Nat} F_{\alpha\Rest{n}} \neq \emptyset \}
+\end{equation*}\]</div>
+<p>and an <strong>associated map</strong> <span class="math notranslate nohighlight">\(f: D \to X\)</span> by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\{f(\alpha)\} = \bigcap_{n \in \Nat} F_{\alpha\Rest{n}}.
+\end{equation*}\]</div>
+<p>Properties (i)-(iii) ensure that <span class="math notranslate nohighlight">\(f\)</span> is continuous and injective.</p>
+</section>
+</div><p>To prove the theorem we devise a Lusin scheme on <span class="math notranslate nohighlight">\(X\)</span> such that <span class="math notranslate nohighlight">\(D\)</span> will be closed, and <span class="math notranslate nohighlight">\(f\)</span> will be a surjection, too. This is ensured by the following additional properties.</p>
+<ul class="simple">
+<li><p><strong>(a)</strong> <span class="math notranslate nohighlight">\(F_\emptyset = X\)</span>,</p></li>
+<li><p><strong>(b)</strong> Each <span class="math notranslate nohighlight">\(F_\tau\)</span> is <span class="math notranslate nohighlight">\(\BS[2]\)</span>,</p></li>
+<li><p><strong>(c)</strong> For each <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(\diam(F_\sigma) \leq 1/2^{|\sigma|}\)</span>,</p></li>
+<li><p><strong>(d)</strong> <span class="math notranslate nohighlight">\(F_\tau = \bigcup_{i \in \Nat} F_{\tau\Conc \Tup{i}} =  \bigcup_{i \in \Nat} \Cl{F_{\tau\Conc \Tup{i}}}\)</span>.</p></li>
+</ul>
+<p>For this we have to show that every <span class="math notranslate nohighlight">\(\BS[2]\)</span> set <span class="math notranslate nohighlight">\(F \subseteq X\)</span> can be written, for given <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, as  <span class="math notranslate nohighlight">\(F= \bigcup_{i \in \Nat} F_i\)</span>, where the <span class="math notranslate nohighlight">\(F_i\)</span> are pairwise disjoint <span class="math notranslate nohighlight">\(\BS[2]\)</span> sets of diameter <span class="math notranslate nohighlight">\(&lt; \eps\)</span> so that <span class="math notranslate nohighlight">\(\Cl{F_i} \subseteq F\)</span>:</p>
+<p>Let <span class="math notranslate nohighlight">\(F= \bigcup_{i \in \Nat} C_i\)</span>, where <span class="math notranslate nohighlight">\(C_i\)</span> is closed, and <span class="math notranslate nohighlight">\(C_i \subseteq C_{i+1}\)</span>. Then <span class="math notranslate nohighlight">\(F= \bigcup_{i \in \Nat}(C_{i+1} \setminus C_i)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\((U_n)\)</span> be a covering of <span class="math notranslate nohighlight">\(X\)</span> with open sets of diameter <span class="math notranslate nohighlight">\(&lt; \eps\)</span>. Put <span class="math notranslate nohighlight">\(D^{(i)}_n = U_n \cap (C_{i+1} \setminus C_i)\)</span>. Then <span class="math notranslate nohighlight">\(D^{(i)}_n\)</span> is <span class="math notranslate nohighlight">\(\bDelta^0_2\)</span>. Now let <span class="math notranslate nohighlight">\(E^{(i)}_n = D^{(i)}_n \setminus (D^{(i)}_1 \cup \dots \cup D^{(i)}_{n-1})\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(C_{i+1} \setminus C_i = \bigcup_{n \in \Nat} E^{(i)}_n\)</span> where the <span class="math notranslate nohighlight">\(E^{(i)}_j\)</span> are <span class="math notranslate nohighlight">\(\BS[2]\)</span> sets of diameter <span class="math notranslate nohighlight">\(&lt;\eps\)</span>. Therefore,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+F =  \bigcup_{i,n\in \Nat} E^{(i)}_n \; \text{ and } \;  \Cl{E^{(i)}_n} \subseteq \Cl{C_{i+1} \setminus C_i} \subseteq C_{i+1} \subseteq F.
+\end{equation*}\]</div>
+<p>The mapping <span class="math notranslate nohighlight">\(f\)</span> associated with this Lusin scheme is surjective due to (a) and (d).
+Furthermore, the domain <span class="math notranslate nohighlight">\(D\)</span> of <span class="math notranslate nohighlight">\(f\)</span> is closed: Suppose <span class="math notranslate nohighlight">\(\alpha_n \in D\)</span>, <span class="math notranslate nohighlight">\(\alpha_n \to \alpha\)</span>. Then <span class="math notranslate nohighlight">\(f(\alpha_n)\)</span> is Cauchy, since for <span class="math notranslate nohighlight">\(\eps &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N\)</span> with <span class="math notranslate nohighlight">\(\diam(F_{\alpha\Rest{N}}) &lt; \eps\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> such that <span class="math notranslate nohighlight">\(\alpha_n\Rest{N} = \alpha\Rest{N}\)</span> for all <span class="math notranslate nohighlight">\(n \geq n_0\)</span>, so that <span class="math notranslate nohighlight">\(d(f(\alpha_n),f(\alpha_m)) &lt; \eps\)</span> whenever <span class="math notranslate nohighlight">\(n,m \geq n_0\)</span>. Since <span class="math notranslate nohighlight">\(X\)</span> is Polish <span class="math notranslate nohighlight">\(f(\alpha_n) \to y\)</span> for some <span class="math notranslate nohighlight">\(y \in X\)</span>.</p>
+<p>By (d) we have <span class="math notranslate nohighlight">\(y \in \bigcap_n \Cl{F_{\alpha\Rest{n}}} = \bigcap_n F_{\alpha\Rest{n}}\)</span>, hence <span class="math notranslate nohighlight">\(\alpha \in D\)</span> and <span class="math notranslate nohighlight">\(f(\alpha) = y\)</span>.</p>
+<p>It remains to show that we can extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous surjection <span class="math notranslate nohighlight">\(g: \Baire \to X\)</span>. Say a closed subset <span class="math notranslate nohighlight">\(C\)</span> of a topological space <span class="math notranslate nohighlight">\(Y\)</span> is a <strong>retract</strong> of <span class="math notranslate nohighlight">\(Y\)</span> if there exists a continuous surjection <span class="math notranslate nohighlight">\(g: Y \to C\)</span> such that <span class="math notranslate nohighlight">\(g\Rest{C} = \Op{id}\)</span>.</p>
+<div class="proof lemma admonition" id="lem-closed-retract-Baire">
+<p class="admonition-title"><span class="caption-number">Lemma 11 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>Every non-empty closed subset of <span class="math notranslate nohighlight">\(\Baire\)</span> is a retract of <span class="math notranslate nohighlight">\(\Baire\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(C \subseteq \Baire\)</span> be closed, and let <span class="math notranslate nohighlight">\(T\)</span> be a pruned tree such that <span class="math notranslate nohighlight">\([T] = C\)</span>. We define a monotone mapping <span class="math notranslate nohighlight">\(\phi:\Nstr \to T\)</span> such that <span class="math notranslate nohighlight">\(\phi(\sigma) = \sigma\)</span> for all <span class="math notranslate nohighlight">\(\sigma \in T\)</span>. Then the induced (continuous) mapping <span class="math notranslate nohighlight">\(\phi^*: \Baire \to C\)</span> is the desired retract.</p>
+<p>Define <span class="math notranslate nohighlight">\(\phi\)</span> by induction. Let <span class="math notranslate nohighlight">\(\phi(\Estr) = \Estr\)</span>. Given <span class="math notranslate nohighlight">\(\phi(\tau)\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \phi(\tau\Conc\Tup{m}) = \begin{cases}
+        \tau\Conc\Tup{m} &amp; \text{ if } \tau\Conc\Tup{m} \in T,\\
+        \text{any } \phi(\tau)\Conc\Tup{k} \in T &amp; \text{ otherwise}.
+    \end{cases}
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(k\)</span> must exist since <span class="math notranslate nohighlight">\(T\)</span> is pruned.</p>
+</div>
+<p>If we combine the retract function with <span class="math notranslate nohighlight">\(f\)</span>, we then obtain the desired surjection <span class="math notranslate nohighlight">\(\Baire \to X\)</span>. This concludes the proof of <a class="reference internal" href="#thm-Polish-bijection-Baire">Theorem 20</a>.</p>
+<p>Refining the topology as in <a class="reference internal" href="subsets_Polish.html#thm-Borel-clopen">Theorem 12</a>, we can extend the result from Polish spaces to Borel sets.</p>
+<div class="proof corollary admonition" id="cor-Borel-image-closed">
+<p class="admonition-title"><span class="caption-number">Corollary 8 </span> (Lusin and Souslin  )</p>
+<section class="corollary-content" id="proof-content">
+<p>For every Borel subset <span class="math notranslate nohighlight">\(B\)</span> of a Polish space <span class="math notranslate nohighlight">\(X\)</span> there exists a closed set <span class="math notranslate nohighlight">\(F \subseteq \Baire\)</span> and a continuous bijection <span class="math notranslate nohighlight">\(f:F \to B\)</span>. Furthermore, <span class="math notranslate nohighlight">\(f\)</span> can be extended to a continuous surjection <span class="math notranslate nohighlight">\(g:\Baire \to B\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Enlarge the topology <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> of <span class="math notranslate nohighlight">\(X\)</span> to a topology <span class="math notranslate nohighlight">\(\mathcal{O}_B\)</span> for which <span class="math notranslate nohighlight">\(B\)</span> is clopen.
+By <a class="reference internal" href="subsets_Polish.html#thm-subsets-Polish">Theorem 11</a>, <span class="math notranslate nohighlight">\((B,\mathcal{O}_B\Rest{B})\)</span> is a Polish space. By the previous theorem, there exists a closed set <span class="math notranslate nohighlight">\(F \subset \Baire\)</span> and a continuous bijection <span class="math notranslate nohighlight">\(f:\Baire \to (B,\mathcal{O}_B\Rest{B})\)</span>. Since <span class="math notranslate nohighlight">\(\mathcal{O} \subseteq \mathcal{O}_B\)</span>, <span class="math notranslate nohighlight">\(f:F \to B\)</span> is continuous for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, too.</p>
+</div>
+<p>This theorem can be reversed in the following sense.</p>
+<div class="proof theorem admonition" id="thm-Borel-injective">
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Lusin and Souslin)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(X,Y\)</span> are Polish and <span class="math notranslate nohighlight">\(f:X \to Y\)</span> is continuous. If <span class="math notranslate nohighlight">\(A \subseteq X\)</span> is Borel and <span class="math notranslate nohighlight">\(f\Rest{A}\)</span> is injective, then <span class="math notranslate nohighlight">\(f(A)\)</span> is Borel.</p>
+</section>
+</div><p>For a proof (which uses facts about analytic sets), see <span id="id1">[<a class="reference internal" href="bibliography.html#id10" title="Alexander S. Kechris. Classical Descriptive Set Theory. Springer, 1995.">Kechris, 1995</a>]</span> (II.15.1).</p>
+</section>
+<section id="images-of-borel-sets-under-arbitrary-continuous-functions">
+<h2>Images of Borel sets under arbitrary continuous functions<a class="headerlink" href="#images-of-borel-sets-under-arbitrary-continuous-functions" title="Permalink to this heading">#</a></h2>
+<p>As announced in the introduction, Borel sets are <em>not</em> closed under <em>arbitrary</em> continuous mappings.</p>
+<div class="proof theorem admonition" id="thm-Souslin-Borel-images">
+<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Souslin)</p>
+<section class="theorem-content" id="proof-content">
+<p>The Borel sets are not closed under continuous images.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(U \subseteq \Baire \times \Baire \times \Baire\)</span> be <span class="math notranslate nohighlight">\(\Baire\)</span>-universal for <span class="math notranslate nohighlight">\(\BP[1](\Baire \times \Baire)\)</span>.
+Define</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    F:= \{(\alpha,\beta) \colon \exists \gamma  \; (\alpha,\gamma,\beta) \in U\}.
+\end{equation*}\]</div>
+<p>We claim that this set is <em><span class="math notranslate nohighlight">\(\Baire\)</span>-universal for the set of all continuous images of closed subsets of <span class="math notranslate nohighlight">\(\Baire\)</span></em>:</p>
+<p>On the one hand <span class="math notranslate nohighlight">\(F\)</span> is a projection of a closed set, and projections are continuous. This implies that all the sets <span class="math notranslate nohighlight">\(F_\beta = \{ \alpha \colon (\alpha,\beta) \in F \}\)</span> are continuous images of a closed set.</p>
+<p>On the other hand, if <span class="math notranslate nohighlight">\(f: C \to \Baire\)</span> is continuous with <span class="math notranslate nohighlight">\(C \subseteq \Baire\)</span> closed (possibly empty) and <span class="math notranslate nohighlight">\(f(C) = A\)</span>, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \alpha \in A \iff \exists \gamma \; (\gamma,\alpha) \in \Op{Graph}(f) \iff \exists \gamma \; (\alpha,\gamma) \in  \Op{Graph}(f^{-1}).
+\end{equation*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is continuous, <span class="math notranslate nohighlight">\(\Op{Graph}(f)\)</span> and hence also <span class="math notranslate nohighlight">\(\Op{Graph}(f^{-1})\)</span> are closed subsets of <span class="math notranslate nohighlight">\(\Baire \times \Baire\)</span>. Thus, by the universality of <span class="math notranslate nohighlight">\(U\)</span>, there exists <span class="math notranslate nohighlight">\(\beta\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+    \Op{Graph}(f^{-1}) = U_\beta = \{ (\alpha,\gamma) \colon (\alpha,\gamma,\beta) \in U \},
+\]</div>
+<p>and hence</p>
+<div class="math notranslate nohighlight">
+\[
+    A = F_\beta.
+\]</div>
+<p><span class="math notranslate nohighlight">\(F\)</span> cannot be Borel: Otherwise <span class="math notranslate nohighlight">\(D_F = \{\alpha \colon (\alpha,\alpha) \not\in F \}\)</span> were Borel. By <a class="reference internal" href="#cor-Borel-image-closed">Corollary 8</a>, every Borel set is the image of a closed set under a continuous mapping. This implies that <span class="math notranslate nohighlight">\(D_F = F_\beta\)</span>. But then</p>
+<div class="math notranslate nohighlight">
+\[
+    \beta \in D_F \iff \beta \in F_\beta \iff (\beta,\beta) \in F \iff \beta \not\in D_F,  
+\]</div>
+<p>contradiction.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="structureBorel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Structure of Borel Sets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="analytic.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Analytic Sets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#borel-sets-as-continuous-images-of-closed-sets">Borel sets as continuous images of closed sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images-of-borel-sets-under-arbitrary-continuous-functions">Images of Borel sets under arbitrary continuous functions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Reimann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

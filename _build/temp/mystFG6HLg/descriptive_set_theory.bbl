@@ -1,0 +1,78 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ackermann(1937)]{Ackermann:1937a}
+W.~Ackermann.
+\newblock Die {Widerspruchsfreiheit} der allgemeinen {Mengenlehre}.
+\newblock \emph{Mathematische Annalen}, 114\penalty0 (1):\penalty0 305--315,
+  1937.
+
+\bibitem[Cantor(1895)]{Cantor_1895s}
+G.~Cantor.
+\newblock Beitr{\" a}ge zur {Begr}{\" u}ndung der transfiniten {Mengenlehre}.
+\newblock \emph{Mathematische Annalen}, 46\penalty0 (4):\penalty0 481--512,
+  1895.
+
+\bibitem[Gromov(1999)]{Gromov:1999a}
+M.~Gromov.
+\newblock \emph{Metric structures for {Riemannian} and non-{Riemannian}
+  spaces}, volume 152 of \emph{Progress in {Mathematics}}.
+\newblock Birkh{\" a}user Boston Inc., Boston, MA, 1999.
+
+\bibitem[Halmos(1950)]{Halmos:1950a}
+P.~R. Halmos.
+\newblock \emph{Measure {Theory}}.
+\newblock Van Nostrand, 1950.
+
+\bibitem[Jech(2003)]{jech2003a}
+T.~Jech.
+\newblock \emph{Set {Theory}}.
+\newblock Springer {Monographs} in {Mathematics}. Springer-Verlag, Berlin,
+  2003.
+
+\bibitem[Kanamori(2003)]{Kanamori:2003a}
+A.~Kanamori.
+\newblock \emph{The {Higher} {Infinite}}.
+\newblock Springer {Monographs} in {Mathematics}. Springer-Verlag, Berlin,
+  second edition, 2003.
+
+\bibitem[Kechris(1995)]{Kechris:1995a}
+A.~S. Kechris.
+\newblock \emph{Classical {Descriptive} {Set} {Theory}}.
+\newblock Springer, 1995.
+
+\bibitem[Kechris et~al.(2005)Kechris, Pestov, and
+  Todorcevic]{Kechris-Pestov-Todorcevic:2005a}
+A.~S. Kechris, V.~G. Pestov, and S.~Todorcevic.
+\newblock Fra\i{{\" }}ss{\' e} {Limits}, {Ramsey} {Theory}, and topological
+  dynamics of automorphism groups.
+\newblock \emph{Geometric And Functional Analysis}, 15\penalty0 (1):\penalty0
+  106--189, 2005.
+
+\bibitem[Macpherson(2011)]{Macpherson:2011a}
+D.~Macpherson.
+\newblock A survey of homogeneous structures.
+\newblock \emph{Discrete Mathematics}, 311\penalty0 (15):\penalty0 1599--1634,
+  2011.
+
+\bibitem[Royden and Fitzpatrick(1988)]{RoydenFitzpatrick_1988n}
+H.~L. Royden and P.~Fitzpatrick.
+\newblock \emph{Real analysis}, volume~32.
+\newblock Macmillan New York, 1988.
+
+\bibitem[Solovay(1970)]{Solovay:1970a}
+R.~Solovay.
+\newblock A model of set-theory in which every set of reals is {Lebesgue}
+  measurable.
+\newblock \emph{The Annals of Mathematics}, 1970.
+
+\bibitem[Urysohn(1927)]{Urysohn:1927a}
+P.~Urysohn.
+\newblock Sur un espace m{\' e}trique universel. {I}, {II}.
+\newblock \emph{Bull. Sci. Math.}, 51:\penalty0 1--38, 1927.
+
+\end{thebibliography}
