@@ -175,7 +175,7 @@ A set $A$ is **transitive** if
 ```
 ```{margin}
 **Caution!**
-A set being transitive is not equivalent to $\in$ being transitive on the set. (Counterexample?)
+Being transitive does *not* mean the $\in$ relation is transitive on the set. (Counterexample?)
 ```
 
 In other words, transitive sets cannot "hide" elements in subsets.
@@ -225,7 +225,7 @@ Any element of an ordinal is an ordinal.
 :class: dropdown
 :nonumber: true
 
-Let $\alpha$ be an ordinal, and assume $b \in \alpha$. Any subset of a linear order is again a linear order under the induced order relation. It remains to show that $(b, \in_b)$ is transitive (as a set). Let $x \in c \in b$. We claim $x \in b$. Since $\alpha$ is transitive, $b \subseteq \alpha$ and hence $c \in \alpha$. By transitivity of $\alpha$ again, $x \in \alpha$. Thus $x,b \in \alpha$, and since $\in_\alpha$ linearly orders $\alpha$, we must have
+Any subset of a linear order is again a linear order under the induced order relation. It remains to show that $(b, \in_b)$ is transitive. Let $\alpha$ be an ordinal, and assume $b \in \alpha$. Let $x \in c \in b$. We claim $x \in b$. Since $\alpha$ is transitive, $b \subseteq \alpha$ and hence $c \in \alpha$. By transitivity of $\alpha$ again, $c \in \alpha$. Thus $x,b \in \alpha$, and since $\in_\alpha$ linearly orders $\alpha$, we must have
 $$
 x \in b \; \vee \; x = b \; \vee \; b \in x.
 $$
@@ -254,17 +254,6 @@ $$
 \alpha < \beta \; \iff \; \alpha \subset \beta.
 $$
 ```
-
-```{hint} Hint
-:class: dropdown
-For $\Leftarrow$, show that 
-$$
-\Op{trans}(a) \; \wedge \; a \subset \beta \quad \Rightarrow \quad \Op{Ord}(a) \; \wedge \; a \in \beta.
-$$
-To obtain $a \in \beta$, consider the $\in$-minimal element of $\beta\setminus a$.
-```
-
-
 ```{prf:proof}
 :nonumber: true
 :class: dropdown

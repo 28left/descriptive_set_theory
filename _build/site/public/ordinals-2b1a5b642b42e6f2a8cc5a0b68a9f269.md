@@ -254,17 +254,6 @@ $$
 \alpha < \beta \; \iff \; \alpha \subset \beta.
 $$
 ```
-
-```{hint} Hint
-:class: dropdown
-For $\Leftarrow$, show that 
-$$
-\Op{trans}(a) \; \wedge \; a \subset \beta \quad \Rightarrow \quad \Op{Ord}(a) \; \wedge \; a \in \beta.
-$$
-To obtain $a \in \beta$, consider the $\in$-minimal element of $\beta\setminus a$.
-```
-
-
 ```{prf:proof}
 :nonumber: true
 :class: dropdown
