@@ -202,7 +202,7 @@ Sets which contain themselves ($A \in A$) are not well-founded$-$ $\{A\}$ would 
 ```{prf:proposition}
 :label: pro-ordinal-linear-order
 
-Assume every set is well-founded. A set $A$ is an **ordinal** if and only if it is transitive and linearly ordered by $\in_A$.
+Assume every set is well-founded. A set $\alpha$ is an **ordinal** if and only if it is transitive and linearly ordered by $\in_\alpha$.
 ```
 
 ```{exercise} 
@@ -212,8 +212,7 @@ Assume every set is well-founded. A set $A$ is an **ordinal** if and only if it 
 Prove [](#pro-ordinal-linear-order). 
 ```
 
-
-If we write out the formulas in full, we see the characterization given in @pro-ordinal-linear-order is much simpler than the original one. Most notably, in @pro-ordinal-linear-order we only use only **bounded quantifiers** (of the form $\forall y \in a$), whereas in the original form we have to quantify over arbitrary subsets of $a$. This is an important difference whose impact will become clear later on.
+If we write out the formulas in full, we see  is much simpler than the original one. Most notably, in {prf:ref}`def-ordinal` we only use only **bounded quantifiers** (of the form $\forall y \in a$), whereas in the original form we have to quantify over arbitrary subsets of $a$. This is an important difference whose impact will become clear later on.
 
 We can now develop the theory of ordinals based on this definition. 
 
@@ -262,7 +261,7 @@ For $\Leftarrow$, show that
 $$
 \Op{trans}(a) \; \wedge \; a \subset \beta \quad \Rightarrow \quad \Op{Ord}(a) \; \wedge \; a \in \beta.
 $$
-To show $a \in \beta$, consider the $\in$-minimal element of $\beta\setminus a$.
+To obtain $a \in \beta$, consider the $\in$-minimal element of $\beta\setminus a$.
 ```
 
 
@@ -275,9 +274,9 @@ For $\Leftarrow$, we show something more general, namely that any transitive pro
 $$
 \Op{trans}(a) \; \wedge \; a \subset \beta \quad \Rightarrow \quad \Op{Ord}(a) \; \wedge \; a \in \beta.
 $$
-If $a \subset \beta$, $a$ is linearly ordered by $\in$ (as a subset of ${}\beta$). Further, if $a$ is transitive, $a$ is an ordinal. 
+If $a \subset \beta$, $a$ is linearly ordered by $\in$ (as a subset of $\beta$). Further, if $a$ is transitive, $a$ is an ordinal. 
 
-It remains to show $a \in \beta$. Since $a$ is a proper subset of ${}\beta$, by well-foundedness there exists a $\in$-minimal element of $\gamma \in \beta \setminus a$. We claim $a = \gamma$. By $\in$-minimality of ${}\gamma$, every element of ${}\gamma$ cannot be in $\beta\setminus a$ and therefore has to be in $a$. Hence $\gamma \subseteq a$. On the other hand, if $x \in a$, then, by assumption $x \in \beta$, and since $\in$ linearly orders ${}\beta$, 
+It remains to show $a \in \beta$. Since $a$ is a proper subset of $\beta$, by well-foundedness there exists a $\in$-minimal element of $\gamma \in \beta \setminus a$. We claim $a = \gamma$. By $\in$-minimality of $\gamma$, every element of $\gamma$ cannot be in $\beta\setminus a$ and therefore has to be in $a$. Hence $\gamma \subseteq a$. On the other hand, if $x \in a$, then, by assumption $x \in \beta$, and since $\in$ linearly orders $\beta$, 
 $$
 x \in \gamma \; \vee \; x = \gamma \; \vee \; \gamma \in x.
 $$
@@ -317,7 +316,7 @@ But this holds since we assume all sets are well-founded.
 ```
 
 ## Basic properties of ordinals
-Using the results obtained so far, we can now deduce some basic facts about the structure of ordinals:
+Using the results obtained so far. we can now deduce some basic facts about the structure of ordinals:
 
 - $0 = \emptyset$ is the *smallest ordinal*.
 
