@@ -1,7 +1,6 @@
-(AC)=
 # The Axiom of Choice
 
-Can every set be well-ordered? This property is equivalent to the **Axiom of Choice** and therefore has a somewhat controversial ontological status among mathematicians.
+Can every set be well-ordered? This property is equivalent to the **Axiom of Choice** and therefore has a somewhat dubious ontological status among mathematicians.
 
 A **choice function** for a set $X$ is a function $f$ that assigns every set $Y \in X$ an element $y \in Y$.  
 
@@ -51,17 +50,31 @@ $$
 $$
 ```
 
-```{prf:proposition}
-:nonumber: true
+Dar�ber hinaus besitzt das  Auswahlaxiom Anwendungen in fast allen Gebieten der Mathematik und viele �quivalente Fassungen (wie das {\sc Zorn}sche Lemma).
+Die Problematik des Auswahlaxioms\footnote{Zur Geschichte und Problematik des Auswahlaxioms s. das Buch von\\
+ {\sc G.H. Moore:} \emph{Zermelo�s axiom of choice,} Springer 1982}  liegt vor allem darin, dass es die Existenz einer Funktion fordert ohne einen Hinweis auf eine m�gliche Beschreibung; und �hnlich folgt aus dem Wohlordnungssatz, dass sich z.\,B. die reellen Zahlen wohlordnen lassen, ohne dass es eine definierbare Wohlordnung zu geben braucht. Wir werden das Auswahlaxiom an vielen Stellen, zun�chst vor allem in der Theorie der Kardinalzahlen, ben�tigen, sp�ter Anwendungen in der Deskriptiven Mengenlehre darstellen. Dabei werden wir mit dem \emph{Axiom der Determiniertheit} auch ein Axiom behandeln, welches dem Auswahlaxiom widerspricht. Deswegen ist es wichtig, darauf zu achten, an welchen Stellen man das Auswahlaxiom benutzt. Gelegentlich reichen zur Anwendungen auch Abschw�chungen des Auswahlaxioms aus:
 
-$\AC$ implies $\DC$ and $\DC$ implies $\AC_\omega$.
-```
+\begin{description}
+\item[Auswahlaxiom f�r abz�hlbare Mengen] $\mathsf{AC}_{\omega} \\ 
+ \forall n \in \omega \; a_n \ne \emptyset \to  \exists f(\text{\emph{f ist  Funktion auf}} \omega \wedge  \forall n \in \omega \;  f(n) \in a_n ),$
 
-Both implications are strict, in a way we will make precise later.
+\item[Axiom der abh�ngigen Auswahl] $\mathsf{DC}\, (dependent \, choice)\\
+\text{\emph{R ist  Relation}}  \wedge a_0 \in  a  \; \wedge  \; \forall x \in a \, \exists y \in a  \; xRy \\
+		 \to \exists f [ f: \omega  \longrightarrow a  \; \wedge  \; f(0) = a_0  \; \wedge  \;\forall n < \omega  \; f(n) R f(n+1) ]$
+\end{description}
 
-The axiom $\AC_{\omega}$ is sufficient to prove, for example, the following:
-- Every infinite set contains a countably infinite subset.
-- A countable union of countable sets is countable.
+Es gilt:
 
-$\DC$ and $\AC_\omega$ therefore play an important role in the foundations of analysis and measure theory.
+$\mathsf{AC} \to \mathsf{DC}, \mathsf{DC}  \to   \mathsf{DC}_{\omega}$ (aber die Umkehrungen sind nicht beweisbar).
+
+\medskip
+
+\noindent Das $\mathsf{AC}_{\omega}$ ben�tigt man, um zu zeigen:
+\begin{enumerate}
+\item jede unendliche Menge enth�lt eine abz�hlbar-unendliche Teilmenge,
+\item die Vereinigung abz�hlbar-vieler abz�hlbarer Mengen ist wiederum abz�hlbar.
+\end{enumerate}
+
+Daher spielen diese Axiome in der Analysis und der Ma�theorie eine wichtige Rolle.
+
 

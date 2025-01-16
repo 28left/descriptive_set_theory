@@ -1,13 +1,17 @@
-# Counterexamples through Choice
+# The Axiom of Choice
 
 In the previous lectures, a number of **regularity principles** for sets of real numbers emerged:
 - **(PS)** &nbsp;&nbsp;&nbsp; the **perfect subset property**,
 - **(LM)** &nbsp;&nbsp;&nbsp; **Lebesgue measurability**,
 - **(BP)**  &nbsp;&nbsp;&nbsp; the **Baire property**.
 
-We have seen that the Borel sets in $\Real$ have all these properties. In this lecture we will show how to construct counterexamples for each of these principles. The proofs make essential use of the Axiom of Choice.
+We have seen that the Borel sets in $\Real$ have all these properties. In this lecture we will show how to construct counterexamples for each of these principles. The proofs make essential use of the **Axiom of Choice**:
 
-One of the most famous applications of $\AC$ is Vitali's construction of a non-Lebesgue measurable set.
+> **(AC)** &nbsp;&nbsp;&nbsp; Every set $\mathcal{X}$ of non-empty sets has a choice-function.
+
+A **choice function** for $\mathcal{X}$ is a function $f$ that assigns every set $Y \in \mathcal{X}$ an element $y \in Y$.
+
+One of the most famous applications of the Axiom of Choice is Vitali's construction of a non-Lebesgue measurable set.
 
 ```{prf:theorem} Vitali
 :label: thm-Vitali-nonmeasurable
@@ -44,7 +48,13 @@ On the other hand, if $\lambda(S) > 0$, then, by countable additivity,
 contradiction.
 ```
 
-Next, we use the Well-ordering Principle ($\WO$) to construct a set $B\subseteq \Real$ such neither $B$ nor $\Real\setminus B$ contains a perfect subset. Such sets are called **Bernstein sets**.
+The Axiom of Choice is equivalent to a number of other principles. We will use the **Well-ordering Principle**:
+
+> **(WO)** &nbsp;&nbsp;&nbsp; Every set $X$ can be well-ordered.
+
+This means that one can define a binary relation $<$ on $X$ so that every non-empty subset of $X$ has a $<$-minimal element.
+
+We use (WO) to construct a set $B\subseteq \Real$ such neither $B$ nor $\Real\setminus B$ contains a perfect subset. Such sets are called **Bernstein sets**.
 
 ```{prf:theorem} 
 :label: thm-Bernstein
@@ -98,4 +108,18 @@ At least one of $B$, $\Real\setminus B$ is not meager. Wlog assume $B$ is not me
 Show that a Bernstein set is not Lebesgue measurable.
 ```
 
-As mentioned before, the existence of arbitrary choice functions appears to be a rather strong assumption.  However, the weaker versions of $\AC$ introduced in the section [](#AC) do not suffice to construct counterexamples as above. {cite:t}`Solovay:1970a` constructed (though under a large cardinal assumption) a model of $\ZF+\DC$ in which every set of real numbers is Lebesgue measurable, has the Baire property, and has the perfect subset property.
+The existence of arbitrary choice functions appears to be a rather strong assumption. It has consequences that seem paradoxical in the sense that they conflict with basic intuitions we have about objects and they behavior with respect to size or other characteristics. Arguably the most famous example is the **Banach-Tarski Paradox**, which uses the Axiom of Choice to partition a ball in $\Real^3$ into finitely many pieces, and then, using rigid transformations (i.e.\ rotations and translations), to assemble them into two balls of the original size.
+
+On the other hand, the Axiom of Choice implies or is even equivalent to many principles that are applied throughout many areas of mathematics, such as the existence of bases of vector spaces, Zorn's Lemma, Tychonoff's Theorem on the compactness of product spaces, the Hahn-Banach Theorem, or the Prime Ideal Theorem.
+
+For some applications, however, a weaker form of the Axiom of Choice is sufficient.
+
+The **Axiom of Countable Choice**:
+
+> **(AC$_\omega$)** &nbsp;&nbsp;&nbsp; Every *countable* family $\mathcal{X}$ of non-empty sets has a choice-function.
+
+Stronger than Countable Choice, but still weaker than the full Axiom of Choice is  **Axiom of Dependent Choice**:
+
+> **(DC)** &nbsp;&nbsp;&nbsp; If $E$ is a binary relation on a non-empty set $A$, and if for every $a \in A$ there exists $b \in A$ such that $a \: E\: b$, then there exists a function $f:\Nat \to A$ such that for all $n \in \Nat$, $f(n) \: E \: f(n+1)$.
+
+A seminal result by {cite:t}`Solovay:1970a` showed that DC is no longer sufficient to prove the existence of non-regular sets in the above sense. He constructed (though under a large cardinal assumption) a model of ZF+DC in which every set of real numbers is Lebesgue measurable, has the Baire property, and has the perfect subset property.
