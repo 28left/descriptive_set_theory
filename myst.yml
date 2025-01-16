@@ -21,6 +21,8 @@ project:
       macro: \mathbb{N}
     \Integer:
       macro: \mathbb{Z}
+    \Z:
+      macro: \mathbb{Z}
     \Rat:
       macro: \mathbb{Q}
     \Q:
@@ -39,8 +41,12 @@ project:
       macro: \mathsf{ZFC}
     \AC:
       macro: \mathsf{AC}
+    \AD:
+      macro: \mathsf{AD}
     \DC:
       macro: \mathsf{DC}
+    \WO:
+      macro: \mathsf{WO}
     \VL:
       macro: \mathsf{V=L}
     \eps:
@@ -101,6 +107,7 @@ project:
     - title: Ordinals and cardinals
       children:
         - file: ordinals.md
+        - file: AC.md
     - title: Polish spaces
       children:
         - file: polish.md
