@@ -362,7 +362,7 @@ Later on we will develop an axiomatic approach to sets which aims to exclude ant
 
 We introduced ordinals with the goal to have a specific representation for any well-order. 
 
-```{danger} Representation theorem for well-orders
+```{danger} Theorem (representation theorem for well-orders)
 :icon: false
 
 Any well-ordered set $(A,<)$ is order-isomorphic to a unique ordinal $\alpha$. The isomorphism is unique.
