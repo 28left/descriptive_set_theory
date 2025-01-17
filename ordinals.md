@@ -385,4 +385,4 @@ then $P$ holds for all ordinals.
 
 Of course, informally one would prove this as follows: If $P$ does not hold for some ordinal, since the ordinals are well-ordered, there has to be a least ordinal ${}\alpha$ for which $P$ does not hold. But then each of the three cases ($0$, successor, or limit ordinal) would lead to a contradiction based on the assumption.
 
-However, we have seen that there is no set of all ordinals, so we have to tread a little carefully here. That's why we postpone a full proof of these results until we have developed an axiomatic foundation for sets.
+However, we have seen that there is no set of all ordinals, so we have to tread a little carefully here. We postpone a full proof of these results until we have developed an axiomatic foundation for sets.
