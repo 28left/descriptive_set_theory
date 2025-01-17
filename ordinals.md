@@ -372,7 +372,7 @@ Any well-ordered set $(A,<)$ is order-isomorphic to a unique ordinal $\alpha$. T
 The ordinal $\alpha$ is called the **order type** of $(A,<)$.
 We will delay the proof of this theorem for a while, until we learn how to extend *induction* and *recursion* into the transfinite. This will, in particular, give us the following generalization of the usual induction principle for the natural numbers.
 
-```{danger} Transfinite Induction
+```{note} Transfinite Induction
 :icon: false
 
 Let $P$ be a property of ordinals. If 
