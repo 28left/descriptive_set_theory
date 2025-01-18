@@ -108,6 +108,7 @@ project:
       children:
         - file: ordinals.md
         - file: AC.md
+        - file: cardinals.md
     - title: Polish spaces
       children:
         - file: polish.md
