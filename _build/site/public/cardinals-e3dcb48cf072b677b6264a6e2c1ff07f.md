@@ -123,7 +123,7 @@ $$
 0, 1, 2, 3, \dots
 $$
 
-The **first infinite cardinal is ${}\omega$**, the cardinality of all countably infinite sets. 
+The **first infinite cardinal is $\omega$**, the cardinality of all countably infinite sets. 
 
 We can use ordinals to enumerate all infinite cardinals. This the **aleph**-sequence.
 
@@ -152,7 +152,7 @@ $$
 
 The next cardinal is
 $$
-  \aleph_1 = \aleph_0^+ = \omega_1 = \{\alpha \in \Ord\colon \alpha \text{ countable}\}.
+  \aleph_0^+ = \aleph_1 = \omega_1 = \{\alpha \in \Ord\colon \alpha \text{ countable}\}.
 $$
 Between $\aleph_0$ und $\aleph_1$ are uncountably many ordinals, all of which are countable. The ordinal $\omega_1$ will play an important role when we close sets under countably infinite operations (like the Borel sets). 
 
