@@ -27,29 +27,12 @@ This follows pretty easily if we use the Axiom of Choice (in form of the well-or
 
 Let $a$ and $b$ be sets. If there is an injection from $a$ to $b$ and an injection from $b$ to $a$, then there exists a bijection between $a$ and $b$.
 ```
-```{note} Warmup
-:icon: false
-:class: dropdown
 
-Find a bijection between $[0,1)$ and $[0,1]$.
-```
-
-````{hint}
-:icon: false
-:class: dropdown
-
-"Proof by picture"
-```{image} ./schroeder-bernstein.png
-:alt: Proof of the Cantor-Schröder-Bernstein Theorem
-:width: 800px
-:align: center
-```
-````
 The next result shows that this order is linear. To prove it, we have to use Choice.
 
 ```{danger} Theorem (Hartogs)
 :icon: false
-:label: thm-hartogs
+:label: thm-hartog
 
 For any sets $a,b$,
 $$
@@ -93,7 +76,7 @@ contradiction.
 
 ## Cardinal numbers
 
-As with ordinals, we would like to choose a system of representatives for the equivalence classes under $\sim$. @thm-hartogs suggests to use ordinals (which we can compare using the well-ordering of ordinals). We therefore assume the Axiom of Choice (so every set has a well-ordering). One issue that remains is that a set can have well-orderings of different lengths (as we saw in the case of the natural numbers $\Nat$). But since the ordinals are well-ordered, we can choose the *least* one of the same cardinality.
+As with ordinals, we would like to choose a system of representatives for the equivalence classes under $\sim$. @thm-hartog suggests to use ordinals (which we can compare using the well-ordering of ordinals). We therefore assume the Axiom of Choice (so every set has a well-ordering). One issue that remains is that a set can have well-orderings of different lengths (as we saw in the case of the natural numbers $\Nat$). But since the ordinals are well-ordered, we can choose the *least* one of the same cardinality.
 
 ```{prf:definition}
 :nonumber: true

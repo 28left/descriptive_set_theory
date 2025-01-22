@@ -34,17 +34,20 @@ Let $a$ and $b$ be sets. If there is an injection from $a$ to $b$ and an injecti
 Find a bijection between $[0,1)$ and $[0,1]$.
 ```
 
-````{hint}
+````
+````
+```{hint}
 :icon: false
 :class: dropdown
 
 "Proof by picture"
 ```{image} ./schroeder-bernstein.png
 :alt: Proof of the Cantor-Schröder-Bernstein Theorem
-:width: 800px
+:width: 500px
 :align: center
 ```
 ````
+```
 The next result shows that this order is linear. To prove it, we have to use Choice.
 
 ```{danger} Theorem (Hartogs)
