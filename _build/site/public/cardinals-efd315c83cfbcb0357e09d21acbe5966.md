@@ -221,19 +221,19 @@ $$
 We prove this theorem by defining a bijection $F: \Ord \times \Ord \leftrightarrow \Ord$ that enumerate pairs of ordinals in the following way: 
 > For any infinite cardinal $\kappa$, $F\Rest{\kappa\times \kappa}$ is a bijection from $\kappa \times \kappa$ to ${}\kappa$. 
 
-To define the mapping, we need to well-order pairs of ordinals. As a first step, we define the **lexicographic order** $<_{\lex}$ on $\Ord \times \Ord$:
+To define the mapping, we need to well-order pairs of ordinals. As a first step, we define the **lexicographic order** $<_{\lex} on $\Ord \times \Ord$:
 \begin{equation*}
-(\alpha, \beta) <_{\lex} (\gamma, \delta) \quad : \iff \quad \alpha < \gamma \, \vee \, ( \alpha = \gamma \, \wedge \beta < \delta).
+(\alpha, \beta) <_lex (\gamma, \delta): \leftrightarrow \alpha < \gamma \, \vee \, ( \alpha = \gamma \, \wedge \beta < \delta).
 \end{equation*}
 
 This is a linear order in which every non-empty subset has a minimal element, but we have to be careful since in this order all pairs of the form $(0,\xi)$, $\xi \in \Ord$, precede $(1,0)$. And we saw that there is no set of the form $\{(0,\xi) \colon  \xi \in \Ord\}$. Gödel modified this order by *presorting* according to the maximum of the pair:
 \begin{align}
-(\alpha, \beta) <_g (\gamma, \delta) \; : \iff \; & \max(\alpha,\beta) <  \max(\gamma,\delta)  \\
-  & \qquad \vee \; (\max(\alpha,\beta) =  \max(\gamma,\delta)  \: \wedge \: (\alpha, \beta) <_{\lex} (\gamma, \delta)).
+(\alpha, \beta) <_g (\gamma, \delta) & : \Leftrightarrow$ \max(\alpha,\beta) <  \max(\gamma,\delta)  \vee \\
+  & \qquad \vee \; (\max(\alpha,\beta) =  \max(\gamma,\delta)  \: \wedge \: (\alpha, \beta) <_l (\gamma, \delta)).
 \end{align}
-This yields a linear order in which every element has only a *set* of predecessors. Moreover, the minimality condition is still satisfied: Let $A \subseteq \Ord \times \Ord$ be non-empty. We find the least element of $A$ by 
-- first finding the least $\gamma_0 \in \{ \max(\alpha,\beta) \colon  (\alpha,\beta)\in A\}$,
-- then finding the least $\alpha_0 \in \{\alpha \colon \exists \beta \;( (\alpha,\beta)\in A \wedge  \max(\alpha,\beta) = \gamma_0) \}$,
-- and finally finding the least $\beta_0 \in \{\beta \colon (\alpha_0,\beta) \in A \wedge \max(\alpha_0,\beta) = \gamma_0 \}$.
-
+Damit erhalten wir wieder eine lineare Ordnung, so dass f�r jedes Element die kleineren nur eine Menge bilden\footnote{s. hierzu auch \ref{induktion}}, aber auch weiterhin die Minimalit�tsbedingung erf�llt ist, und zwar findet man in einem nicht-leeren $A \subseteq On \times On$ das kleinste Element, indem man\begin{itemize}
+\item  zun�chst das kleinste $\gamma_0 \in \{ \max(\alpha,\beta)|  (\alpha,\beta)\in A\}$ bestimmt,
+\item sodann hierzu das kleinste $\alpha_0 \in \{\alpha \mid \exists \beta \;( (\alpha,\beta)\in A \wedge  \max(\alpha,\beta) = \gamma_0) \}$
+\item und  schlie�lich das kleinste $\beta_0 \in \{\beta \mid (\alpha_0,\beta) \in A \wedge \max(\alpha_0,\beta) = \gamma_0 \}$.
+\end{itemize}
 ```

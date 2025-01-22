@@ -232,8 +232,8 @@ This is a linear order in which every non-empty subset has a minimal element, bu
   & \qquad \vee \; (\max(\alpha,\beta) =  \max(\gamma,\delta)  \: \wedge \: (\alpha, \beta) <_{\lex} (\gamma, \delta)).
 \end{align}
 This yields a linear order in which every element has only a *set* of predecessors. Moreover, the minimality condition is still satisfied: Let $A \subseteq \Ord \times \Ord$ be non-empty. We find the least element of $A$ by 
-- first finding the least $\gamma_0 \in \{ \max(\alpha,\beta) \colon  (\alpha,\beta)\in A\}$,
+- first finding the samllest $\gamma_0 \in \{ \max(\alpha,\beta) \colon  (\alpha,\beta)\in A\}$,
 - then finding the least $\alpha_0 \in \{\alpha \colon \exists \beta \;( (\alpha,\beta)\in A \wedge  \max(\alpha,\beta) = \gamma_0) \}$,
-- and finally finding the least $\beta_0 \in \{\beta \colon (\alpha_0,\beta) \in A \wedge \max(\alpha_0,\beta) = \gamma_0 \}$.
+- and finally finding the least $\beta_0 \in \{\beta \mid (\alpha_0,\beta) \in A \wedge \max(\alpha_0,\beta) = \gamma_0 \}$.
 
 ```
