@@ -161,3 +161,15 @@ We know the set of reals is uncountable, so at this time we are able to conclude
 |\mathbb{R}| = \ge \aleph_1, \quad
 |\mathcal{P}(\mathbb{R})| \ge \aleph_2, \ldots
 \end{equation*}
+
+
+## Operations on cardinals
+
+What can we say about the cardinality of unions, products, etc.?
+
+```{exercise}
+:nonumber: true
+
+Show that $|\R \times \R| = |\R|
+```
+
