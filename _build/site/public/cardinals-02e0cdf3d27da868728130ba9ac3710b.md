@@ -203,23 +203,5 @@ This is an instance of a more general result. We can define arithmetic operation
 
 Verify that for finite cardinalities, the operations defined above agree with the usual arithmetic operations on natural numbers.
 ```
-It turns out for infinite cardinals, $+$ and $\cdot$ are trivial, which is a consequence of the following theorem.
 
-```{danger} Hessenberg's Theorem
-:icon: false
 
-Let $\kappa$ be an infinite cardinal. Then 
-$$
-  \kappa \cdot \kappa = \kappa.
-$$
-```
-
-```{prf:proof}
-:nonumber: true
-:class: dropdown
-
-We prove this theorem by defining a bijection $F: \Ord \times \Ord \leftrightarrow \Ord$ that enumerate pairs of ordinals in the following way: dass f�r jede unendliche Kardinalzahl $\kappa$ gilt: $F\restriction \kappa \times  \kappa$ ist eine Bijektion von $\kappa \times \kappa$ auf $\kappa$. Dazu m�ssen wir die Paare von Ordinalzahlen wohlordnen. Zun�chst definieren wir auf $On \times On$ die {\bf lexikographische Ordnung}:
-\begin{equation*}
-(\alpha, \beta) <_l (\gamma, \delta): \leftrightarrow \alpha < \gamma \, \vee \, ( \alpha = \gamma \, \wedge \beta < \delta).
-\end{equation*}
-```
