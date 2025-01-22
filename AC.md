@@ -3,7 +3,7 @@
 
 Can every set be well-ordered? This property is equivalent to the **Axiom of Choice** and therefore has a somewhat controversial ontological status among mathematicians.
 
-A **choice function** for a set $X$ is a function $f$ that assigns every set $Y \in X$ an element $y \in Y$.  
+Let $X$ be a set of non-empty sets. A **choice function** for $X$ is a function $f$ that assigns every set $Y \in X$ an element $y \in Y$.  
 
 
 ```{note} Axiom of Choice ($\AC$)
@@ -47,7 +47,7 @@ $$
 
 If $R$ is a binary relation on a set $A$, $a_0 \in A$, and $\forall x \in A \exists y \in A \; xRy$, then 
 $$
-\exists f \; \left [ f: \N  \longrightarrow A  \; \wedge  \; f(0) = a_0  \; \wedge  \;\forall n \in \N  \; f(n) R f(n+1) \right ]
+\exists f : \N  \longrightarrow A  \text{ with }  \; f(0) = a_0  \; \wedge  \;\forall n \in \N  \; f(n) R f(n+1).
 $$
 ```
 

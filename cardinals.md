@@ -158,6 +158,6 @@ Between $\aleph_0$ und $\aleph_1$ are uncountably many ordinals, all of which ar
 
 We know the set of reals is uncountable, so at this time we are able to conclude
 \begin{equation*}
-|\mathbb{R}| = | \mathbb{R} \times \mathbb{R}| \ge \aleph_1, \quad
+|\mathbb{R}| = \ge \aleph_1, \quad
 |\mathcal{P}(\mathbb{R})| \ge \aleph_2, \ldots
 \end{equation*}
