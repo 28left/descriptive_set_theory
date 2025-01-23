@@ -314,6 +314,6 @@ That is, there are as many countable sequences of real numbers as there are real
 
 2. Since every continuous function real-valued function on $\R$ is determined by its values on $\Q$, we have
 $$
-|\{f:\R \to \R  \text{ continuous } \}| = |\{f:\Q \to \R \}| = (2^{ \aleph_0})^{\aleph_0} =  2^{ \aleph_0}.
+\{f:\R \to \R  \text{ continuous } \}| = |\{f:\Q \to \R \}| = (2^{ \aleph_0})^{\aleph_0} =  2^{ \aleph_0}.
 $$
 
