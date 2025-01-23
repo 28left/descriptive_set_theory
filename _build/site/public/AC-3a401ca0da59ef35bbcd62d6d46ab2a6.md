@@ -30,7 +30,7 @@ The foundational issue with the Axiom of Choice lies primarily in the fact that 
 For more on the history and the controversy surrounding the Axiom of Choice, see *G.H. Moore: Zermelo's Axiom of Choice, Springer. 1982*.
 ```
 
-We will need the Axiom of Choice in many places. In the next section, we will use it to develop the theory of cardinal numbers. Some axioms that are considered in descriptive set theory (such as the **Axiom of Determinacy**, $\AD$) contradict $\AC$. It is therefore important to keep track of where exactly we use the Axiom of Choice.
+We will need the Axiom of Choice in many places. In the next section, we will use it to develop the theory of cardinal numbers. Some axioms that are considered in descriptive set theory (such as the **Axiom of Determinacy**, $\AD$) contradict $\AC$. It is therefore important to keep track of where exactly we use Choice.
 
 For some applications, it suffices to use weaker forms of $\AC$.
 
