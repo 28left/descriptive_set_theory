@@ -256,28 +256,3 @@ Note that since $F(\beta,\beta) \geq \beta$ (as observed above), we must have $F
 
 Show that in this case there exists $\delta < \aleph_\alpha$ with $F(\delta\times \delta) \supseteq \aleph_\alpha$ and hence $|\delta \times \delta| \geq \aleph_\alpha$. Argue that this contradicts the minimality of ${}\alpha$.
 ```
-
-```{prf:corollary}
-:nonumber: true
-
-If $\kappa, \lambda$ are infinite cardinals, then
-\begin{equation*}
-\kappa  + \lambda = \kappa \cdot \lambda = \max\{\kappa, \lambda\}.
-\end{equation*}
-```
-
-```{prf:proof}
-:nonumber: true
-:class: dropdown
-
-If $\kappa$ is infinite, we have, by simple monotonicity arguments,
-\begin{equation*}
-\kappa \le \kappa  + \kappa \le \kappa \cdot \kappa = \kappa, \quad  \text{hence}  \; \kappa  + \kappa = \kappa \cdot \kappa = \kappa.
-\end{equation*}
-
-If, say, $0< \kappa \leq \lambda$ with $\lambda$ infinite, the above implies
-\begin{align}
-\lambda \le \kappa  + \lambda \le \lambda + \lambda = \lambda, & \quad \text{ and thus }  \;\kappa  + \lambda= \lambda = \max\{\kappa,\lambda\},\\
-\lambda \le \kappa  \cdot \lambda \le \lambda \cdot \lambda = \lambda, & \quad  \text{ and thus }  \; \kappa  \cdot \lambda = \lambda = \max\{\kappa,\lambda\}.
-\end{align}
-```

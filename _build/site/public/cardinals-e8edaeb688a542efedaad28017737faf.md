@@ -277,7 +277,7 @@ If $\kappa$ is infinite, we have, by simple monotonicity arguments,
 
 If, say, $0< \kappa \leq \lambda$ with $\lambda$ infinite, the above implies
 \begin{align}
-\lambda \le \kappa  + \lambda \le \lambda + \lambda = \lambda, & \quad \text{ and thus }  \;\kappa  + \lambda= \lambda = \max\{\kappa,\lambda\},\\
-\lambda \le \kappa  \cdot \lambda \le \lambda \cdot \lambda = \lambda, & \quad  \text{ and thus }  \; \kappa  \cdot \lambda = \lambda = \max\{\kappa,\lambda\}.
+\lambda \le \kappa  + \lambda \le \lambda + \lambda = \lambda$, & \quad \text{ and thus }  \;\kappa  + \lambda= \lambda,\\
+\lambda \le \kappa  \cdot \lambda \le \lambda \cdot \lambda = \lambda$, & \quad  \text{ and thus }  \; \kappa  \cdot \lambda = \lambda. 
 \end{align}
 ```
