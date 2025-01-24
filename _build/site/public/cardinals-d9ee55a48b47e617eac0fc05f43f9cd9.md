@@ -330,5 +330,5 @@ $$
 2^{\aleph_0} = \aleph_1
 $$
 ```
-$\CH$ asserts that the cardinality of $\R$ is the next biggest cardinal after $\omega = \aleph_0$ (the cardinality of all countably infinite sets).
+$\CH$ asserts that the cardinality of $\R$ is the next biggest cardinal after $\omega$ (the cardinality of all countably infinite sets).
 

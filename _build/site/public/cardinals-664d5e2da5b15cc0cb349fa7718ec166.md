@@ -283,7 +283,7 @@ If, say, $0< \kappa \leq \lambda$ with $\lambda$ infinite, the above implies
 \end{align}
 ```
 
-## The cardinality of $\R$ and related sets
+## The cardinality of $\R$
 
 While, as we just saw, addition and multiplication is trivial for infinite cardinals, determining the simplest transfinite power, $2^{\aleph_0}$, already leads to unsolvable problems. $2^{\aleph_0}$ plays an important role since it is the cardinality of the continuum.
 
@@ -308,27 +308,5 @@ We can draw some conclusions:
 
 1. With $|\R| = 2^{ \aleph_0}$  we also get  $|\R^n |$  =  $(2^{ \aleph_0})^n = 2^{\aleph_0},$ by Hessenberg's Theorem. It even holds that (exercise!) 
 \begin{equation*}
-|\{s \colon \N \to  \R\}|  =  (2^{ \aleph_0})^{\aleph_0} = 2^{ \aleph_0 \cdot \aleph_0} = 2^{ \aleph_0}.
+|\{s \colon s \text{ function } \N \to  \R\}|  =  (2^{ \aleph_0})^{\aleph_0} = 2^{ \aleph_0 \cdot \aleph_0} = 2^{ \aleph_0}.
 \end{equation*}
-That is, there are as many countable sequences of real numbers as there are real numbers.
-
-2. Since every continuous function real-valued function on $\R$ is determined by its values on $\Q$, we have
-$$
-|\{f:\R \to \R  \text{ continuous } \}| = |\{f:\Q \to \R \}| = (2^{ \aleph_0})^{\aleph_0} =  2^{ \aleph_0}.
-$$
-
-3. We obtain a higher cardinality by passing to the power set of the real numbers or to the set of all real-valued functions on $\R$:
-\begin{equation*}
-|\{f:\R \to \R \}| = |\Pow(\R)| =  2^{2^{ \aleph_0}} > 2^{ \aleph_0}.
-\end{equation*}
-
-
-```{hint} Continuum Hypothesis (cardinal version)
-:icon: false
-
-$$
-2^{\aleph_0} = \aleph_1
-$$
-```
-$\CH$ asserts that the cardinality of $\R$ is the next biggest cardinal after $\omega = \aleph_0$ (the cardinality of all countably infinite sets).
-

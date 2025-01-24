@@ -321,14 +321,3 @@ $$
 \begin{equation*}
 |\{f:\R \to \R \}| = |\Pow(\R)| =  2^{2^{ \aleph_0}} > 2^{ \aleph_0}.
 \end{equation*}
-
-
-```{hint} Continuum Hypothesis (cardinal version)
-:icon: false
-
-$$
-2^{\aleph_0} = \aleph_1
-$$
-```
-$\CH$ asserts that the cardinality of $\R$ is the next biggest cardinal after $\omega = \aleph_0$ (the cardinality of all countably infinite sets).
-
