@@ -51,15 +51,15 @@ Find a bijection between $[0,1)$ and $[0,1]$.
 :nonumber: true
 :class: dropdown
 
-Let $X_0 = X\setminus g(Y)$, $Y_0 = Y \setminus f(X)$. Let $X_1 = g(Y)\setminus g(f(X))$, $Y_1 = f(X) \setminus f(g(Y))$. Note that there is a bijection between  $X_0 \cup X_1$ and $Y_0 \cup Y_1$ by letting 
+Let \(X_0 = X\setminus g(Y)\), \(Y_0 = Y \setminus f(X)\). Let \(X_1 = g(Y)\setminus g(f(X))\), \(Y_1 = f(X) \setminus f(g(Y))\). Note that there is a bijection between  \(X_0 \cup X_1\) and \(Y_0 \cup Y_1\) by letting 
 $$
 \varphi(x) = \begin{cases}
   f(x) & \text{ if } x \in X_0, \\
   g^{-1}(x) & \text{ if } x \in X_1.
 \end{cases}
 $$
-Iterate this process with new $X : = g(f(X))$ and $Y := f(g(Y))$. 
-This gives rise to sequences of pairwise disjoint sets $X_0, X_1, X_2, \dots $ and $Y_0, Y_1, Y_2, \dots $, together with a bijection 
+Iterate this process with new \(X : = g(f(X))\) and \(Y := f(g(Y))\). 
+This gives rise to sequences of pairwise disjoint sets \(X_0, X_1, X_2, \dots \) and \(Y_0, Y_1, Y_2, \dots \), together with a bijection 
 $$
 \varphi: \bigcup_{i \in \omega}  X_i \leftrightarrow \bigcup_{i \in \omega} Y_i. 
 $$
@@ -70,8 +70,8 @@ h(x) = \begin{cases}
   f(x) & \text{ if } x \in X\setminus \bigcup_{i \in \omega}  X_i.
 \end{cases}
 $$
-It is clear that $h$ is one-to-one.
-Suppose $y \in Y \setminus \bigcup_{i \in \omega} Y_i$ is not in  $f(X\setminus \bigcup_{i \in \omega}  X_i)$. But then, by definition of $\varphi$, $y$ is not in $f(Y)$, which would imply $y \in Y_0$, contradiction. Hence $h$ is onto.  
+It is clear that \(h\) is one-to-one.
+Suppose \(y \in Y \setminus \bigcup_{i \in \omega} Y_i\) is not in  \(f(X\setminus \bigcup_{i \in \omega}  X_i})\). But then \(y\) is not in \(f(Y)\), which would imply $y \in Y_0$, contradiction. Hence \(h\) is onto.  
 ```
 
 The next result shows that this order is linear. To prove it, we have to use Choice.
