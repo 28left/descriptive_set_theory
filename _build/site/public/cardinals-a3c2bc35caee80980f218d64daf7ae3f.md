@@ -362,7 +362,7 @@ $$
 \end{equation*}
 
 
-```{hint} Continuum Hypothesis ($\CH$ – cardinal version) 
+```{hint} Continuum Hypothesis (cardinal version)
 :icon: false
 
 $$

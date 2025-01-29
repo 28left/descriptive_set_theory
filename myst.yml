@@ -62,6 +62,7 @@ project:
     \Ci:
       macro: \mathbb{T}
     '\Str': '2^{<\Nat}'
+    '\Astr': '#1^{<\Nat}'
     '\Nstr': '\Nat^{<\Nat}'
     '\Sle': '\subset'
     '\Sleq': '\subseteq'
