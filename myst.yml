@@ -56,7 +56,7 @@ project:
     \Baire:
       macro: \Nat^{\Nat}
     \Rest:
-      macro: \mid_{#1}
+      macro: \upharpoonright{#1}
     \diam:
       macro: \mathrm{diam}
     \Ci:
