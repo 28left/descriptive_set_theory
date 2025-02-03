@@ -304,7 +304,7 @@ Note that since fir any $\beta$, $F(\beta,\beta) \geq \beta$, we must have $F(\a
 
 Since $F$ is a bijection, there exist ordinals $\beta, \gamma < \aleph_\alpha$ such that $F(\beta, \gamma) = \aleph_\alpha$. If we put $\delta = \max\{\beta,\gamma\}+1$, we have $\omega \leq \delta < \aleph_\alpha$ (since $\aleph_\alpha$ has to be a limit ordinal). 
 
-Since $(\beta, \gamma) <_g (\delta, \delta)$, it follows that $F(\delta \times \delta) > \aleph_\alpha$ and thus $F(\delta\times \delta) \supseteq \aleph_\alpha$. The latter implies $|\delta \times \delta| \geq \aleph_\alpha$. But $|\delta\times\delta| = |\delta|\cdot |\delta|$ and by minimality of $\alpha$, $|\delta|\cdot |\delta| = |\delta| < \aleph_\alpha$, contradiction.
+Since $(\beta, \gamma) <_g (\delta, \delta)$, it follows that $F(\delta \times \delta) > \aleph_\alpha$ and thus $F(\delta\times \delta) \supseteq \aleph_\alpha$. The latter implies $|\delta \times \delta| \geq \aleph_\alpha$. But |\delta\times\delta| = |\delta|\cdot |\delta|$ and by minimality of $\alpha$, $|\delta|\cdot |\delta| = |\delta| < \aleph_\alpha$, contradiction.
 ```
 
 ```{prf:corollary}

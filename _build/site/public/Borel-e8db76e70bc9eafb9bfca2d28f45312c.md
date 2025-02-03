@@ -14,15 +14,15 @@ Let $X$ be a set. A **${}\sigma$-algebra** $\mathcal{S}$ on $X$ is a collection 
 If the enveloping space $X$ is clear, we use $\Co{A}$ to denote the complement of $A$ in $X$.
 
 It is easy to derive that a $\sigma$-algebra is also closed under the following set-theoretic operations:	
-- *countable intersections*:  we have $\bigcap A_n = \Co{\bigcup_n \Co{A_n}}$.
-- *differences*:  we have $A \setminus B = A \cap \Co{B}$.
-- *Symmetric differences*:  we have $A \bigtriangleup B = (A \cap \Co{B}) \cup (\Co{A} \cap B)$.
+- *countable intersections* -- we have $\bigcap A_n = \Co{\bigcup_n \Co{A_n}}$.
+- *differences* -- we have $A \setminus B = A \cap \Co{B}$.
+- *Symmetric differences* -- we have $A \bigtriangleup B = (A \cap \Co{B}) \cup (\Co{A} \cap B)$.
 
 ```{prf:definition}
-Let $(X,\mathcal{O})$ be a topological space. The collection of **Borel sets** in $X$ is the smallest ${}\sigma$-algebra containing the open sets.
+Let $(X,\mathcal{O})$ be a topological space. The collection of **Borel sets** in $X$ is the smallest ${}\sigma$-algebra containing the open sets in $\mathcal{O}$.
 ```
 
-Of course, one has to make sure that this collection actually exists. For this, note that the intersection of any collection of ${}\sigma$-algebras is again a $\sigma$-algebra, so the Borel sets are just the intersection of all $\sigma$-algebras containing $\mathcal{O}$. (Note the full power set of $X$ is such a ${}\sigma$-algebras, so we are not taking an empty intersection.)
+Of course, one has to make sure that this collection actually exists. For this, note that the intersection of any collection of $\sigma$-algebras is again a $\sigma$-algebra, so the Borel sets are just the intersection of all $\sigma$-algebras containing $\mathcal{O}$. (Note the the full power set of $X$ is such a $\sigma$-algebras, so we are not taking an empty intersection.)
 
 The definition of Borel sets is rather *"external"*. It does not give us much of an idea what Borel sets *look like*. One can arrive at the family of Borel sets also through a construction from *"within"*. This reveals more structure and gives rise to the **Borel hierarchy**. 
 
@@ -87,12 +87,12 @@ $$
 F_n = \bigcup_{x \in F} U_{2^{-n}}(x).
 $$
 
-Each $F_n$ is open, and $F \subseteq \bigcap_{n \in \Nat} F_n$. 
+Each $F_n$ is open, and $F \subseteq \bigcup_{n \in \Nat} F_n$. 
 
-Moreover, if $x \in \bigcap_{n \in \Nat} F_n$, then there exists a sequence $(x_n)$ such that for all $n$, $x_n \in F$ and $x \in U_{2^{-n}}(x_n)$. It follows that $x_n \to x$, and since $F$ is closed, $x\in F$. Thus
+Moreover, if $x \in \bigcup_{n \in \Nat} F_n$, then there exists a sequence $(x_n)$ such that for all $n$, $x_n \in F$ and $x \in U_{2^{-n}}(x_n)$. It follows that $x_n \to x$, and since $F$ is closed, $x\in F$. Thus
 
 $$
-F = \bigcap_{n \in \Nat} F_n,
+F = \bigcup_{n \in \Nat} F_n,
 $$
 which is $G_\delta$.
 ```
