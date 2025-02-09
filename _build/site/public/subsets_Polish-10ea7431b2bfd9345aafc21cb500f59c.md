@@ -171,7 +171,7 @@ a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal
 :class: dropdown
 :nonumber: true
 
-Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer Polish topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
+Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
 
 We will show that $\mathcal{S}$ is a $\sigma$-algebra, which by the previous Lemma contains the closed sets. Hence $\mathcal{S}$ must contain all Borel sets, and we are done.
 

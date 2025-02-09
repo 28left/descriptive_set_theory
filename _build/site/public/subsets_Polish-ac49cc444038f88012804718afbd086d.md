@@ -1,10 +1,7 @@
 (chap-subspace-Polish)=
 # Subspaces of Polish Spaces
 
-
-## Subsets with respect to the subspace topology.
-
-Closed subsets of Polish spaces (with the subspace topology) are Polish ({prf:ref}`properties-polish` in the Section @Polish).
+Closed subsets of Polish spaces (with the subspace topology) are Polish ({prf:ref}`properties-polish`).
 
 What about other subsets of a Polish space? In a previous exercise, we saw  $(0,1) \subset \Real$ is Polish, but we had to pick a different compatible metric. It turns out we can do this for arbitrary open subsets of a Polish space.
 
@@ -135,14 +132,14 @@ We start with closed sets.
 
 ```{prf:lemma}
 :label: lem-closed-clopen
-If $X$ is a Polish space with topology $\mathcal{O}$, and $F \subseteq X$ is closed, then there exists a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal{O}$ and $\mathcal{O}'$ give rise to the same class of Borel sets in $X$, and $F$ is clopen with respect to $\mathcal{O}'$.
+If $X$ is a Polish space with topology $\mathcal{O}$, and $F \subseteq X$ is closed, then there exists a finer topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal{O}$ and $\mathcal{O}'$ give rise to the same class of Borel sets in $X$, and $F$ is clopen with respect to $\mathcal{O}'$.
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-By {prf:ref}`properties-polish` of the section on [Polish spaces](#Polish) and {prf:ref}`prop-open-subset-Polish` above, respectively, $F$ and $X \setminus F$ are Polish spaces with compatible metrics $d_F$ and $d_{X\setminus F}$,  respectively. By @lem-bounded-metric, we may assume $d_F, d_{X\setminus F} < 1$. We form the *disjoint union of the spaces $F$ and $X \setminus F$*: This is the set $X = F \,\sqcup\, X \setminus F$ with the following topology $\mathcal{O}'$: $U \subseteq F \,\sqcup\, X \setminus F$ is in $\mathcal{O}'$ if and only if $U \cap F$ is open (in $F$) and  $U \cap X\setminus F$ is open (in $X\setminus F$).
+By {prf:ref}`properties-polish` of the section on [Polish spaces](#Polish) and {prf:ref}`prop-open-subset-Polish` above, respectively, $F$ and $X \setminus F$ are Polish spaces with compatible metrics $d_F$ and $d_{X\setminus F}$,  respectively. By @lem-bounded-metric, we may assume $d_F, d_{X\setminus F} < 1$. We form the *disjoint union of the spaces $F$ and $X \setminus F$*: This is the set $X = F \,\sqcup\, X \setminus F$ with the following topology, $\mathcal{O}'$. $U \subseteq F \,\sqcup\, X \setminus F$ is in $\mathcal{O}'$ if and only if $U \cap F$ is open (in $F$) and  $U \cap X\setminus F$ is open (in $X\setminus F$).
 
 The disjoint union is Polish, as witnessed by the following metric.
 
@@ -171,7 +168,7 @@ a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal
 :class: dropdown
 :nonumber: true
 
-Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer Polish topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
+Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
 
 We will show that $\mathcal{S}$ is a $\sigma$-algebra, which by the previous Lemma contains the closed sets. Hence $\mathcal{S}$ must contain all Borel sets, and we are done.
 

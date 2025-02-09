@@ -142,9 +142,9 @@ project:
         - file: V=L.md
         - file: constructible-reals.md
         - file: shoenfield.md
-    - title: Reference
-      children:
-        - file: bibliography.md
+    # - title: Reference
+      # children:
+        # - file: bibliography.md
     
 site:
   title: Descriptive Set Theory
