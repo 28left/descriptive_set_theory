@@ -60,7 +60,7 @@ In light of the small-/largeness motivation, prime ideals and ultrafilters provi
 
 Roughly speaking, a measure assigns a size to a set in a way that reflects our basic geometric intuition about sizes: The size of the union of disjoint objects is the sum of their sizes. The question whether this can be done in a consistent way for *all* subsets of a given space is of fundamental importance and has motivated many questions in set theory.
 
-More formally, a measure ${}\mu$ on $X$ is a $[0,\infty]$-valued function defined on a collection of subsets of $X$ that satisfies
+More formally, a measure $\mu$ on $X$ is a $[0,\infty]$-valued function defined on a collection of subsets of $X$ that satisfies
 
 \begin{align*}
     (\Op{M1}) & \qquad \mu(\emptyset) = 0 \\
@@ -73,10 +73,10 @@ The question is, of course, which subsets of $X$ can be assigned a measure. The 
 ```{prf:definition}
 :label: def-measure
 
-A **measurable space** is a pair $(X, \mathcal{S})$, where $X$ is a set and $\mathcal{S}$ is a ${}\sigma$-algebra on $X$. A **measure** on a measurable space $(X, \mathcal{S})$ is a function $\mu: \mathcal{S} \to [0,\infty]$ that satisfies (M1) and (M2) for any pairwise disjoint family $\{A_n\}$ in $\mathcal{S}$. If ${}\mu$ is a measure on $(X, \mathcal{S})$, then the triple $(X,\mathcal{S}, \mu)$ is called a **measure space**.
+A **measurable space** is a pair $(X, \mathcal{S})$, where $X$ is a set and $\mathcal{S}$ is a ${}\sigma$-algebra on $X$. A **measure** on a measurable space $(X, \mathcal{S})$ is a function $\mu: \mathcal{S} \to [0,\infty]$ that satisfies (M1) and (M2) for any pairwise disjoint family $\{A_n\}$ in $\mathcal{S}$. If $\mu$ is a measure on $(X, \mathcal{S})$, then the triple $(X,\mathcal{S}, \mu)$ is called a **measure space**.
 ```
 
-If we want the measure ${}\mu$ to reflect also some other basic intuition about geometric sizes, this often puts restrictions on the ${}\sigma$-algebra of measurable sets. For example, in $\Real$ the measure of an interval should be its *length*. We will see later that, if we assume the Axiom of Choice, it is impossible to assign every subset of $\Real$ a measure, so that (M1) and (M2) are satisfied, and the measure of an interval is its length.
+If we want the measure $\mu$ to reflect also some other basic intuition about geometric sizes, this often puts restrictions on the ${}\sigma$-algebra of measurable sets. For example, in $\Real$ the measure of an interval should be its *length*. We will see later that, if we assume the Axiom of Choice, it is impossible to assign every subset of $\Real$ a measure, so that (M1) and (M2) are satisfied, and the measure of an interval is its length. 
 
 To have some control over what the ${}\sigma$-algebra of measurable sets should be, one can construct a measure more carefully, start with a measure on basic objects such as intervals or balls, and then extend it to larger classes of sets by approximation.
 
@@ -211,7 +211,7 @@ The $\mu^*$-nullsets form a ${}\sigma$-ideal.
 (I1) follows directly from monotonicity (O2). Countable additivity follows immediately from subadditivity (O3).
 ```
 
-In case of Lebesgue measure, we can use @prop-nullsets-measurable to further describe the Lebesgue measurable subsets of $\Real$.
+In case of Lebesgue measure, we can use Proposition {prf:ref}`prop-nullsets-measurable` to further describe the Lebesgue measurable subsets of $\Real$.
 
 ```{prf:proposition}
 :label: measurable-diff-Borel
@@ -223,7 +223,7 @@ A set $A \subseteq \Real$ is Lebesgue measurable if and only if it is the differ
 :class: dropdown
 :nonumber: true
 
-We first assume $\lambda^*(A) <\infty$.  Let $G_n \subseteq \Real$ be an open set such that $G_n \supseteq A$ and  $\lambda^*(G_n) \leq \lambda^*(A) + 1/n$. The existence of such a $G_n$ follows from the definition of $\lambda^*$, and the fact that every open set is the disjoint union of open intervals.  Then $G = \bigcap_n G_n$ is $\bPi^0_2$, $A \subseteq G$, and for all $n$,
+We first assume $\lambda^*(A) < \infty$.  Let $G_n \subseteq \Real$ be an open set such that $G_n \supseteq A$ and  $\lambda^*(G_n) \leq \lambda^*(A) + 1/n$. The existence of such a $G_n$ follows from the definition of $\lambda^*$, and the fact that every open set is the disjoint union of open intervals.  Then $G = \bigcap_n G_n$ is $\bPi^0_2$, $A \subseteq G$, and for all $n$,
 
 $$
     \lambda^*(A) \leq \lambda^*(G) \leq \lambda^*(A) + 1/n  
@@ -268,7 +268,7 @@ As mentioned before, there are Lebesgue measurable sets that are not Borel sets.
 
 ## Baire category
 
-The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let $X$ be a topological space.
+The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let $X$ be a Polish space.
 
 ```{prf:definition}
 :label: def-nowhere-dense
@@ -297,12 +297,11 @@ The concept of Baire category is often used in existence proofs: To show that a 
 ```{prf:theorem} Baire Category Theorem
 :label: thm-Baire-category
 
-For any completely metrizable space $X$, the following statements hold.
+For any Polish space $X$, the following statements hold.
 - **(a)** For every meager set $M \subseteq X$, the complement $\Co{M}$ is dense in $X$.
 - **(b)** No non-empty open set is meager.
 - **(c)** If $\{D_n\}$ is a countable family of open, dense sets, then  $\bigcap_{n} D_n$ is dense.
 ```
-In particular, the properties of the theorem hold for Polish spaces.
 
 ```{prf:proof}
 :class: dropdown
@@ -322,7 +321,7 @@ $$
 (b) follows immediately from (a), the proof of (c) is exactly the same as that for (a). In fact, the three statements are equivalent. 
 ```
 
-Any topological space that satisfies the three equivalent conditions (a)-(c) is called a **Baire space** (not to be confused with *the* Baire space $\Baire$ - the latter is, of course, $a$ Baire space, too).
+Any topological space that satisfies the three equivalent conditions (a)-(c) is called a **Baire space** (not to be confused with *the* Baire space $\Baire$ -- the latter is, of course, a Baire space, too).
 
 As an application, we determine the exact location of $\Rat$ in the Borel hierarchy of $\Real$.
 
