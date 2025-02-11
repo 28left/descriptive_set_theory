@@ -199,7 +199,7 @@ $$
 
 where $X_k = X$ for $k \neq i,j$, is an open neighborhood of $(y_1,y_2,y_3, \dots)$ completely contained in $\Co{\phi(X)}$.
 
-Finally, to see that the Borel sets of $(X, \mathcal{O}_\infty)$ are the same as the ones of $(X,\mathcal{O})$, for each $n$, let $\{U^{(n)}_i\}_{i \in \Nat}$ be a basis for $\mathcal{O}_n$. By assumption, all sets in $\mathcal{O}_n$ are Borel sets of $(X, \mathcal{O})$. The collection $\{U^{(n)}_i\}_{i,n \in \Nat}$ is a subbasis for $\mathcal{O}_\infty$. This means that any open set in $(X, \mathcal{O}_\infty)$ is a countable union of finite intersections of the $U^{(n)}_i$. Since every $U^{(n)}_i$ is Borel in $(X, \mathcal{O})$, this means that any open set in $\mathcal{O}_\infty$ is Borel in $(X, \mathcal{O})$. Since the Borel sets are closed under complementation and countable unions, this in turn implies that every Borel set of $(X, \mathcal{O}_\infty)$ is already Borel in $(X, \mathcal{O})$.
+Finally, to see that the Borel sets of $(X, \mathcal{O}_\infty)$ are the same as the ones of $(X,\mathcal{O})$, for each $n$, let $\{U^{(n)}_i\}_{i \in \Nat}$ be a basis for $\mathcal{O}_n$. By assumption, all sets in $\mathcal{O}_n$ are Borel sets of $(X, \mathcal{O})$. The set $\{U^{(n)}_i\}_{i,n \in \Nat}$ is a subbasis for $\mathcal{O}_\infty$. This means that any open set in $(X, \mathcal{O}_\infty)$ is a countable union of finite intersections of the $U^{(n)}_i$. Since every $U^{(n)}_i$ is Borel in $(X, \mathcal{O})$, this means that any open set in $\mathcal{O}_\infty$ is Borel in $(X, \mathcal{O})$. Since the Borel sets are closed under complementation and countable unions, this in turn implies that every Borel set of $(X, \mathcal{O}_\infty)$ is already Borel in $(X, \mathcal{O})$.
 ```
 
 
