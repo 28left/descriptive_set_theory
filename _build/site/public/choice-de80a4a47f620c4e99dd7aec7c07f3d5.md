@@ -66,7 +66,7 @@ Furthermore, we assume each $P_\xi$ is well-ordered.
 
 Pick $a_0 \neq b_0$ from $P_0$. Assume for $\xi < 2^{\aleph_0}$ we have chosen  $\{a_\beta\colon \beta < \xi \}$ and $\{b_\beta\colon \beta < \xi \}$ so that
 \begin{equation*}
-   \forall \beta < \xi \; \; a_\beta, b_\beta \in P_\beta \quad \text{ and } \quad \text{all $a_\beta, b_\gamma$ pairwise distinct},
+   \forall \beta < \xi \;\; a_\beta, b_\beta \in P_\beta \quad \text{ and } \quad   \forall \beta, \gamma < \xi \; \; a_\beta \neq b_\gamma. 
 \end{equation*}
 we can choose $a_\xi, b_\xi \in P_\xi$ to be the first two elements of $P_\xi \setminus \bigcup_{\gamma < \xi} \{a_\gamma, b_\gamma\}$. This is possible since a perfect subset of $\Real$ has cardinality $2^{\aleph_0}$, and $\xi< 2^{\aleph_0}$.
 

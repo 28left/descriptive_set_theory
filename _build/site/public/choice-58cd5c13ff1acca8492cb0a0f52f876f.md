@@ -9,7 +9,7 @@ We have seen that the Borel sets in $\Real$ have all these properties. In this l
 
 One of the most famous applications of $\AC$ is Vitali's construction of a non-Lebesgue measurable set.
 
-```{prf:theorem} $\AC$
+```{prf:theorem} Vitali
 :label: thm-Vitali-nonmeasurable
 
 There exists a set $A \subseteq \Real$ that is not Lebesgue measurable.
@@ -46,7 +46,7 @@ contradiction.
 
 Next, we use the Well-ordering Principle ($\WO$) to construct a set $B\subseteq \Real$ such neither $B$ nor $\Real\setminus B$ contains a perfect subset. Such sets are called **Bernstein sets**.
 
-```{prf:theorem} $\AC$ 
+```{prf:theorem} 
 :label: thm-Bernstein
 
 There exists a Bernstein set.
