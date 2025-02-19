@@ -40,9 +40,9 @@ $$
 	A(\alpha) \iff \forall x_1 \: \exists x_2 \: \dots \:  \Qu x_n \; \phi(x_1, \dots, x_n, \alpha,\gamma) \text{ holds (in the standard model).}
 $$
 
-where $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ is bounded, and $\Qu$ is $\forall$ if $n$ is odd, and $\exists$ if $n$ is even.
+where $\phi(x_1, \dots, x_n,\alpha,\underline{\gamma})$ is bounded, and $\Qu$ is ``$\forall$'' if $n$ is odd, and "$\exists$" if $n$ is even.
 
-What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form $\alpha(t_1) = t_2$. This implies that the truth of an atomic formula is determined by *finitely many positions* in ${}\alpha$. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of $\Baire$. 
+What do sets defined by bounded formulas look like? An atomic formula (without parameters) either contains no function variable at all, or it is of the form $\alpha(t_1) = t_2$. This implies that the truth of an atomic formula is determined by *finitely many positions* in $\alpha$. This remains true if we consider logical combinations of atomic formulas, or even bounded quantification. Hence a bounded formula defines an open subset of $\Baire$. 
 
 On the other hand, the reals for which a bounded formula does not hold are definable by a bounded formula, too, since the negation of a bounded formula is again a bounded formula. We conclude that **bounded formulas define clopen subsets of $\Baire$**. On the other hand, if we have $\bSigma^0_1$-code for a set $A$ and its complement, we can decide the relation $A(\alpha)$ computably in the code. 
 
@@ -81,7 +81,7 @@ For each $n \geq 1$, $\bSigma^0_n$ is closed under $\exists^\Nat$, and $\bPi^0_n
 :class: dropdown
 :nonumber: true
 
-We prove the result for $\Sigma^0_n$ (lightface). The boldface case follows by relativization, and the proof for $\bPi^0_n$ is dual.
+We prove the result for $\Sigma^0_n$ (lightface). The boldface case follows by relativization, and the proof for $\bPi^0_n$ is completely dual.
 
 Let $\phi(x_1, \dots, x_n, z, \alpha)$ be a bounded formula such that 
 
@@ -105,15 +105,15 @@ $$
 as desired.
 ```
 
-One can use similar applications of coding and quantifier manipulation to prove a number of other closure properties. Often they also easily follow from the topological definitions, but it is good to have several techniques at hand.
+One can use similar applications of coding and quantifier manipulation to prove a number of other closure properties, Often they follow also directly from the topological definitions, but it is good to have several techniques at hand.
 
 ```{prf:proposition}
 :label: prop-Borel-closure-finite
 
 For all $n \geq 1$,
--  $\bSigma^0_n$ is closed under countable unions and finite intersections.
--  $\bPi^0_n$ is closed under finite unions and countable intersections.
--  $\bDelta^0_n$ is closed under finite unions, finite intersections, and complements.		
+- **(a)**  $\bSigma^0_n$ is closed under countable unions and finite intersections.
+- **(b)** $\bPi^0_n$ is closed under finite unions and countable intersections.
+- **(c)** $\bDelta^0_n$ is closed under finite unions, finite intersections, and complements.		
 ```
 	
 ```{prf:proof}
@@ -186,7 +186,7 @@ $$
     A(\alpha) \iff \exists x_1 \: \dots \: \Qu x_n \; R(x_1, \dots, x_n, \alpha).
 $$
 
-Since clopen predicates depend only on a finite initial segment of ${}\alpha$, we can substitute $f(\alpha)$ for ${}\alpha$. The resulting formula defines $f^{-1}(A)$, and is equivalent to a $\Sigma^0_n$-formula relative to a parameter coding the mapping $\psi$.
+Since clopen predicates depend only on a finite initial segment of $\alpha$, we can substitute $f(\alpha)$ for $\alpha$. The resulting formula defines $f^{-1}(A)$, and is equivalent to a $\Sigma^0_n$-formula relative to a parameter coding the mapping $\psi$.
 ```
 
 
@@ -231,7 +231,7 @@ First of all, notice that for each $n \geq 1$, the set of all $\bSigma^0_n$ ($\B
 For fixed $n$, we let
 
 $$
-    U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and ${}\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by ${}\gamma$}\}.
+    U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and $\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by ${}\gamma$}\}.
 $$
 
 It follows easily from {prf:ref}`thm-fundamental` that $U_n$ is $\bSigma^0_n$ ($\bPi^0_n$), too, and it is clear from the definition of $U$ that it parametrizes $\bSigma^0_n$ ($\bPi^0_n$).
