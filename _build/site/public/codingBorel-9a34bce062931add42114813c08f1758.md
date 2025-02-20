@@ -345,7 +345,7 @@ One of the fundamental insights of computability theory is the close relation be
 As indicated above, we can use this relation to give a characterization of the Borel sets of finite order in terms of definability. Since we are dealing with subsets of $\Baire$, that is, with sets of functions on $\Nat$ rather than just functions on $\Nat$, we will work in the framework of **second order arithmetic**.
 
 The 
-**language of second order arithmetic** has two kinds of variables: **number variables** $x,y,z, \dots$ (and sometimes $k,l,m,n$ if they are not used as metavariables), to be interpreted as elements of $\Nat$, and **function variables** $\alpha,\beta,\gamma,\dots$, intended to range over functions from $\Nat$ into $\Nat$, i.e. elements of Baire space, i.e. reals. The non-logical symbols are the binary function symbols $+,\cdot$, the binary relation symbol $<$, the **application function** symbol $\Ap$, and the constants $\underline{0}, \underline{1}$.  **Numerical terms** are defined by closing off number variables under $+,\cdot,\underline{0},\underline{1}$. Any numerical term is a **term**, as well as any expression of the form $\Ap(\alpha,t)$, where $\alpha$ is any function variable and $t$ is a numerical term.
+**language of second order arithmetic** has two kinds of variables: **number variables** $x,y,z, \dots$ (and sometimes $k,l,m,n$ if they are not used as metavariables), to be interpreted as elements of $\Nat$, and **function variables** $\alpha,\beta,\gamma,\dots$, intended to range over functions from $\Nat$ into $\Nat$, i.e. elements of Baire space, i.e. reals. The non-logical symbols are the binary function symbols $+,\cdot$, the binary relation symbol $<$, the **application function** symbol $\Ap$, and the constants $\underline{0}, \underline{1}$.  **Terms** are defined by closing off number variables under $+,\cdot,\underline{0},\underline{1}$ and $\Ap(\alpha,.)$, where $\alpha$ is an arbitrary function variable.
 
 ```{prf:example} Terms
 :nonumber: true
@@ -360,9 +360,9 @@ The
 ```{prf:example} Formulas
 :nonumber: true
 - $\underline{0} = \underline{1}$
-- $\neg(x+(\underline{1}+\underline{1})\cdot y < \underline{0})$
+- $x+(\underline{1}+\underline{1})\cdot y < \underline{0}$
+- $\Ap(\alpha, z) = \Ap(\alpha,x)$
 - $\Ap(\beta, x+(\underline{1}+\underline{1})\cdot y) = \Ap(\alpha, \underline{0})$
-- $\Ap(\alpha, z) = \Ap(\alpha,x) \; \vee \; \neg(\underline{0} = \underline{1})$
 ```
 
 

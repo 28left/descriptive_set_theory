@@ -361,8 +361,8 @@ The
 :nonumber: true
 - $\underline{0} = \underline{1}$
 - $\neg(x+(\underline{1}+\underline{1})\cdot y < \underline{0})$
-- $\Ap(\beta, x+(\underline{1}+\underline{1})\cdot y) = \Ap(\alpha, \underline{0})$
 - $\Ap(\alpha, z) = \Ap(\alpha,x) \; \vee \; \neg(\underline{0} = \underline{1})$
+- $\Ap(\beta, x+(\underline{1}+\underline{1})\cdot y) = \Ap(\alpha, \underline{0})$
 ```
 
 
