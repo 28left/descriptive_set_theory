@@ -138,7 +138,7 @@ For all $n \geq 1$, for any $A \subseteq \Baire$, and for any continuous $f: \Ba
 
 This follows easily by induction on $n$, since open and closed sets are closed under continuous preimages.
 
-However, we can also argue via definability, since by {prf:ref}`prop-product-continuous` in the Section  @Polish one can represent a continuous function through a monotone mapping ${}\psi$ from finite strings to finite strings.  We have
+However, we can also argue via definability, since by {prf:ref}`prop-product-continuous`of  @Polish one can represent a continuous function through a monotone mapping ${}\psi$ from finite strings to finite strings.  We have
 $$
     f^{-1}(A) = \{ \alpha \colon A(f(\alpha)) \}.
 $$
@@ -153,19 +153,19 @@ Substitute $\psi(\alpha\Rest{x_n})$ for ${}\alpha\Rest{x_n}$. The resulting form
 
 ## Universal sets
 
-Let ${}\Gamma$ be a family of subsets defined in various Polish spaces. Of course we have in mind the classes $\bSigma^0_n$ or $\bPi^0_n$, but the concept of a **universal set** can be defined quite generally.
+Let $\Gamma$ be a family of subsets defined in various Polish spaces. Of course we have in mind the classes $\bSigma^0_n$ or $\bPi^0_n$, but the concept of a **universal set** can be defined quite generally.
 
 ```{prf:definition}
 :label: def-universal
 
-Let $Y$ be a set. A set $U \subseteq X \times Y$ is **$Y$-universal for ${}\Gamma$** if $U \in \Gamma$, and for every set $A$ in ${}\Gamma$, there exists a $y \in Y$ such that
+Let $Y$ be a set. A set $U \subseteq X \times Y$ is **$Y$-universal for $\Gamma$** if $U \in \Gamma$, and for every set $A$ in $\Gamma$, there exists a $y \in Y$ such that
 
 $$
     A = \{ x \colon (x,y) \in U \}.
 $$ 
 ```
 
-A universal set for ${}\Gamma$ can be thought of as a **parametrization** of ${}\Gamma$, the second component providing a **code** or **parameter** for each set in ${}\Gamma$.
+A universal set for $\Gamma$ can be thought of as a **parametrization** of $\Gamma$, the second component providing a **code** or **parameter** for each set in $\Gamma$.
 
 A well-known example of a universal set is the **generalized halting problem**,
 
@@ -194,15 +194,16 @@ $$
     U_n = \{ (\alpha,\gamma) \colon \gamma \in \Baire \text{ and ${}\alpha$ is in the $\bSigma^0_n$ $(\bPi^0_n)$ set coded by ${}\gamma$}\}.
 $$
 
-It follows by induction using the [fundamental theorem](#thm-fundamental) of effective descriptive set theory that $U_n$ is $\bSigma^0_n$ ($\bPi^0_n$), too, and it is clear from the definition of $U$ that it parametrizes $\bSigma^0_n$ ($\bPi^0_n$).
+It follows easily from {prf:ref}`thm-fundamental` that $U_n$ is $\bSigma^0_n$ ($\bPi^0_n$), too, and it is clear from the definition of $U$ that it parametrizes $\bSigma^0_n$ ($\bPi^0_n$).
 ```
 
-The result can be generalized to hold for arbitrary Polish spaces $X$, i.e. for any $n \geq 1$, there exists a set $U \subseteq \Baire \times X$ that is $\Baire$-universal for $\bSigma^0_n(X)$ ($\bPi^0_n(X)$). To achieve this, one has to define Borel codes for $X$. This can be done by fixing a countable basis $(V_n)$ of the topology of $X$ and assigning a sequence $\gamma \in \Baire$ the open set
+The result can be generalized to hold for arbitrary Polish spaces $X$, i.e. for any $n \geq 1$, there exists a set $U \subseteq \Baire \times X$ that is $\Baire$-universal for $\bSigma^0_n(X)$ ($\bPi^0_n(X)$). To achieve this, one has to define Borel codes for $X$. This can be done by fixing a countable basis $(V_n)$ of the topology of $X$, and assign a sequence $\gamma \in \Baire$ the open set
+
 $$
 	U_\gamma = \bigcup_{n \in \Nat} V_{\gamma(n)}.
 $$
 
-The definition of codes for higher levels is then similar to [the definition of Borel codes for $\Baire$](#def-Borel-codes).
+The definition of codes for higher levels is then similar to Definition {prf:ref}`def-Borel-codes`.
 
 As in the case of the halting problem, we can use the existence of universal sets to show that the levels of the Borel hierarchy are proper. The crucial point is that we can use universal sets to **diagonalize**. 
 
@@ -222,7 +223,7 @@ $$
     D = \{ \alpha \colon (\alpha, \alpha) \in U \}.
 $$
 
-Since $U$ is $\bSigma^0_n$, $D$ is $\bSigma^0_n$, too. Then $\Co{D}$ is $\bPi^0_n$, but cannot be $\bSigma^0_n$, for then there would exist ${}\beta$ such that 
+Since $U$ is $\bSigma^0_n$, $D$ is $\bSigma^0_n$, too. Then $\Co{D}$ is $\bPi^0_n$, but cannot be $\bSigma^0_n$, for then there would exist $\beta$ such that 
 
 $$
     \Co{D} = \{ \alpha \colon (\alpha, \beta) \in U \},
@@ -296,7 +297,7 @@ We can extend the Borel hierarchy to arbitrary ordinals.
 ```{prf:definition}
 :label: def-transfinite-Borel
 
-Let $X$ be a Polish space. Given an ordinal ${}\xi$, we define
+Let $X$ be a Polish space. Given an ordinal $\xi$, we define
 \begin{align*}
     & \bSigma^0_\xi(X) = \{ \bigcup_k A_k \colon A_k \in \bPi^0_{\zeta_k}(X),\; \zeta_k < \xi \}, \\
     & \bPi^0_\xi(X) = \{ \Co{A} \colon A \in \bSigma^0_\xi(X) \} = \Co{\bSigma^0_\xi(X)}, \\
@@ -336,7 +337,7 @@ $$
     B \in \BS{\xi}, \; \text{ where $\xi = \sup \{\xi_n +1 \colon n \in \Nat\}$}.
 $$
 
-Since each $\xi_n$ is countable, ${}\xi$ is countable.
+Since each $\xi_n$ is countable, $\xi$ is countable.
 ```
 
 Borel sets of infinite order have the **same closure properties as their counterparts of finite order**. The proofs, however have to proceed by induction using the topological properties of $\BS{\xi}$ and $\BP{\xi}$, since the characterization via definability in arithmetic is no longer available -- the arithmetical hierarchy reaches only to $\omega$.
@@ -370,7 +371,7 @@ $$
     A = \{ \alpha \colon (\alpha,\gamma) \not\in U \}. 
 $$
 
-It remains to show that each $\BS{\xi}$ has an $\Baire$-universal set. By induction hypothesis, for every $\eta < \xi$ exists a $\Baire$-universal set $U_\eta$ for $\BP{\eta}$. Since ${}\xi$ is countable, we can pick a monotone  sequence of ordinals $(\xi_n)$ such that $\xi = \sup \{\xi_n + 1 \colon n < \omega \}$. Define
+It remains to show that each $\BS{\xi}$ has an $\Baire$-universal set. By induction hypothesis, for every $\eta < \xi$ exists a $\Baire$-universal set $U_\eta$ for $\BP{\eta}$. Since $\xi$ is countable, we can pick a monotone  sequence of ordinals $(\xi_n)$ such that $\xi = \sup \{\xi_n + 1 \colon n < \omega \}$. Define
 
 $$
     U_\xi =  \{ (\alpha, \gamma) \colon \exists n (\alpha, (\gamma)_n) \in U_{\xi_n} \},
@@ -378,7 +379,7 @@ $$
 
 where $(\gamma)_n$ denotes the $n$th column of ${}\gamma$.
 
-It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS{\xi}$. (Note that any set $A$ in $\BS{\xi}$ can be represented as $\bigcup_n A_n$ with $A_n \in \BP{\xi_n}$, since $(\xi_n+1)$ is cofinal in ${}\xi$.)
+It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS{\xi}$. (Note that any set $A$ in $\BS{\xi}$ can be represented as $\bigcup_n A_n$ with $A_n \in \BP{\xi_n}$, since $(\xi_n+1)$ is cofinal in $\xi$.)
 ```
 
 The construction of the universal $\BS{\xi}$ set bears some resemblance to the construction of a $\bSigma^0_{n+1}$ code. It is indeed possible to formally define Borel codes for *all* Borel sets.

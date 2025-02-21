@@ -345,5 +345,5 @@ $$
 	\alpha \in A \iff \exists n \forall m [ m \geq n \: \Rightarrow \: \alpha(n) = \alpha(m) ]
 $$
 
-The predicate in the square brackets is computable and depends only on $\alpha\Rest{m}$. Therefore, $A$ is $\Sigma^0_2$ Borel set.
+The predicate in the square brackets is computable and depends only on $\alpha\Rest{m}$. Therefore, $A$ is $\Sigma^0_2$.
 

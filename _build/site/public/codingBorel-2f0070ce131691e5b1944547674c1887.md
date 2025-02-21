@@ -333,7 +333,7 @@ If $A$ is $\bSigma^0_n$, then by {prf:ref}`prop-Borel-codes` it has a $\bSigma^0
 The argument for $\bPi^0_n$ is analogous. 
 ```
 
-The theorem facilitates working with Borel sets considerably. As an example, consider the set
+This theorem facilitates the description of Borel sets considerably. As an example, consider the set
 
 $$
 	A = \{ \alpha \colon \text{${}\alpha$ eventually constant} \}.
@@ -345,5 +345,5 @@ $$
 	\alpha \in A \iff \exists n \forall m [ m \geq n \: \Rightarrow \: \alpha(n) = \alpha(m) ]
 $$
 
-The predicate in the square brackets is computable and depends only on $\alpha\Rest{m}$. Therefore, $A$ is $\Sigma^0_2$ Borel set.
+The right hand side is a $\Sigma^0_2$-formula. Hence the set $A$ is $\Sigma^0_2$.
 
