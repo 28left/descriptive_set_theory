@@ -49,7 +49,7 @@ To prove the theorem we devise a Lusin scheme on $X$ such that $D$ will be close
 - **(c)** For each ${}\tau$, $\diam(F_\sigma) \leq 1/2^{|\sigma|}$,
 - **(d)** $F_\tau = \bigcup_{i \in \Nat} F_{\tau\Conc \Tup{i}} =  \bigcup_{i \in \Nat} \Cl{F_{\tau\Conc \Tup{i}}}$.
 
-For this we have to show that every $\BS{2}$ set $F \subseteq X$ can be written, for given $\eps > 0$, as  $F= \bigcup_{i \in \Nat} F_i$, where the $F_i$ are pairwise disjoint $\BS{2}$ sets of diameter $< \eps$ so that $\Cl{F_i} \subseteq F$:
+For this we have to show that every $\BS{2}$ set $F \subseteq X$ can be written, for given $\eps > 0$, as  $F= \bigcup_{i \in \Nat} F_i$, where the $F_i$ are pairwise disjoint $\BS[2]$ sets of diameter $< \eps$ so that $\Cl{F_i} \subseteq F$:
 
 Let $F= \bigcup_{i \in \Nat} C_i$, where $C_i$ is closed, and $C_i \subseteq C_{i+1}$. Then $F= \bigcup_{i \in \Nat}(C_{i+1} \setminus C_i)$. 
 
@@ -136,7 +136,7 @@ The Borel sets are not closed under continuous images.
 :class: dropdown
 :nonumber: true
 
-Let $U \subseteq \Baire \times \Baire \times \Baire$ be $\Baire$-universal for $\BP{1}(\Baire \times \Baire)$.
+Let $U \subseteq \Baire \times \Baire \times \Baire$ be $\Baire$-universal for $\BP[1](\Baire \times \Baire)$.
 Define
 
 \begin{equation*}

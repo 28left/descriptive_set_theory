@@ -20,7 +20,6 @@ We have also seen  that every uncountable Polish space contains a [homeomorphic 
 
 ```{prf:definition}
 :label: def-Lusin-scheme
-:nonumber: true
 
 A **Lusin scheme** on a set $X$ is a family $(F_\sigma)_{\sigma \in \Nstr}$ of subsets of $X$ such that
 
@@ -49,7 +48,7 @@ To prove the theorem we devise a Lusin scheme on $X$ such that $D$ will be close
 - **(c)** For each ${}\tau$, $\diam(F_\sigma) \leq 1/2^{|\sigma|}$,
 - **(d)** $F_\tau = \bigcup_{i \in \Nat} F_{\tau\Conc \Tup{i}} =  \bigcup_{i \in \Nat} \Cl{F_{\tau\Conc \Tup{i}}}$.
 
-For this we have to show that every $\BS{2}$ set $F \subseteq X$ can be written, for given $\eps > 0$, as  $F= \bigcup_{i \in \Nat} F_i$, where the $F_i$ are pairwise disjoint $\BS{2}$ sets of diameter $< \eps$ so that $\Cl{F_i} \subseteq F$:
+For this we have to show that every $\BS{2}$ set $F \subseteq X$ can be written, for given $\eps > 0$, as  $F= \bigcup_{i \in \Nat} F_i$, where the $F_i$ are pairwise disjoint $\BS[2]$ sets of diameter $< \eps$ so that $\Cl{F_i} \subseteq F$:
 
 Let $F= \bigcup_{i \in \Nat} C_i$, where $C_i$ is closed, and $C_i \subseteq C_{i+1}$. Then $F= \bigcup_{i \in \Nat}(C_{i+1} \setminus C_i)$. 
 
@@ -80,7 +79,7 @@ Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
 
 Let $C \subseteq \Baire$ be closed, and let $T$ be a pruned tree such that $[T] = C$. We define a monotone mapping $\phi:\Nstr \to T$ such that $\phi(\sigma) = \sigma$ for all $\sigma \in T$. Then the induced (continuous) mapping $\phi^*: \Baire \to C$ is the desired retract.
 
-Define ${}\phi$ by induction. Let $\phi(\Estr) = \Estr$. Given $\phi(\tau)$, let
+Define $\phi$ by induction. Let $\phi(\Estr) = \Estr$. Given $\phi(\tau)$, let
 
 $$
     \phi(\tau\Conc\Tup{m}) = \begin{cases}
@@ -95,7 +94,7 @@ Note that $k$ must exist since $T$ is pruned.
 If we combine the retract function with $f$, we then obtain the desired surjection $\Baire \to X$. This concludes the proof of {prf:ref}`thm-Polish-bijection-Baire`.
 
 
-[Refining the topology](#thm-Borel-clopen), we can extend the result from Polish spaces to Borel sets.
+Refining the topology as in {prf:ref}`thm-Borel-clopen`, we can extend the result from Polish spaces to Borel sets.
 
 ```{prf:corollary} Lusin and Souslin  
 :label: cor-Borel-image-closed
@@ -108,7 +107,7 @@ For every Borel subset $B$ of a Polish space $X$ there exists a closed set $F \s
 :nonumber: true
 	
 Enlarge the topology $\mathcal{O}$ of $X$ to a topology $\mathcal{O}_B$ for which $B$ is clopen. 
-By [Mazurkiewicz's Theorem](#thm-subsets-Polish), $(B,\mathcal{O}_B\Rest{B})$ is a Polish space. By the previous theorem, there exists a closed set $F \subset \Baire$ and a continuous bijection $f:\Baire \to (B,\mathcal{O}_B\Rest{B})$. Since $\mathcal{O} \subseteq \mathcal{O}_B$, $f:F \to B$ is continuous for $\mathcal{O}$, too. 
+By {prf:ref}`thm-subsets-Polish`, $(B,\mathcal{O}_B\Rest{B})$ is a Polish space. By the previous theorem, there exists a closed set $F \subset \Baire$ and a continuous bijection $f:\Baire \to (B,\mathcal{O}_B\Rest{B})$. Since $\mathcal{O} \subseteq \mathcal{O}_B$, $f:F \to B$ is continuous for $\mathcal{O}$, too. 
 ```  
 
 This theorem can be reversed in the following sense.
@@ -136,7 +135,7 @@ The Borel sets are not closed under continuous images.
 :class: dropdown
 :nonumber: true
 
-Let $U \subseteq \Baire \times \Baire \times \Baire$ be $\Baire$-universal for $\BP{1}(\Baire \times \Baire)$.
+Let $U \subseteq \Baire \times \Baire \times \Baire$ be $\Baire$-universal for $\BP[1](\Baire \times \Baire)$.
 Define
 
 \begin{equation*}
