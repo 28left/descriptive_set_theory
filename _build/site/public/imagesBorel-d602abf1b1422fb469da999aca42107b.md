@@ -71,7 +71,7 @@ It remains to show that we can extend $f$ to a continuous surjection $g: \Baire 
 ```{prf:lemma}
 :label: lem-closed-retract-Baire
 
-    Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
+Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
 ```
 
 ```{prf:proof}

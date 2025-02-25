@@ -63,7 +63,7 @@ F =  \bigcup_{i,n\in \Nat} E^{(i)}_n \; \text{ and } \;  \Cl{E^{(i)}_n} \subsete
 
 The mapping $f$ associated with this Lusin scheme is surjective due to (a) and (d).
 
-Furthermore, the domain $D$ of $f$ is closed: Suppose $\alpha_n \in D$, $\alpha_n \to \alpha$. We claim $f(\alpha_n)$ is Cauchy. For $\eps > 0$, there exists $N$ with $\diam(F_{\alpha\Rest{N}}) < \eps$ and $n_0$ such that $\alpha_n\Rest{N} = \alpha\Rest{N}$ for all $n \geq n_0$. Therefore, $d(f(\alpha_n),f(\alpha_m)) < \eps$ whenever $n,m \geq n_0$. Since $X$ is Polish $f(\alpha_n) \to y$ for some $y \in X$.
+Furthermore, the domain $D$ of $f$ is closed: Suppose $\alpha_n \in D$, $\alpha_n \to \alpha$. Then $f(\alpha_n)$ is Cauchy, since for $\eps > 0$, there exists $N$ with $\diam(F_{\alpha\Rest{N}}) < \eps$ and $n_0$ such that $\alpha_n\Rest{N} = \alpha\Rest{N}$ for all $n \geq n_0$. Therefore, $d(f(\alpha_n),f(\alpha_m)) < \eps$ whenever $n,m \geq n_0$. Since $X$ is Polish $f(\alpha_n) \to y$ for some $y \in X$.
 By (d),  we have $y \in \bigcap_n \Cl{F_{\alpha\Rest{n}}} = \bigcap_n F_{\alpha\Rest{n}}$, hence $\alpha \in D$ and $f(\alpha) = y$.
 
 It remains to show that we can extend $f$ to a continuous surjection $g: \Baire \to X$. Say a closed subset $C$ of a topological space $Y$ is a **retract** of $Y$ if there exists a continuous surjection $g: Y \to C$ such that $g\Rest{C} = \Op{id}$.
@@ -71,7 +71,7 @@ It remains to show that we can extend $f$ to a continuous surjection $g: \Baire 
 ```{prf:lemma}
 :label: lem-closed-retract-Baire
 
-    Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
+Every non-empty closed subset of $\Baire$ is a retract of $\Baire$.
 ```
 
 ```{prf:proof}

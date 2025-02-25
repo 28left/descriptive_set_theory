@@ -153,7 +153,7 @@ Substitute $\psi(\alpha\Rest{x_n})$ for ${}\alpha\Rest{x_n}$. The resulting form
 
 ## Universal sets
 
-Let ${}\Gamma$ be a family of subsets defined in various topological spaces. Of course we have in mind the classes $\bSigma^0_n$ or $\bPi^0_n$, but the concept of a **universal set** can be defined quite generally. Given a space $X$, we denote by $\Gamma(X)$ the collection of all subsets of $X$ that are in $\Gamma$. In this section, as we mostly focus on $\Baire$, we often drop the reference to $\Baire$ and simply write $\Gamma$ to denote $\Gamma(\Baire)$.
+Let ${}\Gamma$ be a family of subsets defined in various topological spaces. Of course we have in mind the classes $\bSigma^0_n$ or $\bPi^0_n$, but the concept of a **universal set** can be defined quite generally. Given a space $X$, we denote by $\Gamma(X)$ the collection of all subsets of $X$ that are in $\Gamma$.
 
 ```{prf:definition}
 :label: def-universal
@@ -292,7 +292,7 @@ We can extend the Borel hierarchy to arbitrary ordinals.
 ```{prf:definition}
 :label: def-transfinite-Borel
 
-Let $X$ be a topological space. As before, let $\BS{1}(X)$ be the set of all open subsets of $X$, $\BP{1}$ be the set of all closed subsets of $X$, and $\bDelta^0_1(X)$ be the set of all clopen subsets of $X$. Given an ordinal ${}\xi > 1$, we define
+Let $X$ be a Polish space. Given an ordinal ${}\xi$, we define
 \begin{align*}
     & \bSigma^0_\xi(X) = \{ \bigcup_k A_k \colon A_k \in \bPi^0_{\zeta_k}(X),\; \zeta_k < \xi \}, \\
     & \bPi^0_\xi(X) = \{ \Co{A} \colon A \in \bSigma^0_\xi(X) \} = \Co{\bSigma^0_\xi(X)}, \\

@@ -151,7 +151,7 @@ The following relations are $\Delta_1$-definable over $\ZF$.
 
 ### Definability of the satisfaction relation
 
-Let $a$ be a set. If we replace a formula ${}\varphi$ by its code $\GN{\varphi}$, we have to express the fact that $\varphi^a$ holds now as a statement about validity in the structure $(a,\in)$, using the code. That is, we have to **formalize** the notion of truth. This can be done using the recursive definition of truth. 
+Let $a$ be a set. If we replace a formula $\varphi$ by its code $\GN{\varphi}$, we have to express the fact that $\varphi^a$ holds now as a statement about validity in the structure $(a,\in)$, using the code. That is, we have to **formalize** the notion of truth. This can be done using the recursive definition of truth. 
 This way we obtain a $\Delta_1$-definable predicate $\Op{Sat}(a,e)$ expressing 
 
 > $\Op{Sat}(a,e): \quad$ $e$ is the code of a formula $\varphi(\Const{a_0}, \dots, \Const{a_n})$ that does not contain any free variables, and $\varphi$ is true in $(a,\in)$ under the canonical interpretation.
