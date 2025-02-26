@@ -46,11 +46,11 @@ We can use our previous results about Borel sets to give various equivalent char
 :label: characterization-analytic
 
 For a subset $A$ of a Polish space $X$, the following are equivalent.
-- **(i)** $A$ is analytic.
-- **(ii)** $A$ is empty or there exists a Polish space $Y$ and a continuous $f:Y \to X$ such that $f(Y) = A$.
+- **(i)** $A$ is analytic,
+- **(ii)** $A$ is empty or there exists a Polish space $Y$ and a continuous $f:Y \to X$ such that $f(Y) = A$,
 - **(iii)** $A$ is empty or there exists a Polish space $Y$, a Borel set $B \subseteq Y$ and a continuous $f:Y \to X$ such that $f(B) = A$. 
-- **(iv)** $A$ is the **projection** of a closed set $F \subseteq \Baire \times X$ along $\Baire$.
-- **(v)** $A$ is the projection of a $\BP{2}$ set $G \subseteq  \Cant \times   X  $ along $\Cant$.
+- **(iv)** $A$ is the **projection** of a closed set $F \subseteq \Baire \times X$ along $\Baire$,
+- **(v)** $A$ is the projection of a $\BP{2}$ set $G \subseteq  \Cant \times   X  $ along $\Cant$,
 - **(vi)** $A$ is the projection of a Borel set $B \subseteq X\times Y$ along $Y$, for some Polish space $Y$.
 ```
 
