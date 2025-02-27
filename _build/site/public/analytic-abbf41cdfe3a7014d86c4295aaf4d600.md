@@ -132,7 +132,7 @@ If a set $A$ and its complement $\Co{A}$ are both analytic, then $A$ is Borel.
 In {prf:ref}`thm-Lusin-separation`, chose $A = A$ and $B = \Co{A}$.
 ```
 
-It follows from [Souslin's Theorem](thm-Souslin-Borel-images) and the [Lusin separation theorem](thm-Lusin-separation) that the analytic sets are not closed under complements. 
+It follows from [Souslin's Theorem](thm-Souslin-Borel-images) and the [Lusin separation theorem](thm-Lusin-separation>) that the analytic sets are not closed under complements. 
 
 Sets whose complement is analytic are called **co-analytic**. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space $X$ are denoted by
 

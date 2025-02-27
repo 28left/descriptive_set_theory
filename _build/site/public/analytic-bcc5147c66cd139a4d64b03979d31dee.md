@@ -102,12 +102,12 @@ Let $f:\Baire \to A$ and $g:\Baire \to B$ be continuous surjections.
 
 We argue by contradiction. The key idea is: if $A$ and $B$ are Borel inseparable, then, for some $i,j \in \Nat$, $A_{\Tup{i}} = f(\Cyl{\Tup{i}})$ and $B_{\Tup{j}} = g(\Cyl{\Tup{j}})$ are Borel inseparable. 
 
-This follows from the following observation:
+This follows from the observation
 
-```{card} $(\ast)$
-If the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
+```{card}
+$(*)\qquad $ if the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
 ```
-So, by using $(\ast)$ repeatedly, we can construct sequences $\alpha, \beta \in \Baire$ such that for all $n$,
+So, by using $(*)$ repeatedly, we can construct sequences $\alpha, \beta \in \Baire$ such that for all $n$,
 $A_{\alpha\Rest{n}}$ and $B_{\beta\Rest{n}}$ are Borel inseparable, where
 
 $$
@@ -132,7 +132,7 @@ If a set $A$ and its complement $\Co{A}$ are both analytic, then $A$ is Borel.
 In {prf:ref}`thm-Lusin-separation`, chose $A = A$ and $B = \Co{A}$.
 ```
 
-It follows from [Souslin's Theorem](thm-Souslin-Borel-images) and the [Lusin separation theorem](thm-Lusin-separation) that the analytic sets are not closed under complements. 
+It follows from {prf:ref}`thm-Souslin-Borel-images` and the {prf:ref}`Lusin separation theorem <thm-Lusin-separation>` that the analytic sets are not closed under complements. 
 
 Sets whose complement is analytic are called **co-analytic**. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space $X$ are denoted by
 
@@ -143,7 +143,7 @@ $$
 If we define, again analogy to the Borel hierarchy,
 
 $$
-	\bDelta^1_1(X) = \PS{1}(X) \cap \PP{1}(X),
+	\bDelta^1_1(X) = \PS{(1)}(X) \cap \PP{1}(X),
 $$
 
 then Souslin's Theorem states that
