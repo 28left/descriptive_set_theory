@@ -12,7 +12,7 @@ Show that if $A \subseteq \Baire$ is analytic and uncountable, then it contains 
 (*Hint: Since $A$ is analytic, there exists a continuous mapping $f:\Baire \to \Baire$ such that $A = f(\Baire)$. Construct an embedding of $\Cant$ into $A$. Show that we can find two disjoint open sets $U_0, U_1$ whose intersection with  $A = f(\Baire)$ is uncountable. The preimages of the $U_i$ are disjoint open subsets with uncountable images. Show that this process can be continued and defines in the limit an injection of $\Cant$ into $A$.*)
 ```
 
-For Borel sets, one proves (LM) and (BP) by showing that the class of sets having  (LM) (or (BP), respectively)  forms a ${}\sigma$-algebra and contains the open sets. For the analytic sets, this method is no longer available. We can, however, prove a similar property with respect to the Souslin operation $\mathcal{A}$, which can be seen as an extension of basic set theoretic operations into the uncountable.
+For Borel sets, one proves (LM) and (BP) by showing that the class of sets having  (LM) (or (BP), respectively)  forms a $\sigma$-algebra and contains the open sets. For the analytic sets, this method is no longer available. We can, however, prove a similar property with respect to the Souslin operation $\mathcal{A}$, which can be seen as an extension of basic set theoretic operations into the uncountable.
 
 More specifically, we will show the following.
 
@@ -72,7 +72,7 @@ set with a smallest (up to measure $0$) measurable set.
 ```{prf:lemma}
 :label: lem-approx-measurable
 
-For every set $A \subseteq \Real$ there exists a set $B \subseteq \Real$ such that
+For every set $A \subseteq \Real$ there exists a set $B \subseteq \Real$ so that
 
 - **(i)** $A \subseteq B$ and $B$  is  Lebesgue measurable,
 - **(ii)** if $B'$ is such that $A \subseteq B' \subseteq B$  and is Lebesgue measurable, then $B\setminus B'$ has measure $0$.
@@ -171,15 +171,15 @@ The previous proof is general enough to work for other kinds of
 measures on arbitrary Polish spaces.
 
 Given a Polish space $X$, a **Borel measure** on $X$ is a
-countably additive set function ${}\mu$ defined on a ${}\sigma$-algebra of the
-Borel sets in $X$. A set is **${}\mu$-measurable** if it can be
-represented as a union of a Borel set and a ${}\mu$-nullset. A measure ${}\mu$
-is **${}\sigma$-finite** if $X = \bigcup_n X_n$, where $X_n$ is
-${}\mu$-measurable with $\mu(X_n) < \infty$. Lebesgue
-measure is ${}\sigma$-finite Borel measure on the Polish space $\Real$.
+countably additive set function $\mu$ defined on a $\sigma$-algebra of the
+Borel sets in $X$. A set is **$\mu$-measurable** if it can be
+represented as a union of a Borel set and a $\mu$-nullset. A measure $\mu$
+is **$\sigma$-finite** if $X = \bigcup_n X_n$, where $X_n$ is
+$\mu$-measurable with $\mu(X_n) < \infty$. Lebesgue
+measure is $\sigma$-finite Borel measure on the Polish space $\Real$.
 
 A set $A \subseteq X$ is **universally measurable** if it is
-${}\mu$-measurable for every ${}\sigma$-finite Borel measure on $X$.
+$\mu$-measurable for every $\sigma$-finite Borel measure on $X$.
 
 ```{prf:theorem} Lusin
 :label: thm-analytic-universally-measurable
