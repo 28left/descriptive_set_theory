@@ -235,7 +235,7 @@ Since continuous preimages of Borel sets are Borel, the result follows.
 If we work instead with the set
 \begin{align*}
 	C_\xi = & \{ \alpha \colon \alpha \in \WOrd_\xi \text{ or } \\
-			& \qquad \exists n\in \Op{dom}(E_\alpha) [E_\alpha \Rest{ \{m : m E_\alpha n\} } \text{ is a well-ordering of order type $\xi$}] \},	
+			& \exists n\in \Op{dom}(E_\alpha) [E_\alpha \Rest{ \{m : m E_\alpha n\} } \text{ is a well-ordering of order type $\xi$}] \},	
 \end{align*}
 then we get that $\WOrd = \bigcap_{\xi < \omega_1} C_\xi$, and hence
 

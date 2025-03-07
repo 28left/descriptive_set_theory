@@ -158,8 +158,8 @@ Every analytic set is Lebesgue measurable.
 :class: dropdown
 :nonumber: true
 
-We have, as the Souslin operator is monotone on classes,  
-$$\PS{1} = \mathcal{A} \BP{1} \subseteq \mathcal{A} \mathbf{LM} \subseteq \mathbf{LM}.$$
+We have, as the Souslin operator is monotone,  
+$$\BS{1} = \mathcal{A} \BP{1} \subseteq \mathcal{A} \mathbf{LM} \subseteq \mathbf{LM}.$$
 ```
 
 

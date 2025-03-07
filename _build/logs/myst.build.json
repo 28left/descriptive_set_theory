@@ -1,7 +1,7 @@
 {
   "input": {
     "files": [
-      "ordinals.md"
+      "regularityAnalytic.md"
     ],
     "opts": {
       "execute": false,
@@ -28,14 +28,14 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/ordinals.pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/regularityanalytic.pdf",
       "articles": [
         {
-          "file": "/Users/janreimann/GIT/descriptive_set_theory/ordinals.md",
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/regularityAnalytic.md",
           "level": 0
         }
       ],
-      "$file": "/Users/janreimann/GIT/descriptive_set_theory/ordinals.md",
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/regularityAnalytic.md",
       "$project": "/Users/janreimann/GIT/descriptive_set_theory"
     }
   ]

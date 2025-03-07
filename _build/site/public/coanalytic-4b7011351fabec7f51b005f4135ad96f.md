@@ -131,10 +131,10 @@ $$
 	\WF = \{\beta \in \Baire \colon \text{$E_\beta$ is well-founded} \}.
 $$
 
-Using $\DC$, having a minimal element is equivalent to the non-existence of an infinite descending sequence. So we can rewrite: 
+Then 
 
 $$
-	 \beta \in \WF \iff \forall \gamma \in \Baire \: \exists n \; [ \neg \gamma(n+1) E_\beta \gamma(n) ],
+	 \beta \in \WF \iff \forall \gamma \in \Baire \: \exists n \: \forall m \; [ \gamma(n) E_\beta \gamma(m) ],
 $$
 
 and hence $\WF$ is $\Pi^1_1$.
@@ -233,10 +233,9 @@ Since continuous preimages of Borel sets are Borel, the result follows.
 ```
 
 If we work instead with the set
-\begin{align*}
-	C_\xi = & \{ \alpha \colon \alpha \in \WOrd_\xi \text{ or } \\
-			& \qquad \exists n\in \Op{dom}(E_\alpha) [E_\alpha \Rest{ \{m : m E_\alpha n\} } \text{ is a well-ordering of order type $\xi$}] \},	
-\end{align*}
+\begin{equation*}
+	C_\xi = \{ \alpha \colon \alpha \in \WOrd_\xi \text{ or } \exists n\in \Op{dom}(E_\alpha) \\ [E_\alpha \Rest{\{m \colon m E_\alpha n\}} \text{ is a well-ordering of order type $\xi$}] \},	
+\end{equation*}
 then we get that $\WOrd = \bigcap_{\xi < \omega_1} C_\xi$, and hence
 
 ```{prf:corollary} 

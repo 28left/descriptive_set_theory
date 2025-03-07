@@ -77,6 +77,11 @@ As before, we can relativize this hierarchy with respect to a parameter $\gamma 
 A set $A \subseteq \Baire$ is $\bSigma^1_n$ $(\bPi^1_n)$ if and only if it is $\Sigma^1_n(\gamma)$ $(\Pi^1_n(\gamma))$ relative to some $\gamma \in \Baire$.
 ```
 
+$$
+	\PS{n} = \bigcup_{\gamma \in \Baire} \Sigma^1_n(\gamma) \qquad \PP{n} = \bigcup_{\gamma \in \Baire} \Pi^1_n(\gamma)
+$$
+
+
 
 ## Examples of projective sets
 
@@ -156,7 +161,7 @@ Similarly, it does not seem impossible to extend the regularity properties (LM) 
 
 Without explicitly mentioning it, up to now we have been working in $\ZF$, Zermelo-Fraenkel set theory, plus a weak form of Choice ($\AC_\omega(\Baire)$). If we add the full Axiom of Choice ($\AC$), we saw that the regularity properties do not extend to all sets. Solovay's model of $\ZF+\DC$ shows that the use of a strong version of Choice is necessary for this. 
 
-On the other hand, the proofs gave us no direct indication how complex the non-regular sets we constructed are.
+On the other hand, the proofs gave us no direct indication how 'complex' the non-regular sets we constructed are.
 We will study a model of $\ZF$ in which exists a $\bDelta^1_2$ set which neither is Lebesgue measurable nor has the Baire property. This, together with the Solovay model, shows we cannot settle in $\ZF$ alone the question of whether the projective sets are measurable or have the Baire property. We would have to add additional axioms.
 
 A key feature in the construction of a non-measurable $\bDelta^1_2$ set is the use of the well-ordering principle rather than the Axiom of Choice. 
