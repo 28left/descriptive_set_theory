@@ -45,6 +45,7 @@ We obtain similar contradictions if we choose as $\varphi(x)$ the formula
      x\;\text{is a cardinal} \qquad & \text{Cantor, around 1899, published 1932}\\
      x \; \text{is an ordinal} \qquad &   \text{antinomy of Burali-Forti}
 \end{align*}
+These antinomies are, however, not as direct as Russell's and require some further development of the theory in order to derive a contradiction.
 
 Regarding the existence of sets, we have to distinguish between 
 - **classes**, which we will denote by capital letters $A,B,\dots$ (for some specific, important classes we will also use boldface) and 
@@ -217,4 +218,4 @@ $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \; \to \; \exists f (\Op
 :::
 
 
-We denote the axiom system $\ZF + \AC$ as $\ZFC$, **Zermelo-Fraenkel with Choice**.
+We denote the axiom system $\ZF + \AC$ as $\ZFC$ -- **Zermelo-Fraenkel with Choice**.

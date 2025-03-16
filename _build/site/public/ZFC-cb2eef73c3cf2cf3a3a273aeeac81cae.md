@@ -45,6 +45,7 @@ We obtain similar contradictions if we choose as $\varphi(x)$ the formula
      x\;\text{is a cardinal} \qquad & \text{Cantor, around 1899, published 1932}\\
      x \; \text{is an ordinal} \qquad &   \text{antinomy of Burali-Forti}
 \end{align*}
+These antinomies are, however, not as direct as Russell's and require some further development of the theory in order to derive a contradiction.
 
 Regarding the existence of sets, we have to distinguish between 
 - **classes**, which we will denote by capital letters $A,B,\dots$ (for some specific, important classes we will also use boldface) and 
@@ -122,9 +123,8 @@ Next, we have
 :nonumber: true
 
 $ \qquad \exists y \forall x( x \in y \leftrightarrow  x = a \vee x = b)$.
-:::
 
-This axioms allows to form *pairs of sets*, specifically
+This axioms allows forming *pairs of sets*, specifically
 
 \begin{align*}
     \{a,b\} & : =  \{x\colon x=a \; \vee \; x=b \} &    \\
@@ -149,27 +149,15 @@ We write $\Op{Fun}(a)$ to denote that fact that $a$ is a function.
 
 Further elementary axioms:
 
-:::{prf:axiom} Union
-:nonumber: true
-
-$\qquad \forall a \exists y \forall z (z \in y  \leftrightarrow  \exists x \in a \; z \in x)$
-:::
-
-:::{prf:axiom} Replacement$_{{}\varphi}$
-:nonumber: true
-
-$\qquad \forall a  ((F: a \to \mathbf{V}) \: \rightarrow \: \exists u \forall y (y \in u \leftrightarrow \exists x \in a \; y = F(x)))$
-:::
+> (**Union**)   $\qquad \forall a \exists y \forall z (z \in y  \leftrightarrow  \exists x \in a \; z \in x)$
 
 ```{margin}
 Note that *Replacement* is an axiom scheme: For *any* formula, if that formula defines a function $F$, it asserts the existence of a set (the image set).
 ```
+> (**Replacement**)$_F$ <br>
+>  $\qquad \forall a  ((F: a \to \mathbf{V}) \: \rightarrow \: \exists u \forall y (y \in u \leftrightarrow \exists x \in a \; y = F(x)))$
 
-:::{prf:axiom} Power Set
-:nonumber: true
-
-$\qquad \forall a \exists y \forall z (z \in y \leftrightarrow z \subseteq a)$
-:::
+> (**Power Set**) $\qquad \forall a \exists y \forall z (z \in y \leftrightarrow z \subseteq a)$
 
 It follows that, for a given set $a$, the following classes are sets:
 
@@ -179,14 +167,11 @@ F[a] = \{F(x)|x \in a\} &: = \{y\colon \exists x \in a \; y = F(x) \}  &  \qquad
 \mathcal{P}(a) &: = \{x\colon x \subseteq a\} & \qquad  \text{power set}
 \end{align*}
 
-:::{prf:axiom} Infinity
-:nonumber: true
 
-$ \qquad \exists x ( \emptyset \in x \wedge \forall y ( y \in x \to y \cup \{y\} \in x))$
-:::
+> (**Infinity**) $ \qquad \exists x ( \emptyset \in x \wedge \forall y ( y \in x \to y \cup \{y\} \in x))$
 
 The axiom of Infinity is a "pure" set existence axiom, that is, it does not depend on another set already existing. It therefore renders the axiom of Set Existence above redundant.
-It also implies the existence of the [set ${}\omega$](#ordinals-basic) (the set theoretic version of the natural numbers), along with the operation $+$.
+It also implies the existence of the set $\Nat$ of natural numbers (along with the operation $+$), which we will address in more detail below.
 
 Using $\Nat$, we can introduce the other basic number sets:
 - $\Integer = (\Nat\times\Nat)/ \sim_\Integer$, where $(x,y) \sim_\Integer (u,v) :\Leftrightarrow  x+v = y+u$. Multiplication on $\Integer$ can be defined inductively (see below).
@@ -198,23 +183,15 @@ $$
 $$
 
 
-The final axiom of $\ZF$ we encountered before:
+The final axiom of $\ZF$ is 
 
-:::{prf:axiom} Foundation
-:nonumber: true
+> (**Foundation**) $\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)$.
 
-$\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)$.
-:::
-
-As we discussed before, Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
-
-We can also formalize the **Axiom of Choice** in the language of set theory:
-
-:::{prf:axiom} Choice
-:nonumber: true
-
-$\qquad \forall a ( \forall x \in a \; x \neq \emptyset \; \to \; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))$
-:::
+Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
 
 
-We denote the axiom system $\ZF + \AC$ as $\ZFC$, **Zermelo-Fraenkel with Choice**.
+We can also formalize the **Axiom of Choice**:
+
+> (**Choice**) $\qquad \forall a ( \forall x \in a \; x \neq \emptyset \;\;\; \to \;\;\; \exists f (\Op{Fun}(f) \:\wedge\: \Op{dom}(f) = a \:\wedge\: \forall x \in a \: f(x) \in x))$
+
+We denote the axiom system $\ZF + \AC$ as $\ZFC$ -- **Zermelo-Fraenkel with Choice**.

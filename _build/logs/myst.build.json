@@ -1,7 +1,7 @@
 {
   "input": {
     "files": [
-      "regularityAnalytic.md"
+      "ZFC.md"
     ],
     "opts": {
       "execute": false,
@@ -28,14 +28,14 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/regularityanalytic.pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/zfc.pdf",
       "articles": [
         {
-          "file": "/Users/janreimann/GIT/descriptive_set_theory/regularityAnalytic.md",
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/ZFC.md",
           "level": 0
         }
       ],
-      "$file": "/Users/janreimann/GIT/descriptive_set_theory/regularityAnalytic.md",
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/ZFC.md",
       "$project": "/Users/janreimann/GIT/descriptive_set_theory"
     }
   ]
