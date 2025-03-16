@@ -198,7 +198,7 @@ $$
 $$
 
 
-We complete the list of $\ZF$ axioms with the Axiom of Foundation:
+We complete the list of $\ZF$ axioms with the Axiom of Foundation, which we [discussed before](#set-well-founded):
 
 :::{prf:axiom} Foundation
 :nonumber: true
@@ -206,7 +206,7 @@ We complete the list of $\ZF$ axioms with the Axiom of Foundation:
 $\qquad \forall a \;( a \neq \emptyset \to \exists x \in a \; \forall y \in x \, y \not \in a)$.
 :::
 
-As we [discussed before](#set-well-founded), Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
+As we discussed before, Foundation rules out, for example, that a set can be an element of itself. More precisely, the axiom states that $\in$-relation is **well-founded** on any set. 
 
 We can also formalize the **Axiom of Choice** in the language of set theory:
 
