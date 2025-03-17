@@ -107,7 +107,7 @@ We have seen we cannot use full comprehension for sets. In its place we introduc
 ```{margin}
 In particular, the empty set $\emptyset$ exists. (Why?)
 ```
-By Extensionality, the set $y$ is unique. Note that there is one axiom for *every* formula ${}\varphi$, so Separation is an **axiom scheme**.
+By Extensionality, the set $y$ is unique. Note that there is one axiom for *any* formula ${}\varphi$, so Separation is an **axiom scheme**.
 
 
 Separation allows us to select from any class $\{x \colon \varphi(x,\ldots)\}$ those elements that are in a given set $a$ and collect them in a **set**
