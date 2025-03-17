@@ -17,7 +17,7 @@ For every property ${}\varphi$,
 
 We have repeatedly used induction already for ordinals $< \omega_1$, the first uncountable ordinal.
 
-To prove this principle simply observe that if $\forall \alpha \, \varphi(\alpha)$ failed there would have to be a *smallest*  ${}\alpha$ with  $\neg \varphi(\alpha)$, contradicting the induction hypothesis.
+To prove this principle simply observe that if $\forall \alpha \, \varphi(\alpha)$ failed there would have to be a *smallest*  $\alpha$ with  $\neg \varphi(\alpha)$, contradicting the induction hypothesis.
 
 Since every ordinal is either $0$, a successor, or a limit ordinal, we have the following variant of induction.
 
@@ -86,7 +86,7 @@ $$
 Then $F$ is a function (otherwise there would be two incompatible tame functions), its domain is transitive, and satisfies the recursion condition (since it is the union of tame functions). 
 
 It remains to show that $F$ is defined on all of $\Ord$. 
-If $D = \Op{Dom}(F) \neq \Ord$, then we would have $D = \alpha$ for some ordinal ${}\alpha$. In particular $B$ is a set therefore $F = f$ is a set, for some tame $f$. This $f$ could be extended to a tame $h = f \cup \{(\alpha,G(\alpha,f \Rest{\alpha}))\}$, contradiction.
+If $D = \Op{Dom}(F) \neq \Ord$, then we would have $D = \alpha$ for some ordinal $\alpha$. In particular $B$ is a set therefore $F = f$ is a set, for some tame $f$. This $f$ could be extended to a tame $h = f \cup \{(\alpha,G(\alpha,f \Rest{\alpha}))\}$, contradiction.
 ```
 
 Note that we defined $F$ **explicitly** as a *union* of all partial solutions to the recursion equation.
@@ -226,21 +226,21 @@ Remarkably, if we assume the axiom of *Foundation*, we reach *all* sets this way
 ```{prf:theorem}
 :label: thm-von-Neumann
 
-For every set $x$ there exists an ordinal ${}\alpha$ with $x \in V_\alpha$, that is,
+For every set $x$ there exists an ordinal $\alpha$ with $x \in V_\alpha$, that is,
 
 $$
     \V = \bigcup_{\alpha \in \Ord} V_\alpha
 $$
 ```
 ```{margin}
-Recall that the notation $\bigcup_{\alpha \in \Ord} \dots$ is really just a shortcut for the class obtained as $\{ x \colon \exists \alpha \in \Ord \dots\}$.
+Note that the notation $\bigcup_{\alpha \in \Ord} \dots$ is really just a shortcut for the class obtained as $\{ x \colon \exists \alpha \in \Ord \dots\}$.
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-Let $C$ be the class of all sets not in any $V_\alpha$. Since $\in$ is well-founded, if $C$ is non-empty, it has a $\in$-minimal element $x$. This implies that for all $z \in x$, $z \in \bigcup_{\alpha \in \Ord} V_\alpha$. Define a function $h$ by mapping each $z\in x$ to the *least* ${}\alpha$ so that $z \in V_\alpha$. Since $x$ is a set, $h[x]$ is a set of ordinals, by *Replacement*. This set or ordinals has a supremum, say ${}\gamma$. Then $x \subseteq V_\gamma$ and therefore, 
+Let $C$ be the class of all sets not in any $V_\alpha$. Since $\in$ is well-founded, if $C$ is non-empty, it has a $\in$-minimal element $x$. This implies that for all $z \in x$, $z \in \bigcup_{\alpha \in \Ord} V_\alpha$. Define a function $h$ by mapping each $z\in x$ to the *least* $\alpha$ so that $z \in V_\alpha$. Since $x$ is a set, $h[x]$ is a set of ordinals, by *Replacement*. This set or ordinals has a supremum, say $\gamma$. Then $x \subseteq V_\gamma$ and therefore, 
 
 $$
 x \in \mathcal{P}(V_\gamma) = V_{\gamma+1}.
