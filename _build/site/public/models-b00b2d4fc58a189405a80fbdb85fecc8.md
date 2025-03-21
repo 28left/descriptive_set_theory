@@ -1,6 +1,6 @@
 # Models of Set Theory
 
-You may have noticed that, when introducing the axioms of $\ZFC$, we never *really* answered the question "*What is a set?*" Instead, we developed a formal theory of axioms for a binary relation that somehow describe "*how sets work*", that is, how we can obtain sets from given ones using well-known operations like power set and union.
+You may have noticed that, when introducing the axioms of $\ZFC$, we never *really* answered the question "*What is a set?*". Instead, we developed a formal theory of axioms for a binary relation that somehow describe "*how sets work*", that is, how we can obtain sets from given ones using well-known operations like power set and union.
 
 We have then seen how we can develop a lot of standard mathematical *objects* (like $\Nat$, $\Real$) and *techniques* (like induction and definition by recursion) **inside** this formal system. In fact, most of mathematics can be developed formally inside this system. Almost all proofs you find in any standard math book are proofs that can be formalized in $\ZFC$. It is very tedious to do this for us humans, but there is little doubt it can be done, and in fact, looking at the recent work on **proof assistants** (like Coq or Lean), many parts of mathematics have been formalized (albeit not directly in $\ZFC$).
 
@@ -76,7 +76,7 @@ If $E$ behaves "set-like", then it will respect the axiom of *Extensionality*, i
 	x,z \in X, \; x\neq z \quad \text{ implies } \quad \Op{ext}_E(x) \neq \Op{ext}_E(z).
 \end{equation*}
 
-Furthermore, as stated above, we want to exclude infinite descending $E$-chains. Recall we say that $E$ is **well-founded** if
+Furthermore, as stated above, we want to exclude infinite descending $E$-chains. We say that $E$ is **well-founded** if
 
 >  every non-empty set $Y \subseteq X$ has an $E$-minimal element.
 
@@ -87,14 +87,14 @@ If $E$ is an extensional and well-founded relation on a set $X$, then there exis
 \begin{equation*}
     x \, E \, y \iff \pi(x) \in \pi(y) \quad \text{ for all $ x,y \in X$}.		
 \end{equation*}
-Moreover, $S$ and ${}\pi$ are unique.
+Moreover, $S$ and $\pi$ are unique.
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-We construct ${}\pi$ and $S = \Op{im}(\pi)$ by recursion on $E$, which is possible since it is well-founded. 
+We construct $\pi$ and $S = \Op{im}(\pi)$ by recursion on $E$, which is possible since it is well-founded. 
 
 For each $x \in X$, let
 \begin{equation*}
@@ -102,7 +102,7 @@ For each $x \in X$, let
 \end{equation*} 
 and set $S = \Op{im}(\pi)$.
 
-The injectivity of ${}\pi$ follows from the extensionality of ${}\pi$ by induction along $E$: 	
+The injectivity of $\pi$ follows from the extensionality of $\pi$ by induction along $E$: 	
 Suppose we have shown 
 \begin{equation*}
 \forall z \; (z E x \to \forall y  \in X (\pi(z) = \pi(y) \to z = y)).
@@ -117,17 +117,17 @@ cEx &\Rightarrow& \pi(c) \in \pi(x) = \pi(y) &\\
 Similarly, we get $cEy \Rightarrow cEx$, hence $x=y$ as desired due to the extensionality of $E$. Finally we have
 \begin{align*}
 \pi(x) \in \pi(y) & \Rightarrow & \pi(x) = \pi(c) & \qquad \text{ for some } cEy \\
-&\Rightarrow& x = c & \qquad \text{ (since ${}\pi$ is injective)}\\
+&\Rightarrow& x = c & \qquad \text{ (since $\pi$ is injective)}\\
 &\Rightarrow& xEy &
 \end{align*}
-Thus ${}\pi$ is an isomorphism.
+Thus $\pi$ is an isomorphism.
 
-To see the uniqueness of ${}\pi$ and $S$, assume $\rho$, $T$ are such that the statement of the theorem is satisfied. Then $\pi \circ \rho^{-1}$ is an isomorphism between $(T, \in)$ and $(S,\in)$. Now apply the following lemma.
+To see the uniqueness of $\pi$ and $S$, assume $\rho$, $T$ are such that the statement of the theorem is satisfied. Then $\pi \circ \rho^{-1}$ is an isomorphism between $(T, \in)$ and $(S,\in)$. Now apply the following lemma.
 ```
 
 ```{prf:lemma}    
 :label: lem-Mostowski-unique
-Suppose $X,Y$ are sets, and ${}\theta$ is an isomorphism between $(X,\in)$ and $(Y,\in)$. Then $X=Y$ and $\theta(x) = x$ for all $x \in X$.
+Suppose $X,Y$ are sets, and $\theta$ is an isomorphism between $(X,\in)$ and $(Y,\in)$. Then $X=Y$ and $\theta(x) = x$ for all $x \in X$.
 ```
 
 ```{prf:proof}
@@ -143,15 +143,5 @@ We also have $y \subseteq x$: Let $t \in y$. Since $y \in Y$, there is $z \in X$
 Hence $x = y$, and this also implies $\theta(x) = x$.
 ```
 
-## Absoluteness and transitive models
 
-Even if consider well-founded standard models, interpreting set-theoretic statements in them can still lead to very different results, even for very simple formulas. 
 
-:::{prf:example}
-:nonumber: true
-
-Consider $M = \{0, \{\{0\}\}\}$ and let $\varphi \equiv \{\{0\}\} \subseteq 0$. Clearly ${}\varphi$ is not true from the "outside". But what if we look at it from "inside" $M$? $x \subseteq y$ means $\forall z (z \in x \to z \in y)$. *Inside* $M$ this means every set $z$ *in* $M$ that is an element of $x$ is also an element of $y$. But in $M$, there is no element $z \in \{\{0\}\}$, $\{0\}$ is not an element of $M$. Therefore, 
-$$
-    (M, \in) \models \{\{0\}\} \subseteq 0.
-$$
-:::
