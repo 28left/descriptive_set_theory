@@ -100,7 +100,7 @@ For each $x \in X$, let
 \begin{equation*}
     \pi(x) = \{\pi(y) \colon y \, E \, x \},
 \end{equation*} 
-and set $S = \Op{ran}(\pi)$.
+and set $S = \Op{im}(\pi)$.
 
 The injectivity of ${}\pi$ follows from the extensionality of ${}\pi$ by induction along $E$: 	
 Suppose we have shown 
