@@ -1,7 +1,7 @@
 {
   "input": {
     "files": [
-      "ZFC.md"
+      "models.md"
     ],
     "opts": {
       "execute": false,
@@ -28,15 +28,15 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/jan/GIT/descriptive_set_theory/_build/exports/zfc.pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/models.pdf",
       "articles": [
         {
-          "file": "/Users/jan/GIT/descriptive_set_theory/ZFC.md",
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/models.md",
           "level": 0
         }
       ],
-      "$file": "/Users/jan/GIT/descriptive_set_theory/ZFC.md",
-      "$project": "/Users/jan/GIT/descriptive_set_theory"
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/models.md",
+      "$project": "/Users/janreimann/GIT/descriptive_set_theory"
     }
   ]
 }

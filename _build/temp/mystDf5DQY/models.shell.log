@@ -1,0 +1,66 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 7 Jan. 2023. Version 4.79.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'xelatex' forced or previously required
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "models.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+
+SyncTeX written on models.synctex.gz.Latexmk: Getting log file 'models.log'
+Latexmk: Examining 'models.fls'
+Latexmk: Examining 'models.log'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'models.xdv'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  models.aux
+  models.out
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "models.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+
+SyncTeX written on models.synctex.gz.Latexmk: Getting log file 'models.log'
+Latexmk: Examining 'models.fls'
+Latexmk: Examining 'models.log'
+Latexmk: Log file says output to 'models.xdv'
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  models.xdv
+Category 'changed_source_rules':
+  xelatex
+Category 'no_dest':
+  xdvipdfmx
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "models.pdf"  "models.xdv"'
+------------
+models.xdv -> models.pdf
+[1][2][3][4]
+67163 bytes written
+Latexmk: All targets (models.pdf) are up-to-date
+

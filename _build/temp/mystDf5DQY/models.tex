@@ -1,0 +1,224 @@
+% Created with jtex v.1.0.20
+\documentclass{article}
+\PassOptionsToPackage{short, nodayofweek}{datetime}
+
+\input{curvenote.def}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  imports  %%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%  math commands  %%%%%%%%%%%%%%%%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZF}{\mathsf{ZF}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\Op}[1]{\operatorname{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  theorem  %%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{observation}{Observation}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% colors for hyperlinks
+\hypersetup{colorlinks=true, allcolors=blue}
+\hypersetup{
+pdftitle={\@title},
+pdfsubject={},
+pdfauthor={\@author},
+pdfkeywords={},
+addtopdfcreator={Written in Curvenote}
+}
+
+\usepackage{curvenote}
+
+\title{Models of Set Theory}
+
+\newdate{articleDate}{24}{3}{2025}
+\date{\displaydate{articleDate}}
+
+\author{}
+
+\begin{document}
+
+\maketitle
+
+You may have noticed that, when introducing the axioms of $\ZFC$, we never \textit{really} answered the question ``\textit{What is a set?}'' Instead, we developed a formal theory of axioms for a binary relation that somehow describe ``\textit{how sets work}'', that is, how we can obtain sets from given ones using well-known operations like power set and union.
+
+We have then seen how we can develop a lot of standard mathematical \textit{objects} (like $\Nat$, $\Real$) and \textit{techniques} (like induction and definition by recursion) \textbf{inside} this formal system. In fact, most of mathematics can be developed formally inside this system. Almost all proofs you find in any standard math book are proofs that can be formalized in $\ZFC$. It is very tedious to do this for us humans, but there is little doubt it can be done, and in fact, looking at the recent work on \textbf{proof assistants} (like Coq or Lean), many parts of mathematics have been formalized (albeit not directly in $\ZFC$).
+
+This expressiveness gives $\ZFC$ its foundational importance, but it is also the cause for much confusion for someone who first studies set theory.
+
+From a pedagogical point of view, in what follows it is helpful to assume a ``\textbf{Platonist}'' perspective of mathematics, and set theory in particular, namely that \textit{sets and the relations between exist independently (and outside) of the $\ZFC$ axioms}. The set of real numbers exists, and our development of $\Real$ inside $\ZFC$ is just a formal way to describe them. From this perspective, the axioms of $\ZF$ ($\AC$ is a little different) are just obvious truths about sets, just like the \textbf{Peano axioms} are obvious truths about natural numbers.
+
+Among other things, this perspective allows us to treat $\ZF$ just like any other mathematical theory, like \textit{group theory} or the theory of \textit{algebraically closed fields}.
+In particular, we can think about \textbf{models of set theory} the way we would think about models of group theory, in the sense of model theory.
+
+A \textbf{model} would simply be a set $M$ together with a binary relation $E$ on $S$ such that
+
+\begin{equation}
+(M,E) \models \ZF,
+\end{equation}
+
+that is, all axioms hold when interpreted in $(M,E)$. Note that we use ``\textit{set}'' in this context not in the formal sense, but in the ``meta''-sense (the Platonist world of sets).
+
+Working in the meta-theory (``\textit{that what is mathematically true}''), we know by Gödel's completeness theorem that
+
+\begin{quote}
+if $\ZF$ is consistent, then it has a model.
+\end{quote}
+
+This model should be seen as a \textbf{set-theoretic universe}: Its elements can be seen as sets, and the interpretation  $E$ of the $\in$-symbol will tell us how these sets are connected via the element-relation.
+
+Note that $E$ does not have to be the \textit{actual} element relation on a set (of sets), but just some binary relation so that the axioms are satisfied.
+
+In the meta-world, there are, of course, sets other than $M$, but that does not matter here, since all we are interested in is giving \textit{some} universe in which our axioms hold. (Timothy Chow has suggested that set theory should rather be called "\textit{universe theory}. He is right in the sense that what axiomatic set theory does is to define such \textit{universes of sets}, rather than what a set is.)
+
+In the meta-theory, we can then follow the usual techniques to show provability or non-provability results.
+
+If we want to prove that $\CH$ is consistent with $\ZF$ (assuming $\ZF$ is consistent), we need to find a model in which both hold.
+
+One difficulty in working with models of set theory is that they can look very different depending on whether you look at a model ``\textbf{from the inside}'' or ``\textbf{from the outside}''.
+
+To illustrate this, assume $\ZF$ is consistent. Then, by the \textbf{\href{https://en.wikipedia.org/wiki/L\%C3\%B6wenheim\%E2\%80\%93Skolem\_theorem}{Löwenheim-Skolem theorem}}, there exists a \textbf{countable model} for $\ZF$.
+Yet it is a theorem of $\ZF$ that \textit{there exists an uncountable set}. This is often referred to as \textbf{\href{https://en.wikipedia.org/wiki/Skolem's\_paradox}{Skolem's paradox}}, although it is not really an antinomy.
+
+If we break this down a bit, we see that the apparent paradox is really just a matter of perspective (\textit{inside} or \textit{outside}). Assume $(M,E)$ is a countable model of $\ZF$. Then there exists $x \in M$ such that there is no injection from $x$ to the natural numbers. Since $M$ is countable, $x$ can have at most countably many elements. So why is this \textit{not} a contradiction? We should really read the statement above as
+
+\begin{quote}
+there is no injection \textbf{in $M$} from $x$ to \textbf{$M$'s version} of the natural numbers.
+\end{quote}
+
+In other words, even though $x$ is countable \textit{from the outside}, $x$ appears uncountable \textit{inside $M$} since a mapping witnessing its countability does not exist in $M$.
+
+This is a first warning sign that models of $\ZF$ can behave in very unexpected ways. For another example, recall the axiom of \textit{Foundation} asserts that the $\in$-relation is well-founded. But again, this means only ``from the inside''.
+
+\begin{proposition}\label{prop-illfounded-zf-model}If $\ZF$ is consistent, than there exists a model $(M,E)$ of $\ZF$ such that $(M,E)$ is ill-founded.
+
+\end{proposition}\begin{proof}Introduce new constant symbols $c_n$ $(n \in \Nat)$ and add the formulas $\varphi_n \equiv c_{n+1} \in c_n$ to the axioms of $\ZF$. It is not hard to show, using the \href{https://en.wikipedia.org/wiki/Compactness\_theorem}{compactness theorem}, that $\ZF + \bigcup_n \varphi_n$ has a model $(M^*, E^*)$, for which the set $\{c_n \colon n \in \Nat\}$ is ill-founded.
+
+\end{proof}Since, as mentioned above, the model $(M^*,E^*)$ satisfies \textit{Foundation}, the set $\{c_n \colon n \in \Nat\}$ is actually \textit{not in} the model (and neither can be any other set with an infinite descending $\in$-chain).
+
+\section{Mostowski collapse}
+
+If we restrict ourselves to models on which the $E$-relation is \textit{actually} well-founded (i.e. from the outside), then interestingly these models look, in a way, ``\textit{natural}'': They can be assumed to be the $\in$-relation on a set. Such models are also called \textbf{standard}.
+
+Given a set theoretic structure $(M,E)$ (not necessarily a model of $\ZF$), for each $x \in M$ let
+\begin{equation*}
+\Op{ext}_E(x) = \{ y \in X \colon y\, E \, x \}
+\end{equation*}
+
+If $E$ behaves ``set-like'', then it will respect the axiom of \textit{Extensionality}, i.e. two sets are identical if and only if they have the same elements. Therefore we say that $E$ is \textbf{extensional} if
+\begin{equation*}
+x,z \in X, \; x\neq z \quad \text{ implies } \quad \Op{ext}_E(x) \neq \Op{ext}_E(z).
+\end{equation*}
+
+Furthermore, as stated above, we want to exclude infinite descending $E$-chains. Recall we say that $E$ is \textbf{well-founded} if
+
+\begin{quote}
+every non-empty set $Y \subseteq X$ has an $E$-minimal element.
+\end{quote}
+
+\begin{theorem}[Mostowski collapse]\label{thm-mostowski-collapse}If $E$ is an extensional and well-founded relation on a set $X$, then there exists a transitive set $S$ and a bijection $\pi: X \to S$ such that
+\begin{equation*}
+x \, E \, y \iff \pi(x) \in \pi(y) \quad \text{ for all $ x,y \in X$}.
+\end{equation*}
+Moreover, $S$ and ${}\pi$ are unique.
+
+\end{theorem}\begin{proof}We construct ${}\pi$ and $S = \Op{im}(\pi)$ by recursion on $E$, which is possible since it is well-founded.
+
+For each $x \in X$, let
+\begin{equation*}
+\pi(x) = \{\pi(y) \colon y \, E \, x \},
+\end{equation*}
+and set $S = \Op{ran}(\pi)$.
+
+The injectivity of ${}\pi$ follows from the extensionality of ${}\pi$ by induction along $E$: 	
+Suppose we have shown
+\begin{equation*}
+\forall z \; (z E x \to \forall y  \in X (\pi(z) = \pi(y) \to z = y)).
+\end{equation*}
+and we have to show that it holds for $x$. Assume $\pi(x) = \pi(y)$ for some $y \in X$. Then
+\begin{align*}
+cEx &\Rightarrow& \pi(c) \in \pi(x) = \pi(y) &\\
+&\Rightarrow& \pi(c) = \pi(z) & \qquad \text{ for some } zEy\\
+&\Rightarrow& c=z & \qquad  (\text{by ind. hyp., since } cEx)\\
+&\Rightarrow& cEy &.
+\end{align*}
+Similarly, we get $cEy \Rightarrow cEx$, hence $x=y$ as desired due to the extensionality of $E$. Finally we have
+\begin{align*}
+\pi(x) \in \pi(y) & \Rightarrow & \pi(x) = \pi(c) & \qquad \text{ for some } cEy \\
+&\Rightarrow& x = c & \qquad \text{ (since ${}\pi$ is injective)}\\
+&\Rightarrow& xEy &
+\end{align*}
+Thus ${}\pi$ is an isomorphism.
+
+To see the uniqueness of ${}\pi$ and $S$, assume $\rho$, $T$ are such that the statement of the theorem is satisfied. Then $\pi \circ \rho^{ -1}$ is an isomorphism between $(T, \in)$ and $(S,\in)$. Now apply the following lemma.
+
+\end{proof}\begin{lemma}\label{lem-mostowski-unique}Suppose $X,Y$ are sets, and ${}\theta$ is an isomorphism between $(X,\in)$ and $(Y,\in)$. Then $X=Y$ and $\theta(x) = x$ for all $x \in X$.
+
+\end{lemma}\begin{proof}By induction on the well-founded relation $\in$. Assume that $\theta(z)=z$ for all $z \in x$ and let $y = \theta(x)$.
+
+We have $x \subseteq y$ because if $z \in x$, then $z = \theta(z) \in \theta(x) = y$.
+
+We also have $y \subseteq x$: Let $t \in y$. Since $y \in Y$, there is $z \in X$ with $\theta(z) = t$. Since $\theta(z) \in y$ and $y = \theta(x)$, we have $z \in x$, and thus $t = \theta(z) = z \in x$.
+
+Hence $x = y$, and this also implies $\theta(x) = x$.
+
+\end{proof}\section{Absoluteness and transitive models}
+
+Even if we consider well-founded standard models, interpreting set-theoretic statements in them can still lead to very different results, even for very simple formulas.
+
+\begin{example}Consider $M = \{0, \{\{0\}\}\}$ and let $\varphi \equiv \{\{0\}\} \subseteq 0$. Clearly ${}\varphi$ is not true from the ``outside''. But what if we look at it from ``inside'' $M$? $x \subseteq y$ means $\forall z (z \in x \to z \in y)$. \textit{Inside} $M$ this means every set $z$ \textit{in} $M$ that is an element of $x$ is also an element of $y$. But in $M$, there is no element $z \in \{\{0\}\}$, $\{0\}$ is not an element of $M$. Therefore,
+\begin{equation}
+(M, \in) \models \{\{0\}\} \subseteq 0.
+\end{equation}
+
+\end{example}In the example above, the set $M$ is not transitive, which allowed it to ``hide'' its elements. It turns out that if we require our model to be transitive, the truth of simple formulas cannot vary between the ``inside'' and the ``outside'' perspective. We call such properties \textbf{absolute}.
+
+Given a formula ${}\varphi$ and some class $M$, we can \textbf{relativize}
+${}\varphi$ with respect to $M$ essentially by restricting all quantifiers in ${}\varphi$ to range over $M$, i.e.{\textbackslash}~$\exists x$ becomes $\exists x \in M$ and $\forall x$ becomes $\forall x \in M$. Note that classes are defined by formulas, so the resulting formula, which we denote by $\varphi^M$, is still a formula of set theory.
+
+\begin{definition}We say a formula $\varphi(x_0, \ldots, x_n)$ is \textbf{absolute} for a class $M$ if for all $a_0, \ldots, a_n \in M$
+\begin{equation}
+\varphi^M(a_0, \ldots, a_n) \text{ holds} \iff  \varphi(a_0, \ldots, a_n) \text{ holds}.
+\end{equation}
+
+\end{definition}\begin{definition}A formula ${}\varphi$ is $\Delta_0$ if it has no quantifiers or every quantifier of ${}\varphi$ is of the form $\exists x \in y$ or $\forall x \in y$ (i.e. every quantifier is \textit{bounded}).
+
+\end{definition}\begin{lemma}If $M$ is transitive and ${}\varphi$ is $\Delta_0$, then ${}\varphi$ is absolute for $M$.
+
+\end{lemma}\begin{proof}[Sketch]Clearly $x=y$ and $x\in y$ are absolute for any $M$. It is also not hard to see that if ${}\varphi$ and ${}\psi$ are absolute for $M$, then so are $\neg \varphi$ and $\varphi \wedge \psi$. Hence all quantifier free formulas are absolute.
+
+Finally, if ${}\varphi$ is absolute for $M$, so is $\psi \equiv \exists x \in y \: \varphi$:
+If $\psi^M(y,\bar{z})$ holds for $y,\bar{z} \in M$, then we have $[\exists x (x \in y \: \wedge \: \varphi(x,y,\bar{z}))]^M$, i.e., $\exists x \in M(x \in y \: \wedge \: \varphi^M(x,y,\bar{z}))$. Since $\varphi^M(x,y,\bar{z})$ if and only if $\varphi(x,y,\bar{z})$, it follows that $\exists x\in y \varphi(x,y,\bar{z})$, i.e. ${}\psi$.
+
+Conversely, if for $y,\bar{z} \in M$, $\exists x\in y \varphi(x,y,\bar{z})$, then since $M$ is transitive, $x$ belongs to $M$, and since $\varphi(x,y,\bar{z})$ if and only $\varphi^M(x,y,\bar{z})$, we have $\exists x \in M \, (x \in y \: \wedge \: \varphi^M(x,y,\bar{z}) )$ and so $\psi^M(y,\bar{z})$.
+
+\end{proof}\begin{proposition}The following expressions can be written as $\Delta_0$-formulas and hence are absolute for any transitive class $M$:
+
+\begin{itemize}
+\item $x = \emptyset$, $x=y$, $x \subseteq y$, $z = x \cap y$, $z = x \cup y$, $x = \bigcap y$, $x = \bigcup y$, $z = \{x,y\}$, $z =(x,y)$, $z= x \times y$
+\item $r$ is a relation, $f$ is a function, $x = \Op{dom}(f)$, $y = \Op{ran}(f)$
+\item $<$ is a linear order on $x$, $x$ is an ordinal, $x$ is a limit ordinal
+\end{itemize}
+
+\end{proposition}
+\end{document}
