@@ -4,3 +4,4 @@
 .DS_Store
 */.DS_Store
 *_env
+_build/temp/

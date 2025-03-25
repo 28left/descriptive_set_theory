@@ -201,3 +201,9 @@ The following expressions can be written as $\Delta_0$-formulas and hence are ab
 - $<$ is a linear order on $x$, $x$ is an ordinal, $x$ is a limit ordinal
 ::: 
 
+We can put this absoluteness property to use and identify many "almost" models of $\ZF$.
+
+:::{prf:theorem} 
+
+If $\alpha$ is a limit ordinal, then $(V_\alpha, \in) \models \ZFC - \mathsf{Regularity}$.
+:::
