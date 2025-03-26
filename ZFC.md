@@ -80,7 +80,7 @@ We begin with the **Axiom of Extensionality**, which is essential for the equali
 :::{prf:axiom} Extensionality 
 :nonumber: true
 
-$\qquad \forall a,b \, \forall x (x \in a  \leftrightarrow x \in b)  \to a=b.$
+$\qquad \forall a,b \, (\forall x (x \in a  \leftrightarrow x \in b)  \to a=b)$
 :::
 
 Consequently, two sets coincide if they have the same elements.

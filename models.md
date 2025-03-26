@@ -143,6 +143,20 @@ We also have $y \subseteq x$: Let $t \in y$. Since $y \in Y$, there is $z \in X$
 Hence $x = y$, and this also implies $\theta(x) = x$.
 ```
 
+:::{prf:corollary}
+:nonumber: true
+
+If $E$ is a well-order on a set $X$, then $(X,E)$ is isomorphic to $(\alpha, \in)$ for a unique ordinal $\alpha$.
+:::
+
+:::{prf:proof}
+:nonumber: true
+:class: dropdown
+
+Every linear order is extensional. Hence we can apply the Mostowski Collapse. It is easy to see that the resulting set is an ordinal.
+:::
+
+
 ## Absoluteness and transitive models
 
 Even if we consider well-founded standard models, interpreting set-theoretic statements in them can still lead to very different results, even for very simple formulas. 
@@ -159,7 +173,7 @@ $$
 In the example above, the set $M$ is not transitive, which allowed it to "hide" its elements. It turns out that if we require our model to be transitive, the truth of simple formulas cannot vary between the "inside" and the "outside" perspective. We call such properties **absolute**.
 
 Given a formula ${}\varphi$ and some class $M$, we can **relativize** 
-${}\varphi$ with respect to $M$ essentially by restricting all quantifiers in ${}\varphi$ to range over $M$, i.e.\ $\exists x$ becomes $\exists x \in M$ and $\forall x$ becomes $\forall x \in M$. Note that classes are defined by formulas, so the resulting formula, which we denote by $\varphi^M$, is still a formula of set theory. 
+${}\varphi$ with respect to $M$ essentially by restricting all quantifiers in ${}\varphi$ to range over $M$, i.e. $\exists x$ becomes $\exists x \in M$ and $\forall x$ becomes $\forall x \in M$. Note that classes are defined by formulas, so the resulting formula, which we denote by $\varphi^M$, is still a formula of set theory. 
 
 :::{prf:definition}
 :nonumber: true
@@ -169,6 +183,17 @@ $$
 	\varphi^M(a_0, \ldots, a_n) \text{ holds} \iff  \varphi(a_0, \ldots, a_n) \text{ holds}.
 $$
 :::
+
+
+:::{exercise}
+:nonumber: true
+
+If $M$ is transitive, then for all ${}\varphi$,
+$$
+    (M, \in) \models \varphi \; \iff \; \varphi^M \text{ holds}.
+$$
+:::
+
 
 :::{prf:definition}
 :nonumber: true
@@ -198,12 +223,46 @@ Conversely, if for $y,\bar{z} \in M$, $\exists x\in y \varphi(x,y,\bar{z})$, the
 The following expressions can be written as $\Delta_0$-formulas and hence are absolute for any transitive class $M$:
 - $x = \emptyset$, $x=y$, $x \subseteq y$, $z = x \cap y$, $z = x \cup y$, $x = \bigcap y$, $x = \bigcup y$, $z = \{x,y\}$, $z =(x,y)$, $z= x \times y$
 - $r$ is a relation, $f$ is a function, $x = \Op{dom}(f)$, $y = \Op{ran}(f)$
-- $<$ is a linear order on $x$, $x$ is an ordinal, $x$ is a limit ordinal
+- $<$ is a linear order on $x$, $x$ is an ordinal, $x$ is a limit ordinal, $x=\omega$
 ::: 
 
+We leave the proof as an exercise.
 We can put this absoluteness property to use and identify many "almost" models of $\ZF$.
 
 :::{prf:theorem} 
 
-If $\alpha$ is a limit ordinal, then $(V_\alpha, \in) \models \ZFC - \mathsf{Regularity}$.
+If $\alpha > \omega$ is a limit ordinal, then $(V_\alpha, \in) \models \ZFC - \mathsf{Replacement}$.
 :::
+
+:::{prf:proof} Sketch
+:class: dropdown
+:nonumber: true
+
+We verify a few axioms and leave the rest as an exercise.
+
+*Extensionality:* The relativized version of this axiom is 
+$$
+    \forall a,b \in V_\alpha \, ( \forall x\in V_\alpha (x \in a  \leftrightarrow x \in b)  \to a=b)
+$$
+This simply states that the $\in$-relation (as a binary relation) is extensional on $V_\alpha$ (as defined above). It is easy to see that for every transitive set, the $\in$-relation is extensional.
+
+*Power Set:* We have seen that $\subseteq$ is absolute for transitive classes. Therefore, the relativized version of the Power Set axiom becomes
+$$
+\forall a \in V_\alpha\, \exists y \in V_\alpha \forall z \in V_\alpha (z \in y \leftrightarrow z \subseteq a)
+$$
+This means we only need to have those subsets in the power set that are in $V_\alpha$. In other words, we need to verify
+$$
+\forall a \in V_\alpha\, ( \Pow(a) \cap V_\alpha \in V_\alpha)
+$$
+If $a \in V_\alpha$, then $a \in V_\beta$ for some $\beta < \alpha$, since ${}\alpha$ is limit. 
+Since $V_\beta$ is transitive, $a \subseteq V_\beta$ and thus $\Pow(a)\subseteq \Pow(V_\beta) = V_{\beta+1}$, which in turn yields $\Pow(a) \in V_{\beta+2}$
+
+If $b \in \Pow(a) \cap V_\alpha$, then $b \in V_{\beta+2}$. Therefore, $\Pow(a) \cap V_\alpha \subseteq V_{\beta+2}$. It follows that $\Pow(a) \cap V_\alpha \in V_{\beta+3} \subseteq V_\alpha$, as desired.
+
+
+*Infinity:* We have seen that $x = \omega$ is absolute for transitive classes. Hence $V_\alpha$ will satisfy the Axiom of Infinity if $\omega \in V_\alpha$. But this is true since we assume $\alpha > \omega$.
+:::
+
+What is the problem with Replacement? The axiom says that if ${}\varphi$ defines a function, then the image of any set under this function is a set. Relativized to some $M$, this means we need to find a set *in* $M$ that contains the image. Here we run into a cardinality problem. The cardinality of $V_\alpha$ can be much bigger than the cardinality of ${}\alpha$. For example, $\Pow(\omega) \in V_{\omega+\omega}$ but $\omega+\omega$ is countable. We could have a function that maps $\Pow(\omega)$ to sets of rank cofinal in $\omega+\omega$, which implies that the image cannot be in $V_{\omega+\omega}$. 
+
+For $V_\alpha$ to be a model, we would need ${}\alpha$ to be "unreachable" by such mappings. This gives rise to the notion of *inaccessible* cardinals, which we will introduce in the next section.
