@@ -257,6 +257,25 @@ $$
 Hence $C$ must be empty, and the theorem follows.
 ```
 
-We can now split the question of "how large" $\V$ is into two sub-questions:
+:::{prf:definition}
+:nonumber: true
+
+For any set $x$ we define its **rank** as
+$$
+    \Op{rank}(x) = \text{ least } \alpha \text{ with } x \in V_{\alpha+1}.
+$$
+:::
+
+:::{exercise}
+:nonumber: true
+
+Show that 
+$$
+\operatorname{rank}(x) = \sup\{ \operatorname{rank}(y)+1 \colon y \in x \}.
+$$
+:::
+
+
+We can split the question of "how large" $\V$ is into two sub-questions:
 - How "**long**" is $\V$, that is, how many ordinals are there? Axioms for **large cardinals** attempt to extend this "length" as far as possible.
 - How "**wide**" is $\V$, that is, how large is the power set of a set? A rather "slim" universe is given by the **constructible sets**, which we will encounter soon.

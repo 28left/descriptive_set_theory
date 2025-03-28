@@ -1,7 +1,7 @@
 {
   "input": {
     "files": [
-      "models.md"
+      "large_cardinals.md"
     ],
     "opts": {
       "execute": false,
@@ -28,15 +28,15 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/jan/GIT/descriptive_set_theory/_build/exports/models.pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/large-cardinals.pdf",
       "articles": [
         {
-          "file": "/Users/jan/GIT/descriptive_set_theory/models.md",
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/large_cardinals.md",
           "level": 0
         }
       ],
-      "$file": "/Users/jan/GIT/descriptive_set_theory/models.md",
-      "$project": "/Users/jan/GIT/descriptive_set_theory"
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/large_cardinals.md",
+      "$project": "/Users/janreimann/GIT/descriptive_set_theory"
     }
   ]
 }

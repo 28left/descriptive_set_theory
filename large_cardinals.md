@@ -2,7 +2,7 @@
 
 ## Inaccessible cardinals
 
-The cardinality of $V_\alpha$ grows rather fast relative to $\alpha$. For example, 
+The cardinality of $V_\alpha$ grows rather fast relative to ${}\alpha$. For example, 
 
 $$
     |V_{\omega+\alpha}| = \beth_\alpha
@@ -14,9 +14,7 @@ where the **beth function** $\beth_\alpha$ is defined as
     \beth_{\lambda} = \sup \{ \beth_\alpha \colon \alpha < \lambda\} \quad \text{ $\lambda$ limit}
 \end{gather*}
 
-This presents difficulties for the axiom of *Replacement* to hold in a $V_\alpha$, since we could define a function on a set of sufficiently high cardinality that maps to sets in $V_\alpha$ whose ranks are cofinal in $\alpha$ (and the image would not be an element of $V_\alpha$).
-
-The existence of **inaccessible cardinals** ensures that the von-Neumann hierarchy is "long enough" for $\alpha$ to eventually "catch up" with the cardinality of $V_\alpha$.
+The existence of **inaccessible cardinals** ensures that the von-Neumann hierarchy is "long enough" for ${}\alpha$ to eventually "catch up" with the cardinality of $V_\alpha$.
 
 Recall the enumeration of all cardinals by means of the **$\aleph$-sequence**:
 
@@ -33,7 +31,7 @@ is uncountable, but a limit of a countable sequence of smaller cardinals. Genera
 \Op{reg}(\kappa): \iff \forall \alpha < \kappa \;  \forall f \;( f: \alpha \to \kappa \;  \to \; \sup_{\xi < \alpha} f(\xi) < \kappa).
 \end{equation*}
 
-In other words, a regular cardinal $\kappa$ cannot be reached  by less then $\kappa$-many steps.  The first example of a regular cardinal is $\aleph_0$. 
+In other words, a regular cardinal ${}\kappa$ cannot be reached  by less then ${}\kappa$-many steps.  The first example of a regular cardinal is $\aleph_0$. 
 
 ```{admonition} Exercise
 :class: tip
@@ -70,7 +68,7 @@ An uncountable cardinal $\kappa > \omega$ is
 
 Under the **Generalized Continuum Hypothesis**,
 
-> ($\mathsf{GCH}) \quad \forall \alpha \;\;  2^{\aleph_\alpha} = \aleph_{\alpha}^+$
+> $(\mathsf{GCH}) \quad \forall \alpha \;\;  2^{\aleph_\alpha} = \aleph_{\alpha}^+$
 
 weakly and strongly inaccessible cardinals coincide.
 
@@ -79,14 +77,14 @@ If $\kappa > \omega$ is inaccessible, then $\kappa = \aleph_\kappa$. Moreover, w
 ```{prf:proposition}
 :label: prop-cardinality-Vkappa
 
-If $\kappa$ is strongly inaccessible, $|V_\kappa| = \kappa$. 
+If ${}\kappa$ is strongly inaccessible, $|V_\kappa| = \kappa$. 
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-It suffices to show that $|V_\alpha| < \kappa$ for all $\alpha < \kappa$. This follows by a straightforward induction, using the fact that $\kappa$ is strongly inaccessible. 
+It suffices to show that $|V_\alpha| < \kappa$ for all $\alpha < \kappa$. This follows by a straightforward induction, using the fact that ${}\kappa$ is strongly inaccessible. 
 ```
 
 This in turn implies we can bound the cardinality of elements of $V_\kappa$.
@@ -94,7 +92,7 @@ This in turn implies we can bound the cardinality of elements of $V_\kappa$.
 ```{prf:proposition}
 :label: prop-inaccessible-cardinality
 
-Suppose $\kappa$ is strongly inaccessible and $x\subset V_\kappa$. Then
+Suppose ${}\kappa$ is strongly inaccessible and $x\subset V_\kappa$. Then
 
 $$
     x \in V_\kappa \; \Leftrightarrow \; |x| < \kappa.
@@ -107,7 +105,7 @@ $$
 
 ($\Rightarrow$) $x \in V_\kappa$ implies $|x| < |V_\kappa|$. Apply {prf:ref}`prop-cardinality-Vkappa`.
 
-($\Leftarrow$) Since $x \subseteq V_\kappa$, each $y \in x$ has rank $< \kappa$. Since $|x| < \kappa$, by regularity of $\kappa$, 
+($\Leftarrow$) Since $x \subseteq V_\kappa$, each $y \in x$ has rank $< \kappa$. Since $|x| < \kappa$, by regularity of ${}\kappa$, 
 
 $$
     \Op{rank}(x) = \sup\{\Op{rank}(y)+1 \colon y \in x\} < \kappa
@@ -121,7 +119,7 @@ We have already seen that for limit $\alpha > \omega$, $V_\alpha$ is a model of 
 ```{prf:theorem}
 :label: thm-inaccessible-ZFC
 
-If $\kappa$ is strongly inaccessible, then $V_\kappa \models \ZFC$.
+If ${}\kappa$ is strongly inaccessible, then $V_\kappa \models \ZFC$.
 ```
 
 ```{prf:proof}
@@ -132,7 +130,7 @@ We verify that $V_\kappa$ satisfies the axiom of *Replacement*.
 Suppose $x \in V_\kappa$ and $f:x \to V_\kappa$ is a function. Then $f[x] \subseteq V_\kappa$, and by {prf:ref}`prop-inaccessible-cardinality`, $|f[x]| \leq |x| < \kappa$. Applying the other direction of {prf:ref}`prop-inaccessible-cardinality` to $f[x]$, we obtain $f[x] \in V_\kappa$, as desired.
 ```
 
-Suppose an inaccessible cardinal exists, and let $\kappa$ be the least inaccessible.  
+Suppose an inaccessible cardinal exists, and let ${}\kappa$ be the least inaccessible.  
 It is not hard to verify that 
 
 $$
@@ -147,7 +145,7 @@ $$
 
 We have seen that (assuming the Axiom of Choice) there subsets of $\Real$ that are not Lebesgue measurable. Inspecting the proof, we see that we only use the following properties of Lebesgue measure:
 
-- $\sigma$-additivity,
+- ${}\sigma$-additivity,
 - translation invariance ($\lambda(A) = \lambda(A+r)$),
 - $\lambda(A) > 0$ for some $A$.
 
@@ -170,10 +168,10 @@ so that the following conditions are met:
 m\left(\bigcup_{i<\omega} A_i\right ) =  \sum_{i<\omega} m(A_i)
 \end{equation*}
 
-The structure of the set $M$ does not play any role here, so we can replace it by a cardinal $\kappa$ outright. One can also consider strengthening $\sigma$-additivity to **$\kappa$-additivity**:
+The structure of the set $M$ does not play any role here, so we can replace it by a cardinal ${}\kappa$ outright. One can also consider strengthening ${}\sigma$-additivity to **${}\kappa$-additivity**:
 
-> If $\gamma < \kappa$ and  $(A_\xi)_{\xi< \lambda}$ is a sequence of disjoint subsets of $\kappa$, then
-\begin{equation*}
+> If $\gamma < \kappa$ and  $(A_\xi)_{\xi< \gamma}$ is a sequence of disjoint subsets of ${}\kappa$, then
+> \begin{equation*}
 m(\bigcup_{\xi<\gamma} A_\xi) =  \sum_{\xi<\gamma} m(A_\xi).
 \end{equation*}
 
@@ -183,46 +181,46 @@ $$
 \sum_{\xi<\gamma} m(A_\xi) = \sup \left \{ \sum_{\xi \in F} m(A_\xi) \colon F \subseteq \gamma \text{ finite}\right \}.
 $$
 
-Hence, $\omega_1$-additive is the same as $\sigma$-additive.
+Hence, $\omega_1$-additive is the same as ${}\sigma$-additive.
 
 ```{prf:theorem} Banach
 :label: thm-kappa-additivity
 
-If $\kappa$ is the least cardinal for which a measure satisfying (M1)-(M3) exists, then any such measure on $\kappa$ is already $\kappa$-additive.
+If ${}\kappa$ is the least cardinal for which a measure satisfying (M1)-(M3) exists, then any such measure on ${}\kappa$ is already ${}\kappa$-additive.
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-Suppose $m$ is a measure on $\kappa$ that is not $\kappa$-additive. 
-Then, for some $\gamma < \kappa$, there exists a sequence $(A_\xi)_{ \xi< \gamma}$ of disjoint subsets of $\kappa$ so that 
+Suppose $m$ is a measure on ${}\kappa$ that is not ${}\kappa$-additive. 
+Then, for some $\gamma < \kappa$, there exists a sequence $(A_\xi)_{ \xi< \gamma}$ of disjoint subsets of ${}\kappa$ so that 
 
 $$
 m(\bigcup_{\xi<\gamma} A_\xi) \ne  \sum_{\xi<\gamma} m(A_\xi).
 $$ 
 
-Since a measure is always $\sigma$-additive, $\gamma > \omega$ has to hold, and there can be at most countably many $A_\xi$ with $m(A_\xi)>0$.
+Since a measure is always ${}\sigma$-additive, $\gamma > \omega$ has to hold, and there can be at most countably many $A_\xi$ with $m(A_\xi)>0$.
 
-We can drop those $A_\xi$, and by the $\sigma$-additivity of $m$ for the remaining $\xi$ it has to hold that $m(A_\xi)=0$ while $m \left(\bigcup_{\xi<\gamma} A_\xi \right) = r >0$.
+We can drop those $A_\xi$, and by the ${}\sigma$-additivity of $m$ for the remaining $\xi$ it has to hold that $m(A_\xi)=0$ while $m \left(\bigcup_{\xi<\gamma} A_\xi \right) = r >0$.
 
 By putting 
 \begin{equation*}
 \overline{m}(X) = \frac{m(\bigcup_{\xi \in X} A_\xi)}{r}
 \end{equation*}
-we obtain a measure on $\gamma < \kappa$, contradicting the minimality of $\kappa$.
+we obtain a measure on $\gamma < \kappa$, contradicting the minimality of ${}\kappa$.
 ```
 
 
 ### Measurable cardinals
 
-If $m$ is a measure on $\kappa$, the **associated ideal** 
+If $m$ is a measure on ${}\kappa$, the **associated ideal** 
 
 $$
 \mathcal{I}_m = \{x\subseteq \kappa \colon m(x) = 0 \}
 $$ 
 
-is a $\sigma$-ideal, or, complementing the notion of $\omega_1$-additivity, a **$\omega_1$-complete ideal**. 
+is a ${}\sigma$-ideal, or, complementing the notion of $\omega_1$-additivity, a **$\omega_1$-complete ideal**. 
 
 ```{admonition} Exercise
 :class: tip
@@ -240,7 +238,7 @@ is then $\omega_1$-complete, too.
 
 A measure $m$ is **two-valued** if it only assumes the values $0$ and $1$. In this case the corresponding filter $\mathcal{F}_m$ is an **ultrafilter** (and $\mathcal{I}_m$ is a **prime ideal**).
 
-Conversely, if $U$ is $\omega_1$-complete, non-principal ultrafilter on $\kappa$, we can define a two-valued measure $m: \mathcal{P}(\kappa) \to \{0,1\}$ on $\kappa$ by letting
+Conversely, if $U$ is $\omega_1$-complete, non-principal ultrafilter on ${}\kappa$, we can define a two-valued measure $m: \mathcal{P}(\kappa) \to \{0,1\}$ on ${}\kappa$ by letting
 
 $$
 m(x) = 
@@ -252,11 +250,11 @@ $$
 
 ```{prf:definition}
 :label: def-measurable-cardinal
-Let $\kappa$ be an uncountable cardinal. 
+Let ${}\kappa$ be an uncountable cardinal. 
 
-- $\kappa$ is **real-valued measurable** if there exists a $\kappa$-additive measure on $\kappa$.
+- ${}\kappa$ is **real-valued measurable** if there exists a ${}\kappa$-additive measure on ${}\kappa$.
 
-- $\kappa$ is **measurable** if there exists a $\kappa$-additive, two-valued measure on $\kappa$, or, equivalently, if there exists a $\kappa$-complete, non-principal ultrafilter on $\kappa$.
+- ${}\kappa$ is **measurable** if there exists a ${}\kappa$-additive, two-valued measure on ${}\kappa$, or, equivalently, if there exists a ${}\kappa$-complete, non-principal ultrafilter on ${}\kappa$.
 ```
 
 In the following, we will see that measurability implies inaccessibility. 
@@ -264,7 +262,7 @@ In the following, we will see that measurability implies inaccessibility.
 ```{prf:lemma} 
 :label: lem-cardinality-kappa-ultrafilter
 
-If $U$ is a $\kappa$-complete, non-principal ultrafilter on $\kappa$, then every $X \in U$ has cardinality $\kappa$.
+If $U$ is a ${}\kappa$-complete, non-principal ultrafilter on ${}\kappa$, then every $X \in U$ has cardinality ${}\kappa$.
 ```
 
 ```{prf:proof}
@@ -273,20 +271,20 @@ If $U$ is a $\kappa$-complete, non-principal ultrafilter on $\kappa$, then every
 
 Since $U$ is non-principal, no *singleton* set $\{x\}$ can be in $U$ (for this would imply $\kappa\setminus \{x\} \notin U$ and therefore no subset of it would be in $U$ either, contradicting the non-principality of $U$).
 
-If $X \in U$ and $|X| < \kappa$, then $X$ is the union of $< \kappa$ many singletons. Since $\neg U$ is a $\kappa$-complete prime ideal, this implies $X \in \neg U$, contradiction.
+If $X \in U$ and $|X| < \kappa$, then $X$ is the union of $< \kappa$ many singletons. Since $\neg U$ is a ${}\kappa$-complete prime ideal, this implies $X \in \neg U$, contradiction.
 ```
 
 ```{prf:proposition}
 :label: prop-measurable-regular
 
-If $\kappa$ is measurable, then it is regular.
+If ${}\kappa$ is measurable, then it is regular.
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-If $\kappa$ were singular, it would be the union of $<\kappa$-many sets of cardinality $<\kappa$. Applying {prf:ref}`lem-cardinality-kappa-ultrafilter` leads to a contradiction.
+If ${}\kappa$ were singular, it would be the union of $<\kappa$-many sets of cardinality $<\kappa$. Applying {prf:ref}`lem-cardinality-kappa-ultrafilter` leads to a contradiction.
 ```
 
 ```{prf:theorem}
@@ -299,7 +297,7 @@ A measurable cardinal is (strongly) inaccessible.
 :class: dropdown
 :nonumber: true
 
-By {prf:ref}`prop-measurable-regular`, any measurable cardinal is regular. Assume for a contradiction there exists $\gamma < \kappa$ with $2^\gamma > \kappa$. As $2^\gamma > \kappa$, there exists a set $S$ of functions $f: \gamma \to \{0,1\}$ with $|S| = \kappa$. Let $U$ be a $\kappa$-complete, non-principal ultrafilter on $S$. 
+By {prf:ref}`prop-measurable-regular`, any measurable cardinal is regular. Assume for a contradiction there exists $\gamma < \kappa$ with $2^\gamma \geq \kappa$. As $2^\gamma \geq \kappa$, there exists a set $S$ of functions $f: \gamma \to \{0,1\}$ with $|S| = \kappa$. Let $U$ be a ${}\kappa$-complete, non-principal ultrafilter on $S$. 
 
 For $\alpha < \gamma, i \in \{0,1\}$, let
 
@@ -309,7 +307,7 @@ $$
 
 and let $g(\alpha) = i$ if and only if $X_{\alpha,i} \in U$. Since $U$ is an ultrafilter, $g$ is well-defined on $\gamma$. 
 
-Since $\gamma < \kappa$ and $U$ is $\kappa$-complete, 
+Since $\gamma < \kappa$ and $U$ is ${}\kappa$-complete, 
 
 $$
     X = \bigcap_{\alpha < \gamma} X_{\alpha, g(\alpha)} 
@@ -328,10 +326,10 @@ Show that every real-valued measurable cardinal is weakly inaccessible.
 ```{prf:proposition}
 :label: prop-measurable-vs-real-valued
 
-If $\kappa$ is real-valued measurable, then $\kappa$ is measurable or $\kappa \le 2^{\aleph_0}$.
+If ${}\kappa$ is real-valued measurable, then ${}\kappa$ is measurable or $\kappa \le 2^{\aleph_0}$.
 ```
 
-Thus, if $\kappa$ is real-valued measurable but not measurable, then the continuum $2^{\aleph_0}$ has to be very large.
+Thus, if ${}\kappa$ is real-valued measurable but not measurable, then the continuum $2^{\aleph_0}$ has to be very large.
 
 
 
@@ -359,12 +357,12 @@ to mean that any partition $F: [S]^n \to \{1, \dots, k\}$ mit $|S| = \kappa$ has
 
 Do there exist uncountable cardinals with similar properties?
 
-A cardinal $\kappa$ is **weakly compact** if it is uncountable and $\kappa \to (\kappa)^2_2$ holds. 
+A cardinal ${}\kappa$ is **weakly compact** if it is uncountable and $\kappa \to (\kappa)^2_2$ holds. 
 
 ```{admonition} Exercise
 :class: tip
 
-Show that for any cardinal $\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2$, and use this to infer that any weakly compact cardinal is inaccessible.
+Show that for any cardinal ${}\kappa$, $2^\kappa \nrightarrow (\kappa^+)^2_2$, and use this to infer that any weakly compact cardinal is inaccessible.
 
 (Thus the existence of weakly compact cardinals cannot be established in $\ZFC$.)
 ```
@@ -378,7 +376,7 @@ for all $n \in \Nat$.
 ```{prf:theorem} Rowbottom
 :label: thm-measurable-Ramsey
 
-Let $\kappa$ be a measurable cardinal and let $F: [\kappa]^{<\omega} \to \lambda$ a partition of $[\kappa]^{<\omega}$ into $\lambda < \kappa$ pieces. Then there exists an $F$-homogeneous set $H \subseteq \kappa$ with $|H| = \kappa$.
+Let ${}\kappa$ be a measurable cardinal and let $F: [\kappa]^{<\omega} \to \lambda$ a partition of $[\kappa]^{<\omega}$ into $\lambda < \kappa$ pieces. Then there exists an $F$-homogeneous set $H \subseteq \kappa$ with $|H| = \kappa$.
 ```
 
 In general, any cardinal that satisfies the statement of the theorem is called **Ramsey**.
@@ -394,27 +392,27 @@ $$
     \Delta_{\xi < \gamma} A_\xi = \{ \alpha < \gamma \colon  \alpha \in \bigcap_{\xi < \alpha} A_\xi \}.
 $$
 
-A filter $F$ on a cardinal $\kappa$ is **normal** if for any $\kappa$-sequence $(A_\xi)_{\xi < \kappa}$, $A_\xi \in F$, the diagonal intersection $\Delta_{\xi < \kappa} A_\xi$ is in $F$.
+A filter $F$ on a cardinal ${}\kappa$ is **normal** if for any ${}\kappa$-sequence $(A_\xi)_{\xi < \kappa}$, $A_\xi \in F$, the diagonal intersection $\Delta_{\xi < \kappa} A_\xi$ is in $F$.
 ```
 
-Let us assume as a convention that a filter on a cardinal $\kappa$ always contains the end-segments $\{\xi \colon \alpha \leq \xi < \kappa\}$.
+Let us assume as a convention that a filter on a cardinal ${}\kappa$ always contains the end-segments $\{\xi \colon \alpha \leq \xi < \kappa\}$.
 
 ```{admonition} Exercise
 :class: tip
 
-Show that a normal filter on $\kappa$ is $\kappa$-complete. 
-```
-
-```{admonition} Exercise
-:class: tip
-
-Show that if there is a normal filter over $\kappa$, then $\kappa$ is uncountable and regular.
+Show that a normal filter on ${}\kappa$ is ${}\kappa$-complete. 
 ```
 
 ```{admonition} Exercise
 :class: tip
 
-Show that if $\kappa$ is measurable, then there is a normal ultrafilter on $\kappa$.
+Show that if there is a normal filter over ${}\kappa$, then ${}\kappa$ is uncountable and regular.
+```
+
+```{admonition} Exercise
+:class: tip
+
+Show that if ${}\kappa$ is measurable, then there is a normal ultrafilter on ${}\kappa$.
 ```
 
 ```{prf:proof}
@@ -423,10 +421,10 @@ Show that if $\kappa$ is measurable, then there is a normal ultrafilter on $\kap
  
 (Proof of {prf:ref}`thm-measurable-Ramsey`) 
 
-Let $U$ be a normal filter over $\kappa$.
+Let $U$ be a normal filter over ${}\kappa$.
 We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H_n]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
 
-We proceed by induction. The case $n=1$ follows from the $\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
+We proceed by induction. The case $n=1$ follows from the ${}\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
 
 For each $S \in [\kappa]^n$, define $g_s : \kappa \to \gamma$ by 
 
@@ -437,7 +435,7 @@ $$
     \end{cases}
 $$
 
-By $\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
+By ${}\kappa$-completeness of $U$, $g_S$ is constant on a set $Y_S \in U$, say
 
 $$
     g_S\Rest{Y_S} \equiv \delta_S < \gamma.
@@ -451,7 +449,7 @@ $$
 $$
 
 By induction hypothesis, $h$ is constant on a set $Z \subseteq \kappa$
-in $U$ (and hence of size $\kappa$), say $h\Rest{[Z]^n} \equiv \delta < \kappa$.
+in $U$ (and hence of size ${}\kappa$), say $h\Rest{[Z]^n} \equiv \delta < \kappa$.
 
 For each $\alpha < \kappa$, let
 
@@ -459,13 +457,13 @@ $$
     Y_\alpha = \bigcap \{Y_S \colon \max S \leq \alpha\}
 $$
 
-By $\kappa$-completeness, $Y_\alpha \in U$, and by normality
+By ${}\kappa$-completeness, $Y_\alpha \in U$, and by normality
 
 $$
     H = Z \cap \Delta_{\alpha < \kappa} Y_\alpha \in U
 $$
 
-By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $H$ has cardinality $\kappa$.
+By {prf:ref}`lem-cardinality-kappa-ultrafilter`, $H$ has cardinality ${}\kappa$.
 
 We claim that $g$ is constant on $[H]^{n+1}$: Let $T \in [H]^{n+1}$. Write $T$ as $S \cup \{\alpha\}$ with $\max S < \alpha$. Then 
 
