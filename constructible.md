@@ -34,7 +34,7 @@ The first Proposition tells us that the $L_\xi$ are set-theoretically nice struc
 ```{prf:proposition}
 :label: prop-basics-L
 
-For each ordinal $\xi$:
+For each ordinal ${}\xi$:
 
 - **(1)** $L_\xi$ is transitive.
 - **(2)** For $\alpha < \xi$, $L_\alpha \subseteq L_\xi$.
@@ -48,9 +48,9 @@ For each ordinal $\xi$:
 
 We show the first two statements statements simultaneously by induction. 
 
-They are clear for $\xi = 0$ and $\xi$ limit, so assume $\xi = \alpha +1$.  
+They are clear for $\xi = 0$ and ${}\xi$ limit, so assume $\xi = \alpha +1$.  
 
-Suppose $x \in L_\alpha$. Consider the formula $\varphi(x_0) \equiv x_0 \in x$ (here $x$ is a parameter). $\varphi$ defines the set
+Suppose $x \in L_\alpha$. Consider the formula $\varphi(x_0) \equiv x_0 \in x$ (here $x$ is a parameter). ${}\varphi$ defines the set
 
 $$
     x' = \{a \in L_\alpha \colon L_\alpha \models \varphi[a] \} = \{ a \in L_\alpha \colon a \in x \}.  
@@ -63,10 +63,10 @@ For the third statement, note that the formula $\varphi(x_0) \equiv x_0 = x_0$ d
 For (4), notice that there are only countably many formulas.
 ```
 
-Next, we show that $L$ contains all ordinals and that $\xi$ "shows up" exactly after $\xi$ steps.
+Next, we show that $L$ contains all ordinals and that ${}\xi$ "shows up" exactly after ${}\xi$ steps.
 
 ```{prf:proposition}
-For any $\xi$, 
+For any ${}\xi$, 
 
 - **(1)** $\xi \subseteq L_\xi$,
 - **(2)** $L_\xi \cap \Ord = \xi$.
@@ -78,7 +78,7 @@ For any $\xi$,
 
 Clearly, $(1)$ follows from $(2)$. 
 
-To show $(2)$, one again proceeds by induction. Again, the statement is clear for $0$ and limit ordinals, so assume $\xi = \alpha +1$ and $L_\alpha \cap \Ord = \alpha$. 
+To show $(2)$, one again proceeds by induction. Again, the statement is clear for ${}0$ and limit ordinals, so assume $\xi = \alpha +1$ and $L_\alpha \cap \Ord = \alpha$. 
 
 We need to show $L_{\alpha + 1} \cap \Ord = \alpha + 1 = \alpha \cup \{\alpha\}$. Since $L_\alpha \subseteq L_{\alpha + 1}$, we have $\alpha \subseteq L_{\alpha+1} \cap \Ord$. On the other hand, since $L_{\alpha+1} \subseteq \mathcal{P}(L_\alpha)$, we have $L_{\alpha+1} \cap \Ord \subseteq \alpha + 1$. It thus remains to show that $\alpha \in L_{\alpha+1}$. 
 
@@ -104,7 +104,7 @@ We want to study $L$ as a model of $\ZF$. In order to do that, we need a better 
 
 ### Coding set theoretic formulas
 
-We follow the standard procedure of **Gödelization** and assign every set theoretic formula $\varphi$ a **Gödel number** $\GN{\varphi}$.
+We follow the standard procedure of **Gödelization** and assign every set theoretic formula ${}\varphi$ a **Gödel number** $\GN{\varphi}$.
 
 We fix the set of variables as $\{v_n: n \in \omega\}$ and put
 
@@ -145,8 +145,8 @@ where of course we substitute a suitable $\Delta_0$ formula for "$x \in \omega$"
 
 The following relations are $\Delta_1$-definable over $\ZF$. 
 
-> $\Op{Fml}^n(e): \quad$ $e$ is the code of a formula $\varphi$ whose free variables are among $v_0, \dots, v_{n-1}$;   
-> $\Op{Fml}^n_a(e): \quad$ $e$ is the code of a formula $\varphi$ whose free variables are among $v_0, \dots, v_{n-1}$, and whose constants are of the form $\Const{a_i}$ with $a_i \in a$
+> $\Op{Fml}^n(e): \quad$ $e$ is the code of a formula ${}\varphi$ whose free variables are among $v_0, \dots, v_{n-1}$;   
+> $\Op{Fml}^n_a(e): \quad$ $e$ is the code of a formula ${}\varphi$ whose free variables are among $v_0, \dots, v_{n-1}$, and whose constants are of the form $\Const{a_i}$ with $a_i \in a$
 ```
 
 ### Definability of the satisfaction relation
@@ -154,7 +154,7 @@ The following relations are $\Delta_1$-definable over $\ZF$.
 Let $a$ be a set. If we replace a formula ${}\varphi$ by its code $\GN{\varphi}$, we have to express the fact that $\varphi^a$ holds now as a statement about validity in the structure $(a,\in)$, using the code. That is, we have to **formalize** the notion of truth. This can be done using the recursive definition of truth. 
 This way we obtain a $\Delta_1$-definable predicate $\Op{Sat}(a,e)$ expressing 
 
-> $\Op{Sat}(a,e): \quad$ $e$ is the code of a formula $\varphi(\Const{a_0}, \dots, \Const{a_n})$ that does not contain any free variables, and $\varphi$ is true in $(a,\in)$ under the canonical interpretation.
+> $\Op{Sat}(a,e): \quad$ $e$ is the code of a formula $\varphi(\Const{a_0}, \dots, \Const{a_n})$ that does not contain any free variables, and ${}\varphi$ is true in $(a,\in)$ under the canonical interpretation.
 
 In place of  $\Op{Sat}(a,e)$, we will also write $(a,\in) \models e$. For any single formula, this formalization of truth then agrees with the validity of the corresponding relativization:
 
@@ -170,7 +170,7 @@ $$
 
 (Keep in mind, however, that the general satisfaction relation, over all formulas, is not formalizable in $\ZF$.)
 
-The Theorem is proved via induction over the structure of $\varphi$. For atomic $\varphi$, both sides express the same fact, since we use the canonical interpretation of constants. The definition of relativization ensures that for the inductive cases, both sides behave identically wit respect to the corresponding subformulas.
+The Theorem is proved via induction over the structure of ${}\varphi$. For atomic ${}\varphi$, both sides express the same fact, since we use the canonical interpretation of constants. The definition of relativization ensures that for the inductive cases, both sides behave identically wit respect to the corresponding subformulas.
 
 ### Definability of definability 
 
@@ -180,7 +180,7 @@ We can now formalize the notion of definability we used informally above in the 
 
 Here, $e(z)$ is defined so that for a formula $\varphi(v_0)$ with code $e$,
 
-> $e(z)$ is the code of the formula we obtain when we substitute $\Const{z}$ for $v_0$ in $\varphi$: 
+> $e(z)$ is the code of the formula we obtain when we substitute $\Const{z}$ for $v_0$ in ${}\varphi$: 
 \begin{equation*}
 	\GN{\varphi(v_0)}(z) = \GN{\varphi(\Const{z})}
 \end{equation*}

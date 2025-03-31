@@ -1,7 +1,7 @@
 {
   "input": {
     "files": [
-      "large_cardinals.md"
+      "constructible.md"
     ],
     "opts": {
       "execute": false,
@@ -28,14 +28,14 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/large-cardinals.pdf",
+      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/constructible.pdf",
       "articles": [
         {
-          "file": "/Users/janreimann/GIT/descriptive_set_theory/large_cardinals.md",
+          "file": "/Users/janreimann/GIT/descriptive_set_theory/constructible.md",
           "level": 0
         }
       ],
-      "$file": "/Users/janreimann/GIT/descriptive_set_theory/large_cardinals.md",
+      "$file": "/Users/janreimann/GIT/descriptive_set_theory/constructible.md",
       "$project": "/Users/janreimann/GIT/descriptive_set_theory"
     }
   ]
