@@ -28,15 +28,15 @@
   "exports": [
     {
       "format": "pdf",
-      "output": "/Users/janreimann/GIT/descriptive_set_theory/_build/exports/constructible.pdf",
+      "output": "/Users/jan/GIT/descriptive_set_theory/_build/exports/constructible.pdf",
       "articles": [
         {
-          "file": "/Users/janreimann/GIT/descriptive_set_theory/constructible.md",
+          "file": "/Users/jan/GIT/descriptive_set_theory/constructible.md",
           "level": 0
         }
       ],
-      "$file": "/Users/janreimann/GIT/descriptive_set_theory/constructible.md",
-      "$project": "/Users/janreimann/GIT/descriptive_set_theory"
+      "$file": "/Users/jan/GIT/descriptive_set_theory/constructible.md",
+      "$project": "/Users/jan/GIT/descriptive_set_theory"
     }
   ]
 }

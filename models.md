@@ -220,14 +220,38 @@ Conversely, if for $y,\bar{z} \in M$, $\exists x\in y \varphi(x,y,\bar{z})$, the
 
 :::{prf:proposition}
 
-The following expressions can be written as $\Delta_0$-formulas and hence are absolute for any transitive class $M$:
+Over $\ZF$, the following properties can be expressed via $\Delta_0$-formulas and hence are absolute for any transitive class $M$:
 - $x = \emptyset$, $x=y$, $x \subseteq y$, $z = x \cap y$, $z = x \cup y$, $x = \bigcap y$, $x = \bigcup y$, $z = \{x,y\}$, $z =(x,y)$, $z= x \times y$
 - $r$ is a relation, $f$ is a function, $x = \Op{dom}(f)$, $y = \Op{ran}(f)$
 - $<$ is a linear order on $x$, $x$ is an ordinal, $x$ is a limit ordinal, $x=\omega$
 ::: 
 
 We leave the proof as an exercise.
-We can put this absoluteness property to use and identify many "almost" models of $\ZF$.
+
+
+We can extend the previous absoluteness result to a slightly larger family of formulas.
+
+:::{prf:definition}
+:nonumber: true
+
+A formula ${}\varphi$ is 
+- $\Sigma_1$ if it is of the form $\exists x_1 \dots \exists x_m \: \psi$ for a $\Delta_0$-formula $\psi$,
+- $\Pi_1$ if it is of the form $\forall x_1 \dots \forall x_m \: \psi$ for a $\Delta_0$-formula $\psi$.
+
+Given a set of formulas $T$ and formula ${}\varphi$, we say ${}\varphi$ is $\Delta_1^{T}$ if there exists a $\Sigma_1$-formula $\psi_\exists$ and a $\Pi_1$-formula $\psi_\forall$ such that
+$$
+    T \vdash \varphi \leftrightarrow \psi_\exists \quad \text{ and } T \vdash \varphi \leftrightarrow \psi_\forall.
+$$
+:::
+
+:::{prf:proposition}
+
+If $M$ is transitive and for all $\sigma \in T$, $\sigma^M$ holds, then any $\Delta_1^T$-formula is absolute for $M$
+:::
+
+
+
+The absoluteness property of "simple" formulas can be put to use to identify many "almost" models of $\ZF$.
 
 :::{prf:theorem} 
 
