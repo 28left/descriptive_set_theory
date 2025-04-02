@@ -186,8 +186,7 @@ This in turn yields the following.
 ```{prf:theorem} Recursion principle for well-founded relations
 :label: thm-wf-recursion
 
-Let $R$ be a well-founded relation on a class $A$. The for every function $G : A \times \V \longrightarrow  \V$ exists a unique function $F: A \to \V$ such that
-
+Let $R$ be a well-founded relation on a class $A$. For every function $G : A \times \V \longrightarrow  \V$ there exists a unique function $F: A \to \V$ such that
 \begin{equation*}
     F(a) = G(a,F \Rest{\{x \mid xRa\}})  \text{ for all } a \in A.
 \end{equation*}

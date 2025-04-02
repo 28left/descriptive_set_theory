@@ -74,7 +74,6 @@ For any ${}\xi$,
 
 ```{prf:proof}
 :class: dropdown
-:nonumber: true
 
 Clearly, $(1)$ follows from $(2)$. 
 
