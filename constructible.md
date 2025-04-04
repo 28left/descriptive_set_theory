@@ -167,7 +167,7 @@ $$
 $$
 ```
 
-(Keep in mind, however, that the general satisfaction relation, over all formulas, is not formalizable in $\ZF$.)
+(Keep in mind, however, that the general satisfaction relation (i.e. truth in $\V$) is not formalizable in $\ZF$, by Tarski's theorem on the non-definability of truth)
 
 The Theorem is proved via induction over the structure of ${}\varphi$. For atomic ${}\varphi$, both sides express the same fact, since we use the canonical interpretation of constants. The definition of relativization ensures that for the inductive cases, both sides behave identically wit respect to the corresponding subformulas.
 
@@ -327,10 +327,9 @@ A class $M$ is an **inner model of $\ZF$** if
 ```{prf:theorem} Characterization of inner models
 :label: thm-inner-models
 
-A class $M$ is an inner model of $\ZF$ if and only if there exists a sequence $(M_\alpha)_{\alpha \in \Ord}$ such that for all $\alpha, \beta, \lambda \in \Ord$,
-
-- (**I1**) $\quad$ $M = \bigcup_{\alpha \in \Ord} M_\alpha$ is a cumulative hierarchy,
-- (**I2**) $\quad$ $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1} \subseteq \mathcal{P}(M_\alpha)$
+A class $M$ is an inner model of $\ZF$ if and only if there exists a sequence $(M_\alpha)_{\alpha \in \Ord}$ such that
+- (**I1**) $\quad$ $M = \bigcup_{\alpha \in \Ord} M_\alpha$ and $(M_\alpha)_{\alpha \in \Ord}$ is a cumulative hierarchy,
+- (**I2**) $\quad$ for all $\alpha \in \Ord$, $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1} \subseteq \mathcal{P}(M_\alpha)$
 ```
 
 ```{prf:proof}
@@ -344,7 +343,7 @@ M_\alpha = V_\alpha^M = V_\alpha \cap M.
 $$
 
 This defines a cumulative hierarchy, so (I1) is satisfied.
-For (I2), first note that $(\text{Power Set})^M$ if and only if $\forall x \in M (\mathcal{P}(x) \cap M \in M)$. Now we can use the absoluteness of $\mathcal{P}_{\Op{Def}}$ ({prf:ref}`thm-definability-Pdef`) and the fact that $M$ satisfies the axiom of *Separation* to conclude $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}$.
+For (I2), it is not hard to see that $M_{\alpha+1} \subseteq \Pow(M_{\alpha})$. Next, note that $(\text{Power Set})^M$ if and only if $\forall x \in M (\Pow(x) \cap M \in M)$. We can use the absoluteness of $\mathcal{P}_{\Op{Def}}$ ({prf:ref}`thm-definability-Pdef`) and the fact that $M$ satisfies the axiom of *Separation* to conclude $\mathcal{P}_{\Op{Def}}(M_\alpha) \subseteq M_{\alpha+1}$.
 
 ($\Leftarrow$) 
 *Extensionality* and *Foundation* hold in all transitive classes. *Set Existence* is satisfied in any cumulative hierarchy (since $\emptyset \in M$).
@@ -357,7 +356,7 @@ For (I2), first note that $(\text{Power Set})^M$ if and only if $\forall x \in M
 \begin{equation*}
 	z = \{ x \in a \colon \varphi^M(x, b_1, \dots, b_n) \}
 \end{equation*}
-is in $M$. By the reflection theorem for cumulative hierarchies, there exists $\alpha$ such that $a, b_1, \dots, b_n \in M_\alpha$ and for all $x \in M_\alpha$,
+is in $M$. By the reflection theorem for cumulative hierarchies, there exists ${}\alpha$ such that $a, b_1, \dots, b_n \in M_\alpha$ and for all $x \in M_\alpha$,
 \begin{equation*}
 	\varphi^M(x, b_1, \dots, b_n) \; \leftrightarrow \; \varphi^{M_\alpha}(x, b_1, \dots, b_n).
 \end{equation*}
@@ -372,7 +371,7 @@ This implies $z \in \mathcal{P}_{\Op{Def}}(M_\alpha)$ and hence by (I2), $z \in 
 \begin{equation*}
 	\forall x,y \in M \; (\varphi^M(x,y,\vec{a}) \wedge \varphi^M(x,z,\vec{a}) \; \to \; y=z )
 \end{equation*}
-Let $b $ be a set. By reflection, there exists an $\alpha$ such that $\vec{a}, b \in M_\alpha$ and the following two formulas hold:
+Let $b $ be a set. By reflection, there exists an ${}\alpha$ such that $\vec{a}, b \in M_\alpha$ and the following two formulas hold:
 \begin{gather*}
 	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
 	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))

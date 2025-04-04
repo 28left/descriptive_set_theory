@@ -9,7 +9,7 @@ project:
   open_access: true
   github: https://github.com/28left/descriptive_set_theory
   numbering: 
-    headings: true
+    headings: false
   exports:
   - format: pdf
     template: plain_latex_book
