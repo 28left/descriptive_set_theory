@@ -1,5 +1,52 @@
 # The Axiom of Constructibility
 
+## Relative consistency proofs
+
+In this section, we are going to show that if $\ZF$ is consistent, so are $\ZF + \AC$ and $\ZF + \GCH$.
+The usual way to do this is to exhibit a model $\ZF$ in which the additional axioms holds, too, assuming a model of $\ZF$ exists. The universe of a model is supposed to be a set, and we will work with such *set models* when we will construct a model of $\ZF$ in which $\CH$ does *not* hold. 
+
+:::{prf:example}
+:numbered: false
+
+The set of *hereditarily finite sets* $H_\omega$ (which is the same as $V_\omega$) is a model of $\ZF - \textsf{Infinity} + \neg \textsf{Infinity}$. This implies that the negation of the Axiom of Infinity is consistent with $\ZF - \textsf{Infinity}$ (always provided $\ZF$ is consistent).
+
+This means, if $\ZF$ is consistent, the Axiom of Infinity is not provable from the other axioms.
+:::
+
+In this section, we will work with **class models** instead, in particular, $L$. The satisfaction relation is not formalizable for arbitrary classes, so we have to argue syntactically. 
+
+In the [previous section](#constructible), we showed that $L$ is an inner model for $\ZF$. What the "model" part here means is simply that we can prove in $\ZF$ that every axiom of $\ZF$ holds *relative to $L$*, or, using the standard notation for provability,
+$$
+    \ZF \vdash \sigma^L \qquad \text{for all axioms } \sigma \in \ZF.
+$$
+In this section, we will also show that
+$$
+    \ZF \vdash \tau^L
+$$
+for $\tau = \AC$ and $\tau = \GCH$. We claim that this yields 
+> If $\ZF$ is consistent, then $\ZF + \tau$ is consistent.
+
+For suppose $\ZF+\tau$ is inconsistent. Then there exists a proof of $\theta \wedge \neg \theta$ from $\ZF + \tau$, for some formula $\theta$. Every formal proof uses only finitely many steps, so there exists a *finitely many* $\sigma_1, \dots, \sigma_n \in \ZF + \tau$ such that
+$$
+    \sigma_1\wedge  \dots \wedge \sigma_n \; \vdash \; \theta \wedge \neg \theta.
+$$
+By the [Deduction Theorem of first-order logic](https://en.wikipedia.org/wiki/Deduction_theorem), we have
+$$
+    \vdash (\sigma_1\wedge  \dots \wedge \sigma_n) \; \to \; (\theta \wedge \neg \theta).
+$$
+This means $(\sigma_1\wedge  \dots \wedge \sigma_n) \; \to \; (\theta \wedge \neg \theta)$ is a *validity* and derivable by purely logical arguments (not assuming any additional axioms). But any such validity will remain valid when *relativized* (recall that classes are always defined via a formula $\varphi$):
+$$
+    \vdash (\sigma_1\wedge  \dots \wedge \sigma_n)^L \; \to \; (\theta \wedge \neg \theta)^L.
+$$
+By assumption, $\ZF \vdash (\sigma_1\wedge  \dots \wedge \sigma_n)^L$, hence
+$$ 
+    \ZF \vdash (\theta \wedge \neg \theta)^L.
+$$
+By the definition of relativization, the right-hand side is equivalent to $\theta^L \wedge \neg \theta^L$, which implies $\ZF$ is inconsistent - contradiction!
+
+
+## The Axiom $\VL$
+
 We can add to $\ZF$ the axiom that all sets are constructible, i.e.
 
 > $(\VL) \qquad \forall x \exists y \: (y \text{ is an ordinal } \wedge \; x \in L_y).$
@@ -97,7 +144,7 @@ For each $z \in \mathcal{P}_{\Op{Def}}(X)$ there may exist more than one such pa
 Such an order on the pairs $(\psi, \vec{a})$ can be obtained in a **definable way**: First use the order on $X$ to order $X^{<\omega}$ length-lexicographically, order the formulas through their Gödel numbers, and finally put 
 
 $$
-	(\psi,\vec{a}) < (\varphi, \vec{b}) \quad \text{ iff } \quad \psi < \varphi \text { or } (\psi < \varphi \text { and } \vec{a} < \vec{b}).
+	(\psi,\vec{a}) < (\varphi, \vec{b}) \quad \text{ iff } \quad \psi < \varphi \text { or } (\psi = \varphi \text { and } \vec{a} < \vec{b}).
 $$
 
 Based on this, we can order all levels of $L$ so that the following hold:

@@ -36,6 +36,8 @@ project:
       macro: \mathbb{C}
     \CH:
       macro: \mathsf{CH}
+    \GCH:
+      macro: \mathsf{GCH}
     \ZF:
       macro: \mathsf{ZF}
     \ZFC:
