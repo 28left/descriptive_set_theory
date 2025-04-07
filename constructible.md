@@ -374,7 +374,7 @@ This implies $z \in \mathcal{P}_{\Op{Def}}(M_\alpha)$ and hence by (I2), $z \in 
 \end{equation*}
 Let $b $ be a set. By reflection, there exists an ${}\alpha$ such that $\vec{a}, b \in M_\alpha$ and the following two formulas hold:
 \begin{gather*}
-	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a})) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
+	\forall x,y, z \in M_\alpha \: (\varphi^M(x,y,\vec{a}) \leftrightarrow \: \varphi^{M_\alpha}(x,y,\vec{a})) \\
 	\forall x \in M_\alpha \: (\exists y\in M \varphi^M(x,y,\vec{a}) \: \leftrightarrow \: \exists y \in M_\alpha \varphi^{M_\alpha}(x,y,\vec{a}))
 \end{gather*}
 Since $b \subseteq M_{\alpha}$ (transitivity), this implies
