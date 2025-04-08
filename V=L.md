@@ -78,7 +78,7 @@ In general, if a function $G: \V \to \V$ is $\Sigma_1$ and $F: \Ord \to \V$ is o
 
 \begin{align*}
     y= F(\alpha) \; \leftrightarrow \; \alpha \in \Ord \: \wedge \: \exists f \: & ( f \text{ function } \wedge \Op{dom}(f) = \alpha \\
-        & \quad \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta}) \wedge y = G(f)).
+        & \quad \wedge \forall \beta < \alpha (f(\beta) = G(f \Rest{\beta})) \wedge y = G(f)).
 \end{align*}
 
 Applying some of the various prefix transformations for $\Sigma_1$-formulas, and using that being an ordinal, being an function, being the domain of a function, etc., are all $\Delta_0$ properties, the above formula can be shown to be $\Sigma_1$, too.
@@ -111,7 +111,7 @@ $$
 ```{prf:theorem}
 :label: thm-L-absolute
 
-- (**1**) $\quad$   If $M$ is any transitive proper class model of $\ZF$, then $L = L^M \subseteq  M$.
+- (**1**) $\quad$   If $M$ is an inner model of $\ZF$, then $L = L^M \subseteq  M$.
 - (**2**) $\quad$   $L$ is a model of $\ZF + \VL$.
 ```
 
@@ -172,7 +172,7 @@ If $\ZF$ is consistent, then $\ZF+\AC (= \ZFC)$ is consistent, too.
 
 ## Condensation and the Continuum Hypothesis
 
-We now show that $\VL$ implies the Continuum Hypothesis. The proof works by showing that under $\VL$, every subset of a cardinal ${}\kappa$ will be constructed by stage $\kappa^+$. This is made possible by a "**condensation**" argument: If any subset $x$ of ${}\kappa$ is in $L$, then it must show up at some stage $L_\lambda$. ${}\kappa$ and $x$ generate an elementary substructure $M$ of $L_\lambda$ or cardinality ${}\kappa$. If we could show that this **$M$ itself must be an $L_\beta$**, we can use the fact that the cardinality of the $L_\alpha$ behaves "tamely" along the ordinals, as evidenced by the following.
+We now show that $\VL$ implies the Continuum Hypothesis. The proof works by showing that under $\VL$, every subset of a cardinal ${}\kappa$ will be constructed by stage $\kappa^+$. This is made possible by a "**condensation**" argument: If any subset $x$ of ${}\kappa$ is in $L$, then it must show up at some stage $L_\lambda$. ${}\kappa$ and $x$ generate an elementary substructure $M$ of $L_\lambda$ of cardinality ${}\kappa$. If we could show that this **$M$ itself must be an $L_\beta$**, we can use the fact following fact. Essentially, it tells us that the cardinality of the $L_\alpha$ evolves "tamely" along the ordinals (as opposed to $(V_\alpha)$).
 
 ```{prf:proposition}
 :label: prop-card-Lalpha
