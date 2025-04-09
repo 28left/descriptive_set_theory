@@ -259,7 +259,6 @@ $$
 Let $(M_\alpha)_{\alpha \in \Ord}$ be a cumulative hierarchy and let $M = \bigcup_\alpha M_\alpha$.
 
 For every set theoretic formula $\varphi(v_0, \dots, v_{n-1})$ there exists a normal function $F$ such that 
-
 $$
 	F(\alpha) = \alpha \; \; \rightarrow \;\;  \forall a_0, \dots, a_{n-1} \in M_\alpha \: (\varphi^{M_\alpha}(\vec{a}) \leftrightarrow \varphi^{M}(\vec{a}))
 $$
