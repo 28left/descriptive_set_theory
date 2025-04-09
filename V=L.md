@@ -60,7 +60,7 @@ This means that
 
 To verify this, we need to make sure that *inside* $L$, $L$ "means the same as" $L$. This is, of course, an absoluteness property, and we therefore revisit the complexity of the formulas defining the constructible universe.
 
-We have seen that the map $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$. This important implications for the map $\alpha \mapsto L_\alpha$.
+We have seen that the map $a \mapsto \mathcal{P}_{\Op{Def}}(a)$ is $\Sigma_1$. This has important implications for the map $\alpha \mapsto L_\alpha$.
 
 ```{prf:proposition}
 :label: prop-map-Lalpha
@@ -102,7 +102,7 @@ so the complement of the graph of $F$ is $\Sigma_1$-definable, too.
 - (**3**) $\quad$   The axiom $\VL$ is $\Pi_2$.
 ```
 
-We can relativize the definition of $L$ to other classes $M$. If $M$ is is an inner model, then the development of $L$ can be done *relative to $M$*. Since $M$ is a $\ZF$-model, it has to contain all the sets $L_\alpha^M$ (as we developed definability and proved facts about it *inside* $\ZF$). As $M$ is transitive, the mapping $F: \alpha \to L_\alpha$ is absolute for $M$ and we obtain, for all ${}\alpha$, 
+We can relativize the definition of $L$ to other classes $M$. If $M$ is is an inner model, then the development of $L$ can be done *relative to $M$*. Since $M$ is a $\ZF$-model, it has to contain all the sets $L_\alpha^M$ (as we developed definability and proved facts about it *inside* $\ZF$). As $M$ is transitive, the mapping $F: \alpha \mapsto L_\alpha$ is absolute for $M$ and we obtain, for all ${}\alpha$, 
 
 $$
 L_\alpha^M = L_\alpha.
@@ -141,13 +141,13 @@ Note that every element of $\mathcal{P}_{\Op{Def}}(X)$ is determined by a pair $
 
 For each $z \in \mathcal{P}_{\Op{Def}}(X)$ there may exist more than one such pair (i.e. $z$ can have more than one definition), but by well-ordering the pairs $(\psi, \vec{a})$, we can assign each $z \in \mathcal{P}_{\Op{Def}}(X)$ its **least** definition, and subsequently order $\mathcal{P}_{\Op{Def}}(X)$ by comparing least definitions. Elements already in $X$ will form an initial segment. 
 
-Such an order on the pairs $(\psi, \vec{a})$ can be obtained in a **definable way**: First use the order on $X$ to order $X^{<\omega}$ length-lexicographically, order the formulas through their Gödel numbers, and finally put 
+Such an order on the pairs $(\psi, \vec{a})$ can be obtained in a **definable way**: First use the order on $X$ to order $X^{<\omega}$ length-lexicographically, order the formulas by their Gödel numbers, and finally put 
 
 $$
 	(\psi,\vec{a}) < (\varphi, \vec{b}) \quad \text{ iff } \quad \psi < \varphi \text { or } (\psi = \varphi \text { and } \vec{a} < \vec{b}).
 $$
 
-Based on this, we can order all levels of $L$ so that the following hold:
+Based on this, we can define an order $<_L$ all levels of $L$ so that the following hold:
 
 - (**1**) $\quad$   $<_L \Rest{V_\omega}$ is a standard well-ordering of $V_\omega$   (as for example given by a canonical isomorphism $(V_\omega, \in) \leftrightarrow (\Nat, E)$, see {cite}`Ackermann:1937a`)
 - (**2**) $\quad$   $<_L\Rest{L_{\alpha+1}}$ is the order on $\mathcal{P}_{\Op{Def}}(L_\alpha)$ induced by $<_L|L_\alpha$.
@@ -207,7 +207,7 @@ If we choose our finite axiom set more carefully, it is actually possible to sho
 :class: dropdown
 :nonumber: true
 
-Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with all (instances of) axioms of $\ZF$ used to prove that all the theorems leading up to the fact that for all ${}\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
+Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with any other  (instance of an) axiom of $\ZF$ used to prove that all the theorems leading up to the fact that for all ${}\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
 
 Suppose for a transitive set $M$, $M\models T + \VL$. Let ${}\lambda$ be the least ordinal not in $M$. 
 We must have that $\Ord^M = \lambda$, by absoluteness of
