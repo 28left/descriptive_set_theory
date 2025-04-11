@@ -15,7 +15,7 @@ $$
 
 We would like to replace this formula by an "equivalent" one in the language of second order arithmetic. In particular, we would like to replace the quantifier $\exists y$ by a quantifier over the reals.
 
-The key for doing this is a [lemma of the previous section](#lemma-L-GCH): every constructible real shows up at a countable stage of $L$. Hence if $\alpha \in L \cap \Baire$, there exists a countable ${}\xi$ such that $x \in L_\xi$. Since $|\xi| = |L_\xi|$, $L_\xi$ is countable, too. Hence we can hope to replace $L_\xi$ by something like "*there exists a real that codes a model that looks like $L_\xi$*". 
+The key for doing this is a [lemma of the previous section](#lemma-L-GCH), which implies that every constructible real shows up at a countable level of $L$. Hence if $\alpha \in L \cap \Baire$, there exists a countable ${}\xi$ such that $x \in L_\xi$. Since $|\xi| = |L_\xi|$, $L_\xi$ is countable, too. Hence we can hope to replace $L_\xi$ by something like "*there exists a real that codes a model that looks like $L_\xi$*". 
 
 The [Condensation lemma](#lem-condensation) with the sentence $\varphi_{\VL}$ allows us to do this. 
 
@@ -30,7 +30,7 @@ So, for reals, we can formulate membership in $L$ now as follows:
 
 \begin{align}
 \label{equ:def-constructible-real}
-	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \quad \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ]
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \; \; \; \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ]
 \end{align}
 where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
@@ -87,7 +87,7 @@ $$
 Hence this is arithmetical. And we have already seen that coding a well-founded relation over $\Nat$ is $\Pi^1_1$.
 
 
-Now we know the complexity of all parts of ($*$) and can put everything together.
+Now we know the complexity of all parts of [](#equ:def-constructible-real) and can put everything together.
 
 ```{prf:theorem}	
 :label: thm-L-reals
@@ -111,7 +111,7 @@ $$
 In other words, ${}\alpha$ codes a countable $<_L$-initial segment restricted to $\Baire$.
 ```
 
-If $\VL$, then the set is actually $\Delta^1_2$, since then 
+If $\VL$, then the set is actually $\Delta^1_2$, since in this case 
 
 $$
 	\alpha <_L \beta \iff \alpha \neq \beta \: \wedge \: \neg(\beta <_L \alpha).

@@ -200,7 +200,7 @@ There is a formula $\varphi_{\VL}$ so that if $M$ is a transitive set with $M\mo
 ```
 
 ```{margin}
-Something stronger is actually true: there exists a $\Pi_2$-formula ${}\sigma$ such that for any transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit ${}\lambda$. (See for example {cite}`Devlin:1984a` and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).
+Something stronger is actually true: there exists a $\Pi_2$-formula ${}\sigma$ such that for any transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit ${}\lambda$. (See for example {cite}`Devlin:1984a` and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).st
 ```
 
 ```{prf:proof}
@@ -268,7 +268,7 @@ As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies
 This implies, by {prf:ref}`prop-card-Lalpha`,
 
 $$  
-    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa < \kappa^+ \leq \lambda.
+    |\beta| = |L_\beta| = |M| = |N| = |X| = \kappa < \kappa^+.
 $$
 
 Since $x \in L_\beta$ and $\beta < \kappa^+$, it follows that $x \in L_{\kappa^+}$, as desired.
