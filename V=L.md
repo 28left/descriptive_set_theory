@@ -196,22 +196,21 @@ But why would an elementary substructure of an $L_\lambda$ have to be itself an 
 ```{prf:lemma} Condensation lemma
 :label: lem-condensation
 
-There is a finite set $T$ of axioms of $\ZF - \text{Power Set}$ so that if $M$ is a transitive set with $M\models T + \VL$, then $M = L_\lambda$ for some limit ordinal ${}\lambda$.
+There is a formula $\varphi_{\VL}$ so that if $M$ is a transitive set with $M\models \varphi_{\VL}$, then $M = L_\lambda$ for some limit ordinal ${}\lambda$.
 ```
 
 ```{margin}
-If we choose our finite axiom set more carefully, it is actually possible to show something stronger -- namely that there exists a $\Pi_2$-formula $\sigma$ such that for transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit ${}\lambda$, see for example {cite}`Devlin:1984a` (and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).
+Something stronger is actually true: there exists a $\Pi_2$-formula ${}\sigma$ such that for any transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit ${}\lambda$. (See for example {cite}`Devlin:1984a` and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).
 ```
 
 ```{prf:proof}
 :class: dropdown
 :nonumber: true
 
-Let the axioms of $T$ be *Pairing*, *Union*, *Set Existence*, together with any other  (instance of an) axiom of $\ZF$ used to prove that all the theorems leading up to the fact that for all ${}\alpha$, $L_\alpha$  exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). (We have proved only finitely meany theorems so far so we only needed finitely many axioms!)
+Let $T$ be the axioms of $\ZF$ (including *Pairing*, *Union*, *Set Existence*) used to prove that all the theorems leading up to the fact that for all ${}\alpha$, $L_\alpha$ exists and that $\alpha \mapsto L_\alpha$ is $\Delta_1$ (and hence absolute). Any proof is finite, so we have used only finitely many (instances of) axioms of $\ZF$ to prove these facts. In particular, $T$ is finite. Let $\varphi_{\VL}$ be the sentence we obtain by taking the conjunction ($\wedge$) of all axioms in $T$ together with the axiom $\VL$.
 
-Suppose for a transitive set $M$, $M\models T + \VL$. Let ${}\lambda$ be the least ordinal not in $M$. 
-We must have that $\Ord^M = \lambda$, by absoluteness of
-ordinal.  Moreover, ${}\lambda$ must be a limit ordinal since for each $\alpha \in M$, $\alpha \cup \{\alpha\}$ is in $M$ since $M$ satisfies *Pairing* and *Union*.
+Suppose for a transitive set $M$, $M\models \varphi_{\VL}$. Let ${}\lambda$ be the least ordinal not in $M$. We must have that $\Ord^M = \lambda$, by the absoluteness of
+ordinals.  Moreover, ${}\lambda$ must be a limit ordinal since for each $\alpha \in M$, $\alpha \cup \{\alpha\}$ is in $M$ since $M$ satisfies *Pairing* and *Union*.
 
 We have that 
 
@@ -251,7 +250,7 @@ Suppose $V=L$. If ${}\kappa$ is a cardinal and $x \subseteq \kappa$, then $x \in
 :class: dropdown
 :nonumber: true
  
-Since we assume $\VL$, there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models T + \VL$, where $T$ is as in the **condensation lemma**. Such a ${}\lambda$ exists by the **reflection theorem** ({prf:ref}`thm-reflection`).  Let $X = \kappa \cup \{x\}$. By choice of ${}\lambda$, $X \subseteq L_\lambda$. 
+As we assume $\VL$, by the [Reflection Theorem](#thm-reflection), there exists limit $\lambda > \kappa$ such that $x \in L_\lambda$ and such that $L_\lambda \models \varphi_{\VL}$. Let $X = \kappa \cup \{x\}$. By choice of ${}\lambda$, $X \subseteq L_\lambda$. 
 
 By the [Löwenheim-Skolem Theorem](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem), there exists an **elementary substructure** $N \preceq L_\lambda$ such that
 
@@ -264,7 +263,7 @@ together with an **isomorphism** $\pi: (N,\in) \to (M,\in)$.
 
 Since ${}\kappa$ is contained in both $M$ and $N$, and is already transitive, it is straightforward to show via induction that $\pi(\alpha) = \alpha$ for all $\alpha \in \kappa$. Since $x \subseteq \kappa$, this also yields $\pi(x) = x$. This implies in turn that $x \in M$.
 
-As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies the same sentences as $(L_\lambda, \in)$. In particular, $M \models T + \VL$. By the **condensation lemma**, $M = L_\beta$ for some $\beta$. 
+As $(M,\in)$ is isomorphic to $(N,\in)$ and $N \preceq L_\lambda$, $M$ satisfies the same sentences as $(L_\lambda, \in)$. In particular, $M \models \varphi_{\VL}$. By the **condensation lemma**, $M = L_\beta$ for some ${}\beta$. 
 
 This implies, by {prf:ref}`prop-card-Lalpha`,
 

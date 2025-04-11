@@ -10,15 +10,14 @@ What is the complexity of the set $\Baire \cap L$? In particular, is it in the p
 The set of all constructible reals is defined by a $\Sigma_1$ formula over set theory:
 
 $$
-   \varphi(x_0)	\; \equiv \; \exists y \; [y \text{ is an ordinal }  \; \wedge \; x_0 \in L_y \; \wedge \; x_0 \text{ is a set of natural numbers }  ].
+   \varphi(x_0)	\; \equiv \; \exists y \; [y \text{ is an ordinal }  \; \wedge \; x_0 \in L_y \; \wedge \; x_0 \text{ is a set of natural numbers }  ]
 $$
 
 We would like to replace this formula by an "equivalent" one in the language of second order arithmetic. In particular, we would like to replace the quantifier $\exists y$ by a quantifier over the reals.
 
-The key for doing this is {prf:ref}`lemma-L-GCH`: every constructible real shows up at a countable stage of $L$. Hence if $\alpha \in L \cap \Baire$, there exists a countable $\xi$ such that $x \in L_\xi$. Since $|\xi| = |L_\xi|$, $L_\xi$ is countable, too. Hence we can hope to replace $L_\xi$ by something like "*there exists a real that codes a model that looks like $L_\xi$*". 
+The key for doing this is a [lemma of the previous section](#lemma-L-GCH): every constructible real shows up at a countable stage of $L$. Hence if $\alpha \in L \cap \Baire$, there exists a countable ${}\xi$ such that $x \in L_\xi$. Since $|\xi| = |L_\xi|$, $L_\xi$ is countable, too. Hence we can hope to replace $L_\xi$ by something like "*there exists a real that codes a model that looks like $L_\xi$*". 
 
-The **condensation lemma** ({prf:ref}`lem-condensation`) allows us to do this. 
-Let $\varphi_{\VL}$ be the conjunction of the axioms in $T$ and the axiom $\VL$. 
+The [Condensation lemma](#lem-condensation) with the sentence $\varphi_{\VL}$ allows us to do this. 
 
 Recall that any real $\alpha \in \Baire$ codes a set theoretic structure
 \begin{equation*}
@@ -29,9 +28,10 @@ Unfortunately, the condensation lemma only holds for **transitive sets** (and $(
 
 So, for reals, we can formulate membership in $L$ now as follows:
 
-\begin{align*} \tag{$*$}
-	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \quad \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ],
-\end{align*}
+\begin{align}
+\label{equ:def-constructible-real}
+	\alpha \in L \cap \Baire \iff \exists \beta \exists m \: & [E_\beta \text{ is  extensional and well-founded} \\ & \quad \: \wedge \: (\omega,E_\beta) \models \varphi_{\VL} \: \wedge \: \pi_\beta(m) = \alpha ]
+\end{align}
 where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
 
@@ -43,10 +43,10 @@ It remains to show that the notions occurring inside the square brackets are def
 
 - (**a**) $\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_n$:
 \begin{equation*}
-    \{(m,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon m = \GN{\varphi} \: \wedge \: \varphi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \}
+    \{(k,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon k = \GN{\varphi} \: \wedge \: \varphi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \}
 \end{equation*}
 
-- (**b**) $\quad$  If $\alpha \in \Baire$ and $E_\alpha$ is well-founded and extensional, then the following set is arithmetic in $\alpha$:
+- (**b**) $\quad$  If $\alpha \in \Baire$ and $E_\alpha$ is well-founded and extensional, then the following set is arithmetic in ${}\alpha$:
 \begin{equation*}
 	\{ (m,\gamma) \in \Nat\times \Baire \colon \pi_\alpha(m) = \gamma\}
 \end{equation*}
@@ -66,7 +66,7 @@ $$
     \{ (m,p) \in \Nat\times \Nat  \colon \pi_\alpha(m) = p \}
 $$
  
-is arithmetic in $\alpha$. 
+is arithmetic in ${}\alpha$. 
 
 Let $\psi(v_0, v_1, v_2)$ be the formula $\Tup{v_0, v_1} \in v_2$. Then 
 
@@ -97,10 +97,10 @@ The set $L \cap \Baire$ is $\Sigma^1_2$.
 
 In a similar way we can show that the relation $\alpha <_L \beta$ over $(L\cap\Baire)^2$ is $\Sigma^1_2$ (using that $<_L$ is $\Delta_1$-definable). 
 
-```{admonition} Exercise	
-:class: tip
+```{exercise} 	
+:nonumber: false 
 
-Recall that given $\alpha \in \Baire, n \in \Nat$, $(\alpha)_n$ denotes the $n$-th column of $\alpha$.
+Recall that given $\alpha \in \Baire, n \in \Nat$, $(\alpha)_n$ denotes the $n$-th column of ${}\alpha$.
 
 Show that the following relation $R$ over $(L\cap\Baire)^2$ is $\Sigma^1_2$.
 
@@ -108,7 +108,7 @@ $$
 (\alpha, \beta) \in R :\iff \{(\alpha)_n\colon n \in \Nat \} = \{\gamma \colon \gamma <_L \beta \}
 $$
 
-In other words, $\alpha$ codes the (countable) $<_L$-initial segment restricted to $\Baire$.
+In other words, ${}\alpha$ codes a countable $<_L$-initial segment restricted to $\Baire$.
 ```
 
 If $\VL$, then the set is actually $\Delta^1_2$, since then 
@@ -117,7 +117,7 @@ $$
 	\alpha <_L \beta \iff \alpha \neq \beta \: \wedge \: \neg(\beta <_L \alpha).
 $$
 
-Finally, since $\VL$ implies $\CH$, we can use {prf:ref}`prop-non-meas` to show the existence of non-measurable sets under $\VL$.
+Finally, since $\VL$ implies $\AC$, we can use {prf:ref}`prop-non-meas` to show the existence of non-measurable sets under $\VL$.
 
 ```{prf:corollary}	
 :label: cor-L-reals
@@ -134,7 +134,7 @@ We start with constructing an example at the $\Sigma^1_2$ level.
 
 [Recall](sec-well-founded) that if $\alpha \in \Baire$ codes a well-ordering on $\Nat$, then
 \begin{equation*}
-	\Norm{\alpha} = \text{ order type of well-ordering coded by $\alpha$}.
+	\Norm{\alpha} = \text{ order type of well-ordering coded by ${}\alpha$}.
 \end{equation*}
 
 
@@ -172,6 +172,7 @@ It is possible to get this example down to $\Pi^1_1$ using the powerful techniqu
 
 ```{prf:definition}
 :label: def-uniformization
+:nonumber: true
 
 Suppose $A \subseteq \Baire \times \Baire$. We say $A^* \subseteq A$ **uniformizes** $A$ if 
 
