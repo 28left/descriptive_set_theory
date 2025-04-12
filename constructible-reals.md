@@ -165,7 +165,7 @@ x \in A \iff x \in \WOrd \, \wedge \, \exists z \;(R(z,x) \, \wedge \; \forall n
 
 The relation $\Norm{(z)_n} \neq  \Norm{x}$ $\Pi^1_1$, hence $A$ is $\Sigma^1_2$.
 
-Finally, we see that **$A$ does not have an uncountable $\bSigma^1_1$ subset** (hence, since all perfect sets are closed, no perfect subset): By $\bSigma^1_1$-boundedness ({prf:ref}`thm-sigma11-bounding`), for any $\bSigma^1_1$ subset $X \subseteq A$ the set $\{ \Norm{x} \colon x \in X\}$ bounded by an ordinal $\gamma < \omega_1$, hence countable.
+Finally, we see that **$A$ does not have an uncountable $\bSigma^1_1$ subset** (hence, since all perfect sets are closed, no perfect subset): By $\bSigma^1_1$-boundedness ({prf:ref}`thm-sigma11-bounding`), for any $\bSigma^1_1$ subset $X \subseteq A$ the set $\{ \Norm{x} \colon x \in X\}$ is bounded by an ordinal $\gamma < \omega_1$, hence countable.
 ```
 
 It is possible to get this example down to $\Pi^1_1$ using the powerful technique of **uniformization**. 
@@ -206,3 +206,12 @@ Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}`prop-sigma12-perfect
 
 $B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of) a function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
 ```
+
+We finish this section by stating (without proof) the following fact complementing the results above.
+
+:::{prf:theorem} (Mansfield; Solovay)
+
+If a (lightface) $\Sigma^1_2$ set of reals does not contain a perfect subset, it must be contained in $L$.
+:::
+
+Via the contrapositive, this result tells us that *if a $\Sigma^1_2$ set of reals has a non-constructible element, it must have a perfect subset*. For a proof see @Mansfield-Weitkamp:1985a. It uses a powerful **tree representation** of $\PS{2}$, which we will learn about in the next section.
