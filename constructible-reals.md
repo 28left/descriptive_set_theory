@@ -209,7 +209,7 @@ $B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ 
 
 We finish this section by stating (without proof) the following fact complementing the results above.
 
-:::{prf:theorem} (Mansfield; Solovay)
+:::{prf:theorem} Mansfield; Solovay
 
 If a (lightface) $\Sigma^1_2$ set of reals does not contain a perfect subset, it must be contained in $L$.
 :::
