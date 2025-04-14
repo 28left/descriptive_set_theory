@@ -38,7 +38,7 @@ where $\pi_\beta$ is the Isomorphism of the Mostowski collapse of $E_\beta$.
 
 It remains to show that the notions occurring inside the square brackets are definable in second order arithmetic.
 
-```{prf:proposition}
+```{prf:proposition} 
 :label: prop-satisfaction-arithmetic
 
 - (**a**) $\quad$  For any $n \in \Nat$, the following set is $\Sigma^0_n$:
@@ -46,13 +46,13 @@ It remains to show that the notions occurring inside the square brackets are def
     \{(k,\sigma,\gamma) \in \Nat\times \Nstr\times \Baire \colon k = \GN{\varphi} \: \wedge \: \varphi \text{ is $\Sigma_n$} \: \wedge \: (\omega,E_\gamma) \models \varphi[\sigma] \}
 \end{equation*}
 
-- (**b**) $\quad$  If $\alpha \in \Baire$ and $E_\alpha$ is well-founded and extensional, then the following set is arithmetic in ${}\alpha$:
+- (**b**) $\quad$  If $\beta \in \Baire$ and $E_\beta$ is well-founded and extensional, then the following set is arithmetic in ${}\beta$:
 \begin{equation*}
-	\{ (m,\gamma) \in \Nat\times \Baire \colon \pi_\alpha(m) = \gamma\}
+	\{ (m,\gamma) \in \Nat\times \Baire \colon \pi_\beta(m) = \gamma\}
 \end{equation*}
 ```
 
-```{prf:proof}
+```{prf:proof} Sketch
 :class: dropdown
 :nonumber: true
 
@@ -60,26 +60,25 @@ It remains to show that the notions occurring inside the square brackets are def
 
 Since we work with relations over $\Nat$ now instead of arbitrary sets, it is not that easy anymore to keep quantifiers bounded. But since we are only interested in the complexity of $\models$ for $\Sigma_n$-formulas, this helps us bound the overall complexity at $\Sigma^0_n$
 
-(c) By analyzing the recursive definition and using the definition of $\Nat$ in $\ZF$, one first shows that the set
+(b) By analyzing the recursive definition and using the definition of $\Nat$ in $\ZF$, one first shows that the set
 
 $$
-    \{ (m,p) \in \Nat\times \Nat  \colon \pi_\alpha(m) = p \}
+    \{ (m,p) \in \Nat\times \Nat  \colon \pi_\beta(m) = p \}
 $$
  
-is arithmetic in ${}\alpha$. 
+is arithmetic in ${}\beta$. 
 
 Let $\psi(v_0, v_1, v_2)$ be the formula $\Tup{v_0, v_1} \in v_2$. Then 
 
 \begin{align*}
-    & \pi_\alpha(m) = \gamma \iff \\ 
-    & \qquad \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\alpha(i) = p \wedge \pi_\alpha(j)=q \wedge (\omega,E_\alpha) \models \psi[i,j,m]) \right )
+    & \pi_\beta(m) = \gamma \iff \\ 
+    & \qquad \forall p, q \: \left (\gamma(p) = q \: \leftrightarrow \: \exists i,j \: (\pi_\beta(i) = p \wedge \pi_\beta(j)=q \wedge (\omega,E_\beta) \models \psi[i,j,m]) \right )
 \end{align*}
 
 Now apply the previous observation and (a).
 ```
 
 Finally, note that
-
 $$
 	\text{$E_\beta$ is extensional} \iff \forall m,n \: [\forall k (k E_\beta m \; \leftrightarrow \; k E_\beta n) \; \to \; m=n ].
 $$
@@ -156,7 +155,7 @@ Let $A \subseteq \Baire$ be given by
 
 In other words, $A$ collects the $<_L$-least code for every ordinal $< \omega_1$.
 
-Clearly $A$ is uncountable, since it has a representative for every countable ordinal and hence of cardinality $\omega_1$.
+Clearly $A$ is uncountable, since it has a representative for every countable ordinal and hence is of cardinality $\omega_1$.
 
 Moreover, $A$ is $\Sigma^1_2$: Let $R$ be the $\Sigma^1_2$-relation of the exercise above. Then
 \begin{equation*}
@@ -180,7 +179,7 @@ $$
 \forall x  \; [ \exists y \; A(x,y) \to  \exists ! y \; A^*(x,y)]
 $$
 
-A pointclass $\Gamma$ has the **uniformization property** if 
+A pointclass ${}\Gamma$ has the **uniformization property** if 
 \begin{equation*}
 A \subseteq \Baire  \times \Baire \, \wedge \, A \in \Gamma \quad \Rightarrow \quad \exists A^* \in  \Gamma \; (A^*  \text{ uniformizes } A).
 \end{equation*}
@@ -204,7 +203,7 @@ If $\VL$, then there exists an uncountable $\bPi^1_1$ set without a perfect subs
 
 Let $A$ be the $\Sigma^1_2$ set from the proof of {prf:ref}`prop-sigma12-perfect`. $A \subseteq \Baire$ is the projection of a $\Pi^1_1$ set $B \subseteq \Baire \times \Baire$. If we apply uniformization to $B$, we obtain a uniformizing set $B^*$ whose projection is still $A$. 
 
-$B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be (the graph of) a function and uncountable, and the projection $\exists^{\Baire} \; P$ would be an uncountable  $\bSigma^1_1$ subset of $A$, contradiction.
+$B^*$ is uncountable, but does not contain a perfect subset: If $P \subset B^*$ were such a subset, then $P$ would be closed, the graph of a function, and uncountable. Therefore, the projection $\exists^{\Baire} \; P$ would be an uncountable $\bSigma^1_1$ subset of $A$, contradiction.
 ```
 
 We finish this section by stating (without proof) the following fact complementing the results above.
