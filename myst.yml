@@ -10,8 +10,9 @@ project:
   github: https://github.com/28left/descriptive_set_theory
   numbering: 
     headings: false
+    proof: continue
   exports:
-  - format: pdf
+  - format: pdf+tex
     template: plain_latex_book
     output: exports/descriptive_set_theory.pdf
   downloads: 

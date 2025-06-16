@@ -27,7 +27,7 @@ $$
     \alpha \in A \iff T(\alpha) \text{ is well-founded}.
 $$
 
-Hence, $\alpha \in A$ if and only if there exists an order preserving map $\pi: T(\alpha) \to \omega_1$. We recast this now in terms of getting an infinite branch through a tree. 
+Hence, $\alpha \in A$ if and only if there exists an order preserving map (with respect to the inverse prefix ordering) $\pi: T(\alpha) \to \omega_1$. We recast this now in terms of getting an infinite branch through a tree. 
 
 Let $\{\sigma_i \colon i \in \Nat\}$ be a recursive enumeration of $\Nstr$. We may assume for this enumeration that $|\sigma_i| \leq i$. We define a tree $\widetilde{T}$ on $\Nat \times \omega_1$ by 
 
@@ -62,7 +62,7 @@ We can use Shoenfield's tree representation to extend {prf:ref}`cor-coanal-union
 ```{prf:theorem} Sierpinski, 1925
 :label: thm-sigma12-union-Borel
 
-Every $\Sigma^1_2$ set is a union of $\aleph_1$-many Borel sets.
+Every $\PS{2}$ set is a union of $\aleph_1$-many Borel sets.
 ```
 
 Sierpinski's original proof used $\AC$. The following proof does not make use of choice.
@@ -83,7 +83,7 @@ $$
 	A = \bigcup_{\xi < \omega_1} \exists^{(\omega_1)^\Nat}[T^\xi].
 $$
 
-For all $\xi < \omega_1$, the set $\exists^{(\omega_1)^\Nat}[T^\xi]$ is $\Sigma^1_1$, because the tree $T^\xi$ is a tree on a product of countable sets and hence is isomorphic to a tree on $\Nat \times \Nat$. By {prf:ref}`cor-aleph-union-intersect`, each $\Sigma^1_1$ set is the union of $\aleph_1$ many Borel sets, from which the result follows.
+For all $\xi < \omega_1$, the set $\exists^{(\omega_1)^\Nat}[T^\xi]$ is $\PS{1}$, because the tree $T^\xi$ is a tree on a product of countable sets and hence is isomorphic to a tree on $\Nat \times \Nat$. By {prf:ref}`cor-aleph-union-intersect`, each $\PS{1}$ set is the union of $\aleph_1$ many Borel sets, from which the result follows.
 ```
 
 As for co-analytic sets, an immediate consequence of this theorem is (using the perfect set property of Borel sets):
@@ -119,7 +119,7 @@ $$
 	A^M(\alpha) \iff A(\alpha).
 $$
 
-Absoluteness can be extended and relativized in a straightforward manner to predicates analytical in some $\gamma \in \Baire \cap M$.
+Absoluteness can be extended and relativized in a straightforward manner with respect to some $\gamma \in \Baire \cap M$.
 
 All arithmetic predicates are absolute, since all quantifiers are natural number quantifiers. Shoenfield absoluteness extends this absoluteness to $\Sigma^1_2$ and $\Pi^1_2$ predicates.
 

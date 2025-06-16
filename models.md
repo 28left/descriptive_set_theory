@@ -49,7 +49,7 @@ This is a first warning sign that models of $\ZF$ can behave in very unexpected 
 ```{prf:proposition}
 :label: prop-illfounded-ZF-model
 
-If $\ZF$ is consistent, than there exists a model $(M,E)$ of $\ZF$ such that $(M,E)$ is ill-founded. 
+If $\ZF$ is consistent, then there exists a model $(M,E)$ of $\ZF$ such that $(M,E)$ is ill-founded. 
 ```
 
 ```{prf:proof}

@@ -1,8 +1,6 @@
 .vscode/settings.json
 .ipynb_checkpoints/
-# _build/
+_build/
 .DS_Store
 */.DS_Store
 *_env
-_build/temp/
-_build/site/

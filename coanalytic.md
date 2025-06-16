@@ -270,7 +270,7 @@ $$
 :class: dropdown
 :nonumber: true
 
-If such a $\nu$ did not exist, then
+If such a ${}\nu$ did not exist, then
 
 $$
 	\alpha \in \WOrd \iff \exists \nu \: [\alpha \in A \; \wedge \; \WOrd_\nu].

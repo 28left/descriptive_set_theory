@@ -134,7 +134,7 @@ Suppose an inaccessible cardinal exists, and let ${}\kappa$ be the least inacces
 It is not hard to verify that 
 
 $$
-V_\kappa \models \ZFC + \text{''there does not exist an inaccessible cardinal''}.
+V_\kappa \models \ZFC + \text{``there does not exist an inaccessible cardinal''}.
 $$
 
 (You verify that being a inaccessible cardinal is absolute for $V_\kappa$.) Therefore, the existence of an inaccessible cardinal is not provable from $\ZFC$. This fact also follows from Gödel's second incompleteness theorem.
@@ -345,7 +345,7 @@ be the set of all $n$-element subsets of $S$. For cardinals $\kappa, \lambda$, w
 \begin{equation*}
 	\kappa \to (\lambda)^n_k 
 \end{equation*}
-to mean that any partition $F: [S]^n \to \{1, \dots, k\}$ mit $|S| = \kappa$ has an **$F$-homogeneous subset**  of cardinality $\lambda$, that is, a set $H$, $|H| = \lambda$, such that
+to mean that any partition $F: [S]^n \to \{1, \dots, k\}$ with $|S| = \kappa$ has an **$F$-homogeneous subset**  of cardinality $\lambda$, that is, a set $H$, $|H| = \lambda$, such that
 \begin{equation*}
 	F|_{[H]^n} \equiv \text{ constant}. 
 \end{equation*}
@@ -422,11 +422,11 @@ Show that if ${}\kappa$ is measurable, then there is a normal ultrafilter on ${}
 (Proof of {prf:ref}`thm-measurable-Ramsey`) 
 
 Let $U$ be a normal filter over ${}\kappa$.
-We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g_n \Rest{[H_n]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
+We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g \Rest{[H_n]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
 
 We proceed by induction. The case $n=1$ follows from the ${}\kappa$-completeness of $U$. Now assume $g:[\kappa]^{n+1} \to \gamma$, with $\gamma < \kappa$.
 
-For each $S \in [\kappa]^n$, define $g_s : \kappa \to \gamma$ by 
+For each $S \in [\kappa]^n$, define $g_S : \kappa \to \gamma$ by 
 
 $$
     g_S(\alpha) = \begin{cases}

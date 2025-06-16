@@ -198,7 +198,7 @@ $$
 	U_\gamma = \bigcup_{n \in \Nat} V_{\gamma(n)}.
 $$
 
-The definition of codes for higher levels is then similar to [the definition of Borel codes for $\Baire$](#def-Borel-codes).
+The definition of codes for higher levels is then similar to [the definition of Borel codes for finite levels](#def-Borel-codes).
 
 As in the case of the halting problem, we can use the existence of universal sets to show that the levels of the Borel hierarchy are proper. The crucial point is that we can use universal sets to **diagonalize**. 
 
