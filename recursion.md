@@ -116,9 +116,10 @@ is a set (if $A$ is a set, this follows automatically by *Separation*). If this 
 
 
 ## Recursion for well-founded relations
-More generally, we can define induction and recursion on **well-founded** relations. We already encountered those in a [previous chapter](sec-well-founded). 
+More generally, we can define induction and recursion on **well-founded** relations. We already encountered those in a [previous chapter](#sec-well-founded). 
 
 ```{prf:definition}
+:nonumber: true
 :label: def-well-founded
 
 A relation $R$ on a class $A$ is **well-founded** if it satisfies the **minimality condition**
@@ -239,7 +240,8 @@ $$
     \V = \bigcup_{\alpha \in \Ord} V_\alpha
 $$
 ```
-```{margin}
+```{prf:remark}
+:nonumber: true
 Recall that the notation $\bigcup_{\alpha \in \Ord} \dots$ is really just a shortcut for the class obtained as $\{ x \colon \exists \alpha \in \Ord \dots\}$.
 ```
 
@@ -265,7 +267,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{hint} Exercise
 :nonumber: true
 
 Show that 

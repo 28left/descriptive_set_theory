@@ -36,7 +36,8 @@ $$
 U_\eps(x) = \{y \in X \colon d(x,y)<\eps\}.
 $$
 
-```{margin}
+```{prf:remark}
+:nonumber: true
 Note that a compatible metric is not necessarily unique.
 ```
 
@@ -47,6 +48,7 @@ If a topological space $(X,\mathcal{O})$ is separable and metrizable, then the b
 ## Polish spaces – the basics
 
 ```{prf:definition}
+:nonumber: true
 :label: def-polish
 
 A **Polish space** is a separable topological space $X$ for which there exists a compatible metric $d$ such that $(X,d)$ is a complete metric space.

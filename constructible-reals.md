@@ -96,7 +96,7 @@ The set $L \cap \Baire$ is $\Sigma^1_2$.
 
 In a similar way we can show that the relation $\alpha <_L \beta$ over $(L\cap\Baire)^2$ is $\Sigma^1_2$ (using that $<_L$ is $\Delta_1$-definable). 
 
-```{exercise} 	
+```{hint} Exercise 	
 :nonumber: false 
 
 Recall that given $\alpha \in \Baire, n \in \Nat$, $(\alpha)_n$ denotes the $n$-th column of ${}\alpha$.
@@ -131,7 +131,7 @@ We now show that under the assumption $\VL$, the **perfect set property** fails 
 
 We start with constructing an example at the $\Sigma^1_2$ level.
 
-[Recall](sec-well-founded) that if $\alpha \in \Baire$ codes a well-ordering on $\Nat$, then
+[Recall](#sec-well-founded) that if $\alpha \in \Baire$ codes a well-ordering on $\Nat$, then
 \begin{equation*}
 	\Norm{\alpha} = \text{ order type of well-ordering coded by ${}\alpha$}.
 \end{equation*}

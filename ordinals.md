@@ -9,7 +9,7 @@ $$
 A^\prime \supseteq  A^{\prime\prime} \supseteq A^{\prime\prime\prime} \supseteq \dots \supseteq A^{(n)} \supseteq \dots
 $$
 
-```{exercise} 
+```{hint} Exercise 
 :nonumber: true
 
 Find a set $A$ such that for all $n$, $A^{(n)} \supsetneq A^{(n+1)}$.
@@ -20,7 +20,7 @@ A^{\infty} = \bigcap_n A^{(n)}
 $$
 But the process does not necessarily stop here. $A^\infty$ may have isolated points again, so that $A^\infty \supsetneq (A^\infty)^\prime$. 
 
-```{exercise}
+```{hint} Exercise
 :nonumber: true
 
 Find a set $A$ such that $A^\infty \supsetneq (A^\infty)^\prime \neq 0$.
@@ -167,20 +167,22 @@ $$
 $$
 
 ```{prf:definition}
+:nonumber: true
 :label: def-transitive
 A set $A$ is **transitive** if 
 \begin{equation*} \tag{trans}
     \forall x \in A \; \; x \subseteq A
 \end{equation*}
 ```
-```{margin}
-**Caution!**
+```{prf:remark}
+:nonumber: true
 A set being transitive is not equivalent to $\in$ being transitive on the set. (Counterexample?)
 ```
 
 In other words, transitive sets cannot "hide" elements in subsets.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-ordinal
 
 A set $A$ is an **ordinal** if it is transitive and well-ordered by $\in_A$
@@ -206,7 +208,7 @@ Sets which contain themselves ($A \in A$) are not well-founded$-$ $\{A\}$ would 
 Assume every set is well-founded. A set $A$ is an **ordinal** if and only if it is transitive and linearly ordered by $\in_A$.
 ```
 
-```{exercise} 
+```{hint} Exercise 
 :class: tip
 :nonumber: true
 

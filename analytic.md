@@ -2,6 +2,7 @@
 
 
 ```{prf:definition}
+:nonumber: true
 A subset $A$ of a Polish space $X$ is **analytic** if it is empty or there exists a continuous function $f:\Baire \to X$ such that $f(\Baire) = A$.
 ```
 
@@ -58,9 +59,9 @@ For a subset $A$ of a Polish space $X$, the following are equivalent.
 :class: dropdown
 :nonumber: true
 
-(i) $\Leftrightarrow$ (ii): Follows from the [Lusin-Souslin Theorem](thm-Polish-bijection-Baire) and {prf:ref}`prop-prop-analytic` (ii).
+(i) $\Leftrightarrow$ (ii): Follows from the [Lusin-Souslin Theorem](#thm-Polish-bijection-Baire) and {prf:ref}`prop-prop-analytic` (ii).
 
-(ii) $\Leftrightarrow$ (iii): Follows from the [corollary to the Lusin-Souslin Theorem](cor-Borel-image-closed) and {prf:ref}`prop-prop-analytic` (ii).
+(ii) $\Leftrightarrow$ (iii): Follows from the [corollary to the Lusin-Souslin Theorem](#cor-Borel-image-closed) and {prf:ref}`prop-prop-analytic` (ii).
 
 (i) $\Rightarrow$ (iv):  Let $f:\Baire \to X$ be continuous, $f(\Baire) = A$. Then 
 
@@ -104,10 +105,9 @@ We argue by contradiction. The key idea is: if $A$ and $B$ are Borel inseparable
 
 This follows from the following observation:
 
-```{card} $(\ast)$
-If the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
-```
-So, by using $(\ast)$ repeatedly, we can construct sequences $\alpha, \beta \in \Baire$ such that for all $n$,
+> If the sets  $R_{m,n}$ separate the sets  $P_m, \, Q_n$ (for each $m,n$), then $R = \bigcup_m \bigcap_n R_{m,n}$ separates the sets $P =  \bigcup_m P_m, \, Q =  \bigcup_n Q_n.$
+
+By using this repeatedly, we can construct sequences $\alpha, \beta \in \Baire$ such that for all $n$,
 $A_{\alpha\Rest{n}}$ and $B_{\beta\Rest{n}}$ are Borel inseparable, where
 
 $$
@@ -132,7 +132,7 @@ If a set $A$ and its complement $\Co{A}$ are both analytic, then $A$ is Borel.
 In {prf:ref}`thm-Lusin-separation`, chose $A = A$ and $B = \Co{A}$.
 ```
 
-It follows from [Souslin's Theorem](thm-Souslin-Borel-images) and the [Lusin separation theorem](thm-Lusin-separation) that the analytic sets are not closed under complements. 
+It follows from [Souslin's Theorem](#thm-Souslin-Borel-images) and the [Lusin separation theorem](#thm-Lusin-separation) that the analytic sets are not closed under complements. 
 
 Sets whose complement is analytic are called **co-analytic**. Analogous to the levels of the Borel hierarchy, the co-analytic subsets of a Polish space $X$ are denoted by
 
@@ -160,6 +160,7 @@ $$
 Souslin schemes give an alternative presentation of analytic sets which will be useful later.
 
 ```{prf:definition}
+:nonumber: true
 A **Souslin scheme** on a set $X$ is a family $P = (P_\sigma)_{\sigma\in \Nstr}$ of subsets of $X$ indexed by $\Nstr$.
 
 The **Souslin operation** $\mathcal{A}$ for a Souslin scheme is given by 

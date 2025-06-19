@@ -11,11 +11,7 @@ a \preceq b \quad & : \Leftrightarrow \quad \text{ there exists an injection } a
 a \prec b \quad & : \Leftrightarrow \quad a \preceq b \; \wedge \; a \nsim b
 \end{align*}
 
-It is straightforward to show $\sim$ is an equivalence relation and that $\preceq$ is transitive. $\preceq$ is obviously also reflexive, but if we mod out by $\sim$, do we get a partial order? In other words, do we have antisymmetry in the form
-```{aside}
-Relations that are reflexive and transitive are called **preorders**.
-```
-
+It is straightforward to show $\sim$ is an equivalence relation and that $\preceq$ is transitive. $\preceq$ is obviously also reflexive. Relations that are reflexive and transitive are called **preorders**. If we mod out by $\sim$, do we get a partial order? In other words, do we have antisymmetry in the form
 $$
 a \preceq b \; \wedge \; b \preceq a \quad \overset{?}{\Rightarrow} \quad a \sim b.
 $$
@@ -133,7 +129,8 @@ $$
 $$
 ```
 
-```{aside}
+```{prf:remark}
+:nonumber: true
 We have to be careful what we are taking a minimum over, since there could be a lot (i.e. "more than a set" many ordinals equinumeral to $a$.) We can avoid this by first using $\AC$ to find *one* ordinal $\beta \sim a$, and then taking the minimum ordinals $\leq \beta$. As we will see later, the latter will always be a set.
 ```
 
@@ -156,7 +153,8 @@ $$
 \kappa^+ = \text{ least cardinal } \nu \text{ with }  \kappa \prec \nu.
 $$
 By @thm-cantor (and the Axiom of Choice), we have 
-```{aside}
+```{prf:remark}
+:nonumber: true
 The fact that $\kappa^+ \preceq |\Pow(\kappa)|$ also ensures in the definition of $\kappa^+$ we are taking the minimum over a set.
 ```
 $$
@@ -182,7 +180,7 @@ We can use ordinals to enumerate all infinite cardinals. This gives the **aleph*
   \aleph_\lambda  &\;  := \; \sup \{ \aleph_\beta \colon \beta < \lambda \}
 \end{align*}
 
-```{exercise}
+```{hint} Exercise
 :nonumber: true
 
 Show that the supremum of a set of cardinals is a cardinal. (In particular, $\aleph_\lambda$ in the definition above is a cardinal.)
@@ -224,7 +222,7 @@ We know the set of reals is uncountable, so at this time we are able to conclude
 
 What can we say about the cardinality of unions, products, etc.?
 
-```{exercise}
+```{hint} Exercise
 :nonumber: true
 
 Show that $|\R \times \R| = |\R|$.
@@ -238,7 +236,7 @@ This is an instance of a more general result. We can define arithmetic operation
 \kappa^{\lambda} \quad & = \quad   |\{f \colon f: \lambda \to \kappa \}| & \qquad (\text{exponentiation})
 \end{align*}
 
-```{exercise}
+```{hint} Exercise
 :nonumber: true
 
 Verify that for finite cardinalities, the operations defined above agree with the usual arithmetic operations on natural numbers.

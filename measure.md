@@ -8,6 +8,7 @@ At the end of the previous section, we saw that Borel sets are well-behaved in t
 The most common measure of size is, of course, cardinality. In the presence of uncountable sets (like in a perfect Polish space), the usual division is between countable and uncountable sets. The smallness of the countable sets is reflected, in particular, by two properties: A subset of a countable set is countable, and countable unions of countable set are countable. These characteristics are shared with other notions of smallness, two of which we will encounter in this lecture.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-ideal
 A non-empty family $\mathcal{I} \subseteq \Pow(X)$ of subsets of a given set $X$ is an **ideal** if 
 \begin{align*}
@@ -30,6 +31,7 @@ for a fixed $Z \subseteq X$.
 The **dual notion** to an ideal is that of a **filter**. It reflects that the sets in a filter share some **largeness property**.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-filter
 A non-empty family $\mathcal{F} \subseteq \Pow(X)$ of subsets of a given set $X$ is a **filter** if 
 \begin{align*}
@@ -45,6 +47,7 @@ If $\mathcal{I}$ is a (${}\sigma$-) ideal, then $\mathcal{F} = \{\Co{A} \colon A
 Note that the complement of a (${}\sigma$-) ideal (in $\Pow(X)$) is not necessarily a (${}\sigma$-) filter. This is true, however, for a special class of ideals/filters.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-ultrafilter
 A non-empty family $\mathcal{I} \subseteq \Pow(X)$ is a **prime ideal** if it is an ideal for which
 
@@ -71,6 +74,7 @@ More formally, a measure ${}\mu$ on $X$ is a $[0,\infty]$-valued function define
 The question is, of course, which subsets of $X$ can be assigned a measure. The condition (M2) suggests that this family is closed under countable unions. Furthermore, if $A \subseteq X$, then the equation $\mu(X) = \mu(A) + \mu(\Co{A})$ suggests that $\Co{A}$ should be measurable, too. In other words, the sets who are assigned a measure form a ${}\sigma$-algebra.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-measure
 
 A **measurable space** is a pair $(X, \mathcal{S})$, where $X$ is a set and $\mathcal{S}$ is a ${}\sigma$-algebra on $X$. A **measure** on a measurable space $(X, \mathcal{S})$ is a function $\mu: \mathcal{S} \to [0,\infty]$ that satisfies (M1) and (M2) for any pairwise disjoint family $\{A_n\}$ in $\mathcal{S}$. If ${}\mu$ is a measure on $(X, \mathcal{S})$, then the triple $(X,\mathcal{S}, \mu)$ is called a **measure space**.
@@ -83,6 +87,7 @@ To have some control over what the ${}\sigma$-algebra of measurable sets should 
 An essential component in this extension process is the concept of an **outer measure**.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-outer-measure
 
 An **outer measure** on a set $X$ is a function $\mu^*: \Pow(X) \to [0,\infty]$ such that 
@@ -99,6 +104,7 @@ An outer measure hence weakens the conditions of **additivity** (M2) to **subadd
 The usefulness of outer measures lies in the fact that they can always be restricted to subset of $\Pow(X)$ on which they behave as measures.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-measurable
 
 Let $\mu^*$ be an outer measure on $X$. A set $A \subseteq X$ is **$\mu^*$-measurable** if
@@ -126,6 +132,7 @@ The size of the ${}\sigma$-algebra of measurable sets depends, of course, on the
 A standard way to obtain "nice" outer measures is to start with a well-behaved function defined on a certain class of sets, and then approximate. The paradigm for this approach is the construction of **Lebesgue measure** on $\Real$. 
 
 ```{prf:definition}
+:nonumber: true
 :label: def-Lebesgue
 The **Lebesgue outer measure** $\lambda^*$ of a set $A \subseteq \Real$ is defined as
 
@@ -271,6 +278,7 @@ As mentioned before, there are Lebesgue measurable sets that are not Borel sets.
 The basic paradigm for smallness here is of topological nature. A set is small if it does not look anything like an open set, not even under closure. In the following, let $X$ be a topological space.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-nowhere-dense
 
 A set $A \subseteq X$ is **nowhere dense** if its complement contains an open, dense set.
@@ -285,6 +293,7 @@ The nowhere dense sets form an ideal, but not a ${}\sigma$-ideal: Every singleto
 To obtain a ${}\sigma$-ideal, we close the nowhere dense sets under countable unions.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-meager
 
 A set $A \subseteq X$ is **meager** or of **first category** if it is the countable union of nowhere dense sets. Non-meager sets are also called sets of **second category**. Complements of meager sets are called **comeager** or **residual**.
@@ -347,6 +356,7 @@ We have seen that the measurable sets are precisely the ones that differ from a 
 We can introduce a similar concept for Baire category.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-BP
 
 A set $B \subseteq X$ has the **Baire property** if there exists an open set $G$ and a meager set $M$ such that 

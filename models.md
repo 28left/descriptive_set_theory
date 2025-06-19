@@ -185,7 +185,7 @@ $$
 :::
 
 
-:::{exercise}
+:::{hint} Exercise
 :nonumber: true
 
 If $M$ is transitive, then for all ${}\varphi$,

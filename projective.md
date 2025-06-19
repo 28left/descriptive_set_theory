@@ -54,6 +54,7 @@ We have seen that the Borel sets of finite order correspond to the sets definabl
 Historically, however, the topological approach and the definability approach happened separately, the former devised by the Russian school of Souslin, Lusin, and others, while the effective approach was pursued by Kleene. Kleene named the sets in his effective hierarchy *analytical* sets, which to this day is a source of much confusion.
 
 ```{prf:definition} Kleene
+:nonumber: true 
 :label: def-analytical-hierarchy
 
 - A set $A \subseteq \Baire$ is (lightface) $\Sigma^1_1$ if there exists a computable relation $R(\sigma, \tau)$ such that 

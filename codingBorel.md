@@ -1,6 +1,6 @@
 # Coding Borel Sets
 
-In this chapter, we take a further look at Borel subsets of $\Baire$. As is common in this setting, we call the elements of $\Baire$ **reals**. This is motivated by the fact that, via the continued fration expansion, $\Baire$ [is homeomorphic to the set of irrational real numbers](fact-paths-as-reals). Suppose $U \subseteq \Baire$ is open. Then there exists a set $W \subseteq \Nstr$ such that
+In this chapter, we take a further look at Borel subsets of $\Baire$. As is common in this setting, we call the elements of $\Baire$ **reals**. This is motivated by the fact that, via the continued fration expansion, $\Baire$ [is homeomorphic to the set of irrational real numbers](#fact-paths-as-reals). Suppose $U \subseteq \Baire$ is open. Then there exists a set $W \subseteq \Nstr$ such that
 
 $$ 
 U = \bigcup_{\sigma \in W} \Cyl{\sigma}. 
@@ -21,12 +21,9 @@ Then determining whether $\alpha \in F$ is **co-r.e.** in (the code of) $T_F$. I
 
 These simple observations suggest the following general approach to Borel sets.
 
-````{card}
-
-- Borel sets can be coded by a single infinite sequence in $\Baire$ (or $\Cant$).
-- Given the code, we can recover the Borel set effectively, by means of oracle computations.
-- The connection between degrees of unsolvability and definability results in a close correspondence between arithmetical sets ($\Sigma^0_n$) and Borel sets of finite order ($\bSigma^0_n$). 
-````
+> - Borel sets can be coded by a single infinite sequence in $\Baire$ (or $\Cant$).
+> - Given the code, we can recover the Borel set effectively, by means of oracle computations.
+> - The connection between degrees of unsolvability and definability results in a close correspondence between arithmetical sets ($\Sigma^0_n$) and Borel sets of finite order ($\bSigma^0_n$). 
 
 In this lecture we will fully develop this correspondence. Later, we will see that it even extends beyond the finite level. 
 
@@ -124,13 +121,9 @@ is **decidable**, that is, it can be decided by a Turing machine.
 
 Hence any $\bSigma^0_2$ set $B$ with a computable code can be represented in the following form:
 
-```{card}
+> There exists a decidable predicate $R(m,\sigma)$ such that
+> $$\beta \in B \quad \iff \quad \exists m \: \forall n \; R(m, \beta\Rest{n}).$$ 
 
-There exists a decidable predicate $R(m,\sigma)$ such that
-\begin{equation*}
-    \beta \in B \quad \iff \quad \exists m \: \forall n \; R(m, \beta\Rest{n}). 
-\end{equation*}
-```
 Conversely, if $R(m,\sigma)$ is a (decidable) predicate, let
 
 $$
@@ -161,11 +154,15 @@ But before we do that, we observe a basic fact about how we can compute with cod
 
 ## The effective Borel hierarchy
 
-```{margin}
+```{prf:remark}
+:nonumber: true
+
 You may notice some sloppy notation in the third item here, since as written the set $P$ should technically be a subset of $\Nat\times \Baire$. We will put this on more solid footing in the next chapter. For now, you can think of $\Nat \times \Baire$ as the same as $\Baire$ -- just "merge" the pair into one real.
 ```
 ```{prf:definition} The Lightface Hierarchy
+:nonumber: true 
 :label: def-effective-Borel
+
 A set $A \subseteq \Baire$ is 
 - (lightface) $\Sigma^0_1$ if there exists a computable predicate $R(\sigma)$ such that
 \begin{equation*}
@@ -295,6 +292,7 @@ which implies $B$ is $\Sigma^0_{n+1}$.
 Using relativized computations via oracles, we can define a relativized version of the effective Borel hierarchy. This way we can capture *all* Borel sets of finite order, not just the ones with computable codes.
 
 ```{prf:definition}
+:nonumber: true
 Let $\gamma \in \Baire$. A set $A \subseteq \Baire$ is 
 -  $\Sigma^0_1(\gamma)$ &nbsp; if there exists a predicate $R(x)$ computable in ${}\gamma$ such that
 \begin{equation*}

@@ -25,7 +25,8 @@ Besides $\WO$, $\AC$ has applications in pretty much any branch of mathematics, 
 
 
 The foundational issue with the Axiom of Choice lies primarily in the fact that it postulates the existence of a function without giving any hint at how such a function might be defined. For some sets (e.g., the rationals) we can explicitly describe a well-ordering (by identifying $\Q$ with a subset of $\Z\times \Nat$ and then well-ordering that). But $\AC$ also guarantees a well-order of the reals, and if you try to 'write down' such a well-order, you will quickly run into difficulties.
-```{aside} Further reading
+```{prf:remark} Further reading
+:nonumber: true 
 
 For more on the history and the controversy surrounding the Axiom of Choice, see *G.H. Moore: Zermelo's Axiom of Choice, Springer. 1982*.
 ```

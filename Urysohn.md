@@ -71,6 +71,7 @@ $$
 This extension property gives rise to the following definition.
 
 ```{prf:definition}
+:nonumber: true
 A Polish metric space $(Y,d_Y)$ is **Urysohn universal** if for every finite subspace $F \subset Y$ and any extension $F^* = F \cup \{x^*\}$ with metric a $d^*$ such that 
 
 $$
@@ -141,7 +142,7 @@ $$
 $$
 
 If $\diam(X) \leq \mathrm{d}$ and $f,g$ are $1$-Lipschitz, then $d(f,g)$ is indeed finite.
-However, we will [later](ury-finishing-construction)  need that the resulting space is also bounded. Let  $\Lip^{\mathrm{d}}_1(X)$ be the space of all $1$-Lipschitz functions from $X$ to $[0,\mathrm{d}]$.
+However, we will [later](#ury-finishing-construction)  need that the resulting space is also bounded. Let  $\Lip^{\mathrm{d}}_1(X)$ be the space of all $1$-Lipschitz functions from $X$ to $[0,\mathrm{d}]$.
 
 Clearly, $\diam(\Lip^{\mathrm{d}}_1(X)) \leq \mathrm{d}$.
 

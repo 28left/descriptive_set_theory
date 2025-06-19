@@ -67,7 +67,8 @@ Classes that are not sets are called **proper classes**.
 
 You should keep in mind that, in the formal theory $\ZF$, we do not have variables for classes, so the definition above is *informal*.  Any class variable, as well as expressions like $a \in A$, should be seen as *abbreviations* for a formal expression using the underlying formula.
 There are formal systems (such as **Bernays-Gödel set theory**) that use classes explicitly, but they are used less frequently.  
-```{margin}
+```{prf:remark}
+:nonumber: true
 So when we write $A \subseteq B$ for classes $A,B$ defined by $\varphi, \psi$, respectively, the formal expression would be $\forall x ( \varphi(x) \to \psi(x))$.
 ```
 
@@ -104,7 +105,8 @@ We have seen we cannot use full comprehension for sets. In its place we introduc
 
  $\qquad  \forall w_1, \dots, w_n \forall a \exists y \forall x (x \in y \leftrightarrow x \in a \wedge \varphi(x, a, w_1, \dots, w_n))$
 :::
-```{margin}
+```{prf:remark}
+:nonumber: true
 In particular, the empty set $\emptyset$ exists. (Why?)
 ```
 By Extensionality, the set $y$ is unique. Note that there is one axiom for *every* formula ${}\varphi$, so Separation is an **axiom scheme**.
@@ -161,7 +163,8 @@ $\qquad \forall a \, \exists y \forall z (z \in y  \leftrightarrow  \exists x \i
 $\qquad  \forall x,y,z (\varphi(x,y) \wedge \varphi(x,z) \to y=z) \;  \: \rightarrow \; \forall a \exists u \forall y (y \in u \leftrightarrow \exists x \in a \: \varphi(x,y))$
 :::
 
-```{margin}
+```{prf:remark}
+:nonumber: true
 Like Separation, Replacement is an *axiom scheme*. 
 ```
 In words, if ${}\varphi$ defines a function, then the image of any set under that function is a set. Note that, as in the case of Separation, ${}\varphi$ is allowed to have *parameters*, which we dropped here to improve readability.

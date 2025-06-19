@@ -8,6 +8,7 @@ We will see that, in many ways, $\PP{1}$ sets form the frontier between classica
 Analytic sets are projections of closed sets. Closed sets are in $\Baire\times \Baire$ are infinite paths through **trees on $\Nat \times \Nat$**, i.e. two-dimensional trees.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-two-dim-tree
 	
 A set $T \subseteq \Nstr \times \Nstr$  is a **two-dimensional tree** if
@@ -58,6 +59,7 @@ If $A$ is (lightface) $\Pi^1_1$, then there exists a computable such $T$, and th
 How does one show that a specific set is *not* Borel? A related question is: Given a definition of a set in second order arithmetic, how can we tell that there is not an easier definition (in the sense that it uses less quantifier changes, no function quantifiers etc.)? The notion of **completeness** for classes in Polish spaces provides a general method to answer such questions.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-Wadge
 
 Let $X,Y$ be Polish spaces. We say a set $A \subseteq X$ is **Wadge reducible** to $B \subseteq Y$, written $A \leq_{\W} B$, if there exists a continuous function $f: X \to Y$ such that
@@ -83,6 +85,7 @@ If $A \leq_{\W} B$ via $f$, then $A = f^{-1}(B)$.
 ```
 
 ```{prf:definition}
+:nonumber: true
 :label: def-completeness
 
 A set $A \subseteq X$ is **${}\Gamma$-complete** if $A \in \Gamma$ and for all $B \in \Gamma$, $B \leq_{\W} A$. 

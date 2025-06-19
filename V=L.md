@@ -199,7 +199,8 @@ But why would an elementary substructure of an $L_\lambda$ have to be itself an 
 There is a formula $\varphi_{\VL}$ so that if $M$ is a transitive set with $M\models \varphi_{\VL}$, then $M = L_\lambda$ for some limit ordinal ${}\lambda$.
 ```
 
-```{margin}
+```{prf:remark}
+:nonumber: true
 Something stronger is actually true: there exists a $\Pi_2$-formula ${}\sigma$ such that for any transitive $M$, $M \models \sigma$ **if and only if** $M = L_\lambda$ for some limit ${}\lambda$. (See for example {cite}`Devlin:1984a` and {cite}`Mathias_2006m` for necessary additions to Devlin's axiom system $BS$).st
 ```
 

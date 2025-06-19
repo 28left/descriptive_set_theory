@@ -2,9 +2,9 @@ version: 1
 project:
   title: Descriptive Set Theory
   short_title: Descriptive Set Theory
-  # authors: 
-  #   name: Jan Reimann
-    # affiliation: Penn State University
+  authors: 
+    name: Jan Reimann
+    affiliation: Penn State University
   license: CC-BY-4.0
   open_access: true
   github: https://github.com/28left/descriptive_set_theory

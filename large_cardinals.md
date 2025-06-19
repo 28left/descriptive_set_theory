@@ -50,6 +50,7 @@ are singular and this suggests the question:
 This is captured by the notion of **inaccessibility**.
 
 ```{prf:definition} Hausdorff 1908, Tarski, Zermelo 1930
+:nonumber: true
 :label: def-inaccessible
 
 An uncountable cardinal $\kappa > \omega$ is 
@@ -249,6 +250,7 @@ m(x) =
 $$
 
 ```{prf:definition}
+:nonumber: true
 :label: def-measurable-cardinal
 Let ${}\kappa$ be an uncountable cardinal. 
 
@@ -384,6 +386,7 @@ In general, any cardinal that satisfies the statement of the theorem is called *
 To prove {prf:ref}`thm-measurable-Ramsey`, we introduce **normal ultrafilters**.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-normal-filter
 
 Given a sequence of sets $(A_\xi)_{\xi < \gamma}$, the **diagonal intersection** is given as
@@ -415,12 +418,10 @@ Show that if there is a normal filter over ${}\kappa$, then ${}\kappa$ is uncoun
 Show that if ${}\kappa$ is measurable, then there is a normal ultrafilter on ${}\kappa$.
 ```
 
-```{prf:proof}
+```{prf:proof} Rowbottom's Theorem
 :class: dropdown
 :nonumber: true
  
-(Proof of {prf:ref}`thm-measurable-Ramsey`) 
-
 Let $U$ be a normal filter over ${}\kappa$.
 We show that for every $n$, for any $g: [\kappa]^n \to \gamma$ with $\gamma < \kappa$, there is a set $H_n \in U$ such that $g \Rest{[H_n]^n} \equiv \text{const}$. The intersection of the $H_n$ is again in $U$ and satisfies the statement of the the theorem.
 

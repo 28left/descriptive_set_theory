@@ -13,7 +13,7 @@ If $A \subseteq \Real$ is uncountable, then there exists a bijection between $A$
 Early approaches tried to show that $\CH$ holds for a number of sets with an easy topological structure.
 
 
-:::{exercise}
+:::{hint} Exercise
 :class: hint
 :nonumber: true
 

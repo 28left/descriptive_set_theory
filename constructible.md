@@ -216,6 +216,7 @@ This *complexity bound is of central importance* to the applications of $L$, and
 Many facts about $L$ hold more generally for **cumulative hierarchies**.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-cumulative
 
 A sequence $(M_\alpha)_{\alpha \in \Ord}$ of sets is a **cumulative hierarchy** if
@@ -231,6 +232,7 @@ A sequence $(M_\alpha)_{\alpha \in \Ord}$ of sets is a **cumulative hierarchy** 
 The von-Neumann universe $V$ ($M_\alpha = V_\alpha$) and Gödel's $L$ ($M_\alpha = L_\alpha$) are the most important examples of cumulative hierarchies.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-normal-function
 
 A function $F: \Ord \to \Ord$ is **normal** if
@@ -315,6 +317,7 @@ $\ZF$ is not finitely axiomatizable.
 ## Inner models
 
 ```{prf:definition}
+:nonumber: true
 :label: def-inner-model
 
 A class $M$ is an **inner model of $\ZF$** if 

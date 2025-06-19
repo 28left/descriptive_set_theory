@@ -4,6 +4,7 @@
 Let $A$ be a set. Recall that the set of all finite sequences over $A$ is denoted by $\Astr{A}$, while $A^\Nat$ denotes the set of all infinite sequences over $A$. Given $\alpha \in A^\N$, $n \in \N$, $\alpha\Rest{n}$ denotes the initial segment of $\alpha$ of length $n$.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-tree
 
 A **tree** on $A$ is a set $T \subseteq \Astr{A}$ that is **closed under prefixes**, that is
@@ -86,6 +87,7 @@ Continuing inductively, we define an infinite path $\alpha$ through $T'$, and it
 We can combine the $\leq_{\lex}$-ordering with the inverse prefix order to obtain a linear ordering of $\Astr{A}$. This ordering has the nice property that if $A$ is well-ordered and $T$ is well-founded, then the ordering restricted to $T$ is a well-ordering. 
 
 ```{prf:definition}
+:nonumber: true
 :label: def-Kleene-Brouwer
 
 The **Kleene-Brouwer ordering** $\leq_{\KB}$ of $\Astr{A}$ is defined as follows.
@@ -115,7 +117,8 @@ Conversely, suppose $\sigma_0 >_{\KB} \sigma_1 >_{\KB} \dots$ is an infinite des
 Since the $\sigma_n$ are descending, by the definition of $\leq_{\KB}$ it follows that $|\sigma_n| \geq 2$ for $n > n_0$. Hence we can consider the sequence $\sigma_{n_0+1}(1) \geq_A \sigma_{n_0+2}(1) \geq_A  \dots$ in $A$. Again, this must be constant $= a_1$ eventually. Inductively, we obtain a sequence $\alpha = (a_0, a_1, a_2, \dots) \in [T]$, that is, $T$ is not well-founded.
 ```
 
-```{caution}
+```{prf:remark}
+:nonumber: true
 
 The order type of a well-founded tree under $\leq_{\KB}$ usually is not equal to its rank $\rho(T)$.
 ```
@@ -141,7 +144,7 @@ These two mappings allows us henceforth to see **trees as subsets of the natural
 
 ## Trees and closed sets
 
-Let $A$ be a set with the discrete topology. Consider $A^\Nat$ with the product topology (and compatible metric) defined in [Lecture 2](polish-product-spaces).
+Let $A$ be a set with the discrete topology. Consider $A^\Nat$ with the product topology (and compatible metric) defined in [Lecture 2](#polish-product-spaces).
 
 ```{prf:proposition}
 :label: prop-trees-closed

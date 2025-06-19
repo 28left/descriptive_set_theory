@@ -156,6 +156,7 @@ Substitute $\psi(\alpha\Rest{x_n})$ for ${}\alpha\Rest{x_n}$. The resulting form
 Let ${}\Gamma$ be a family of subsets defined in various topological spaces. Of course we have in mind the classes $\bSigma^0_n$ or $\bPi^0_n$, but the concept of a **universal set** can be defined quite generally. Given a space $X$, we denote by $\Gamma(X)$ the collection of all subsets of $X$ that are in $\Gamma$. In this section, as we mostly focus on $\Baire$, we often drop the reference to $\Baire$ and simply write $\Gamma$ to denote $\Gamma(\Baire)$.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-universal
 
 Let $Y$ be a set. A set $U \subseteq X \times Y$ is **$Y$-universal for ${}\Gamma(X)$** if $U \in \Gamma(X\times Y)$, and for every set $A$ in ${}\Gamma(X)$ there exists a $y \in Y$ such that
@@ -290,6 +291,7 @@ is $\BS{k}$. But $B \cap \Cyl{\Tup{m}}$ is homeomorphic to $B_m$, hence $B_m$ in
 We can extend the Borel hierarchy to arbitrary ordinals.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-transfinite-Borel
 
 Let $X$ be a topological space. As before, let $\BS{1}(X)$ be the set of all open subsets of $X$, $\BP{1}$ be the set of all closed subsets of $X$, and $\bDelta^0_1(X)$ be the set of all clopen subsets of $X$. Given an ordinal ${}\xi > 1$, we define
@@ -380,6 +382,7 @@ It is straightforward to check that $U_\xi$ is $\Baire$-universal for $\BS{\xi}$
 The construction of the universal $\BS{\xi}$ set bears some resemblance to the construction of a $\bSigma^0_{n+1}$ code. It is indeed possible to formally define Borel codes for *all* Borel sets.
 
 ```{prf:definition}
+:nonumber: true
 :label: def-Borel-codes-transfinite
 Let $\gamma \in \Baire$.
 
