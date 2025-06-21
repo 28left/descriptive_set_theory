@@ -1,6 +1,6 @@
 # Ordinals
 
-It will be important for us to extend the usual counting process beyond the natural numbers. To give an example, let us return for a moment to perfect subsets of the reals. To show that every uncountable closed subset of $\mathbb{R}$ contains a perfect subset, we considered the *condensation points* of the set. There is another, more gradual way, to arrive at a perfect subset. When Cantor studied convergence of Fourier series, he introduced the **derivative** of a set: 
+It will be important for us to extend the usual counting process beyond the natural numbers. To give an example, let us return for a moment to perfect subsets of the reals. To show that every uncountable closed subset of $\mathbb{R}$ contains a perfect subset, we considered the *condensation points* of the set. There is another, more constructive way, to arrive at a perfect subset. When Cantor studied convergence of Fourier series, he introduced the **derivative** of a set: 
 $$
 A' = \{ x \in A \colon x \text{ is a limit point of } A\}
 $$
@@ -355,9 +355,9 @@ All of the ordinals listed here are still countable (as sets). The supremum of t
 
 ## Metamathematical issues
 
-Is there a *set* $\Ord$ of *all* ordinals? If so, it would be well-ordered by $\in$ and also transitive (since, by @pro-ordinal-elements-are-ordinals, every element of an ordinal is an ordinal) and therefore an ordinal. Hence we would have $\Ord \in \Ord$. But no ordinal can be an element of itself. This holds even if we do not assume every set is well-founded, since ordinals are by definition *stricly* ordered by $\in$. 
+Is there a *set* $\Ord$ of *all* ordinals? If so, it would be well-ordered by $\in$ and also transitive (since, by @pro-ordinal-elements-are-ordinals, every element of an ordinal is an ordinal) and therefore an ordinal. Hence we would have $\Ord \in \Ord$. But no ordinal can be an element of itself. This holds even if we do not assume every set is well-founded, since ordinals are by definition *strictly* ordered by $\in$. 
 
-This is know as the **Anomaly of Burali-Forti**. It tells us that somehow the collection of all ordinals is *too big* to form a set. It also warns us that if we handle the intuitive concept of a set too carelessly, it might lead to contradictions and inconsistencies. 
+This is known as the **Anomaly of Burali-Forti**. It tells us that somehow the collection of all ordinals is *too big* to form a set. It also warns us that if we handle the intuitive concept of a set too carelessly, it might lead to contradictions and inconsistencies. 
 
 Later on we will develop an axiomatic approach to sets which aims to exclude antinomies like this. In this framework, we will be able to formally show that $\Ord$ is not a set. It forms what we will call a **proper class**.
 

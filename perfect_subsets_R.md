@@ -128,18 +128,20 @@ $$
 
 Let $D$ be the set of all condensation points of $C$. Note that $D \subseteq C$, since every condensation point is clearly a limit point and $C$ is closed.
 
-Furthermore, we claim that $D$ is perfect. It is not hard to see that $D$ is closed. Suppose $z \in D$ and $\eps > 0$. Then $U_\eps(z) \cap C$ is uncountable. We would like to conclude that $U_\eps(z) \cap D$ is uncountable, too, since this would mean in particular that $U_\eps(z) \cap D$ is infinite. The conclusion holds if $C \setminus D$ is countable.
+Furthermore, we claim that $D$ is perfect. It is straightforward to verify that $D$ is closed. To see that every point of $D$ is a limit point, suppose $z \in D$ and $\eps > 0$. Then, by assumption, $U_\eps(z) \cap C$ is uncountable. We would like to conclude that $U_\eps(z) \cap D$ is uncountable, too, since this would mean in particular that $U_\eps(z) \cap D$ is infinite. The conclusion holds if $C \setminus D$ is countable.
 
 To show that $C\setminus D$ is countable, assume that $y \in C \setminus D$. Then, for some $\delta > 0$, $U_\delta(y) \cap C$ is countable. We can find an interval $I(y) \subseteq U_\delta(y)$ that contains $y$ and has rational endpoints. There are at most countably many intervals with rational endpoints and hence for each $y \in C \setminus D$ there are at most countably many choices for $I(y)$. Thus, we have
 
 $$
-    C\setminus D \subseteq \bigcup_{y \in C \setminus D} I_y \cap C.
+    C\setminus D \subseteq \bigcup_{y \in C \setminus D} I(y) \cap C.
 $$
 
-The right hand side is a countable union of countable sets, hence countable.
+The right hand side is a countable union of countable sets, hence countable. 
+
+Finally, the fact that $C \setminus D$ is countable also implies that $D$ is non-empty. We have therefore verified that $D$ is a perfect subset of $C$.
 :::
 
-We will later encounter an alternative (more constructive) proof that gives additional information about the complexity of the closed set $C$. For now we conclude with the fact we were aiming to prove in this lecture.
+It follows that the Continuum Hypothesis holds for closed sets.
 
 :::{prf:corollary}
 :nonumber: true
