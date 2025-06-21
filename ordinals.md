@@ -31,7 +31,11 @@ $$
 $$
 
 We can then define, for example,
-$A^{\omega+1} := (A^{\omega})'$. As intuitively clear from above, the new transfinite numbers come with a natural ordering, so we can also put $A^{\omega+\omega} := \bigcap_{\alpha < \omega+\omega} A^{\alpha}$
+$A^{\omega+1} := (A^{\omega})'$. As intuitively clear from above, the new transfinite numbers come with a natural ordering, so we can put, for example, $A^{\omega+\omega} := \bigcap_{\alpha < \omega+\omega} A^{\alpha}$.
+
+To obtain a perfect subset, one can show that the above process of taking derivatives, eventually reaches a *fixed point*: some stage $\alpha$ for which $(A^{\alpha})' = A^\alpha$. If $A$ is uncountable, $A^\alpha$ will be a perfect subset, since one can show that at each derivative step we remove an at most countable set and it will take at most countably many steps to reach the fixed point. But what does "countably many steps" exactly mean if we have to count past $\omega$? The formal notions of *ordinal* and *cardinal numbers* will answer this question.  
+
+<!-- --- 
 
 Another way to count into the transfinite is to reorder the natural numbers and first enumerate all powers of two, followed by all powers of three and so on:
 \begin{gather*}
@@ -42,9 +46,9 @@ This still leaves an infinite reservoir of numbers like $0, 6, 10, \dots$.
 A number of questions arises: 
 - Can this process be continued indefinitely?
 - Is there a *unifying* principle behind the various ways to count into the transfinite?
-- Can we define operations like $+$ and $\cdot$ on these infinite numbers independent of the way we represent these numbers, and without leading to contradictions?
+- Can we define operations like $+$ and $\cdot$ on these infinite numbers independent of the way we represent these numbers, and without leading to contradictions? -->
 
-These questions can be addressed by developing the theory of *ordinal numbers* via the concept of a **well-order**.
+The fundamental concept on which the ordinal numbers are based if that of a **well-order**.
 
 
 
