@@ -1,13 +1,17 @@
 (chap-trees)=
 # Trees
 
-Let $A$ be a set. Recall that the set of all finite sequences over $A$ is denoted by $\Astr{A}$, while $A^\Nat$ denotes the set of all infinite sequences over $A$. Given $\alpha \in A^\N$, $n \in \N$, $\alpha\Rest{n}$ denotes the initial segment of $\alpha$ of length $n$.
+Let $A$ be a set. Recall that the set of all finite sequences over $A$
+is denoted by $\Astr{A}$, while $A^\Nat$ denotes the set of all
+infinite sequences over $A$. Given $\alpha \in A^\N$, $n \in \N$,
+$\alpha\Rest{n}$ denotes the initial segment of $\alpha$ of length
+$n$. 
 
 ```{prf:definition}
 :nonumber: true
 :label: def-tree
 
-A **tree** on $A$ is a set $T \subseteq \Astr{A}$ that is **closed under prefixes**, that is
+A **tree** on $A$ is a set $T \subseteq \Astr{A}$ that is **closed under prefixes**, that is,
 
 $$
     \forall \sigma, \tau \; [\tau \in T \: \& \: \sigma \Sleq \tau \; \Rightarrow \; \sigma \in T ]
@@ -23,7 +27,7 @@ An important criterion for a tree to have infinite paths is the following.
 ```{prf:theorem} König's Lemma
 :label: thm-Koenigs-lemma
 
-Any tree $T$ with infinitely many nodes that is **finite branching** (i.e. each node has at most finitely many immediate extensions) has an infinite path.
+Any tree $T$ with infinitely many nodes that is **finitely branching** (i.e. each node has at most finitely many immediate extensions) has an infinite path.
 ```
 
 ```{prf:proof}
@@ -32,7 +36,7 @@ Any tree $T$ with infinitely many nodes that is **finite branching** (i.e. each 
 
 We construct an infinite path inductively. 
 
-Let $T_\sigma$ denote the tree "above" $\sigma$, i.e. $T_\sigma = \{ \tau \in \Astr{A} \colon \sigma\Conc\tau \in T\}$. If $T$ is finite branching,  by the **pigeonhole principle**, at least one of the sets $T_\sigma$ for $|\sigma| = 1$ must be infinite. Pick such a $\sigma$ and let $\alpha\Rest{1} = \sigma$. 
+Let $T_\sigma$ denote the tree "above" ${}\sigma$, i.e. $T_\sigma = \{ \tau \in \Astr{A} \colon \sigma\Conc\tau \in T\}$. If $T$ is finitely branching,  by the **pigeonhole principle**, at least one of the sets $T_\sigma$ for $|\sigma| = 1$ must be infinite. Pick such a ${}\sigma$ and let $\alpha\Rest{1} = \sigma$. 
 
 Repeat the argument for $T = T_\sigma$ and continue inductively. This yields a sequence $\alpha \in [T]$.
 ```
