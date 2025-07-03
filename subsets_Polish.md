@@ -37,7 +37,7 @@ Any open subset of a Polish space $X$ is Polish (with respect to the subspace to
 :class: dropdown
 :nonumber: true
 
-For a set $A \subseteq X$ and a metric $d$ on $X$, we define the *distance of $x$ from $A$ as
+For a set $A \subseteq X$ and a metric $d$ on $X$, we define the *distance* of $x$ from $A$ as
 $$
 d(x,A) = \inf \{ d(x,a) \colon a \in A\}
 $$
@@ -69,7 +69,7 @@ $$
     \Delta = \{(x,x,x, \dots) \colon \: x \in Y_n \text{ for all } n \in \Nat \}.
 $$
 
-$\Delta$ is closed in the product space $\prod_n Y_n$ and hence Polish, and this property pushes over to $\bigcap_n Y_n$ (see {prf:ref}`properties-polish`).
+${}\Delta$ is closed in the product space $\prod_n Y_n$ and hence Polish, and this property extends to $\bigcap_n Y_n$ (see {prf:ref}`properties-polish`).
 ```
 
 Hence every $G_\delta$ subset of a Polish space is Polish. This is as far as we can get.
@@ -109,7 +109,7 @@ $$
 
 is $G_\delta$ and since $f$ is continuous, $A \subseteq G \subseteq \Cl{A}$.
 
-To extend $f$ to $G$, let $x \in G$. Since $x \in \Cl{A}$, there exists a sequence $(a_n)_{n \in \N}$ in $A$ with $x = \lim_n a_n$. As $x \in \bigcap_n C^A_{1/n}$, $(f(a_n))_n$ is Cauchy. $Y$ is complete, so there exists $y = \lim_n f(a_n) \in Y$. It is straightforward to verify that $y$ is independent of the choice of $(a_n)$ and agrees with $f(x)$ for $x \in A$. Hence we can put
+To extend $f$ to $G$, let $x \in G$. Since $x \in \Cl{A}$, there exists a sequence $(a_n)$ in $A$ with $x = \lim_n a_n$. As $x \in \bigcap_n C^A_{1/n}$, the sequence $(f(a_n))$ is Cauchy. $Y$ is complete, so there exists $y = \lim_n f(a_n) \in Y$. It is straightforward to verify that $y$ is independent of the choice of $(a_n)$ and agrees with $f(x)$ for $x \in A$. Hence we can put
 
 $$
 g(x) = y,
@@ -118,13 +118,11 @@ $$
 which yields the desired continuous extension.
 ```
 
-Now assume $Y \subset X$ is Polish but not $G_\delta$. Then, by the previous lemma, the identity mapping $\operatorname{id}: Y \to Y$ has a proper continuous extension $g: G \to Y$ to a $G_\delta$ set $G$ with $Y \subsetneq G \subseteq \Cl{Y}$. Let $x \in G\setminus Y$. $Y$ is dense in $G$, so there exists $(y_n)$ in $Y$ with $x = \lim_n y_n$. By continuity
-
+Now assume $Y \subset X$ is Polish. Then, by the previous lemma, the identity mapping $\operatorname{id}: Y \to Y$ has a continuous extension $g: G \to Y$ to a $G_\delta$ set $G$ with $Y \subseteq G \subseteq \Cl{Y}$. Let $x \in G$. $Y$ is dense in $G$, so there exists $(y_n)$ in $Y$ with $x = \lim_n y_n$. By continuity of $g$,
 $$
-x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y,
+x = \lim_n y_n = \lim_n g(y_n) = g(x) \in Y.
 $$
-
-contradiction. This completes the proof of {prf:ref}`thm-subsets-Polish`.
+It follows that $G \subseteq Y$ and therefore $Y = G$. This completes the proof of {prf:ref}`thm-subsets-Polish`.
 
 
 ## Borel set as clopen sets
@@ -142,7 +140,7 @@ If $X$ is a Polish space with topology $\mathcal{O}$, and $F \subseteq X$ is clo
 :class: dropdown
 :nonumber: true
 
-By {prf:ref}`properties-polish` of the section on [Polish spaces](#Polish) and {prf:ref}`prop-open-subset-Polish` above, respectively, $F$ and $X \setminus F$ are Polish spaces with compatible metrics $d_F$ and $d_{X\setminus F}$,  respectively. By @lem-bounded-metric, we may assume $d_F, d_{X\setminus F} < 1$. We form the *disjoint union of the spaces $F$ and $X \setminus F$*: This is the set $X = F \,\sqcup\, X \setminus F$ with the following topology $\mathcal{O}'$: $U \subseteq F \,\sqcup\, X \setminus F$ is in $\mathcal{O}'$ if and only if $U \cap F$ is open (in $F$) and  $U \cap X\setminus F$ is open (in $X\setminus F$).
+By {prf:ref}`properties-polish` of the section on [Polish spaces](#Polish) and {prf:ref}`prop-open-subset-Polish` above, respectively, $F$ and $X \setminus F$ are Polish spaces with compatible metrics $d_F$ and $d_{X\setminus F}$,  respectively. By @lem-bounded-metric, we may assume $d_F, d_{X\setminus F} < 1$. We form the *disjoint union of the spaces $F$ and $X \setminus F$*: This is the set $X = F \,\sqcup\, (X \setminus F)$ with the following topology $\mathcal{O}'$: $U \subseteq F \,\sqcup\, (X \setminus F)$ is in $\mathcal{O}'$ if and only if $U \cap F$ is open (in $F$) and  $U \cap (X\setminus F)$ is open (in $X\setminus F$).
 
 The disjoint union is Polish, as witnessed by the following metric.
 
@@ -155,9 +153,9 @@ $$
     \end{cases}
 $$
 
-It is straightforward to check that $d$ is compatible with $\mathcal{O}'$. Furthermore, let $(x_n)$ be Cauchy in $(X,d_\sqcup)$. Then the $x_n$ are completely in $F$ or in $X\setminus F$ from some point on, and hence $(x_n)$ converges.
+It is straightforward to check that $d_\sqcup$ is compatible with $\mathcal{O}'$. Furthermore, let $(x_n)$ be Cauchy in $(X,d_\sqcup)$. Then the $x_n$ are completely in $F$ or in $X\setminus F$ from some point on, and hence $(x_n)$ converges.
 
-Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in this topology is a disjoint union of an open set in $X\setminus F$, which also open the original topology $\mathcal{O}$, and an intersection of an open set from $\mathcal{O}$ with $F$. Such sets are Borel in $(X,\mathcal{O})$, hence $(X,\mathcal{O})$ and $(X,\mathcal{O}')$ have the same Borel sets. 
+Under the disjoint union topology, $F$ is is clopen. Moreover, an open set in this topology is a disjoint union of an open set in $X\setminus F$, which is also open in the original topology $\mathcal{O}$, and an intersection of an open set from $\mathcal{O}$ with $F$. Such sets are Borel in $(X,\mathcal{O})$ and hence $(X,\mathcal{O})$ and $(X,\mathcal{O}')$ have the same Borel sets. 
 ```
 
 ```{prf:theorem}
@@ -173,7 +171,7 @@ a finer Polish topology $\mathcal{O}' \supseteq \mathcal{O}$ such that $\mathcal
 
 Let $\mathcal{S}$ be the family of all subsets $A$ of $X$ for which a finer Polish topology exists that has the same Borel sets as $\mathcal{O}$ and in which $A$ is clopen.
 
-We will show that $\mathcal{S}$ is a $\sigma$-algebra, which by the previous Lemma contains the closed sets. Hence $\mathcal{S}$ must contain all Borel sets, and we are done.
+We will show that $\mathcal{S}$ is a $\sigma$-algebra, which by the previous lemma contains the closed sets. Hence $\mathcal{S}$ must contain all Borel sets, and we are done.
 
 $\mathcal{S}$ is clearly closed under complements, since the complement of a clopen set is clopen in any topology.
 
